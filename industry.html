@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- … (your existing <head> contents) … -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <title>Industry (Password Protected)</title>
+  <!-- … your CSS references (bootstrap.css, style.css, etc.) … -->
+</head>
+
+<body class="blog_version">
+  <script>
+    // ─── CONFIGURE YOUR SECRET PASSWORD HERE ───────────────────────────────────────
+    const CORRECT_PASSWORD = "as";
+    // ────────────────────────────────────────────────────────────────────────────────
+
+    // Prompt for the password immediately
+    const entered = prompt("🔒 Enter password to view this page:");
+
+    if (entered === CORRECT_PASSWORD) {
+      // If correct, redirect to your blog page
+      window.location.href = "blog.html";
+    } else {
+      // If wrong (or Cancel), show an alert and then redirect away (or you could hide all content)
+      alert("Incorrect password. Redirecting back to Home.");
+      window.location.href = "index.html"; // or history.back(), or any other “safe” page
+    }
+  </script>
+
+  <!--───────────────────────────────────────────────────────────────────────────-->
+  <!-- Everything below this line will never be seen if the correct password is entered,
+       because we immediately redirect to blog.html. If you want to keep any “fallback”
+       message on industry.html itself, you can place it here.                         -->
+  <noscript>
+    <!-- In case JavaScript is disabled, show a simple notice: -->
+    <div style="text-align:center; margin-top:2rem;">
+      <h2>JavaScript is required to access this page.</h2>
+      <p>Please enable JavaScript or contact the site owner.</p>
+    </div>
+  </noscript>
+  <!--───────────────────────────────────────────────────────────────────────────-->
+
+  <!-- (You can leave the rest of your original industry.html content here, 
+       but it will never be displayed unless you remove/modify the redirect logic above.) -->
+  
+  <!-- … (the rest of your industry.html markup: header, footer, etc.) … -->
+
+</body>
+</html>
