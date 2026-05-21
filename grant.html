@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Grants – Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+    /* ── HERO ── */
+    .grant-hero {
+      background: linear-gradient(135deg, #0d0b1f 0%, #1a1535 45%, #0e1e60 100%);
+      padding: 130px 0 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .grant-hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background-image: linear-gradient(rgba(126,184,224,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126,184,224,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .grant-hero-inner { position: relative; z-index: 2; }
+    .grant-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .grant-particles span {
+      position: absolute; display: block; border-radius: 50%;
+      background: rgba(126,184,224,.22); animation: grantFloat linear infinite; bottom: -20px;
+    }
+    @keyframes grantFloat {
+      0%   { transform: translateY(0); opacity: 0; }
+      10%  { opacity: 1; }
+      85%  { opacity: .3; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
+    .grant-particles span:nth-child(1)  { left:6%;  width:5px;  height:5px;  animation-duration:11s; animation-delay:0s; }
+    .grant-particles span:nth-child(2)  { left:14%; width:3px;  height:3px;  animation-duration:9s;  animation-delay:1.4s; }
+    .grant-particles span:nth-child(3)  { left:23%; width:6px;  height:6px;  animation-duration:13s; animation-delay:0.8s; }
+    .grant-particles span:nth-child(4)  { left:32%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:2.2s; }
+    .grant-particles span:nth-child(5)  { left:41%; width:3px;  height:3px;  animation-duration:10s; animation-delay:0.3s; }
+    .grant-particles span:nth-child(6)  { left:50%; width:7px;  height:7px;  animation-duration:14s; animation-delay:1.8s; }
+    .grant-particles span:nth-child(7)  { left:59%; width:4px;  height:4px;  animation-duration:9s;  animation-delay:0.6s; }
+    .grant-particles span:nth-child(8)  { left:67%; width:3px;  height:3px;  animation-duration:12s; animation-delay:3.1s; }
+    .grant-particles span:nth-child(9)  { left:75%; width:5px;  height:5px;  animation-duration:10s; animation-delay:1.2s; }
+    .grant-particles span:nth-child(10) { left:83%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:0.5s; }
+    .grant-particles span:nth-child(11) { left:90%; width:3px;  height:3px;  animation-duration:11s; animation-delay:2.5s; }
+    .grant-particles span:nth-child(12) { left:19%; width:8px;  height:8px;  animation-duration:15s; animation-delay:1.9s; }
+    .grant-particles span:nth-child(13) { left:54%; width:3px;  height:3px;  animation-duration:7s;  animation-delay:4.0s; }
+    .grant-particles span:nth-child(14) { left:72%; width:6px;  height:6px;  animation-duration:12s; animation-delay:2.8s; }
+    .grant-particles span:nth-child(15) { left:38%; width:4px;  height:4px;  animation-duration:9s;  animation-delay:0.9s; }
+
+    .grant-eyebrow {
+      font-size: .68rem; letter-spacing: 4px; text-transform: uppercase;
+      color: #7eb8e0; font-weight: 700; margin-bottom: 14px;
+    }
+    .grant-hero h1 {
+      font-size: 2.9rem !important; font-weight: 900 !important;
+      color: #ffffff !important; letter-spacing: 1px; margin-bottom: 8px;
+    }
+    .grant-hero .hero-sub {
+      font-size: 1rem; color: rgba(255,255,255,.6) !important;
+      margin-bottom: 44px; max-width: 560px; margin-left: auto; margin-right: auto;
+    }
+    .grant-stats {
+      display: flex; justify-content: center; gap: 52px; flex-wrap: wrap; margin-bottom: 36px;
+    }
+    .grant-stat-num {
+      display: block; font-size: 2.3rem; font-weight: 900;
+      color: #b5c0ff !important; line-height: 1;
+    }
+    .grant-stat-lbl {
+      display: block; font-size: .63rem; text-transform: uppercase;
+      letter-spacing: 1.5px; color: rgba(255,255,255,.45) !important; margin-top: 5px;
+    }
+
+    /* ── SECTION ── */
+    .grant-section { padding: 70px 0 90px; background: #f5f6ff; }
+    .section-label {
+      display: inline-block; font-size: .7rem; letter-spacing: 2.5px;
+      text-transform: uppercase; color: #4f7eb3; font-weight: 700; margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 2rem !important; font-weight: 800 !important;
+      color: #1a1a2e !important; margin-bottom: 10px;
+    }
+    .section-title-bar {
+      width: 50px; height: 4px;
+      background: linear-gradient(90deg, #7eb8e0, #0f3460);
+      border-radius: 2px; margin: 0 auto 56px;
+    }
+
+    /* ── GRANT CARDS ── */
+    .grant-grid { display: grid; grid-template-columns: 1fr; gap: 36px; }
+
+    .grant-card {
+      background: #fff; border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(15,52,96,.09);
+      border-left: 5px solid #7eb8e0;
+      overflow: hidden; transition: transform .25s, box-shadow .25s;
+      display: flex; flex-direction: column;
+    }
+    .grant-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 40px rgba(15,52,96,.15);
+    }
+    .grant-card-header {
+      padding: 28px 32px 20px;
+      display: flex; align-items: flex-start; gap: 20px;
+    }
+    .grant-num-badge {
+      flex-shrink: 0; width: 46px; height: 46px; border-radius: 12px;
+      background: linear-gradient(135deg, #0f3460, #7eb8e0);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem; font-weight: 900; color: #fff;
+      box-shadow: 0 4px 12px rgba(15,52,96,.35);
+    }
+    .grant-card-header-text { flex: 1; }
+    .grant-card-title {
+      font-size: 1.12rem !important; font-weight: 800 !important;
+      color: #1a1a2e !important; margin-bottom: 6px; line-height: 1.35;
+    }
+    .grant-meta-row {
+      display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    }
+    .grant-funder-chip {
+      background: #e8f0fb; color: #1a3a6b;
+      font-size: .72rem; font-weight: 700; padding: 3px 10px;
+      border-radius: 20px; letter-spacing: .5px;
+    }
+    .grant-date-chip {
+      background: #eef4ff; color: #1a3a6b;
+      font-size: .72rem; font-weight: 600; padding: 3px 10px;
+      border-radius: 20px; border: 1px solid #c3d9f7;
+    }
+    .grant-amount-chip {
+      background: linear-gradient(135deg, #0f3460, #7eb8e0);
+      color: #fff; font-size: .78rem; font-weight: 800;
+      padding: 4px 13px; border-radius: 20px; letter-spacing: .3px;
+      box-shadow: 0 2px 8px rgba(15,52,96,.28);
+    }
+    .grant-card-body { padding: 0 32px 28px; }
+    .grant-desc {
+      font-size: .88rem; color: #444; line-height: 1.7; margin-bottom: 16px;
+    }
+    .grant-items { list-style: none; padding: 0; margin: 0 0 16px; }
+    .grant-items li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: .86rem; color: #555; padding: 7px 0;
+      border-bottom: 1px solid #f0f0f0; line-height: 1.5;
+    }
+    .grant-items li:last-child { border-bottom: none; }
+    .grant-items li::before {
+      content: ''; flex-shrink: 0; margin-top: 7px;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #7eb8e0;
+    }
+    .grant-specs {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px; margin: 14px 0;
+    }
+    .grant-spec-item {
+      background: #f0f4ff; border-radius: 8px; padding: 10px 14px;
+    }
+    .grant-spec-label {
+      font-size: .65rem; letter-spacing: 1px; text-transform: uppercase;
+      color: #4f7eb3; font-weight: 700; margin-bottom: 3px;
+    }
+    .grant-spec-value { font-size: .85rem; color: #1a1a2e; font-weight: 600; }
+
+    /* image + video layout */
+    .grant-media { padding: 0 32px 28px; }
+    .grant-media-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .grant-media-grid.single { grid-template-columns: 1fr; }
+    .grant-img-wrap {
+      border-radius: 10px; overflow: hidden;
+      box-shadow: 0 3px 14px rgba(0,0,0,.1);
+    }
+    .grant-img-wrap img { width: 100%; height: 240px; object-fit: cover; display: block; }
+    .grant-img-wrap.full-height img { height: auto; object-fit: unset; }
+    .grant-img-wrap video { width: 100%; height: 240px; display: block; object-fit: cover; }
+    .grant-img-label {
+      font-size: .7rem; text-align: center; color: #666;
+      margin-top: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: .8px;
+    }
+    .grant-results {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px; margin: 0 32px 28px;
+    }
+    .grant-result-card {
+      background: #f0f4ff; border-radius: 10px; padding: 18px 18px 14px;
+    }
+    .grant-result-card h5 {
+      font-size: .82rem !important; font-weight: 700 !important;
+      color: #1a3a6b !important; margin-bottom: 10px;
+      text-transform: uppercase; letter-spacing: .6px;
+    }
+    .grant-result-card img { width: 100%; border-radius: 6px; }
+    .grant-result-card p { font-size: .82rem; color: #444; line-height: 1.6; margin: 0; }
+
+    @media (max-width: 767px) {
+      .grant-hero h1 { font-size: 2rem !important; }
+      .grant-stats { gap: 28px; }
+      .grant-card-header { flex-direction: column; gap: 12px; }
+      .grant-media-grid { grid-template-columns: 1fr; }
+      .grant-results { margin: 0 16px 20px; }
+      .grant-card-header, .grant-card-body, .grant-media { padding-left: 20px; padding-right: 20px; }
+    }
+  </style>
+</head>
+<body class="blog_version">
+
+<div id="site-header"></div>
+
+<!-- HERO -->
+<section class="grant-hero">
+  <div class="grant-particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="grant-hero-inner container">
+    <div class="grant-eyebrow">Research Funding</div>
+    <h1>Grants &amp; Funded Projects</h1>
+    <p class="hero-sub">Research initiatives and laboratory infrastructure funded by government bodies and institutions.</p>
+    <div class="grant-stats">
+      <div>
+        <span class="grant-stat-num">3</span>
+        <span class="grant-stat-lbl">Funded Projects</span>
+      </div>
+      <div>
+        <span class="grant-stat-num">₹55.6L+</span>
+        <span class="grant-stat-lbl">Total Funding</span>
+      </div>
+      <div>
+        <span class="grant-stat-num">2017</span>
+        <span class="grant-stat-lbl">First Grant</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRANTS -->
+<section class="grant-section">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="section-label">Funded Research</span>
+      <h2 class="section-title">Grants &amp; Projects</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="grant-grid">
+
+      <!-- Grant 1 -->
+      <div class="grant-card">
+        <div class="grant-card-header">
+          <div class="grant-num-badge">1</div>
+          <div class="grant-card-header-text">
+            <h3 class="grant-card-title">Technology Demonstration &amp; Training Centre</h3>
+            <div class="grant-meta-row">
+              <span class="grant-funder-chip">DST Rajasthan</span>
+              <span class="grant-date-chip">23 March 2018 – Present (5 Years)</span>
+              <span class="grant-amount-chip">₹1,64,500 INR</span>
+            </div>
+          </div>
+        </div>
+        <div class="grant-card-body">
+          <p class="grant-desc">A five-year government grant from the Department of Science &amp; Technology, Rajasthan, to establish a Technology Demonstration &amp; Training Centre. The centre supported two major outreach initiatives:</p>
+          <ul class="grant-items">
+            <li>Workshop on Advancement in Computer &amp; Communications: Awareness and Its Use — ₹46,500 · September 2019</li>
+            <li>Industry Safety Measures for Workers: Cloud and Real-Time Video Processing Enabled — ₹1,18,000 · September 2019</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Grant 2 -->
+      <div class="grant-card">
+        <div class="grant-card-header">
+          <div class="grant-num-badge">2</div>
+          <div class="grant-card-header-text">
+            <h3 class="grant-card-title">Grant for IoT and AI Laboratory</h3>
+            <div class="grant-meta-row">
+              <span class="grant-funder-chip">Manipal University Jaipur</span>
+              <span class="grant-date-chip">20 April 2017</span>
+              <span class="grant-amount-chip">₹50,00,000 INR</span>
+            </div>
+          </div>
+        </div>
+        <div class="grant-card-body">
+          <p class="grant-desc">Secured a grant in January 2017 to establish a state-of-the-art IoT and AI Laboratory at Manipal University Jaipur. The lab serves as a hub for research, development, and student startups, fostering collaborative innovation with industry partners worldwide.</p>
+          <p class="grant-desc">The lab received a lifetime collaboration with <strong>Texas Instruments</strong>, and is equipped with oscilloscopes, wave generators, DC power supplies, and the latest microcontrollers — Raspberry Pi, Arduino, Intel Edison, and Texas Instruments kits.</p>
+        </div>
+        <div class="grant-media">
+          <div class="grant-media-grid single">
+            <div>
+              <div class="grant-img-wrap full-height">
+                <img src="files/5. Project/1. Project/55.jpeg" alt="IoT and AI Laboratory">
+              </div>
+              <div class="grant-img-label">IoT &amp; AI Laboratory — Manipal University Jaipur</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grant 3 -->
+      <div class="grant-card">
+        <div class="grant-card-header">
+          <div class="grant-num-badge">3</div>
+          <div class="grant-card-header-text">
+            <h3 class="grant-card-title">Energy Consumption Optimization for Smart Classroom Using Computer Vision</h3>
+            <div class="grant-meta-row">
+              <span class="grant-funder-chip">IoT Project · Manipal University Jaipur</span>
+              <span class="grant-date-chip">July 2019 – December 2019</span>
+              <span class="grant-amount-chip">₹4,00,000 INR</span>
+            </div>
+          </div>
+        </div>
+        <div class="grant-card-body">
+          <p class="grant-desc">A research project aimed at reducing unnecessary energy consumption in smart homes, offices, and classrooms using wireless sensor networks (WSNs) and computer vision. An isolated WSN with one coordinator integrated into Arduino Uno was deployed per room to transfer environmental parameters to the management station.</p>
+          <p class="grant-desc">Passive infrared sensors were used to automatically control lighting — turning lights on when a person is detected and off after a predefined delay. Analysis of fluorescent lamp illumination alongside PIR sensors demonstrated significant energy savings.</p>
+          <div class="grant-specs">
+            <div class="grant-spec-item">
+              <div class="grant-spec-label">Technology</div>
+              <div class="grant-spec-value">Computer Vision</div>
+            </div>
+            <div class="grant-spec-item">
+              <div class="grant-spec-label">Application</div>
+              <div class="grant-spec-value">Smart Homes &amp; Lighting Control</div>
+            </div>
+            <div class="grant-spec-item">
+              <div class="grant-spec-label">Interface</div>
+              <div class="grant-spec-value">Smartphone App</div>
+            </div>
+            <div class="grant-spec-item">
+              <div class="grant-spec-label">Hardware</div>
+              <div class="grant-spec-value">Raspberry Pi, Camera, Relay, Arduino</div>
+            </div>
+          </div>
+        </div>
+        <div class="grant-media">
+          <div class="grant-media-grid">
+            <div>
+              <div class="grant-img-wrap">
+                <video controls><source src="files/5. Project/1. Project/15.mp4" type="video/mp4"></video>
+              </div>
+              <div class="grant-img-label">Demo Video</div>
+            </div>
+            <div>
+              <div class="grant-img-wrap">
+                <img src="files/5. Project/1. Project/56.jpeg" alt="Project Setup">
+              </div>
+              <div class="grant-img-label">Project Setup</div>
+            </div>
+          </div>
+        </div>
+        <div class="grant-results">
+          <div class="grant-result-card">
+            <h5>Results</h5>
+            <p>Electricity consumption reduced by at least <strong>40%</strong> under smart control. Experimental tests confirmed the system is practically feasible and performs reliably in a smart home control network with light illumination control.</p>
+          </div>
+          <div class="grant-result-card">
+            <h5>Hardware Interface</h5>
+            <img src="files/5. Project/1. Project/53.png" alt="Hardware Interface">
+          </div>
+          <div class="grant-result-card">
+            <h5>Application Interface</h5>
+            <img src="files/5. Project/1. Project/57.png" alt="Application Interface">
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /grant-grid -->
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/isotope/isotope-min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/site-components.js"></script>
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>

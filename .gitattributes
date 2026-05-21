@@ -1,0 +1,22 @@
+﻿*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.avi filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.mkv filter=lfs diff=lfs merge=lfs -text
+*.CR2 filter=lfs diff=lfs merge=lfs -text
+*.cr2 filter=lfs diff=lfs merge=lfs -text
+"files/5. Project/**/*.mp4" -filter -diff -merge -text
+"files/8. Blog/1. academic/**/*.mp4" -filter -diff -merge -text
+"files/8. Blog/1. academic/**/*.MP4" -filter -diff -merge -text
+"files/8. Blog/1. academic/**/*.avi" -filter -diff -merge -text
+"files/8. Blog/1. academic/**/*.AVI" -filter -diff -merge -text
+"files/8. Blog/1. academic/**/*.mpg" -filter -diff -merge -text
+"files/8. Blog/1. academic/**/*.MPG" -filter -diff -merge -text
+"files/8. Blog/4. Avocations/**/*.mp4" -filter -diff -merge -text
+"files/8. Blog/4. Avocations/**/*.MP4" -filter -diff -merge -text
+"files/8. Blog/4. Avocations/**/*.mov" -filter -diff -merge -text
+"files/8. Blog/4. Avocations/**/*.MOV" -filter -diff -merge -text
+"files/8. Blog/4. Avocations/**/*.m4v" -filter -diff -merge -text
+"files/8. Blog/4. Avocations/**/*.M4V" -filter -diff -merge -text
+"files/8. Blog/4. Avocations/**/*.webm" -filter -diff -merge -text
+"files/8. Blog/4. Avocations/**/*.WEBM" -filter -diff -merge -text
+*.pdf -diff -merge -text

@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Sports – Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+    .blog_area { background: #f5f6ff; }
+    .single_sidebar_widget, .single-sidebar-widget {
+      background: #fff; border-radius: 12px; padding: 24px 22px;
+      margin-bottom: 24px; box-shadow: 0 3px 18px rgba(15,52,96,.07);
+    }
+    .widget_title {
+      font-size: 1rem !important; font-weight: 800 !important; color: #0f3460 !important;
+      background: none !important;
+      margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e8eeff;
+    }
+    .author_widget { text-align: center; }
+    .author_img { width: 80px; height: 80px; object-fit: cover; border: 3px solid #7eb8e0; margin-bottom: 12px; }
+    .author_widget h4 { font-weight: 800 !important; color: #0f3460 !important; margin-bottom: 2px; }
+    .author_widget > p:first-of-type { color: #7eb8e0; font-size: .82rem; font-weight: 600; margin-bottom: 10px; }
+    .social_icon a { color: #0f3460; margin: 0 6px; font-size: 1rem; transition: color .2s; }
+    .social_icon a:hover { color: #7eb8e0; }
+    .author_widget p:last-child { font-size: .8rem; color: #666; line-height: 1.65; text-align: left; margin-top: 12px; }
+    .post_item { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .post_item img { width: 58px; height: 48px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+    .post_item h3 { font-size: .82rem !important; font-weight: 700 !important; color: #0f3460 !important; margin-bottom: 2px; }
+    .post_item p { font-size: .73rem; color: #888; margin: 0; }
+    .cat-list li a { display: flex; justify-content: space-between; color: #444; font-size: .85rem;
+      padding: 7px 0; border-bottom: 1px solid #eef0ff; transition: color .2s; }
+    .cat-list li a:hover { color: #7eb8e0; }
+    .cat-list li a p { margin: 0; }
+    .tag_cloud_widget ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+    .tag_cloud_widget ul li a { display: block; padding: 5px 12px; background: #f0f4ff;
+      border-radius: 20px; font-size: .76rem; color: #0f3460; font-weight: 600;
+      border: 1px solid #d0d8ff; transition: background .2s, color .2s; }
+    .tag_cloud_widget ul li a:hover { background: #7eb8e0; color: #fff; }
+    .feature-img img { border-radius: 14px; margin-bottom: 30px; }
+    .blog_details h2 { color: #0f3460 !important; font-weight: 900 !important; }
+    .blog_details p.excert { font-size: 1rem; color: #333; font-weight: 500; }
+    .blog_details p { color: #555; line-height: 1.8; }
+    .post_tag a { font-size: .76rem; color: #0f3460; font-weight: 700; }
+    .post_tag a.active { color: #7eb8e0; }
+    .blog_meta li a { color: #444 !important; font-size: .8rem; }
+    .blog_meta li a i { color: #7eb8e0; margin-left: 4px; }
+    .blog_meta li .blog-like-btn { border: 0; background: transparent; color: #444; font-size: .8rem; padding: 0; cursor: pointer; }
+    .blog_meta li .blog-like-btn:hover, .blog_meta li .blog-like-btn.liked { color: #7eb8e0; }
+    .blog_meta li .blog-like-count { color: #444; font-size: .8rem; }
+    .social-links li a { color: #0f3460 !important; transition: color .2s; }
+    .social-links li a:hover { color: #7eb8e0 !important; }
+    .quotes { background: linear-gradient(135deg,#f0f4ff,#e8eeff); border-left: 5px solid #7eb8e0;
+      padding: 22px 28px; border-radius: 8px; color: #0f3460; font-style: italic;
+      font-size: 1rem; line-height: 1.75; margin: 28px 0; }
+    .navigation-area { background: #fff; border-radius: 12px; padding: 24px; margin: 30px 0;
+      box-shadow: 0 3px 18px rgba(15,52,96,.07); }
+    .navigation-area h4 { color: #0f3460 !important; font-size: .92rem !important; font-weight: 700 !important; }
+    .navigation-area p { color: #888; font-size: .78rem; margin-bottom: 2px; }
+    .navigation-area .lnr { color: #7eb8e0; font-size: 1.2rem; }
+    .comments-area { background: #fff; border-radius: 12px; padding: 28px; margin-bottom: 24px;
+      box-shadow: 0 3px 18px rgba(15,52,96,.07); }
+    .comments-area h4 { color: #0f3460 !important; font-weight: 800 !important; margin-bottom: 20px; }
+    .single-comment .thumb img { width: 52px; height: 52px; object-fit: cover; border-radius: 50%;
+      border: 2px solid #7eb8e0; }
+    .single-comment .desc h5 a { color: #0f3460 !important; font-weight: 700; }
+    .single-comment .desc .date { font-size: .75rem; color: #999; }
+    .single-comment .desc .comment { color: #555; font-size: .88rem; }
+    .btn-reply { color: #7eb8e0; font-size: .75rem; font-weight: 700; border: 1px solid #7eb8e0;
+      padding: 4px 12px; border-radius: 20px; transition: all .2s; }
+    .btn-reply:hover { background: #7eb8e0; color: #fff; }
+    .comment-form { background: #fff; border-radius: 12px; padding: 28px;
+      box-shadow: 0 3px 18px rgba(15,52,96,.07); }
+    .comment-form h4 { color: #0f3460 !important; font-weight: 800 !important; margin-bottom: 20px; }
+    .comment-form .form-control { border: 1px solid #d0d8ff; border-radius: 8px; }
+    .comment-form .form-control:focus { border-color: #7eb8e0; box-shadow: none; }
+    .primary_btn { background: linear-gradient(135deg,#0f3460,#7eb8e0); color: #fff !important;
+      font-size: .82rem; padding: 10px 28px; border-radius: 24px; display: inline-block;
+      font-weight: 700; text-decoration: none; transition: opacity .2s; }
+    .primary_btn:hover { opacity: .85; }
+    .search_widget .input-group input { border-radius: 8px 0 0 8px; border: 1px solid #d0d8ff; }
+    .search_widget .btn { border-radius: 0 8px 8px 0; background: #7eb8e0; color: #fff; }
+    /* ── HEADER SLIDESHOW ── */
+    .header-slideshow { position: relative; width: 100%; height: 90vh; overflow: hidden; user-select: none; margin-top: 93px; }
+    .header-slideshow .slide {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      opacity: 0; transition: opacity 1s ease-in-out;
+    }
+    .header-slideshow .slide::before {
+      content: ''; position: absolute; inset: -30px;
+      background-image: var(--img); background-size: cover; background-position: center;
+      filter: blur(22px) brightness(0.55); z-index: 0;
+    }
+    .header-slideshow .slide img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: contain; object-position: center top; z-index: 1;
+    }
+    .header-slideshow .slide.active { opacity: 1; }
+
+    /* Prev / Next arrows */
+    .hs-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      z-index: 10; background: rgba(0,0,0,.45); color: #fff;
+      border: none; border-radius: 50%; width: 44px; height: 44px;
+      font-size: 1.1rem; cursor: pointer; display: flex; align-items: center;
+      justify-content: center; transition: background .2s;
+    }
+    .hs-arrow:hover { background: rgba(0,0,0,.75); }
+    .hs-arrow.prev { left: 14px; }
+    .hs-arrow.next { right: 14px; }
+
+    /* Dot indicators */
+    .hs-dots {
+      position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 8px; z-index: 10;
+    }
+    .hs-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: rgba(255,255,255,.45); border: 2px solid rgba(255,255,255,.7);
+      cursor: pointer; transition: background .2s, transform .2s;
+    }
+    .hs-dot.active { background: #fff; transform: scale(1.25); }
+
+    /* Pause indicator */
+    .hs-pause-icon {
+      position: absolute; top: 12px; right: 14px; z-index: 10;
+      background: rgba(0,0,0,.45); color: #fff; border-radius: 50%;
+      width: 32px; height: 32px; display: flex; align-items: center;
+      justify-content: center; font-size: .8rem; cursor: pointer;
+      transition: background .2s;
+    }
+    .hs-pause-icon:hover { background: rgba(0,0,0,.75); }
+    .mfp-bg   { z-index: 20000 !important; }
+    .mfp-wrap { z-index: 20001 !important; }
+    .blog-gallery-section { margin: 36px 0 8px; scroll-margin-top: 130px; }
+    .blog-gallery-label { font-size: .68rem; font-weight: 800; letter-spacing: 1.5px; color: #d4900a; text-transform: uppercase; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .blog-gallery-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg,#f5e0a8,transparent); }
+    .blog-gallery-label i { font-size: .6rem; }
+    .blog-gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; scroll-margin-top: 130px; }
+    .blog-gallery-grid a { position: relative; display: block; border-radius: 8px; overflow: hidden; aspect-ratio: 4/3; }
+    .blog-gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; display: block; }
+    .blog-gallery-grid a:hover img { transform: scale(1.06); }
+    .blog-gal-overlay { position: absolute; inset: 0; background: rgba(15,52,96,.42); opacity: 0; display: flex; align-items: center; justify-content: center; transition: opacity .25s; border-radius: 8px; }
+    .blog-gal-overlay i { color: #fff; font-size: 1.1rem; }
+    .blog-gallery-grid a:hover .blog-gal-overlay { opacity: 1; }
+    .sports-certificate-section {
+      margin: 34px 0 18px; padding: 18px;
+      background: linear-gradient(180deg,#fffdf7,#f8fbff);
+      border: 1px solid #edf1f8; border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(15,52,96,.06);
+    }
+    .sports-certificate-intro { color: #546070; font-size: .92rem; line-height: 1.75; margin: 0 0 16px; }
+    .sports-certificate-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+    .sports-cert-card {
+      background: #fff; border: 1px solid #edf1f8; border-radius: 8px;
+      overflow: hidden; box-shadow: 0 4px 14px rgba(15,52,96,.05);
+    }
+    .sports-certificate-grid a {
+      position: relative; display: block; border-radius: 8px; overflow: hidden;
+      aspect-ratio: 4/3; background: #fff;
+    }
+    .sports-certificate-grid img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
+    .sports-certificate-grid a:hover img { transform: scale(1.04); }
+    .sports-cert-badge {
+      position: absolute; left: 8px; top: 8px; z-index: 2;
+      background: rgba(15,52,96,.9); color: #fff; border-radius: 999px;
+      font-size: .62rem; font-weight: 800; letter-spacing: .8px;
+      padding: 5px 8px; text-transform: uppercase;
+    }
+    .sports-cert-copy { padding: 12px 14px 14px; }
+    .sports-cert-copy h4 {
+      color: #0f3460; font-size: .92rem; font-weight: 800;
+      line-height: 1.35; margin: 0 0 6px;
+    }
+    .sports-cert-copy p {
+      color: #5f6873; font-size: .82rem; line-height: 1.65;
+      margin: 0;
+    }
+    .sports-cert-category {
+      grid-column: 1 / -1; padding: 14px 16px; border-radius: 8px;
+      background: linear-gradient(135deg,#0f3460,#1a5276);
+      color: #fff; margin-top: 8px;
+    }
+    .sports-cert-category:first-child { margin-top: 0; }
+    .sports-cert-category span {
+      display: block; color: #7eb8e0; font-size: .62rem; font-weight: 800;
+      letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 3px;
+    }
+    .sports-cert-category h3 {
+      color: #fff !important; font-size: 1rem !important; font-weight: 900 !important;
+      margin: 0 0 6px !important;
+    }
+    .sports-cert-category p {
+      color: rgba(255,255,255,.82); font-size: .82rem; line-height: 1.6; margin: 0;
+    }
+    .sports-post-list { display: grid; gap: 18px; margin: 28px 0 10px; }
+    .sports-post-card {
+      display: grid; grid-template-columns: minmax(210px, 38%) 1fr; gap: 18px;
+      background: #fff; border: 1px solid #edf1f8; border-radius: 10px;
+      padding: 14px; box-shadow: 0 5px 18px rgba(15,52,96,.06);
+      scroll-margin-top: 130px;
+    }
+    .sports-post-media a {
+      position: relative; display: block; overflow: hidden; border-radius: 8px;
+      aspect-ratio: 4/3; background: #f4f7fb;
+    }
+    .sports-post-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
+    .sports-post-media a:hover img { transform: scale(1.04); }
+    .sports-post-media a::after {
+      content: "\f00e"; font-family: FontAwesome; position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; background: rgba(15,52,96,.42); opacity: 0; transition: opacity .25s;
+    }
+    .sports-post-media a:hover::after { opacity: 1; }
+    .sports-post-copy { align-self: center; }
+    .sports-post-meta {
+      color: #d4900a; font-size: .68rem; font-weight: 900; letter-spacing: 1.4px;
+      text-transform: uppercase; margin-bottom: 7px;
+    }
+    .sports-post-copy h4 {
+      color: #0f3460; font-size: 1.05rem; font-weight: 900;
+      line-height: 1.35; margin: 0 0 8px;
+    }
+    .sports-post-copy p { color: #5f6873; font-size: .9rem; line-height: 1.72; margin: 0; }
+    .sports-post-gallery {
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-top: 12px;
+    }
+    .sports-post-gallery a { aspect-ratio: 4/3; border-radius: 7px; overflow: hidden; display: block; }
+    .sports-post-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    @media (max-width: 767px) {
+      .sports-post-card { grid-template-columns: 1fr; }
+      .sports-post-gallery { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 767px) { .blog-gallery-grid { grid-template-columns: repeat(2,1fr); } }
+
+    /* ── SPORTS SUB-HEADERS ── */
+    .sports-subheader {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, #0f3460, #1a5276);
+      border-radius: 14px; padding: 18px 24px; margin: 36px 0 20px;
+      box-shadow: 0 4px 18px rgba(15,52,96,.18);
+    }
+    .sports-sh-icon {
+      width: 52px; height: 52px; border-radius: 12px; flex-shrink: 0;
+      background: rgba(255,255,255,.12); display: flex; align-items: center;
+      justify-content: center;
+    }
+    .sports-sh-icon i { color: #7eb8e0; font-size: 1.5rem; }
+    .sports-sh-label {
+      display: block; font-size: .62rem; font-weight: 800; letter-spacing: 2px;
+      text-transform: uppercase; color: #7eb8e0; margin-bottom: 2px;
+    }
+    .sports-sh-title {
+      font-size: 1.15rem !important; font-weight: 900 !important;
+      color: #fff !important; margin: 0 !important;
+    }
+    .sports-level-note {
+      background: #f8fbff; border-left: 4px solid #7eb8e0;
+      border-radius: 0 8px 8px 0; color: #546070;
+      font-size: .9rem; line-height: 1.75; margin: -8px 0 22px;
+      padding: 14px 18px;
+    }
+    .sports-stats-strip {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 10px;
+      margin: 22px 0 8px;
+    }
+    .sports-stat {
+      background: #fff; border: 1px solid #edf1f8; border-radius: 8px;
+      padding: 14px 16px; box-shadow: 0 4px 14px rgba(15,52,96,.06);
+    }
+    .sports-stat strong { display: block; color: #0f3460; font-size: 1.25rem; line-height: 1; }
+    .sports-stat span { display: block; color: #78818d; font-size: .72rem; font-weight: 700; letter-spacing: .8px; margin-top: 6px; text-transform: uppercase; }
+    @media (max-width: 767px) { .sports-stats-strip { grid-template-columns: 1fr; } .sports-subheader { padding: 16px; } .sports-certificate-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+
+<body class="blog_version">
+
+<div id="site-header"></div>
+
+<!-- Full-width header slideshow -->
+<div class="header-slideshow" id="headerSlideshow">
+  <div class="slide active" style="--img:url('files/8. Blog/3. Sports/header/1.png')">
+    <img src="files/8. Blog/3. Sports/header/1.png" alt="Sports - Anubha Parashar">
+  </div>
+  <div class="slide" style="--img:url('files/8. Blog/3. Sports/header/2.png')">
+    <img src="files/8. Blog/3. Sports/header/2.png" alt="Sports - Anubha Parashar">
+  </div>
+  <div class="slide" style="--img:url('files/8. Blog/3. Sports/header/3.png')">
+    <img src="files/8. Blog/3. Sports/header/3.png" alt="Sports - Anubha Parashar">
+  </div>
+  <div class="slide" style="--img:url('files/8. Blog/3. Sports/header/4.png')">
+    <img src="files/8. Blog/3. Sports/header/4.png" alt="Sports - Anubha Parashar">
+  </div>
+  <!-- Controls -->
+  <button class="hs-arrow prev" id="hsPrev" aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
+  <button class="hs-arrow next" id="hsNext" aria-label="Next"><i class="fa fa-chevron-right"></i></button>
+  <div class="hs-dots" id="hsDots"></div>
+  <div class="hs-pause-icon" id="hsPause" title="Pause / Resume"><i class="fa fa-pause"></i></div>
+</div>
+
+<section class="blog_area single-post-area section_gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 posts-list">
+        <div class="single-post row">
+
+          <!-- Article body -->
+          <div class="col-lg-12 col-md-12 blog_details">
+            <h2>Sports, Spirit &amp; Competitive Memories</h2>
+            <p class="excert">
+              Sports have always been more than medals and photographs for me. They represent discipline, energy, confidence, teamwork, and the joy of showing up with full spirit. The numbered posts below turn each sports memory into its own small story, so every certificate, trophy, and activity photo has space to be seen clearly.
+            </p>
+            <p>
+              These memories bring together moments from state-level participation, regional and inter-university activities, and office, college, and school events. Each frame carries a different kind of achievement: the courage to compete, the patience to practice, and the happiness of being part of a team.
+            </p>
+            <p>
+              I value sports because they build the same qualities that sustain research and professional life: focus, resilience, strategy, and consistency. Whether it was a formal competition or a spirited campus activity, every experience added strength beyond the field.
+            </p>
+            <div class="sports-stats-strip">
+              <div class="sports-stat"><strong>3</strong><span>Levels</span></div>
+              <div class="sports-stat"><strong>28</strong><span>Posts</span></div>
+              <div class="sports-stat"><strong>3</strong><span>Categories</span></div>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="quotes">
+              "Sport teaches you to keep moving with discipline, grace, and courage, even when the finish line is still ahead."
+            </div>
+            <div class="row">
+              <div class="col-6">
+              </div>
+              <div class="col-6">
+              </div>
+              <div class="col-lg-12 mt-25">
+                <p>
+                  From competitive events to campus sports days, these memories remind me that achievement is built one effort at a time. The field has its own lessons: preparation matters, teamwork matters, and a positive attitude can change the whole game.
+                </p>
+                <p>
+                  This section is organised into 28 numbered posts across three levels: State, Regional &amp; Inter University, and Office / College / School.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /single-post -->
+        <!-- Numbered Sports Posts -->
+        <div class="col-lg-12 px-0" style="margin-bottom:32px;">
+          <div class="sports-subheader" id="sports-state">
+            <div class="sports-sh-icon"><i class="fa fa-map"></i></div>
+            <div class="sports-sh-text">
+              <span class="sports-sh-label">Level 01</span>
+              <h3 class="sports-sh-title">State</h3>
+            </div>
+          </div>
+          <p class="sports-level-note">State-level sports posts from formal participation and recognition, each shown as its own memory.</p>
+          <div class="sports-post-list">
+            <article class="sports-post-card" id="sports-post-01">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/1. State/2.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/1. State/2.jpg" alt="State Recognition Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 01 / Level 01 - State</div>
+                <h4>State Recognition Certificate</h4>
+                <p>This certificate preserves a meaningful state-level sports memory and reminds me how early participation helped build confidence, focus, and the courage to keep improving.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-02">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/1. State/3.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/1. State/3.jpg" alt="State Sports Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 02 / Level 01 - State</div>
+                <h4>State Sports Certificate</h4>
+                <p>A state sports milestone that represents effort and sincerity. It is one of those memories that shows how every competition adds strength beyond the field.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-03">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/1. State/4.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/1. State/4.jpg" alt="State Participation Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 03 / Level 01 - State</div>
+                <h4>State Participation Certificate</h4>
+                <p>This post celebrates participation at state level, where showing up with full spirit mattered as much as the result and helped shape a stronger sporting attitude.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-04">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/1. State/5.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/1. State/5.jpg" alt="State Event Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 04 / Level 01 - State</div>
+                <h4>State Event Certificate</h4>
+                <p>A state event certificate that carries the value of consistency, preparation, and the pride of representing myself with sincerity and determination.</p>
+              </div>
+            </article>
+          </div>
+          <div class="sports-subheader" id="sports-regional-inter-university">
+            <div class="sports-sh-icon"><i class="fa fa-university"></i></div>
+            <div class="sports-sh-text">
+              <span class="sports-sh-label">Level 02</span>
+              <h3 class="sports-sh-title">Regional &amp; Inter University</h3>
+            </div>
+          </div>
+          <p class="sports-level-note">Regional and inter-university sports posts, including certificates, trophies, and PDM activity memories.</p>
+          <div class="sports-post-list">
+            <article class="sports-post-card" id="sports-post-05">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/2. Regional & Inter University/6.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/6.jpg" alt="Regional Trophy and Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 05 / Level 02 - Regional &amp; Inter University</div>
+                <h4>Regional Trophy and Certificate</h4>
+                <p>This regional post brings together recognition and joy, capturing a trophy-and-certificate moment from a wider competitive journey.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-06">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/2. Regional & Inter University/7.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/7.jpg" alt="Regional Sports Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 06 / Level 02 - Regional &amp; Inter University</div>
+                <h4>Regional Sports Certificate</h4>
+                <p>A regional sports certificate that records steady effort, active participation, and the confidence gained through competing outside familiar spaces.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-07">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/2. Regional & Inter University/8.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/8.jpg" alt="Regional Achievement Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 07 / Level 02 - Regional &amp; Inter University</div>
+                <h4>Regional Achievement Certificate</h4>
+                <p>This achievement memory shows how sports creates lasting pride through preparation, performance, and the encouragement that comes with recognition.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-08">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/2. Regional & Inter University/9/9.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/9/9.jpg" alt="PDM Sports Memories"></a>
+                <div class="sports-post-gallery">
+                  <a href="files/8. Blog/3. Sports/2. Regional & Inter University/9/602033_351514388292755_1099466682_n.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/9/602033_351514388292755_1099466682_n.jpg" alt="PDM Sports Memories photo"></a>
+                  <a href="files/8. Blog/3. Sports/2. Regional & Inter University/9/DSC01012.JPG"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/9/DSC01012.JPG" alt="PDM Sports Memories photo"></a>
+                  <a href="files/8. Blog/3. Sports/2. Regional & Inter University/9/DSC01014.JPG"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/9/DSC01014.JPG" alt="PDM Sports Memories photo"></a>
+                  <a href="files/8. Blog/3. Sports/2. Regional & Inter University/9/DSC01029.JPG"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/9/DSC01029.JPG" alt="PDM Sports Memories photo"></a>
+                  <a href="files/8. Blog/3. Sports/2. Regional & Inter University/9/Photo1299.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/9/Photo1299.jpg" alt="PDM Sports Memories photo"></a>
+                  <a href="files/8. Blog/3. Sports/2. Regional & Inter University/9/Photo1303.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/9/Photo1303.jpg" alt="PDM Sports Memories photo"></a>
+                </div>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 08 / Level 02 - Regional &amp; Inter University</div>
+                <h4>PDM Sports Memories</h4>
+                <p>The PDM sports post is full of team energy and campus spirit. These photos remember participation, coordination, and the happiness of being part of an active sports environment.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-09">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/2. Regional & Inter University/10.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/10.jpg" alt="Regional Recognition Moment"></a>
+                <div class="sports-post-gallery">
+                  <a href="files/8. Blog/3. Sports/3. Office  College  School/10/10.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/10/10.jpg" alt="Regional Recognition Moment photo"></a>
+                  <a href="files/8. Blog/3. Sports/3. Office  College  School/10/20181218_132223.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/10/20181218_132223.jpg" alt="Regional Recognition Moment photo"></a>
+                  <a href="files/8. Blog/3. Sports/3. Office  College  School/10/20181218_132224.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/10/20181218_132224.jpg" alt="Regional Recognition Moment photo"></a>
+                  <a href="files/8. Blog/3. Sports/3. Office  College  School/10/20181218_132226.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/10/20181218_132226.jpg" alt="Regional Recognition Moment photo"></a>
+                  <a href="files/8. Blog/3. Sports/3. Office  College  School/10/20181218_132227.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/10/20181218_132227.jpg" alt="Regional Recognition Moment photo"></a>
+                  <a href="files/8. Blog/3. Sports/3. Office  College  School/10/20181218_132232.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/10/20181218_132232.jpg" alt="Regional Recognition Moment photo"></a>
+                </div>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 09 / Level 02 - Regional &amp; Inter University</div>
+                <h4>Regional Recognition Moment</h4>
+                <p>This recognition moment belongs to the regional and inter-university journey, where sports became a way to learn focus, teamwork, and resilience.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-10">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/2. Regional & Inter University/11.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/2. Regional & Inter University/11.jpg" alt="Inter-School Sports Certificate"></a>
+                <div class="sports-post-gallery">
+                  <a href="files/8. Blog/3. Sports/3. Office  College  School/11/20260516_170948.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/11/20260516_170948.jpg" alt="Inter-School Sports Certificate photo"></a>
+                  <a href="files/8. Blog/3. Sports/3. Office  College  School/11/getting medal.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/11/getting medal.jpg" alt="Inter-School Sports Certificate photo"></a>
+                </div>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 10 / Level 02 - Regional &amp; Inter University</div>
+                <h4>Inter-School Sports Certificate</h4>
+                <p>This certificate reflects the value of inter-school and inter-university participation, where every event offered a chance to grow stronger and more confident.</p>
+              </div>
+            </article>
+          </div>
+          <div class="sports-subheader" id="sports-office-college-school">
+            <div class="sports-sh-icon"><i class="fa fa-building"></i></div>
+            <div class="sports-sh-text">
+              <span class="sports-sh-label">Level 03</span>
+              <h3 class="sports-sh-title">Office / College / School</h3>
+            </div>
+          </div>
+          <p class="sports-level-note">Level 03 - Office / College / School: school memories are from up to 2008, college memories follow after school, and office sports memories are from 2016 onward.</p>
+          <div class="sports-post-list">
+            <article class="sports-post-card" id="sports-post-11">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/1.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/1.jpg" alt="Office, college, and school trophy and certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 11 / Level 03 - Office / College / School</div>
+                <h4>Trophy and Certificate</h4>
+                <p>This first office, college, and school sports post marks a proud achievement moment, where the certificate and trophy together reflect discipline, preparation, and the confidence built through active participation.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-12">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/12.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/12.jpg" alt="Athletics Medal Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 12 / Level 03 - Office / College / School</div>
+                <h4>Athletics Medal Certificate</h4>
+                <p>This school athletics memory captures the excitement of receiving recognition and the discipline learned through regular sports participation.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-13">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/13.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/13.jpg" alt="School Athletics Achievement"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 13 / Level 03 - Office / College / School</div>
+                <h4>School Athletics Achievement</h4>
+                <p>A school athletics achievement that reminds me of active sports days, friendly competition, and the confidence that comes from sincere effort.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-14">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/14.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/14.jpg" alt="Track Event Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 14 / Level 03 - Office / College / School</div>
+                <h4>Track Event Certificate</h4>
+                <p>This track event certificate represents focus, timing, and the determination to give my best when the moment demanded energy and discipline.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-15">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/15.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/15.jpg" alt="School Sports Recognition"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 15 / Level 03 - Office / College / School</div>
+                <h4>School Sports Recognition</h4>
+                <p>A recognition post from the school sports chapter, where every event added confidence and made the habit of participation feel important.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-16">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/16.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/16.jpg" alt="Athletics Certificate Memory"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 16 / Level 03 - Office / College / School</div>
+                <h4>Athletics Certificate Memory</h4>
+                <p>This athletics certificate keeps alive a memory of effort, movement, and the joy of being active in school-level sports.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-17">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/17.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/17.jpg" alt="Achievement Certificate and Trophy"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 17 / Level 03 - Office / College / School</div>
+                <h4>Achievement Certificate and Trophy</h4>
+                <p>A certificate-and-trophy moment that captures the satisfaction of being recognised and the happiness that comes from a meaningful sports achievement.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-18">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/18.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/18.jpg" alt="School Sports Certificate and Trophy"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 18 / Level 03 - Office / College / School</div>
+                <h4>School Sports Certificate and Trophy</h4>
+                <p>This post preserves the excitement of school sports recognition, with the trophy and certificate standing as symbols of effort and participation.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-19">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/19.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/19.jpg" alt="School Achievement Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 19 / Level 03 - Office / College / School</div>
+                <h4>School Achievement Certificate</h4>
+                <p>A school achievement certificate that reflects one of the many smaller milestones that together shaped a strong sports journey.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-20">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/20.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/20.jpg" alt="School Sports Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 20 / Level 03 - Office / College / School</div>
+                <h4>School Sports Certificate</h4>
+                <p>This school sports certificate represents participation, steady effort, and the habit of stepping forward whenever there was a chance to compete.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-21">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/21.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/21.jpg" alt="Sports Day Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 21 / Level 03 - Office / College / School</div>
+                <h4>Sports Day Certificate</h4>
+                <p>A sports day certificate that reminds me how consistent effort and active participation matter as much as the final result.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-22">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/22.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/22.jpg" alt="School Competition Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 22 / Level 03 - Office / College / School</div>
+                <h4>School Competition Certificate</h4>
+                <p>This competition certificate carries the memory of participating with classmates, learning through sports, and enjoying the spirit of healthy competition.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-23">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/23.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/23.jpg" alt="Certificate with Trophy Moment"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 23 / Level 03 - Office / College / School</div>
+                <h4>Certificate with Trophy Moment</h4>
+                <p>This certificate with trophy is one of the strong visual reminders of how sports achievements bring pride, energy, and lasting happiness.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-24">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/24.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/24.jpg" alt="Sports Recognition Certificate"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 24 / Level 03 - Office / College / School</div>
+                <h4>Sports Recognition Certificate</h4>
+                <p>A sports recognition certificate that reflects preparation, participation, team energy, and the confidence built through repeated effort.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-25">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/25.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/25.jpg" alt="School Sports Honour"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 25 / Level 03 - Office / College / School</div>
+                <h4>School Sports Honour</h4>
+                <p>This post preserves a school sports honour and the warm feeling that comes from being acknowledged for active participation.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-26">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/26.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/26.jpg" alt="Certificate of Sports Participation"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 26 / Level 03 - Office / College / School</div>
+                <h4>Certificate of Sports Participation</h4>
+                <p>A participation certificate that matters because every event contributed to the habit of trying, improving, and staying involved.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-27">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/27.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/27.jpg" alt="Sports Achievement with Trophy"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 27 / Level 03 - Office / College / School</div>
+                <h4>Sports Achievement with Trophy</h4>
+                <p>This sports achievement post marks a memorable point in the school-level journey, where recognition and effort came together beautifully.</p>
+              </div>
+            </article>
+            <article class="sports-post-card" id="sports-post-28">
+              <div class="sports-post-media">
+                <a href="files/8. Blog/3. Sports/3. Office  College  School/28. won in cricket match in invincible ocean on July 2024.jpg"><img loading="lazy" src="files/8. Blog/3. Sports/3. Office  College  School/28. won in cricket match in invincible ocean on July 2024.jpg" alt="Cricket Winner Trophy"></a>
+              </div>
+              <div class="sports-post-copy">
+                <div class="sports-post-meta">Post 28 / Level 03 - Office / College / School</div>
+                <h4>Cricket Winner Trophy</h4>
+                <p>A later cricket-winning memory from July 2024, showing that the love for sports, teamwork, and competitive spirit continues beyond school and college.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Post navigation -->
+        <div class="navigation-area">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+              <div class="thumb">
+                <a href="connection.html"><img class="img-fluid" src="img/blog/prev.jpg" alt="" style="border-radius:8px;width:56px;height:48px;object-fit:cover;"></a>
+              </div>
+              <div class="arrow">
+                <a href="connection.html"><span class="lnr text-white lnr-arrow-left"></span></a>
+              </div>
+              <div class="detials">
+                <p>Prev Post</p>
+                <a href="connection.html"><h4>Connections &amp; Community</h4></a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+              <div class="detials">
+                <p>Back to Blog</p>
+                <a href="blog.html"><h4>All Posts</h4></a>
+              </div>
+              <div class="arrow">
+                <a href="blog.html"><span class="lnr text-white lnr-arrow-right"></span></a>
+              </div>
+              <div class="thumb">
+                <a href="blog.html"><img class="img-fluid" src="img/blog/next.jpg" alt="" style="border-radius:8px;width:56px;height:48px;object-fit:cover;"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /col-lg-8 -->
+
+      <!-- SIDEBAR -->
+      <div class="col-lg-4">
+        <div class="blog_right_sidebar">
+          <aside class="single_sidebar_widget search_widget">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search Posts">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
+              </span>
+            </div>
+            <div class="br"></div>
+          </aside>
+
+          <aside class="single_sidebar_widget author_widget">
+            <img class="author_img rounded-circle" src="files/8.%20Blog/author.jpg" alt="Anubha Parashar">
+            <h4>Anubha Parashar</h4>
+            <p>Analytics &amp; AI Engineer | AI Researcher | Educator</p>
+            <div class="social_icon">
+              <a href="https://www.facebook.com/anubha.parashar" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/anubhaparashar/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/anubhaparashar" target="_blank"><i class="fa fa-github"></i></a>
+              <a href="https://twitter.com/parashar_anubha" target="_blank"><i class="fa fa-twitter"></i></a>
+            </div>
+            <p>Analytics &amp; AI Engineer and AI researcher specializing in Computer Vision, Biometrics, GenAI, LLMs, NLP, Deep Learning, and Machine Learning. My work bridges research and deployment through real-world AI systems, including drone-based solar panel defect detection, edge AI chatbots, OCR pipelines, GIS-based analytics, scheduling optimization, and robust gait recognition. I hold a Ph.D. in Computer Science and Engineering with a focus on Artificial Intelligence, and I bring experience across industry research, academic teaching, publications, patents, and applied AI product development.</p>
+            <div class="br"></div>
+          </aside>
+
+          <aside class="single_sidebar_widget popular_post_widget">
+            <h3 class="widget_title">Popular Posts</h3>
+            <div class="media post_item">
+              <img src="files/8. Blog/3. Sports/3. Office  College  School/1.jpg" alt="Office, college, and school sports post">
+              <div class="media-body">
+                <a href="#sports-post-11"><h3>Trophy and Certificate</h3></a>
+                <p>Post 11 / Office / College / School</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="files/8. Blog/3. Sports/2. Regional & Inter University/9/9.jpg" alt="PDM sports post">
+              <div class="media-body">
+                <a href="#sports-post-08"><h3>PDM Sports Memories</h3></a>
+                <p>Post 08 / Regional</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="files/8. Blog/3. Sports/3. Office  College  School/28. won in cricket match in invincible ocean on July 2024.jpg" alt="Cricket winner post">
+              <div class="media-body">
+                <a href="#sports-post-28"><h3>Cricket Winner Trophy</h3></a>
+                <p>Post 28 / July 2024</p>
+              </div>
+            </div>
+            <div class="br"></div>
+          </aside>
+
+          <aside class="single_sidebar_widget post_category_widget">
+            <h4 class="widget_title">Blog Sections</h4>
+            <ul class="list cat-list">
+              <li><a href="academics.html" class="d-flex justify-content-between"><p>Academics</p><p>65</p></a></li>
+              <li><a href="connection.html" class="d-flex justify-content-between"><p>Connections</p><p>3</p></a></li>
+              <li><a href="avocations.html" class="d-flex justify-content-between"><p>Avocations</p><p>14</p></a></li>
+              <li><a href="sports.html" class="d-flex justify-content-between"><p>Sports &amp; Wellness</p><p>28</p></a></li>
+              <li><a href="publication.html" class="d-flex justify-content-between"><p>Publications</p><p>1</p></a></li>
+              <li><a href="project.html" class="d-flex justify-content-between"><p>Projects</p><p>1</p></a></li>
+            </ul>
+            <div class="br"></div>
+          </aside>
+
+          <aside class="single-sidebar-widget tag_cloud_widget">
+            <h4 class="widget_title">Topics</h4>
+            <ul class="list">
+              <li><a href="#sports-state">State</a></li>
+              <li><a href="#sports-regional-inter-university">Regional</a></li>
+              <li><a href="#sports-regional-inter-university">Inter University</a></li>
+              <li><a href="#sports-office-college-school">Office</a></li>
+              <li><a href="#sports-office-college-school">College</a></li>
+              <li><a href="#sports-office-college-school">School</a></li>
+              <li><a href="#sports-post-08">PDM</a></li>
+              <li><a href="#sports-post-28">Cricket</a></li>
+              <li><a href="#sports-post-09">Xpression</a></li>
+              <li><a href="#sports-post-12">Athletics</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/isotope/isotope-min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/site-components.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script>
+/* ── Header slideshow: scroll, dots, pause/resume ── */
+(function(){
+  var wrap   = document.getElementById('headerSlideshow');
+  if (!wrap) return;
+  var slides  = wrap.querySelectorAll('.slide');
+  var dotsEl  = document.getElementById('hsDots');
+  var pauseEl = document.getElementById('hsPause');
+  var n = slides.length, cur = 0, paused = false, timer;
+
+  /* Build dots */
+  var dots = [];
+  for (var i = 0; i < n; i++) {
+    var d = document.createElement('span');
+    d.className = 'hs-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('data-i', i);
+    dotsEl.appendChild(d);
+    dots.push(d);
+  }
+
+  function goTo(idx) {
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur = (idx + n) % n;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
+  }
+
+  function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(function(){ if (!paused) goTo(cur + 1); }, 3000);
+  }
+
+  /* Arrows */
+  document.getElementById('hsPrev').addEventListener('click', function(){
+    goTo(cur - 1);
+    if (!paused) startTimer();
+  });
+  document.getElementById('hsNext').addEventListener('click', function(){
+    goTo(cur + 1);
+    if (!paused) startTimer();
+  });
+
+  /* Dots */
+  dotsEl.addEventListener('click', function(e){
+    var dot = e.target.closest('.hs-dot');
+    if (!dot) return;
+    goTo(parseInt(dot.getAttribute('data-i'), 10));
+    if (!paused) startTimer();
+  });
+
+  /* Pause / Resume button */
+  pauseEl.addEventListener('click', function(){
+    paused = !paused;
+    pauseEl.innerHTML = paused ? '<i class="fa fa-play"></i>' : '<i class="fa fa-pause"></i>';
+    if (!paused) startTimer();
+    else clearInterval(timer);
+  });
+
+  startTimer();
+})();
+</script>
+<script>
+$(function(){
+  $('.sports-post-media').magnificPopup({
+    delegate: 'a', type: 'image',
+    gallery: { enabled: true },
+    image: { titleSrc: function(item){ return item.el.find('img').attr('alt'); } }
+  });
+});
+</script>
+<script type="module" src="assets/js/firebase-blog.js"></script>
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>

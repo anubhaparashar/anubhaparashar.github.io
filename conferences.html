@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Conferences &amp; Presentations – Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+    /* ── HERO ── */
+    .conf-hero {
+      background: linear-gradient(135deg, #0d0b1f 0%, #1a1535 45%, #0e1e60 100%);
+      padding: 130px 0 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .conf-hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background-image: linear-gradient(rgba(126,184,224,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126,184,224,.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .conf-hero-inner { position: relative; z-index: 2; }
+    .conf-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .conf-particles span {
+      position: absolute; display: block; border-radius: 50%;
+      background: rgba(126,184,224,.22); animation: confFloat linear infinite; bottom: -20px;
+    }
+    @keyframes confFloat {
+      0%   { transform: translateY(0); opacity: 0; }
+      10%  { opacity: 1; }
+      85%  { opacity: .3; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
+    .conf-particles span:nth-child(1)  { left:7%;  width:5px;  height:5px;  animation-duration:11s; animation-delay:0s; }
+    .conf-particles span:nth-child(2)  { left:15%; width:3px;  height:3px;  animation-duration:9s;  animation-delay:1.4s; }
+    .conf-particles span:nth-child(3)  { left:24%; width:6px;  height:6px;  animation-duration:13s; animation-delay:0.8s; }
+    .conf-particles span:nth-child(4)  { left:33%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:2.2s; }
+    .conf-particles span:nth-child(5)  { left:42%; width:3px;  height:3px;  animation-duration:10s; animation-delay:0.3s; }
+    .conf-particles span:nth-child(6)  { left:51%; width:7px;  height:7px;  animation-duration:14s; animation-delay:1.8s; }
+    .conf-particles span:nth-child(7)  { left:60%; width:4px;  height:4px;  animation-duration:9s;  animation-delay:0.6s; }
+    .conf-particles span:nth-child(8)  { left:68%; width:3px;  height:3px;  animation-duration:12s; animation-delay:3.1s; }
+    .conf-particles span:nth-child(9)  { left:76%; width:5px;  height:5px;  animation-duration:10s; animation-delay:1.2s; }
+    .conf-particles span:nth-child(10) { left:84%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:0.5s; }
+    .conf-particles span:nth-child(11) { left:20%; width:14px; height:4px;  border-radius:3px; animation-duration:15s; animation-delay:1.9s; }
+    .conf-particles span:nth-child(12) { left:55%; width:10px; height:3px;  border-radius:3px; animation-duration:11s; animation-delay:3.5s; }
+    .conf-hero-eyebrow {
+      font-size: .68rem; letter-spacing: 4px; text-transform: uppercase;
+      color: #7eb8e0; font-weight: 700; margin-bottom: 14px;
+    }
+    .conf-hero h1 {
+      font-size: 2.9rem !important; font-weight: 900 !important;
+      color: #ffffff !important; letter-spacing: 1px; margin-bottom: 8px;
+    }
+    .conf-hero .hero-sub {
+      font-size: 1rem; color: rgba(255,255,255,.6) !important;
+      margin-bottom: 44px; max-width: 560px; margin-left: auto; margin-right: auto;
+    }
+    .conf-hero-stats { display: flex; justify-content: center; gap: 52px; flex-wrap: wrap; margin-bottom: 36px; }
+    .conf-stat-num { display: block; font-size: 2.3rem; font-weight: 900; color: #b5c0ff !important; line-height: 1; }
+    .conf-stat-lbl { display: block; font-size: .63rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,.45) !important; margin-top: 5px; }
+
+    /* ── MAIN AREA ── */
+    .conf-area { background: #f5f6ff; padding: 60px 0 80px; }
+
+    /* ── CONFERENCE SECTION CARD ── */
+    .conf-section {
+      background: #fff; border-radius: 16px; margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(15,52,96,.08);
+      border-left: 5px solid #7eb8e0; overflow: hidden;
+    }
+    .conf-section-header {
+      padding: 22px 28px 16px;
+      border-bottom: 1px solid #eef0ff;
+    }
+    .conf-section-header h2 {
+      font-size: 1.25rem !important; font-weight: 900 !important;
+      color: #0f3460 !important; margin: 0 0 4px;
+    }
+    .conf-meta {
+      display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 6px;
+    }
+    .conf-meta span {
+      font-size: .76rem; color: #666; display: inline-flex; align-items: center; gap: 5px;
+    }
+    .conf-meta i { color: #7eb8e0; }
+    .conf-body { padding: 20px 28px 28px; }
+
+    /* ── GALLERY GRID ── */
+    .conf-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .conf-gallery a.gal-item {
+      display: block; border-radius: 8px; overflow: hidden;
+      position: relative; aspect-ratio: 4/3;
+      box-shadow: 0 2px 10px rgba(15,52,96,.10);
+      transition: transform .22s, box-shadow .22s;
+    }
+    .conf-gallery a.gal-item:hover { transform: scale(1.03); box-shadow: 0 6px 20px rgba(15,52,96,.18); }
+    .conf-gallery a.gal-item img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .conf-gallery a.gal-item .gal-overlay {
+      position: absolute; inset: 0; background: rgba(15,52,96,.35);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity .22s;
+    }
+    .conf-gallery a.gal-item:hover .gal-overlay { opacity: 1; }
+    .conf-gallery a.gal-item .gal-overlay i { color: #fff; font-size: 1.6rem; }
+
+    /* ── VIDEO AREA ── */
+    .conf-videos { margin-top: 18px; }
+    .conf-videos h5 {
+      font-size: .85rem; font-weight: 700; color: #0f3460; margin-bottom: 12px;
+      text-transform: uppercase; letter-spacing: .5px;
+    }
+    .video-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+    .video-item video {
+      width: 100%; border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(15,52,96,.12);
+    }
+    .video-download {
+      display: flex; align-items: center; gap: 10px; padding: 12px 16px;
+      background: #f0f4ff; border-radius: 10px; text-decoration: none;
+      transition: background .2s;
+    }
+    .video-download:hover { background: #e0e8ff; }
+    .video-download i { font-size: 1.4rem; color: #7eb8e0; }
+    .video-download span { font-size: .82rem; font-weight: 600; color: #0f3460; }
+    .video-download small { display: block; font-size: .72rem; color: #888; }
+
+    /* ── SIDEBAR ── */
+    .conf-sidebar { position: sticky; top: 80px; }
+    .sidebar-card {
+      background: #fff; border-radius: 12px; padding: 22px;
+      box-shadow: 0 3px 18px rgba(15,52,96,.07); margin-bottom: 24px;
+    }
+    .sidebar-card h4 {
+      font-size: 1rem !important; font-weight: 800 !important; color: #0f3460 !important;
+      margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #e8eeff;
+    }
+    .toc-list { list-style: none; padding: 0; margin: 0; }
+    .toc-list li { border-bottom: 1px solid #f0f2ff; }
+    .toc-list li:last-child { border-bottom: none; }
+    .toc-list a {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 9px 4px; color: #444; font-size: .84rem; text-decoration: none;
+      transition: color .2s;
+    }
+    .toc-list a:hover { color: #7eb8e0; }
+    .toc-list a .toc-year {
+      font-size: .7rem; color: #aaa; font-weight: 600; background: #f0f4ff;
+      padding: 2px 7px; border-radius: 10px;
+    }
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: linear-gradient(135deg,#0f3460,#7eb8e0); color: #fff !important;
+      padding: 9px 20px; border-radius: 22px; font-size: .8rem; font-weight: 700;
+      text-decoration: none; transition: opacity .2s; margin-bottom: 18px;
+    }
+    .back-btn:hover { opacity: .85; }
+
+    /* ── SECTION DIVIDER BADGE ── */
+    .conf-section-num {
+      display: inline-block; background: linear-gradient(135deg,#0f3460,#7eb8e0);
+      color: #fff; font-size: .65rem; font-weight: 800; letter-spacing: 1px;
+      padding: 3px 10px; border-radius: 10px; margin-right: 10px;
+      text-transform: uppercase; vertical-align: middle;
+    }
+
+    /* ── TAB BAR ── */
+    .conf-tab-wrap {
+      background: #fff; border-bottom: 1px solid #e4e9f5;
+      position: sticky; top: 60px; z-index: 100;
+      box-shadow: 0 2px 14px rgba(15,52,96,.06);
+    }
+    .conf-tab-nav {
+      display: flex; overflow-x: auto; scrollbar-width: none;
+      max-width: 1200px; margin: 0 auto; padding: 0 8px;
+    }
+    .conf-tab-nav::-webkit-scrollbar { display: none; }
+    .conf-tab-btn {
+      background: none; border: none; border-bottom: 3px solid transparent;
+      padding: 15px 22px 13px; font-size: .78rem; font-weight: 700;
+      letter-spacing: .5px; text-transform: uppercase; color: #999;
+      cursor: pointer; white-space: nowrap; transition: all .2s;
+      display: flex; align-items: center; gap: 7px;
+    }
+    .conf-tab-btn i { font-size: .85rem; }
+    .conf-tab-btn:hover { color: #0f3460; background: #f6f8ff; }
+    .conf-tab-btn.active { color: #0f3460; border-bottom-color: #0f3460; }
+    .conf-tab-count {
+      background: #edf0fa; color: #666; font-size: .6rem; font-weight: 800;
+      padding: 2px 7px; border-radius: 20px;
+    }
+    .conf-tab-btn.active .conf-tab-count { background: #0f3460; color: #7eb8e0; }
+
+    /* ── TAB SECTIONS ── */
+    .conf-tab-section { display: none; padding-top: 40px; }
+    .conf-tab-section.active { display: block; }
+
+    /* ── EMPTY STATE ── */
+    .empty-tab {
+      text-align: center; padding: 80px 20px; color: #999;
+    }
+    .empty-tab i { font-size: 3rem; color: #d0d8ff; margin-bottom: 18px; display: block; }
+    .empty-tab h4 { color: #0f3460 !important; font-weight: 700 !important; margin-bottom: 8px; }
+    .empty-tab p { font-size: .9rem; max-width: 400px; margin: 0 auto; }
+
+    @media (max-width: 767px) {
+      .conf-hero h1 { font-size: 2rem !important; }
+      .conf-hero-stats { gap: 28px; }
+      .conf-gallery { grid-template-columns: repeat(2,1fr); }
+      .video-grid { grid-template-columns: 1fr; }
+      .conf-section-header, .conf-body { padding-left: 16px; padding-right: 16px; }
+    }
+    @media (max-width: 480px) {
+      .conf-gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body class="blog_version">
+<div id="site-header"></div>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="conf-hero">
+  <div class="conf-particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span>
+  </div>
+  <div class="conf-hero-inner container">
+    <div class="conf-hero-eyebrow">Academic Journey</div>
+    <h1>Conferences &amp; Presentations</h1>
+    <p class="hero-sub">A visual chronicle of research presentations, collaborative exchanges, and scholarly milestones across national and international conferences.</p>
+    <div class="conf-hero-stats">
+      <div><span class="conf-stat-num">10</span><span class="conf-stat-lbl">Conferences</span></div>
+      <div><span class="conf-stat-num">7+</span><span class="conf-stat-lbl">Years Active</span></div>
+      <div><span class="conf-stat-num">2016–2023</span><span class="conf-stat-lbl">Timeline</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ TAB BAR ═══════════════════ -->
+<div class="conf-tab-wrap">
+  <div class="conf-tab-nav">
+    <button class="conf-tab-btn active" onclick="switchConfTab('conferences',this)">
+      <i class="fa fa-users"></i> Conferences <span class="conf-tab-count">10</span>
+    </button>
+    <button class="conf-tab-btn" onclick="switchConfTab('workshops',this)">
+      <i class="fa fa-wrench"></i> Workshops <span class="conf-tab-count">1</span>
+    </button>
+    <button class="conf-tab-btn" onclick="switchConfTab('experttalks',this)">
+      <i class="fa fa-microphone"></i> Expert Talks <span class="conf-tab-count">0</span>
+    </button>
+  </div>
+</div>
+
+<!-- ═══════════════════ CONTENT ═══════════════════ -->
+<section class="conf-area">
+  <div class="container">
+    <!-- ══ CONFERENCES TAB ══ -->
+    <div class="conf-tab-section active" id="tab-conferences">
+    <div class="row">
+
+      <!-- ── LEFT: GALLERY SECTIONS ── -->
+      <div class="col-lg-8">
+
+        <a href="academics.html" class="back-btn"><i class="fa fa-arrow-left"></i> Back to Academics</a>
+
+        <!-- ════ 1. UDAIPUR 2016 ════ -->
+        <div class="conf-section" id="udaipur-2016">
+          <div class="conf-section-header">
+            <h2><span class="conf-section-num">01</span>Conference – Udaipur</h2>
+            <div class="conf-meta">
+              <span><i class="fa fa-calendar"></i> March 4–5, 2016</span>
+              <span><i class="fa fa-map-marker"></i> Udaipur, Rajasthan</span>
+              <span><i class="fa fa-image"></i> 4 Photos &nbsp;·&nbsp; <i class="fa fa-film"></i> 2 Videos</span>
+            </div>
+          </div>
+          <div class="conf-body">
+            <div class="conf-gallery" id="gal-udaipur">
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/1. Udaipur/20160304_181813.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/1. Udaipur/20160304_181813.jpg" alt="Udaipur 2016">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/1. Udaipur/20160305_124021.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/1. Udaipur/20160305_124021.jpg" alt="Udaipur 2016">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/1. Udaipur/20160305_141233.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/1. Udaipur/20160305_141233.jpg" alt="Udaipur 2016">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/1. Udaipur/20160305_141254.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/1. Udaipur/20160305_141254.jpg" alt="Udaipur 2016">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+            </div>
+            <div class="conf-videos">
+              <h5><i class="fa fa-film"></i>&nbsp; Videos</h5>
+              <div class="video-grid">
+                <div class="video-item">
+                  <video controls preload="metadata">
+                    <source src="files/8.%20Blog/1.%20academic/2.%20Conferences%20and%20ppt/1.%20Udaipur/MOV07929.mp4" type="video/mp4">
+                  </video>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 2. JAIPUR 2016 ════ -->
+        <div class="conf-section" id="jaipur-2016">
+          <div class="conf-section-header">
+            <h2><span class="conf-section-num">02</span>Conference – Jaipur</h2>
+            <div class="conf-meta">
+              <span><i class="fa fa-calendar"></i> August 2016</span>
+              <span><i class="fa fa-map-marker"></i> Jaipur, Rajasthan</span>
+              <span><i class="fa fa-image"></i> 2 Photos &nbsp;·&nbsp; <i class="fa fa-play-circle"></i> 1 Video</span>
+            </div>
+          </div>
+          <div class="conf-body">
+            <div class="conf-gallery" id="gal-jaipur">
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/3. jaipur/IMG-20160812-WA0001.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/3. jaipur/IMG-20160812-WA0001.jpg" alt="Jaipur 2016">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/3. jaipur/IMG-20160812-WA0004.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/3. jaipur/IMG-20160812-WA0004.jpg" alt="Jaipur 2016">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+            </div>
+            <div class="conf-videos">
+              <h5><i class="fa fa-play-circle"></i>&nbsp; Video</h5>
+              <div class="video-grid">
+                <div class="video-item">
+                  <video controls preload="metadata">
+                    <source src="files/8.%20Blog/1.%20academic/2.%20Conferences%20and%20ppt/3.%20jaipur/20160807_165205%20-%20Trim%20-%20Trim.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 3. SSIC 2017 (1st Ed.) ════ -->
+        <div class="conf-section" id="ssic-2017">
+          <div class="conf-section-header">
+            <h2><span class="conf-section-num">03</span>SSIC 2017 – 1st Edition</h2>
+            <div class="conf-meta">
+              <span><i class="fa fa-calendar"></i> April–May 2017</span>
+              <span><i class="fa fa-image"></i> 6 Photos</span>
+            </div>
+          </div>
+          <div class="conf-body">
+            <div class="conf-gallery" id="gal-ssic1">
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170414_170023.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170414_170023.jpg" alt="SSIC 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170414_170912.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170414_170912.jpg" alt="SSIC 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170415_083940.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170415_083940.jpg" alt="SSIC 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170415_132947.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170415_132947.jpg" alt="SSIC 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170415_150135.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170415_150135.jpg" alt="SSIC 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170502_175547.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-1/20170502_175547.jpg" alt="SSIC 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 4. SIN 2017 ════ -->
+        <div class="conf-section" id="sin-2017">
+          <div class="conf-section-header">
+            <h2><span class="conf-section-num">04</span>SIN 2017</h2>
+            <div class="conf-meta">
+              <span><i class="fa fa-calendar"></i> October 2017</span>
+              <span><i class="fa fa-image"></i> 7 Photos</span>
+            </div>
+          </div>
+          <div class="conf-body">
+            <div class="conf-gallery" id="gal-sin17">
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/20171013_153105.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/20171013_153105.jpg" alt="SIN 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/20171014_095620.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/20171014_095620.jpg" alt="SIN 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/20171014_154309.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/20171014_154309.jpg" alt="SIN 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/20171015_110015.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/20171015_110015.jpg" alt="SIN 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/20171015_125339.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/20171015_125339.jpg" alt="SIN 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/IMG_8811.JPG" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/IMG_8811.JPG" alt="SIN 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/IMG_8813.JPG" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/IMG_8813.JPG" alt="SIN 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 5. ICCT 2017 ════ -->
+        <div class="conf-section" id="icct-2017">
+          <div class="conf-section-header">
+            <h2><span class="conf-section-num">05</span>ICCT 2017</h2>
+            <div class="conf-meta">
+              <span><i class="fa fa-calendar"></i> December 2017</span>
+              <span><i class="fa fa-image"></i> 4 Photos</span>
+            </div>
+          </div>
+          <div class="conf-body">
+            <div class="conf-gallery" id="gal-icct17">
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/icct-17/20171222_120557.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/icct-17/20171222_120557.jpg" alt="ICCT 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/icct-17/20171223_164449.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/icct-17/20171223_164449.jpg" alt="ICCT 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/icct-17/20171223_164453.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/icct-17/20171223_164453.jpg" alt="ICCT 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/icct-17/20171223_164454.jpg" class="gal-item">
+                <img src="files/8. Blog/1. academic/2. Conferences and ppt/icct-17/20171223_164454.jpg" alt="ICCT 2017">
+                <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 6. SSIC 2019 (2nd Ed.) ════ -->
+        <div class="conf-section" id="ssic-2019">
+          <div class="conf-section-header">
+            <h2><span class="conf-section-num">06</span>SSIC 2019 – 2nd Edition</h2>
+            <div class="conf-meta">
+              <span><i class="fa fa-calendar"></i> January 2019</span>
+              <span><i class="fa fa-image"></i> 26 Photos</span>
+            </div>
+          </div>
+          <div class="conf-body">
+            <div class="conf-gallery" id="gal-ssic2">
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/20190118_102321.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/20190118_102321.jpg" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/20190120_144305.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/20190120_144305.jpg" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/DSC_0153.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/DSC_0153.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/DSC_1087.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/DSC_1087.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_1003.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_1003.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_1009.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_1009.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_1082.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_1082.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2894.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2894.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2901.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2901.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2911.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2911.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2919.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2919.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2922.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2922.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2924.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2924.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2927.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_2927.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_3185.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_3185.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_3204.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_3204.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_3244.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_3244.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_3288.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_3288.JPG" alt="SSIC 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 7. ICCT 2019 ════ -->
+        <div class="conf-section" id="icct-2019">
+          <div class="conf-section-header">
+            <h2><span class="conf-section-num">07</span>ICCT 2019 – International Conference on Communication Technologies</h2>
+            <div class="conf-meta">
+              <span><i class="fa fa-calendar"></i> September–October 2019</span>
+              <span><i class="fa fa-image"></i> 56 Photos</span>
+            </div>
+          </div>
+          <div class="conf-body">
+            <div class="conf-gallery" id="gal-icct19">
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0205.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0205.JPG" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0236.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0236.JPG" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0237.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0237.JPG" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0244.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0244.JPG" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0245.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0245.JPG" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0292.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0292.JPG" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              
+              
+              
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928111729.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928111729.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928113511.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928113511.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928115646.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928115646.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928120311.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928120311.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928120322.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928120322.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928120326.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928120326.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928120336.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928120336.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928123455.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928123455.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928123603.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928123603.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928130009.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928130009.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928130323.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928130323.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928140440.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928140440.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928140514.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190928140514.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929120158.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929120158.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929120200.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929120200.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929120204.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929120204.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929120206.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929120206.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929120234.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929120234.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              
+              
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929121757.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929121757.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154801.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154801.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154804.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154804.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154805.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154805.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154902.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154902.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154905.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154905.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154907.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154907.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154908.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190929154908.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190930090821.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20190930090821.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20191001124303.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20191001124303.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20191001124305.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG20191001124305.jpg" alt="ICCT 2019"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 8. ICICV 2020 ════ -->
+        <div class="conf-section" id="icicv-2020">
+          <div class="conf-section-header">
+            <h2><span class="conf-section-num">08</span>ICICV 2020 – Innovations in Computational Intelligence &amp; Computer Vision</h2>
+            <div class="conf-meta">
+              <span><i class="fa fa-calendar"></i> January 17–19, 2020</span>
+              <span><i class="fa fa-map-marker"></i> Manipal University Jaipur</span>
+              <span><i class="fa fa-image"></i> 7 Photos</span>
+            </div>
+          </div>
+          <div class="conf-body">
+            <div class="conf-gallery" id="gal-icicv">
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200117195203.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200117195203.jpg" alt="ICICV 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200117200925.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200117200925.jpg" alt="ICICV 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200117200933.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200117200933.jpg" alt="ICICV 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200117201052.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200117201052.jpg" alt="ICICV 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200118120332.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200118120332.jpg" alt="ICICV 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200118141657.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200118141657.jpg" alt="ICICV 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200118141710.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/ICICV/IMG20200118141710.jpg" alt="ICICV 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 9. DUBAI 2020 ════ -->
+        <div class="conf-section" id="dubai-2020">
+          <div class="conf-section-header">
+            <h2><span class="conf-section-num">09</span>International Conference – Dubai</h2>
+            <div class="conf-meta">
+              <span><i class="fa fa-calendar"></i> January 30, 2020</span>
+              <span><i class="fa fa-map-marker"></i> Dubai, UAE</span>
+              <span><i class="fa fa-image"></i> 41 Photos</span>
+            </div>
+          </div>
+          <div class="conf-body">
+            <div class="conf-gallery" id="gal-dubai">
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130125344.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130125344.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130130722.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130130722.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142435.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142435.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142449.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142449.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142535.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142535.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142635.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142635.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142641.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142641.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142642.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130142642.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143035.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143035.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143111.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143111.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143117.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143117.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143151.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143151.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143224.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143224.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143225.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143225.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143230.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143230.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143241.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143241.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143242.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130143242.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130151549.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130151549.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130151552.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130151552.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130151555.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130151555.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130152327.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130152327.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130155858.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130155858.jpg" alt="Dubai 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 10. ICCT 2023 ════ -->
+        <div class="conf-section" id="icct-2023">
+          <div class="conf-section-header">
+            <h2><span class="conf-section-num">10</span>ICCT 2023 – 3rd International Conference on Intelligent Communication &amp; Computational Techniques</h2>
+            <div class="conf-meta">
+              <span><i class="fa fa-calendar"></i> January 20, 2023</span>
+              <span><i class="fa fa-image"></i> 2 Photos</span>
+            </div>
+          </div>
+          <div class="conf-body">
+            <div class="conf-gallery" id="gal-icct23">
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/icct 2023/dji_mimo_20230120_152400_0_1674208966086_photo.jpg" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/icct 2023/dji_mimo_20230120_152400_0_1674208966086_photo.jpg" alt="ICCT 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="files/8. Blog/1. academic/2. Conferences and ppt/icct 2023/IMG_1009.JPG" class="gal-item"><img src="files/8. Blog/1. academic/2. Conferences and ppt/icct 2023/IMG_1009.JPG" alt="ICCT 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /col-lg-8 -->
+
+      <!-- ── RIGHT: SIDEBAR ── -->
+      <div class="col-lg-4">
+        <div class="conf-sidebar">
+
+          <div class="sidebar-card">
+            <h4>Jump to Conference</h4>
+            <ul class="toc-list">
+              <li><a href="#udaipur-2016">Conference – Udaipur <span class="toc-year">2016</span></a></li>
+              <li><a href="#jaipur-2016">Conference – Jaipur <span class="toc-year">2016</span></a></li>
+              <li><a href="#ssic-2017">SSIC 2017 – 1st Edition <span class="toc-year">2017</span></a></li>
+              <li><a href="#sin-2017">SIN 2017 <span class="toc-year">2017</span></a></li>
+              <li><a href="#icct-2017">ICCT 2017 <span class="toc-year">2017</span></a></li>
+              <li><a href="#ssic-2019">SSIC 2019 – 2nd Edition <span class="toc-year">2019</span></a></li>
+              <li><a href="#icct-2019">ICCT 2019 <span class="toc-year">2019</span></a></li>
+              <li><a href="#icicv-2020">ICICV 2020 <span class="toc-year">2020</span></a></li>
+              <li><a href="#dubai-2020">Dubai Conference <span class="toc-year">2020</span></a></li>
+              <li><a href="#icct-2023">ICCT 2023 <span class="toc-year">2023</span></a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>About</h4>
+            <div style="text-align:center; margin-bottom:14px;">
+              <img class="rounded-circle" src="files/8.%20Blog/author.jpg" alt="Anubha Parashar"
+                style="width:72px;height:72px;object-fit:cover;border:3px solid #7eb8e0;">
+            </div>
+            <p style="font-size:.84rem;color:#555;line-height:1.7;margin:0;">
+              Associate Professor specialising in AI, Machine Learning, and IoT. Active conference presenter and reviewer across national and international venues since 2016.
+            </p>
+            <div style="margin-top:14px;display:flex;justify-content:center;gap:12px;">
+              <a href="https://www.linkedin.com/in/anubhaparashar/" target="_blank" style="color:#0f3460;font-size:1.1rem;"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/anubhaparashar" target="_blank" style="color:#0f3460;font-size:1.1rem;"><i class="fa fa-github"></i></a>
+              <a href="https://twitter.com/parashar_anubha" target="_blank" style="color:#0f3460;font-size:1.1rem;"><i class="fa fa-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>Quick Stats</h4>
+            <ul style="list-style:none;padding:0;margin:0;">
+              <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eef0ff;font-size:.84rem;"><span style="color:#555;">Total Conferences</span><strong style="color:#0f3460;">10</strong></li>
+              <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eef0ff;font-size:.84rem;"><span style="color:#555;">Total Photos</span><strong style="color:#0f3460;">160+</strong></li>
+              <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eef0ff;font-size:.84rem;"><span style="color:#555;">Videos</span><strong style="color:#0f3460;">3</strong></li>
+              <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eef0ff;font-size:.84rem;"><span style="color:#555;">International</span><strong style="color:#0f3460;">2</strong></li>
+              <li style="display:flex;justify-content:space-between;padding:8px 0;font-size:.84rem;"><span style="color:#555;">Span</span><strong style="color:#0f3460;">2016 – 2023</strong></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>Related Pages</h4>
+            <ul style="list-style:none;padding:0;margin:0;">
+              <li style="padding:7px 0;border-bottom:1px solid #eef0ff;"><a href="academics.html" style="color:#0f3460;font-size:.84rem;"><i class="fa fa-graduation-cap" style="color:#7eb8e0;margin-right:8px;"></i>Academics Blog</a></li>
+              <li style="padding:7px 0;border-bottom:1px solid #eef0ff;"><a href="publication.html" style="color:#0f3460;font-size:.84rem;"><i class="fa fa-file-text-o" style="color:#7eb8e0;margin-right:8px;"></i>Publications</a></li>
+              <li style="padding:7px 0;"><a href="blog.html" style="color:#0f3460;font-size:.84rem;"><i class="fa fa-rss" style="color:#7eb8e0;margin-right:8px;"></i>All Blog Posts</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div><!-- /col-lg-4 -->
+
+    </div><!-- /row -->
+    </div><!-- /tab-conferences -->
+
+    <!-- ══ WORKSHOPS TAB ══ -->
+    <div class="conf-tab-section" id="tab-workshops">
+      <div class="row">
+        <div class="col-lg-8">
+          <a href="academics.html" class="back-btn"><i class="fa fa-arrow-left"></i> Back to Academics</a>
+
+          <div class="conf-section" id="ws-icicv">
+            <div class="conf-section-header">
+              <h2><span class="conf-section-num">01</span>ICICV 2020 – Pre-Conference Workshop</h2>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i> January 11, 2020</span>
+                <span><i class="fa fa-map-marker"></i> Manipal University Jaipur</span>
+                <span><i class="fa fa-image"></i> 4 Photos</span>
+              </div>
+            </div>
+            <div class="conf-body">
+              <div class="conf-gallery" id="gal-ws-icicv">
+                <a href="files/8. Blog/1. academic/3. workshops/icicv workshop/IMG20200111103219.jpg" class="gal-item"><img src="files/8. Blog/1. academic/3. workshops/icicv workshop/IMG20200111103219.jpg" alt="ICICV Workshop 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/1. academic/3. workshops/icicv workshop/IMG20200111135912.jpg" class="gal-item"><img src="files/8. Blog/1. academic/3. workshops/icicv workshop/IMG20200111135912.jpg" alt="ICICV Workshop 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/1. academic/3. workshops/icicv workshop/IMG20200111140157.jpg" class="gal-item"><img src="files/8. Blog/1. academic/3. workshops/icicv workshop/IMG20200111140157.jpg" alt="ICICV Workshop 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/1. academic/3. workshops/icicv workshop/IMG20200111143408.jpg" class="gal-item"><img src="files/8. Blog/1. academic/3. workshops/icicv workshop/IMG20200111143408.jpg" alt="ICICV Workshop 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="conf-sidebar">
+            <div class="sidebar-card">
+              <h4>Workshops</h4>
+              <ul class="toc-list">
+                <li><a href="#ws-icicv">ICICV 2020 Pre-Conference Workshop <span class="toc-year">2020</span></a></li>
+              </ul>
+            </div>
+            <div class="sidebar-card">
+              <h4>Related Pages</h4>
+              <ul style="list-style:none;padding:0;margin:0;">
+                <li style="padding:7px 0;border-bottom:1px solid #eef0ff;"><a href="academics.html" style="color:#0f3460;font-size:.84rem;"><i class="fa fa-graduation-cap" style="color:#7eb8e0;margin-right:8px;"></i>Academics Blog</a></li>
+                <li style="padding:7px 0;"><a href="publication.html" style="color:#0f3460;font-size:.84rem;"><i class="fa fa-file-text-o" style="color:#7eb8e0;margin-right:8px;"></i>Publications</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /tab-workshops -->
+
+    <!-- ══ EXPERT TALKS TAB ══ -->
+    <div class="conf-tab-section" id="tab-experttalks">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="empty-tab">
+            <i class="fa fa-microphone"></i>
+            <h4>Expert Talks – Coming Soon</h4>
+            <p>Photos and videos from invited talks and expert lectures will be added here. Check back soon.</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- /tab-experttalks -->
+
+  </div><!-- /container -->
+</section>
+
+<div id="site-footer"></div>
+
+<!-- Scripts -->
+<script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="vendors/jquery.magnific-popup.min.js"></script>
+<script src="js/site-header-footer.js"></script>
+<script>
+  function switchConfTab(id, btn) {
+    document.querySelectorAll('.conf-tab-section').forEach(function(s){ s.classList.remove('active'); });
+    document.querySelectorAll('.conf-tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // Init magnific-popup lightbox for each gallery independently
+  var galleries = [
+    '#gal-udaipur','#gal-jaipur','#gal-ssic1','#gal-sin17','#gal-icct17',
+    '#gal-ssic2','#gal-icct19','#gal-icicv','#gal-dubai','#gal-icct23',
+    '#gal-ws-icicv'
+  ];
+  galleries.forEach(function(id) {
+    $(id).magnificPopup({
+      delegate: 'a.gal-item',
+      type: 'image',
+      gallery: { enabled: true },
+      image: { titleSrc: function(item){ return item.el.find('img').attr('alt'); } }
+    });
+  });
+</script>
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>

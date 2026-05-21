@@ -1,0 +1,1884 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Publications – Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+  /* ── BASE ── */
+  body { background: #f0f2f8; }
+
+  /* ── HERO ── */
+  .pub-hero {
+    position: relative;
+    background: linear-gradient(160deg, #04060e 0%, #080f1e 30%, #0c1c38 65%, #071530 100%);
+    padding: 120px 0 0;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  /* Horizontal ruled-page lines — suggests scholarly paper */
+  .pub-hero::before {
+    content: ''; position: absolute; inset: 0; z-index: 0;
+    background-image: repeating-linear-gradient(
+      0deg, transparent, transparent 32px,
+      rgba(126,184,224,.03) 32px, rgba(126,184,224,.035) 33px
+    );
+  }
+
+  /* Giant faded open-quotation mark watermark */
+  .pub-hero::after {
+    content: '\201C';
+    position: absolute; right: 2%; top: -80px;
+    font-size: 34rem; color: rgba(126,184,224,.04);
+    font-family: Georgia, serif; line-height: 1;
+    pointer-events: none; z-index: 0;
+    user-select: none;
+  }
+
+  .hero-inner { position: relative; z-index: 2; }
+
+  .hero-eyebrow {
+    font-size: .68rem; letter-spacing: 5px; text-transform: uppercase;
+    color: #7eb8e0; font-weight: 700; margin-bottom: 16px;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; display: block; width: 40px; height: 1px;
+    background: linear-gradient(90deg, transparent, #7eb8e0);
+  }
+  .hero-eyebrow::after { background: linear-gradient(90deg, #7eb8e0, transparent); }
+
+  .pub-hero h1 {
+    font-size: 3.4rem !important; font-weight: 900 !important;
+    color: #fff !important; letter-spacing: 2px; margin-bottom: 12px;
+    text-shadow: 0 0 80px rgba(126,184,224,.35), 0 2px 30px rgba(126,184,224,.2);
+    line-height: 1.1;
+  }
+
+  .hero-sub {
+    font-size: .96rem; color: rgba(255,255,255,.52);
+    margin-bottom: 30px; max-width: 580px; margin-left: auto; margin-right: auto;
+    line-height: 1.8;
+  }
+
+  /* ── INDEXING DATABASE BADGES ── */
+  .hero-db-strip {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 7px;
+    margin-bottom: 36px;
+  }
+  .hero-db-badge {
+    font-size: .58rem; font-weight: 800; letter-spacing: 1.8px;
+    text-transform: uppercase; padding: 4px 12px; border-radius: 20px; border: 1px solid;
+    transition: transform .2s;
+  }
+  .hero-db-badge:hover { transform: translateY(-2px); }
+  .hdb-scopus   { background: rgba(108,52,131,.18); border-color: rgba(181,140,210,.38); color: #cfa8e4; }
+  .hdb-wos      { background: rgba(30,77,123,.2);   border-color: rgba(126,184,224,.32); color: #7eb8e0; }
+  .hdb-q1       { background: rgba(39,174,96,.14);  border-color: rgba(82,210,140,.35);  color: #82d9a7; }
+  .hdb-acm      { background: rgba(123,36,28,.18);  border-color: rgba(244,137,130,.32); color: #f4b0aa; }
+  .hdb-springer { background: rgba(192,57,43,.15);  border-color: rgba(245,158,149,.3);  color: #f5b8b0; }
+  .hdb-ieee     { background: rgba(21,67,96,.2);    border-color: rgba(100,170,220,.3);  color: #90c4f0; }
+  .hdb-elsevier { background: rgba(20,80,180,.15);  border-color: rgba(100,160,255,.28); color: #90b8ff; }
+  .hdb-if       { background: rgba(212,175,55,.12); border-color: rgba(212,175,55,.38);  color: #e8cc6a; }
+
+  /* ── PARTICLES ── */
+  .hero-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+  .hero-particles span {
+    position: absolute; display: block;
+    animation: floatUp linear infinite; bottom: -20px;
+  }
+  /* circles */
+  .hero-particles span:nth-child(-n+10) {
+    border-radius: 50%; background: rgba(126,184,224,.2);
+  }
+  /* paper-fragment rectangles */
+  .hero-particles span:nth-child(n+11) {
+    border-radius: 2px; background: rgba(181,192,255,.1);
+  }
+  @keyframes floatUp {
+    0%   { transform: translateY(0) rotate(0deg);   opacity: 0; }
+    10%  { opacity: 1; }
+    85%  { opacity: .35; }
+    100% { transform: translateY(-110vh) rotate(25deg); opacity: 0; }
+  }
+  .hero-particles span:nth-child(1)  { left:7%;  width:5px;  height:5px;  animation-duration:11s; animation-delay:0s; }
+  .hero-particles span:nth-child(2)  { left:15%; width:3px;  height:3px;  animation-duration:9s;  animation-delay:1.4s; }
+  .hero-particles span:nth-child(3)  { left:24%; width:6px;  height:6px;  animation-duration:13s; animation-delay:0.8s; }
+  .hero-particles span:nth-child(4)  { left:33%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:2.2s; }
+  .hero-particles span:nth-child(5)  { left:42%; width:3px;  height:3px;  animation-duration:10s; animation-delay:0.3s; }
+  .hero-particles span:nth-child(6)  { left:51%; width:7px;  height:7px;  animation-duration:14s; animation-delay:1.8s; }
+  .hero-particles span:nth-child(7)  { left:60%; width:4px;  height:4px;  animation-duration:9s;  animation-delay:0.6s; }
+  .hero-particles span:nth-child(8)  { left:68%; width:3px;  height:3px;  animation-duration:12s; animation-delay:3.1s; }
+  .hero-particles span:nth-child(9)  { left:76%; width:5px;  height:5px;  animation-duration:10s; animation-delay:1.2s; }
+  .hero-particles span:nth-child(10) { left:84%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:0.5s; }
+  .hero-particles span:nth-child(11) { left:20%; width:18px; height:6px;  animation-duration:15s; animation-delay:1.9s; }
+  .hero-particles span:nth-child(12) { left:55%; width:12px; height:4px;  animation-duration:11s; animation-delay:3.5s; }
+  .hero-particles span:nth-child(13) { left:39%; width:20px; height:5px;  animation-duration:13s; animation-delay:0.9s; }
+  .hero-particles span:nth-child(14) { left:73%; width:14px; height:4px;  animation-duration:10s; animation-delay:2.4s; }
+  .hero-particles span:nth-child(15) { left:88%; width:10px; height:3px;  animation-duration:9s;  animation-delay:1.1s; }
+
+  /* ── HERO STATS ── */
+  .pub-stats {
+    display: flex; justify-content: center; align-items: center;
+    flex-wrap: wrap; gap: 0; margin: 0 auto 32px;
+    max-width: 720px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(126,184,224,.12);
+    border-radius: 18px; padding: 22px 24px;
+    backdrop-filter: blur(6px);
+  }
+  .pub-stat-item { text-align: center; padding: 0 24px; }
+  .pub-stat-num {
+    display: block; font-size: 2.5rem; font-weight: 900;
+    color: #7eb8e0; line-height: 1; font-variant-numeric: tabular-nums;
+    text-shadow: 0 0 20px rgba(126,184,224,.3);
+  }
+  .pub-stat-lbl {
+    display: block; font-size: .6rem; text-transform: uppercase;
+    letter-spacing: 1.5px; color: rgba(255,255,255,.38); margin-top: 6px;
+  }
+  .pub-stat-divider {
+    width: 1px; height: 48px; background: rgba(126,184,224,.1); display: block;
+  }
+
+  /* ── HERO CTA BUTTONS ── */
+  .hero-cta-row { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 48px; }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(126,184,224,.07); border: 1px solid rgba(126,184,224,.22);
+    border-radius: 24px; padding: 9px 20px;
+    font-size: .77rem; font-weight: 600; color: rgba(255,255,255,.8) !important;
+    text-decoration: none !important; transition: all .22s; letter-spacing: .3px;
+  }
+  .hero-cta:hover {
+    background: rgba(126,184,224,.18); border-color: rgba(126,184,224,.5);
+    color: #fff !important; transform: translateY(-2px);
+  }
+  .hero-cta i { font-size: .85rem; color: #7eb8e0; }
+
+  /* ── SCROLLING JOURNAL TICKER ── */
+  .hero-ticker-wrap {
+    width: 100%; overflow: hidden;
+    background: rgba(126,184,224,.05);
+    border-top: 1px solid rgba(126,184,224,.1);
+    padding: 11px 0;
+  }
+  .hero-ticker {
+    display: inline-flex; white-space: nowrap;
+    animation: tickerScroll 28s linear infinite;
+  }
+  .hero-ticker:hover { animation-play-state: paused; }
+  .hero-ticker-item {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 0 28px;
+    font-size: .64rem; font-weight: 700; letter-spacing: 1.8px;
+    text-transform: uppercase; color: rgba(255,255,255,.3);
+  }
+  .hero-ticker-item i { color: #7eb8e0; font-size: .7rem; }
+  .hero-ticker-dot { color: rgba(126,184,224,.25); margin: 0 4px; }
+  @keyframes tickerScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── FEATURED SPOTLIGHT ── */
+  .featured-section {
+    background: linear-gradient(180deg, #0f3460 0%, #16213e 100%);
+    padding: 52px 0 60px;
+  }
+  .featured-heading {
+    font-size: 1.5rem !important; font-weight: 800 !important;
+    color: #fff !important; margin-bottom: 4px;
+  }
+  .featured-sub { font-size: .85rem; color: rgba(255,255,255,.45); margin-bottom: 36px; }
+  .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .featured-card {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 16px; padding: 26px 22px; transition: all .25s;
+  }
+  .featured-card:hover {
+    background: rgba(255,255,255,.11); transform: translateY(-6px);
+    box-shadow: 0 20px 48px rgba(0,0,0,.3);
+  }
+  .ft-badge {
+    display: inline-block; font-size: .58rem; font-weight: 800;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 4px 11px; border-radius: 20px; margin-bottom: 14px;
+  }
+  .ft-badge.impact { background: rgba(212,160,23,.18); color: #f0c040; border: 1px solid rgba(212,160,23,.3); }
+  .ft-badge.latest { background: rgba(126,184,224,.18); color: #7eb8e0; border: 1px solid rgba(126,184,224,.3); }
+  .ft-badge.award  { background: rgba(168,85,247,.18);  color: #c084fc; border: 1px solid rgba(168,85,247,.3); }
+  .ft-if { font-size: 2.4rem; font-weight: 900; color: #f0c040; line-height: 1; margin-bottom: 2px; }
+  .ft-if-label { font-size: .6rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,.35); margin-bottom: 14px; }
+  .ft-title { font-size: .88rem; font-weight: 700; color: #fff; line-height: 1.45; margin-bottom: 8px; }
+  .ft-journal { font-size: .76rem; color: rgba(255,255,255,.45); font-style: italic; margin-bottom: 16px; }
+  .ft-doi {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: .72rem; font-weight: 700; color: #7eb8e0 !important;
+    text-decoration: none !important; border: 1px solid rgba(126,184,224,.35);
+    padding: 5px 13px; border-radius: 20px; transition: all .2s;
+  }
+  .ft-doi:hover { background: rgba(126,184,224,.15); border-color: #7eb8e0; }
+
+  /* ── TAB NAV ── */
+  .pub-tab-wrap {
+    background: #fff; border-bottom: 1px solid #e4e9f5;
+    position: sticky; top: 60px; z-index: 100;
+    box-shadow: 0 2px 14px rgba(15,52,96,.06);
+  }
+  .pub-tab-nav {
+    display: flex; overflow-x: auto; scrollbar-width: none;
+    max-width: 1200px; margin: 0 auto; padding: 0 8px;
+  }
+  .pub-tab-nav::-webkit-scrollbar { display: none; }
+  .pub-tab-btn {
+    background: none; border: none; border-bottom: 3px solid transparent;
+    padding: 15px 20px 13px; font-size: .78rem; font-weight: 700;
+    letter-spacing: .5px; text-transform: uppercase; color: #999;
+    cursor: pointer; white-space: nowrap; transition: all .2s;
+    display: flex; align-items: center; gap: 7px;
+  }
+  .pub-tab-btn i { font-size: .85rem; }
+  .pub-tab-btn:hover { color: #0f3460; background: #f6f8ff; }
+  .pub-tab-btn.active { color: #0f3460; border-bottom-color: #0f3460; }
+  .tab-count {
+    background: #edf0fa; color: #666; font-size: .6rem; font-weight: 800;
+    padding: 2px 7px; border-radius: 20px;
+  }
+  .pub-tab-btn.active .tab-count { background: #0f3460; color: #7eb8e0; }
+
+  /* ── TOOLS BAR (search + year filter) ── */
+  .pub-tools {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 28px; flex-wrap: wrap;
+  }
+  .pub-search-wrap { position: relative; flex: 1; min-width: 210px; max-width: 360px; }
+  .pub-search-wrap .fa {
+    position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+    color: #aaa; font-size: .85rem; pointer-events: none;
+  }
+  .pub-search {
+    width: 100%; border: 1.5px solid #dde4f2; border-radius: 24px;
+    padding: 9px 16px 9px 38px; font-size: .82rem; color: #333;
+    background: #fff; outline: none; transition: border-color .2s;
+  }
+  .pub-search:focus { border-color: #7eb8e0; }
+  .year-filters { display: flex; gap: 7px; flex-wrap: wrap; }
+  .year-chip {
+    background: #fff; border: 1.5px solid #dde4f2; border-radius: 20px;
+    padding: 5px 13px; font-size: .7rem; font-weight: 700; color: #777;
+    cursor: pointer; transition: all .18s;
+  }
+  .year-chip:hover { border-color: #7eb8e0; color: #0f3460; }
+  .year-chip.active { background: #0f3460; border-color: #0f3460; color: #fff; }
+
+  /* ── SECTION PANELS ── */
+  .pub-section { display: none; padding: 52px 0 80px; }
+  .pub-section.active { display: block; }
+  .section-label {
+    display: inline-block; font-size: .66rem; letter-spacing: 2.5px;
+    text-transform: uppercase; color: #7eb8e0; font-weight: 700; margin-bottom: 6px;
+  }
+  .section-title { font-size: 1.9rem !important; font-weight: 800 !important; color: #1a1a2e !important; margin-bottom: 8px; }
+  .section-title-bar {
+    width: 50px; height: 4px;
+    background: linear-gradient(90deg, #7eb8e0, #0f3460);
+    border-radius: 2px; margin: 0 auto 36px;
+  }
+  .pub-no-results {
+    text-align: center; padding: 48px 0; color: #aaa; font-size: .9rem;
+  }
+  .pub-no-results i { display: block; font-size: 2rem; margin-bottom: 10px; color: #ccc; }
+
+  /* ── PUBLICATION CARD ── */
+  .pub-card {
+    background: #fff; border-radius: 14px; padding: 20px 24px;
+    margin-bottom: 14px; box-shadow: 0 2px 10px rgba(15,52,96,.05);
+    border-left: 4px solid #c8d4e8;
+    display: flex; gap: 16px; align-items: flex-start;
+    transition: transform .2s, box-shadow .22s;
+    animation: cardIn .35s ease both;
+  }
+  .pub-card:hover {
+    transform: translateY(-3px); box-shadow: 0 10px 30px rgba(15,52,96,.11);
+  }
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  /* Quality border variants */
+  .pub-card.q1     { border-left-color: #c8970a; }
+  .pub-card.q2     { border-left-color: #2474b5; }
+  .pub-card.esci   { border-left-color: #1e7e4e; }
+  .pub-card.patent { border-left-color: #d97706; }
+  .pub-card.award  { border-left-color: #8b5cf6; }
+
+  /* ── NUMBER BADGE ── */
+  .pub-num {
+    flex-shrink: 0; width: 38px; height: 38px;
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    color: #7eb8e0; font-size: .72rem; font-weight: 900;
+    border-radius: 10px; display: flex; align-items: center;
+    justify-content: center; margin-top: 2px; letter-spacing: .3px;
+  }
+
+  /* ── CARD BODY ── */
+  .pub-body { flex: 1; min-width: 0; }
+  .pub-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 5px; }
+  .pub-title { font-size: .95rem; font-weight: 700; color: #1a1a2e; line-height: 1.45; flex: 1; }
+  .pub-year-badge {
+    flex-shrink: 0; background: #eef2ff; color: #4a5580;
+    font-size: .65rem; font-weight: 800; padding: 3px 9px;
+    border-radius: 20px; margin-top: 2px; letter-spacing: .2px; white-space: nowrap;
+  }
+  .pub-authors { font-size: .81rem; color: #555; margin-bottom: 3px; }
+  .pub-authors strong { color: #0f3460; font-weight: 700; }
+  .pub-venue { font-size: .79rem; color: #888; margin-bottom: 8px; font-style: italic; }
+  .pub-meta { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+
+  /* ── IMPACT FACTOR BADGE ── */
+  .pub-if {
+    display: inline-flex; align-items: baseline; gap: 3px;
+    background: #fffbeb; border: 1.5px solid #d97706;
+    border-radius: 8px; padding: 3px 9px;
+  }
+  .pub-if strong { font-size: .88rem; font-weight: 900; color: #b45309; line-height: 1; }
+  .pub-if small { font-size: .6rem; font-weight: 700; color: #92400e; text-transform: uppercase; letter-spacing: .5px; }
+
+  /* ── QUALITY BADGES ── */
+  .badge-pill {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: .63rem; font-weight: 800; padding: 3px 9px;
+    border-radius: 20px; letter-spacing: .3px;
+  }
+  .badge-q1      { background: linear-gradient(90deg,#1a1a2e,#0f3460); color: #7eb8e0; }
+  .badge-q2      { background: #1a5276; color: #aed6f1; }
+  .badge-esci    { background: #145a32; color: #a9dfbf; }
+  .badge-scopus  { background: #6c3483; color: #d7bde2; }
+  .badge-springer{ background: #c0392b; color: #fadbd8; }
+  .badge-ieee    { background: #154360; color: #d6eaf8; }
+  .badge-acm     { background: #7b241c; color: #fadbd8; }
+  .badge-wos     { background: #1a3a5c; color: #d6eaf8; }
+  .badge-crc     { background: #6e3513; color: #fad9c7; }
+  .badge-award   { background: linear-gradient(90deg,#6d28d9,#a855f7); color: #fff; }
+  .badge-patent-granted   { background: #14532d; color: #bbf7d0; }
+  .badge-patent-published { background: #78350f; color: #fef3c7; }
+  .badge-india        { background: #ea580c; color: #fff; }
+  .badge-australia    { background: #1e3a8a; color: #bfdbfe; }
+  .badge-southafrica  { background: #065f46; color: #a7f3d0; }
+
+  /* ── DOI / LINK BUTTON ── */
+  .pub-doi {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: .71rem; font-weight: 700;
+    color: #0f3460 !important; text-decoration: none !important;
+    border: 1.5px solid #b8cfe8; padding: 4px 12px;
+    border-radius: 20px; transition: all .18s;
+  }
+  .pub-doi:hover { background: #0f3460; color: #fff !important; border-color: #0f3460; }
+
+  /* ── PATENT DETAILS ── */
+  .pub-patent-detail { font-size: .78rem; color: #666; margin: 5px 0 8px; }
+  .pub-patent-detail .p-label { font-weight: 700; color: #0f3460; margin-right: 4px; }
+  .pub-patent-detail span { margin-right: 16px; display: inline-block; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 991px) {
+    .featured-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 767px) {
+    .featured-grid { grid-template-columns: 1fr; }
+    .pub-hero h1 { font-size: 2.1rem !important; }
+    .pub-stats { gap: 24px; }
+    .pub-card { padding: 16px 18px; }
+    .pub-stat-divider { display: none; }
+  }
+  </style>
+</head>
+
+<body>
+<div id="site-header"></div>
+
+<!-- ════════════════════ HERO ════════════════════ -->
+<section class="pub-hero">
+  <div class="hero-particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="hero-inner">
+    <div class="container">
+      <p class="hero-eyebrow">Research Portfolio</p>
+      <h1>Publications</h1>
+      <p class="hero-sub">10+ years of research in AI, Computer Vision &amp; Biometrics — spanning journals, patents, conferences and books</p>
+
+      <div class="hero-db-strip">
+        <span class="hero-db-badge hdb-scopus">SCOPUS</span>
+        <span class="hero-db-badge hdb-wos">Web of Science</span>
+        <span class="hero-db-badge hdb-q1">Q1 Journals</span>
+        <span class="hero-db-badge hdb-acm">ACM DL</span>
+        <span class="hero-db-badge hdb-springer">Springer</span>
+        <span class="hero-db-badge hdb-ieee">IEEE Xplore</span>
+        <span class="hero-db-badge hdb-elsevier">Elsevier</span>
+        <span class="hero-db-badge hdb-if">IF up to 9.588</span>
+      </div>
+
+      <div class="pub-stats">
+        <div class="pub-stat-item">
+          <span class="pub-stat-num" data-target="6">6</span>
+          <span class="pub-stat-lbl">Patents</span>
+        </div>
+        <div class="pub-stat-divider"></div>
+        <div class="pub-stat-item">
+          <span class="pub-stat-num" data-target="16">16</span>
+          <span class="pub-stat-lbl">Journals</span>
+        </div>
+        <div class="pub-stat-divider"></div>
+        <div class="pub-stat-item">
+          <span class="pub-stat-num" data-target="16">16</span>
+          <span class="pub-stat-lbl">Conferences</span>
+        </div>
+        <div class="pub-stat-divider"></div>
+        <div class="pub-stat-item">
+          <span class="pub-stat-num" data-target="7">7</span>
+          <span class="pub-stat-lbl">Book Chapters</span>
+        </div>
+        <div class="pub-stat-divider"></div>
+        <div class="pub-stat-item">
+          <span class="pub-stat-num" data-target="50" data-suffix="+">50+</span>
+          <span class="pub-stat-lbl">Total Publications</span>
+        </div>
+      </div>
+
+      <div class="hero-cta-row">
+        <a href="https://scholar.google.com/citations?user=hrwpIAgAAAAJ&hl=en" target="_blank" class="hero-cta">
+          <i class="fa fa-graduation-cap"></i> Google Scholar
+        </a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57191284351" target="_blank" class="hero-cta">
+          <i class="fa fa-database"></i> Scopus Profile
+        </a>
+        <a href="https://orcid.org/0000-0002-8474-3623" target="_blank" class="hero-cta">
+          <i class="fa fa-id-badge"></i> ORCID
+        </a>
+        <a href="https://www.researchgate.net/profile/Anubha-Parashar" target="_blank" class="hero-cta">
+          <i class="fa fa-flask"></i> ResearchGate
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- scrolling journal ticker -->
+  <div class="hero-ticker-wrap">
+    <div class="hero-ticker">
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Neural Networks &amp; Learning Systems</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Expert Systems with Applications</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> IEEE Transactions on Biometrics</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Pattern Recognition Letters</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Applied Soft Computing</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> ACM Digital Library</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Springer Nature</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Elsevier ScienceDirect</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> IEEE Xplore Digital Library</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> International Journal of Computer Vision</span>
+      <span class="hero-ticker-dot">·</span>
+      <!-- duplicate for seamless loop -->
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Neural Networks &amp; Learning Systems</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Expert Systems with Applications</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> IEEE Transactions on Biometrics</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Pattern Recognition Letters</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Applied Soft Computing</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> ACM Digital Library</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Springer Nature</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> Elsevier ScienceDirect</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> IEEE Xplore Digital Library</span>
+      <span class="hero-ticker-dot">·</span>
+      <span class="hero-ticker-item"><i class="fa fa-circle"></i> International Journal of Computer Vision</span>
+      <span class="hero-ticker-dot">·</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ TAB NAVIGATION ════════════════════ -->
+<div class="pub-tab-wrap">
+  <div class="container">
+    <div class="pub-tab-nav">
+      <button class="pub-tab-btn active" onclick="switchTab('patents',this)">Patents <span class="tab-count">6</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('journals',this)">Journals <span class="tab-count">16</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('conferences',this)">Conferences <span class="tab-count">16</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('bookchapters',this)">Book Chapters <span class="tab-count">7</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('articles',this)">Articles <span class="tab-count">6</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('presentations',this)">Presentations <span class="tab-count">3</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('posters',this)">Posters <span class="tab-count">1</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ PATENTS ════════════════════ -->
+<section class="pub-section active" id="tab-patents">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Intellectual Property</span>
+      <h2 class="section-title">Patents</h2>
+      <div class="section-title-bar"></div>
+    </div>
+    <div class="pub-tools">
+      <div class="pub-search-wrap">
+        <i class="fa fa-search"></i>
+        <input type="text" class="pub-search" placeholder="Search patents…">
+      </div>
+      <div class="year-filters">
+        <button class="year-chip active" data-year="all">All Years</button>
+        <button class="year-chip" data-year="recent">2024–2026</button>
+        <button class="year-chip" data-year="2022-2023">2022–2023</button>
+        <button class="year-chip" data-year="2020-2021">2020–2021</button>
+      </div>
+    </div>
+    <p class="pub-no-results" style="display:none;"><i class="fa fa-search"></i>No matching patents found.</p>
+
+    <div class="pub-card patent" data-year="2023">
+      <div class="pub-num">01</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">A System and Method For Tracking of Drug Product and Expiry Date Alert of Pharmaceuticals using Deep Learning</div>
+          <span class="pub-year-badge">2023</span>
+        </div>
+        <div class="pub-patent-detail">
+          <span><span class="p-label">App No:</span> 202331058909</span>
+          <span><span class="p-label">Filed:</span> 02/09/2023</span>
+        </div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-india">&#127470;&#127475; Indian Patent</span>
+          <span class="badge-pill badge-patent-granted">Granted</span>
+          <a href="files/4. Publication/1. patent/1/Certificate of inventorship.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card patent" data-year="2021">
+      <div class="pub-num">02</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">A Covariate-based Gait Recognition System and Method for Edge Analytics Using Optimized Deep Learning Pipeline</div>
+          <span class="pub-year-badge">2021</span>
+        </div>
+        <div class="pub-patent-detail">
+          <span><span class="p-label">App No:</span> 202111034240</span>
+          <span><span class="p-label">Filed:</span> 29/07/2021</span>
+          <span><span class="p-label">Published:</span> 27/08/2021</span>
+        </div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-india">&#127470;&#127475; Indian Patent</span>
+          <span class="badge-pill badge-patent-granted">Granted</span>
+          <a href="files/4. Publication/1. patent/2/202111034240 Patent Certificate.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card patent" data-year="2020">
+      <div class="pub-num">03</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Content Based Video Ranking</div>
+          <span class="pub-year-badge">2020</span>
+        </div>
+        <div class="pub-patent-detail">
+          <span><span class="p-label">App No:</span> 202011053220</span>
+          <span><span class="p-label">Filed:</span> 07/12/2020</span>
+          <span><span class="p-label">Published:</span> 08/01/2021</span>
+        </div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-india">&#127470;&#127475; Indian Patent</span>
+          <span class="badge-pill badge-patent-granted">Granted</span>
+          <a href="files/4. Publication/1. patent/3/Scan0003.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card patent" data-year="2021">
+      <div class="pub-num">04</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Inexpensive Nail-fold Capillaroscopy for Early Detection of Cardio-Metabolic Disease</div>
+          <span class="pub-year-badge">2021</span>
+        </div>
+        <div class="pub-patent-detail">
+          <span><span class="p-label">App No:</span> 2021100922</span>
+          <span><span class="p-label">Filed:</span> 2021-02-18</span>
+          <span><span class="p-label">Expiry:</span> 2029-02-18</span>
+        </div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-australia">&#127462;&#127482; Australian Patent</span>
+          <span class="badge-pill badge-patent-granted">Granted</span>
+          <a href="files/4. Publication/1. patent/4/Inexpensive Nail-fold Capillaroscopy fo...pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card patent" data-year="2021">
+      <div class="pub-num">05</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Content Based Video Ranking</div>
+          <span class="pub-year-badge">2021</span>
+        </div>
+        <div class="pub-patent-detail">
+          <span><span class="p-label">App No:</span> 2021105538</span>
+          <span><span class="p-label">Filed:</span> 2021-08-15</span>
+          <span><span class="p-label">Expiry:</span> 2029-08-15</span>
+        </div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-australia">&#127462;&#127482; Australian Patent</span>
+          <span class="badge-pill badge-patent-granted">Granted</span>
+          <a href="files/4. Publication/1. patent/5/Innovation_Patent_Notice_of_Grant_27-10-2021.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card patent" data-year="2021">
+      <div class="pub-num">06</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Sign Language Translator</div>
+          <span class="pub-year-badge">2021</span>
+        </div>
+        <div class="pub-patent-detail">
+          <span><span class="p-label">App No:</span> 202110309</span>
+          <span><span class="p-label">Filed:</span> 13/12/2021</span>
+        </div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-southafrica">&#127487;&#127462; South African Patent</span>
+          <span class="badge-pill badge-patent-granted">Granted</span>
+          <a href="files/4. Publication/1. patent/6/E_Journal_December 2021 Part 2.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ JOURNALS ════════════════════ -->
+<section class="pub-section" id="tab-journals">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Peer-Reviewed Research</span>
+      <h2 class="section-title">Journal Papers</h2>
+      <div class="section-title-bar"></div>
+    </div>
+    <div class="pub-tools">
+      <div class="pub-search-wrap">
+        <i class="fa fa-search"></i>
+        <input type="text" class="pub-search" placeholder="Search journals…">
+      </div>
+      <div class="year-filters">
+        <button class="year-chip active" data-year="all">All Years</button>
+        <button class="year-chip" data-year="recent">2024–2026</button>
+        <button class="year-chip" data-year="2022-2023">2022–2023</button>
+        <button class="year-chip" data-year="2020-2021">2020–2021</button>
+        <button class="year-chip" data-year="2018-2019">2018–2019</button>
+        <button class="year-chip" data-year="pre2018">Pre-2018</button>
+      </div>
+    </div>
+    <p class="pub-no-results" style="display:none;"><i class="fa fa-search"></i>No matching journals found.</p>
+
+    <div class="pub-card q1" data-year="2026">
+      <div class="pub-num">01</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Vehicle-Scale LLMs: Integrating low-rank residuals and 4-bit quantization for in-vehicle AI</div>
+          <span class="pub-year-badge">2026</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Apoorva Parashar, Bhavya Joshi, Kavita Jhajharia, Aditya Sinha</div>
+        <div class="pub-venue">Array, Volume 29, 2026, 100709, ISSN 2590-0056 — Elsevier</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>4.5</strong><small>IF</small></span>
+          <span class="badge-pill badge-q1">SCI Q1</span>
+          <a href="https://doi.org/10.1016/j.array.2026.100709" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/1/1-s2.0-S2590005626000329-main.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card q1" data-year="2024">
+      <div class="pub-num">02</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Advancements in artificial intelligence for biometrics: A deep dive into model-based gait recognition techniques</div>
+          <span class="pub-year-badge">2024</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Apoorva Parashar, Mohammad Shabaz, Deepak Gupta, Aditya Kumar Sahu, Muhammad Attique Khan</div>
+        <div class="pub-venue">Engineering Applications of Artificial Intelligence, Volume 130, 2024, 107712 — Elsevier</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>8.3</strong><small>IF</small></span>
+          <span class="badge-pill badge-q1">SCI Q1</span>
+          <a href="https://doi.org/10.1016/j.engappai.2023.107712" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/2/cas-dc-template (1).pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card q1" data-year="2022">
+      <div class="pub-num">03</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Deep Learning Pipelines for Recognition of Gait Biometrics with Covariates – A Comprehensive Review</div>
+          <span class="pub-year-badge">2022</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Apoorva Parashar, Shekhawat RS, Ding W, Rida I</div>
+        <div class="pub-venue">Artificial Intelligence Review, Springer, 2022</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>9.6</strong><small>IF</small></span>
+          <span class="badge-pill badge-q1">SCI Q1</span>
+          <a href="https://doi.org/10.1007/s10462-022-10365-4" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/3/bd2d4a96-84de-4b5c-8500-323699ba3648 (1).pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card q1" data-year="2023">
+      <div class="pub-num">04</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Real-time Gait Biometrics for Surveillance Applications: A Review</div>
+          <span class="pub-year-badge">2023</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Rajveer Singh Shekhawat</div>
+        <div class="pub-venue">Image and Vision Computing, Elsevier, 2023, 104784</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>4.7</strong><small>IF</small></span>
+          <span class="badge-pill badge-q1">SCI Q1</span>
+          <a href="https://doi.org/10.1016/j.imavis.2023.104784" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/4/gait_review.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card q1" data-year="2023">
+      <div class="pub-num">05</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Data preprocessing and feature selection techniques in gait recognition: A comparative study of machine learning and deep learning approaches</div>
+          <span class="pub-year-badge">2023</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Apoorva Parashar, Weiping Ding, Mohammad Shabaz, Imad Rida</div>
+        <div class="pub-venue">Pattern Recognition Letters, Volume 172, 2023, Pages 65–73, ISSN 0167-8655 — Elsevier</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>5.1</strong><small>IF</small></span>
+          <span class="badge-pill badge-q1">SCI Q1</span>
+          <a href="https://doi.org/10.1016/j.patrec.2023.05.021" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/5/U.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card q2" data-year="2024">
+      <div class="pub-num">06</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Journey into gait biometrics: Integrating deep learning for enhanced pattern recognition</div>
+          <span class="pub-year-badge">2024</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Apoorva Parashar, Imad Rida</div>
+        <div class="pub-venue">Digital Signal Processing, Volume 147, 2024, 104393, ISSN 1051-2004 — Elsevier</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>2.9</strong><small>IF</small></span>
+          <span class="badge-pill badge-q2">SCI Q2</span>
+          <a href="https://doi.org/10.1016/j.dsp.2024.104393" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/6/cas-dc-template (2).pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card q1" data-year="2024">
+      <div class="pub-num">07</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Deep Learning Approach for Hand Gesture Recognition: Applications in Deaf Communication and Healthcare</div>
+          <span class="pub-year-badge">2024</span>
+        </div>
+        <div class="pub-authors">Aurangzeb K., Javeed K., Alhussein M., Rida I., Haider S. I., &amp; <strong>Parashar A.</strong></div>
+        <div class="pub-venue">Computers, Materials &amp; Continua, 78(1), 2024</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>3.6</strong><small>IF</small></span>
+          <span class="badge-pill badge-q1">SCIE Q1</span>
+          <a href="https://doi.org/10.32604/cmc.2023.042886" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/7/TSP_CMC_42886.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card q2" data-year="2023">
+      <div class="pub-num">08</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Medical imaging in rheumatoid arthritis: A review on deep learning approach</div>
+          <span class="pub-year-badge">2023</span>
+        </div>
+        <div class="pub-authors">Apoorva Parashar, Rahul Rishi, <strong>Anubha Parashar</strong>, Imad Rida</div>
+        <div class="pub-venue">Open Life Sciences, Volume 18, Issue 1, 2023 — De Gruyter</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>2.2</strong><small>IF</small></span>
+          <span class="badge-pill badge-q2">SCI Q2</span>
+          <a href="https://doi.org/10.1515/biol-2022-0611" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/8/10.1515_biol-2022-0611.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card q2" data-year="2023">
+      <div class="pub-num">09</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Internet of Things in healthcare: A survey on protocol standards, enabling technologies, WBAN architectures and open issues</div>
+          <span class="pub-year-badge">2023</span>
+        </div>
+        <div class="pub-authors">Vidyadhar Jinnappa Aski, Vijaypal Singh Dhaka, <strong>Anubha Parashar</strong>, Sunil Kumar, Imad Rida</div>
+        <div class="pub-venue">Physical Communication, 2023, 102103, ISSN 1874-4907 — Elsevier</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>2.2</strong><small>IF</small></span>
+          <span class="badge-pill badge-q2">SCI Q2</span>
+          <a href="https://doi.org/10.1016/j.phycom.2023.102103" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/9/survey_2_HIoT_Ieee_comst_edit_20_1_23.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card q1" data-year="2022">
+      <div class="pub-num">10</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Intra-class Variations with Deep Learning-based Gait Analysis: A Comprehensive Survey of Covariates and Methods</div>
+          <span class="pub-year-badge">2022</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Shekhawat RS, Ding W, Rida I</div>
+        <div class="pub-venue">Neurocomputing, Elsevier, 2022</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>5.7</strong><small>IF</small></span>
+          <span class="badge-pill badge-q1">SCI Q1</span>
+          <a href="https://doi.org/10.1016/j.neucom.2022.07.002" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/10/ppr.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card esci" data-year="2022">
+      <div class="pub-num">11</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Protection of gait data set for preserving its privacy in deep learning pipeline</div>
+          <span class="pub-year-badge">2022</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Shekhawat RS</div>
+        <div class="pub-venue">IET Biometrics, Wiley, 2022</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>2.7</strong><small>IF</small></span>
+          <span class="badge-pill badge-esci">ESCI Q1</span>
+          <a href="https://doi.org/10.1049/bme2.12093" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/11/IET Biometrics - 2022 - Parashar - Protection of gait data set for preserving its privacy in deep learning pipeline.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card esci" data-year="2022">
+      <div class="pub-num">12</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">A Robust Covariate-invariant Gait Recognition based on Pose Features</div>
+          <span class="pub-year-badge">2022</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Shekhawat RS</div>
+        <div class="pub-venue">IET Biometrics, Wiley, 2022</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>2.7</strong><small>IF</small></span>
+          <span class="badge-pill badge-esci">ESCI Q1</span>
+          <a href="https://doi.org/10.1049/bme2.12103" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/12/IET Biometrics - 2018 - Rida - Robust gait recognition  a comprehensive survey.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card esci" data-year="2016">
+      <div class="pub-num">13</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Push Recovery for Humanoid Robot in Dynamic Environment and Classifying the Data Using K-Mean</div>
+          <span class="pub-year-badge">2016</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong> et al.</div>
+        <div class="pub-venue">International Journal of Interactive Multimedia and Artificial Intelligence, Vol. 4, pp 29–34, 2016</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>4.9</strong><small>IF</small></span>
+          <span class="badge-pill badge-esci">ESCI Q2</span>
+          <a href="https://doi.org/10.1145/2905055.2905207" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/13/ijimai20164_2_5_pdf_12005.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card esci" data-year="2014">
+      <div class="pub-num">14</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Business and Social Behaviour Intelligence Analysis Using PSO</div>
+          <span class="pub-year-badge">2014</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong> et al.</div>
+        <div class="pub-venue">International Journal of Interactive Multimedia and Artificial Intelligence, Vol. 2, pp 69–74, 2014</div>
+        <div class="pub-meta">
+          <span class="pub-if"><strong>4.9</strong><small>IF</small></span>
+          <span class="badge-pill badge-esci">ESCI Q2</span>
+          <a href="https://doi.org/10.9781/ijimai.2014.268" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/14/ijimai20142_6_8_pdf_20898.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2018">
+      <div class="pub-num">15</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Machine learning application to improve COCOMO model using neural networks</div>
+          <span class="pub-year-badge">2018</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">International Journal of Information Technology and Computer Science (IJITCS), 3, 35–51, 2018</div>
+        <div class="pub-meta">
+          <a href="http://dx.doi.org/10.5815/ijitcs.2018.03.05" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/15/IJITCS-V10-N3-5.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2017">
+      <div class="pub-num">16</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Selecting the COTS components using Ad-hoc approach</div>
+          <span class="pub-year-badge">2017</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">International Journal of Wireless and Microwave Technologies (IJWMT), 7(5), 22–31, 2017</div>
+        <div class="pub-meta">
+          <a href="https://doi.org/10.5815/IJWMT.2017.05.03" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/2. journal/16/1407.2125.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ CONFERENCES ════════════════════ -->
+<section class="pub-section" id="tab-conferences">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">International Venues</span>
+      <h2 class="section-title">Conference Papers</h2>
+      <div class="section-title-bar"></div>
+    </div>
+    <div class="pub-tools">
+      <div class="pub-search-wrap">
+        <i class="fa fa-search"></i>
+        <input type="text" class="pub-search" placeholder="Search conferences…">
+      </div>
+      <div class="year-filters">
+        <button class="year-chip active" data-year="all">All Years</button>
+        <button class="year-chip" data-year="recent">2024–2026</button>
+        <button class="year-chip" data-year="2022-2023">2022–2023</button>
+        <button class="year-chip" data-year="2020-2021">2020–2021</button>
+        <button class="year-chip" data-year="2018-2019">2018–2019</button>
+        <button class="year-chip" data-year="pre2018">Pre-2018</button>
+      </div>
+    </div>
+    <p class="pub-no-results" style="display:none;"><i class="fa fa-search"></i>No matching conferences found.</p>
+
+    <div class="pub-card" data-year="2023">
+      <div class="pub-num">01</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Deep Learning-based Framework for Accurate Clothing Attribute Recognition and Style Navigation for Gait Recognition</div>
+          <span class="pub-year-badge">2023</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Apoorva Parashar, Imad Rida, Vidyadhar Aski et al.</div>
+        <div class="pub-venue">International Conference on Bio-engineering for Smart Technologies, 2023</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-springer">Springer</span>
+          <a href="files/4. Publication/3. conference/1/conference_041818.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/1/Deep Learning-based Framework for Accurate Clothing Attribute Recognition.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/1/Anubha Parashar.png" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2022">
+      <div class="pub-num">02</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Protecting the Privacy of Face by De-Identification Pipeline Based on Deep Learning</div>
+          <span class="pub-year-badge">2022</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Apoorva Parashar, Imad Rida</div>
+        <div class="pub-venue">16th International Conference on Signal Image Technology and Internet Based Systems (SITIS) · Dijon, France · Oct 19–21, 2022</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-ieee">IEEE</span>
+          <a href="https://ieeexplore.ieee.org/document/10090162" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/2/BIOSIG_2022_paper_45.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/2/ppt.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/2/Certificate-Anubha.pdf" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2021">
+      <div class="pub-num">03</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Optimized Pose-Based Gait Analysis for Surveillance</div>
+          <span class="pub-year-badge">2021</span>
+        </div>
+        <div class="pub-authors">Apoorva Parashar, <strong>Anubha Parashar</strong>, Vidyadhar Aski</div>
+        <div class="pub-venue">2nd International Conference on Innovations in Computational Intelligence and Computer Vision · Manipal University Jaipur · Aug 5–6, 2021</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-springer">Springer</span>
+          <a href="https://doi.org/10.1007/978-981-19-0475-2_54" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/3/ICICV-2021_paper_363.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/3/ICICV_2021_Gait_Analysis_Presentation.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/3/certificate.jpg" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2021">
+      <div class="pub-num">04</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">IoT enabled elderly monitoring system and the role of privacy preservation frameworks in health applications</div>
+          <span class="pub-year-badge">2021</span>
+        </div>
+        <div class="pub-authors">Vidyadhar Aski, Vijay Dhaka, Sunil Kumar, <strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">5th International Conference on Intelligent Data Communication Technologies and Internet of Things · JCT College, Coimbatore · Aug 27–28, 2021</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-springer">Springer</span>
+          <a href="https://doi.org/10.1007/978-981-16-7610-9_72" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/4/ICICI-21_paper_springer_format_revised_final-pages-1.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/4/HIoT_Elderly_Monitoring_Privacy_Presentation.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/4/certi.png" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2020">
+      <div class="pub-num">05</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Smart Autonomous Vehicle Using End To End Learning</div>
+          <span class="pub-year-badge">2020</span>
+        </div>
+        <div class="pub-authors">Pranav Gupta, Vaibhav Singh, <strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">8th International Conference on Innovations in Computer Science &amp; Engineering · Guru Nanak Institute of Technology · Aug 28–29, 2020</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-springer">Springer</span>
+          <a href="https://www.indianjournals.com/ijor.aspx?target=ijor:jicse&volume=9&issue=2&article=002" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> Link</a>
+          <a href="files/4. Publication/3. conference/5/9vi2-2.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/5/Smart_Autonomous_Vehicle_End_to_End_Learning.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/5/1. DAY 2 S5_8.pdf" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2020">
+      <div class="pub-num">06</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">A Multi-Factor Access Control and Ownership Transfer Framework for Future Generation Healthcare Systems</div>
+          <span class="pub-year-badge">2020</span>
+        </div>
+        <div class="pub-authors">Vidyadhar Aski, Vijay Dhaka, Arjun Singh, <strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">4th International Conference on Opportunities and Challenges in Business Management · MAHE Dubai · Feb 25–26, 2020</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-ieee">IEEE</span>
+          <a href="https://ieeexplore.ieee.org/document/9315840" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/6/ICSCA_2020_paper_110.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/6/Healthcare_IoT_Access_Control_Presentation.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/6/certi.jpeg" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2020">
+      <div class="pub-num">07</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Surveillance System To Provide Secured Gait Signatures In Multi View Variations Using Deep Learning</div>
+          <span class="pub-year-badge">2020</ICCT17_paper_308span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Apoorva Parashar, RS Shekhawat, Vidyadhar Aski</div>
+        <div class="pub-venue">International Conference on Modelling, Simulation &amp; Intelligent Computing · BITS Dubai · Jan 29–31, 2020</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-springer">Springer</span>
+          <span class="badge-pill badge-scopus">Scopus / WOS</span>
+          <a href="https://link.springer.com/chapter/10.1007/978-981-15-5243-4_21" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/7/Surveillance System to Provide Secured Gait Signatures for Multi View Angles Using Deep Learning.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/7/Surveillance System to Provide Secured Gait Signatures Using.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/7/certi.jpeg" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2019">
+      <div class="pub-num">08</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">IoT Based Automated Weather Report Generation and Prediction Using Machine Learning</div>
+          <span class="pub-year-badge">2019</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">2nd International Conference on Intelligent Communication and Computational Techniques · Manipal University · Sep 28–29, 2019</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-ieee">IEEE</span>
+          <a href="https://ieeexplore.ieee.org/abstract/document/8968782/" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/8/IoT Based Automated Weather Report Generation.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/8/ppt_icct_anubha.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/8/certi.pdf" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2019">
+      <div class="pub-num">09</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">IoT Based Cloud Enabled Smart Electricity Management System</div>
+          <span class="pub-year-badge">2019</span>
+        </div>
+        <div class="pub-authors">Apoorva Parashar, <strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">2nd International Conference on Smart IoT Systems · Manipal University · Jan 18–19, 2019</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-springer">Springer</span>
+          <span class="badge-pill badge-scopus">Scopus</span>
+          <a href="https://doi.org/10.1007/978-981-13-8406-6_71" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/9/IoT Based Cloud Enabled Smart Electricity Management System.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/9/IoT_Smart_Electricity_Management_Presentation.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/9/certi.pdf" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2019">
+      <div class="pub-num">10</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Cloud Assisted IoT Enabled Smoke Monitoring System (e-Nose) Using Machine Learning Techniques</div>
+          <span class="pub-year-badge">2019</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">2nd International Conference on Smart IoT Systems · Manipal University · Jan 18–19, 2019</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-springer">Springer</span>
+          <span class="badge-pill badge-scopus">Scopus</span>
+          <a href="https://doi.org/10.1007/978-981-13-8406-6_70" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/10/ICCT17_paper_308.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/10/e_nose_smoke_monitoring_presentation.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/10/certi.pdf" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card award" data-year="2018">
+      <div class="pub-num">11</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Tracing Gesture and Extracting Gait Features to Recognize Parkinson's Disease Using Multi-layered Back Propagation Algorithm</div>
+          <span class="pub-year-badge">2018</span>
+        </div>
+        <div class="pub-authors">A. Parashar, RS. Shekhawat, A. Parashar</div>
+        <div class="pub-venue">International Conference on Innovative Technologies (InTech 2018) · Zagreb, Croatia · Sep 5–7, 2018</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-award"><i class="fa fa-trophy"></i> Best Paper Award</span>
+          <a href="http://in-tech.info/download/%20IN_TECH_2018_Proceedings" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> Link</a>
+          <a href="files/4. Publication/3. conference/11/IN-TECH_2018_paper_40 (2).pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/11/Final PPT _40 .pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/11/2.jpg" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2018">
+      <div class="pub-num">12</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">An Attribute Based Break-Glass Access Control Framework For Medical Emergencies</div>
+          <span class="pub-year-badge">2018</span>
+        </div>
+        <div class="pub-authors">Vidyadhar Aski, Vijay Dhaka, <strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">International Conference on Innovations in Computational Intelligence and Computer Vision · Manipal University · Jan 18–19, 2018</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-springer">Springer</span>
+          <span class="badge-pill badge-scopus">Scopus</span>
+          <a href="https://doi.org/10.1007/978-981-15-6067-5_66" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/12/final_uc.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/12/attribute_break_glass_access_control_presentation.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/12/certi.jpg" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2018">
+      <div class="pub-num">13</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Identification of gait data using machine learning technique to categories human locomotion</div>
+          <span class="pub-year-badge">2018</span>
+        </div>
+        <div class="pub-authors">A. Parashar, A. Parashar</div>
+        <div class="pub-venue">10th International Conference on Security of Information and Networks · Jaipur, India · Oct 13–15, 2018</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-acm">ACM</span>
+          <a href="https://doi.org/10.1145/3136825.3136903" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/13/Identification of GAIT data using machine learning technique to categorise human locomotion (2).pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/13/Final PPT-thesis ppt.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/13/certi.png" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2016">
+      <div class="pub-num">14</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Clustering Gait Data using different machine learning techniques and finding the best technique</div>
+          <span class="pub-year-badge">2016</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Deepak Goyal</div>
+        <div class="pub-venue">International Conference on Smart Trends for Information Technology and Computer Communications · Jaipur, India · Aug 6–7, 2016</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-springer">Springer</span>
+          <a href="https://doi.org/10.1007/978-981-10-3433-6_51" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/14/110.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/14/110-.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/14/certi.jpeg" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2016">
+      <div class="pub-num">15</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Classifying Gait Data using different machine learning techniques and finding the optimum technique of classification</div>
+          <span class="pub-year-badge">2016</span>
+        </div>
+        <div class="pub-authors">A. Parashar, A. Parashar</div>
+        <div class="pub-venue">International Conference on ICT for Sustainable Development · Panaji, Goa, India · Jul 1–2, 2016</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-springer">Springer</span>
+          <a href="https://doi.org/10.1007/978-981-10-3920-1_31" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/15/243.pdf.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/15/Final PPT-thesis ppt.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/15/certi.png" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2016">
+      <div class="pub-num">16</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Push recovery for humanoid robot in dynamic environment and classifying the data using K-mean</div>
+          <span class="pub-year-badge">2016</span>
+        </div>
+        <div class="pub-authors">Parashar, A., Parashar, A., Goyal, S., &amp; Sahjalan, B.</div>
+        <div class="pub-venue">Second International Conference on Information and Communication Technology for Competitive Strategies · Udaipur, India · 4–5 Mar. 2016</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-acm">ACM</span>
+          <span class="badge-pill badge-scopus">SCOPUS</span>
+          <span class="badge-pill badge-wos">WOS</span>
+          <a href="https://doi.org/10.1145/2905055.2905207" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/3. conference/16/aSS10-03-Parashar.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="files/4. Publication/3. conference/16/main.pdf" target="_blank" class="pub-doi"><i class="fa fa-desktop"></i> Slides</a>
+          <a href="files/4. Publication/3. conference/16/certi.png" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ BOOK CHAPTERS ════════════════════ -->
+<section class="pub-section" id="tab-bookchapters">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Scholarly Books</span>
+      <h2 class="section-title">Book Chapters</h2>
+      <div class="section-title-bar"></div>
+    </div>
+    <div class="pub-tools">
+      <div class="pub-search-wrap">
+        <i class="fa fa-search"></i>
+        <input type="text" class="pub-search" placeholder="Search book chapters…">
+      </div>
+      <div class="year-filters">
+        <button class="year-chip active" data-year="all">All Years</button>
+        <button class="year-chip" data-year="2020-2021">2020–2021</button>
+        <button class="year-chip" data-year="2018-2019">2018–2019</button>
+      </div>
+    </div>
+    <p class="pub-no-results" style="display:none;"><i class="fa fa-search"></i>No matching chapters found.</p>
+
+    <div class="pub-card" data-year="2021">
+      <div class="pub-num">01</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Optimized navigation using deep learning technique for automatic guided vehicle</div>
+          <span class="pub-year-badge">2021</span>
+        </div>
+        <div class="pub-authors">Parashar A., Parashar A., &amp; Goyal L. M.</div>
+        <div class="pub-venue"><em>Cognitive Computing for Human-Robot Interaction</em> (pp. 147–161) · Academic Press · Cognitive Data Science in Sustainable Computing series</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-scopus">Scopus Indexed</span>
+          <a href="https://doi.org/10.1016/B978-0-323-85769-7.00002-1" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/4. book chapter/1/ch_8.docx" target="_blank" class="pub-doi"><i class="fa fa-file-word-o"></i> Doc</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2020">
+      <div class="pub-num">02</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">IoT enabled Surveillance System to Provide Secured Gait Signatures Using Deep Learning</div>
+          <span class="pub-year-badge">2020</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Apoorva Parashar, Vidyadhar Aski, Rajveer S. Shekhawat</div>
+        <div class="pub-venue"><em>Security and Trust Issues in Internet of Things: Blockchain to the Rescue</em> · CRC Press, Taylor &amp; Francis · ISBN 9781003121664 · Dec 2, 2020</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-crc">CRC Press</span>
+          <a href="https://doi.org/10.1201/9781003121664" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/4. book chapter/2/IOTBC-2020_paper_44.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2021">
+      <div class="pub-num">03</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Automated Guided Autonomous Car Using Deep Learning and Computer Vision</div>
+          <span class="pub-year-badge">2021</span>
+        </div>
+        <div class="pub-authors">Parashar A., Aski V., &amp; Parashar A.</div>
+        <div class="pub-venue"><em>Autonomous Driving and Advanced Driver-Assistance Systems (ADAS)</em> (pp. 219–232) · CRC Press · Dec 15, 2021</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-crc">CRC Press</span>
+          <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003048381-10/automated-guided-autonomous-car-using-deep-learning-computer-vision-anubha-parashar-vidyadhar-aski-apoorva-parashar" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> Link</a>
+          <a href="files/4. Publication/4. book chapter/3/Joseph_9780367499747-chapter 09.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2021">
+      <div class="pub-num">04</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Open-Pit Mine Autonomous Bot</div>
+          <span class="pub-year-badge">2021</span>
+        </div>
+        <div class="pub-authors">Parashar A., Parashar A., &amp; Aski V.</div>
+        <div class="pub-venue"><em>Autonomous Driving and Advanced Driver-Assistance Systems (ADAS)</em> (pp. 485–504) · CRC Press · Dec 15, 2021</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-crc">CRC Press</span>
+          <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003048381-27/open-pit-mine-autonomous-bot-apoorva-parashar-anubha-parashar-vidyadhar-aski" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> Link</a>
+          <a href="files/4. Publication/4. book chapter/4/Joseph_9780367499747-chapter 24.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2021">
+      <div class="pub-num">05</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Smart Agriculture Using Wireless Sensor Networks</div>
+          <span class="pub-year-badge">2021</span>
+        </div>
+        <div class="pub-authors">Sharma S. K., &amp; <strong>Parashar A.</strong></div>
+        <div class="pub-venue"><em>Integration of WSNs into Internet of Things</em> (pp. 121–134) · CRC Press, Taylor &amp; Francis · 2021</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-crc">CRC Press</span>
+          <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003107521-7/smart-agriculture-using-wireless-sensor-networks-somya-goyal-sudhir-kumar-sharma-anubha-parashar" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> Link</a>
+          <a href="files/4. Publication/4. book chapter/5/9781003107521_previewpdf.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2018">
+      <div class="pub-num">06</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Big Data Analysis Using Machine Learning Approach to Compute Data</div>
+          <span class="pub-year-badge">2018</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Apoorva Parashar</div>
+        <div class="pub-venue"><em>Data Intensive Computing Applications for Big Data</em> (pp. 133–150) · IOS Press · Advances in Parallel Computing series · Feb 2018</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-scopus">Scopus Indexed</span>
+          <a href="http://ebooks.iospress.nl/publication/48530" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> Link</a>
+          <a href="files/4. Publication/4. book chapter/6/IOS_AnubhaParashar.docx.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2018">
+      <div class="pub-num">07</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Application of Big Data Analytics in Cloud Computing via Machine Learning</div>
+          <span class="pub-year-badge">2018</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong>, Anita Shrotriya</div>
+        <div class="pub-venue"><em>Data Intensive Computing Applications for Big Data</em> (pp. 236–366) · IOS Press · Advances in Parallel Computing series · Feb 2018</div>
+        <div class="pub-meta">
+          <span class="badge-pill badge-scopus">Scopus Indexed</span>
+          <a href="http://ebooks.iospress.nl/volumearticle/48534" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> Link</a>
+          <a href="files/4. Publication/4. book chapter/7/IOS.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ ARTICLES ════════════════════ -->
+<section class="pub-section" id="tab-articles">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Preprints &amp; Short Articles</span>
+      <h2 class="section-title">Articles</h2>
+      <div class="section-title-bar"></div>
+    </div>
+    <div class="pub-tools">
+      <div class="pub-search-wrap">
+        <i class="fa fa-search"></i>
+        <input type="text" class="pub-search" placeholder="Search articles…">
+      </div>
+      <div class="year-filters">
+        <button class="year-chip active" data-year="all">All Years</button>
+        <button class="year-chip" data-year="2020-2021">2020–2021</button>
+        <button class="year-chip" data-year="pre2018">Pre-2018</button>
+      </div>
+    </div>
+    <p class="pub-no-results" style="display:none;"><i class="fa fa-search"></i>No matching articles found.</p>
+
+    <div class="pub-card" data-year="2014">
+      <div class="pub-num">01</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Noisy Distance Measurements Using 3-D Localization with Rb-Rf Methods</div>
+          <span class="pub-year-badge">2014</span>
+        </div>
+        <div class="pub-authors">Parashar A., Kumar S., Bhaskar V. S., &amp; Chinia R.</div>
+        <div class="pub-venue">arXiv preprint arXiv:1407.2125, 2014</div>
+        <div class="pub-meta">
+          <a href="https://doi.org/10.48550/arXiv.1407.2125" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/5. article/1/1407.2125.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2014">
+      <div class="pub-num">02</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Search Space Engine Optimize Search Using FCC_STF Algorithm in Fuzzy Co-Clustering</div>
+          <span class="pub-year-badge">2014</span>
+        </div>
+        <div class="pub-authors">Rani M., <strong>Parashar A.</strong>, Chaturvedi J., &amp; Malviya A.</div>
+        <div class="pub-venue">arXiv preprint arXiv:1407.6952, 2014</div>
+        <div class="pub-meta">
+          <a href="https://doi.org/10.48550/arXiv.1407.6952" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/5. article/2/1407.6952.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2014">
+      <div class="pub-num">03</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Social and business intelligence analysis using PSO</div>
+          <span class="pub-year-badge">2014</span>
+        </div>
+        <div class="pub-authors">Chaturvedi J., <strong>Parashar A.</strong>, Manjrekar A. A., &amp; Bhaskar V. S.</div>
+        <div class="pub-venue">arXiv preprint arXiv:1407.6090, 2014</div>
+        <div class="pub-meta">
+          <a href="https://doi.org/10.48550/arXiv.1407.6090" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/5. article/3/1407.6090.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2014">
+      <div class="pub-num">04</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Design and Autonomous Control of the Active Adaptive Suspension System Rudra Mars Rover</div>
+          <span class="pub-year-badge">2014</span>
+        </div>
+        <div class="pub-authors">Vaish K., Rajesh S. M., Pasupatheeswaran K., <strong>Parashar A.</strong>, &amp; Chaturvedi J.</div>
+        <div class="pub-venue">arXiv preprint arXiv:1407.5197, 2014</div>
+        <div class="pub-meta">
+          <a href="https://doi.org/10.48550/arXiv.1407.5197" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> DOI</a>
+          <a href="files/4. Publication/5. article/4/1407.5197.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2016">
+      <div class="pub-num">05</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">A proposed solution to knapsack problem using branch &amp; bound technique</div>
+          <span class="pub-year-badge">2016</span>
+        </div>
+        <div class="pub-authors"><strong>Parashar A.</strong></div>
+        <div class="pub-venue">International Journal for Innovative Research in Multidisciplinary Field, 2(7), 240–246, 2016</div>
+        <div class="pub-meta">
+          <a href="https://d1wqtxts1xzle7.cloudfront.net/48034676/201607045-libre.pdf" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> Link</a>
+          <a href="files/4. Publication/5. article/5/A_Proposed_Solution_to_Knapsack_Problem.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card">
+      <div class="pub-num">06</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">A Text to Speech Conversion Engine</div>
+        </div>
+        <div class="pub-authors">Parashar A., &amp; Bijalwan V.</div>
+        <div class="pub-venue">Technical Report</div>
+        <div class="pub-meta">
+          <a href="https://d1wqtxts1xzle7.cloudfront.net/37445136/TTS-libre.pdf" target="_blank" class="pub-doi"><i class="fa fa-external-link"></i> Link</a>
+          <a href="files/4. Publication/5. article/6/vishwa.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ PRESENTATIONS ════════════════════ -->
+<section class="pub-section" id="tab-presentations">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Paper Presentations</span>
+      <h2 class="section-title">Presentations</h2>
+      <div class="section-title-bar"></div>
+    </div>
+    <div class="pub-tools">
+      <div class="pub-search-wrap">
+        <i class="fa fa-search"></i>
+        <input type="text" class="pub-search" placeholder="Search presentations…">
+      </div>
+    </div>
+    <p class="pub-no-results" style="display:none;"><i class="fa fa-search"></i>No matching presentations found.</p>
+
+    <div class="pub-card" data-year="2010">
+      <div class="pub-num">01</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Electronic Commerce</div>
+          <span class="pub-year-badge">2010</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">Indian Society for Technical Education (ISTE) Annual Students' Convention (ASC-2010) · BVICAM, New Delhi · September 25, 2010</div>
+        <div class="pub-meta">
+          <a href="files/4. Publication/6. presentation/1/certi.jpeg" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2020">
+      <div class="pub-num">02</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Deep Learning based Surveillance System using Gait Signatures</div>
+          <span class="pub-year-badge">2020</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">1st Online International Conference on Advances in Computing, Communication and Control (ICA3C-2020) · IIMT University, Meerut · June 16–17, 2020</div>
+        <div class="pub-meta">
+          <a href="files/4. Publication/6. presentation/2/certi.pdf" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card" data-year="2021">
+      <div class="pub-num">03</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Early Detection of Rheumatoid Arthritis in Knee using Deep Learning</div>
+          <span class="pub-year-badge">2021</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">International Conference on Data Science, Machine Learning and Artificial Intelligence (DSMLAI) · Namibia University of Science and Technology (NUST), Windhoek, Namibia · August 9–12, 2021</div>
+        <div class="pub-meta">
+          <a href="files/4. Publication/6. presentation/3/certi.jpg" target="_blank" class="pub-doi"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ POSTERS ════════════════════ -->
+<section class="pub-section" id="tab-posters">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Research Posters</span>
+      <h2 class="section-title">Posters</h2>
+      <div class="section-title-bar"></div>
+    </div>
+    <div class="pub-tools">
+      <div class="pub-search-wrap">
+        <i class="fa fa-search"></i>
+        <input type="text" class="pub-search" placeholder="Search posters…">
+      </div>
+    </div>
+    <p class="pub-no-results" style="display:none;"><i class="fa fa-search"></i>No matching posters found.</p>
+
+    <div class="pub-card" data-year="2020">
+      <div class="pub-num">01</div>
+      <div class="pub-body">
+        <div class="pub-header">
+          <div class="pub-title">Gait Biometrics – Deep Learning Based Surveillance System using Gait Signatures</div>
+          <span class="pub-year-badge">2020</span>
+        </div>
+        <div class="pub-authors"><strong>Anubha Parashar</strong></div>
+        <div class="pub-venue">Research Poster · 1st Online International Conference on Advances in Computing, Communication and Control (ICA3C-2020) · IIMT University, Meerut</div>
+        <div class="pub-meta">
+          <a href="files/4. Publication/7. poster/Anubha_Poster_Gait_Biometrics.pdf" target="_blank" class="pub-doi"><i class="fa fa-file-pdf-o"></i> View Poster PDF</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ FEATURED SPOTLIGHTS ════════════════════ -->
+<section class="featured-section">
+  <div class="container">
+    <div class="text-center">
+      <p class="section-label" style="color:rgba(255,255,255,.45);">Selected Highlights</p>
+      <h2 class="featured-heading">Research Spotlights</h2>
+      <p class="featured-sub">Highest-impact work, latest research, and award-winning contributions</p>
+    </div>
+    <div class="featured-grid">
+
+      <div class="featured-card">
+        <span class="ft-badge impact">Highest Impact Factor</span>
+        <div class="ft-if">9.6</div>
+        <div class="ft-if-label">Impact Factor · SCI Q1</div>
+        <div class="ft-title">Deep Learning Pipelines for Recognition of Gait Biometrics with Covariates – A Comprehensive Review</div>
+        <div class="ft-journal">Artificial Intelligence Review, Springer, 2022</div>
+        <a href="https://doi.org/10.1007/s10462-022-10365-4" target="_blank" class="ft-doi">
+          <i class="fa fa-external-link"></i> View Paper
+        </a>
+      </div>
+
+      <div class="featured-card">
+        <span class="ft-badge latest">Latest Research · 2026</span>
+        <div class="ft-if">4.5</div>
+        <div class="ft-if-label">Impact Factor · SCI Q1</div>
+        <div class="ft-title">Vehicle-Scale LLMs: Integrating Low-Rank Residuals and 4-bit Quantization for In-Vehicle AI</div>
+        <div class="ft-journal">Array, Elsevier, Volume 29, 2026</div>
+        <a href="https://doi.org/10.1016/j.array.2026.100709" target="_blank" class="ft-doi">
+          <i class="fa fa-external-link"></i> View Paper
+        </a>
+      </div>
+
+      <div class="featured-card">
+        <span class="ft-badge award">Best Paper Award</span>
+        <div class="ft-if" style="color:#c084fc;">2018</div>
+        <div class="ft-if-label">InTech Conference · Zagreb, Croatia</div>
+        <div class="ft-title">Tracing Gesture and Extracting Gait Features to Recognize Parkinson's Disease Using Multi-layered Back Propagation Algorithm</div>
+        <div class="ft-journal">International Conference on Innovative Technologies (InTech 2018)</div>
+        <a href="http://in-tech.info/download/%20IN_TECH_2018_Proceedings" target="_blank" class="ft-doi">
+          <i class="fa fa-external-link"></i> View Proceedings
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+
+<div id="site-footer"></div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/site-components.js"></script>
+<script>
+(function () {
+
+  /* ── Tab switching ── */
+  function switchTab(id, btn) {
+    document.querySelectorAll('.pub-section').forEach(function (s) { s.classList.remove('active'); });
+    document.querySelectorAll('.pub-tab-btn').forEach(function (b) { b.classList.remove('active'); });
+    var section = document.getElementById('tab-' + id);
+    section.classList.add('active');
+    btn.classList.add('active');
+    /* Re-trigger card entrance animations */
+    section.querySelectorAll('.pub-card').forEach(function (card, i) {
+      card.style.animation = 'none';
+      void card.offsetWidth;
+      card.style.animation = '';
+      card.style.animationDelay = (i * 0.045) + 's';
+    });
+    /* Reset search + year filter */
+    var searchEl = section.querySelector('.pub-search');
+    if (searchEl) { searchEl.value = ''; }
+    section.querySelectorAll('.year-chip').forEach(function (c) { c.classList.remove('active'); });
+    var allChip = section.querySelector('.year-chip[data-year="all"]');
+    if (allChip) allChip.classList.add('active');
+    filterSection(section, '', 'all');
+    history.replaceState(null, '', '#' + id);
+  }
+  window.switchTab = switchTab;
+
+  // Restore active tab from URL hash on load/refresh
+  (function() {
+    var valid = ['patents','journals','conferences','bookchapters','articles','presentations','posters'];
+    var hash = (location.hash || '').slice(1);
+    if (valid.indexOf(hash) !== -1) {
+      var btn = Array.from(document.querySelectorAll('.pub-tab-btn')).find(function(b) {
+        return b.getAttribute('onclick').indexOf("'" + hash + "'") !== -1;
+      });
+      if (btn) switchTab(hash, btn);
+    }
+  })();
+
+  /* ── Year range matching ── */
+  function inRange(year, range) {
+    var y = parseInt(year);
+    if (!y) return range === 'all';
+    if (range === 'all') return true;
+    if (range === 'recent') return y >= 2024;
+    if (range === '2022-2023') return y >= 2022 && y <= 2023;
+    if (range === '2020-2021') return y >= 2020 && y <= 2021;
+    if (range === '2018-2019') return y >= 2018 && y <= 2019;
+    if (range === 'pre2018') return y < 2018;
+    return true;
+  }
+
+  /* ── Filter cards in a section ── */
+  function filterSection(section, query, yearRange) {
+    var cards = section.querySelectorAll('.pub-card');
+    var visible = 0;
+    cards.forEach(function (card) {
+      var textMatch = !query || card.textContent.toLowerCase().includes(query);
+      var yearMatch = inRange(card.getAttribute('data-year') || '', yearRange || 'all');
+      var show = textMatch && yearMatch;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    var noResults = section.querySelector('.pub-no-results');
+    if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  /* ── Counter animation ── */
+  function animateCounter(el) {
+    var text = el.textContent.trim();
+    var suffix = el.getAttribute('data-suffix') || (text.indexOf('+') !== -1 ? '+' : '');
+    var target = parseInt(text);
+    if (isNaN(target)) return;
+    var duration = 1400;
+    var startTime = null;
+    function step(ts) {
+      if (!startTime) startTime = ts;
+      var p = Math.min((ts - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(eased * target) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = target + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ── Init ── */
+  document.addEventListener('DOMContentLoaded', function () {
+
+    /* Animated counters */
+    setTimeout(function () {
+      document.querySelectorAll('.pub-stat-num').forEach(animateCounter);
+    }, 500);
+
+    /* Stagger initial card animations */
+    var activeSection = document.querySelector('.pub-section.active');
+    if (activeSection) {
+      activeSection.querySelectorAll('.pub-card').forEach(function (card, i) {
+        card.style.animationDelay = (i * 0.05) + 's';
+      });
+    }
+
+    /* Wire up search inputs */
+    document.querySelectorAll('.pub-section').forEach(function (section) {
+      var searchEl = section.querySelector('.pub-search');
+      if (searchEl) {
+        searchEl.addEventListener('input', function () {
+          var activeChip = section.querySelector('.year-chip.active');
+          var yr = activeChip ? activeChip.getAttribute('data-year') : 'all';
+          filterSection(section, this.value.toLowerCase().trim(), yr);
+        });
+      }
+
+      /* Wire up year chips */
+      section.querySelectorAll('.year-chip').forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          section.querySelectorAll('.year-chip').forEach(function (c) { c.classList.remove('active'); });
+          this.classList.add('active');
+          var searchEl = section.querySelector('.pub-search');
+          var q = searchEl ? searchEl.value.toLowerCase().trim() : '';
+          filterSection(section, q, this.getAttribute('data-year'));
+        });
+      });
+    });
+
+  });
+
+})();
+</script>
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>

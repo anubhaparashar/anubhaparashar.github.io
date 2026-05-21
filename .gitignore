@@ -1,0 +1,24 @@
+﻿*.zip
+*.rar
+*.7z
+*.CR2
+*.MPG
+*.mpg
+*.pdf filter=lfs diff=lfs merge=lfs -text
+
+# Large local files ignored from Git
+assets/vendor/bootstrap/css/bootstrap.css.map
+assets/vendor/bootstrap/css/bootstrap.min.css.map
+assets/vendor/bootstrap/css/bootstrap.rtl.css.map
+assets/vendor/bootstrap/css/bootstrap.rtl.min.css.map
+assets/vendor/bootstrap/js/bootstrap.bundle.js.map
+assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map
+assets/vendor/bootstrap/js/bootstrap.esm.js.map
+assets/vendor/bootstrap/js/bootstrap.js.map
+assets/vendor/boxicons/fonts/boxicons.eot
+assets/vendor/boxicons/fonts/boxicons.svg
+assets/vendor/boxicons/fonts/boxicons.ttf
+assets/vendor/boxicons/fonts/boxicons.woff
+assets/vendor/swiper/swiper-bundle.min.js.map
+fonts/fontawesome-webfont.svg
+vendors/jquery-ui/jquery-ui.js

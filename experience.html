@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Experience – Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+    /* ── HERO ── */
+    .exp-hero {
+      background: linear-gradient(135deg, #15171b 0%, #27313f 50%, #3d536b 100%);
+      padding: 130px 0 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .exp-hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background-image: linear-gradient(rgba(185,197,214,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(185,197,214,.055) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .exp-hero-inner { position: relative; z-index: 2; }
+    .exp-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .exp-particles span {
+      position: absolute; display: block; border-radius: 50%;
+      background: rgba(207,181,128,.22); animation: expFloat linear infinite; bottom: -20px;
+    }
+    @keyframes expFloat {
+      0% { transform: translateY(0); opacity: 0; }
+      10% { opacity: 1; }
+      85% { opacity: .3; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
+    .exp-particles span:nth-child(1)  { left: 7%;  width:5px;  height:5px;  animation-duration:11s; animation-delay:0s; }
+    .exp-particles span:nth-child(2)  { left: 15%; width:3px;  height:3px;  animation-duration:9s;  animation-delay:1.4s; }
+    .exp-particles span:nth-child(3)  { left: 24%; width:6px;  height:6px;  animation-duration:13s; animation-delay:0.8s; }
+    .exp-particles span:nth-child(4)  { left: 33%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:2.2s; }
+    .exp-particles span:nth-child(5)  { left: 42%; width:3px;  height:3px;  animation-duration:10s; animation-delay:0.3s; }
+    .exp-particles span:nth-child(6)  { left: 51%; width:7px;  height:7px;  animation-duration:14s; animation-delay:1.8s; }
+    .exp-particles span:nth-child(7)  { left: 60%; width:4px;  height:4px;  animation-duration:9s;  animation-delay:0.6s; }
+    .exp-particles span:nth-child(8)  { left: 68%; width:3px;  height:3px;  animation-duration:12s; animation-delay:3.1s; }
+    .exp-particles span:nth-child(9)  { left: 76%; width:5px;  height:5px;  animation-duration:10s; animation-delay:1.2s; }
+    .exp-particles span:nth-child(10) { left: 84%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:0.5s; }
+    .exp-particles span:nth-child(11) { left: 91%; width:3px;  height:3px;  animation-duration:11s; animation-delay:2.5s; }
+    .exp-particles span:nth-child(12) { left: 20%; width:8px;  height:8px;  animation-duration:15s; animation-delay:1.9s; }
+    .exp-particles span:nth-child(13) { left: 55%; width:3px;  height:3px;  animation-duration:7s;  animation-delay:4.0s; }
+    .exp-particles span:nth-child(14) { left: 73%; width:6px;  height:6px;  animation-duration:12s; animation-delay:2.8s; }
+    .exp-particles span:nth-child(15) { left: 39%; width:4px;  height:4px;  animation-duration:9s;  animation-delay:0.9s; }
+    .exp-hero h1 {
+      font-size: 2.9rem !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .exp-hero .hero-role {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.75) !important;
+      margin-bottom: 6px;
+    }
+    .exp-hero .hero-tags {
+      font-size: .75rem;
+      color: rgba(255,255,255,.45) !important;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+    }
+    .exp-eyebrow {
+      font-size: .68rem; letter-spacing: 4px; text-transform: uppercase;
+      color: #d3b979; font-weight: 700; margin-bottom: 14px;
+    }
+    .exp-stats {
+      display: flex;
+      justify-content: center;
+      gap: 44px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .exp-stat-num {
+      display: block;
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: #f0d99a !important;
+      line-height: 1;
+    }
+    .exp-stat-lbl {
+      display: block;
+      font-size: .63rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,.45) !important;
+      margin-top: 5px;
+    }
+    .hero-cta-row-exp { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .hero-cta-exp {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18);
+      border-radius: 24px; padding: 8px 18px; font-size: .77rem; font-weight: 600;
+      color: rgba(255,255,255,.85) !important; text-decoration: none !important; transition: all .22s;
+    }
+    .hero-cta-exp:hover { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.38); color: #fff !important; }
+    .hero-cta-exp i { font-size: .85rem; }
+    .hero-cta-exp img { width: 15px; height: 15px; object-fit: contain; filter: brightness(0) invert(1); }
+
+    /* ── TIMELINE SECTION ── */
+    .timeline-section {
+      padding: 70px 0 80px;
+      background: #f5f6ff;
+    }
+    .tl-heading {
+      text-align: center;
+      font-size: 1.9rem !important;
+      font-weight: 800 !important;
+      color: #1a1a2e !important;
+      margin-bottom: 60px;
+    }
+    .tl-heading::after {
+      content: '';
+      display: block;
+      width: 56px;
+      height: 4px;
+      background: linear-gradient(90deg, #e94560, #6c63ff);
+      border-radius: 2px;
+      margin: 10px auto 0;
+    }
+
+    /* ── Spine ── */
+    .timeline {
+      position: relative;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, #1e4d7b 0%, #3d5a7a 35%, #2d6b5e 65%, #4a5568 100%);
+      transform: translateX(-50%);
+    }
+
+    /* ── Row ── */
+    .tl-row {
+      display: flex;
+      margin-bottom: 50px;
+      position: relative;
+      align-items: flex-start;
+    }
+    .tl-dot {
+      position: absolute;
+      left: 50%;
+      top: 28px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #fff;
+      border: 3px solid #6c63ff;
+      transform: translateX(-50%);
+      z-index: 2;
+      transition: transform .3s;
+    }
+    .tl-row:hover .tl-dot { transform: translateX(-50%) scale(1.35); }
+
+    .tl-left  { width: 50%; padding-right: 32px; display: flex; justify-content: flex-end; }
+    .tl-right { width: 50%; padding-left: 32px; }
+    .tl-spacer { width: 50%; }
+
+    /* ── Card ── */
+    .tl-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 26px 28px 22px;
+      box-shadow: 0 6px 28px rgba(26,26,46,.08);
+      width: 100%;
+      max-width: 560px;
+      border-top: 4px solid #6c63ff;
+      position: relative;
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .55s ease, transform .55s ease, box-shadow .25s;
+    }
+    .tl-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .tl-card:hover {
+      transform: translateY(-5px) !important;
+      box-shadow: 0 18px 44px rgba(26,26,46,.14);
+    }
+    /* arrow */
+    .tl-left .tl-card::after {
+      content: '';
+      position: absolute;
+      top: 28px; right: -9px;
+      border: 9px solid transparent;
+      border-left-color: #fff;
+    }
+    .tl-right .tl-card::after {
+      content: '';
+      position: absolute;
+      top: 28px; left: -9px;
+      border: 9px solid transparent;
+      border-right-color: #fff;
+    }
+
+    .badge-current {
+      display: inline-block;
+      background: linear-gradient(90deg, #1e4d7b, #3d5a7a);
+      color: #fff !important;
+      font-size: .62rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+      box-shadow: 0 3px 10px rgba(30,77,123,.3);
+    }
+    .card-period {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      margin-bottom: 5px;
+    }
+    .tl-card h3 {
+      font-size: 1.05rem !important;
+      font-weight: 800 !important;
+      color: #1a1a2e !important;
+      margin: 0 0 4px;
+      line-height: 1.35;
+    }
+    .card-company {
+      font-size: .88rem;
+      color: #444 !important;
+      margin-bottom: 3px;
+    }
+    .card-company i { margin-right: 5px; }
+    .card-location {
+      font-size: .75rem;
+      color: #888 !important;
+      margin-bottom: 14px;
+    }
+    .card-location i { margin-right: 4px; }
+    .card-bullets {
+      list-style: none;
+      padding: 0; margin: 0 0 14px;
+      font-size: .84rem;
+      color: #444 !important;
+      line-height: 1.65;
+    }
+    .card-bullets li {
+      padding-left: 15px;
+      position: relative;
+      margin-bottom: 7px;
+    }
+    .card-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0; top: 3px;
+      font-size: .68rem;
+    }
+    .card-bullets li strong { color: #1a1a2e !important; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .skill-tag {
+      border-radius: 20px;
+      padding: 3px 11px;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .4px;
+    }
+    .card-footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid #f0f0f8;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .gh-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .75rem;
+      font-weight: 700;
+      color: #1a1a2e !important;
+      background: #f5f5fa;
+      border: 1px solid #e0e0f0;
+      border-radius: 20px;
+      padding: 5px 13px;
+      text-decoration: none !important;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+    .gh-link:hover {
+      background: #1a1a2e;
+      color: #fff !important;
+      border-color: #1a1a2e;
+      transform: translateY(-1px);
+    }
+    .gh-link i { font-size: .85rem; }
+
+    /* ── CERTIFICATE BUTTON ── */
+    .cert-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .75rem;
+      font-weight: 700;
+      color: #6c63ff !important;
+      background: #f0eeff;
+      border: 1px solid #d4d0ff;
+      border-radius: 20px;
+      padding: 5px 13px;
+      cursor: pointer;
+      text-decoration: none !important;
+      transition: background .2s, border-color .2s, color .2s, transform .2s;
+      user-select: none;
+    }
+    .cert-btn:hover {
+      background: #6c63ff;
+      color: #fff !important;
+      border-color: #6c63ff;
+      transform: translateY(-1px);
+    }
+    .cert-btn.cert-loaded {
+      background: #6c63ff;
+      color: #fff !important;
+      border-color: #6c63ff;
+    }
+    .cert-btn i { font-size: .85rem; }
+
+    /* ── STORY SECTION ── */
+    .exp-story {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      padding: 80px 0 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .exp-story::before {
+      content: '\201C';
+      position: absolute;
+      top: -30px; left: 50%;
+      transform: translateX(-50%);
+      font-size: 16rem;
+      color: rgba(255,255,255,.04);
+      font-family: Georgia, serif;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .story-quote {
+      font-size: 1.45rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.75;
+      max-width: 720px;
+      margin: 0 auto 18px;
+      color: #fff !important;
+      opacity: .92;
+    }
+    .story-quote em {
+      font-style: normal;
+      color: #7eb8e0 !important;
+      font-weight: 600;
+    }
+    .story-attr {
+      font-size: .75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff !important;
+      opacity: .4;
+      margin-bottom: 44px;
+    }
+    .story-divider {
+      width: 50px; height: 2px;
+      background: linear-gradient(90deg, #e94560, #6c63ff);
+      border-radius: 2px;
+      margin: 0 auto 36px;
+    }
+    .story-bio {
+      max-width: 680px;
+      margin: 0 auto 50px;
+      font-size: .95rem;
+      line-height: 1.9;
+      color: #fff !important;
+      opacity: .68;
+    }
+    .story-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 44px;
+    }
+    .story-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.14);
+      color: #fff !important;
+      border-radius: 30px;
+      padding: 9px 18px;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .3px;
+      text-decoration: none !important;
+      transition: background .22s, border-color .22s, transform .2s;
+    }
+    .story-link:hover {
+      background: rgba(233,69,96,.28);
+      border-color: #e94560;
+      transform: translateY(-2px);
+      color: #fff !important;
+      text-decoration: none !important;
+    }
+    .story-cta {
+      display: inline-block;
+      background: linear-gradient(90deg, #e94560, #6c63ff);
+      color: #fff !important;
+      border-radius: 30px;
+      padding: 14px 38px;
+      font-size: .88rem;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-decoration: none !important;
+      box-shadow: 0 8px 24px rgba(233,69,96,.35);
+      transition: opacity .22s, transform .2s;
+    }
+    .story-cta:hover {
+      opacity: .88;
+      transform: translateY(-2px);
+      color: #fff !important;
+      text-decoration: none !important;
+    }
+
+    /* ── COMPANY LOGO ── */
+    .card-logo {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid #e8e8f0;
+      padding: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+    }
+    .card-logo-lg {
+      width: 72px;
+      height: 72px;
+      padding: 6px;
+    }
+
+    /* ── PEARCE PROJECTS TOGGLE ── */
+    .pearce-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #edf2f8;
+      border: 1px solid #c8d8ec;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: .75rem;
+      font-weight: 700;
+      color: #1e4d7b;
+      cursor: pointer;
+      margin-bottom: 12px;
+      transition: background .2s, border-color .2s;
+    }
+    .pearce-toggle:hover { background: #d8e8f5; border-color: #1e4d7b; }
+    .pearce-toggle[aria-expanded="true"] { background: #1e4d7b; color: #fff; border-color: #1e4d7b; }
+    .pearce-toggle[aria-expanded="true"] .pearce-chevron { transform: rotate(180deg); }
+    .pearce-chevron { transition: transform .25s; }
+    .pearce-projects {
+      background: #f7fafd;
+      border: 1px solid #dde8f2;
+      border-radius: 10px;
+      padding: 4px 0;
+      margin-bottom: 14px;
+    }
+    .pearce-proj-item {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e8eef5;
+    }
+    .pearce-proj-item strong {
+      display: block;
+      font-size: .84rem;
+      color: #1a1a2e;
+      margin-bottom: 3px;
+    }
+    .pearce-proj-item p {
+      font-size: .78rem;
+      color: #555;
+      margin: 0;
+      line-height: 1.55;
+    }
+    .pearce-proj-period {
+      display: inline-block;
+      font-size: .63rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1e4d7b;
+      background: #edf2f8;
+      border-radius: 10px;
+      padding: 2px 8px;
+      margin-bottom: 4px;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 767px) {
+      .timeline::before { left: 16px; }
+      .tl-row { flex-direction: column; padding-left: 42px; }
+      .tl-dot { left: 16px; top: 22px; }
+      .tl-left, .tl-right { width: 100%; padding: 0; justify-content: flex-start; }
+      .tl-spacer { display: none; }
+      .tl-card { max-width: 100%; }
+      .tl-left .tl-card::after,
+      .tl-right .tl-card::after { display: none; }
+      .exp-hero h1 { font-size: 1.9rem !important; }
+      .exp-stats { gap: 24px; }
+      .story-quote { font-size: 1.15rem; }
+    }
+  </style>
+</head>
+
+<body class="blog_version">
+
+<!--================ Header (injected by site-components.js) =================-->
+<div id="site-header"></div>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="exp-hero">
+  <div class="exp-particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="exp-hero-inner">
+    <div class="container">
+      <p class="exp-eyebrow">Career &amp; Work</p>
+      <h1>Anubha Parashar</h1>
+      <p class="hero-role">Analytics &amp; AI Engineer</p>
+      <p class="hero-tags">GenAI &nbsp;·&nbsp; LLM &nbsp;·&nbsp; NLP &nbsp;·&nbsp; Computer Vision &nbsp;·&nbsp; Deep Learning &nbsp;·&nbsp; ML &nbsp;·&nbsp; IoT</p>
+      <div class="exp-stats">
+        <div class="exp-stat">
+          <span class="exp-stat-num" data-target="12" data-suffix="+">0</span>
+          <span class="exp-stat-lbl">Years Experience</span>
+        </div>
+        <div class="exp-stat">
+          <span class="exp-stat-num" data-target="7">0</span>
+          <span class="exp-stat-lbl">Positions Held</span>
+        </div>
+        <div class="exp-stat">
+          <span class="exp-stat-num" data-target="42" data-suffix="+">0</span>
+          <span class="exp-stat-lbl">Journal Papers</span>
+        </div>
+        <div class="exp-stat">
+          <span class="exp-stat-num" data-target="6">0</span>
+          <span class="exp-stat-lbl">Patents</span>
+        </div>
+      </div>
+      <div class="hero-cta-row-exp">
+        <a href="https://www.linkedin.com/in/anubhaparashar/" target="_blank" class="hero-cta-exp">
+          <i class="fa fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/anubhaparashar" target="_blank" class="hero-cta-exp">
+          <i class="fa fa-github"></i> GitHub
+        </a>
+        <a href="https://pearce-services.com/" target="_blank" class="hero-cta-exp">
+          <i class="fa fa-building-o"></i> Pearce Services
+        </a>
+        <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="hero-cta-exp">
+          <img src="img/icons/10.png" alt="HF"> HuggingFace
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ TIMELINE ══════════════════ -->
+<section class="timeline-section">
+  <div class="container">
+    <h2 class="tl-heading">Work Experience</h2>
+    <div class="timeline">
+
+      <!-- 1 · Pearce Services (left) · deep navy #1e4d7b -->
+      <div class="tl-row">
+        <div class="tl-left">
+          <div class="tl-card" style="border-top-color:#1e4d7b;">
+            <img src="files/3. Experience/logo/pearce.png" class="card-logo card-logo-lg" alt="Pearce Services">
+            <span class="badge-current">&#9679; Current</span>
+            <div class="card-period" style="color:#1e4d7b;">Jan 2025 – Present</div>
+            <h3>Analytical &amp; AI Engineer</h3>
+            <p class="card-company"><i class="fa fa-cogs" style="color:#1e4d7b;"></i> Pearce Services</p>
+            <p class="card-location"><i class="fa fa-map-marker"></i> Gurugram, India</p>
+            <ul class="card-bullets">
+              <li><strong>Drone-Based Solar Panel Defect Detection:</strong> Designed and trained YOLO-based models on 10,000+ RGB + thermal images — 0.92 mAP, 0.88 recall for cracks, diode failures &amp; hotspots. Optimised for NVIDIA Jetson edge deployment, reducing manual survey time by 70%.</li>
+              <li><strong>Hybrid ACO Scheduling Algorithm:</strong> Built Ant Colony Optimisation with heuristic cost functions for wind technician scheduling — 25% reduction in travel distance, 30% boost in schedule feasibility, projecting $200K annual savings.</li>
+              <li><strong>Wind Speed Forecasting POC:</strong> Compared Linear Regression, LSTM &amp; GRU on 50,000+ turbine records; achieved 0.4 m/s MAE; identified 8-hour maintenance windows based on wind threshold — enabling proactive scheduling and reducing reactive downtime.</li>
+            </ul>
+
+            <!-- Projects toggle -->
+            <button class="pearce-toggle" onclick="togglePearceProjects(this)" aria-expanded="false">
+              <i class="fa fa-briefcase"></i> 12 Projects at Pearce <i class="fa fa-chevron-down pearce-chevron"></i>
+            </button>
+            <div class="pearce-projects" id="pearceProjectsList" style="display:none;">
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Jan – Jul 2025</span>
+                <strong>Brute Force Wind Technician Scheduling Optimization</strong>
+                <p>Evaluated and benchmarked an existing brute-force scheduling engine; conducted performance comparison with Ant Colony Optimization (ACO); modeled operational constraints including availability windows, job duration, and skill mapping.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Feb 2025 – Present</span>
+                <strong>Drone-Based Inspection for Solar Panel Defects</strong>
+                <p>Designed and trained object detection models for aerial inspection; optimized for edge deployment on Jetson/mobile; reduced manual inspection time significantly with automated detection pipelines.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Mar 2025 – Present</span>
+                <strong>Offline Chatbot Prototype (Mobile Edge AI Initiative)</strong>
+                <p>Designed an offline semantic retrieval assistant for field technicians using embedding + vector search architecture; conducted DeepSeek on-device inference experiments; integrated into React Native mobile app.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Apr – Jul 2025</span>
+                <strong>Technician Backfill Lifecycle Automation &amp; Cross-Week Schedule Validation</strong>
+                <p>Implemented state-aware backfill lifecycle logic across Week 1–3 scheduling cycles; automated reassignment for technicians returning from PTO; built cross-file consistency validation across CSV and Excel artifacts.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Apr – Jul 2025</span>
+                <strong>Hybrid Scheduling Algorithm with ACO (Cost Optimization Initiative)</strong>
+                <p>Built ACO-based optimization logic for technician scheduling; integrated heuristic cost functions aligned with real operational constraints; achieved significant reduction in travel cost and improved schedule feasibility.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">May 2025</span>
+                <strong>Wind Speed Forecasting POC – Time Series Intelligence</strong>
+                <p>Analyzed 1-year wind turbine dataset (50,000+ records); implemented and compared Linear Regression, LSTM, and GRU models; identified 8-hour maintenance windows based on wind threshold (&lt; 20.02 m/s).</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Jun 2025</span>
+                <strong>Azure Cloud Adaptation for Wind Scheduling Data Processing</strong>
+                <p>Refactored offline scheduling preprocessing into Azure Blob storage–compatible pipeline; developed the generate_svc_model_input_technician_func module; conducted deployment validation and integration testing in Azure.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Jul 2025 – Present</span>
+                <strong>Inventory Data Cleaning &amp; Duplicate Merging (Fuzzy Logic Automation)</strong>
+                <p>Applied fuzzy matching to detect duplicate accounts across Salesforce and Netsuite; standardized naming inconsistencies; automated Excel-based preprocessing pipelines; improved data integrity across enterprise systems.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Feb 2026</span>
+                <strong>Offline Key Detection – Mobile Edge AI Deployment</strong>
+                <p>Trained a custom YOLO model for offline key detection; optimized via quantization for TensorFlow Lite / ONNX mobile deployment; implemented real-time inference pipeline within a mobile application.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Feb 2026</span>
+                <strong>AI-Integrated Survey123 Model Deployment on ArcGIS Pro</strong>
+                <p>Developed model integration pipeline for Survey123 data in ArcGIS Pro; processed structured field input into GIS-compatible formats; automated shapefile/feature class generation with CRS alignment.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Feb 2026 – Ongoing</span>
+                <strong>Geospatial Design &amp; GIS-Based Operational Visualization</strong>
+                <p>Building a next-generation GIS-driven visualization platform integrating AI outputs (object detection, anomaly detection) directly into ArcGIS layers; enabling real-time spatial analytics for field operations.</p>
+              </div>
+              <div class="pearce-proj-item" style="border-bottom:none;">
+                <span class="pearce-proj-period">Feb 2026 – Upcoming</span>
+                <strong>AI-Assisted Pole Design Validation &amp; Multi-Source Data Reconciliation</strong>
+                <p>Designing a confidence-based AI validation framework automating 13 manual checks for pole ownership verification; reconciling multi-source GIS databases (Portal, OnPath, AEP, Frontier DB) with human-in-the-loop control.</p>
+              </div>
+            </div>
+
+            <div class="skill-tags">
+              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">GenAI</span>
+              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">LLM</span>
+              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">YOLOv11</span>
+              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">GRU-LSTM</span>
+              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">FAISS</span>
+              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Edge AI</span>
+              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">ArcGIS</span>
+              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Azure</span>
+              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">ACO</span>
+            </div>
+            <div class="card-footer-row">
+              <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
+              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
+              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
+              <a href="files/3.%20Experience/1.%20Certificate/Anubha%20Parashar-pearce.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
+            </div>
+          </div>
+        </div>
+        <div class="tl-dot" style="border-color:#1e4d7b; box-shadow:0 0 0 5px rgba(30,77,123,.12);"></div>
+        <div class="tl-spacer"></div>
+      </div>
+
+      <!-- 2 · Invincible Ocean (right) · steel slate #3d5a7a -->
+      <div class="tl-row">
+        <div class="tl-spacer"></div>
+        <div class="tl-dot" style="border-color:#3d5a7a; box-shadow:0 0 0 5px rgba(61,90,122,.12);"></div>
+        <div class="tl-right">
+          <div class="tl-card" style="border-top-color:#3d5a7a;">
+            <img src="files/3. Experience/logo/invincible_ocean_logo.jpg" class="card-logo" alt="Invincible Ocean">
+            <div class="card-period" style="color:#3d5a7a;">Apr 2024 – Dec 2024</div>
+            <h3>Research Scientist – AI &amp; Metaverse</h3>
+            <p class="card-company"><i class="fa fa-flask" style="color:#3d5a7a;"></i> Invincible Ocean</p>
+            <p class="card-location"><i class="fa fa-map-marker"></i> Gurugram, India</p>
+            <ul class="card-bullets">
+              <li><strong>Vehicle RC Data Chatbot:</strong> Fine-tuned an LLM on vehicle RC data — reduced manual search time by 70%, instant access to vehicle information.</li>
+              <li><strong>Virtual Try-On (VITON) System:</strong> Deep learning platform overlaying clothing on user photos — 95% user satisfaction rate.</li>
+              <li><strong>Text Recognition &amp; OCR System:</strong> Tesseract, PaddleOCR, and Paddle NLP at 98% accuracy. Label Studio backend, Dockerized APIs, Gemini assistant for extraction.</li>
+            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">LLM Fine-tuning</span>
+              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Computer Vision</span>
+              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">OCR</span>
+              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Docker</span>
+              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Gemini API</span>
+            </div>
+            <div class="card-footer-row">
+              <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
+              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
+              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
+              <a href="files/3.%20Experience/1.%20Certificate/2.%20IO%20Experience%20Letter.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 · Doctoral Research (left) · forest teal #2d6b5e -->
+      <div class="tl-row">
+        <div class="tl-left">
+          <div class="tl-card" style="border-top-color:#2d6b5e;">
+            <img src="files/3. Experience/logo/muj.png" class="card-logo card-logo-lg" alt="Manipal University Jaipur">
+            <div class="card-period" style="color:#2d6b5e;">Jan 2018 – Apr 2023</div>
+            <h3>Doctoral Research</h3>
+            <p class="card-company"><i class="fa fa-graduation-cap" style="color:#2d6b5e;"></i> Manipal University Jaipur</p>
+            <p class="card-location"><i class="fa fa-map-marker"></i> Jaipur, India &nbsp;·&nbsp; FER Zagreb, Croatia (Sep 2018 – Dec 2019)</p>
+            <ul class="card-bullets">
+              <li><strong>Robust Gait Recognition Using Deep Learning:</strong> Automated identification of individuals based on body shape and walking style.</li>
+              <li><strong>De-Identification Using Deep Learning:</strong> Modified geometry &amp; texture of gait datasets to preserve privacy without compromising naturalness — at FER, University of Zagreb.</li>
+            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Deep Learning</span>
+              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Gait Biometrics</span>
+              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Computer Vision</span>
+              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Privacy AI</span>
+              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">PyTorch</span>
+            </div>
+            <div class="card-footer-row">
+              <a href="https://github.com/dranubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
+              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
+              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
+              <a href="files/3.%20Experience/1.%20Certificate/34%20Anubha%20Parashar%20doctoral%20experience.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
+            </div>
+          </div>
+        </div>
+        <div class="tl-dot" style="border-color:#2d6b5e; box-shadow:0 0 0 5px rgba(45,107,94,.12);"></div>
+        <div class="tl-spacer"></div>
+      </div>
+
+      <!-- 4 · MUJ combined (right) · warm brown #7a5c3e -->
+      <div class="tl-row">
+        <div class="tl-spacer"></div>
+        <div class="tl-dot" style="border-color:#7a5c3e; box-shadow:0 0 0 5px rgba(122,92,62,.12);"></div>
+        <div class="tl-right">
+          <div class="tl-card" style="border-top-color:#7a5c3e;">
+            <img src="files/3. Experience/logo/muj.png" class="card-logo card-logo-lg" alt="Manipal University Jaipur">
+            <div class="card-period" style="color:#7a5c3e;">Jul 2016 – Apr 2024</div>
+            <p class="card-company" style="margin-bottom:3px;"><i class="fa fa-university" style="color:#7a5c3e;"></i> <strong>Manipal University Jaipur</strong></p>
+            <p class="card-location"><i class="fa fa-map-marker"></i> Jaipur, India</p>
+
+            <!-- Role 1 -->
+            <div style="border-left:3px solid #7a5c3e; padding-left:12px; margin-bottom:14px;">
+              <div style="font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#7a5c3e; margin-bottom:2px;">2022 – Apr 2024</div>
+              <h3 style="margin-bottom:6px;">Sr. Assistant Professor, CSE</h3>
+              <ul class="card-bullets" style="margin-bottom:0;">
+                <li><strong>Teaching &amp; Research:</strong> Deep Learning, ML, Bipedal Locomotion, Humanoid Robotics, Biometrics Gait, Neural Networks, IoT, AI, Image Processing, Computer Vision, NLP.</li>
+                <li><strong>Roles:</strong> Warden, Alumni Coordinator, IoT Lab Coordinator, Placement Co-coordinator, Library Coordinator.</li>
+              </ul>
+            </div>
+
+            <!-- Role 2 -->
+            <div style="border-left:3px solid #c4a882; padding-left:12px; margin-bottom:14px;">
+              <div style="font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#a07850; margin-bottom:2px;">Jul 2016 – 2022</div>
+              <h3 style="margin-bottom:6px;">Assistant Professor, CSE</h3>
+              <ul class="card-bullets" style="margin-bottom:0;">
+                <li><strong>Teaching &amp; Research:</strong> Deep Learning, ML, Bipedal Locomotion, Humanoid Robotics, Biometrics Gait, Neural Networks, IoT, AI, Image Processing, Computer Vision, NLP.</li>
+                <li><strong>Roles:</strong> Warden, Alumni Coordinator, IoT Lab Coordinator, Placement Co-coordinator, Library Coordinator.</li>
+              </ul>
+            </div>
+
+            <div class="skill-tags">
+              <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Teaching</span>
+              <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Research</span>
+              <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">IoT</span>
+              <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Robotics</span>
+              <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">ML</span>
+            </div>
+            <div class="card-footer-row">
+              <a href="https://github.com/dranubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
+              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
+              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
+              <a href="files/3.%20Experience/1.%20Certificate/muj_experience.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 · Sconad (left) · slate #4a5568 -->
+      <div class="tl-row">
+        <div class="tl-left">
+          <div class="tl-card" style="border-top-color:#4a5568;">
+            <img src="files/3. Experience/logo/76702379_112363003557246_8532570068196786176_n.jpg" class="card-logo" alt="Sconad Communication">
+            <div class="card-period" style="color:#4a5568;">Jul 2013 – Jul 2014</div>
+            <h3>Level 3 Research Associate</h3>
+            <p class="card-company"><i class="fa fa-line-chart" style="color:#4a5568;"></i> Sconad Communication</p>
+            <p class="card-location"><i class="fa fa-map-marker"></i> Mumbai, India</p>
+            <ul class="card-bullets">
+              <li><strong>Profit Optimisation:</strong> Used Python clustering methods to identify model underperformance areas; owned improvements to <strong>increase profit by 4%</strong>.</li>
+              <li><strong>Retention Programme Analytics:</strong> Identified procedural areas through customer data analysis to <strong>improve profitability of a nationwide retention programme by 8%</strong>.</li>
+              <li><strong>Reporting Automation:</strong> Developed and owned reporting pipeline using Python, SQL &amp; Excel — saving an average of <strong>60 hours of labour per month</strong>.</li>
+            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">Python</span>
+              <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">SQL</span>
+              <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">Excel</span>
+              <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">Data Analysis</span>
+              <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">Clustering</span>
+              <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">Retention Analytics</span>
+            </div>
+            <div class="card-footer-row">
+              <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
+              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
+              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
+              <a href="files/3.%20Experience/1.%20Certificate/1.%20Sconad%20Communication.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
+            </div>
+          </div>
+        </div>
+        <div class="tl-dot" style="border-color:#4a5568; box-shadow:0 0 0 5px rgba(74,85,104,.12);"></div>
+        <div class="tl-spacer"></div>
+      </div>
+
+      <!-- 6 · ZMQ Technologies (right) · steel blue #4a6785 -->
+      <div class="tl-row">
+        <div class="tl-spacer"></div>
+        <div class="tl-dot" style="border-color:#4a6785; box-shadow:0 0 0 5px rgba(74,103,133,.12);"></div>
+        <div class="tl-right">
+          <div class="tl-card" style="border-top-color:#4a6785;">
+            <img src="files/3. Experience/logo/zmq_web_logo.jpg" class="card-logo" alt="ZMQ Technologies">
+            <div class="card-period" style="color:#4a6785;">2012 – 2013</div>
+            <h3>Intern – Android &amp; J2ME App Development</h3>
+            <p class="card-company"><i class="fa fa-mobile" style="color:#4a6785;"></i> ZMQ Technologies</p>
+            <p class="card-location"><i class="fa fa-map-marker"></i> Gurugram, India</p>
+            <ul class="card-bullets">
+              <li><strong>Mobile App Development:</strong> Designed and developed mobile applications using Android and J2ME platform with Oracle as backend.</li>
+              <li><strong>Agile Delivery:</strong> Completed eight major projects, working closely with an agile development team to develop, test and maintain production-ready apps.</li>
+            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag" style="background:#eef2f6;color:#4a6785;">Android</span>
+              <span class="skill-tag" style="background:#eef2f6;color:#4a6785;">J2ME</span>
+              <span class="skill-tag" style="background:#eef2f6;color:#4a6785;">Oracle</span>
+              <span class="skill-tag" style="background:#eef2f6;color:#4a6785;">Mobile Dev</span>
+              <span class="skill-tag" style="background:#eef2f6;color:#4a6785;">Agile</span>
+            </div>
+            <div class="card-footer-row">
+              <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
+              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
+              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
+              <a href="files/3.%20Experience/1.%20Certificate/zmq%20industrial%20training.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 · Essilor India (left) · muted plum #6b4e71 -->
+      <div class="tl-row">
+        <div class="tl-left">
+          <div class="tl-card" style="border-top-color:#6b4e71;">
+            <img src="files/3. Experience/logo/essilor-india-private-limited-customer-care-new-delhi-delhi-contact-lense-dealers-essilor-1uk5fv1.jpg" class="card-logo" alt="Essilor India">
+            <div class="card-period" style="color:#6b4e71;">Jun 2012 – Jul 2012</div>
+            <h3>Intern – Web Development</h3>
+            <p class="card-company"><i class="fa fa-eye" style="color:#6b4e71;"></i> Essilor India Private Limited</p>
+            <p class="card-location"><i class="fa fa-map-marker"></i> New Delhi, India</p>
+            <ul class="card-bullets">
+              <li><strong>Web Development &amp; Content:</strong> Built and maintained web pages, handled video editing and acted as content developer for the company's digital presence.</li>
+            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag" style="background:#f3eff4;color:#6b4e71;">Web Development</span>
+              <span class="skill-tag" style="background:#f3eff4;color:#6b4e71;">Video Editing</span>
+              <span class="skill-tag" style="background:#f3eff4;color:#6b4e71;">Content Development</span>
+            </div>
+            <div class="card-footer-row">
+              <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
+              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
+              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
+              <a href="files/3.%20Experience/1.%20Certificate/essilor.jpg" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
+            </div>
+          </div>
+        </div>
+        <div class="tl-dot" style="border-color:#6b4e71; box-shadow:0 0 0 5px rgba(107,78,113,.12);"></div>
+        <div class="tl-spacer"></div>
+      </div>
+
+    </div><!-- /timeline -->
+  </div>
+</section>
+
+<!-- ══════════════════ STORY ══════════════════ -->
+<section class="exp-story" id="story-section">
+  <div class="container">
+    <p class="story-quote">
+      "From a curious student in Rohtak to a research scientist deploying AI at the
+      <em>edge of what's possible</em> — every dataset explored, every model trained,
+      every student inspired has been a step toward one purpose:
+      <em>making intelligent technology work for people.</em>"
+    </p>
+    <p class="story-attr">— Dr. Anubha Parashar</p>
+
+    <div class="story-divider"></div>
+
+    <p class="story-bio">
+      I am an Analytics &amp; AI Engineer with a PhD in Computer Science (AI), 12+ years spanning
+      academia and industry, 42 peer-reviewed publications, and 6 patents. My work bridges deep
+      learning research and real-world deployment — from gait biometrics and computer vision to
+      LLM-powered chatbots and edge AI on NVIDIA Jetson. I believe the best technology quietly
+      solves hard problems and leaves people more capable than before.
+    </p>
+
+  </div>
+</section>
+
+<!--================ Footer (injected by site-components.js) =================-->
+
+<div id="site-footer"></div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/isotope/isotope-min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/site-components.js"></script>
+
+<script>
+  /* ── Animated counters ── */
+  var counters = document.querySelectorAll('.exp-stat-num');
+  var fired = false;
+  function runCounters() {
+    counters.forEach(function(el) {
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      var step = Math.max(1, Math.ceil(target / 45));
+      var cur = 0;
+      var t = setInterval(function() {
+        cur = Math.min(cur + step, target);
+        el.textContent = cur + suffix;
+        if (cur >= target) clearInterval(t);
+      }, 28);
+    });
+  }
+  var heroObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting && !fired) { fired = true; runCounters(); }
+    });
+  });
+  heroObs.observe(document.querySelector('.exp-stats'));
+
+  /* ── Scroll-reveal cards ── */
+  var cards = document.querySelectorAll('.tl-card');
+  var cardObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        cardObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  cards.forEach(function(c) { cardObs.observe(c); });
+
+  /* ── Pearce projects toggle ── */
+  function togglePearceProjects(btn) {
+    var list = document.getElementById('pearceProjectsList');
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    list.style.display = expanded ? 'none' : 'block';
+  }
+
+  /* ── Story section fade-in ── */
+  var story = document.getElementById('story-section');
+  story.style.opacity = '0';
+  story.style.transform = 'translateY(30px)';
+  story.style.transition = 'opacity .7s ease, transform .7s ease';
+  var storyObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        story.style.opacity = '1';
+        story.style.transform = 'translateY(0)';
+        storyObs.disconnect();
+      }
+    });
+  }, { threshold: 0.1 });
+  storyObs.observe(story);
+</script>
+
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>

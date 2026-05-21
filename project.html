@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Projects – Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+    /* ── HERO ── */
+    .proj-hero {
+      background: linear-gradient(135deg, #0d0b1f 0%, #1a1535 45%, #0e1e60 100%);
+      padding: 130px 0 70px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .proj-hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background-image: linear-gradient(rgba(126,184,224,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126,184,224,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .proj-hero-inner { position: relative; z-index: 2; }
+    .proj-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .proj-particles span {
+      position: absolute; display: block; border-radius: 50%;
+      background: rgba(126,184,224,.22); animation: projFloat linear infinite; bottom: -20px;
+    }
+    @keyframes projFloat {
+      0%   { transform: translateY(0); opacity: 0; }
+      10%  { opacity: 1; }
+      85%  { opacity: .3; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
+    .proj-particles span:nth-child(1)  { left:6%;  width:5px;  height:5px;  animation-duration:11s; animation-delay:0s; }
+    .proj-particles span:nth-child(2)  { left:14%; width:3px;  height:3px;  animation-duration:9s;  animation-delay:1.4s; }
+    .proj-particles span:nth-child(3)  { left:23%; width:6px;  height:6px;  animation-duration:13s; animation-delay:.8s; }
+    .proj-particles span:nth-child(4)  { left:32%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:2.2s; }
+    .proj-particles span:nth-child(5)  { left:41%; width:3px;  height:3px;  animation-duration:10s; animation-delay:.3s; }
+    .proj-particles span:nth-child(6)  { left:50%; width:7px;  height:7px;  animation-duration:14s; animation-delay:1.8s; }
+    .proj-particles span:nth-child(7)  { left:59%; width:4px;  height:4px;  animation-duration:9s;  animation-delay:.6s; }
+    .proj-particles span:nth-child(8)  { left:67%; width:3px;  height:3px;  animation-duration:12s; animation-delay:3.1s; }
+    .proj-particles span:nth-child(9)  { left:75%; width:5px;  height:5px;  animation-duration:10s; animation-delay:1.2s; }
+    .proj-particles span:nth-child(10) { left:83%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:.5s; }
+    .proj-particles span:nth-child(11) { left:90%; width:3px;  height:3px;  animation-duration:11s; animation-delay:2.5s; }
+    .proj-particles span:nth-child(12) { left:19%; width:8px;  height:8px;  animation-duration:15s; animation-delay:1.9s; }
+    .proj-particles span:nth-child(13) { left:54%; width:3px;  height:3px;  animation-duration:7s;  animation-delay:4.0s; }
+    .proj-particles span:nth-child(14) { left:72%; width:6px;  height:6px;  animation-duration:12s; animation-delay:2.8s; }
+    .proj-particles span:nth-child(15) { left:38%; width:4px;  height:4px;  animation-duration:9s;  animation-delay:.9s; }
+    .proj-eyebrow {
+      font-size: .68rem; letter-spacing: 4px; text-transform: uppercase;
+      color: #7eb8e0; font-weight: 700; margin-bottom: 14px;
+    }
+    .proj-hero h1 {
+      font-size: 2.9rem !important; font-weight: 900 !important;
+      color: #fff !important; letter-spacing: 1px; margin-bottom: 8px;
+    }
+    .proj-hero .hero-sub {
+      font-size: 1rem; color: rgba(255,255,255,.6) !important;
+      margin-bottom: 44px; max-width: 600px; margin-left: auto; margin-right: auto;
+    }
+    .proj-stats {
+      display: flex; justify-content: center; gap: 52px; flex-wrap: wrap; margin-bottom: 36px;
+    }
+    .proj-stat-num { display: block; font-size: 2.3rem; font-weight: 900; color: #b5c0ff !important; line-height: 1; }
+    .proj-stat-lbl { display: block; font-size: .63rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,.45) !important; margin-top: 5px; }
+
+    /* ── QUICK NAV ── */
+    .proj-quicknav {
+      background: #1a1a2e; padding: 18px 0; overflow-x: auto;
+      white-space: nowrap; border-bottom: 1px solid rgba(126,184,224,.15);
+    }
+    .proj-quicknav-inner { display: flex; gap: 8px; padding: 0 24px; flex-wrap: nowrap; }
+    .proj-qn-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(126,184,224,.1); border: 1px solid rgba(126,184,224,.2);
+      color: rgba(255,255,255,.75) !important; font-size: .72rem; font-weight: 600;
+      padding: 5px 12px; border-radius: 20px; text-decoration: none !important;
+      white-space: nowrap; transition: all .2s; flex-shrink: 0;
+    }
+    .proj-qn-link:hover { background: rgba(126,184,224,.25); color: #fff !important; border-color: rgba(126,184,224,.5); }
+    .proj-qn-num { font-size: .62rem; background: rgba(126,184,224,.3); border-radius: 50%; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; }
+
+    /* ── SECTION ── */
+    .proj-section { padding: 70px 0 90px; background: #f5f6ff; }
+    .section-label { display: inline-block; font-size: .7rem; letter-spacing: 2.5px; text-transform: uppercase; color: #4f7eb3; font-weight: 700; margin-bottom: 8px; }
+    .section-title { font-size: 2rem !important; font-weight: 800 !important; color: #1a1a2e !important; margin-bottom: 10px; }
+    .section-title-bar { width: 50px; height: 4px; background: linear-gradient(90deg, #7eb8e0, #0f3460); border-radius: 2px; margin: 0 auto 56px; }
+
+    /* ── PROJECT CARD ── */
+    .proj-grid { display: grid; grid-template-columns: 1fr; gap: 48px; }
+
+    .proj-card {
+      background: #fff; border-radius: 18px;
+      box-shadow: 0 4px 28px rgba(15,52,96,.09);
+      border-left: 5px solid #7eb8e0;
+      overflow: hidden; transition: transform .25s, box-shadow .25s;
+    }
+    .proj-card:hover { transform: translateY(-3px); box-shadow: 0 14px 44px rgba(15,52,96,.14); }
+
+    /* header */
+    .proj-card-header {
+      padding: 28px 32px 20px;
+      display: flex; align-items: flex-start; gap: 18px;
+      border-bottom: 1px solid #f0f3ff;
+    }
+    .proj-num-badge {
+      flex-shrink: 0; width: 48px; height: 48px; border-radius: 13px;
+      background: linear-gradient(135deg, #0f3460, #7eb8e0);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; font-weight: 900; color: #fff;
+      box-shadow: 0 4px 14px rgba(15,52,96,.3);
+    }
+    .proj-header-text { flex: 1; min-width: 0; }
+    .proj-card-title { font-size: 1.15rem !important; font-weight: 800 !important; color: #1a1a2e !important; margin-bottom: 8px; line-height: 1.35; }
+    .proj-meta-row { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+    .proj-inst-chip { background: #e8f0fb; color: #1a3a6b; font-size: .72rem; font-weight: 700; padding: 3px 11px; border-radius: 20px; }
+    .proj-date-chip { background: #eef4ff; color: #1a3a6b; font-size: .72rem; font-weight: 600; padding: 3px 11px; border-radius: 20px; border: 1px solid #c3d9f7; }
+    .proj-cat-chip { background: linear-gradient(135deg, #0f3460, #7eb8e0); color: #fff; font-size: .7rem; font-weight: 700; padding: 3px 11px; border-radius: 20px; }
+
+    /* intro row: description left, main image right */
+    .proj-intro { padding: 24px 32px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+    .proj-intro.no-image { grid-template-columns: 1fr; }
+    .proj-intro-desc p { font-size: .9rem; color: #444; line-height: 1.75; margin-bottom: 14px; }
+    .proj-intro-img { border-radius: 10px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,.1); background: #f0f4ff; display: flex; align-items: center; justify-content: center; min-height: 180px; }
+    .proj-intro-img img { width: 100%; height: 300px; display: block; object-fit: contain; }
+    .proj-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    .proj-link-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(15,52,96,.06); border: 1px solid rgba(15,52,96,.18);
+      color: #0f3460 !important; font-size: .78rem; font-weight: 600;
+      padding: 7px 16px; border-radius: 22px; text-decoration: none !important; transition: all .2s;
+    }
+    .proj-link-btn:hover { background: #0f3460; color: #fff !important; }
+
+    /* specs */
+    .proj-specs { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; padding: 20px 32px; }
+    .proj-spec-item { background: #f0f4ff; border-radius: 8px; padding: 10px 14px; }
+    .proj-spec-label { font-size: .63rem; letter-spacing: 1px; text-transform: uppercase; color: #4f7eb3; font-weight: 700; margin-bottom: 3px; }
+    .proj-spec-value { font-size: .84rem; color: #1a1a2e; font-weight: 600; line-height: 1.4; }
+
+    /* body text blocks */
+    .proj-body { padding: 0 32px 8px; }
+    .proj-body p { font-size: .88rem; color: #444; line-height: 1.75; margin-bottom: 14px; }
+
+    /* media row: video left, image right (or single) */
+    .proj-media { padding: 8px 32px 20px; }
+    .proj-media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .proj-media-grid.triple { grid-template-columns: 1fr 1fr 1fr; }
+    .proj-media-grid.single { grid-template-columns: 1fr; max-width: 600px; }
+    .proj-media-item { }
+    .proj-media-wrap { border-radius: 10px; overflow: hidden; box-shadow: 0 3px 14px rgba(0,0,0,.1); background: #f0f4ff; }
+    .proj-media-wrap img { width: 100%; height: auto; max-height: 280px; display: block; object-fit: contain; }
+    .proj-media-wrap video { width: 100%; max-height: 280px; display: block; }
+    .video-placeholder { display:flex; flex-direction:column; align-items:center; justify-content:center; height:180px; background:linear-gradient(135deg,#e8eeff,#f0f4ff); border-radius:10px; color:#7eb8e0; gap:10px; }
+    .video-placeholder i { font-size:2.2rem; opacity:.6; }
+    .video-placeholder span { font-size:.75rem; font-weight:700; color:#9aabcc; letter-spacing:.8px; text-transform:uppercase; }
+    .proj-media-label { font-size: .68rem; text-align: center; color: #666; margin-top: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: .8px; }
+
+    /* results/interface row */
+    .proj-results { padding: 0 32px 28px; }
+    .proj-results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .proj-result-card { background: #f0f4ff; border-radius: 10px; padding: 18px 18px 14px; }
+    .proj-result-card h5 { font-size: .8rem !important; font-weight: 700 !important; color: #1a3a6b !important; margin-bottom: 10px; text-transform: uppercase; letter-spacing: .6px; }
+    .proj-result-card img { width: 100%; height: auto; max-height: 200px; object-fit: contain; border-radius: 6px; background: #e8eeff; }
+    .proj-result-card video { width: 100%; max-height: 200px; border-radius: 6px; }
+    .proj-result-card p { font-size: .83rem; color: #444; line-height: 1.65; margin: 0; }
+
+    /* inline text+image row */
+    .proj-inline { padding: 8px 32px 16px; display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: start; }
+    .proj-inline.reverse { grid-template-columns: 1fr 2fr; }
+    .proj-inline p { font-size: .88rem; color: #444; line-height: 1.75; margin: 0; }
+    .proj-inline-img { border-radius: 10px; overflow: hidden; box-shadow: 0 3px 14px rgba(0,0,0,.1); background: #f0f4ff; }
+    .proj-inline-img img { width: 100%; height: auto; max-height: 280px; display: block; object-fit: contain; }
+
+    /* section divider inside page */
+    .proj-divider { height: 1px; background: linear-gradient(90deg, transparent, #c3d9f7, transparent); margin: 0; }
+
+    @media (max-width: 991px) {
+      .proj-intro { grid-template-columns: 1fr; }
+      .proj-results-grid { grid-template-columns: 1fr 1fr; }
+      .proj-inline, .proj-inline.reverse { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 767px) {
+      .proj-hero h1 { font-size: 2rem !important; }
+      .proj-stats { gap: 28px; }
+      .proj-card-header { flex-direction: column; gap: 12px; }
+      .proj-media-grid, .proj-media-grid.triple { grid-template-columns: 1fr; }
+      .proj-results-grid { grid-template-columns: 1fr; }
+      .proj-card-header, .proj-intro, .proj-specs, .proj-body, .proj-media, .proj-results { padding-left: 18px; padding-right: 18px; }
+    }
+  </style>
+</head>
+<body class="blog_version">
+
+<div id="site-header"></div>
+
+<!-- HERO -->
+<section class="proj-hero">
+  <div class="proj-particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="proj-hero-inner container">
+    <div class="proj-eyebrow">Research &amp; Development</div>
+    <h1>Projects</h1>
+    <p class="hero-sub">A collection of 19 research and development projects spanning deep learning, computer vision, IoT, robotics, AI, and embedded systems.</p>
+    <div class="proj-stats">
+      <div><span class="proj-stat-num">19</span><span class="proj-stat-lbl">Projects</span></div>
+      <div><span class="proj-stat-num">6+</span><span class="proj-stat-lbl">Domains</span></div>
+      <div><span class="proj-stat-num">2012</span><span class="proj-stat-lbl">Since</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK NAV -->
+<nav class="proj-quicknav">
+  <div class="proj-quicknav-inner container">
+    <a href="#p1"  class="proj-qn-link"><span class="proj-qn-num">1</span> Gait Biometrics</a>
+    <a href="#p2"  class="proj-qn-link"><span class="proj-qn-num">2</span> Face De-ID</a>
+    <a href="#p3"  class="proj-qn-link"><span class="proj-qn-num">3</span> Gait Classification</a>
+    <a href="#p4"  class="proj-qn-link"><span class="proj-qn-num">4</span> IoT Board Marker</a>
+    <a href="#p5"  class="proj-qn-link"><span class="proj-qn-num">5</span> AI Chess</a>
+    <a href="#p6"  class="proj-qn-link"><span class="proj-qn-num">6</span> Autonomous Vehicle</a>
+    <a href="#p7"  class="proj-qn-link"><span class="proj-qn-num">7</span> Smart Spoon</a>
+    <a href="#p8"  class="proj-qn-link"><span class="proj-qn-num">8</span> UAV Surveillance</a>
+    <a href="#p9"  class="proj-qn-link"><span class="proj-qn-num">9</span> Sleep Staging EEG</a>
+    <a href="#p10" class="proj-qn-link"><span class="proj-qn-num">10</span> Weather System</a>
+    <a href="#p11" class="proj-qn-link"><span class="proj-qn-num">11</span> Smart Electricity</a>
+    <a href="#p12" class="proj-qn-link"><span class="proj-qn-num">12</span> Assistant Robot</a>
+    <a href="#p13" class="proj-qn-link"><span class="proj-qn-num">13</span> Drone Medical</a>
+    <a href="#p14" class="proj-qn-link"><span class="proj-qn-num">14</span> Chatbot</a>
+    <a href="#p15" class="proj-qn-link"><span class="proj-qn-num">15</span> Polio M-Training</a>
+    <a href="#p16" class="proj-qn-link"><span class="proj-qn-num">16</span> Eye Monitoring</a>
+    <a href="#p17" class="proj-qn-link"><span class="proj-qn-num">17</span> Energy CV</a>
+    <a href="#p18" class="proj-qn-link"><span class="proj-qn-num">18</span> Ground Rover</a>
+    <a href="#p19" class="proj-qn-link"><span class="proj-qn-num">19</span> IoT Rover</a>
+  </div>
+</nav>
+
+<!-- PROJECTS -->
+<section class="proj-section">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="section-label">Research Work</span>
+      <h2 class="section-title">All Projects</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="proj-grid">
+
+      <!-- ───────────── PROJECT 1 ───────────── -->
+      <div class="proj-card" id="p1">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">1</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Surveillance System to Track Individuals Using Gait Biometrics</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">PhD Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">Jan 2018 – Dec 2022</span>
+              <span class="proj-cat-chip">Deep Learning · Biometrics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>Human gait recognition using model-free approaches is done through analysis of moving shape and motion of the subject's body. This approach enables recognition at large distances with sufficiently low-resolution images and is simple and intuitive for extracting gait signatures from gait frames.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/4.png" alt="Gait Biometrics Surveillance"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Deep Learning, Computer Vision, Biometrics (Gait)</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Surveillance</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">GUI</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Jetson Nano</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">CASIA, TUM, OUISIR</div></div>
+        </div>
+
+        <div class="proj-inline">
+          <p>The most interesting research in biometrics is automatic gait recognition compared to other human unique features. Though there are many approaches to overcome variations in gait recognition, challenges remain: distinctive gait datasets, degree of stability in identifying, sensing modality, covariates and spoofing effects, and exploring new algorithms. From a developmental perspective, human gait recognition has gained maturity in adopting recent methodologies to provide high accuracy. This paper surveys recent deep architecture models on human gait identification, authentication and clinical applications.</p>
+          <div class="proj-inline-img"><img src="files/5. Project/1. Project/1.png" alt="Gait Research"></div>
+        </div>
+
+        <div class="proj-inline reverse">
+          <div class="proj-inline-img"><img src="files/5. Project/1. Project/2.png" alt="DeepGait Pipeline"></div>
+          <p>The Gait Recognition System (GRS) is a biometric system used for security. A unique, fully automated, optimal technique for edge devices is proposed using deep learning as <strong>DeepGait</strong>. The pipeline includes preprocessing original video frames, creating an optimal deep learning pipeline using CNN for feature extraction, reducing additional features, hyper-tuning the network for all covariate circumstances, and subject detection. In the CASIA B dataset, eleven distinct view angles, occlusion in carrying state, and apparel variation are used. An accuracy of <strong>98.64%</strong> is reached on the Jetson Nano — a considerable increase over current state-of-the-art on edge devices.</p>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Application Interface</h5><img src="files/5. Project/1. Project/3.png" alt="Application Interface"></div>
+            <div class="proj-result-card"><h5>Accuracy</h5><img src="files/5. Project/1. Project/5.png" alt="Accuracy"></div>
+            <div class="proj-result-card"><h5>Results</h5><img src="files/5. Project/1. Project/6.png" alt="Results"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 2 ───────────── -->
+      <div class="proj-card" id="p2">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">2</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Face De-Identification Pipeline Based on Physiological &amp; Machine Recognition Experiments Using Deep Learning</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">Croatian Govt. Funded · Prof. Dr. Slobodan Ribarić, Zagreb, Croatia</span>
+              <span class="proj-date-chip">5 Sept 2016 – 30 Dec 2018</span>
+              <span class="proj-cat-chip">Deep Learning · Biometrics (Face)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>We proposed a reversible face de-identification pipeline that modifies face geometry and texture. Fourteen parameters for geometrical modification are used. For texture modification, a fixed face texture template is applied.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/9.png" alt="Face De-Identification"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Deep Learning, Computer Vision, Biometrics (Face)</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Surveillance, De-Identification</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Jetson Nano</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">Famous Faces</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-1.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">We compiled a set of 30 face images of famous people (7 females and 23 males, ages 30–75) from politics, sports, business and entertainment. The testing procedure mirrors that used for diagnosing prosopagnosia. Images of de-identified faces were presented to 150 test subjects requesting recognition. The aim was to evaluate the impact of geometrical and texture modifications on human ability to recognize faces via crowdsourcing. Context and biometric cues like hair and ears were removed in all tests.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Results</h5><p>Investigated the impact of various geometrical and texture modifications of face components (eyes, eyebrows, nose and lips) on the ability of humans and machines to recognize faces. Results showed that face texture has a stronger impact on privacy protection than face geometry (shape) modifications.</p></div>
+            <div class="proj-result-card"><h5>Application Interface</h5><img src="files/5. Project/1. Project/7.jpeg" alt="Application Interface"></div>
+            <div class="proj-result-card"><h5>Face Dataset</h5><img src="files/5. Project/1. Project/8.png" alt="Face Dataset"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 3 ───────────── -->
+      <div class="proj-card" id="p3">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">3</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Classification Of Gait Data Using Machine Learning Techniques To Categorise Human Locomotion</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">M.Tech Project · VCE Rohtak</span>
+              <span class="proj-date-chip">5 Sept 2014 – 30 June 2016</span>
+              <span class="proj-cat-chip">Machine Learning · Medical</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>Demonstrated the importance of gait recognition in order to detect whether a human gait is normal or pathological. Three main approaches were explored: back propagation and KNN. After comparing testing and training results, better outcomes were achieved using back propagation.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/10.png" alt="Gait Classification"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Machine Learning, Computer Vision</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Medical, Early Detection</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Jetson Nano</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">Crouch Dataset</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-2.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">The work classifies gait into four categories: Normal, Crouch2, Crouch3, Crouch4 using back propagation and KNN. When training is complete, the output is one of the four options. If the testing dataset is tested on the proposed system, the output will be normal gait if the classifier correctly identifies it as normal, or abnormal gait if it falls into Crouch2, Crouch3, or Crouch4.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Application Interface</h5><img src="files/5. Project/1. Project/12.png" alt="Application Interface"></div>
+            <div class="proj-result-card"><h5>Accuracy</h5><img src="files/5. Project/1. Project/11.png" alt="Accuracy"></div>
+            <div class="proj-result-card"><h5>Results</h5><p>Features were selected and principal components identified, then gait data was classified using K-mean, KNN and Back Propagation techniques. Performance comparison on real-time datasets shows the proposed method outperforms previous methods for humanoid locomotion classification.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 4 ───────────── -->
+      <div class="proj-card" id="p4">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">4</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Low-cost IoT Enabled Board Marker using Image Processing</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">Jan 2019 – Dec 2020</span>
+              <span class="proj-cat-chip">IoT · Robotics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>This project is based on robotics. Robots have been easing human tasks for decades; this time they contribute toward modern education. A robot is fed a reference drawing — mostly text-based input or a diagram — which it replicates on a whiteboard or notebook.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/13.jpeg" alt="IoT Board Marker"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Image Processing, IoT</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Automation, Classroom Teaching</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">GUI – Processing Software v2.2</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Arduino Mega, Two Stepper Motors, Servo Motor, L293D Motor Shield, Pulley Cable</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">JPG/PNG and SVG format</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-3.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">The application running on PC recognizes the edges of the image and sends command numbers to the microcontroller. The microcontroller rotates stepper motors as per the image requirement; a servo motor at the pen-holder acts as a pen-lifting mechanism. The pulley system adds maneuverability while cutting costs. The system works as predicted and produces good quality drawings on the drawing pad.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Application Interface</h5><img src="files/5. Project/1. Project/14.jpeg" alt="Application Interface"></div>
+            <div class="proj-result-card"><h5>Accuracy</h5><img src="files/5. Project/1. Project/15.png" alt="Accuracy"></div>
+            <div class="proj-result-card"><h5>Results</h5><p>With 9V DC supply, stepper motors run smoothly with no jitters and the circuit doesn't overheat. Pen-lift actions are fluid and precise; the system responds to drawing commands in 0.5–1 second.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 5 ───────────── -->
+      <div class="proj-card" id="p5">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">5</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">IoT Enabled Mechanical Chess based on Artificial Intelligence</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">Jan 2018 – Dec 2019</span>
+              <span class="proj-cat-chip">AI · Robotics · IoT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>An automated AI chess board — a physical chess board that lets the player play against an AI. Powered by Raspberry Pi, using core XY motion of two motors enabling an electromagnet to span the full chess board and slide pieces across it.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/16.jpeg" alt="AI Chess Board"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Artificial Intelligence, Robotics, IoT</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Playing chess on a real board against a machine</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">Raspberry Pi, L298n Motor Drivers</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Lead Screw Rods, Pillow Block Bearings, Servo Motor, Nema 17 Motors, Electromagnets, Spools, Belts, Chess Board</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">Stockfish</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-4.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">Using two Nema 17 motors and two lead screw mechanisms for X and Y axes, both powered by L298N motor drivers and a relay module to control the electromagnet, chess pieces with strong magnets attached to the bottom slide across the board. Using the Min-Max spanning tree, an initial score is assigned to each player, and the AI minimizes the score of the opposing player while maintaining its own. Each node of the move tree contains the score for the corresponding move; treating scores as weights, Min-Max search selects the best move.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Application Interface</h5><img src="files/5. Project/1. Project/17.png" alt="Application Interface"></div>
+            <div class="proj-result-card"><h5>Results</h5><img src="files/5. Project/1. Project/18.png" alt="Results"></div>
+            <div class="proj-result-card"><h5>Performance</h5><p>AI performed above expectations in speed. X motion ran fast and delivered accurately but with some noise. Y motion was smoother but slightly slower due to extra weight. The electromagnet was stronger than expected — mount height was reduced and voltage increased for precision. A new core XY motion approach efficiently handles large weight while maintaining speed. The AI is fast and reliable for low-end embedded systems.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 6 ───────────── -->
+      <div class="proj-card" id="p6">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">6</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Optimized Navigation using Deep Learning Technique for Automatic Guided Vehicle</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">June 2018 – Dec 2019</span>
+              <span class="proj-cat-chip">Deep Learning · Autonomous · CV</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>This study uses end-to-end learning and replaces numerous sensors with a single camera, commandeering only forward, backward, left, and right controls — a cost-effective solution for autonomous driving navigation.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/19.png" alt="Autonomous Vehicle"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Deep Learning, IoT, Computer Vision</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Smart Car, Autonomous, Stop Sign &amp; Traffic Light Detection, Collision Avoidance</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Software</div><div class="proj-spec-value">Raspbian OS, Python, OpenCV Libraries</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">RC Car, Raspberry Pi, Ultrasonic Sensor, PI Camera</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">Udacity Autonomous Car Simulator</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-5.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">CNN (VGG16 model) was used to train collected data. The system was optimized by cropping unnecessary image parts and mapping pixels from a single front-facing camera to direct steering instructions. The proposed model improved accuracy from <strong>88%</strong> (Udacity training dataset) to <strong>98%</strong> (proposed). This model is suitable for industrial use and robust in real-time scenarios.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Application Interface</h5><img src="files/5. Project/1. Project/20.jpeg" alt="Application Interface"></div>
+            <div class="proj-result-card"><h5>Results</h5><img src="files/5. Project/1. Project/21.png" alt="Results"></div>
+            <div class="proj-result-card"><h5>Accuracy</h5><p>After rigorous test runs on tracks the car was not trained on, it functions competently in a controlled environment. The neural network gave 98% results — a significant improvement over the baseline.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 7 ───────────── -->
+      <div class="proj-card" id="p7">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">7</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">IoT based Smart Assistance Spoon for Parkinson Patients</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">Jan 2017 – Dec 2018</span>
+              <span class="proj-cat-chip">AI · Robotics · Healthcare</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>A microcontroller-based robotic arm with 4 servo motors designed to assist Parkinson's disease patients. Parkinson's disease causes uncontrollable shaking, making it difficult for affected persons to eat. This device automates the feeding process with no effort needed from the patient.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/22.png" alt="Smart Spoon Robotic Arm"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Artificial Intelligence, Robotics, IoT</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Feed patient with no effort needed</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">Android App</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Raspberry Pi, Servo Motors, Stepper Motor, Robotic Arm, Bluetooth &amp; WiFi Modules</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">Patient height</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-6.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">The essential part is a programmable microcontroller-based brick capable of driving four servos to form an anthropomorphic structure. The machine will be useful for repetitive tasks of picking and placing small edibles up to 500 grams per serving. It can also do small assembly work with great accuracy. The technology for assisting people who are functionally challenged has improved over recent decades — this device specifically targets PD patients for whom no cure exists.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Application Interface</h5><img src="files/5. Project/1. Project/23.jpeg" alt="Application Interface"></div>
+            <div class="proj-result-card"><h5>Results</h5><img src="files/5. Project/1. Project/24.jpeg" alt="Results"></div>
+            <div class="proj-result-card"><h5>Outcome</h5><p>The robotic arm was successfully implemented, able to pick up food from a tray and direct it toward the user's mouth. The Bluetooth app for connecting, controlling, and terminating the process was also developed.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 8 ───────────── -->
+      <div class="proj-card" id="p8">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">8</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Unmanned Aerial Vehicle for Surveillance</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">Jan 2020 – Present</span>
+              <span class="proj-cat-chip">AI · Robotics · Drone</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>An all-purpose medical drone toolkit that can be automatically flown to any emergency situation and used to guide citizens to make non-technical lifesaving procedures — dramatically increasing survival rates in hard-to-reach areas.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/23.png" alt="UAV Surveillance Drone"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Artificial Intelligence, Robotics, IoT</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Surveillance</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">Mobile App – Controlling quadcopter</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Quadcopter, Battery, Ardupilot, ESCs, Gyroscope, WiFi Module, Camera, Microphone, Various Sensors</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">Environment</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-7.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">When a medical emergency takes place during a natural flood, the response time makes all the difference between a life saved and a life lost. Ambulances cannot reach due to flooding. The drone incorporates a two-way video-supported communication channel between operators and first responders. Successful drone usage by lay-persons is currently at 20%. With personalized instructions on the drone, this can be increased to <strong>90%</strong>. The drone extends emergency infrastructure with a network of fast compressed video broadcasting capable of bringing emergency supplies and establishing communication.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Results</h5><p>Building a drone providing live video coverage for monitoring. A GPS module gives drone location. After attaching telemetry, waypoints can be given so the drone automatically goes to the required location and returns to its launch point.</p></div>
+            <div class="proj-result-card"><h5>Application Interface</h5><img src="files/5. Project/1. Project/26.jfif" alt="Application Interface"></div>
+            <div class="proj-result-card"><h5>Hardware Interface</h5><img src="files/5. Project/1. Project/25.jpg" alt="Hardware Interface"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 9 ───────────── -->
+      <div class="proj-card" id="p9">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">9</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Smartphone-based Sleep Staging using 1-Channel EEG</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">Jan 2021 – Present</span>
+              <span class="proj-cat-chip">AI · Deep Learning · Healthcare</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>A smartphone-based sleep staging system that informs the user with information such as the duration of each sleep stage, the current sleep stage, etc. — conveniently on a smartphone without the need for external servers, allowing sleep staging without network access.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/28.jpeg" alt="Sleep Staging EEG"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Artificial Intelligence, Deep Learning, IoT</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Detect sleep stages</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">Smartphone App</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">EEG Headset</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">Physionet.org – EEG signals</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-8.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">The EEG band connects to the smartphone via Bluetooth, sending EEG signals to the phone for analysis of the sleeping user. The application scores the sleep and presents information to the user for inferring sleeping patterns. It can also trigger stimuli in specific sleep stages. The project is divided into 4 phases: Research, ML model development, Android app development, and Testing/Improvements.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Results</h5><p>Successfully developed an ML model and Android app. Since EEG hardware was unavailable, the app uses sample data. The app demonstrates input processing and shows results as a chart as well as the current sleep stage. With newer technology and hardware there are many improvements to be made.</p></div>
+            <div class="proj-result-card"><h5>Hardware Interface</h5><img src="files/5. Project/1. Project/29.jpeg" alt="Hardware Interface"></div>
+            <div class="proj-result-card"><h5>Accuracy</h5><img src="files/5. Project/1. Project/27.png" alt="Accuracy"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 10 ───────────── -->
+      <div class="proj-card" id="p10">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">10</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">IoT based Cloud Enabled Automated Weather Reporting and Prediction System</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">Jan 2018 – Dec 2019</span>
+              <span class="proj-cat-chip">ML · IoT · Cloud Computing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>The objective is to monitor and report weather conditions so that one is informed beforehand and necessary actions can be taken to reduce damage by any calamity by forecasting it. The system analyzes temperature, pollutants, humidity and pressure to predict weather — cheaper than existing models.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/30.jpeg" alt="Weather System"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Machine Learning, IoT, Data Analytics, Cloud Computing</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Weather Reporting and Prediction</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">Arduino IDE, Website, Thingspeak, MATLAB, Jupyter Lab</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">WiFi Module, Arduino Mega, LCD, MQ-135, BMP-180, Dust/Rain/LDR/MQ-7/DHT11 Sensors</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">Kaggle</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-9.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">Through the weather monitoring system, information is collected according to current and previous data and results are produced graphically. The main idea is to coin a system that can sense the main components formulating weather and forecast it without human error. Existing models are expensive in contrast to this system, making monitoring of local areas feasible at lower cost.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Results</h5><p>Parameter values from DHT11 sensors are stored on the internet using cloud, used for further analysis using MATLAB. Collected sensor data can be viewed on a web portal.</p></div>
+            <div class="proj-result-card"><h5>Application Interface</h5><img src="files/5. Project/1. Project/31.jpeg" alt="Application Interface"></div>
+            <div class="proj-result-card"><h5>Accuracy</h5><img src="files/5. Project/1. Project/32.png" alt="Accuracy"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 11 ───────────── -->
+      <div class="proj-card" id="p11">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">11</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">IoT-Based Cloud-Enabled Smart Electricity Management System</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">12 October 2016 – December 2017</span>
+              <span class="proj-cat-chip">IoT · Cloud Computing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>Implemented the basic functionalities of an electric meter in a smarter and more efficient manner. Simplified the process of electric meter reading collection and analysis, thereby making it efficient instead of the tedious traditional approach. Users can view consumption remotely from anywhere in the world.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/33.jpeg" alt="Smart Electricity Management"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">IoT, Cloud Computing</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Energy Saving, Meter Billing</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">Smartphone App</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">WiFi Module, Arduino Uno, LCD Display, Step-down Transformer, Rectifier, Energy Meter, Current Sensor, Bulb, Resistor</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-10.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">In the age of digitalization, IoT and AI create home automation devices such as automatic security devices and e-meters that make homes smarter and more secure. By employing IoT concepts, the tedious meter-reading process is simplified and recorded over the cloud for easy accessibility. The user can keep a log of how many units a device consumes and verify billing fairness. The new system was more accurate and faster than existing systems, providing remote accessibility, accountability and reliability.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Results</h5><p>Successfully made an ML model and Android app demonstrating the technology. The app successfully demonstrates input, can use any sample data, and shows results in chart form as well as the current electricity usage stage. The project is a success, with many improvements possible with newer hardware.</p></div>
+            <div class="proj-result-card"><h5>Hardware Interface</h5><img src="files/5. Project/1. Project/34.jpeg" alt="Hardware Interface"></div>
+            <div class="proj-result-card"><h5>Accuracy</h5><img src="files/5. Project/1. Project/35.png" alt="Accuracy"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 12 ───────────── -->
+      <div class="proj-card" id="p12">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">12</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Human Assistant Robot</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">June – December 2018</span>
+              <span class="proj-cat-chip">Robotics · AI · IoT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>A self-navigation robot designed to navigate autonomously in any environment. The HAR (Human Assistant Robot) is a personal assistant robot designed to take over tasks such as retrieving water bottles, making tea or coffee, and basic pick-and-place functions without human intervention.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/36.jpeg" alt="Human Assistant Robot"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Robotics, IoT, Artificial Intelligence</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Human Assistance</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">Smartphone App</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Arduino Mega, Raspberry Pi, Step-down Transformer, Servo-motor, IR &amp; UV Sensors, Breadboard, Wheels</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-11.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">By employing IoT concepts, the process is simplified and recorded over cloud for easy accessibility. The robot can perceive normal objects seen in daily life and pass on information as voice messages — helping the elderly and visually impaired. It can read text messages from an image, act as an empathy robot by detecting facial emotions and playing music accordingly, check for mask compliance, and integrates Amazon Alexa speech assistant technology.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-inline">
+          <p>The major advantage of digitalizing the process is that the user can view consumption remotely. This also enables the user to keep a log of device consumption. Also, the new system was more accurate and faster than existing systems. By simple application of IoT principles, current sensor, and microcontrollers, the process has been streamlined and moved to a cloud-based application — providing remote accessibility, accountability and reliability. This research work stirs plans to develop a personal assistant robot with full environmental perception capabilities.</p>
+          <div class="proj-inline-img"><img src="files/5. Project/1. Project/38.jpeg" alt="Robot in action"></div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Results</h5><p>Successfully made and navigated the Human Assistant Robot. The HAR is designed to complete pick-and-place tasks, retrieve bottles from fixed locations, and perform basic service operations in an office environment.</p></div>
+            <div class="proj-result-card"><h5>Interface</h5><img src="files/5. Project/1. Project/37.png" alt="Interface"></div>
+            <div class="proj-result-card"><h5>Results Video</h5>
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-12.mp4" type="video/mp4"></video></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 13 ───────────── -->
+      <div class="proj-card" id="p13">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">13</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Drone Based Flying Solution for Medical Emergencies intended in Disaster Management</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">July 2016 – Dec 2016</span>
+              <span class="proj-cat-chip">Robotics · IoT · Healthcare</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>Sensors monitor vital health parameters (ECG, heartbeat, Temperature, Pressure) via a wearable device. A drone carries the device to the destination and then carries medications back from the doctor to the patient for temporary relief — bridging the gap in disaster zones.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/39.png" alt="Medical Drone"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Robotics, IoT, Artificial Intelligence</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Disaster Management, Emergency Management</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">IBM Bluemix Cloud, Netbeans IDE, Android Studio, Putty Remote Server</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Raspberry Pi 3 Model B, Drone (2kg payload), Blood Pressure &amp; ECG &amp; Pulse Sensors, BMP180, FSR, GSM Adapter, GPS/GPRS Modules, Android Device</div></div>
+        </div>
+
+        <div class="proj-body">
+          <p>Data is continuously gathered to an automatic processing system and made available to medical staff who may take necessary actions in emergency cases. The doctor has an application to fetch data from the cloud to their phone in real-time. Based on data variations from the patient's body and with medical experience, the doctor prescribes treatment. Mean time while the doctor analyzes data, the drone flies back with medications for temporary relief or extension of the emerging situation.</p>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Results</h5><p>Designed a sensor protocol hardware wearable architecture for a variety of bio-parameter sensors. Developed energy-efficient cooperative application. Implemented and assessed the performance of the protocol stack in a WBAN testbed. Integrated proposed solutions in real medical devices. Data stored in cloud can be further enhanced for predictive maintenance in cloud health service systems.</p></div>
+            <div class="proj-result-card"><h5>Interface</h5><img src="files/5. Project/1. Project/40.jpg" alt="Interface"></div>
+            <div class="proj-result-card"><h5>Hardware Interface</h5><img src="files/5. Project/1. Project/41.jpeg" alt="Hardware Interface"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 14 ───────────── -->
+      <div class="proj-card" id="p14">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">14</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Evaluating and Improving Chatbot Techniques</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">NLP Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">20 May – 15 July 2017</span>
+              <span class="proj-cat-chip">Deep Learning · NLP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>Development of a chatbot or intelligent conversational agent using Machine Learning/Deep Learning. The project experiments with two main self-learning bot techniques: retrieval-based and generative techniques. A GUI was also developed to explore both techniques interactively.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/44.png" alt="Chatbot"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Deep Learning, NLP</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Automation, Machine Assistant</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">GUI</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">Reddit Comments Dataset</div></div>
+        </div>
+
+        <div class="proj-body">
+          <p>The Reddit comments dataset was used as it contains comments from several fields, better replicating human interactions. A scoring mechanism filters conservative and professional answers. A new method allows audio input commands without requiring a unique identifier at the start of a sentence — enabling more natural interaction. This paper presents a new method which allows a user to interact with the chatbot in a more human way.</p>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Results</h5><p>The most widely used metric for evaluating dialogue systems is BLEU. The project yielded a BLEU score of <strong>3.3</strong> — good for a generative chatbot with uncleaned data. The training loss decreased substantially after training on approximately 70k comments.</p></div>
+            <div class="proj-result-card"><h5>Interface</h5><img src="files/5. Project/1. Project/42.png" alt="Interface"></div>
+            <div class="proj-result-card"><h5>Hardware Interface</h5><img src="files/5. Project/1. Project/43.png" alt="Hardware Interface"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 15 ───────────── -->
+      <div class="proj-card" id="p15">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">15</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">M-Training Toolkit on Polio/Routine Immunization for CMCs in CGPP</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">ZMQ Software Systems · Gurgaon, India</span>
+              <span class="proj-date-chip">January – July 2013</span>
+              <span class="proj-cat-chip">Android · J2ME · Health</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>The primary strategy to interrupt transmission of wild poliovirus in India is to improve supplemental immunization activities and routine immunization coverage in priority districts, with a focus on 107 high-risk blocks of western Uttar Pradesh and central Bihar.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/45.png" alt="Polio M-Training Toolkit"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Android and J2ME App</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Immunization, Building Health Systems</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">GUI – Android App and J2ME App</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">Address and People</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><img src="files/5. Project/1. Project/47.png" alt="Polio Training App"></div>
+              <div class="proj-media-label">Application View</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">Villages or urban areas with a history of wild poliovirus transmission, or hard-to-reach or resistant populations, are categorized as high-risk areas within blocks. The Social Mobilization Network (SM Net) is formed in Uttar Pradesh to support polio eradication efforts through improved planning, implementation and monitoring of social mobilization activities in those high-risk areas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Results</h5><p>Vaccination outcomes in SM Net areas were as high as or higher than in non-SM Net areas. There was considerable variation in vaccination outcomes between districts.</p></div>
+            <div class="proj-result-card"><h5>Interface</h5><img src="files/5. Project/1. Project/48.png" alt="Interface"></div>
+            <div class="proj-result-card"><h5>Hardware Interface</h5><img src="files/5. Project/1. Project/46.png" alt="Hardware Interface"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 16 ───────────── -->
+      <div class="proj-card" id="p16">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">16</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Automatic Wireless Eye Monitoring System</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">Essilor India Private Limited · New Delhi</span>
+              <span class="proj-date-chip">19 June 2012 – 31 July 2012</span>
+              <span class="proj-cat-chip">IoT · Embedded · Web</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>A wireless communication system designed and developed for remote patient monitoring, enabling instant data collection, content development and better client interaction for eye care monitoring.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/51.jfif" alt="Eye Monitoring System"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">IoT, Web Development</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Remote monitoring of patient condition</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">Keil Compiler, Embedded C</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Dataset</div><div class="proj-spec-value">Instant Data Collection</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">8051 Series Microcontrollers, Encoder IC, Decoder IC, LCD, Transformer, Voltage Regulator, RF Module</div></div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Results</h5>
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-13.mp4" type="video/mp4"></video></div>
+            </div>
+            <div class="proj-result-card"><h5>Hardware Interface</h5><img src="files/5. Project/1. Project/49.jpeg" alt="Hardware Interface"></div>
+            <div class="proj-result-card"><h5>Interface</h5><img src="files/5. Project/1. Project/50.png" alt="Interface"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 17 ───────────── -->
+      <div class="proj-card" id="p17">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">17</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Energy Consumption Optimization for Smart Classroom using Computer Vision</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">AI Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">July 2019 – Dec 2019</span>
+              <span class="proj-cat-chip">Computer Vision · Smart Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>Reduces unnecessary energy consumption of a smart home, office or classroom using Computer Vision. An integrated system in each room transfers environmental parameters to the management station, directly controlling home appliances.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/54.jpeg" alt="Energy CV System"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">Computer Vision</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Smart Homes, Smart Lighting Control</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">Smartphone App</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Raspberry Pi, Camera, Resistor, Breadboard, Relay</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-14.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">Computer Vision is used to implement a smart home control network. A coordinator integrated into Raspberry Pi is established in each room, responsible for transferring environmental parameters obtained by sensors to the management station. The control messages for home appliances are directly transferred. Analysis of fluorescent lamp illumination along with coordinate delay enables more energy conservation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-results">
+          <div class="proj-results-grid">
+            <div class="proj-result-card"><h5>Results</h5><p>The energy saving of lighting systems relative to those without smart control was evaluated. Electricity consumption can be reduced by at least <strong>40%</strong> under smart control. Experimental tests demonstrate the proposed system is practically feasible and performs well.</p></div>
+            <div class="proj-result-card"><h5>Hardware Interface</h5><img src="files/5. Project/1. Project/53.png" alt="Hardware Interface"></div>
+            <div class="proj-result-card"><h5>Results</h5><img src="files/5. Project/1. Project/52.jpeg" alt="Results"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 18 ───────────── -->
+      <div class="proj-card" id="p18">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">18</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">Unmanned Autonomous Grounded Surveillance Rover</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">Jan 2016 – Dec 2017</span>
+              <span class="proj-cat-chip">IoT · CV · AI · Military</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>The inevitability of robots is fundamentally a result of the need to reduce manpower requirements in military organizations while sustaining capability needs. The evolving operational environment places increasing demands on soldiers and exposes the limitations of the human body — supporting the adoption of autonomous robots.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/58.jpeg" alt="Ground Surveillance Rover"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">IoT, Computer Vision, Artificial Intelligence</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Surveillance for Military or Pedestrian</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">Arduino, Raspberry Pi</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Arduino, Raspberry Pi, L293D Motor Driver Shield, IR Sensors, DC Motors, Robot Chassis, Tyres and Connectors</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-16.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">The military forces of the future will use multi-agent robotic workforces for reconnaissance and surveillance, logistics and support, communications infrastructure, forward-deployed offensive operations, and as tactical decoys to conceal maneuver by manned assets. There is a clear and definite need for optimal multi-robot control strategies in the synthesis, design, implementation, and fielding of autonomous and semi-autonomous teams of combat robots. Proven coordination methods enable interactions within dynamic and hostile environments, synchronized maneuvers, sensible rules of engagement (ROE), and reliable field behavior.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── PROJECT 19 ───────────── -->
+      <div class="proj-card" id="p19">
+        <div class="proj-card-header">
+          <div class="proj-num-badge">19</div>
+          <div class="proj-header-text">
+            <h3 class="proj-card-title">IoT based Surveillance Rover</h3>
+            <div class="proj-meta-row">
+              <span class="proj-inst-chip">IoT Project · Manipal University Jaipur, India</span>
+              <span class="proj-date-chip">Jan 2016 – Dec 2017</span>
+              <span class="proj-cat-chip">IoT · CV · AI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-intro">
+          <div class="proj-intro-desc">
+            <p>A mini robot with a self-neural schema framework for autonomous control and decision making. Most application systems give outputs according to predefined conditions. This robot overcomes that limitation, navigating autonomously through a maze while avoiding obstacles and using a camera for extended view.</p>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
+              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+            </div>
+          </div>
+          <div class="proj-intro-img"><img src="files/5. Project/1. Project/61.jpeg" alt="IoT Surveillance Rover"></div>
+        </div>
+
+        <div class="proj-specs">
+          <div class="proj-spec-item"><div class="proj-spec-label">Technology</div><div class="proj-spec-value">IoT, Computer Vision, Artificial Intelligence</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Application</div><div class="proj-spec-value">Surveillance for Military or Pedestrian</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Interface</div><div class="proj-spec-value">Arduino, Raspberry Pi</div></div>
+          <div class="proj-spec-item"><div class="proj-spec-label">Hardware</div><div class="proj-spec-value">Arduino, Raspberry Pi, L293D Motor Driver Shield, IR Sensors, DC Motors, Robot Chassis, Tyres and Connectors</div></div>
+        </div>
+
+        <div class="proj-media">
+          <div class="proj-media-grid">
+            <div class="proj-media-item">
+              <div class="proj-media-wrap"><video controls><source src="files/5. Project/1. Project/project-video-17.mp4" type="video/mp4"></video></div>
+              <div class="proj-media-label">Demo Video</div>
+            </div>
+            <div class="proj-media-item">
+              <p style="font-size:.88rem;color:#444;line-height:1.75;padding-top:8px;">The inevitability of robots is fundamentally a result of the need to reduce manpower requirements in military organizations, while sustaining the capability needs of the organizations. The need to reduce manpower is driven by trends in the macro environment for military organizations, which include aging demographics and reducing public tolerance to human casualties. The evolving operational environment that places increasing demands on soldiers and exposes the limitations of the human body also supports the adoption of robots.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /proj-grid -->
+  </div>
+</section>
+
+
+<div id="site-footer"></div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/isotope/isotope-min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/site-components.js"></script>
+<script>
+  // Show placeholder only if a video genuinely fails to load
+  document.querySelectorAll('.proj-media-wrap video, .proj-result-card video').forEach(function(vid) {
+    var wrap = vid.parentElement;
+    var placeholder = '<div class="video-placeholder"><i class="fa fa-play-circle"></i><span>Video Coming Soon</span></div>';
+    vid.addEventListener('error', function() { wrap.innerHTML = placeholder; }, true);
+  });
+</script>
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>

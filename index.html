@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Dr. Anubha Parashar – AI & Deep Learning Researcher</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+    /* ══════════════════════════════════════════════════════
+       GLOBAL RESET
+       ══════════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    /* ══════════════════════════════════════════════════════
+       HERO – full viewport dark cosmos
+       ══════════════════════════════════════════════════════ */
+    .home-hero {
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 25% 55%, #0d1520 0%, #0b1220 50%, #000000 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 100px;
+    }
+    /* grid overlay */
+    .home-hero::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(60,90,130,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(60,90,130,.04) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+    /* star field */
+    .hero-stars { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+    .hero-stars span {
+      position: absolute; display: block; border-radius: 50%; background: #fff;
+      animation: starTwinkle linear infinite; opacity: 0;
+    }
+    @keyframes starTwinkle {
+      0%, 100% { opacity: 0;   transform: scale(0.6); }
+      50%       { opacity: 0.9; transform: scale(1.3); }
+    }
+    /* rising particles */
+    .hero-particles { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+    .hero-particles span {
+      position: absolute; display: block; border-radius: 50%;
+      background: rgba(60,90,130,.18);
+      animation: heroFloat linear infinite; bottom: -20px;
+    }
+    @keyframes heroFloat {
+      0%   { transform: translateY(0) rotate(0deg);    opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: .3; }
+      100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+    }
+
+    .hero-inner { position: relative; z-index: 2; width: 100%; }
+
+    /* spinning photo ring */
+    .hero-photo-wrap { display: flex; justify-content: center; margin-bottom: 36px; }
+    .hero-photo-ring {
+      position: relative;
+      width: 176px; height: 176px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, #2d4a6e 0%, #3d6080 50%, #4a7fa5 100%);
+    }
+    .hero-photo-ring img {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #0b1220;
+    }
+    .hero-photo-glow {
+      position: absolute;
+      inset: -22px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(45,74,110,.22) 0%, transparent 70%);
+      animation: glowPulse 3s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes glowPulse {
+      0%, 100% { opacity: .55; transform: scale(1); }
+      50%       { opacity: 1;   transform: scale(1.12); }
+    }
+
+    /* eyebrow */
+    .hero-eyebrow {
+      display: block;
+      font-size: .7rem; letter-spacing: 5px; text-transform: uppercase;
+      color: #7a97b5; font-weight: 700; margin-bottom: 14px;
+    }
+    /* gradient name */
+    .hero-name {
+      font-size: clamp(2.6rem, 5.5vw, 4.4rem) !important;
+      font-weight: 900 !important; line-height: 1.05 !important;
+      background: linear-gradient(135deg, #ffffff 0%, #c5d5e8 40%, #9fbdd6 70%, #7a97b5 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 12px !important; letter-spacing: -.5px;
+    }
+    /* roles line */
+    .hero-role-wrap { font-size: 1rem; color: rgba(255,255,255,.55); margin-bottom: 8px; line-height: 1.8; }
+    .hero-role-wrap .role-sep { color: rgba(255,255,255,.22); margin: 0 7px; }
+    .hero-role-wrap .role-hl { color: #5a8fa5; font-weight: 600; }
+    /* tagline */
+    .hero-tagline { font-size: .78rem; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,.28); margin-bottom: 44px; }
+
+    /* impact counters */
+    .hero-impacts { display: flex; justify-content: center; gap: 36px; flex-wrap: wrap; margin-bottom: 46px; }
+    .hi-item { text-align: center; }
+    .hi-num-row { display: block; text-align: center; line-height: 1; }
+    .hi-num {
+      display: inline; font-size: 2.5rem; font-weight: 900; line-height: 1;
+      background: linear-gradient(135deg, #9fbdd6, #7a97b5);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hi-plus { display: inline; font-size: 1.5rem; font-weight: 900; line-height: 1; vertical-align: top; background: linear-gradient(135deg, #9fbdd6, #7a97b5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hi-lbl { display: block; font-size: .6rem; text-transform: uppercase; letter-spacing: 1.8px; color: rgba(255,255,255,.35); margin-top: 5px; }
+    .hi-sep { width: 1px; background: rgba(255,255,255,.1); align-self: center; height: 42px; }
+
+    /* CTA buttons */
+    .hero-cta-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .hero-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 24px; border-radius: 30px;
+      font-size: .83rem; font-weight: 700; letter-spacing: .4px;
+      text-decoration: none !important; transition: all .25s;
+    }
+    .hero-btn-primary {
+      background: linear-gradient(135deg, #2d4a6e, #3d6080);
+      color: #fff !important;
+      box-shadow: 0 4px 22px rgba(45,74,110,.35);
+    }
+    .hero-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(45,74,110,.45); color: #fff !important; }
+    .hero-btn-glass {
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.2);
+      color: rgba(255,255,255,.85) !important; backdrop-filter: blur(8px);
+    }
+    .hero-btn-glass:hover { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.4); color: #fff !important; }
+
+
+    /* ══════════════════════════════════════════════════════
+       ABOUT
+       ══════════════════════════════════════════════════════ */
+    .about-section { padding: 96px 0; background: #f5f7fa; }
+    .sec-eyebrow-light { font-size:.7rem; letter-spacing:4px; text-transform:uppercase; color:#2d4a6e; font-weight:700; margin-bottom:10px; display:block; }
+    .sec-h2-light {
+      font-size: 2.4rem !important; font-weight: 900 !important; color: #0f172a !important; margin-bottom: 6px !important;
+    }
+    .sec-h2-light::after {
+      content:''; display:block; width:52px; height:4px;
+      background:linear-gradient(90deg,#2d4a6e,#4a7fa5); border-radius:2px; margin-top:10px;
+    }
+    .about-quote {
+      font-size: 1.04rem; font-style: italic; color: #475569;
+      border-left: 3px solid #2d4a6e; padding-left: 16px;
+      margin: 26px 0 20px; line-height: 1.75;
+    }
+    .about-bio p, .about-bio-p, .about-bio-full p { font-size:.95rem; color:#334155; line-height:1.88; margin-bottom:16px; }
+    .about-bio-full { margin-top: 10px; }
+    .about-photo-wrap {
+      border-radius: 22px; overflow: hidden;
+      box-shadow: 0 24px 64px rgba(45,74,110,.10);
+      border: 2px solid rgba(45,74,110,.12);
+      height: 100%;
+    }
+    .about-photo-wrap img { width:100%; height:100%; min-height:520px; object-fit:cover; object-position:center top; display:block; }
+    .about-btn {
+      display:inline-flex; align-items:center; gap:8px;
+      padding:12px 26px; border-radius:30px; font-size:.84rem; font-weight:700;
+      background:linear-gradient(135deg,#2d4a6e,#3d6080); color:#fff !important;
+      text-decoration:none !important; box-shadow:0 4px 20px rgba(45,74,110,.26); transition:all .25s;
+    }
+    .about-btn:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(45,74,110,.40); }
+
+    /* ══════════════════════════════════════════════════════
+       RESEARCH AREAS
+       ══════════════════════════════════════════════════════ */
+    .research-section { padding: 96px 0; background: #0f1420; }
+    .sec-eyebrow-dark { font-size:.7rem; letter-spacing:4px; text-transform:uppercase; color:#7a97b5; font-weight:700; margin-bottom:10px; display:block; }
+    .sec-h2-dark { font-size:2.3rem !important; font-weight:900 !important; color:#fff !important; margin-bottom:50px !important; }
+    .sec-h2-dark::after { content:''; display:block; width:52px; height:4px; background:linear-gradient(90deg,#2d4a6e,#4a7fa5); border-radius:2px; margin:10px auto 0; }
+    .ra-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px; }
+    .ra-card {
+      background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
+      border-radius:18px; padding:30px 26px; transition:all .3s; position:relative; overflow:hidden;
+    }
+    .ra-card::before {
+      content:''; position:absolute; inset:0; border-radius:18px;
+      background:linear-gradient(135deg,rgba(45,74,110,.07) 0%,transparent 100%);
+      opacity:0; transition:opacity .3s;
+    }
+    .ra-card:hover::before { opacity:1; }
+    .ra-card:hover { border-color:rgba(45,74,110,.22); transform:translateY(-5px); box-shadow:0 18px 48px rgba(0,0,0,.45); }
+    .ra-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.45rem; margin-bottom:18px; }
+    .ra-card h5 { font-size:1rem !important; font-weight:700 !important; color:#e2e8f0 !important; margin-bottom:10px !important; }
+    .ra-card p { font-size:.82rem; color:rgba(255,255,255,.44); line-height:1.72; margin:0; }
+
+    /* ══════════════════════════════════════════════════════
+       IMPACT BAR
+       ══════════════════════════════════════════════════════ */
+    .impact-bar { background:linear-gradient(135deg,#112030 0%,#1a2e46 50%,#112030 100%); padding:64px 0; }
+    .impact-grid { display:flex; justify-content:space-around; flex-wrap:wrap; gap:32px; }
+    .impact-item { text-align:center; }
+    .impact-num { display:block; font-size:3.2rem; font-weight:900; color:#fff; line-height:1; }
+    .impact-num sup { font-size:1.6rem; vertical-align:super; }
+    .impact-lbl { display:block; font-size:.67rem; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,.48); margin-top:8px; }
+
+    /* ══════════════════════════════════════════════════════
+       SKILLS
+       ══════════════════════════════════════════════════════ */
+    .skills-section { padding: 96px 0; background: #f5f7fa; }
+    .skill-category { margin-bottom:30px; }
+    .skill-cat-lbl { font-size:.71rem; letter-spacing:2.5px; text-transform:uppercase; font-weight:700; color:#2d4a6e; margin-bottom:14px; }
+    .skill-tags { display:flex; flex-wrap:wrap; gap:8px; }
+    .skill-tag { border-radius:6px; padding:5px 13px; font-size:.77rem; font-weight:500; cursor:default; transition:all .2s; border:1px solid transparent; }
+    .skill-tag.purple { background:#f1f0f8; color:#4a4580; border-color:#dddaf0; }
+    .skill-tag.purple:hover { background:#2d4a6e; color:#fff; border-color:#2d4a6e; transform:translateY(-1px); }
+    .skill-tag.blue { background:#f0f4f8; color:#2d4a6a; border-color:#d6e4f0; }
+    .skill-tag.blue:hover { background:#3b7cb8; color:#fff; border-color:#3b7cb8; transform:translateY(-1px); }
+    .skill-tag.green { background:#f0f5f2; color:#2d4a3e; border-color:#d0e5d8; }
+    .skill-tag.green:hover { background:#3a7a5a; color:#fff; border-color:#3a7a5a; transform:translateY(-1px); }
+    .skill-tag.orange { background:#f5f2ee; color:#5a3e28; border-color:#e5d8cc; }
+    .skill-tag.orange:hover { background:#8a6040; color:#fff; border-color:#8a6040; transform:translateY(-1px); }
+
+    /* ══════════════════════════════════════════════════════
+       QUICK LINKS
+       ══════════════════════════════════════════════════════ */
+    .quicklinks-section { padding:96px 0; background:#0f1420; }
+    .ql-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; }
+    .ql-card {
+      background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
+      border-radius:20px; padding:32px 28px;
+      text-decoration:none !important; display:block; transition:all .3s; position:relative; overflow:hidden;
+    }
+    .ql-card:hover { border-color:rgba(45,74,110,.26); transform:translateY(-6px); box-shadow:0 22px 54px rgba(0,0,0,.5); text-decoration:none !important; }
+    .ql-bottom-line { position:absolute; bottom:0; left:0; right:0; height:3px; opacity:0; transition:opacity .3s; }
+    .ql-card:hover .ql-bottom-line { opacity:1; }
+    .ql-card.pub  .ql-bottom-line { background:linear-gradient(90deg,#2d4a6e,#3d6080); }
+    .ql-card.exp  .ql-bottom-line { background:linear-gradient(90deg,#94a3b8,#cbd5e1); }
+    .ql-card.edu  .ql-bottom-line { background:linear-gradient(90deg,#7a97b5,#2d4a6e); }
+    .ql-card.evt  .ql-bottom-line { background:linear-gradient(90deg,#7eb8e0,#3d6080); }
+    .ql-card.proj .ql-bottom-line { background:linear-gradient(90deg,#4a9e78,#3a8060); }
+    .ql-card.award{ } .ql-card.award .ql-bottom-line { background:linear-gradient(90deg,#a08840,#8a7235); }
+    .ql-icon { width:56px; height:56px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:1.55rem; margin-bottom:20px; }
+    .ql-card h5 { font-size:1.1rem !important; font-weight:800 !important; color:#e2e8f0 !important; margin-bottom:8px !important; }
+    .ql-card p  { font-size:.82rem; color:rgba(255,255,255,.4); margin:0; line-height:1.65; }
+    .ql-arrow { position:absolute; top:26px; right:26px; font-size:1rem; color:rgba(255,255,255,.22); transition:all .25s; }
+    .ql-card:hover .ql-arrow { color:rgba(255,255,255,.75); transform:translate(3px,-3px); }
+
+    /* ══════════════════════════════════════════════════════
+       TESTIMONIALS
+       ══════════════════════════════════════════════════════ */
+
+    /* ══════════════════════════════════════════════════════
+       RESPONSIVE
+       ══════════════════════════════════════════════════════ */
+    @media (max-width:767px) {
+      .hero-name { font-size:2.4rem !important; }
+      .hero-impacts { gap:18px; }
+      .hi-num { font-size:1.9rem; }
+      .hi-sep { display:none; }
+      .about-photo-wrap { margin-bottom:40px; }
+      .testi-card { flex:0 0 300px; }
+      .impact-num { font-size:2.4rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════ -->
+<section class="home-hero">
+  <div class="hero-stars" id="heroStars"></div>
+  <div class="hero-particles">
+    <span style="left:8%;  width:4px;height:4px;  animation-duration:12s;animation-delay:0s;"></span>
+    <span style="left:18%;width:3px;height:3px;  animation-duration:9s; animation-delay:1.5s;"></span>
+    <span style="left:28%;width:6px;height:6px;  animation-duration:14s;animation-delay:0.8s;"></span>
+    <span style="left:38%;width:4px;height:4px;  animation-duration:8s; animation-delay:2.2s;"></span>
+    <span style="left:48%;width:3px;height:3px;  animation-duration:11s;animation-delay:0.4s;"></span>
+    <span style="left:57%;width:7px;height:7px;  animation-duration:15s;animation-delay:1.8s;"></span>
+    <span style="left:66%;width:4px;height:4px;  animation-duration:10s;animation-delay:0.6s;"></span>
+    <span style="left:74%;width:3px;height:3px;  animation-duration:13s;animation-delay:3.1s;"></span>
+    <span style="left:82%;width:5px;height:5px;  animation-duration:9s; animation-delay:1.2s;"></span>
+    <span style="left:91%;width:4px;height:4px;  animation-duration:8s; animation-delay:0.5s;"></span>
+    <span style="left:22%;width:8px;height:8px;  animation-duration:16s;animation-delay:2.5s;"></span>
+    <span style="left:52%;width:3px;height:3px;  animation-duration:7s; animation-delay:4.2s;"></span>
+    <span style="left:71%;width:6px;height:6px;  animation-duration:12s;animation-delay:2.8s;"></span>
+    <span style="left:42%;width:4px;height:4px;  animation-duration:10s;animation-delay:0.9s;"></span>
+    <span style="left:34%;width:3px;height:3px;  animation-duration:8s; animation-delay:3.6s;"></span>
+  </div>
+
+  <div class="hero-inner">
+    <div class="container text-center">
+      <!-- Spinning photo ring -->
+      <div class="hero-photo-wrap">
+        <div style="position:relative; display:inline-block;">
+          <div class="hero-photo-glow"></div>
+          <div class="hero-photo-ring">
+            <img src="files/1. Home/pic.jpg" alt="Dr. Anubha Parashar">
+          </div>
+        </div>
+      </div>
+
+      <h1 class="hero-name">Dr. Anubha Parashar</h1>
+
+      <div class="hero-role-wrap">
+        <span class="role-hl">Analytics &amp; AI Engineer</span>
+        <span class="role-sep">·</span>AI Researcher
+        <span class="role-sep">·</span>Research Scientist
+        <span class="role-sep">·</span>Educator
+        <span class="role-sep">·</span>Computer Vision Expert
+        <span class="role-sep">·</span>Deep Learning Pioneer
+      </div>
+      <p class="hero-tagline">Analytical &amp; AI Engineer · <strong style="color:#7eb8e0;">Pearce Services</strong> · Gurugram, India</p>
+      <p class="hero-tagline" style="margin-top:6px;"><strong style="color:#7eb8e0;">Ph.D.</strong> · Computer Science &amp; Engineering · Manipal University Jaipur</p>
+
+      <!-- Impact numbers -->
+      <div class="hero-impacts">
+        <div class="hi-item">
+          <div class="hi-num-row"><span class="hi-num" data-target="50">0</span><sup class="hi-plus">+</sup></div>
+          <span class="hi-lbl">Publications</span>
+        </div>
+        <div class="hi-sep"></div>
+        <div class="hi-item">
+          <div class="hi-num-row"><span class="hi-num" data-target="6">0</span></div>
+          <span class="hi-lbl">Patents</span>
+        </div>
+        <div class="hi-sep"></div>
+        <div class="hi-item">
+          <div class="hi-num-row"><span class="hi-num" data-target="600">0</span><sup class="hi-plus">+</sup></div>
+          <span class="hi-lbl">Citations</span>
+        </div>
+        <div class="hi-sep"></div>
+        <div class="hi-item">
+          <div class="hi-num-row"><span class="hi-num" data-target="10">0</span><sup class="hi-plus">+</sup></div>
+          <span class="hi-lbl">Keynote Talks</span>
+        </div>
+        <div class="hi-sep"></div>
+        <div class="hi-item">
+          <div class="hi-num-row"><span class="hi-num" data-target="15">0</span><sup class="hi-plus">+</sup></div>
+          <span class="hi-lbl">Years Research</span>
+        </div>
+        <div class="hi-sep"></div>
+        <div class="hi-item">
+          <div class="hi-num-row"><span class="hi-num" data-target="12">0</span><sup class="hi-plus">+</sup></div>
+          <span class="hi-lbl">Years Experience</span>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="hero-cta-row">
+        <a class="hero-btn hero-btn-primary" href="files/1. Home/Anubha_cv.pdf" target="_blank">
+          <i class="fa fa-download"></i> Download CV
+        </a>
+        <a class="hero-btn hero-btn-primary" href="files/1. Home/Anubha_resume.pdf" target="_blank">
+          <i class="fa fa-file-text-o"></i> Resume
+        </a>
+        <a class="hero-btn hero-btn-glass" href="publication.html">
+          <i class="fa fa-book"></i> View Research
+        </a>
+        <a class="hero-btn hero-btn-glass" href="https://www.linkedin.com/in/anubhaparashar/" target="_blank">
+          <i class="fa fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     ABOUT
+     ═══════════════════════════════════════════════════════ -->
+<section class="about-section">
+  <div class="container">
+    <!-- Top row: photo + heading/quote/first para -->
+    <div class="row align-items-start">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="about-photo-wrap">
+          <img src="files/1. Home/Picture1.png" alt="Dr. Anubha Parashar">
+        </div>
+      </div>
+      <div class="col-lg-5 offset-lg-1">
+        <span class="sec-eyebrow-light">About</span>
+        <h2 class="sec-h2-light">Analytics & AI Engineer, Research Scientist<br>&amp; AI Innovator</h2>
+        <blockquote class="about-quote">
+          "Always walk through life as if you've something new to learn and you will."
+        </blockquote>
+        <p class="about-bio-p">Dr. Anubha Parashar is an accomplished <strong>Analytics &amp; AI Engineer</strong>, AI researcher, and educator with <strong>over a decade of experience</strong> in deep learning, computer vision, generative AI, biometrics, NLP, and intelligent systems. She currently works at <strong>Pearce Services, Gurugram</strong>, where she develops production-grade AI solutions for real-world applications, including solar panel defect detection, edge AI systems, forecasting models, scheduling optimization, OCR pipelines, and GIS-based analytics.</p>
+      </div>
+    </div>
+
+    <!-- Full-width remaining paragraphs -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="about-bio-full">
+          <p>Prior to her current role, she served as a <strong>Research Scientist – Artificial Intelligence &amp; Metaverse</strong> at <strong>Invincible Ocean, Gurugram</strong> (Apr 2024 – Dec 2024), where she delivered a suite of production AI systems: a <strong>Vehicle RC Data Chatbot</strong> powered by a fine-tuned LLM that reduced manual search time by 70%, a <strong>Virtual Try-On (VITON) platform</strong> using deep learning to overlay clothing on user photos at 95% satisfaction, and a <strong>Text Recognition &amp; OCR pipeline</strong> built with Tesseract, PaddleOCR, and Paddle NLP achieving 98% accuracy with a Dockerized, Gemini-assisted backend.</p>
+
+          <p>Before her industry journey, she spent nearly eight years as a <strong>Senior Assistant Professor in Computer Science &amp; Engineering</strong> at <strong>Manipal University Jaipur</strong> (Jul 2016 – Apr 2024), teaching and designing curriculum across AI, Deep Learning, Computer Vision, NLP, IoT, Image Processing, and Humanoid Robotics. She supervised <strong>15+ M.Tech theses</strong>, collaborated with industry partners, and was recognised with the <strong>Excellent Young Researcher Award 2022</strong> by Manipal University Jaipur.</p>
+
+          <p>She holds a <strong>Ph.D. in Computer Science and Engineering</strong> with a specialization in Artificial Intelligence from <strong>Manipal University Jaipur</strong>. Her doctoral research focused on <strong>robust gait recognition using deep learning</strong> to handle real-world covariates such as clothing variation, occlusion, viewpoint changes, and appearance differences. She has also served as a <strong>Visiting Scholar at the University of Zagreb, Croatia</strong>, and has extensive academic experience as a faculty member and research mentor.</p>
+
+          <p>Her research profile includes <strong>50+ peer-reviewed publications</strong>, <strong>6 granted or published patents</strong>, <strong>10+ keynote talks</strong>, and reviewer roles for leading international journals and conferences. Her research interests include gait recognition, biometrics, large language models, generative AI, computer vision, NLP, robotics, IoT, bipedal locomotion, and brain–computer interaction.</p>
+
+          <p>At the core of her work, Dr. Parashar is a <strong>builder of intelligent systems</strong> — combining research depth, engineering execution, and academic leadership to create AI solutions that are <strong>practical, scalable, and impactful</strong>.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     SKILLS
+     ═══════════════════════════════════════════════════════ -->
+<section class="skills-section">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-eyebrow-light">Technical Stack</span>
+      <h2 class="sec-h2-light">Skills &amp; Tools</h2>
+    </div>
+    <div class="row mt-4">
+      <div class="col-lg-6">
+        <div class="skill-category">
+          <p class="skill-cat-lbl">Languages</p>
+          <div class="skill-tags">
+            <span class="skill-tag blue">C</span>
+            <span class="skill-tag blue">C++</span>
+            <span class="skill-tag blue">Java</span>
+            <span class="skill-tag blue">Python</span>
+            <span class="skill-tag blue">PHP</span>
+            <span class="skill-tag blue">JavaScript</span>
+            <span class="skill-tag blue">HTML</span>
+            <span class="skill-tag blue">XML</span>
+            <span class="skill-tag blue">CSS</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <p class="skill-cat-lbl">Database</p>
+          <div class="skill-tags">
+            <span class="skill-tag purple">PostgreSQL</span>
+            <span class="skill-tag purple">MS-Access</span>
+            <span class="skill-tag purple">Oracle</span>
+            <span class="skill-tag purple">MySQL</span>
+            <span class="skill-tag purple">Firebase</span>
+            <span class="skill-tag purple">MongoDB</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <p class="skill-cat-lbl">Webserver</p>
+          <div class="skill-tags">
+            <span class="skill-tag orange">Tomcat</span>
+            <span class="skill-tag orange">Web Logic</span>
+            <span class="skill-tag orange">Apache</span>
+            <span class="skill-tag orange">IIS</span>
+            <span class="skill-tag orange">Heroku</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <p class="skill-cat-lbl">Cloud</p>
+          <div class="skill-tags">
+            <span class="skill-tag orange">Google Cloud Platform</span>
+            <span class="skill-tag orange">ThingSpeak</span>
+            <span class="skill-tag orange">Xively</span>
+            <span class="skill-tag orange">IBM Bluemix</span>
+            <span class="skill-tag orange">Microsoft Azure</span>
+            <span class="skill-tag orange">Amazon Web Service</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <p class="skill-cat-lbl">Hardware Platforms</p>
+          <div class="skill-tags">
+            <span class="skill-tag green">JetsonNano</span>
+            <span class="skill-tag green">Arduino</span>
+            <span class="skill-tag green">Raspberry Pi</span>
+            <span class="skill-tag green">Orange Pi</span>
+            <span class="skill-tag green">Intel Edison</span>
+            <span class="skill-tag green">8051</span>
+            <span class="skill-tag green">STM32F401 NUCLEO</span>
+            <span class="skill-tag green">AVR XMEGA</span>
+            <span class="skill-tag green">AVR Dragon</span>
+            <span class="skill-tag green">ATMEL SAM4L Xplained Pro</span>
+            <span class="skill-tag green">TIVA C TM4C123G</span>
+            <span class="skill-tag green">FRDM–K64F NXP</span>
+            <span class="skill-tag green">Lolin NodeMCU</span>
+            <span class="skill-tag green">8086</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <p class="skill-cat-lbl">Operating System</p>
+          <div class="skill-tags">
+            <span class="skill-tag green">Windows XP</span>
+            <span class="skill-tag green">Windows 7</span>
+            <span class="skill-tag green">Windows 10</span>
+            <span class="skill-tag green">Linux – Red Hat</span>
+            <span class="skill-tag green">Linux – Ubuntu</span>
+            <span class="skill-tag green">UNIX</span>
+            <span class="skill-tag green">DOS</span>
+            <span class="skill-tag green">Raspbian</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <p class="skill-cat-lbl">Subjective Knowledge</p>
+          <div class="skill-tags">
+            <span class="skill-tag orange">Theory of Computation</span>
+            <span class="skill-tag orange">Compiler Design</span>
+            <span class="skill-tag orange">Data Structure</span>
+            <span class="skill-tag orange">Algorithm</span>
+            <span class="skill-tag orange">Operating System</span>
+            <span class="skill-tag orange">Computer Networks</span>
+            <span class="skill-tag orange">Internet Technology</span>
+            <span class="skill-tag orange">Microprocessor</span>
+            <span class="skill-tag orange">DBMS</span>
+            <span class="skill-tag orange">Software Engineering</span>
+            <span class="skill-tag orange">Web Development</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="skill-category">
+          <p class="skill-cat-lbl">GenAI &amp; Agentic AI</p>
+          <div class="skill-tags">
+            <span class="skill-tag purple">LLM Agents</span>
+            <span class="skill-tag purple">Agentic AI</span>
+            <span class="skill-tag purple">LangChain</span>
+            <span class="skill-tag purple">RAG</span>
+            <span class="skill-tag purple">FAISS</span>
+            <span class="skill-tag purple">DeepSeek</span>
+            <span class="skill-tag purple">Google Gemini</span>
+            <span class="skill-tag purple">GPT-4o</span>
+            <span class="skill-tag purple">LLaMA</span>
+            <span class="skill-tag purple">HuggingFace</span>
+            <span class="skill-tag purple">MCP</span>
+            <span class="skill-tag purple">gRPC</span>
+            <span class="skill-tag purple">Protobuf</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <p class="skill-cat-lbl">Optimization &amp; MLOps</p>
+          <div class="skill-tags">
+            <span class="skill-tag orange">OR-Tools</span>
+            <span class="skill-tag orange">PyVRP</span>
+            <span class="skill-tag orange">Ant Colony Optimization</span>
+            <span class="skill-tag orange">INT4 Quantization</span>
+            <span class="skill-tag orange">Low-Rank Adaptation</span>
+            <span class="skill-tag orange">FastAPI</span>
+            <span class="skill-tag orange">Streamlit</span>
+            <span class="skill-tag orange">Docker</span>
+            <span class="skill-tag orange">CI/CD</span>
+            <span class="skill-tag orange">MLOps</span>
+            <span class="skill-tag orange">Azure Container Apps</span>
+            <span class="skill-tag orange">Snowflake</span>
+            <span class="skill-tag orange">Redis</span>
+            <span class="skill-tag orange">pgvector</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <p class="skill-cat-lbl">Software Tools</p>
+          <div class="skill-tags">
+            <span class="skill-tag purple">MATLAB</span>
+            <span class="skill-tag purple">GitHub</span>
+            <span class="skill-tag purple">LaTeX</span>
+            <span class="skill-tag purple">Weka</span>
+            <span class="skill-tag purple">PyTorch</span>
+            <span class="skill-tag purple">Caffe</span>
+            <span class="skill-tag purple">OpenCV</span>
+            <span class="skill-tag purple">DLIB</span>
+            <span class="skill-tag purple">Anaconda</span>
+            <span class="skill-tag purple">Google Colab</span>
+            <span class="skill-tag purple">Django</span>
+            <span class="skill-tag purple">TensorFlow</span>
+            <span class="skill-tag purple">Spyder</span>
+            <span class="skill-tag purple">Jupyter Notebook</span>
+            <span class="skill-tag purple">Sublime</span>
+            <span class="skill-tag purple">Webots</span>
+            <span class="skill-tag purple">OpenSim</span>
+            <span class="skill-tag purple">Choregraphe</span>
+            <span class="skill-tag purple">RemoteXY</span>
+            <span class="skill-tag purple">Arduino Studio</span>
+            <span class="skill-tag purple">Node.js</span>
+            <span class="skill-tag purple">Flask</span>
+            <span class="skill-tag purple">MobaXterm</span>
+            <span class="skill-tag purple">Flutter</span>
+            <span class="skill-tag purple">NetBeans</span>
+            <span class="skill-tag purple">Eclipse</span>
+            <span class="skill-tag purple">Android Studio</span>
+            <span class="skill-tag purple">SmartDraw</span>
+            <span class="skill-tag purple">RationalRose</span>
+            <span class="skill-tag purple">StarUML</span>
+            <span class="skill-tag purple">Microsoft Visio</span>
+            <span class="skill-tag purple">Selenium</span>
+            <span class="skill-tag purple">Photoshop</span>
+            <span class="skill-tag purple">Flash</span>
+            <span class="skill-tag purple">Blender</span>
+            <span class="skill-tag purple">Vegas Pro</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <p class="skill-cat-lbl">Research Interests</p>
+          <div class="skill-tags">
+            <span class="skill-tag blue">Deep Learning</span>
+            <span class="skill-tag blue">Computer Vision</span>
+            <span class="skill-tag blue">Machine Learning</span>
+            <span class="skill-tag blue">Artificial Intelligence</span>
+            <span class="skill-tag blue">Neural Network</span>
+            <span class="skill-tag blue">Data Science</span>
+            <span class="skill-tag blue">Internet of Things</span>
+            <span class="skill-tag blue">Internet of Everything</span>
+            <span class="skill-tag blue">Robotics</span>
+            <span class="skill-tag blue">Bipedal Locomotion</span>
+            <span class="skill-tag blue">Biometrics Gait</span>
+            <span class="skill-tag blue">Humanoid Robotics</span>
+            <span class="skill-tag blue">Digital Image Processing</span>
+            <span class="skill-tag blue">Natural Language Processing</span>
+            <span class="skill-tag blue">Brain Computer Interface</span>
+            <span class="skill-tag blue">Human Computer Interaction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     RESEARCH AREAS
+     ═══════════════════════════════════════════════════════ -->
+<section class="research-section">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-eyebrow-dark">Expertise</span>
+      <h2 class="sec-h2-dark">Research Areas</h2>
+    </div>
+    <div class="ra-grid">
+      <div class="ra-card">
+        <div class="ra-icon" style="background:rgba(45,74,110,.10);">
+          <i class="fa fa-eye" style="color:#7a97b5;"></i>
+        </div>
+        <h5>Computer Vision</h5>
+        <p>Deep learning-based image analysis, object detection, segmentation, and visual intelligence systems for real-world applications.</p>
+      </div>
+      <div class="ra-card">
+        <div class="ra-icon" style="background:rgba(45,100,130,.08);">
+          <i class="fa fa-user-secret" style="color:#5a8fa5;"></i>
+        </div>
+        <h5>Gait Recognition &amp; Biometrics</h5>
+        <p>Person identification through gait patterns, multi-modal biometric fusion, and behavioural analytics.</p>
+      </div>
+      <div class="ra-card">
+        <div class="ra-icon" style="background:rgba(45,74,110,.10);">
+          <i class="fa fa-connectdevelop" style="color:#7a97b5;"></i>
+        </div>
+        <h5>Deep Learning &amp; Neural Networks</h5>
+        <p>CNNs, RNNs, Transformers, and novel architectures for complex pattern recognition and classification tasks.</p>
+      </div>
+      <div class="ra-card">
+        <div class="ra-icon" style="background:rgba(16,185,129,.12);">
+          <i class="fa fa-wifi" style="color:#4a9e78;"></i>
+        </div>
+        <h5>IoT &amp; Edge AI</h5>
+        <p>Intelligent systems on embedded hardware — Jetson Nano, Raspberry Pi, Arduino — for real-world AI deployments.</p>
+      </div>
+      <div class="ra-card">
+        <div class="ra-icon" style="background:rgba(251,191,36,.12);">
+          <i class="fa fa-android" style="color:#a08840;"></i>
+        </div>
+        <h5>Humanoid Robotics</h5>
+        <p>Bipedal locomotion, push recovery, and autonomous robot control using AI-driven motion planning algorithms.</p>
+      </div>
+      <div class="ra-card">
+        <div class="ra-icon" style="background:rgba(236,72,153,.12);">
+          <i class="fa fa-bar-chart" style="color:#8a7090;"></i>
+        </div>
+        <h5>Data Science &amp; Analytics</h5>
+        <p>Extracting insights from complex datasets through machine learning, statistical modelling, and visualisation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--================ Start Testimonial Area =================-->
+<div class="testimonial_area section_gap_bottom" style="padding-top:70px;">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 text-center">
+				<div class="main_title">
+					<h2>Recommendations</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="testi_slider owl-carousel">
+
+				<div class="testi_item">
+					<div class="row">
+						<div class="col-lg-4">
+							<img src="files/1. Home/testimonials/t3.jpg" alt="">
+						</div>
+						<div class="col-lg-8">
+							<div class="testi_text">
+								<h4>Sc. Prof. Dr. Slobodan Ribarić</h4>
+								<h5>Professor at University of Zagreb, Croatia.</h5>
+								<h6>September 13, 2018</h6>
+								<p>Rarely do people come with as much drive as Anubha. When she was a PhD student, during that time, I was impressed by her research skills. She showcased talent, too—effortlessly juggling a wide array of technical skills. I'm confident that Anubha will have a bright future in her chosen career path of research and that she'll be an asset to any employer.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="testi_item">
+					<div class="row">
+						<div class="col-lg-4">
+							<img src="files/1. Home/testimonials/t2.jpg" alt="">
+						</div>
+						<div class="col-lg-8">
+							<div class="testi_text">
+								<h4>Dr. Imad Rida</h4>
+								<h5>Associate Professor at Université de Technologie de Compiègne (UTC), France.</h5>
+								<h6>January 24, 2023</h6>
+								<p>Working with Anubha Parashar is a rare opportunity to come across, a self-driven researcher with team spirit. She did a marvellous job during her PhD for five years at Manipal University. She is innovative, organized as well as helpful and is always open to ideas and suggestions. It was a pleasure to mentor her for all these years.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="testi_item">
+					<div class="row">
+						<div class="col-lg-4">
+							<img src="files/1. Home/testimonials/t4.jpg" alt="">
+						</div>
+						<div class="col-lg-8">
+							<div class="testi_text">
+								<h4>Prof Dr. Weiping Ding</h4>
+								<h5>Professor at Nantong University, China.</h5>
+								<h6>February 8, 2023</h6>
+								<p>Anubha Parashar worked as a PhD scholar under my supervision for five years. As a co-guide, I was consistently impressed by her research skills, her dedication, and commitment. She is an innovator who always invest time to improve knowledge and learn. She is focused, reliable, and goal-oriented, and always do her best. She is kind and an outstanding person and knows how to bring the best out of herself. Fit for industry and academia.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="testi_item">
+					<div class="row">
+						<div class="col-lg-4">
+							<img src="files/1. Home/testimonials/t5.png" alt="">
+						</div>
+						<div class="col-lg-8">
+							<div class="testi_text">
+								<h4>Prof. Dr. Rajveer Singh Shekhawat</h4>
+								<h5>Dean at Manipal University Jaipur, India.</h5>
+								<h6>February 2, 2023</h6>
+								<p>Anubha Parashar worked as a research scholar at MUJ campus for five years. As a guide, I was impressed by her work ethic and research skills. She is a hard-working young lady with a great set of technical skills and commitment to her duty. She was always ready to go the extra mile to provide high-quality research outcomes. She will be an asset to any organization.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="testi_item">
+					<div class="row">
+						<div class="col-lg-4">
+							<img src="files/1. Home/testimonials/t1.png" alt="">
+						</div>
+						<div class="col-lg-8">
+							<div class="testi_text">
+								<h4>Dr. Vijay Bhaskar Semwal</h4>
+								<h5>Assistant Professor at Maulana Azad National Institute of Technology.</h5>
+								<h6>March 12, 2016</h6>
+								<p>Here I would like to written about one of the most dynamic student of my career. i feel happy when i used to guided her. She has skill to convert the idea into dream. She is very good in bipedal walk and machine learning. I wish best for her. She is very good in matlab. Suitable for industry and academic.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!--================ End Testimonial Area =================-->
+
+
+<div id="site-footer"></div>
+
+<!-- Scripts -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/site-components.js"></script>
+
+<script>
+/* ── Star field (80 random stars) ── */
+(function () {
+  var container = document.getElementById('heroStars');
+  for (var i = 0; i < 80; i++) {
+    var s = document.createElement('span');
+    var size = Math.random() * 2.5 + 0.5;
+    s.style.cssText =
+      'left:' + (Math.random() * 100) + '%;' +
+      'top:' + (Math.random() * 100) + '%;' +
+      'width:' + size + 'px;' +
+      'height:' + size + 'px;' +
+      'animation-duration:' + (Math.random() * 4 + 2) + 's;' +
+      'animation-delay:' + (Math.random() * 8) + 's;';
+    container.appendChild(s);
+  }
+})();
+
+/* ── Counter animation (hero + impact bar) ── */
+function animateCount(el, target) {
+  var start = performance.now();
+  var duration = target > 100 ? 2200 : 1600;
+  function step(now) {
+    var p = Math.min((now - start) / duration, 1);
+    var ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(ease * target);
+    if (p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+var countIO = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e) {
+    if (!e.isIntersecting) return;
+    var el = e.target;
+    animateCount(el, parseInt(el.dataset.target, 10));
+    countIO.unobserve(el);
+  });
+}, { threshold: 0.35 });
+
+document.querySelectorAll('.hi-num[data-target], .imp-count[data-target]').forEach(function (el) {
+  countIO.observe(el);
+});
+
+/* ── Testimonials owl carousel ── */
+$(document).ready(function () {
+  var $testiSlider = $('.testi_slider');
+  if (!$testiSlider.length || typeof $.fn.owlCarousel !== 'function') return;
+
+  if ($testiSlider.hasClass('owl-loaded')) {
+    $testiSlider.trigger('destroy.owl.carousel');
+    $testiSlider.removeClass('owl-loaded owl-drag');
+    $testiSlider.find('.owl-stage-outer').children().unwrap();
+  }
+
+  $testiSlider.owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    nav: false,
+    margin: 24,
+    responsive: {
+      0:   { items: 1 },
+      768: { items: 2 },
+      1200:{ items: 2 }
+    }
+  });
+
+});
+</script>
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>

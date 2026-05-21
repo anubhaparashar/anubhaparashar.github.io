@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Blog – Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+    /* ── HEADER PHOTO ── */
+    .blog-header-wrap {
+      position: relative; width: 100%; height: 105vh; margin-top: 93px; overflow: hidden;
+    }
+    .blog-header-wrap::before {
+      content: ''; position: absolute; inset: -30px;
+      background-image: url('files/8. Blog/1.png');
+      background-size: cover; background-position: center;
+      filter: blur(22px) brightness(0.6); z-index: 0;
+    }
+    .blog-header {
+      position: absolute; top: 0; bottom: 0;
+      width: 100vw; left: 50%; transform: translateX(-50%);
+      overflow: hidden; z-index: 1;
+    }
+    .blog-header img {
+      width: 100%; height: 100%; object-fit: fill; display: block;
+    }
+
+    /* ── FEATURED SECTION ── */
+    .featured-section {
+      background: linear-gradient(180deg, #0f1e4a 0%, #142060 100%);
+      padding: 70px 0 60px;
+    }
+    .section-eyebrow {
+      font-size:.65rem; letter-spacing:3.5px; text-transform:uppercase;
+      color:#7eb8e0; font-weight:800; margin-bottom:6px;
+    }
+    .section-title {
+      font-size:1.75rem !important; font-weight:900 !important;
+      color:#fff !important; margin-bottom:48px;
+    }
+    /* category accent colours */
+    :root {
+      --col-academics: #7eb8e0;
+      --col-social:    #f0a500;
+      --col-sports:    #50c878;
+      --col-avocations:   #c084fc;
+    }
+    .feat-card {
+      border-radius:16px; overflow:hidden; position:relative;
+      height:300px; display:block; text-decoration:none;
+      transition:transform .35s, box-shadow .35s;
+      /* default border, overridden per category */
+      box-shadow: 0 0 0 2px rgba(255,255,255,.08), 0 12px 40px rgba(0,0,0,.45);
+    }
+    .feat-card.feat-academics { box-shadow: 0 0 0 2px var(--col-academics), 0 12px 40px rgba(126,184,224,.25); }
+    .feat-card.feat-social    { box-shadow: 0 0 0 2px var(--col-social),    0 12px 40px rgba(240,165,0,.25); }
+    .feat-card.feat-sports    { box-shadow: 0 0 0 2px var(--col-sports),    0 12px 40px rgba(80,200,120,.25); }
+    .feat-card.feat-avocations   { box-shadow: 0 0 0 2px var(--col-avocations),  0 12px 40px rgba(192,132,252,.25); }
+    .feat-card:hover { transform:translateY(-8px); text-decoration:none; }
+    .feat-card.feat-academics:hover { box-shadow: 0 0 0 3px var(--col-academics), 0 24px 60px rgba(126,184,224,.45); }
+    .feat-card.feat-social:hover    { box-shadow: 0 0 0 3px var(--col-social),    0 24px 60px rgba(240,165,0,.45); }
+    .feat-card.feat-sports:hover    { box-shadow: 0 0 0 3px var(--col-sports),    0 24px 60px rgba(80,200,120,.45); }
+    .feat-card.feat-avocations:hover   { box-shadow: 0 0 0 3px var(--col-avocations),  0 24px 60px rgba(192,132,252,.45); }
+    .feat-card img {
+      width:100%; height:100%; object-fit:cover; object-position:center center; display:block;
+      transition:transform .45s; filter:brightness(.75);
+    }
+    .feat-card.feat-academics img { object-position: left center; }
+    .feat-card.feat-social img { object-position: right 25%; }
+    .feat-card:hover img { transform:scale(1.06); filter:brightness(.65); }
+    .feat-card-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(to top, rgba(5,10,30,.95) 0%, rgba(5,10,30,.5) 50%, rgba(5,10,30,.15) 100%);
+    }
+    /* coloured bottom stripe */
+    .feat-card::after {
+      content:''; position:absolute; bottom:0; left:0; right:0; height:4px;
+      border-radius:0 0 20px 20px;
+    }
+    .feat-card.feat-academics::after { background: var(--col-academics); }
+    .feat-card.feat-social::after    { background: var(--col-social); }
+    .feat-card.feat-sports::after    { background: var(--col-sports); }
+    .feat-card.feat-avocations::after   { background: var(--col-avocations); }
+    .feat-card-body {
+      position:absolute; bottom:0; left:0; right:0; padding:20px 18px 22px;
+    }
+    .feat-badge {
+      display:inline-flex; align-items:center; gap:6px;
+      padding:5px 14px; border-radius:20px;
+      font-size:.62rem; font-weight:800; letter-spacing:1px; text-transform:uppercase;
+      margin-bottom:12px;
+    }
+    .feat-badge.academics { background:rgba(126,184,224,.18); color:var(--col-academics); border:1.5px solid rgba(126,184,224,.5); }
+    .feat-badge.social    { background:rgba(240,165,0,.15);   color:var(--col-social);    border:1.5px solid rgba(240,165,0,.5); }
+    .feat-badge.sports    { background:rgba(80,200,120,.15);  color:var(--col-sports);    border:1.5px solid rgba(80,200,120,.5); }
+    .feat-badge.avocations   { background:rgba(192,132,252,.18); color:var(--col-avocations);   border:1.5px solid rgba(192,132,252,.5); }
+    .feat-card-title {
+      font-size:1rem !important; font-weight:900 !important;
+      color:#fff !important; margin:0 0 8px; line-height:1.35;
+    }
+    .feat-card-excerpt { font-size:.75rem; color:rgba(255,255,255,.72); margin:0 0 14px; line-height:1.45; }
+    /* visit button */
+    .feat-visit-btn {
+      display:inline-flex; align-items:center; gap:8px; white-space:nowrap;
+      padding:7px 16px; border-radius:24px; font-size:.68rem; font-weight:800;
+      text-transform:uppercase; letter-spacing:.8px;
+      transition:all .25s; border:2px solid;
+    }
+    .feat-academics .feat-visit-btn { color:var(--col-academics); border-color:var(--col-academics); }
+    .feat-social    .feat-visit-btn { color:var(--col-social);    border-color:var(--col-social); }
+    .feat-sports    .feat-visit-btn { color:var(--col-sports);    border-color:var(--col-sports); }
+    .feat-avocations   .feat-visit-btn { color:var(--col-avocations);   border-color:var(--col-avocations); }
+    .feat-card:hover .feat-visit-btn { color:#0f1e4a; }
+    .feat-card.feat-academics:hover .feat-visit-btn { background:var(--col-academics); border-color:var(--col-academics); }
+    .feat-card.feat-social:hover    .feat-visit-btn { background:var(--col-social);    border-color:var(--col-social); }
+    .feat-card.feat-sports:hover    .feat-visit-btn { background:var(--col-sports);    border-color:var(--col-sports); }
+    .feat-card.feat-avocations:hover   .feat-visit-btn { background:var(--col-avocations);   border-color:var(--col-avocations); }
+    .feat-visit-btn i { font-size:.7rem; transition:transform .2s; }
+    .feat-card:hover .feat-visit-btn i { transform:translateX(4px); }
+
+    /* ── FILTER + GRID ── */
+    .blog-grid-section { background:#f5f6ff; padding:20px 0 80px; }
+    .archive-panel {
+      background:#fff; border-radius:14px; padding:22px 22px 20px;
+      box-shadow:0 4px 24px rgba(15,52,96,.08); margin-bottom:28px;
+      border:1px solid #e8eeff;
+    }
+    .archive-head { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:18px; }
+    .archive-kicker { font-size:.68rem; font-weight:900; color:#7eb8e0; text-transform:uppercase; letter-spacing:2px; margin-bottom:4px; }
+    .archive-title { font-size:1.2rem !important; font-weight:900 !important; color:#0f3460 !important; margin:0 0 4px; }
+    .archive-copy { font-size:.82rem; color:#667; line-height:1.55; margin:0; max-width:560px; }
+    .archive-count {
+      flex:0 0 auto; min-width:120px; text-align:center; background:#f0f4ff;
+      color:#0f3460; border-radius:12px; padding:12px 14px; border:1px solid #dce5ff;
+    }
+    .archive-count strong { display:block; font-size:1.45rem; line-height:1; font-weight:900; }
+    .archive-count span { font-size:.68rem; text-transform:uppercase; letter-spacing:1px; font-weight:800; color:#778; }
+    .archive-tools {
+      display:grid; grid-template-columns:minmax(220px,1fr) 160px auto;
+      gap:12px; align-items:center; margin-bottom:18px;
+    }
+    .archive-search, .archive-sort {
+      height:42px; border:2px solid #e0e6ff; border-radius:24px; background:#fff;
+      color:#0f3460; font-size:.82rem; font-weight:600; outline:none;
+      transition:border-color .2s, box-shadow .2s;
+    }
+    .archive-search { padding:0 18px 0 40px; width:100%; }
+    .archive-search-wrap { position:relative; }
+    .archive-search-wrap i { position:absolute; left:16px; top:50%; transform:translateY(-50%); color:#9aa9d6; font-size:.8rem; }
+    .archive-search:focus, .archive-sort:focus { border-color:#7eb8e0; box-shadow:0 0 0 3px rgba(126,184,224,.16); }
+    .archive-sort { padding:0 14px; width:100%; }
+    .view-toggle { display:inline-flex; border:2px solid #e0e6ff; border-radius:24px; overflow:hidden; background:#f8faff; }
+    .view-btn {
+      width:42px; height:38px; border:none; background:transparent; color:#8490b5;
+      cursor:pointer; transition:background .2s, color .2s;
+    }
+    .view-btn.active { background:#0f3460; color:#fff; }
+    .filter-bar {
+      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+      margin-bottom:0; padding-top:16px;
+      border-top:2px solid #e8eeff;
+    }
+    .filter-label { font-size:.68rem; font-weight:800; color:#999; text-transform:uppercase; letter-spacing:1.5px; margin-right:4px; }
+    .filter-btn {
+      background:none; border:2px solid #e0e6ff; border-radius:24px;
+      padding:7px 18px; font-size:.78rem; font-weight:700; color:#888;
+      cursor:pointer; transition:all .2s; display:inline-flex; align-items:center; gap:6px;
+    }
+    .filter-btn i { font-size:.75rem; }
+    .filter-btn:hover { border-color:#7eb8e0; color:#0f3460; }
+    .filter-btn.active { background:#0f3460; border-color:#0f3460; color:#fff; }
+    .filter-btn .f-count { font-size:.6rem; background:rgba(255,255,255,.2); padding:1px 6px; border-radius:10px; }
+    .filter-btn:not(.active) .f-count { background:rgba(15,52,96,.08); color:#666; }
+
+    /* ── POST CARDS ── */
+    .post-card {
+      background:#fff; border-radius:16px; overflow:hidden;
+      box-shadow:0 4px 22px rgba(15,52,96,.08);
+      border-top:4px solid #7eb8e0;
+      transition:transform .25s, box-shadow .25s;
+      height:100%; display:flex; flex-direction:column;
+    }
+    .post-card:hover { transform:translateY(-5px); box-shadow:0 12px 38px rgba(15,52,96,.15); }
+    .post-card.cat-social    { border-top-color:#f0a500; }
+    .post-card.cat-sports    { border-top-color:#50c878; }
+    .post-card.cat-avocations   { border-top-color:#c084fc; }
+    .post-card .card-img-wrap { position:relative; overflow:hidden; flex-shrink:0; }
+    .post-card .card-img-wrap img { width:100%; height:135px; object-fit:cover; display:block; transition:transform .35s; }
+    .post-card:hover .card-img-wrap img { transform:scale(1.05); }
+    .post-card .card-cat-badge {
+      position:absolute; top:12px; left:12px;
+      padding:4px 12px; border-radius:20px; font-size:.6rem; font-weight:800;
+      text-transform:uppercase; letter-spacing:.8px;
+      background:rgba(15,52,96,.8); color:#7eb8e0; backdrop-filter:blur(4px);
+    }
+    .post-card.cat-social    .card-cat-badge { background:rgba(60,40,0,.8);  color:#f0a500; }
+    .post-card.cat-sports    .card-cat-badge { background:rgba(0,60,20,.8);  color:#50c878; }
+    .post-card.cat-avocations   .card-cat-badge { background:rgba(60,0,80,.8);  color:#c084fc; }
+    .post-card .card-body { padding:16px 16px 14px; flex:1; display:flex; flex-direction:column; }
+    .post-card .card-meta { font-size:.7rem; color:#aaa; margin-bottom:8px; display:flex; align-items:center; gap:10px; }
+    .post-card .card-meta i { color:#c8d4f7; }
+    .post-card h3 { font-size:.9rem !important; font-weight:800 !important; color:#0f3460 !important; margin:0 0 8px; line-height:1.35; }
+    .post-card p { font-size:.78rem; color:#666; line-height:1.5; margin:0 0 14px; flex:1; }
+    .post-card .card-footer-row { display:flex; align-items:center; justify-content:space-between; margin-top:auto; }
+    .post-card .read-btn {
+      font-size:.72rem; font-weight:700; color:#0f3460; text-decoration:none;
+      display:inline-flex; align-items:center; gap:5px;
+      padding:6px 14px; border-radius:20px; border:2px solid #e0e6ff;
+      transition:all .2s;
+    }
+    .post-card .read-btn:hover { background:#0f3460; color:#fff; border-color:#0f3460; text-decoration:none; }
+    .post-card .read-btn i { font-size:.65rem; transition:transform .2s; }
+    .post-card:hover .read-btn i { transform:translateX(3px); }
+
+    .post-col { margin-bottom:28px; transition:opacity .3s, transform .3s; }
+    .post-col.hidden { display:none; }
+    .post-col.list-mode { flex:0 0 100%; max-width:100%; }
+    .post-col.list-mode .post-card { flex-direction:row; min-height:170px; }
+    .post-col.list-mode .card-img-wrap { width:220px; }
+    .post-col.list-mode .card-img-wrap img { height:100%; min-height:170px; }
+    .post-col.list-mode .card-body { padding:22px 24px; }
+    .post-col.list-mode .card-meta { flex-wrap:wrap; }
+    .archive-footer { text-align:center; margin-top:4px; }
+    .show-more-btn {
+      border:none; border-radius:24px; background:#0f3460; color:#fff;
+      padding:11px 26px; font-size:.78rem; font-weight:900; letter-spacing:.7px;
+      text-transform:uppercase; cursor:pointer; box-shadow:0 8px 22px rgba(15,52,96,.18);
+      transition:transform .2s, box-shadow .2s;
+    }
+    .show-more-btn:hover { transform:translateY(-2px); box-shadow:0 12px 30px rgba(15,52,96,.25); }
+    .show-more-btn[hidden] { display:none; }
+
+    /* ── SIDEBAR ── */
+    .blog_right_sidebar { padding-top:0; }
+    .single_sidebar_widget, .single-sidebar-widget {
+      background:#fff; border-radius:12px; padding:24px 22px;
+      margin-bottom:24px; box-shadow:0 3px 18px rgba(15,52,96,.07);
+    }
+    .widget_title { font-size:1rem !important; font-weight:800 !important; color:#0f3460 !important; background:none !important; margin-bottom:18px; padding-bottom:10px; border-bottom:2px solid #e8eeff; }
+    .author_widget { text-align:center; }
+    .author_img { width:80px; height:80px; object-fit:cover; border:3px solid #7eb8e0; margin-bottom:12px; }
+    .author_widget h4 { font-weight:800 !important; color:#0f3460 !important; margin-bottom:2px; }
+    .author_widget > p:first-of-type { color:#7eb8e0; font-size:.82rem; font-weight:600; margin-bottom:10px; }
+    .social_icon a { color:#0f3460; margin:0 6px; font-size:1rem; transition:color .2s; }
+    .social_icon a:hover { color:#7eb8e0; }
+    .author_widget p:last-child { font-size:.8rem; color:#666; line-height:1.65; text-align:left; margin-top:12px; }
+    .post_item { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+    .post_item img { width:58px; height:48px; object-fit:cover; border-radius:8px; flex-shrink:0; }
+    .post_item h3 { font-size:.82rem !important; font-weight:700 !important; color:#0f3460 !important; margin-bottom:2px; }
+    .post_item p { font-size:.73rem; color:#888; margin:0; }
+    .cat-list li a { display:flex; justify-content:space-between; color:#444; font-size:.85rem; padding:7px 0; border-bottom:1px solid #eef0ff; transition:color .2s; }
+    .cat-list li a:hover { color:#7eb8e0; }
+    .cat-list li a p { margin:0; }
+    .tag_cloud_widget ul { display:flex; flex-wrap:wrap; gap:8px; list-style:none; padding:0; margin:0; }
+    .tag_cloud_widget ul li a { display:block; padding:5px 12px; background:#f0f4ff; border-radius:20px; font-size:.76rem; color:#0f3460; font-weight:600; border:1px solid #d0d8ff; transition:background .2s, color .2s; }
+    .tag_cloud_widget ul li a:hover { background:#7eb8e0; color:#fff; }
+    .tag-pill { display:inline-block; padding:5px 12px; background:#f0f4ff; border-radius:20px; font-size:.76rem; color:#0f3460; font-weight:600; border:1px solid #d0d8ff; cursor:pointer; transition:background .2s, color .2s, border-color .2s; }
+    .tag-pill:hover, .tag-pill.active { background:#0f3460; color:#fff; border-color:#0f3460; }
+    .tag-pill small { opacity:.7; font-size:.65rem; }
+
+    /* ── TIMELINE STRIP ── */
+    .timeline-strip {
+      background:#fff; border-radius:14px; padding:22px 28px;
+      box-shadow:0 3px 18px rgba(15,52,96,.07); margin-bottom:24px;
+    }
+    .timeline-strip h4 { font-size:.9rem !important; font-weight:800 !important; color:#0f3460 !important; margin-bottom:16px; padding-bottom:10px; border-bottom:2px solid #e8eeff; }
+    .tl-item { display:flex; align-items:flex-start; gap:12px; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid #f0f2ff; }
+    .tl-item:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+    .tl-dot { width:10px; height:10px; border-radius:50%; background:#7eb8e0; flex-shrink:0; margin-top:5px; }
+    .tl-dot.dot-social { background:#f0a500; }
+    .tl-dot.dot-sports  { background:#50c878; }
+    .tl-text { font-size:.78rem; color:#555; line-height:1.5; }
+    .tl-text strong { color:#0f3460; font-weight:700; display:block; margin-bottom:2px; }
+    .tl-text span { font-size:.7rem; color:#aaa; }
+
+    @media (max-width:767px) {
+      .blog-header-wrap { height: 50vw; }
+      .feat-card { height:260px; }
+      .archive-head { display:block; }
+      .archive-count { margin-top:14px; text-align:left; }
+      .archive-tools { grid-template-columns:1fr; }
+      .view-toggle { width:max-content; }
+      .post-col.list-mode .post-card { flex-direction:column; }
+      .post-col.list-mode .card-img-wrap { width:100%; }
+      .post-col.list-mode .card-img-wrap img { height:135px; min-height:0; }
+    }
+  </style>
+</head>
+
+<body class="blog_version">
+
+<div id="site-header"></div>
+
+<!-- HEADER PHOTO -->
+<div class="blog-header-wrap">
+  <div class="blog-header">
+    <img src="files/8. Blog/1.png" alt="Blog – Anubha Parashar">
+  </div>
+</div>
+
+<!-- FEATURED POSTS -->
+<section class="featured-section">
+  <div class="container">
+    <div class="section-eyebrow">Highlights</div>
+    <div class="section-title">Featured from Each Category</div>
+    <div class="row">
+
+      <!-- Academics -->
+      <div class="col-lg-3 col-md-6 mb-4 feat-academics">
+        <a href="academics.html" class="feat-card feat-academics">
+          <img src="files/8. Blog Web/box image/academic.jpeg" alt="Expert Talk on AI">
+          <div class="feat-card-overlay"></div>
+          <div class="feat-card-body">
+            <span class="feat-badge academics"><i class="fa fa-graduation-cap"></i> Academics</span>
+            <h3 class="feat-card-title">Leadership, Conferences, Workshops &amp; Research</h3>
+            <p class="feat-card-excerpt">13 conferences, 15 workshops, expert talks, faculty visits, hackathons and more — a decade of academic milestones.</p>
+            <span class="feat-visit-btn">Visit Academics <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Social Life -->
+      <div class="col-lg-3 col-md-6 mb-4 feat-social">
+        <a href="connection.html" class="feat-card feat-social">
+          <img src="files/8. Blog Web/box image/connection.jpg" alt="Social Life">
+          <div class="feat-card-overlay"></div>
+          <div class="feat-card-body">
+            <span class="feat-badge social"><i class="fa fa-users"></i> Social Life</span>
+            <h3 class="feat-card-title">Community, Networking &amp; Beyond the Lab</h3>
+            <p class="feat-card-excerpt">From AI meetups in Jaipur to international conference outings — building connections that go beyond research.</p>
+            <span class="feat-visit-btn">Visit Social Life <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Sports -->
+      <div class="col-lg-3 col-md-6 mb-4 feat-sports">
+        <a href="sports.html" class="feat-card feat-sports">
+          <img src="files/8. Blog Web/box image/sports.jpg" alt="Sports and Wellness">
+          <div class="feat-card-overlay"></div>
+          <div class="feat-card-body">
+            <span class="feat-badge sports"><i class="fa fa-heartbeat"></i> Sports</span>
+            <h3 class="feat-card-title">Sports &amp; Wellness</h3>
+            <p class="feat-card-excerpt">Staying active and balanced — fitness routines, campus sports, and the philosophy of wellness alongside a demanding research life.</p>
+            <span class="feat-visit-btn">Visit Sports <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Avocations -->
+      <div class="col-lg-3 col-md-6 mb-4 feat-avocations">
+        <a href="avocations.html" class="feat-card feat-avocations">
+          <img src="files/8. Blog Web/box image/avocations.jpg" alt="Avocations">
+          <div class="feat-card-overlay"></div>
+          <div class="feat-card-body">
+            <span class="feat-badge avocations"><i class="fa fa-paint-brush"></i> Avocations</span>
+            <h3 class="feat-card-title">Avocations &amp; Passions</h3>
+            <p class="feat-card-excerpt">Beyond research — trekking mountain trails, painting, folding intricate origami, and performing magic tricks that spark wonder.</p>
+            <span class="feat-visit-btn">Visit Avocations <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ALL POSTS GRID -->
+<section class="blog-grid-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+
+        <div class="archive-panel">
+          <div class="archive-head">
+            <div>
+              <div class="archive-kicker">Explore the Archive</div>
+              <h2 class="archive-title">Browse stories, milestones, and memories</h2>
+              <p class="archive-copy">Search across the complete collection, narrow by category or tag, then open the detailed gallery page for the full story.</p>
+            </div>
+            <div class="archive-count">
+              <strong id="visible-post-count">0</strong>
+              <span id="visible-post-label">Posts shown</span>
+            </div>
+          </div>
+
+          <div class="archive-tools">
+            <div class="archive-search-wrap">
+              <i class="fa fa-search"></i>
+              <input id="post-search" class="archive-search" type="search" placeholder="Search posts, tags, dates..." aria-label="Search blog posts">
+            </div>
+            <select id="post-sort" class="archive-sort" aria-label="Sort blog posts">
+              <option value="featured">Featured first</option>
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first</option>
+              <option value="az">A to Z</option>
+            </select>
+            <div class="view-toggle" aria-label="Change post layout">
+              <button type="button" class="view-btn active" data-view="grid" title="Grid view"><i class="fa fa-th-large"></i></button>
+              <button type="button" class="view-btn" data-view="list" title="List view"><i class="fa fa-list"></i></button>
+            </div>
+          </div>
+
+          <!-- Filter bar -->
+          <div class="filter-bar">
+            <span class="filter-label">Filter:</span>
+            <button class="filter-btn active" data-filter="all" onclick="filterPosts('all',this)">
+              <i class="fa fa-th-large"></i> All <span class="f-count">5</span>
+            </button>
+            <button class="filter-btn" data-filter="academics" onclick="filterPosts('academics',this)">
+              <i class="fa fa-graduation-cap"></i> Academics <span class="f-count">3</span>
+            </button>
+            <button class="filter-btn" data-filter="social" onclick="filterPosts('social',this)">
+              <i class="fa fa-users"></i> Social Life <span class="f-count">1</span>
+            </button>
+            <button class="filter-btn" data-filter="sports" onclick="filterPosts('sports',this)">
+              <i class="fa fa-heartbeat"></i> Sports <span class="f-count">1</span>
+            </button>
+            <button class="filter-btn" data-filter="avocations" onclick="filterPosts('avocations',this)">
+              <i class="fa fa-paint-brush"></i> Avocations <span class="f-count">0</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Post grid — rendered dynamically from data/posts.js -->
+        <div class="row" id="posts-grid"></div><!-- /posts-grid -->
+
+        <!-- Empty state -->
+        <div id="no-posts" style="display:none;text-align:center;padding:40px 0;">
+          <i class="fa fa-inbox" style="font-size:2.5rem;color:#c8d4f7;margin-bottom:12px;display:block;"></i>
+          <p style="color:#aaa;font-size:.9rem;">No posts match this view. Try another category, tag, or search term.</p>
+        </div>
+
+        <div class="archive-footer">
+          <button type="button" id="show-more-posts" class="show-more-btn">Show More Posts</button>
+        </div>
+
+      </div><!-- /col-lg-8 -->
+
+      <!-- SIDEBAR -->
+      <div class="col-lg-4">
+        <div class="blog_right_sidebar">
+
+          <!-- Author -->
+          <aside class="single_sidebar_widget author_widget">
+            <img class="author_img rounded-circle" src="files/8.%20Blog/author.jpg" alt="Anubha Parashar">
+            <h4>Anubha Parashar</h4>
+            <p>Analytics & AI Engineer | AI Researcher | Educator</p>
+            <div class="social_icon">
+              <a href="https://www.facebook.com/anubha.parashar" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/anubhaparashar/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/anubhaparashar" target="_blank"><i class="fa fa-github"></i></a>
+              <a href="https://twitter.com/parashar_anubha" target="_blank"><i class="fa fa-twitter"></i></a>
+            </div>
+            <p>Analytics & AI Engineer and AI researcher specializing in Computer Vision, Biometrics, GenAI, LLMs, NLP, Deep Learning, and Machine Learning. My work bridges research and deployment through real-world AI systems, including drone-based solar panel defect detection, edge AI chatbots, OCR pipelines, GIS-based analytics, scheduling optimization, and robust gait recognition. I hold a Ph.D. in Computer Science and Engineering with a focus on Artificial Intelligence, and I bring experience across industry research, academic teaching, publications, patents, and applied AI product development.</p>
+          </aside>
+
+          <!-- Recent Activity Timeline -->
+          <div class="timeline-strip">
+            <h4><i class="fa fa-clock-o" style="color:#7eb8e0;margin-right:8px;"></i>Recent Activity</h4>
+            <div class="tl-item">
+              <div class="tl-dot dot-social"></div>
+              <div class="tl-text">
+                <a href="connection.html" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#f0a500;">Global AI Jaipur Meetup</strong></a>
+                Hosted a session on AI applications — connecting researchers and practitioners.
+                <span>3 May, 2025</span>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-text">
+                <a href="award.html" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#7eb8e0;">Top Researcher of the Month</strong></a>
+                Published in Artificial Intelligence Review (Q1, IF 9.588).
+                <span>Feb, 2023</span>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-text">
+                <a href="academics.html#c-icct23" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#7eb8e0;">ICCT 2023</strong></a>
+                Presented at the 3rd International Conference on Intelligent Communication.
+                <span>Jan, 2023</span>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot dot-social"></div>
+              <div class="tl-text">
+                <a href="connection.html#sg-02" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#f0a500;">MUJ SSIC Event</strong></a>
+                Facilitated the Student Symposium on Intelligent Computing at MUJ.
+                <span>Jan, 2019</span>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-text">
+                <a href="connection.html#sg-01" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#7eb8e0;">Conference Outing</strong></a>
+                Team bonding and networking at an international conference.
+                <span>Feb, 2020</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <aside class="single_sidebar_widget post_category_widget">
+            <h4 class="widget_title">Browse by Category</h4>
+            <style>
+              .cat-group { margin-bottom:6px; }
+              .cat-group-header { display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #eef0ff; }
+              .cat-group-header a { font-weight:800; font-size:.86rem; color:#0f3460; text-decoration:none; display:flex; align-items:center; gap:6px; }
+              .cat-group-header a:hover { color:#7eb8e0; }
+              .cat-group-header .cat-total { font-size:.72rem; font-weight:700; color:#fff; background:#0f3460; padding:2px 8px; border-radius:12px; }
+              .cat-sub { list-style:none; padding:0; margin:0 0 6px 18px; }
+              .cat-sub li { display:flex; justify-content:space-between; padding:5px 0; border-bottom:1px solid #f5f5ff; font-size:.78rem; }
+              .cat-sub li a { color:#555; text-decoration:none; transition:color .2s; }
+              .cat-sub li a:hover { color:#7eb8e0; }
+              .cat-sub li span { color:#aaa; font-weight:700; font-size:.72rem; }
+            </style>
+
+            <!-- Academics -->
+            <div class="cat-group">
+              <div class="cat-group-header">
+                <a href="academics.html"><i class="fa fa-graduation-cap" style="color:#7eb8e0;"></i> Academics</a>
+                <span class="cat-total">55</span>
+              </div>
+              <ul class="cat-sub">
+                <li><a href="academics.html#conferences">Conferences</a><span>13</span></li>
+                <li><a href="academics.html#workshops">Workshops</a><span>15</span></li>
+                <li><a href="academics.html#experttalks">Expert Talks</a><span>2</span></li>
+                <li><a href="academics.html#facultyvisits">Faculty Visits</a><span>6</span></li>
+                <li><a href="academics.html#events">Events</a><span>6</span></li>
+                <li><a href="academics.html#hackathon">Hackathon</a><span>3</span></li>
+                <li><a href="academics.html#social">Social Activities</a><span>10</span></li>
+              </ul>
+            </div>
+
+            <!-- Social Life -->
+            <div class="cat-group">
+              <div class="cat-group-header">
+                <a href="connection.html"><i class="fa fa-users" style="color:#f0a500;"></i> Social Life</a>
+                <span class="cat-total" id="cat-count-social" style="background:#b87c00;">3</span>
+              </div>
+              <ul class="cat-sub">
+                <li><a href="connection.html#mom-birthday">Birthday to Mom</a><span>10 photos</span></li>
+                <li><a href="connection.html#sg-01">Conference Outing</a><span>10 photos</span></li>
+                <li><a href="connection.html#sg-02">MUJ SSIC Event</a><span>24 photos</span></li>
+              </ul>
+            </div>
+
+            <!-- Sports -->
+            <div class="cat-group">
+              <div class="cat-group-header">
+                <a href="sports.html"><i class="fa fa-heartbeat" style="color:#50c878;"></i> Sports</a>
+                <span class="cat-total" id="cat-count-sports" style="background:#2d8a50;">1</span>
+              </div>
+              <ul class="cat-sub">
+                <li><a href="sports.html">Sports &amp; Wellness</a><span id="cat-sub-sports-wellness">1</span></li>
+              </ul>
+            </div>
+
+            <!-- Avocations -->
+            <div class="cat-group">
+              <div class="cat-group-header">
+                <a href="avocations.html"><i class="fa fa-paint-brush" style="color:#c084fc;"></i> Avocations</a>
+                <span class="cat-total" id="cat-count-avocations" style="background:#7c3aed;">4</span>
+              </div>
+              <ul class="cat-sub">
+                <li><a href="avocations.html#trekking"><i class="fa fa-tree" style="color:#c084fc;margin-right:5px;"></i>Trekking</a><span></span></li>
+                <li><a href="avocations.html#painting"><i class="fa fa-paint-brush" style="color:#c084fc;margin-right:5px;"></i>Painting</a><span></span></li>
+                <li><a href="avocations.html#origami"><i class="fa fa-star" style="color:#c084fc;margin-right:5px;"></i>Origami</a><span></span></li>
+                <li><a href="avocations.html#magic-tricks"><i class="fa fa-magic" style="color:#c084fc;margin-right:5px;"></i>Magic Tricks</a><span></span></li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- Tags — auto-generated from post data-tags attributes -->
+          <aside class="single-sidebar-widget tag_cloud_widget">
+            <h4 class="widget_title">Tags</h4>
+            <div id="tag-cloud" style="display:flex;flex-wrap:wrap;gap:8px;padding-top:4px;"></div>
+          </aside>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/site-components.js"></script>
+<!-- Central posts data — add new posts to data/posts.js only -->
+<script src="data/posts.js"></script>
+<script>
+  var archiveState = {
+    cat: 'all',
+    tag: null,
+    query: '',
+    sort: 'featured',
+    view: 'grid',
+    visibleLimit: 12
+  };
+
+  function escapeHtml(value) {
+    return String(value || '').replace(/[&<>"']/g, function(ch) {
+      return ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[ch];
+    });
+  }
+
+  function parsePostYear(post) {
+    var match = String(post.date || '').match(/(19|20)\d{2}/g);
+    return match ? parseInt(match[match.length - 1], 10) : 0;
+  }
+
+  function postMatches(post) {
+    var haystack = [post.title, post.excerpt, post.date, post.badge, post.cat, post.tags].join(' ').toLowerCase();
+    var tags = String(post.tags || '').split(',').map(function(t){ return t.trim(); });
+    if (archiveState.cat !== 'all' && post.cat !== archiveState.cat) return false;
+    if (archiveState.tag && tags.indexOf(archiveState.tag) === -1) return false;
+    if (archiveState.query && haystack.indexOf(archiveState.query) === -1) return false;
+    return true;
+  }
+
+  function sortedPosts(posts) {
+    var copy = posts.slice();
+    if (archiveState.sort === 'newest') {
+      copy.sort(function(a,b){ return parsePostYear(b) - parsePostYear(a); });
+    } else if (archiveState.sort === 'oldest') {
+      copy.sort(function(a,b){ return parsePostYear(a) - parsePostYear(b); });
+    } else if (archiveState.sort === 'az') {
+      copy.sort(function(a,b){ return String(a.title).localeCompare(String(b.title)); });
+    }
+    return copy;
+  }
+
+  var BLOG_SOURCE_PAGES = [
+    { url: 'academics.html', cat: 'academics', badge: 'Academics' },
+    { url: 'connection.html', cat: 'social', badge: 'Social Life' },
+    { url: 'sports.html', cat: 'sports', badge: 'Sports' },
+    { url: 'avocations.html', cat: 'avocations', badge: 'Avocations' }
+  ];
+
+  function absoluteToRelative(url) {
+    if (!url) return '';
+    try {
+      var parsed = new URL(url, window.location.href);
+      if (parsed.origin === window.location.origin) {
+        return decodeURI(parsed.pathname.replace(/^\/+/, '') + parsed.search + parsed.hash);
+      }
+    } catch (error) {}
+    return url;
+  }
+
+  function firstImageFrom(card, doc) {
+    var img = card.querySelector('.gal-item img, .feature-img img, .mom-hero img, .mom-main-photos img, img');
+    if (img) return absoluteToRelative(img.getAttribute('src') || img.getAttribute('data-src') || '');
+    var link = card.querySelector('a.gal-item[href]');
+    return link ? absoluteToRelative(link.getAttribute('href')) : '';
+  }
+
+  function cleanPostTitle(card) {
+    var raw = card.querySelector('h3, h2, .blog-gallery-label, .mom-gallery-title');
+    return raw ? raw.textContent.replace(/\s+/g, ' ').replace(/^\d+\s*/, '').trim() : '';
+  }
+
+  function postDateFrom(card) {
+    var meta = card.querySelector('.conf-meta, .blog_meta, .card-meta');
+    var text = meta ? meta.textContent : card.textContent;
+    var match = text.match(/(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2},?\s+\d{4}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?,?\s+\d{4}|\b(?:19|20)\d{2}\b/i);
+    return match ? match[0].replace(/\s+/g, ' ') : '';
+  }
+
+  function postExcerptFrom(card, title) {
+    var desc = card.querySelector('.conf-desc, .blog_details p, .mom-letter p, p');
+    var text = desc ? desc.textContent.replace(/\s+/g, ' ').trim() : '';
+    if (text) return text.length > 190 ? text.slice(0, 187).replace(/\s+\S*$/, '') + '...' : text;
+    return title ? title + ' - a blog memory from this section.' : 'A blog memory from this section.';
+  }
+
+  function tagsForPost(source, title) {
+    var tags = [source.badge];
+    String(title || '').split(/[\s&,-]+/).forEach(function(part) {
+      part = part.trim();
+      if (part.length > 3 && tags.indexOf(part) === -1) tags.push(part);
+    });
+    return tags.slice(0, 6).join(',');
+  }
+
+  function cardsFromDocument(doc, source) {
+    var selectors = [
+      '.conf-card[id]',
+      '.blog-gallery-section[id]',
+      '.mom-birthday-post[id]',
+      '.hobby-section[id]'
+    ];
+    return Array.from(doc.querySelectorAll(selectors.join(','))).map(function(card) {
+      var id = card.id;
+      var title = cleanPostTitle(card);
+      var img = firstImageFrom(card, doc);
+      if (!id || !title || !img) return null;
+      return {
+        id: 'auto-' + source.cat + '-' + id,
+        cat: source.cat,
+        tags: tagsForPost(source, title),
+        date: postDateFrom(card),
+        views: '',
+        img: img,
+        title: title,
+        excerpt: postExcerptFrom(card, title),
+        link: source.url + '#' + id,
+        badge: source.badge,
+        autoDiscovered: true
+      };
+    }).filter(Boolean);
+  }
+
+  function discoverPostsFromPages() {
+    if (!window.fetch || typeof DOMParser === 'undefined') return Promise.resolve([]);
+    return Promise.all(BLOG_SOURCE_PAGES.map(function(source) {
+      return fetch(source.url, { cache: 'no-cache' })
+        .then(function(response) { return response.ok ? response.text() : ''; })
+        .then(function(html) {
+          if (!html) return [];
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          return cardsFromDocument(doc, source);
+        })
+        .catch(function() { return []; });
+    })).then(function(groups) {
+      return groups.reduce(function(all, group) { return all.concat(group); }, []);
+    });
+  }
+
+  function mergeDiscoveredPosts(posts) {
+    if (typeof SITE_POSTS === 'undefined') window.SITE_POSTS = [];
+    var seen = {};
+    SITE_POSTS.forEach(function(post) {
+      seen[post.id] = true;
+      seen[post.link] = true;
+    });
+    posts.forEach(function(post) {
+      if (!seen[post.id] && !seen[post.link]) {
+        SITE_POSTS.push(post);
+        seen[post.id] = true;
+        seen[post.link] = true;
+      }
+    });
+  }
+
+  function renderArchive() {
+    var grid = document.getElementById('posts-grid');
+    if (!grid || typeof SITE_POSTS === 'undefined') return;
+    var matched = sortedPosts(SITE_POSTS.filter(postMatches));
+    var visible = matched.slice(0, archiveState.visibleLimit);
+    grid.innerHTML = '';
+    visible.forEach(function(p) {
+      var firebasePostId = (p.link && p.link.indexOf('#') !== -1) ? p.link.split('#').pop() : p.id;
+      var col = document.createElement('div');
+      col.id = p.id;
+      col.className = archiveState.view === 'list' ? 'col-md-12 post-col list-mode' : 'col-md-6 post-col';
+      col.setAttribute('data-cat', p.cat);
+      col.setAttribute('data-tags', p.tags);
+      col.setAttribute('data-blog-post-id', firebasePostId);
+      col.setAttribute('data-blog-post-url', p.link);
+      col.innerHTML =
+        '<div class="post-card cat-' + escapeHtml(p.cat) + '">' +
+          '<div class="card-img-wrap">' +
+            '<img src="' + escapeHtml(p.img) + '" alt="' + escapeHtml(p.title) + '" loading="lazy">' +
+            '<span class="card-cat-badge">' + escapeHtml(p.badge || p.cat) + '</span>' +
+          '</div>' +
+          '<div class="card-body">' +
+            '<div class="card-meta">' +
+              '<span><i class="fa fa-calendar"></i> Date: <span data-firebase-date>' + escapeHtml(p.date) + '</span></span>' +
+              '<span><i class="fa fa-eye"></i> <span data-firebase-views>0</span> Views</span>' +
+              '<span><i class="fa fa-heart"></i> <span data-firebase-likes>0</span> Likes</span>' +
+              '<span><i class="fa fa-comment"></i> <span data-firebase-comments>0</span> Comments</span>' +
+              '<button type="button" class="firebase-share-btn" data-firebase-share><i class="fa fa-share-alt"></i> Share</button>' +
+            '</div>' +
+            '<h3>' + escapeHtml(p.title) + '</h3>' +
+            '<p>' + escapeHtml(p.excerpt) + '</p>' +
+            '<div class="card-footer-row">' +
+              '<a href="' + escapeHtml(p.link) + '" class="read-btn">Read More <i class="fa fa-arrow-right"></i></a>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+      grid.appendChild(col);
+    });
+    updateArchiveSummary(matched.length, visible.length);
+    document.getElementById('no-posts').style.display = matched.length ? 'none' : 'block';
+    var more = document.getElementById('show-more-posts');
+    if (more) {
+      more.hidden = visible.length >= matched.length;
+      more.textContent = 'Show More Posts' + (visible.length < matched.length ? ' (' + (matched.length - visible.length) + ')' : '');
+    }
+    if (window.FirebaseBlog && typeof window.FirebaseBlog.refresh === 'function') {
+      window.FirebaseBlog.refresh();
+    }
+  }
+
+  function updateArchiveSummary(total, shown) {
+    var count = document.getElementById('visible-post-count');
+    var label = document.getElementById('visible-post-label');
+    if (count) count.textContent = shown + ' / ' + total;
+    if (label) label.textContent = total === 1 ? 'Post matched' : 'Posts matched';
+  }
+
+  function filterPosts(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+    if (btn) btn.classList.add('active');
+    archiveState.cat = cat || 'all';
+    archiveState.tag = null;
+    _activeTag = null;
+    archiveState.visibleLimit = 12;
+    document.querySelectorAll('#tag-cloud .tag-pill').forEach(function(p){ p.classList.remove('active'); });
+    renderArchive();
+  }
+
+  var _activeTag = null;
+  function filterByTag(tag, el) {
+    document.querySelectorAll('#tag-cloud .tag-pill').forEach(function(p){ p.classList.remove('active'); });
+    if (_activeTag === tag) {
+      _activeTag = null;
+      archiveState.tag = null;
+      renderArchive();
+      return;
+    }
+    _activeTag = tag;
+    if (el) el.classList.add('active');
+    document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+    archiveState.cat = 'all';
+    archiveState.tag = tag;
+    archiveState.visibleLimit = 12;
+    renderArchive();
+  }
+
+  function updatePostTools() {
+    if (typeof SITE_POSTS === 'undefined') return;
+    var cats = ['academics','social','sports','avocations'];
+    cats.forEach(function(cat) {
+      var n = SITE_POSTS.filter(function(p){ return p.cat === cat; }).length;
+      var el = document.getElementById('cat-count-' + cat);
+      if (el) el.textContent = n;
+      var btn = document.querySelector('[data-filter="' + cat + '"] .f-count');
+      if (btn) btn.textContent = n;
+    });
+    var sw = document.getElementById('cat-sub-sports-wellness');
+    if (sw) sw.textContent = SITE_POSTS.filter(function(p){ return p.cat === 'sports'; }).length;
+    var allBtn = document.querySelector('[data-filter="all"] .f-count');
+    if (allBtn) allBtn.textContent = SITE_POSTS.length;
+
+    var freq = {};
+    SITE_POSTS.forEach(function(post) {
+      (post.tags || '').split(',').forEach(function(t) {
+        t = t.trim(); if (t) freq[t] = (freq[t] || 0) + 1;
+      });
+    });
+    var sorted = Object.keys(freq).sort(function(a,b){ return freq[b]-freq[a]; });
+    var cloud = document.getElementById('tag-cloud');
+    if (cloud) {
+      cloud.innerHTML = '';
+      sorted.forEach(function(tag) {
+        var pill = document.createElement('span');
+        pill.className = 'tag-pill';
+        pill.setAttribute('onclick', 'filterByTag("' + tag.replace(/"/g,'&quot;') + '",this)');
+        pill.title = 'Filter: ' + tag;
+        pill.innerHTML = escapeHtml(tag) + (freq[tag] > 1 ? ' <small>(' + freq[tag] + ')</small>' : '');
+        cloud.appendChild(pill);
+      });
+    }
+  }
+
+  function scrollToPost(id) {
+    var target = document.getElementById(id);
+    if (!target) return;
+    filterPosts('all', document.querySelector('[data-filter="all"]'));
+    setTimeout(function() {
+      target.scrollIntoView({ behavior:'smooth', block:'center' });
+      target.style.outline = '3px solid #f0a500';
+      target.style.borderRadius = '16px';
+      setTimeout(function(){ target.style.outline=''; target.style.borderRadius=''; }, 2200);
+    }, 120);
+  }
+
+  (function() {
+    var search = document.getElementById('post-search');
+    var sort = document.getElementById('post-sort');
+    var more = document.getElementById('show-more-posts');
+    if (search) {
+      search.addEventListener('input', function() {
+        archiveState.query = search.value.trim().toLowerCase();
+        archiveState.visibleLimit = 12;
+        renderArchive();
+      });
+    }
+    if (sort) {
+      sort.addEventListener('change', function() {
+        archiveState.sort = sort.value;
+        archiveState.visibleLimit = 12;
+        renderArchive();
+      });
+    }
+    document.querySelectorAll('.view-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.view-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        archiveState.view = btn.getAttribute('data-view') || 'grid';
+        renderArchive();
+      });
+    });
+    if (more) {
+      more.addEventListener('click', function() {
+        archiveState.visibleLimit += 12;
+        renderArchive();
+      });
+    }
+    discoverPostsFromPages().then(function(posts) {
+      mergeDiscoveredPosts(posts);
+      updatePostTools();
+      renderArchive();
+      var hash = (location.hash || '').slice(1);
+      if (hash) setTimeout(function(){ scrollToPost(hash); }, 120);
+    });
+  })();
+</script>
+<script type="module" src="assets/js/firebase-blog.js"></script>
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>

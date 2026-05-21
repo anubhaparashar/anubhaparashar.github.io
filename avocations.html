@@ -1,0 +1,1575 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Avocations – Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+    body { background: #f9f5ff; }
+
+    /* ── HEADER PHOTO ── */
+    .avoc-header {
+      position: relative; width: 100%; height: 90vh; overflow: hidden;
+      margin-top: 93px;
+    }
+    .avoc-header::before {
+      content: ''; position: absolute; inset: -30px;
+      background-image: url('files/8. Blog/4. Avocations/header/avocation.png');
+      background-size: cover; background-position: center;
+      filter: blur(22px) brightness(0.55); z-index: 0;
+    }
+    .avoc-header img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center; z-index: 1;
+    }
+
+    /* ── TAB NAV ── */
+    .hobby-tab-wrap {
+      background: #fff; border-bottom: 1px solid #ede9fe;
+      position: sticky; top: 60px; z-index: 100;
+      box-shadow: 0 2px 14px rgba(80,0,120,.08);
+    }
+    .hobby-tab-nav {
+      display: flex; overflow-x: auto; scrollbar-width: none;
+      max-width: 1200px; margin: 0 auto; padding: 0 8px;
+    }
+    .hobby-tab-nav::-webkit-scrollbar { display: none; }
+    .hobby-tab-btn {
+      background: none; border: none; border-bottom: 3px solid transparent;
+      padding: 15px 24px 13px; font-size: .82rem; font-weight: 700;
+      letter-spacing: .5px; text-transform: uppercase; color: #999;
+      cursor: pointer; white-space: nowrap; transition: all .2s;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .hobby-tab-btn i { font-size: .9rem; }
+    .hobby-tab-btn:hover { color: #5b21b6; background: #f9f5ff; }
+    .hobby-tab-btn.active { color: #5b21b6; border-bottom-color: #7c3aed; }
+    .tab-count {
+      background: #ede9fe; color: #7c3aed; font-size: .6rem; font-weight: 800;
+      padding: 2px 7px; border-radius: 20px;
+    }
+    .hobby-tab-btn.active .tab-count { background: #7c3aed; color: #e9d5ff; }
+
+    /* ── TAB SECTIONS ── */
+    .hobby-section { display: none; padding: 70px 0 90px; scroll-margin-top: 130px; }
+    .hobby-section.active { display: block; }
+
+    /* ── SECTION HEADER ── */
+    .section-label {
+      display: inline-block; font-size: .7rem; letter-spacing: 2.5px;
+      text-transform: uppercase; color: #7c3aed; font-weight: 700; margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 2rem !important; font-weight: 800 !important;
+      color: #1e1040 !important; margin-bottom: 10px;
+    }
+    .section-title-bar {
+      width: 50px; height: 4px;
+      background: linear-gradient(90deg, #c084fc, #7c3aed);
+      border-radius: 2px; margin: 0 auto 48px;
+    }
+
+    /* ── HOBBY CARD ── */
+    .hobby-card {
+      background: #fff; border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(80,0,120,.08);
+      border-top: 5px solid #c084fc;
+      overflow: hidden; max-width: 900px; margin: 0 auto 40px;
+      padding: 40px 44px;
+      scroll-margin-top: 130px;
+    }
+    .hobby-card-icon {
+      width: 60px; height: 60px; border-radius: 16px;
+      background: linear-gradient(135deg, #7c3aed, #c084fc);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .hobby-card-icon i { color: #fff; font-size: 1.6rem; }
+    .hobby-card h3 {
+      font-size: 1.4rem !important; font-weight: 900 !important;
+      color: #3b0764 !important; margin-bottom: 14px;
+    }
+    .hobby-card p { color: #555; line-height: 1.85; font-size: .96rem; margin-bottom: 14px; }
+    .hobby-card p:last-child { margin-bottom: 0; }
+
+    .hobby-quote {
+      background: linear-gradient(135deg, #f5f0ff, #ede9fe);
+      border-left: 5px solid #c084fc;
+      padding: 20px 26px; border-radius: 8px;
+      color: #5b21b6; font-style: italic;
+      font-size: .96rem; line-height: 1.75; margin: 28px 0;
+    }
+
+    .art-hero {
+      display: grid; grid-template-columns: minmax(260px, 1.08fr) minmax(220px, .92fr);
+      gap: 24px; align-items: stretch; margin: 30px 0;
+    }
+    .art-hero-photo {
+      border-radius: 16px; overflow: hidden; min-height: 320px;
+      box-shadow: 0 8px 30px rgba(80,0,120,.16); border: 3px solid #ede9fe;
+    }
+    .art-hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .art-hero-note {
+      background: linear-gradient(135deg,#3b0764,#7c3aed);
+      color: #fff; border-radius: 16px; padding: 28px;
+      display: flex; flex-direction: column; justify-content: center;
+      box-shadow: 0 8px 30px rgba(80,0,120,.18);
+    }
+    .art-hero-note span {
+      font-size: .68rem; font-weight: 900; letter-spacing: 2px;
+      text-transform: uppercase; color: #ddd6fe; margin-bottom: 10px;
+    }
+    .art-hero-note h4 { color: #fff !important; font-weight: 900 !important; font-size: 1.22rem !important; margin-bottom: 12px; }
+    .art-hero-note p { color: rgba(255,255,255,.84); margin: 0; line-height: 1.7; font-size: .92rem; }
+    .art-story-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin: 28px 0; }
+    .art-story-chip {
+      background: #f9f5ff; border: 1px solid #e9d5ff; border-radius: 12px;
+      padding: 16px 16px 15px; color: #4c1d95;
+    }
+    .art-story-chip strong { display: block; color: #3b0764; font-size: .88rem; margin-bottom: 5px; }
+    .art-story-chip span { display: block; color: #6b5a7d; font-size: .8rem; line-height: 1.55; }
+    .art-gallery-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin: 14px 0 10px; }
+    .art-gallery-grid a {
+      position: relative; display: block; aspect-ratio: 1 / 1; border-radius: 12px;
+      overflow: hidden; border: 2px solid #ede9fe; box-shadow: 0 3px 14px rgba(80,0,120,.10);
+    }
+    .art-gallery-grid img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
+    .art-gallery-grid a:hover img { transform: scale(1.05); }
+    .art-caption { color: #777; font-size: .78rem; line-height: 1.6; margin-top: 8px; }
+
+    /* placeholder */
+    .hobby-placeholder {
+      background: #f5f0ff; border: 2px dashed #c084fc;
+      border-radius: 12px; padding: 36px 24px; text-align: center;
+      color: #7c3aed; font-size: .88rem; margin-top: 20px;
+    }
+    .hobby-placeholder i { font-size: 2.4rem; opacity: .4; display: block; margin-bottom: 10px; }
+
+    /* ── CERTIFICATE GALLERY ── */
+    .blog-gallery-label {
+      font-size: .68rem; font-weight: 800; letter-spacing: 1.5px; color: #7c3aed;
+      text-transform: uppercase; display: flex; align-items: center; gap: 8px; margin-bottom: 16px;
+    }
+    .blog-gallery-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg,#ddd6fe,transparent); }
+    .blog-gallery-label i { font-size: .6rem; }
+
+    .cert-row-label {
+      display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px;
+      margin-bottom: 10px; padding-left: 4px;
+    }
+    .cert-year-badge {
+      font-size: .62rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+      background: #7c3aed; color: #fff; padding: 3px 10px; border-radius: 20px; white-space: nowrap;
+    }
+    .cert-row-title {
+      font-size: .88rem; font-weight: 700; color: #3b0764;
+    }
+    .cert-row-org {
+      font-size: .75rem; color: #888; font-style: italic;
+    }
+
+    .blog-gallery-section { margin: 28px 0 8px; scroll-margin-top: 130px; }
+    .blog-gallery-label { font-size: .68rem; font-weight: 800; letter-spacing: 1.5px; color: #7c3aed; text-transform: uppercase; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .blog-gallery-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg,#ede9fe,transparent); }
+    .blog-gallery-label i { font-size: .6rem; }
+    .blog-gallery-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 8px;
+      scroll-margin-top: 130px;
+    }
+    .blog-gallery-grid-1 { grid-template-columns: 1fr; max-width: 520px; }
+    .blog-gallery-grid a {
+      position: relative; display: block; border-radius: 10px; overflow: hidden;
+      border: 2px solid #ede9fe; box-shadow: 0 3px 14px rgba(80,0,120,.08);
+    }
+    .blog-gallery-grid-1 a { aspect-ratio: 4/3; }
+    .blog-gallery-grid img {
+      width: 100%; height: 100%; object-fit: cover; transition: transform .3s; display: block;
+    }
+    .blog-gallery-grid a:hover img { transform: scale(1.04); }
+    .blog-gal-overlay {
+      position: absolute; inset: 0; background: rgba(60,0,100,.42); opacity: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity .25s; border-radius: 10px;
+    }
+    .blog-gal-overlay i { color: #fff; font-size: 1.1rem; }
+    .blog-gallery-grid a:hover .blog-gal-overlay { opacity: 1; }
+
+    /* ── TREK CONF CARDS ── */
+    .conf-card {
+      background: #fff; border-radius: 16px; margin-bottom: 36px;
+      box-shadow: 0 4px 24px rgba(80,0,120,.08);
+      border-left: 5px solid #c084fc; overflow: hidden;
+      scroll-margin-top: 130px;
+    }
+    .conf-card-header { padding: 20px 26px 14px; border-bottom: 1px solid #f5f0ff; }
+    .conf-card-header h3 {
+      font-size: 1.15rem !important; font-weight: 900 !important;
+      color: #3b0764 !important; margin: 0 0 6px;
+    }
+    .conf-num {
+      display: inline-block; background: linear-gradient(135deg,#5b21b6,#c084fc);
+      color: #fff; font-size: .63rem; font-weight: 800; letter-spacing: 1px;
+      padding: 3px 10px; border-radius: 10px; margin-right: 8px;
+      text-transform: uppercase; vertical-align: middle;
+    }
+    .conf-meta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 4px; }
+    .conf-meta span { font-size: .76rem; color: #666; display: inline-flex; align-items: center; gap: 5px; }
+    .conf-meta i { color: #c084fc; }
+    .conf-card-body { padding: 18px 26px 26px; }
+    .conf-desc { font-size: .84rem; color: #555; line-height: 1.6; margin: 0 0 16px; padding: 0; }
+
+    /* ── TREK GALLERY GRID ── */
+    .gal-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 10px;
+      scroll-margin-top: 130px;
+    }
+    .gal-grid a.gal-item {
+      display: block; border-radius: 8px; overflow: hidden;
+      position: relative; aspect-ratio: 4/3;
+      box-shadow: 0 2px 10px rgba(80,0,120,.10);
+      transition: transform .22s, box-shadow .22s;
+    }
+    .gal-grid a.gal-item:hover { transform: scale(1.03); box-shadow: 0 6px 20px rgba(80,0,120,.18); }
+    .gal-grid a.gal-item img { width:100%; height:100%; object-fit:cover; display:block; }
+    .gal-grid .gal-overlay {
+      position: absolute; inset: 0; background: rgba(60,0,100,.35);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity .22s;
+    }
+    .gal-grid a.gal-item:hover .gal-overlay { opacity: 1; }
+    .gal-grid .gal-overlay i { color: #fff; font-size: 1.5rem; }
+
+    @media (max-width: 767px) {
+      .avoc-header { height: 50vw; }
+      .hobby-card { padding: 26px 22px; }
+      .art-hero { grid-template-columns: 1fr; }
+      .art-hero-photo { min-height: 260px; }
+      .art-story-grid { grid-template-columns: 1fr; }
+      .art-gallery-grid { grid-template-columns: repeat(2,1fr); }
+      .gal-grid { grid-template-columns: repeat(2,1fr); }
+      .conf-card-header, .conf-card-body { padding-left: 14px; padding-right: 14px; }
+    }
+
+    /* ── SHOW MORE BTN ── */
+    .trek-show-more-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #7c3aed, #c084fc);
+      color: #fff; border: none; border-radius: 30px;
+      padding: 11px 30px; font-size: .83rem; font-weight: 700;
+      letter-spacing: .5px; cursor: pointer;
+      box-shadow: 0 4px 16px rgba(124,58,237,.22);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .trek-show-more-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(124,58,237,.35); }
+    .trek-show-more-btn i { margin-right: 6px; }
+    .avoc-show-more-wrap { text-align: center; margin-top: 16px; }
+    .avoc-extra-gallery { display: none; margin-top: 12px; }
+    .avoc-extra-gallery.is-open { display: grid; }
+    .trek-video-extra { display: none; }
+    .trek-video-extra.is-open { display: block; }
+
+    /* ── TREK VIDEOS ── */
+    .trek-video-label {
+      font-size: .68rem; font-weight: 800; letter-spacing: 1.5px; color: #7c3aed;
+      text-transform: uppercase; display: flex; align-items: center; gap: 8px;
+      margin-bottom: 16px; margin-top: 48px;
+    }
+    .trek-video-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg,#ddd6fe,transparent); }
+    .trek-video-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; margin-bottom: 16px; }
+    .trek-video-grid video { width: 100%; border-radius: 10px; box-shadow: 0 2px 12px rgba(80,0,120,.12); }
+    @media (max-width: 767px) { .trek-video-grid { grid-template-columns: 1fr; } }
+
+    /* ── TREK SLIDER (purple-themed) ── */
+    .gal-slider-wrap { background:linear-gradient(135deg,#f9f5ff,#f3e8ff); border-radius:14px; padding:14px 14px 12px; box-shadow:0 2px 14px rgba(80,0,120,.08); border:1px solid #ede9fe; margin-top:10px; }
+    .gal-slider-wrap.blog-media-slider { display:block; }
+    .gal-slider-wrap.blog-media-slider.is-open { display:block; }
+    .gal-slider-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+    .gal-slider-counter { font-size:.72rem; font-weight:800; color:#7c3aed; background:rgba(124,58,237,.07); padding:4px 12px; border-radius:20px; letter-spacing:.2px; }
+    .gal-slider-nav { display:flex; align-items:center; gap:6px; }
+    .gal-nav-btn { width:32px; height:32px; border-radius:50%; border:2px solid #ddd6fe; background:#fff; color:#7c3aed; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; font-size:1rem; transition:all .22s; box-shadow:0 2px 8px rgba(80,0,120,.10); line-height:1; padding:0; }
+    .gal-nav-btn:hover:not([disabled]) { background:#7c3aed; color:#fff; border-color:#7c3aed; box-shadow:0 4px 16px rgba(124,58,237,.28); transform:scale(1.12); }
+    .gal-nav-btn[disabled] { opacity:.28; cursor:default; transform:none!important; box-shadow:none; }
+    .gal-slider-viewport { overflow-x:scroll; overflow-y:hidden; scrollbar-width:none; scroll-behavior:smooth; border-radius:10px; }
+    .gal-slider-viewport::-webkit-scrollbar { display:none; }
+    .gal-slides-track { display:flex; gap:10px; }
+    .gal-slides-track a.gal-item { flex:0 0 160px; width:160px; height:120px; border-radius:8px; overflow:hidden; position:relative; box-shadow:0 2px 10px rgba(80,0,120,.10); transition:transform .22s; display:block; }
+    .gal-slides-track a.gal-item:hover { transform:scale(1.03); }
+    .gal-slides-track a.gal-item img { width:100%; height:100%; object-fit:cover; display:block; }
+    .gal-slides-track a.gal-item .gal-overlay { position:absolute; inset:0; background:rgba(60,0,100,.35); display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .22s; }
+    .gal-slides-track a.gal-item:hover .gal-overlay { opacity:1; }
+    .gal-progress { height:4px; background:#ede9fe; border-radius:2px; margin-top:10px; overflow:hidden; }
+    .gal-progress-bar { height:100%; background:linear-gradient(90deg,#c084fc,#7c3aed); border-radius:2px; transition:width .25s ease; width:0%; min-width:14px; }
+
+    /* ── TREK SIDEBAR ── */
+    .trek-sidebar { position:sticky; top:110px; }
+    .sidebar-box { background:#fff; border-radius:12px; padding:22px; box-shadow:0 3px 18px rgba(80,0,120,.07); margin-bottom:22px; }
+    .sidebar-box h4 { font-size:.95rem!important; font-weight:800!important; color:#3b0764!important; margin-bottom:14px; padding-bottom:10px; border-bottom:2px solid #ede9fe; }
+    .toc-list { list-style:none; padding:0; margin:0; }
+    .toc-list li { border-bottom:1px solid #f5f0ff; }
+    .toc-list a { display:flex; align-items:center; justify-content:space-between; padding:8px 4px; color:#444; font-size:.82rem; text-decoration:none; transition:color .2s; }
+    .toc-list a:hover { color:#7c3aed; }
+    .toc-year { font-size:.68rem; color:#aaa; font-weight:600; background:#f5f0ff; padding:2px 7px; border-radius:10px; }
+  </style>
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<!-- HEADER PHOTO -->
+<div class="avoc-header">
+  <img src="files/8. Blog/4. Avocations/header/avocation.png" alt="Avocations - Anubha Parashar">
+</div>
+
+<!-- ════════════════════ TAB NAVIGATION ════════════════════ -->
+<div class="hobby-tab-wrap">
+  <div class="container">
+    <div class="hobby-tab-nav">
+      <button class="hobby-tab-btn active" onclick="switchTab('trekking', this)">
+        <i class="fa fa-tree"></i> Trekking
+      </button>
+      <button class="hobby-tab-btn" onclick="switchTab('painting', this)">
+        <i class="fa fa-paint-brush"></i> Painting
+      </button>
+      <button class="hobby-tab-btn" onclick="switchTab('origami', this)">
+        <i class="fa fa-star"></i> Origami
+      </button>
+      <button class="hobby-tab-btn" onclick="switchTab('magic', this)">
+        <i class="fa fa-magic"></i> Magic Tricks
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ TREKKING ════════════════════ -->
+<section class="hobby-section active" id="tab-trekking">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Outdoors &amp; Adventure</span>
+      <h2 class="section-title">Trekking</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="hobby-card">
+      <div class="hobby-card-icon"><i class="fa fa-tree"></i></div>
+      <h3>Hitting the Trail</h3>
+      <p>
+        There is no better way to reset the mind than a long walk through nature. Trekking teaches you to be present — to read the terrain, manage your energy, and trust the path even when the summit is not yet visible. It is a perfect metaphor for research: the destination is rarely visible from the start, but every step forward counts.
+      </p>
+      <p>
+        I have trekked trails across Rajasthan and the Himalayas, and each journey has returned me to my desk with clearer eyes and fresh ideas. The rhythm of walking, the absence of screens, and the scale of the landscape all conspire to produce the kind of lateral thinking that hours at a desk cannot.
+      </p>
+      <div class="hobby-quote">
+        "Some of my best research ideas have arrived not at my desk, but on a quiet mountain trail — where the mind is free to wander as far as the eye can see."
+      </div>
+      <p>
+        I often encourage students to step away from their screens regularly. Physical distance from a problem is one of the most underrated debugging tools in existence.
+      </p>
+    </div>
+  </div>
+
+  <!-- Trek Galleries — conf-card style -->
+  <div class="container" style="padding-bottom:70px;">
+    <div class="row">
+      <div class="col-lg-8">
+
+    <div class="conf-card" id="trek-1">
+      <div class="conf-card-header">
+        <h3><span class="conf-num">01</span>Gad Ganesh with Minki</h3>
+        <div class="conf-meta">
+          <span><i class="fa fa-calendar"></i>July 2023</span>
+          <span><i class="fa fa-map-marker"></i>Gad Ganesh Temple, Jaipur</span>
+          <span><i class="fa fa-image"></i>6 Photos</span>
+        </div>
+      </div>
+      <div class="conf-card-body">
+        <p class="conf-desc">An early-morning hike to the Gad Ganesh temple perched in the Aravalli foothills above Jaipur — rocky trails, cool air, and sweeping Pink City views at sunrise.</p>
+        <div class="gal-grid" id="g-trek-1">
+          <a href="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702070832_BURST000_COVER.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702070832_BURST000_COVER.jpg" alt="Gad Ganesh Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702070846.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702070846.jpg" alt="Gad Ganesh Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702070932.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702070932.jpg" alt="Gad Ganesh Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+        </div>
+        <div class="gal-slider-wrap">
+          <div class="gal-slider-header">
+            <span class="gal-slider-counter">3 more photos</span>
+            <div class="gal-slider-nav">
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+            </div>
+          </div>
+          <div class="gal-slider-viewport">
+            <div class="gal-slides-track">
+              <a href="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702070939.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702070939.jpg" alt="Gad Ganesh Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702071120.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702071120.jpg" alt="Gad Ganesh Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702071229.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/1. gad ganesh with minki/IMG20230702071229.jpg" alt="Gad Ganesh Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+          <div class="gal-progress"><div class="gal-progress-bar"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-card" id="trek-2">
+      <div class="conf-card-header">
+        <h3><span class="conf-num">02</span>Jal Mahal with Yash</h3>
+        <div class="conf-meta">
+          <span><i class="fa fa-calendar"></i>May 2023</span>
+          <span><i class="fa fa-map-marker"></i>Jal Mahal, Jaipur</span>
+          <span><i class="fa fa-image"></i>6 Photos</span>
+        </div>
+      </div>
+      <div class="conf-card-body">
+        <p class="conf-desc">A dawn walk along the shores of Man Sagar Lake with the Water Palace shimmering in still water — Nahargarh hillside and the Aravalli range as a backdrop.</p>
+        <div class="gal-grid" id="g-trek-2">
+          <a href="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/CYMERA_20230521_061425.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/CYMERA_20230521_061425.jpg" alt="Jal Mahal Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/IMG20230512133839.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/IMG20230512133839.jpg" alt="Jal Mahal Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/IMG20230512133842.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/IMG20230512133842.jpg" alt="Jal Mahal Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+        </div>
+        <div class="gal-slider-wrap">
+          <div class="gal-slider-header">
+            <span class="gal-slider-counter">3 more photos</span>
+            <div class="gal-slider-nav">
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+            </div>
+          </div>
+          <div class="gal-slider-viewport">
+            <div class="gal-slides-track">
+              <a href="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/IMG20230512133845.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/IMG20230512133845.jpg" alt="Jal Mahal Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/IMG20230512134119.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/IMG20230512134119.jpg" alt="Jal Mahal Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/IMG20230512134216.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/2. JAL MAHAL WITH YASH/IMG20230512134216.jpg" alt="Jal Mahal Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+          <div class="gal-progress"><div class="gal-progress-bar"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-card" id="trek-3">
+      <div class="conf-card-header">
+        <h3><span class="conf-num">03</span>Samod with Minki</h3>
+        <div class="conf-meta">
+          <span><i class="fa fa-calendar"></i>February 2023</span>
+          <span><i class="fa fa-map-marker"></i>Samod, Rajasthan</span>
+          <span><i class="fa fa-image"></i>6 Photos</span>
+        </div>
+      </div>
+      <div class="conf-card-body">
+        <p class="conf-desc">An offbeat trail through the hills surrounding Samod — ancient walls, quiet paths, and a winter afternoon well away from the city.</p>
+        <div class="gal-grid" id="g-trek-3">
+          <a href="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205165949.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205165949.jpg" alt="Samod Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205170517.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205170517.jpg" alt="Samod Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205170520.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205170520.jpg" alt="Samod Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+        </div>
+        <div class="gal-slider-wrap">
+          <div class="gal-slider-header">
+            <span class="gal-slider-counter">3 more photos</span>
+            <div class="gal-slider-nav">
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+            </div>
+          </div>
+          <div class="gal-slider-viewport">
+            <div class="gal-slides-track">
+              <a href="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205170639.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205170639.jpg" alt="Samod Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205170648.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205170648.jpg" alt="Samod Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205170651.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/3. Samod with minki/IMG20230205170651.jpg" alt="Samod Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+          <div class="gal-progress"><div class="gal-progress-bar"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-card" id="trek-4">
+      <div class="conf-card-header">
+        <h3><span class="conf-num">04</span>Chulgiri with Minki</h3>
+        <div class="conf-meta">
+          <span><i class="fa fa-calendar"></i>February 2023</span>
+          <span><i class="fa fa-map-marker"></i>Chulgiri, Jaipur</span>
+          <span><i class="fa fa-image"></i>6 Photos</span>
+        </div>
+      </div>
+      <div class="conf-card-body">
+        <p class="conf-desc">A brisk winter-morning hike along Chulgiri's rocky ridgeline — known for its Jain temple at the summit and uninterrupted views across southern Jaipur.</p>
+        <div class="gal-grid" id="g-trek-4">
+          <a href="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212165616.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212165616.jpg" alt="Chulgiri Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212165618.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212165618.jpg" alt="Chulgiri Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212165802.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212165802.jpg" alt="Chulgiri Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+        </div>
+        <div class="gal-slider-wrap">
+          <div class="gal-slider-header">
+            <span class="gal-slider-counter">3 more photos</span>
+            <div class="gal-slider-nav">
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+            </div>
+          </div>
+          <div class="gal-slider-viewport">
+            <div class="gal-slides-track">
+              <a href="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212165805.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212165805.jpg" alt="Chulgiri Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212165820.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212165820.jpg" alt="Chulgiri Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212170005.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/4. chulgiri with minki/IMG20230212170005.jpg" alt="Chulgiri Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+          <div class="gal-progress"><div class="gal-progress-bar"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-card" id="trek-5">
+      <div class="conf-card-header">
+        <h3><span class="conf-num">05</span>Gad Ganesh with Apoo</h3>
+        <div class="conf-meta">
+          <span><i class="fa fa-calendar"></i>October 2023</span>
+          <span><i class="fa fa-map-marker"></i>Gad Ganesh Temple, Jaipur</span>
+          <span><i class="fa fa-image"></i>6 Photos</span>
+        </div>
+      </div>
+      <div class="conf-card-body">
+        <p class="conf-desc">A return to Gad Ganesh in the cool of autumn — crisp air, golden-hour light on the hillside, and the quiet satisfaction of reaching the top before the city wakes.</p>
+        <div class="gal-grid" id="g-trek-5">
+          <a href="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028063741.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028063741.jpg" alt="Gad Ganesh with Apoo"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028063749.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028063749.jpg" alt="Gad Ganesh with Apoo"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028064153.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028064153.jpg" alt="Gad Ganesh with Apoo"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+        </div>
+        <div class="gal-slider-wrap">
+          <div class="gal-slider-header">
+            <span class="gal-slider-counter">3 more photos</span>
+            <div class="gal-slider-nav">
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+            </div>
+          </div>
+          <div class="gal-slider-viewport">
+            <div class="gal-slides-track">
+              <a href="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028064203.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028064203.jpg" alt="Gad Ganesh with Apoo"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028064259.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028064259.jpg" alt="Gad Ganesh with Apoo"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028064307.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/5. gad ganesh with Apoo/IMG20231028064307.jpg" alt="Gad Ganesh with Apoo"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+          <div class="gal-progress"><div class="gal-progress-bar"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-card" id="trek-6">
+      <div class="conf-card-header">
+        <h3><span class="conf-num">06</span>Gad Ganesh with Mom</h3>
+        <div class="conf-meta">
+          <span><i class="fa fa-calendar"></i>April 2024</span>
+          <span><i class="fa fa-map-marker"></i>Gad Ganesh Temple, Jaipur</span>
+          <span><i class="fa fa-image"></i>6 Photos</span>
+        </div>
+      </div>
+      <div class="conf-card-body">
+        <p class="conf-desc">A meaningful sunrise trek shared with my mother — up the Aravalli hillside to an ancient temple, a quiet hour together before the day began.</p>
+        <div class="gal-grid" id="g-trek-6">
+          <a href="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074738.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074738.jpg" alt="Gad Ganesh with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074907.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074907.jpg" alt="Gad Ganesh with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074915.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074915.jpg" alt="Gad Ganesh with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+        </div>
+        <div class="gal-slider-wrap">
+          <div class="gal-slider-header">
+            <span class="gal-slider-counter">3 more photos</span>
+            <div class="gal-slider-nav">
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+            </div>
+          </div>
+          <div class="gal-slider-viewport">
+            <div class="gal-slides-track">
+              <a href="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074937.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074937.jpg" alt="Gad Ganesh with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074946.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074946.jpg" alt="Gad Ganesh with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074950.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/6. gad ganesh with mom/IMG20240407074950.jpg" alt="Gad Ganesh with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+          <div class="gal-progress"><div class="gal-progress-bar"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-card" id="trek-7">
+      <div class="conf-card-header">
+        <h3><span class="conf-num">07</span>Dense Forest Trail</h3>
+        <div class="conf-meta">
+          <span><i class="fa fa-calendar"></i>August 2023</span>
+          <span><i class="fa fa-map-marker"></i>Aravalli Forest, Jaipur</span>
+          <span><i class="fa fa-image"></i>6 Photos</span>
+        </div>
+      </div>
+      <div class="conf-card-body">
+        <p class="conf-desc">A monsoon-season walk through lush Aravalli greenery — mist on the ridgeline, birdsong replacing the city noise, and the trail entirely to ourselves.</p>
+        <div class="gal-grid" id="g-trek-7">
+          <a href="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060829.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060829.jpg" alt="Dense Forest Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060834.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060834.jpg" alt="Dense Forest Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060848.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060848.jpg" alt="Dense Forest Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+        </div>
+        <div class="gal-slider-wrap">
+          <div class="gal-slider-header">
+            <span class="gal-slider-counter">3 more photos</span>
+            <div class="gal-slider-nav">
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+            </div>
+          </div>
+          <div class="gal-slider-viewport">
+            <div class="gal-slides-track">
+              <a href="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060940.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060940.jpg" alt="Dense Forest Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060941.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060941.jpg" alt="Dense Forest Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060945.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/7. dence forest/IMG20230827060945.jpg" alt="Dense Forest Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+          <div class="gal-progress"><div class="gal-progress-bar"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-card" id="trek-8">
+      <div class="conf-card-header">
+        <h3><span class="conf-num">08</span>Jal Mahal</h3>
+        <div class="conf-meta">
+          <span><i class="fa fa-calendar"></i>August 2023</span>
+          <span><i class="fa fa-map-marker"></i>Jal Mahal, Jaipur</span>
+          <span><i class="fa fa-image"></i>6 Photos</span>
+        </div>
+      </div>
+      <div class="conf-card-body">
+        <p class="conf-desc">A morning walk by Man Sagar Lake — still water, the floating palace at first light, and the Aravalli hills reflected on the surface.</p>
+        <div class="gal-grid" id="g-trek-8">
+          <a href="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061053.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061053.jpg" alt="Jal Mahal"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061056.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061056.jpg" alt="Jal Mahal"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061058.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061058.jpg" alt="Jal Mahal"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+        </div>
+        <div class="gal-slider-wrap">
+          <div class="gal-slider-header">
+            <span class="gal-slider-counter">3 more photos</span>
+            <div class="gal-slider-nav">
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+            </div>
+          </div>
+          <div class="gal-slider-viewport">
+            <div class="gal-slides-track">
+              <a href="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061153.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061153.jpg" alt="Jal Mahal"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061159.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061159.jpg" alt="Jal Mahal"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061241.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/8. Jal mahal/IMG20230820061241.jpg" alt="Jal Mahal"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+          <div class="gal-progress"><div class="gal-progress-bar"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-card" id="trek-9">
+      <div class="conf-card-header">
+        <h3><span class="conf-num">09</span>Amer</h3>
+        <div class="conf-meta">
+          <span><i class="fa fa-calendar"></i>March 2024</span>
+          <span><i class="fa fa-map-marker"></i>Amer, Jaipur</span>
+          <span><i class="fa fa-image"></i>6 Photos</span>
+        </div>
+      </div>
+      <div class="conf-card-body">
+        <p class="conf-desc">A pre-dawn hike up the Aravalli ridge above Amer Fort — rewarded with a golden sunrise over ancient Rajput battlements and the sweep of the valley below.</p>
+        <div class="gal-grid" id="g-trek-9">
+          <a href="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064757.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064757.jpg" alt="Amer Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064819.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064819.jpg" alt="Amer Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064839.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064839.jpg" alt="Amer Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+        </div>
+        <div class="gal-slider-wrap">
+          <div class="gal-slider-header">
+            <span class="gal-slider-counter">3 more photos</span>
+            <div class="gal-slider-nav">
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+            </div>
+          </div>
+          <div class="gal-slider-viewport">
+            <div class="gal-slides-track">
+              <a href="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064853.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064853.jpg" alt="Amer Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064855.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064855.jpg" alt="Amer Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064928.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/9. amer/IMG20240331064928.jpg" alt="Amer Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+          <div class="gal-progress"><div class="gal-progress-bar"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-card" id="trek-10">
+      <div class="conf-card-header">
+        <h3><span class="conf-num">10</span>Samod with Mom</h3>
+        <div class="conf-meta">
+          <span><i class="fa fa-calendar"></i>April 2023</span>
+          <span><i class="fa fa-map-marker"></i>Samod, Rajasthan</span>
+          <span><i class="fa fa-image"></i>6 Photos</span>
+        </div>
+      </div>
+      <div class="conf-card-body">
+        <p class="conf-desc">A quiet spring morning on the trails above Samod — wildflowers, clean air, and a peaceful hour shared before the day began.</p>
+        <div class="gal-grid" id="g-trek-10">
+          <a href="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_063449.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_063449.jpg" alt="Samod with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_064856.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_064856.jpg" alt="Samod with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_064859.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_064859.jpg" alt="Samod with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+        </div>
+        <div class="gal-slider-wrap">
+          <div class="gal-slider-header">
+            <span class="gal-slider-counter">3 more photos</span>
+            <div class="gal-slider-nav">
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
+              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+            </div>
+          </div>
+          <div class="gal-slider-viewport">
+            <div class="gal-slides-track">
+              <a href="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_064903.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_064903.jpg" alt="Samod with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_064928.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_064928.jpg" alt="Samod with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              <a href="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_065043.jpg" class="gal-item"><img loading="lazy" src="img/blog/4. Hobbies/1. trekking/10. samod with mom/IMG_20230430_065043.jpg" alt="Samod with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+            </div>
+          </div>
+          <div class="gal-progress"><div class="gal-progress-bar"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Trek Videos ── -->
+    <div class="trek-video-label"><i class="fa fa-film"></i> Trek Videos &nbsp;<span style="font-weight:400;color:#888;font-size:.7rem;letter-spacing:0;">7 clips</span></div>
+    <div class="trek-video-grid">
+      <video controls preload="metadata"><source src="img/blog/4.%20Hobbies/1.%20trekking/2.%20JAL%20MAHAL%20WITH%20YASH/VID20230512134259.mp4" type="video/mp4"></video>
+      <video controls preload="metadata"><source src="img/blog/4.%20Hobbies/1.%20trekking/9.%20amer/VID20240331065126%20-%20Trim.mp4" type="video/mp4"></video>
+    </div>
+
+    <div style="text-align:center;margin:0 0 24px;">
+      <button class="trek-show-more-btn" id="trek-vid-toggle" onclick="toggleTrekVideos(this)">
+        <i class="fa fa-chevron-down"></i> Show 5 More Videos
+      </button>
+    </div>
+
+    <div id="trek-vid-extra" class="trek-video-extra">
+      <div class="trek-video-grid">
+        <video controls preload="metadata"><source src="img/blog/4.%20Hobbies/1.%20trekking/8.%20Jal%20mahal/VID20230820064300%20-%20Trim%20-%20Trim%20-%20Trim.mp4" type="video/mp4"></video>
+        <video controls preload="metadata"><source src="img/blog/4.%20Hobbies/1.%20trekking/6.%20gad%20ganesh%20with%20mom/VID20240407075305%20-%20Trim%20-%20Trim.mp4" type="video/mp4"></video>
+      </div>
+      <div class="trek-video-grid">
+        <video controls preload="metadata"><source src="img/blog/4.%20Hobbies/1.%20trekking/VID-20240408-WA0002.mp4" type="video/mp4"></video>
+        <video controls preload="metadata"><source src="img/blog/4.%20Hobbies/1.%20trekking/VID-20240408-WA0010.mp4" type="video/mp4"></video>
+      </div>
+      <div class="trek-video-grid" style="grid-template-columns:1fr 1fr">
+        <video controls preload="metadata"><source src="img/blog/4.%20Hobbies/1.%20trekking/9.%20amer/VID20240331071048%20-%20Trim%20-%20Trim.mp4" type="video/mp4"></video>
+      </div>
+    </div><!-- /trek-vid-extra -->
+
+      </div><!-- /col-lg-8 -->
+
+      <div class="col-lg-4">
+        <div class="trek-sidebar">
+          <div class="sidebar-box">
+            <h4><i class="fa fa-map-marker" style="color:#c084fc;margin-right:8px;"></i>Trek Log</h4>
+            <ul class="toc-list">
+              <li><a href="#trek-1">Gad Ganesh with Minki <span class="toc-year">Jul 2023</span></a></li>
+              <li><a href="#trek-2">Jal Mahal with Yash <span class="toc-year">May 2023</span></a></li>
+              <li><a href="#trek-3">Samod with Minki <span class="toc-year">Feb 2023</span></a></li>
+              <li><a href="#trek-4">Chulgiri with Minki <span class="toc-year">Feb 2023</span></a></li>
+              <li><a href="#trek-5">Gad Ganesh with Apoo <span class="toc-year">Oct 2023</span></a></li>
+              <li><a href="#trek-6">Gad Ganesh with Mom <span class="toc-year">Apr 2024</span></a></li>
+              <li><a href="#trek-7">Dense Forest Trail <span class="toc-year">Aug 2023</span></a></li>
+              <li><a href="#trek-8">Jal Mahal <span class="toc-year">Aug 2023</span></a></li>
+              <li><a href="#trek-9">Amer <span class="toc-year">Mar 2024</span></a></li>
+              <li><a href="#trek-10">Samod with Mom <span class="toc-year">Apr 2023</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- /col-lg-4 -->
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+<!-- ════════════════════ PAINTING ════════════════════ -->
+<section class="hobby-section" id="tab-painting">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Visual Arts &amp; Drawing</span>
+      <h2 class="section-title">Painting &amp; Drawing</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="hobby-card" data-blog-post-id="painting-drawing" data-photo-taken-on="May 16, 2026">
+      <div class="hobby-card-icon"><i class="fa fa-paint-brush"></i></div>
+      <h3>Painting &amp; Drawing: The Quiet Space Where Imagination Learnt Discipline</h3>
+      <p>
+        Some parts of life stay with us quietly. For me, painting and drawing have been that kind of companion. Long before I began expressing ideas through research papers, presentations, code, and algorithms, I was learning to express them through lines, colours, texture, and patient observation. A pencil, a brush, a sheet of paper, or even a simple handmade surface could become a place where thoughts settled and imagination found shape.
+      </p>
+      <p>
+        My earliest certificates remind me that this love began very young. In 1997, I received a Meritorious position in the TSI Prestigious Drawing Competition. Later, I participated in the All India Drawing &amp; Painting Competition by FX World in Hyderabad and the Tanishq Mega Painting Competition by Titan Industries Limited during Class XI and Class XII at Model School. These were not just certificates; they were small but powerful milestones that taught me confidence, focus, and the joy of creating something with my own hands.
+      </p>
+
+      <div class="art-hero">
+        <a href="files/8. Blog/4. Avocations/2. Drawing/artwork/oil painting--.png" class="art-hero-photo gal-item">
+          <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/artwork/oil painting--.png" alt="Oil painting artwork">
+        </a>
+        <div class="art-hero-note">
+          <span>Creative Practice</span>
+          <h4>Where patience becomes visible</h4>
+          <p>
+            Art gives me a different kind of discipline from research. It asks me to slow down, observe carefully, and trust the process. Every stroke, fold, layer, shade, and handmade texture becomes a reminder that beauty is built patiently.
+          </p>
+        </div>
+      </div>
+
+      <div class="art-story-grid">
+        <div class="art-story-chip">
+          <strong>Started Early</strong>
+          <span>Drawing competitions in school gave me my first public moments of creative confidence.</span>
+        </div>
+        <div class="art-story-chip">
+          <strong>Many Mediums</strong>
+          <span>Oil painting, water colour, craft surfaces, sticks, POP work, and handmade compositions all became part of the journey.</span>
+        </div>
+        <div class="art-story-chip">
+          <strong>Still Personal</strong>
+          <span>Even today, art remains a quiet space where I can pause, reflect, and return to myself.</span>
+        </div>
+      </div>
+
+      <div class="hobby-quote">
+        "Art has always been my pause button. It slows the world down, lets the mind breathe, and reminds me that precision can also be gentle."
+      </div>
+      <p>
+        Over time, this creative practice expanded beyond paper. I explored oil painting, water colour, craft-based compositions, ice-cream-stick work, POP-based art, and decorative handmade pieces. Each medium taught something different. Water colour taught softness and restraint. Oil painting taught layering. Craft work taught structure. POP work taught texture and patience. Together, they made art feel less like a single hobby and more like a language with many dialects.
+      </p>
+      <p>
+        Years later, this love for visual expression continued at Manipal University Jaipur, where I won <strong>1st Position</strong> in the Rangoli Competition at Xpression Cultural &amp; Sports Fest. That recognition felt special because Rangoli connects creativity with tradition. It is detailed, colourful, temporary, and deeply Indian. Creating it felt different from painting on paper, but the heart of the process was the same: patience, balance, and devotion to detail.
+      </p>
+      <p>
+        Today, painting and drawing remain very close to me. They are not only hobbies; they are a way of returning to myself. In research, I solve problems by breaking them down logically. In art, I solve them by feeling my way through colour, shape, and composition. Both require discipline. Both require courage. Both begin with a blank space and the belief that something meaningful can emerge from it.
+      </p>
+
+      <div id="painting-folder-galleries" data-github-root="files/8. Blog/4. Avocations/2. Drawing"></div>
+
+      <!-- Certificate Gallery — descending chronological order -->
+      <div style="margin-top:36px;">
+        <div class="blog-gallery-label"><i class="fa fa-trophy"></i> Recognition &amp; Certificates &nbsp;<span style="font-weight:400;color:#888;font-size:.7rem;letter-spacing:0;">5 certificates · newest first</span></div>
+
+        <!-- 1. Xpression MUJ — most recent -->
+        <div style="margin-bottom:28px;">
+          <div class="cert-row-label">
+            <span class="cert-year-badge">~2018–19</span>
+            <span class="cert-row-title">Xpression Cultural &amp; Sports Fest — 1st Position, Rangoli Competition</span>
+            <span class="cert-row-org">Manipal University Jaipur</span>
+          </div>
+          <div class="blog-gallery-grid blog-gallery-grid-1" id="gal-paint-xpression">
+            <a href="files/8. Blog/4. Avocations/2. Drawing/rangoli/20260516_164941.jpg" class="gal-item">
+              <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/rangoli/20260516_164941.jpg" alt="Xpression MUJ – 1st Position Rangoli – Certificate &amp; Gold Medal">
+              <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Tanishq Class XII -->
+        <div style="margin-bottom:28px;">
+          <div class="cert-row-label">
+            <span class="cert-year-badge">Class XII</span>
+            <span class="cert-row-title">Tanishq Mega Painting Competition — Certificate of Appreciation</span>
+            <span class="cert-row-org">Titan Industries Limited · Model School</span>
+          </div>
+          <div class="blog-gallery-grid blog-gallery-grid-1" id="gal-paint-tanishq-xii">
+            <a href="files/8. Blog/4. Avocations/2. Drawing/20260516_162621.jpg" class="gal-item">
+              <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/20260516_162621.jpg" alt="Tanishq Mega Painting Competition – Class XII Certificate">
+              <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Tanishq Class XI -->
+        <div style="margin-bottom:28px;">
+          <div class="cert-row-label">
+            <span class="cert-year-badge">Class XI</span>
+            <span class="cert-row-title">Tanishq Mega Painting Competition — Certificate of Appreciation</span>
+            <span class="cert-row-org">Titan Industries Limited · Model School</span>
+          </div>
+          <div class="blog-gallery-grid blog-gallery-grid-1" id="gal-paint-tanishq-xi">
+            <a href="files/8. Blog/4. Avocations/2. Drawing/20260516_162628.jpg" class="gal-item">
+              <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/20260516_162628.jpg" alt="Tanishq Mega Painting Competition – Class XI Certificate">
+              <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. FX World, All India -->
+        <div style="margin-bottom:28px;">
+          <div class="cert-row-label">
+            <span class="cert-year-badge">Class VIII</span>
+            <span class="cert-row-title">All India Drawing &amp; Painting Competition — Certificate of Merit</span>
+            <span class="cert-row-org">FX World · St. George's Girls Grammar School, Hyderabad</span>
+          </div>
+          <div class="blog-gallery-grid blog-gallery-grid-1" id="gal-paint-fxworld">
+            <a href="files/8. Blog/4. Avocations/2. Drawing/20260516_162438.jpg" class="gal-item">
+              <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/20260516_162438.jpg" alt="FX World All India Drawing &amp; Painting Competition – Certificate of Merit">
+              <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. TSI 1997 — earliest -->
+        <div style="margin-bottom:8px;">
+          <div class="cert-row-label">
+            <span class="cert-year-badge">1997</span>
+            <span class="cert-row-title">TSI Prestigious Drawing Competition — Certificate of Merit, Meritorious Position</span>
+            <span class="cert-row-org">Talent Search Institute · S.D.A. Mission School</span>
+          </div>
+          <div class="blog-gallery-grid blog-gallery-grid-1" id="gal-paint-tsi">
+            <a href="files/8. Blog/4. Avocations/2. Drawing/20260516_162432.jpg" class="gal-item">
+              <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/20260516_162432.jpg" alt="TSI Prestigious Drawing Competition 1997 – Certificate of Merit">
+              <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ ORIGAMI ════════════════════ -->
+<section class="hobby-section" id="tab-origami">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Paper Art</span>
+      <h2 class="section-title">Origami</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="hobby-card">
+      <div class="hobby-card-icon"><i class="fa fa-star"></i></div>
+      <h3>The Art of the Fold</h3>
+      <p>
+        Origami is pure applied mathematics — a flat sheet of paper transformed into a three-dimensional form through nothing but precise folds. I find it deeply calming and endlessly fascinating.
+      </p>
+      <p>
+        Each model demands full attention; a single errant crease can unravel the whole structure. That rigour resonates with me as a researcher. I enjoy folding complex modular designs and traditional cranes, and often use origami as a way to explain spatial reasoning and transformation concepts to students in a tangible, tactile way.
+      </p>
+      <div class="hobby-quote">
+        "Origami teaches you that complexity emerges from simplicity — a single sheet, a finite set of rules, and infinite possibility. That is exactly how I think about algorithms."
+      </div>
+      <p>
+        There is something profoundly satisfying about holding a finished model — knowing that structure and beauty emerged from nothing but careful, deliberate action on an ordinary piece of paper.
+      </p>
+      <div class="hobby-placeholder">
+        <i class="fa fa-image"></i>
+        Origami gallery coming soon.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ MAGIC TRICKS ════════════════════ -->
+<section class="hobby-section" id="tab-magic">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Performance &amp; Illusion</span>
+      <h2 class="section-title">Magic Tricks</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="hobby-card">
+      <div class="hobby-card-icon"><i class="fa fa-magic"></i></div>
+      <h3>Sleight of Hand</h3>
+      <p>
+        Magic is the art of misdirection, precision, and storytelling — skills that translate surprisingly well to teaching and presenting research. I enjoy learning card sleights and close-up illusions, and occasionally perform for students and colleagues.
+      </p>
+      <p>
+        There is something wonderful about creating a moment of genuine wonder in someone's eyes. It is a reminder that not everything needs to be explained immediately, and that surprise is one of the most powerful tools a communicator has. A great magic trick and a great research presentation share a common structure: setup, tension, reveal.
+      </p>
+      <div class="hobby-quote">
+        "Magic taught me that the most important moment in any presentation is the reveal — and that everything before it is simply careful, deliberate preparation."
+      </div>
+      <p>
+        I use magic occasionally as an icebreaker in lectures. Nothing grabs a student's attention quite like an impossible card trick — and once you have their curiosity, you can take them anywhere.
+      </p>
+      <div class="hobby-placeholder">
+        <i class="fa fa-image"></i>
+        Performance clips coming soon.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/site-components.js"></script>
+<script type="module" src="assets/js/firebase-blog.js"></script>
+<script>
+const PAINTING_FALLBACKS = {
+  "files/8. Blog/4. Avocations/2. Drawing/artwork": [
+    "oil painting--.png",
+    "oil painting.JPG",
+    "water color.jpg",
+    "with ice cream stick.png",
+    "with pop.png",
+    "with pop-.png",
+    "DSC03041.JPG",
+    "IMG20220528064540.jpg"
+  ],
+  "files/8. Blog/4. Avocations/2. Drawing/rangoli": [
+    "20181219_171237.jpg",
+    "20260516_164941.jpg",
+    "IMG20191214101311.jpg",
+    "IMG_2577.JPG",
+    "IMG_2615.JPG",
+    "IMG_2618.JPG",
+    "WhatsApp Image 2023-10-09 at 17.19.35.png",
+    "WhatsApp Image 2023-10-09 at 17.19.46.png"
+  ]
+};
+const PAINTING_FOLDER_FALLBACKS = ['artwork', 'rangoli'];
+const PAINTING_FOLDER_TITLES = {
+  artwork: 'My Artwork & Handmade Pieces',
+  rangoli: 'Rangoli & Festival Art'
+};
+const TREKKING_ROOT = 'files/8. Blog/4. Avocations/1. trekking';
+const TREK_META = {
+  '1. gad ganesh with minki': { date: 'July 2023', shortDate: 'Jul 2023', location: 'Gad Ganesh Temple, Jaipur', title: 'Gad Ganesh with Minki', desc: 'An early-morning hike to the Gad Ganesh temple perched in the Aravalli foothills above Jaipur - rocky trails, cool air, and sweeping Pink City views at sunrise.' },
+  '2. JAL MAHAL WITH YASH': { date: 'May 2023', shortDate: 'May 2023', location: 'Jal Mahal, Jaipur', title: 'Jal Mahal with Yash', desc: 'A dawn walk along the shores of Man Sagar Lake with the Water Palace shimmering in still water and the Aravalli range as a backdrop.' },
+  '3. Samod with minki': { date: 'February 2023', shortDate: 'Feb 2023', location: 'Samod, Rajasthan', title: 'Samod with Minki', desc: 'An offbeat trail through the hills surrounding Samod - ancient walls, quiet paths, and a winter afternoon well away from the city.' },
+  '4. chulgiri with minki': { date: 'February 2023', shortDate: 'Feb 2023', location: 'Chulgiri, Jaipur', title: 'Chulgiri with Minki', desc: 'A brisk winter-morning hike along Chulgiri\'s rocky ridgeline, known for its Jain temple at the summit and uninterrupted views across Jaipur.' },
+  '5. gad ganesh with Apoo': { date: 'October 2023', shortDate: 'Oct 2023', location: 'Gad Ganesh Temple, Jaipur', title: 'Gad Ganesh with Apoo', desc: 'A return to Gad Ganesh in the cool of autumn - crisp air, golden-hour light on the hillside, and the quiet satisfaction of reaching the top.' },
+  '6. gad ganesh with mom': { date: 'April 2024', shortDate: 'Apr 2024', location: 'Gad Ganesh Temple, Jaipur', title: 'Gad Ganesh with Mom', desc: 'A meaningful sunrise trek shared with my mother - up the Aravalli hillside to an ancient temple, a quiet hour together before the day began.' },
+  '7. dence forest': { date: 'August 2023', shortDate: 'Aug 2023', location: 'Aravalli Forest, Jaipur', title: 'Dense Forest Trail', desc: 'A monsoon-season walk through lush Aravalli greenery - mist on the ridgeline, birdsong replacing the city noise, and the trail entirely to ourselves.' },
+  '8. Jal mahal': { date: 'August 2023', shortDate: 'Aug 2023', location: 'Jal Mahal, Jaipur', title: 'Jal Mahal', desc: 'A morning walk by Man Sagar Lake - still water, the floating palace at first light, and the Aravalli hills reflected on the surface.' },
+  '9. amer': { date: 'March 2024', shortDate: 'Mar 2024', location: 'Amer, Jaipur', title: 'Amer', desc: 'A pre-dawn hike up the Aravalli ridge above Amer Fort, rewarded with a golden sunrise over ancient battlements and the valley below.' },
+  '10. samod with mom': { date: 'April 2023', shortDate: 'Apr 2023', location: 'Samod, Rajasthan', title: 'Samod with Mom', desc: 'A quiet spring morning on the trails above Samod - wildflowers, clean air, and a peaceful hour shared before the day began.' },
+  '11. girjadevi temple and tracking': { date: 'May 2026', shortDate: 'May 2026', location: 'Girja Devi Temple Trail', title: 'Girja Devi Temple Trekking', desc: 'A temple trail that blends devotion, movement, and the quiet pleasure of walking through a landscape that slowly opens with every step.' }
+};
+
+function encodeGithubPath(path) {
+  return path.split('/').map(function(part) { return encodeURIComponent(part); }).join('/');
+}
+
+function paintingImageTitle(name) {
+  return name
+    .replace(/\.[^.]+$/, '')
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, function(ch) { return ch.toUpperCase(); }) || 'Painting and drawing artwork';
+}
+
+function paintingFolderTitle(name) {
+  return PAINTING_FOLDER_TITLES[name] || name
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, function(ch) { return ch.toUpperCase(); });
+}
+
+function paintingGalleryIcon(name) {
+  return name.toLowerCase().indexOf('rangoli') !== -1 ? 'fa-paint-brush' : 'fa-picture-o';
+}
+
+function avocEscape(value) {
+  return String(value || '').replace(/[&<>"']/g, function(ch) {
+    return ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[ch];
+  });
+}
+
+function trekFolderTitle(name) {
+  var meta = TREK_META[name];
+  if (meta) return meta.title;
+  return name.replace(/^\d+\.\s*/, '').replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim().replace(/\b\w/g, function(ch) { return ch.toUpperCase(); });
+}
+
+function trekFolderNumber(name, index) {
+  var match = String(name || '').match(/^(\d+)/);
+  return match ? parseInt(match[1], 10) : index + 1;
+}
+
+function trekFallbackMeta(name) {
+  return TREK_META[name] || {
+    date: 'Date: recent trek',
+    shortDate: 'Trek',
+    location: 'Trekking trail',
+    title: trekFolderTitle(name),
+    desc: 'A trekking memory from the trail - fresh air, movement, and a quiet reset away from screens.'
+  };
+}
+
+function renderAutoGallery($gallery, items) {
+  var html = items.map(function(item) {
+    var title = paintingImageTitle(item.name);
+    return '' +
+      '<a href="' + item.url + '" class="gal-item">' +
+        '<img loading="lazy" src="' + item.url + '" alt="' + title + '">' +
+        '<div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>' +
+      '</a>';
+  }).join('');
+
+  $gallery.html(html || '<div class="hobby-placeholder"><i class="fa fa-image"></i>No images found yet.</div>');
+
+  try { $gallery.magnificPopup('destroy'); } catch (error) {}
+  $gallery.magnificPopup({
+    delegate: 'a.gal-item',
+    type: 'image',
+    gallery: { enabled: true, navigateByImgClick: true },
+    image: { titleSrc: function(item){ return item.el.find('img').attr('alt'); }, verticalFit: true },
+    zoom: { enabled: true, duration: 200 }
+  });
+
+  setTimeout(function() {
+    enhanceAvocationImageGalleries();
+  }, 0);
+}
+
+async function loadGithubFolder(path) {
+  var apiUrl = 'https://api.github.com/repos/anubhaparashar/anubhaparashar.github.io/contents/' + encodeGithubPath(path) + '?ref=main';
+  var response = await fetch(apiUrl, { headers: { 'Accept': 'application/vnd.github+json' } });
+  if (!response.ok) throw new Error('GitHub folder request failed: ' + response.status);
+  return response.json();
+}
+
+async function loadPaintingFolderGallery($gallery) {
+  var folder = $gallery.data('github-folder');
+  var files = [];
+
+  try {
+    var data = await loadGithubFolder(folder);
+    files = data
+      .filter(function(item) { return item.type === 'file' && /\.(jpe?g|png|gif|webp)$/i.test(item.name); })
+      .sort(function(a, b) { return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }); })
+      .map(function(item) { return { name: item.name, url: item.download_url }; });
+  } catch (error) {
+    console.warn('Using local fallback gallery for ' + folder, error);
+    files = (PAINTING_FALLBACKS[folder] || []).map(function(name) {
+      return { name: name, url: folder + '/' + name };
+    });
+  }
+
+  renderAutoGallery($gallery, files);
+
+  $gallery.closest('.auto-folder-gallery').find('.auto-gallery-count').text(files.length + (files.length === 1 ? ' image' : ' images'));
+}
+
+function renderPaintingFolderSections($root, rootPath, folders) {
+  var sections = folders.map(function(folderName, index) {
+    var folderPath = rootPath + '/' + folderName;
+    var galleryId = 'gal-paint-folder-' + index + '-' + folderName.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+    return '' +
+      '<div class="auto-folder-gallery" style="margin-top:36px;">' +
+        '<div class="blog-gallery-label"><i class="fa ' + paintingGalleryIcon(folderName) + '"></i> ' +
+          paintingFolderTitle(folderName) + ' <span class="auto-gallery-count" style="font-weight:400;color:#888;font-size:.7rem;letter-spacing:0;">Loading...</span>' +
+        '</div>' +
+        '<div class="art-gallery-grid auto-art-gallery" id="' + galleryId + '" data-github-folder="' + folderPath + '"></div>' +
+      '</div>';
+  }).join('');
+
+  $root.html(sections);
+  $root.find('.auto-art-gallery').each(function() {
+    loadPaintingFolderGallery($(this));
+  });
+}
+
+async function loadAutoPaintingGalleries() {
+  var $root = $('#painting-folder-galleries');
+  var rootPath = $root.data('github-root');
+  var folders = [];
+
+  try {
+    var data = await loadGithubFolder(rootPath);
+    folders = data
+      .filter(function(item) { return item.type === 'dir'; })
+      .map(function(item) { return item.name; })
+      .sort(function(a, b) { return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }); });
+  } catch (error) {
+    console.warn('Using local fallback painting folders', error);
+    folders = PAINTING_FOLDER_FALLBACKS.slice();
+  }
+
+  renderPaintingFolderSections($root, rootPath, folders);
+}
+
+function renderTrekCard(folder, index) {
+  var meta = trekFallbackMeta(folder.name);
+  var number = String(trekFolderNumber(folder.name, index)).padStart(2, '0');
+  var imageCount = folder.images.length;
+  var videoCount = folder.videos.length;
+  var videoHtml = videoCount ? '' +
+    '<div class="trek-video-label"><i class="fa fa-film"></i> Videos &nbsp;<span style="font-weight:400;color:#888;font-size:.7rem;letter-spacing:0;">' + videoCount + (videoCount === 1 ? ' clip' : ' clips') + '</span></div>' +
+    '<div class="trek-video-grid">' +
+      folder.videos.map(function(item) {
+        return '<video controls preload="metadata"><source src="' + avocEscape(item.download_url) + '" type="video/mp4"></video>';
+      }).join('') +
+    '</div>' : '';
+  return '' +
+    '<div class="conf-card" id="trek-' + trekFolderNumber(folder.name, index) + '">' +
+      '<div class="conf-card-header">' +
+        '<h3><span class="conf-num">' + number + '</span>' + avocEscape(meta.title) + '</h3>' +
+        '<div class="conf-meta">' +
+          '<span><i class="fa fa-calendar"></i>' + avocEscape(meta.date) + '</span>' +
+          '<span><i class="fa fa-map-marker"></i>' + avocEscape(meta.location) + '</span>' +
+          '<span><i class="fa fa-image"></i>' + imageCount + (imageCount === 1 ? ' Photo' : ' Photos') + (videoCount ? ' - ' + videoCount + (videoCount === 1 ? ' Video' : ' Videos') : '') + '</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="conf-card-body">' +
+        '<p class="conf-desc">' + avocEscape(meta.desc) + '</p>' +
+        '<div class="gal-grid" id="g-trek-' + trekFolderNumber(folder.name, index) + '">' +
+          folder.images.map(function(item) {
+            return '<a href="' + avocEscape(item.download_url) + '" class="gal-item">' +
+              '<img loading="lazy" src="' + avocEscape(item.download_url) + '" alt="' + avocEscape(meta.title) + '">' +
+              '<div class="gal-overlay"><i class="fa fa-search-plus"></i></div>' +
+            '</a>';
+          }).join('') +
+        '</div>' +
+        videoHtml +
+      '</div>' +
+    '</div>';
+}
+
+function renderTrekSidebar(folders) {
+  var list = document.querySelector('#tab-trekking .toc-list');
+  if (!list) return;
+  list.innerHTML = folders.map(function(folder, index) {
+    var meta = trekFallbackMeta(folder.name);
+    return '<li><a href="#trek-' + trekFolderNumber(folder.name, index) + '">' + avocEscape(meta.title) + ' <span class="toc-year">' + avocEscape(meta.shortDate) + '</span></a></li>';
+  }).join('');
+}
+
+async function loadAutoTrekkingGalleries() {
+  var leftCol = document.querySelector('#tab-trekking .row > .col-lg-8');
+  if (!leftCol) return;
+
+  try {
+    var rootData = await loadGithubFolder(TREKKING_ROOT);
+    var folderNames = rootData
+      .filter(function(item) { return item.type === 'dir'; })
+      .map(function(item) { return item.name; })
+      .sort(function(a, b) { return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }); });
+
+    var folders = await Promise.all(folderNames.map(async function(name, index) {
+      var data = await loadGithubFolder(TREKKING_ROOT + '/' + name);
+      return {
+        name: name,
+        index: index,
+        images: data.filter(function(item) { return item.type === 'file' && /\.(jpe?g|png|gif|webp|bmp)$/i.test(item.name); })
+          .sort(function(a, b) { return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }); }),
+        videos: data.filter(function(item) { return item.type === 'file' && /\.(mp4|mov|m4v|webm|mpg|mpeg)$/i.test(item.name); })
+          .sort(function(a, b) { return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }); })
+      };
+    }));
+
+    folders = folders.filter(function(folder) { return folder.images.length || folder.videos.length; });
+    if (!folders.length) return;
+
+    leftCol.innerHTML = folders.map(renderTrekCard).join('');
+    renderTrekSidebar(folders);
+    enhanceAvocationImageGalleries();
+    initAvocationLightbox(leftCol);
+    window.dispatchEvent(new CustomEvent('autoFolderGalleriesUpdated'));
+  } catch (error) {
+    console.warn('Using static trekking fallback', error);
+  }
+}
+
+$(document).ready(function(){
+  /* Trek card galleries: one gallery per card covering both grid + slider items */
+  $('.conf-card .conf-card-body').each(function(){
+    $(this).magnificPopup({
+      delegate: 'a.gal-item',
+      type: 'image',
+      gallery: { enabled: true, navigateByImgClick: true },
+      image: { titleSrc: function(item){ return item.el.find('img').attr('alt'); }, verticalFit: true },
+      zoom: { enabled: true, duration: 200 },
+      callbacks: {
+        close: function(){ }
+      }
+    });
+  });
+  /* Painting galleries */
+  loadAutoTrekkingGalleries();
+  loadAutoPaintingGalleries();
+  ['gal-paint-xpression','gal-paint-tanishq-xii','gal-paint-tanishq-xi','gal-paint-fxworld','gal-paint-tsi'].forEach(function(id){
+    $('#'+id).magnificPopup({
+      delegate: 'a.gal-item',
+      type: 'image',
+      gallery: { enabled: true, navigateByImgClick: true },
+      image: { titleSrc: function(item){ return item.el.find('img').attr('alt'); }, verticalFit: true },
+      zoom: { enabled: true, duration: 200 }
+    });
+  });
+});
+</script>
+<script>
+  function galSliderScroll(btn, dir) {
+    var wrap = btn.closest('.gal-slider-wrap');
+    var vp = wrap.querySelector('.gal-slider-viewport');
+    vp.scrollLeft += dir * 170;
+    setTimeout(function() {
+      var track = vp.querySelector('.gal-slides-track');
+      var maxScroll = Math.max(0, track.scrollWidth - vp.clientWidth);
+      var pct = maxScroll > 0 ? Math.min(100, (vp.scrollLeft / maxScroll) * 100) : 100;
+      wrap.querySelector('.gal-progress-bar').style.width = pct + '%';
+      wrap.querySelectorAll('.gal-nav-btn')[0].disabled = vp.scrollLeft <= 0;
+      wrap.querySelectorAll('.gal-nav-btn')[1].disabled = vp.scrollLeft >= maxScroll - 1;
+    }, 280);
+  }
+
+  function switchTab(id, btn) {
+    document.querySelectorAll('.hobby-section').forEach(function(s) { s.classList.remove('active'); });
+    document.querySelectorAll('.hobby-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+    history.replaceState(null, '', '#' + id);
+  }
+  window.switchTab = switchTab;
+
+  function findHobbyTabButton(id) {
+    return Array.from(document.querySelectorAll('.hobby-tab-btn')).find(function(b) {
+      return b.getAttribute('onclick').indexOf("'" + id + "'") !== -1;
+    });
+  }
+
+  function getHobbyTabForHash(hash) {
+    var valid = ['trekking', 'painting', 'origami', 'magic'];
+    if (valid.indexOf(hash) !== -1) return hash;
+
+    var target = document.getElementById(hash);
+    var section = target ? target.closest('.hobby-section') : null;
+    return section ? section.id.replace(/^tab-/, '') : null;
+  }
+
+  function scrollToHobbyHash(hash) {
+    var target = document.getElementById(hash);
+    if (!target) return;
+
+    setTimeout(function() {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 250);
+  }
+
+  function toggleTrekVideos(btn) {
+    var extra = document.getElementById('trek-vid-extra');
+    var open = extra.classList.contains('is-open');
+    var count = btn.getAttribute('data-more-count') || '5';
+    extra.classList.toggle('is-open', !open);
+    btn.innerHTML = open
+      ? '<i class="fa fa-chevron-down"></i> Show ' + count + ' More Videos'
+      : '<i class="fa fa-chevron-up"></i> Show Less';
+  }
+
+  function initAvocationLightbox(scope) {
+    if (!window.jQuery || !jQuery.fn || !jQuery.fn.magnificPopup) return;
+    jQuery(scope).find('.gal-grid, .art-gallery-grid, .blog-gallery-grid, .auto-folder-grid').each(function() {
+      var $gallery = jQuery(this);
+      try { $gallery.magnificPopup('destroy'); } catch (error) {}
+      $gallery.magnificPopup({
+        delegate: 'a.gal-item',
+        type: 'image',
+        gallery: { enabled: true, navigateByImgClick: true },
+        image: { titleSrc: function(item){ return item.el.find('img').attr('alt'); }, verticalFit: true },
+        zoom: { enabled: true, duration: 200 }
+      });
+    });
+  }
+
+  function buildAvocationImageSlider(items, label) {
+    var slider = document.createElement('div');
+    slider.className = 'gal-slider-wrap blog-media-slider';
+
+    var head = document.createElement('div');
+    head.className = 'gal-slider-header';
+
+    var count = document.createElement('span');
+    count.className = 'gal-slider-counter';
+    count.textContent = items.length + (items.length === 1 ? ' more photo' : ' more photos');
+
+    var nav = document.createElement('div');
+    nav.className = 'gal-slider-nav';
+
+    var prev = document.createElement('button');
+    prev.type = 'button';
+    prev.className = 'gal-nav-btn';
+    prev.innerHTML = '<i class="fa fa-chevron-left"></i>';
+
+    var next = document.createElement('button');
+    next.type = 'button';
+    next.className = 'gal-nav-btn';
+    next.innerHTML = '<i class="fa fa-chevron-right"></i>';
+
+    nav.appendChild(prev);
+    nav.appendChild(next);
+    head.appendChild(count);
+    head.appendChild(nav);
+
+    var viewport = document.createElement('div');
+    viewport.className = 'gal-slider-viewport';
+    var track = document.createElement('div');
+    track.className = 'gal-slides-track';
+    items.forEach(function(item) { track.appendChild(item); });
+    viewport.appendChild(track);
+
+    var progress = document.createElement('div');
+    progress.className = 'gal-progress';
+    var bar = document.createElement('div');
+    bar.className = 'gal-progress-bar';
+    progress.appendChild(bar);
+
+    var foot = document.createElement('div');
+    foot.className = 'gal-more-count';
+
+    slider.appendChild(head);
+    slider.appendChild(viewport);
+    slider.appendChild(progress);
+    slider.appendChild(foot);
+
+    var updateSlider = function() {
+      var maxScroll = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+      var item = track.querySelector('a.gal-item');
+      var itemStep = item ? item.getBoundingClientRect().width + 10 : 160;
+      var firstVisible = itemStep ? Math.round(viewport.scrollLeft / itemStep) : 0;
+      var visibleCount = Math.max(1, Math.floor(viewport.clientWidth / itemStep));
+      var shown = Math.min(items.length, firstVisible + visibleCount);
+      var remaining = Math.max(0, items.length - shown);
+      bar.style.width = maxScroll > 0 ? Math.max((viewport.scrollLeft / maxScroll) * 100, 2) + '%' : '100%';
+      if (remaining > 0) {
+        foot.className = 'gal-more-count';
+        foot.innerHTML = '<strong>+' + remaining + '</strong> more image' + (remaining === 1 ? '' : 's') + ' left';
+      } else {
+        foot.className = 'gal-more-count done';
+        foot.textContent = 'All extra images shown';
+      }
+      prev.disabled = viewport.scrollLeft <= 2;
+      next.disabled = maxScroll <= 2 || viewport.scrollLeft >= maxScroll - 2;
+    };
+
+    prev.addEventListener('click', function() {
+      viewport.scrollBy({ left: -Math.max(160, viewport.clientWidth - 40), behavior: 'smooth' });
+    });
+    next.addEventListener('click', function() {
+      viewport.scrollBy({ left: Math.max(160, viewport.clientWidth - 40), behavior: 'smooth' });
+    });
+    viewport.addEventListener('scroll', function() {
+      window.requestAnimationFrame(updateSlider);
+    });
+    window.addEventListener('resize', updateSlider);
+
+    return { slider: slider, track: track, update: updateSlider };
+  }
+
+  function enhanceGalleryElement(gallery, limit) {
+    if (!gallery) return;
+    var oldControls = gallery.nextElementSibling && gallery.nextElementSibling.classList.contains('avoc-show-more-wrap')
+      ? gallery.nextElementSibling
+      : null;
+    var oldExtra = oldControls && oldControls.nextElementSibling && oldControls.nextElementSibling.classList.contains('blog-media-slider')
+      ? oldControls.nextElementSibling
+      : (gallery.nextElementSibling && gallery.nextElementSibling.classList.contains('blog-media-slider') ? gallery.nextElementSibling : null);
+    var items = Array.from(gallery.querySelectorAll(':scope > a.gal-item'));
+    if (oldExtra) {
+      items = items.concat(Array.from(oldExtra.querySelectorAll('a.gal-item')));
+      oldExtra.parentNode.removeChild(oldExtra);
+    }
+    if (oldControls) oldControls.parentNode.removeChild(oldControls);
+    gallery.removeAttribute('data-avoc-show-more-ready');
+    gallery.innerHTML = '';
+    items.forEach(function(item, index) {
+      if (index < limit) gallery.appendChild(item);
+    });
+    if (items.length <= limit) return;
+
+    gallery.dataset.avocShowMoreReady = 'true';
+    var sliderParts = buildAvocationImageSlider(items.slice(limit), 'Photos');
+
+    sliderParts.slider.classList.add('is-open');
+    gallery.parentNode.insertBefore(sliderParts.slider, gallery.nextSibling);
+    initAvocationLightbox(gallery.parentNode);
+    initAvocationLightbox(sliderParts.track);
+    setTimeout(sliderParts.update, 0);
+  }
+
+  function enhanceTrekCards() {
+    document.querySelectorAll('#tab-trekking .conf-card-body').forEach(function(body) {
+      var firstGrid = body.querySelector('.gal-grid');
+      if (!firstGrid) return;
+      var items = Array.from(body.querySelectorAll('.gal-grid a.gal-item, .gal-slides-track a.gal-item'));
+      if (!items.length) return;
+
+      body.dataset.avocTrekReady = 'true';
+      var galleryId = firstGrid.id || '';
+      var rebuilt = document.createElement('div');
+      rebuilt.className = 'gal-grid';
+      if (galleryId) rebuilt.id = galleryId;
+
+      var extraItems = [];
+      items.forEach(function(item, index) {
+        if (index < 4) {
+          rebuilt.appendChild(item);
+        } else {
+          extraItems.push(item);
+        }
+      });
+
+      body.querySelectorAll('.gal-grid, .gal-slider-wrap, .blog-media-slider, .avoc-show-more-wrap').forEach(function(node) {
+        node.parentNode.removeChild(node);
+      });
+
+      var desc = body.querySelector('.conf-desc');
+      if (desc && desc.nextSibling) {
+        body.insertBefore(rebuilt, desc.nextSibling);
+      } else {
+        body.appendChild(rebuilt);
+      }
+
+      if (items.length > 4) {
+        var sliderParts = buildAvocationImageSlider(extraItems, 'Photos');
+        sliderParts.slider.classList.add('is-open');
+        body.insertBefore(sliderParts.slider, rebuilt.nextSibling);
+        setTimeout(sliderParts.update, 0);
+      }
+
+      initAvocationLightbox(body);
+    });
+  }
+
+  function enhanceAvocationImageGalleries() {
+    enhanceTrekCards();
+    document.querySelectorAll('#tab-painting .art-gallery-grid, #tab-painting .blog-gallery-grid, #tab-painting .auto-folder-grid').forEach(function(gallery) {
+      enhanceGalleryElement(gallery, 4);
+    });
+  }
+
+  function activateHobbyHash(hash) {
+    var tabName = getHobbyTabForHash(hash);
+    if (tabName) {
+      var btn = findHobbyTabButton(tabName);
+      if (btn) switchTab(tabName, btn);
+      if (hash && hash !== tabName) {
+        history.replaceState(null, '', '#' + hash);
+        scrollToHobbyHash(hash);
+      }
+    }
+  }
+
+  /* Restore tab from URL hash */
+  enhanceAvocationImageGalleries();
+  activateHobbyHash((location.hash || '').slice(1));
+  window.addEventListener('hashchange', function() {
+    activateHobbyHash((location.hash || '').slice(1));
+  });
+  window.addEventListener('autoFolderGalleriesUpdated', function() {
+    enhanceAvocationImageGalleries();
+  });
+</script>
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>

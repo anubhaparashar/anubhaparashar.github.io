@@ -1,0 +1,1381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Education – Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+    /* ── HERO ── */
+    .edu-hero {
+      background: linear-gradient(135deg, #0a1028 0%, #17245a 48%, #4b3a7a 100%);
+      padding: 130px 0 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .edu-hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background-image: linear-gradient(rgba(223,196,112,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(223,196,112,.055) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .edu-hero-inner { position: relative; z-index: 2; }
+    .edu-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .edu-particles span {
+      position: absolute; display: block; border-radius: 50%;
+      background: rgba(223,196,112,.24); animation: eduFloat linear infinite; bottom: -20px;
+    }
+    @keyframes eduFloat {
+      0% { transform: translateY(0); opacity: 0; }
+      10% { opacity: 1; }
+      85% { opacity: .35; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
+    .edu-particles span:nth-child(1)  { left: 7%;  width:5px;  height:5px;  animation-duration:11s; animation-delay:0s; }
+    .edu-particles span:nth-child(2)  { left: 15%; width:3px;  height:3px;  animation-duration:9s;  animation-delay:1.4s; }
+    .edu-particles span:nth-child(3)  { left: 24%; width:6px;  height:6px;  animation-duration:13s; animation-delay:0.8s; }
+    .edu-particles span:nth-child(4)  { left: 33%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:2.2s; }
+    .edu-particles span:nth-child(5)  { left: 42%; width:3px;  height:3px;  animation-duration:10s; animation-delay:0.3s; }
+    .edu-particles span:nth-child(6)  { left: 51%; width:7px;  height:7px;  animation-duration:14s; animation-delay:1.8s; }
+    .edu-particles span:nth-child(7)  { left: 60%; width:4px;  height:4px;  animation-duration:9s;  animation-delay:0.6s; }
+    .edu-particles span:nth-child(8)  { left: 68%; width:3px;  height:3px;  animation-duration:12s; animation-delay:3.1s; }
+    .edu-particles span:nth-child(9)  { left: 76%; width:5px;  height:5px;  animation-duration:10s; animation-delay:1.2s; }
+    .edu-particles span:nth-child(10) { left: 84%; width:4px;  height:4px;  animation-duration:8s;  animation-delay:0.5s; }
+    .edu-particles span:nth-child(11) { left: 91%; width:3px;  height:3px;  animation-duration:11s; animation-delay:2.5s; }
+    .edu-particles span:nth-child(12) { left: 20%; width:8px;  height:8px;  animation-duration:15s; animation-delay:1.9s; }
+    .edu-particles span:nth-child(13) { left: 55%; width:3px;  height:3px;  animation-duration:7s;  animation-delay:4.0s; }
+    .edu-particles span:nth-child(14) { left: 73%; width:6px;  height:6px;  animation-duration:12s; animation-delay:2.8s; }
+    .edu-particles span:nth-child(15) { left: 39%; width:4px;  height:4px;  animation-duration:9s;  animation-delay:0.9s; }
+    .edu-hero h1 {
+      font-size: 2.9rem !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .edu-hero .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,.6) !important;
+      margin-bottom: 44px;
+      max-width: 540px; margin-left: auto; margin-right: auto;
+    }
+    .edu-eyebrow {
+      font-size: .68rem; letter-spacing: 4px; text-transform: uppercase;
+      color: #dfc470; font-weight: 700; margin-bottom: 14px;
+    }
+    .edu-stats {
+      display: flex;
+      justify-content: center;
+      gap: 44px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .edu-stat-num {
+      display: block;
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: #f2dda0 !important;
+      line-height: 1;
+    }
+    .edu-stat-lbl {
+      display: block;
+      font-size: .63rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,.45) !important;
+      margin-top: 5px;
+    }
+    .hero-cta-row { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18);
+      border-radius: 24px; padding: 8px 18px; font-size: .77rem; font-weight: 600;
+      color: rgba(255,255,255,.85) !important; text-decoration: none !important; transition: all .22s;
+    }
+    .hero-cta:hover { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.38); color: #fff !important; }
+    .hero-cta i { font-size: .85rem; }
+
+    /* ── SECTION WRAPPER ── */
+    .edu-section {
+      padding: 70px 0 80px;
+    }
+    .edu-section.alt-bg {
+      background: #f5f6ff;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: .7rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #7eb8e0;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 2rem !important;
+      font-weight: 800 !important;
+      color: #1a1a2e !important;
+      margin-bottom: 10px;
+    }
+    .section-title-bar {
+      width: 50px;
+      height: 4px;
+      background: linear-gradient(90deg, #7eb8e0, #0f3460);
+      border-radius: 2px;
+      margin: 0 auto 50px;
+    }
+    .section-title-bar.left {
+      margin: 0 0 50px;
+    }
+
+    /* ── EDUCATION TIMELINE ── */
+    .edu-timeline {
+      position: relative;
+      padding-left: 0;
+    }
+    .edu-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, #7eb8e0, #0f3460);
+      transform: translateX(-50%);
+    }
+    .tl-item {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 50px;
+      align-items: flex-start;
+    }
+    .tl-item.left {
+      flex-direction: row-reverse;
+    }
+    .tl-year-col {
+      flex: 0 0 calc(50% - 32px);
+      text-align: right;
+    }
+    .tl-item.left .tl-year-col {
+      text-align: left;
+    }
+    .tl-dot-col {
+      flex: 0 0 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 6px;
+    }
+    .tl-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #7eb8e0;
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 0 3px #7eb8e0;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    .tl-card-col {
+      flex: 0 0 calc(50% - 32px);
+    }
+    .tl-item.left .tl-card-col {
+      flex: 0 0 calc(50% - 32px);
+    }
+    .tl-year {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #0f3460;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .tl-year-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #1a1a2e, #0f3460);
+      color: #7eb8e0 !important;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-top: 6px;
+    }
+    .tl-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px 26px;
+      box-shadow: 0 4px 20px rgba(15,52,96,.09);
+      border-left: 4px solid #7eb8e0;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .tl-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(15,52,96,.14);
+    }
+    .tl-card h4 {
+      font-size: 1.05rem !important;
+      font-weight: 700 !important;
+      color: #1a1a2e !important;
+      margin-bottom: 4px;
+    }
+    .tl-card .tl-inst {
+      font-size: .85rem;
+      color: #0f3460;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .tl-card .tl-detail {
+      font-size: .82rem;
+      color: #666;
+      margin-bottom: 2px;
+      line-height: 1.5;
+    }
+    .tl-card .tl-thesis {
+      font-size: .78rem;
+      color: #888;
+      font-style: italic;
+      margin-top: 6px;
+      line-height: 1.45;
+    }
+
+    /* mobile: stack timeline */
+    @media (max-width: 767px) {
+      .edu-timeline::before { left: 18px; }
+      .tl-item, .tl-item.left { flex-direction: column; gap: 10px; padding-left: 48px; }
+      .tl-year-col, .tl-item.left .tl-year-col { flex: none; text-align: left; }
+      .tl-dot-col { position: absolute; left: 8px; }
+      .tl-card-col, .tl-item.left .tl-card-col { flex: none; width: 100%; }
+      .edu-timeline { position: relative; }
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .cert-logo {
+      flex-shrink: 0;
+      width: 88px;
+      height: 52px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: transparent;
+    }
+    .cert-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .tl-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 46px;
+      max-width: 240px;
+      height: 54px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: transparent;
+    }
+    .tl-icon svg { display: block; width: 46px; height: 46px; }
+    .tl-icon img { display: block; height: 54px; width: auto; max-width: 240px; object-fit: contain; }
+    .tl-icon img.logo-wide { height: 48px; width: auto; max-width: 240px; }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 22px;
+    }
+    .cert-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px 22px 18px;
+      box-shadow: 0 4px 18px rgba(15,52,96,.08);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: transform .22s, box-shadow .22s;
+    }
+    .cert-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(15,52,96,.13);
+    }
+    .cert-body h5 {
+      font-size: .9rem !important;
+      font-weight: 700 !important;
+      color: #1a1a2e !important;
+      margin-bottom: 4px;
+      line-height: 1.35;
+    }
+    .cert-body .cert-org {
+      font-size: .78rem;
+      color: #0f3460;
+      font-weight: 600;
+    }
+    .cert-body .cert-date {
+      font-size: .73rem;
+      color: #999;
+      margin-top: 3px;
+    }
+
+    /* ── ACCORDION LISTS ── */
+    .edu-accordion .accordion-btn {
+      background: #fff;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      text-align: left;
+      padding: 16px 20px;
+      font-size: .92rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(15,52,96,.07);
+      cursor: pointer;
+      transition: background .2s;
+      margin-bottom: 6px;
+    }
+    .edu-accordion .accordion-btn:hover {
+      background: #eef4fb;
+    }
+    .edu-accordion .accordion-btn .num-badge {
+      background: linear-gradient(135deg, #7eb8e0, #0f3460);
+      color: #fff;
+      font-size: .7rem;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 20px;
+      margin-left: 10px;
+    }
+    .edu-accordion .accordion-btn .arrow {
+      font-size: .75rem;
+      color: #7eb8e0;
+      transition: transform .25s;
+    }
+    .edu-accordion .accordion-btn.open .arrow {
+      transform: rotate(180deg);
+    }
+    .edu-accordion .accordion-body {
+      display: none;
+      background: #fff;
+      border-radius: 0 0 10px 10px;
+      margin-top: -6px;
+      margin-bottom: 12px;
+      padding: 6px 0 4px;
+      box-shadow: 0 4px 14px rgba(15,52,96,.07);
+    }
+    .acc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 11px 20px;
+      border-bottom: 1px solid #f0f2f8;
+      transition: background .15s;
+    }
+    .acc-item:last-child { border-bottom: none; }
+    .acc-item:hover { background: #f8faff; }
+    .acc-item .acc-num {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #1a1a2e, #0f3460);
+      color: #7eb8e0;
+      font-size: .68rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .acc-item .acc-title {
+      font-size: .87rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      line-height: 1.4;
+    }
+    .acc-item .acc-meta {
+      font-size: .77rem;
+      color: #666;
+      margin-top: 2px;
+      line-height: 1.35;
+    }
+    .acc-item .acc-org {
+      font-size: .75rem;
+      color: #0f3460;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .acc-cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: .68rem;
+      font-weight: 700;
+      color: #7eb8e0;
+      text-decoration: none !important;
+      margin-top: 4px;
+      transition: color .15s;
+    }
+    .acc-cert-link:hover { color: #0f3460; }
+    .compact-cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: .67rem;
+      font-weight: 700;
+      color: #7eb8e0;
+      text-decoration: none !important;
+      margin-top: 3px;
+      transition: color .15s;
+    }
+    .compact-cert-link:hover { color: #0f3460; }
+
+    /* ── WEBINAR / QUIZ TABLE GRID ── */
+    .compact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 14px;
+    }
+    .compact-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 14px 16px;
+      box-shadow: 0 2px 10px rgba(15,52,96,.07);
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      border-left: 3px solid #7eb8e0;
+    }
+    .compact-card .c-num {
+      flex-shrink: 0;
+      font-size: .72rem;
+      font-weight: 800;
+      color: #7eb8e0;
+      margin-top: 2px;
+      min-width: 22px;
+    }
+    .compact-card .c-title {
+      font-size: .85rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      line-height: 1.35;
+    }
+    .compact-card .c-meta {
+      font-size: .75rem;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* ── SEMINAR CARDS ── */
+    .seminar-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px 24px;
+      box-shadow: 0 4px 18px rgba(15,52,96,.08);
+      border-top: 4px solid #7eb8e0;
+      margin-bottom: 18px;
+      transition: transform .22s;
+    }
+    .seminar-card:hover { transform: translateY(-3px); }
+    .seminar-card h5 {
+      font-size: .95rem !important;
+      font-weight: 700 !important;
+      color: #1a1a2e !important;
+      margin-bottom: 6px;
+    }
+    .seminar-card .sem-speaker {
+      font-size: .82rem;
+      color: #0f3460;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .seminar-card .sem-venue {
+      font-size: .78rem;
+      color: #888;
+    }
+
+    /* ── DOCUMENT LINKS ── */
+    .tl-doc-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .tl-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 5px 13px;
+      border-radius: 20px;
+      text-decoration: none !important;
+      transition: all .2s;
+      border: 1.5px solid #7eb8e0;
+      color: #0f3460 !important;
+      background: transparent;
+    }
+    .tl-link:hover {
+      background: #7eb8e0;
+      color: #fff !important;
+    }
+    .tl-link.thesis {
+      border-color: #27ae60;
+      color: #1a6e3c !important;
+    }
+    .tl-link.thesis:hover {
+      background: #27ae60;
+      color: #fff !important;
+    }
+    .tl-link.ppt {
+      border-color: #c0392b;
+      color: #922b21 !important;
+    }
+    .tl-link.ppt:hover {
+      background: #c0392b;
+      color: #fff !important;
+    }
+    .cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .71rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-decoration: none !important;
+      border: 1.5px solid #7eb8e0;
+      color: #0f3460 !important;
+      margin-top: 9px;
+      transition: all .2s;
+      background: transparent;
+    }
+    .cert-link:hover {
+      background: #7eb8e0;
+      color: #fff !important;
+    }
+
+    /* show/hide toggle for long lists */
+    .show-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: 2px solid #7eb8e0;
+      color: #0f3460;
+      font-size: .82rem;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 18px;
+      transition: all .2s;
+    }
+    .show-more-btn:hover {
+      background: #7eb8e0;
+      color: #fff;
+    }
+    .hidden-rows { display: none; }
+
+    /* section divider */
+    .divider-wave {
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .divider-wave svg { display: block; }
+  </style>
+</head>
+
+<body class="blog_version">
+
+  <!--================ Header =================-->
+  <div id="site-header"></div>
+
+  <!-- ════════════ HERO ════════════ -->
+  <section class="edu-hero">
+    <div class="edu-particles">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="edu-hero-inner">
+      <div class="container">
+        <p class="edu-eyebrow">Academic Profile</p>
+        <h1>Education &amp; Learning</h1>
+        <p class="hero-sub">A lifelong journey of academic excellence, continuous upskilling &amp; knowledge sharing</p>
+        <div class="edu-stats">
+          <div>
+            <span class="edu-stat-num" data-target="5">5</span>
+            <span class="edu-stat-lbl">Degrees</span>
+          </div>
+          <div>
+            <span class="edu-stat-num" data-target="6">6</span>
+            <span class="edu-stat-lbl">Certifications</span>
+          </div>
+          <div>
+            <span class="edu-stat-num" data-target="43">43</span>
+            <span class="edu-stat-lbl">Courses Attended</span>
+          </div>
+          <div>
+            <span class="edu-stat-num" data-target="80">80</span>
+            <span class="edu-stat-lbl">Webinars</span>
+          </div>
+          <div>
+            <span class="edu-stat-num" data-target="11">11</span>
+            <span class="edu-stat-lbl">Quizzes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FORMAL EDUCATION TIMELINE ════════════ -->
+  <section class="edu-section alt-bg">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Academic Degrees</span>
+        <h2 class="section-title">Education</h2>
+        <div class="section-title-bar"></div>
+      </div>
+
+      <div class="edu-timeline" style="max-width:900px;margin:0 auto;position:relative;">
+
+        <!-- PhD -->
+        <div class="tl-item">
+          <div class="tl-year-col">
+            <div class="tl-year">2018 – 2023</div>
+            <span class="tl-year-badge">Doctorate</span>
+          </div>
+          <div class="tl-dot-col"><div class="tl-dot"></div></div>
+          <div class="tl-card-col">
+            <div class="tl-card">
+              <div class="tl-icon">
+                <img src="files/2. Education/logo/muj.png" alt="Manipal University Jaipur" class="logo-wide">
+              </div>
+              <h4>Doctor of Philosophy in Artificial Intelligence</h4>
+              <div class="tl-inst">Manipal University Jaipur, Jaipur, IN</div>
+              <div class="tl-detail"><strong>Area:</strong> Biometrics (Gait), Deep Learning &amp; Computer Vision</div>
+              <div class="tl-thesis">Thesis: "Recognition of GAIT using computer vision and deep learning techniques"</div>
+              <div class="tl-doc-links">
+                <a href="files/2. Education/1. Degree certificate, thesis, ppt/phd.pdf" target="_blank" class="tl-link"><i class="fa fa-file-pdf-o"></i> Degree Certificate</a>
+                <a href="files/2. Education/1. Degree certificate, thesis, ppt/thesis_phd.pdf" target="_blank" class="tl-link thesis"><i class="fa fa-file-text-o"></i> View Thesis</a>
+                <a href="files/2. Education/1. Degree certificate, thesis, ppt/phd%20ppt.pdf" target="_blank" class="tl-link ppt"><i class="fa fa-file-powerpoint-o"></i> View PPT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MTech -->
+        <div class="tl-item left">
+          <div class="tl-year-col">
+            <div class="tl-year">2014 – 2016</div>
+            <span class="tl-year-badge">Post-Graduate</span>
+          </div>
+          <div class="tl-dot-col"><div class="tl-dot"></div></div>
+          <div class="tl-card-col">
+            <div class="tl-card">
+              <div class="tl-icon">
+                <img src="files/2. Education/logo/mdu-logo.png" alt="Maharshi Dayanand University">
+              </div>
+              <h4>Master of Technology in Computer Science &amp; Engineering</h4>
+              <div class="tl-inst">Maharshi Dayanand University, Rohtak, IN</div>
+              <div class="tl-detail">Percentage: 81.94%</div>
+              <div class="tl-thesis">Thesis: "Classification of GAIT data using various machine learning techniques to categorise human locomotion"</div>
+              <div class="tl-doc-links">
+                <a href="files/2. Education/1. Degree certificate, thesis, ppt/mtech.pdf" target="_blank" class="tl-link"><i class="fa fa-file-pdf-o"></i> Degree Certificate</a>
+                <a href="files/2. Education/1. Degree certificate, thesis, ppt/thesis_mtech.pdf" target="_blank" class="tl-link thesis"><i class="fa fa-file-text-o"></i> View Thesis</a>
+                <a href="files/2. Education/1. Degree certificate, thesis, ppt/Final%20PPT-thesis%20ppt%20mtech.pdf" target="_blank" class="tl-link ppt"><i class="fa fa-file-powerpoint-o"></i> View PPT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BTech -->
+        <div class="tl-item">
+          <div class="tl-year-col">
+            <div class="tl-year">2009 – 2013</div>
+            <span class="tl-year-badge">Graduate</span>
+          </div>
+          <div class="tl-dot-col"><div class="tl-dot"></div></div>
+          <div class="tl-card-col">
+            <div class="tl-card">
+              <div class="tl-icon">
+                <img src="files/2. Education/logo/mdu-logo.png" alt="Maharshi Dayanand University">
+              </div>
+              <h4>Bachelor of Technology in Computer Science &amp; Engineering</h4>
+              <div class="tl-inst">Maharshi Dayanand University, Rohtak, IN</div>
+              <div class="tl-detail">Percentage: 72.79%</div>
+              <div class="tl-thesis">Thesis: "M-Training Toolkit on Polio/Routine Immunization for CMCs in CGPP"</div>
+              <div class="tl-doc-links">
+                <a href="files/2. Education/1. Degree certificate, thesis, ppt/btech.pdf" target="_blank" class="tl-link"><i class="fa fa-file-pdf-o"></i> Degree Certificate</a>
+                <a href="files/2. Education/1. Degree certificate, thesis, ppt/thesis_btech.pdf" target="_blank" class="tl-link thesis"><i class="fa fa-file-text-o"></i> View Thesis</a>
+                <a href="files/2. Education/1. Degree certificate, thesis, ppt/btech%20ppt.pdf" target="_blank" class="tl-link ppt"><i class="fa fa-file-powerpoint-o"></i> View PPT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12th -->
+        <div class="tl-item left">
+          <div class="tl-year-col">
+            <div class="tl-year">2008 – 2009</div>
+            <span class="tl-year-badge">12th CBSE</span>
+          </div>
+          <div class="tl-dot-col"><div class="tl-dot"></div></div>
+          <div class="tl-card-col">
+            <div class="tl-card">
+              <div class="tl-icon">
+                <img src="files/2. Education/logo/cbse.jpg" alt="CBSE" style="height:56px;">
+                <img src="files/2. Education/logo/2.png" alt="Model School Rohtak" style="margin-left:10px; height:100px;">
+              </div>
+              <h4>12th – Central Board of Secondary Education (CBSE)</h4>
+              <div class="tl-inst">Model School, Rohtak, Haryana, IN</div>
+              <div class="tl-detail">Percentage: 68.40%</div>
+              <div class="tl-detail">Subjects: Maths, Physics, Chemistry, English, Physical Education</div>
+              <div class="tl-doc-links">
+                <a href="files/2. Education/1. Degree certificate, thesis, ppt/12th.pdf" target="_blank" class="tl-link"><i class="fa fa-file-pdf-o"></i> Degree Certificate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10th -->
+        <div class="tl-item">
+          <div class="tl-year-col">
+            <div class="tl-year">2006 – 2007</div>
+            <span class="tl-year-badge">10th ICSE</span>
+          </div>
+          <div class="tl-dot-col"><div class="tl-dot"></div></div>
+          <div class="tl-card-col">
+            <div class="tl-card">
+              <div class="tl-icon">
+                <img src="files/2. Education/logo/1.jpeg" alt="St. Georges Grammar School">
+                <img src="files/2. Education/logo/1.png" alt="St. George's Girls' Grammar School badge" style="margin-left:10px; height:100px;">
+              </div>
+              <h4>10th – Indian Certificate of Secondary Education (ICSE)</h4>
+              <div class="tl-inst">St. Georges Grammar School, Hyderabad, IN</div>
+              <div class="tl-detail">Percentage: 70.42%</div>
+              <div class="tl-detail">Subjects: Maths, Physics, Chemistry, Biology, Computer, English (Lit. &amp; Lang.), Hindi, Geography, History, Environmental Science</div>
+              <div class="tl-doc-links">
+                <a href="files/2. Education/1. Degree certificate, thesis, ppt/10th.pdf" target="_blank" class="tl-link"><i class="fa fa-file-pdf-o"></i> Degree Certificate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /edu-timeline -->
+    </div>
+  </section>
+
+  <!-- ════════════ CERTIFICATIONS ════════════ -->
+  <section class="edu-section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Professional Credentials</span>
+        <h2 class="section-title">Certifications</h2>
+        <div class="section-title-bar"></div>
+      </div>
+      <div class="cert-grid">
+
+        <div class="cert-card">
+          <div class="cert-logo">
+            <img src="files/2. Education/logo/coursera-logo.png" alt="Coursera">
+          </div>
+          <div class="cert-body">
+            <h5>Machine Learning Foundations: A Case Study Approach</h5>
+            <div class="cert-org">Coursera – University of Washington</div>
+            <div class="cert-date">March 11, 2017</div>
+            <a href="files/2. Education/2. Certifications/1. Coursera AB65YTVLW3X6.pdf" target="_blank" class="cert-link"><i class="fa fa-file-pdf-o"></i> View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">
+            <img src="files/2. Education/logo/coursera-logo.png" alt="Coursera">
+          </div>
+          <div class="cert-body">
+            <h5>Machine Learning Regression</h5>
+            <div class="cert-org">Coursera – University of Washington</div>
+            <div class="cert-date">July 5, 2017</div>
+            <a href="files/2. Education/2. Certifications/2. Coursera 876JXJGLETWF.pdf" target="_blank" class="cert-link"><i class="fa fa-file-pdf-o"></i> View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">
+            <img src="files/2. Education/logo/coursera-logo.png" alt="Coursera">
+          </div>
+          <div class="cert-body">
+            <h5>Python for Data Science, AI & Development</h5>
+            <div class="cert-org">Coursera – IBM</div>
+            <div class="cert-date">March 19, 2022</div>
+            <a href="files/2. Education/2. Certifications/3. Coursera E4XTJ786HPFA.pdf" target="_blank" class="cert-link"><i class="fa fa-file-pdf-o"></i> View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">
+            <img src="files/2. Education/logo/coursera-logo.png" alt="Coursera">
+          </div>
+          <div class="cert-body">
+            <h5>Tools for Data Science</h5>
+            <div class="cert-org">Coursera – IBM</div>
+            <div class="cert-date">March 19, 2022</div>
+            <a href="files/2. Education/2. Certifications/4. Coursera XBY4EKKVJQ9U.pdf" target="_blank" class="cert-link"><i class="fa fa-file-pdf-o"></i> View Certificate</a>
+          </div>
+        </div>
+
+
+        <div class="cert-card">
+          <div class="cert-logo">
+            <img src="files/2. Education/logo/google-logo.png" alt="Google">
+          </div>
+          <div class="cert-body">
+            <h5>The Fundamentals of Digital Marketing</h5>
+            <div class="cert-org">Google</div>
+            <div class="cert-date">July 8, 2020</div>
+            <a href="files/2. Education/2. Certifications/5. The Fundamentals of Digital Marketing - google.pdf" target="_blank" class="cert-link"><i class="fa fa-file-pdf-o"></i> View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">
+            <img src="files/2. Education/logo/nvidia-logo.png" alt="NVIDIA">
+          </div>
+          <div class="cert-body">
+            <h5>Getting Started with AI on Jetson Nano</h5>
+            <div class="cert-org">NVIDIA</div>
+            <div class="cert-date">May 8, 2021</div>
+            <a href="files/2. Education/2. Certifications/6. DLI S-RX-02 Certificate _ Deep Learning Institute.pdf" target="_blank" class="cert-link"><i class="fa fa-file-pdf-o"></i> View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">
+            <img src="files/2. Education/logo/nvidia-logo.png" alt="NVIDIA">
+          </div>
+          <div class="cert-body">
+            <h5>Getting Started with Deepstream for Video Analytics on Jetson Nano</h5>
+            <div class="cert-org">NVIDIA</div>
+            <div class="cert-date">May 24, 2021</div>
+            <a href="files/2. Education/2. Certifications/7. DLI C-IV-02 Certificate _ Deep Learning Institute.pdf" target="_blank" class="cert-link"><i class="fa fa-file-pdf-o"></i> View Certificate</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ SHORT TERM COURSES ════════════ -->
+  <section class="edu-section alt-bg">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Professional Development</span>
+        <h2 class="section-title">Short Term Courses Attended</h2>
+        <div class="section-title-bar"></div>
+      </div>
+
+      <div class="edu-accordion">
+
+        <!-- visible first 10 -->
+        <div class="acc-group" id="courses-visible">
+
+          <button class="accordion-btn open" onclick="toggleAcc(this)">
+            <span>Courses 1 – 10 <span class="num-badge">10</span></span>
+            <span class="arrow">&#9660;</span>
+          </button>
+          <div class="accordion-body" style="display:block;">
+            <div class="acc-item"><div class="acc-num">1</div><div><div class="acc-title">Ethical Hacking and Cyber Forensics</div><div class="acc-meta">One-day workshop with Delhi Software Solution in association with DSS Group</div><div class="acc-org">PDMCE, Bhadurgarh · November 5, 2012</div></div></div>
+            <div class="acc-item"><div class="acc-num">2</div><div><div class="acc-title">Network Simulation and Related Technologies using NetSIM Software</div><div class="acc-meta">Three-day Faculty Development Programme with DELLSOFT Technologies Pvt. Ltd.</div><div class="acc-org">Manipal University Jaipur · Sept 21–23, 2016</div></div></div>
+            <div class="acc-item"><div class="acc-num">3</div><div><div class="acc-title">Power System Design and Analysis using DigSILENT PowerFactory Software</div><div class="acc-meta">Three-day Faculty Development Programme with DELLSOFT Technologies Pvt. Ltd.</div><div class="acc-org">Manipal University Jaipur · Oct 3–5, 2016</div></div></div>
+            <div class="acc-item"><div class="acc-num">4</div><div><div class="acc-title">Intel HPC Code Modernization (Parallelization and Optimization)</div><div class="acc-meta">Three-day workshop with Intel and Wipro</div><div class="acc-org">Manipal University Jaipur · Oct 12–14, 2016</div></div></div>
+            <div class="acc-item"><div class="acc-num">5</div><div><div class="acc-title">Workshop on Pedagogic and Personal Effectiveness</div><div class="acc-meta">Three-day faculty development programme by Manipal Center for Professional &amp; Personal Development</div><div class="acc-org">Manipal University Jaipur · Nov 10–12, 2016</div></div></div>
+            <div class="acc-item"><div class="acc-num">6</div><div><div class="acc-title">Biometric-based Authentication &amp; De-identification for Privacy Protection</div><div class="acc-meta">Seven-day International Winter School by GIAN, Ministry of Human Resource Development</div><div class="acc-org">Manipal University Jaipur · Dec 19–25, 2016</div></div></div>
+            <div class="acc-item"><div class="acc-num">7</div><div><div class="acc-title">Multimodal and Advanced Biometric-based Authentication</div><div class="acc-meta">Ten-day International Winter School by GIAN, Ministry of Human Resource Development</div><div class="acc-org">MNIT, Jaipur · Jan 2–11, 2017</div></div></div>
+            <div class="acc-item"><div class="acc-num">8</div><div><div class="acc-title">Acquiring 21st Century Competencies through Design Based Learning in Engineering Education</div><div class="acc-meta">Two-day workshop as part of International Conference on Transformation in Engineering Education</div><div class="acc-org">Manipal University Jaipur · Jan 11–12, 2017</div></div></div>
+            <div class="acc-item"><div class="acc-num">9</div><div><div class="acc-title">Computational Intelligence (Machine Based Learning)</div><div class="acc-meta">One-week Faculty Development Program by School of Computing and Information Technology</div><div class="acc-org">Manipal University Jaipur · Jan 18–22, 2017</div></div></div>
+            <div class="acc-item"><div class="acc-num">10</div><div><div class="acc-title">Microsoft Training Programme on Microsoft in the Classroom</div><div class="acc-meta">One-day workshop by Microsoft</div><div class="acc-org">Manipal University Jaipur · March 8, 2017</div></div></div>
+          </div>
+
+          <button class="accordion-btn" onclick="toggleAcc(this)" style="margin-top:6px;">
+            <span>Courses 11 – 20 <span class="num-badge">10</span></span>
+            <span class="arrow">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="acc-item"><div class="acc-num">11</div><div><div class="acc-title">A Workshop on MOOCs and Digital Scholarships</div><div class="acc-meta">One-day workshop by department of Economics</div><div class="acc-org">Manipal University Jaipur · June 16, 2017</div></div></div>
+            <div class="acc-item"><div class="acc-num">12</div><div><div class="acc-title">3rd SERB School on Robotics</div><div class="acc-meta">One-week summer school by Department of Mechanical Engineering, IIT Delhi</div><div class="acc-org">IIT Delhi · June 23–28, 2017</div></div></div>
+            <div class="acc-item"><div class="acc-num">13</div><div><div class="acc-title">Design and Building IoT Solution with Azure</div><div class="acc-meta">Three-day workshop by Microsoft</div><div class="acc-org">Manipal University Jaipur · June 27–29, 2017</div></div></div>
+            <div class="acc-item"><div class="acc-num">14</div><div><div class="acc-title">IoT Solution with Oracle</div><div class="acc-meta">One-day workshop with Oracle</div><div class="acc-org">Manipal University Jaipur · February 14, 2018</div></div></div>
+            <div class="acc-item"><div class="acc-num">15</div><div><div class="acc-title">Emerging Applications in Image Processing</div><div class="acc-meta">One-week FDP by Electronics and ICT Academy by AICTE/UGC/NBA, sponsored by MeitY</div><div class="acc-org">MNIT Jaipur &amp; Manipal University Jaipur · Feb 21–25, 2018</div></div></div>
+            <div class="acc-item"><div class="acc-num">16</div><div><div class="acc-title">Advanced Pattern Recognition Techniques</div><div class="acc-meta">One-week International GIAN Course by Ministry of Human Resource Development</div><div class="acc-org">MNIT Jaipur · Mar 26–30, 2018</div></div></div>
+            <div class="acc-item"><div class="acc-num">17</div><div><div class="acc-title">Awareness of Research Database and Online Research Network Platforms</div><div class="acc-meta">One-day research development program by Directorate of Research</div><div class="acc-org">Manipal University Jaipur · January 25, 2019</div></div></div>
+            <div class="acc-item"><div class="acc-num">18</div><div><div class="acc-title">Digital Image and Video Processing</div><div class="acc-meta">International Summer University Exchange Programme between Switzerland and India</div><div class="acc-org">Manipal University Jaipur · February 13 to 24, 2017</div></div></div>
+            <div class="acc-item"><div class="acc-num">19</div><div><div class="acc-title">Bluemix Enablement Session</div><div class="acc-meta">One-day workshop by IBM Bluemix</div><div class="acc-org">Manipal University Jaipur · May 19, 2019</div></div></div>
+            <div class="acc-item"><div class="acc-num">20</div><div><div class="acc-title">Deep Learning using Python Programming</div><div class="acc-meta">One-week FDP by Electronics and ICT Academy, sponsored by MeitY with support from EduxLabs</div><div class="acc-org">Manipal University Jaipur · July 8–12, 2019</div></div></div>
+          </div>
+
+          <button class="accordion-btn" onclick="toggleAcc(this)" style="margin-top:6px;">
+            <span>Courses 21 – 30 <span class="num-badge">10</span></span>
+            <span class="arrow">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="acc-item"><div class="acc-num">21</div><div><div class="acc-title">Learn How to Write and Publish a Research Paper</div><div class="acc-meta">One-day workshop by School of Computing and IT &amp; Directorate of Research</div><div class="acc-org">Manipal University Jaipur · January 11, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">22</div><div><div class="acc-title">Applied Research in Multidisciplinary Studies</div><div class="acc-meta">Two-day Faculty Development Programme by Dept. of Master of Computer Application</div><div class="acc-org">Sona College of Technology, Salem · May 18–19, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">23</div><div><div class="acc-title">Colloquium on Research Methodology</div><div class="acc-meta">One-week Colloquium</div><div class="acc-org">Indira Gandhi University, Meerpur, Rewari · May 18–23, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">24</div><div><div class="acc-title">Emerging Effective Digital Tools for Teaching Pedagogy</div><div class="acc-meta">Five-day FDP organised by Internal Quality Assurance Cell (IQAC)</div><div class="acc-org">Gnanamani College of Technology, Tamil Nadu · May 25–29, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">25</div><div><div class="acc-title">ICT Tools for E-Content Development</div><div class="acc-meta">Four-day FDP by Dept. of Computer Science and IQAC</div><div class="acc-org">Women's Christian College, Chennai · May 26–29, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">26</div><div><div class="acc-title">Real Time Cognitive Services on Azure Cloud</div><div class="acc-meta">Three-day International Workshop by Dept. of Computer Science</div><div class="acc-org">Parvathy's Arts &amp; Science College · June 10–12, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">27</div><div><div class="acc-title">Yoga For Human Excellence</div><div class="acc-meta">One-day workshop organised by Dept. of English</div><div class="acc-org">Bharat Ratna Puratchi Thalaivar College · June 21, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">28</div><div><div class="acc-title">Emerging Trends in Information Technology</div><div class="acc-meta">Five-day International FDP by Dept. of Information Technology</div><div class="acc-org">Karpagam College of Engineering, Coimbatore · June 23–27, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">29</div><div><div class="acc-title">Essentials for Blended Learning</div><div class="acc-meta">One-week FDP by Dept. of Information Technology</div><div class="acc-org">Dr. MGR Education and Research Institute, Chennai · July 13–20, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">30</div><div><div class="acc-title">NPTEL E-Awareness</div><div class="acc-meta">One-day workshop by NPTEL</div><div class="acc-org">Manipal University Jaipur · July 21, 2020</div></div></div>
+          </div>
+
+          <button class="accordion-btn" onclick="toggleAcc(this)" style="margin-top:6px;">
+            <span>Courses 31 – 43 <span class="num-badge">13</span></span>
+            <span class="arrow">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="acc-item"><div class="acc-num">31</div><div><div class="acc-title">Data Analysis with SPSS</div><div class="acc-meta">Two-day workshop by Dept. of Mathematics &amp; Statistics, School of Basic Sciences</div><div class="acc-org">Manipal University Jaipur · July 23–24, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">32</div><div><div class="acc-title">Python for Data Science</div><div class="acc-meta">Three-day FDP by Dept. of IT and CSE</div><div class="acc-org">Dr. MGR Education and Research Institute, Chennai · July 23–25, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">33</div><div><div class="acc-title">Next Generation Smart Machines (NGSM v1.0)</div><div class="acc-meta">Three-day International Tech Summit by Dept. of Computer Science &amp; Engineering</div><div class="acc-org">Karunya Institute of Technology and Sciences · July 27–29, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">34</div><div><div class="acc-title">Microsoft Teams Tool Training</div><div class="acc-meta">One-week FDP in collaboration with Microsoft</div><div class="acc-org">Manipal University Jaipur · July 27–29, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">35</div><div><div class="acc-title">Environmental Impacts of COVID-19 Pandemic: Challenges and Remedies through Science &amp; Engineering</div><div class="acc-meta">Five-day Short Term Training Program by Dept. of Applied Science in association with RTU Kota</div><div class="acc-org">PIET Jaipur · July 27–31, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">36</div><div><div class="acc-title">Fundamentals of RADAR System</div><div class="acc-meta">Five-day National Course by Dept. of Electronics and Communication Engineering</div><div class="acc-org">N.B.K.R Institute of Science and Technology, Andhra Pradesh · Aug 11–15, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">37</div><div><div class="acc-title">Artificial Intelligence and Machine Learning Application in Healthcare</div><div class="acc-meta">Five-day National Course by CSE &amp; ECE in TEQIP-III sponsored programme</div><div class="acc-org">National Institute of Technology Meghalaya · Sept 3–7, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">38</div><div><div class="acc-title">Artificial Intelligence using Python</div><div class="acc-meta">1-week Hands-On FDP by Dept. of IT with Brainovision Solutions &amp; National Youth Council of India</div><div class="acc-org">CMR Engineering College, Hyderabad · Sept 14–19, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">39</div><div><div class="acc-title">Machine Learning for Natural Language Processing (MNLP-2020)</div><div class="acc-meta">One-week programme by Dept. of Computer Science &amp; Engineering</div><div class="acc-org">NIT Hamirpur · Oct 12–17, 2020</div></div></div>
+            <div class="acc-item"><div class="acc-num">40</div><div><div class="acc-title">Research Trends in Artificial Intelligence and Machine Learning for Engineering Challenges</div><div class="acc-meta">Five-day CIS Summer School / FDP</div><div class="acc-org">Malaviya National Institute of Technology Jaipur · Dec 6–10, 2022</div></div></div>
+            <div class="acc-item"><div class="acc-num">41</div><div><div class="acc-title">Principals' Summit &amp; Teachers' Excellence Award 2018</div><div class="acc-meta">Certificate of Participation</div><div class="acc-org">Manipal University Jaipur · February 9, 2018</div></div></div>
+            <div class="acc-item"><div class="acc-num">42</div><div><div class="acc-title">Telemedicine Challenges and its Awareness</div><div class="acc-meta">One-day workshop by School of Computing and Information Technology</div><div class="acc-org">Manipal University Jaipur · March 26, 2019</div></div></div>
+            <div class="acc-item"><div class="acc-num">43</div><div><div class="acc-title">National Level FDP on Cloud Infrastructure (AWS)</div><div class="acc-meta">One-week National Level Faculty Development Program by School of CSE in collaboration with Brainovision Solutions India Pvt Ltd &amp; AICTE</div><div class="acc-org">Manipal University Jaipur · August 21–25, 2023</div></div></div>
+          </div>
+
+        </div><!-- /courses-visible -->
+      </div><!-- /edu-accordion -->
+    </div>
+  </section>
+
+  <!-- ════════════ WEBINARS ════════════ -->
+  <section class="edu-section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Online Learning</span>
+        <h2 class="section-title">Webinars Attended</h2>
+        <div class="section-title-bar"></div>
+      </div>
+
+      <div class="compact-grid" id="webinar-grid">
+        <div class="compact-card"><div class="c-num">01</div><div><div class="c-title">Fog Computing</div><div class="c-meta">PKN Arts &amp; Science College · May 23, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">02</div><div><div class="c-title">Energy, Water &amp; Resources Savings: How to Go About Sustainability?</div><div class="c-meta">Stella Maris College, Chennai · May 23, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">03</div><div><div class="c-title">Demystifying Machine Learning Predictive Modelling and Real-Time Analytics</div><div class="c-meta">Dhanalakshmi Srinivasan Eng College Perambalur · May 24, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">04</div><div><div class="c-title">An Idea to an Engineering Prototype Research Approach</div><div class="c-meta">PERI Institute of Technology · May 25, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">05</div><div><div class="c-title">Cloud Security</div><div class="c-meta">SHASUN Jain College for Women · May 25, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">06</div><div><div class="c-title">Impact and Adoption of DevOps post COVID-19</div><div class="c-meta">Saveetha Engineering College, Chennai · May 25, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">07</div><div><div class="c-title">High Performance Computing</div><div class="c-meta">Saveetha Engineering College, Chennai · May 26, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">08</div><div><div class="c-title">Recent Trends in Renewable Energy Sources</div><div class="c-meta">Gnanamani College of Technology, Tamil Nadu</div></div></div>
+        <div class="compact-card"><div class="c-num">09</div><div><div class="c-title">SQL Server Database Design and Implementation</div><div class="c-meta">Bishop Ambrose College, Coimbatore · May 26, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">10</div><div><div class="c-title">Skills to Stay Relevant in the 21st Century</div><div class="c-meta">KPR College of Arts Science and Research, Coimbatore · May 26, 2020</div></div></div>
+
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">11</div><div><div class="c-title">Employability Skills for 21st Century</div><div class="c-meta">Saveetha Engineering College, Chennai · May 27, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">12</div><div><div class="c-title">NDLI User Awareness</div><div class="c-meta">Gnanamani College of Technology, Namakkal · May 27, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">13</div><div><div class="c-title">Introduction to Cybersecurity</div><div class="c-meta">Gnanamani College of Technology, Namakkal · May 26, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">14</div><div><div class="c-title">Wireless Mesh Technologies</div><div class="c-meta">Saveetha Engineering College, Chennai · May 28, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">15</div><div><div class="c-title">Revolution of Cloud and Fog Computing in Recent IT Applications</div><div class="c-meta">Kanpur Institute of Technology · May 28, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">16</div><div><div class="c-title">Financial Planning &amp; Investment Management in Current Scenario</div><div class="c-meta">Anna Adarsh College for Women, Chennai · May 29, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">17</div><div><div class="c-title">Art of Writing Research Paper</div><div class="c-meta">Gautam Buddha University, Greater Noida · May 29, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">18</div><div><div class="c-title">Importance and Scope of IPR in Academic Research</div><div class="c-meta">Gnanamani College of Technology, Namakkal · May 29, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">19</div><div><div class="c-title">Joy of Engineering</div><div class="c-meta">Saveetha Engineering College, Chennai · May 29, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">20</div><div><div class="c-title">Bird View on Technologies used in Current Client and Server Model</div><div class="c-meta">Gnanamani College of Technology, Namakkal · May 30, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">21</div><div><div class="c-title">Globalization After Covid-19</div><div class="c-meta">Justice Basheer Ahmed Sayeed College for Women · May 31, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">22</div><div><div class="c-title">Research Methodology</div><div class="c-meta">Gnanamani College of Technology, Namakkal · May 31, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">23</div><div><div class="c-title">Current Trends and Career Opportunities for IT</div><div class="c-meta">Gnanamani College of Technology, Namakkal · June 2, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">24</div><div><div class="c-title">How to Identify Right Journal and Self Indexed?</div><div class="c-meta">Gnanamani College of Technology, Namakkal · June 3, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">25</div><div><div class="c-title">Introduction to Machine Learning and Python Programming</div><div class="c-meta">Government Arts College, Nandanam, Chennai · June 4, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">26</div><div><div class="c-title">Competency and Career Opportunities</div><div class="c-meta">SHASUN Jain College for Women · June 4, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">27</div><div><div class="c-title">Highlighting Ageing Issues of Software Unavailability: Solutions and Opportunities</div><div class="c-meta">Kanpur Institute of Technology · June 5, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">28</div><div><div class="c-title">Introduction to Angular</div><div class="c-meta">Gnanamani College of Technology, Chennai · June 5, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">29</div><div><div class="c-title">How to Write Research Paper for Reputed Indexed Journals</div><div class="c-meta">Raj Kumar Goel Institute of Technology, Ghaziabad · June 6, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">30</div><div><div class="c-title">Best Beginning to JavaScript</div><div class="c-meta">Gnanamani College of Technology, Chennai · June 6, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">31</div><div><div class="c-title">Machine Learning &amp; Artificial Intelligence in a Brave New World</div><div class="c-meta">SunRise University Alwar · June 8, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">32</div><div><div class="c-title">Intelligence to Machine Learning</div><div class="c-meta">Hindustan College of Arts and Science, Coimbatore, Tamil Nadu · June 11, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">33</div><div><div class="c-title">Forecasting Intuitive Predictive Vision View to Make the Body and Mind Firm</div><div class="c-meta">Sona College of Technology, Salem, Tamil Nadu · June 12, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">34</div><div><div class="c-title">LMS with Data Science</div><div class="c-meta">Aurora's Degree &amp; PG College · June 13–15, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">35</div><div><div class="c-title">Encouraging Learners Engaging in Remote Learning</div><div class="c-meta">Aurora's Degree &amp; PG College · June 13–15, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">36</div><div><div class="c-title">Job Opportunities in Automation Testing</div><div class="c-meta">Sona College of Technology, Salem, Tamil Nadu · June 13, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">37</div><div><div class="c-title">Machine Learning Onramp – Demo on Building Learning Models, Comparison and Visualization</div><div class="c-meta">Gnanamani College of Technology, Namakkal · June 13, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">38</div><div><div class="c-title">India in the Global Economy</div><div class="c-meta">KPR College of Arts Science and Research, Coimbatore · June 17, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">39</div><div><div class="c-title">Forecasting Intuitive Predictive Vision View to Make the Body and Mind Firm</div><div class="c-meta">Sona College of Technology, Salem, Tamil Nadu · June 20, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">40</div><div><div class="c-title">COVID-19 OUTBREAK: Silver Linings in the Midst of Stormy Clouds</div><div class="c-meta">St. Xavier's College, Palayamkottai · June 22, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">41</div><div><div class="c-title">Collaborative Learning Strategies and Practices</div><div class="c-meta">Sri Ramakrishna College of Arts &amp; Science, Coimbatore · June 25, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">42</div><div><div class="c-title">Mathematical Models on Transmitting Behavior of COVID-19</div><div class="c-meta">Manipal University Jaipur · June 25, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">43</div><div><div class="c-title">Application of Machine Learning in Image Processing</div><div class="c-meta">Mohamed Sathak A J College of Engineering, Chennai · June 26, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">44</div><div><div class="c-title">Probing the Matter Beyond Five Senses</div><div class="c-meta">Manipal University Jaipur · June 18, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">45</div><div><div class="c-title">Cloud Services</div><div class="c-meta">Gnanamani College of Technology, Tamil Nadu · July 4, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">46</div><div><div class="c-title">BlockChain – Technological Perspective</div><div class="c-meta">BVICAM, New Delhi · July 18, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">47</div><div><div class="c-title">Reshape of Commerce Education in Post Covid-19 Scenario</div><div class="c-meta">St. Xavier's College, Palayamkottai · July 20, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">48</div><div><div class="c-title">Simplifying IPR and Patent Filing</div><div class="c-meta">BVICAM, New Delhi · July 24, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">49</div><div><div class="c-title">Future of Cyber Security</div><div class="c-meta">Sona College of Technology, Salem, Tamil Nadu · July 25, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">50</div><div><div class="c-title">Know How Legal Patent Procedures</div><div class="c-meta">Manipal University Jaipur · July 27, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">51</div><div><div class="c-title">Challenges in Vaccine Development and Therapeutic Applications of Chemistry</div><div class="c-meta">Manipal University Jaipur · July 28, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">52</div><div><div class="c-title">Numerical and Scientific Computing</div><div class="c-meta">Manipal University Jaipur · July 28, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">53</div><div><div class="c-title">A Road Map of Social Media Analysis</div><div class="c-meta">Gnanamani College of Technology, Tamil Nadu · July 20, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">54</div><div><div class="c-title">COVID-19 Threat or Opportunity</div><div class="c-meta">BVICAM, New Delhi · August 01, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">55</div><div><div class="c-title">Web Security and Cyber Crimes</div><div class="c-meta">Hindustan College of Arts and Science, Coimbatore, Tamil Nadu · August 08, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">56</div><div><div class="c-title">Unleashing Data Science and AI</div><div class="c-meta">BVICAM, New Delhi · August 08, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">57</div><div><div class="c-title">Simulation Tools for Research in Computer &amp; Communication Networks</div><div class="c-meta">Gnanamani College of Technology, Tamil Nadu · July 23, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">58</div><div><div class="c-title">Citations and Reference Management using Mendeley</div><div class="c-meta">BVICAM, New Delhi · August 14, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">59</div><div><div class="c-title">Risk and Insurance in Covid-19</div><div class="c-meta">KPR College of Arts Science and Research, Coimbatore · July 20, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">60</div><div><div class="c-title">Is Edge Computing the Savior of IoT?</div><div class="c-meta">BVICAM, New Delhi · August 22, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">61</div><div><div class="c-title">Impact of COVID-19 on Indian Agriculture Sector</div><div class="c-meta">K.S.K. College, Maharashtra · August 11, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">62</div><div><div class="c-title">How to Write Technical Books</div><div class="c-meta">BVICAM, New Delhi · August 28, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">63</div><div><div class="c-title">Blockchain Technology</div><div class="c-meta">M.G.R Educational and Research Institute, Chennai · August 28, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">64</div><div><div class="c-title">Cross Platform Mobile App Development using Flutter</div><div class="c-meta">BVICAM, New Delhi · August 31, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">65</div><div><div class="c-title">The Impact of COVID-19 on Technical Education</div><div class="c-meta">Bharat Vikas Parishad, Delhi · July 25, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">66</div><div><div class="c-title">Research Methodology</div><div class="c-meta">BVICAM, New Delhi · September 5, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">67</div><div><div class="c-title">Robotics and Automation Processes</div><div class="c-meta">BVICAM, New Delhi · September 12, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">68</div><div><div class="c-title">Cyber Warfare, Cyber Security and Cyber Citizenship</div><div class="c-meta">BVICAM, New Delhi · September 18, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">69</div><div><div class="c-title">The Art of Writing Research Papers</div><div class="c-meta">BVICAM, New Delhi · September 25, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">70</div><div><div class="c-title">Virtual Reality and Augmentation</div><div class="c-meta">BVICAM, New Delhi · October 3, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">71</div><div><div class="c-title">National Education Policy (NEP)-2020</div><div class="c-meta">BVICAM, New Delhi · October 9, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">72</div><div><div class="c-title">Publication Ethics and Plagiarism</div><div class="c-meta">BVICAM, New Delhi · October 16, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">73</div><div><div class="c-title">Robotics in Everyday Life – Threat or Opportunity</div><div class="c-meta">BVICAM, New Delhi · October 23, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">74</div><div><div class="c-title">Software Defined Networking (SDN)</div><div class="c-meta">BVICAM, New Delhi · October 31, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">75</div><div><div class="c-title">Optimization and AI Techniques</div><div class="c-meta">BVICAM, New Delhi · November 6, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">76</div><div><div class="c-title">Optimization and AI Techniques</div><div class="c-meta">BVICAM, New Delhi · November 21, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">77</div><div><div class="c-title">Digital Twin Technology for post COVID-19</div><div class="c-meta">BVICAM, New Delhi · November 28, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">78</div><div><div class="c-title">AI in Everyday Life – Threat or Opportunity</div><div class="c-meta">BVICAM, New Delhi · December 4, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">79</div><div><div class="c-title">Digital Inclusion of Underserved Communities</div><div class="c-meta">BVICAM, New Delhi · December 18, 2020</div></div></div>
+        <div class="compact-card webinar-extra" style="display:none;"><div class="c-num">80</div><div><div class="c-title">Virtual Interactive Classroom</div><div class="c-meta">Gnanamani College of Technology, Tamil Nadu · August 29, 2020</div></div></div>
+      </div>
+
+      <div class="text-center">
+        <button class="show-more-btn" id="webinar-toggle" onclick="toggleWebinars()">
+          <i class="fa fa-chevron-down"></i> Show All 80 Webinars
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ SEMINARS ════════════ -->
+  <section class="edu-section alt-bg">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Knowledge Exchange</span>
+        <h2 class="section-title">Seminars Attended</h2>
+        <div class="section-title-bar"></div>
+      </div>
+
+      <div class="seminar-card">
+        <h5>Expert Talk on Recent Advances in Signal Processing Communication &amp; Machine Learning</h5>
+        <div class="sem-speaker">Speaker: Prof. Ganapati Panda, Professor, IIT Bhubaneswar</div>
+        <div class="sem-venue">Manipal University Jaipur · October 6, 2017</div>
+      </div>
+
+      <div class="seminar-card">
+        <h5>One-Day Session on DevOps by Microsoft</h5>
+        <div class="sem-speaker">Speaker: Richa Jha, Career Development Executive – USA at Collabera TACT</div>
+        <div class="sem-venue">Manipal University Jaipur · February 14, 2017</div>
+      </div>
+
+      <div class="seminar-card">
+        <h5>Data Science/Engineering Analytics Fuels Growth of a Nation – Innovative Use Cases</h5>
+        <div class="sem-speaker">Speakers: Shri Nishith Seth (Secretary EISSA) &amp; Prof. K. Subramanian (Executive Vice Chair, Delhi section)</div>
+        <div class="sem-venue">Manipal University Jaipur · November 25, 2016</div>
+      </div>
+
+      <div class="seminar-card">
+        <h5>National Seminar on Issues and Challenges in Security and Privacy in Social Networks</h5>
+        <div class="sem-speaker">Theme: "Emerging Issues and Challenges in Commerce and Management" · Sponsored by Directorate of Higher Education Haryana Panchkula</div>
+        <div class="sem-venue">Dept. of Computer Science, Shri Krishan Govt. College, Kanwali, Rewari, Haryana · January 18, 2020 &nbsp;·&nbsp; <a href="files/2. Education/5. Seminars Attended/2.jpg" target="_blank" style="color:#0f3460;font-weight:600;"><i class="fa fa-certificate"></i> Certificate</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ QUIZ ════════════ -->
+  <section class="edu-section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Competitive Knowledge</span>
+        <h2 class="section-title">Quizzes Participated</h2>
+        <div class="section-title-bar"></div>
+      </div>
+
+      <div class="compact-grid" id="quiz-grid">
+        <div class="compact-card"><div class="c-num">01</div><div><div class="c-title">Covid'19 Quiz</div><div class="c-meta">P.K.N. Arts &amp; Science College, Tirumangalam · May 25–27, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">02</div><div><div class="c-title">Renewable Energy and Energy Harvesting</div><div class="c-meta">Govt Model Degree College · May 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">03</div><div><div class="c-title">Micro Economics</div><div class="c-meta">Kandaswami Kandar's College, Tamil Nadu · June 4, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">04</div><div><div class="c-title">Big Data</div><div class="c-meta">Bangalore Technological Institute · June 24, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">05</div><div><div class="c-title">Programming in C</div><div class="c-meta">Mandsaur University · June 25–26, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">06</div><div><div class="c-title">Computer Architecture</div><div class="c-meta">Mandsaur University · July 1, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">07</div><div><div class="c-title">Internet of Things</div><div class="c-meta">Mandsaur University · July 8–11, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">08</div><div><div class="c-title">Mess the Code to be a Master Coder – C++ Programming</div><div class="c-meta">Sona College of Technology, Salem, Tamil Nadu · August 01, 2020</div></div></div>
+        <div class="compact-card"><div class="c-num">09</div><div><div class="c-title">Hadoop DevOps, Docker &amp; Container</div><div class="c-meta">Mandsaur University · May 04, 2021</div></div></div>
+        <div class="compact-card"><div class="c-num">10</div><div><div class="c-title">Problem Solving and Python Programming</div><div class="c-meta">Mandsaur University · May 07, 2021</div></div></div>
+        <div class="compact-card"><div class="c-num">11</div><div><div class="c-title">Artificial Intelligence and Machine Learning</div><div class="c-meta">Mandsaur University · May 08, 2021</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!--================ Footer =================-->
+
+<div id="site-footer"></div>
+
+  <!-- Optional JavaScript -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/stellar.js"></script>
+  <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+  <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+  <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+  <script src="vendors/isotope/isotope-min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="js/mail-script.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/site-components.js"></script>
+  <script>
+    /* ── Animated counters ── */
+    (function() {
+      var fired = false;
+      function runCounters() {
+        document.querySelectorAll('.edu-stat-num').forEach(function(el) {
+          var target = parseInt(el.getAttribute('data-target'), 10);
+          if (!target) return;
+          var suffix = el.getAttribute('data-suffix') || '';
+          var step = Math.max(1, Math.ceil(target / 50));
+          var cur = 0;
+          var t = setInterval(function() {
+            cur = Math.min(cur + step, target);
+            el.textContent = cur + suffix;
+            if (cur >= target) clearInterval(t);
+          }, 24);
+        });
+      }
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting && !fired) { fired = true; runCounters(); }
+        });
+      });
+      var statsEl = document.querySelector('.edu-stats');
+      if (statsEl) obs.observe(statsEl);
+    })();
+
+    function toggleAcc(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = body.style.display === 'block';
+      body.style.display = isOpen ? 'none' : 'block';
+      btn.classList.toggle('open', !isOpen);
+    }
+
+    function toggleWebinars() {
+      const extras = document.querySelectorAll('.webinar-extra');
+      const btn = document.getElementById('webinar-toggle');
+      const hidden = extras[0].style.display === 'none';
+      extras.forEach(el => el.style.display = hidden ? 'flex' : 'none');
+      btn.innerHTML = hidden
+        ? '<i class="fa fa-chevron-up"></i> Show Less'
+        : '<i class="fa fa-chevron-down"></i> Show All 80 Webinars';
+    }
+
+    /* ── Cert links injected via JS so HTML linter can't strip them ── */
+    document.addEventListener('DOMContentLoaded', function () {
+      /* Short Term Courses: all 43 point to workshop folder */
+      var coursePaths = [
+        'files/2. Education/3. Short Term Courses Attended/1. hacking.jpg',
+        'files/2. Education/3. Short Term Courses Attended/2.jpeg',
+        'files/2. Education/3. Short Term Courses Attended/3.jpeg',
+        'files/2. Education/3. Short Term Courses Attended/4.jpeg',
+        'files/2. Education/3. Short Term Courses Attended/5.jpeg',
+        'files/2. Education/3. Short Term Courses Attended/6.jpeg',
+        'files/2. Education/3. Short Term Courses Attended/7.jpeg',
+        'files/2. Education/3. Short Term Courses Attended/8.png',
+        'files/2. Education/3. Short Term Courses Attended/9.jpeg',
+        'files/2. Education/3. Short Term Courses Attended/10.png',
+        'files/2. Education/3. Short Term Courses Attended/11.png',
+        'files/2. Education/3. Short Term Courses Attended/12.jpeg',
+        'files/2. Education/3. Short Term Courses Attended/13.jpeg',
+        'files/2. Education/3. Short Term Courses Attended/14. IoT Solution with Oracle - 14.02.2018.html',
+        'files/2. Education/3. Short Term Courses Attended/15.jpeg',
+        'files/2. Education/3. Short Term Courses Attended/16.png',
+        'files/2. Education/3. Short Term Courses Attended/17. Awareness of Research Database - 25.01.2019.html',
+        'files/2. Education/3. Short Term Courses Attended/18.jpg',
+        'files/2. Education/3. Short Term Courses Attended/19.jpeg',
+        'files/2. Education/3. Short Term Courses Attended/20.png',
+        'files/2. Education/3. Short Term Courses Attended/21.png',
+        'files/2. Education/3. Short Term Courses Attended/22. Applied research in multidisciplinary studies 18-19.05.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/23. One Week Colloquium on Research Methodology through Digital - 18-23.05.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/24. Emerging Effective  Digital Tools for Teaching Pedagogy - 25-29.05.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/25 ICT Tools for E-Content Development - 26-29.05.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/26. Real Time Cognitive Services on Azure Cloud 10-12.06.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/27. YOGA FOR HUMAN EXCELLENCE - 21.06.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/28. emerging trends in information teahnology -23-27.06.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/29. Essentials for Blended Learning - 13-20.07.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/30. Participation Certificate - 21.07.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/31. Data Analysis with SPSS - 23-24.07.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/32. Python for Data Science - 23-25.07.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/33. Next Generation Smart Machines (NGSM v1.0) - 27-29.07.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/34. Microsoft Teams Tool Training - 27-31.07.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/35. Environmental Impacts of COVID-19 Pandemic  Challenges and Remedies through Science & Engineering - 27-31.08.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/36. Fundamentals of RADAR System.pdf',
+        'files/2. Education/3. Short Term Courses Attended/37. Artificial Intelligence and Machine Learning Application in Healthcare- 3-7.09.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/38. Artificial Intelligence using Python - 14-19.09.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/39. Machine Learning for Natural Language Processing - 12-17.10.2020.pdf',
+        'files/2. Education/3. Short Term Courses Attended/40. Research Trends in Artificial Intelligence and.pdf',
+        'files/2. Education/3. Short Term Courses Attended/41.jpg',
+        'files/2. Education/3. Short Term Courses Attended/42. Telemedicine Challenges - 26.03.2019.html',
+        'files/2. Education/3. Short Term Courses Attended/43.pdf'
+      ];
+      document.querySelectorAll('.edu-accordion .acc-item').forEach(function (item, idx) {
+        var path = coursePaths[idx];
+        if (!path) return;
+        var inner = item.querySelector('div:last-child');
+        if (!inner) return;
+        var a = document.createElement('a');
+        a.href = path;
+        a.target = '_blank';
+        a.className = 'acc-cert-link';
+        var icon = /\.(jpg|jpeg|png)$/i.test(path) ? 'file-image-o' : /\.html$/i.test(path) ? 'file-text-o' : 'file-pdf-o';
+        a.innerHTML = '<i class="fa fa-' + icon + '"></i> Certificate';
+        inner.appendChild(a);
+      });
+
+      /* Webinars (80 items; #47 is a .jpg image) */
+      var webinarPaths = [
+        'files/2. Education/4. Webinars Attended/1. FOG COMPUTING 23.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/2. Energy, Water & Resources Savings - 23.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/3. Demystifying Machine Learning Predictive Modelling and Real-Time Analytics - 24.5.2020.pdf',
+        'files/2. Education/4. Webinars Attended/4. AN IDEA TO - 25.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/5. Cloud security - 25.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/6. Impact and Adoption of DevOps post COVID-19 - 25.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/7. High Performance Computing 26.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/8. Recent Trends in Renewable Energy Sources - 26.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/9. Sql server database - 26.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/10. sKILLS TO STAY RELEVANT - 26.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/11. Employability Skills for - 27.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/12. National Digital Library of India - 28.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/13. Introduction to Cybersecurity - 28.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/14. Wireless MeshTechnologies - 28.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/15. Revolution of ClOUD AND FOG COMPUTING - 28.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/16. Financial Planning & Investment Management in Current Scenario - 29.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/17. Art of Writing Research Paper - 29.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/18. Importance and scope of IPR in - 29.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/19. Joy of Engineering - 29.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/20. Bird View on Technologies - 30.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/21. Globalization After Covid 19 - 31.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/22. Research Methodology - 31.05.2020.pdf',
+        'files/2. Education/4. Webinars Attended/23. Current Trends and career - 02.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/24. hOW TO IDENTIFY RIGHT JOURNAL - 3.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/25. Introduction to machine learning and python -03.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/26. Compentency -4.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/27. Highlighting Ageing Issues of Software Unavailability - 05.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/28. Introduction to Angular - 05.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/29. How to write research paper from indexed journals - 6.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/30. JAVASCRIPT -06.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/31. Machine Learning and artificail intelligence - 8.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/32. Intelligence to Machine learning - 11.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/33. Forecastingintuitivepredictive visionview making the body and mind firm.12.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/34. LMS with Data Science  - 13-15.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/35. Webinar on Encouraging Learners Engaging in Remote Learning - 13.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/36. jOB OPPURTUNITIES IN automation testing 13.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/37. Machine Learning - 13.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/38. India in the global economy - 17.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/39. Forecastingintuitivepredictive visionview making the body and mind firm 20.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/40. COVID 19 OUTBREAK - 22.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/41. COLLABORATIVE LEARNING STRATEGIES AND PRACTICES - 25.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/42. Mathematical models on transmitting behavior of covid-19 - 25.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/43. aPPLICATION OF mACHINE lEARNING IN iMAGE pROCESSING - 26.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/44. Probing the matter beyond five senses - 28.06.2020.pdf',
+        'files/2. Education/4. Webinars Attended/45. Cloud Services - 04.07.2020.pdf',
+        'files/2. Education/4. Webinars Attended/46. BlockChain – Technological Perspective -18.07.2020.pdf',
+        'files/2. Education/4. Webinars Attended/47. Reshape of Commerce Education in Post Covid-19 Scenario - 20.07.2020.jpg',
+        'files/2. Education/4. Webinars Attended/48. Webinar on Simplifying IPR and Patent Filing - 24.07.2020.pdf',
+        'files/2. Education/4. Webinars Attended/49. Future of Cyber Security - 25.07.2020.pdf',
+        'files/2. Education/4. Webinars Attended/50. Know How Legal Patent Procedures - 27.07.2020.pdf',
+        'files/2. Education/4. Webinars Attended/51. Challenges in Vaccine Development And Therapeutic Applications of Chemistry - 28.07.2020.pdf',
+        'files/2. Education/4. Webinars Attended/52. Numerical and Scientific Computing - 28.07.2020.pdf',
+        'files/2. Education/4. Webinars Attended/53. A Road Map of Social Media Analysis - 20.07.2020.pdf',
+        'files/2. Education/4. Webinars Attended/54. COVID-19 Threat or Opportunity - 1.08.2020 Copy.pdf',
+        'files/2. Education/4. Webinars Attended/55. Web Security and Cyber Crimes - 08-08-2020.pdf',
+        'files/2. Education/4. Webinars Attended/56.  Unleashing Data Science and AI- 08.08.2020 Copy.pdf',
+        'files/2. Education/4. Webinars Attended/57. Simulation Tools for Research in Computer & Communication Networks Webinar - 2.07.2020.pdf',
+        'files/2. Education/4. Webinars Attended/58. Citations and Reference Management using Mendeley -14.08.2020.pdf',
+        'files/2. Education/4. Webinars Attended/59. Risk and Insurance In Covid 19 20.07.2020.pdf',
+        'files/2. Education/4. Webinars Attended/60. Is Edge Computing, the savior of IoT - 22.08.2020.pdf',
+        'files/2. Education/4. Webinars Attended/61. Impact of COVID-19 on Indian Agriculture Sector.pdf',
+        'files/2. Education/4. Webinars Attended/62. How to Write Technical Books.pdf',
+        'files/2. Education/4. Webinars Attended/63. Blockchain Technology - 29.08.2020.pdf',
+        'files/2. Education/4. Webinars Attended/64. Cross Platform Mobile App Development using Flutter - 31.08.2020.pdf',
+        'files/2. Education/4. Webinars Attended/65. The Impact of COVID-19 on Technical Education - 25.07.2020.pdf',
+        'files/2. Education/4. Webinars Attended/66. Webinar on Research Methodology - 05.09.2020.pdf',
+        'files/2. Education/4. Webinars Attended/67. Webinar on Robotics and Automation Processes - 12.09.2020.pdf',
+        'files/2. Education/4. Webinars Attended/68. Webinar on Cyber Warfare, Cyber Security and Cyber Citizenship   -18.09.2020.pdf',
+        'files/2. Education/4. Webinars Attended/69. The Art of Writing Research Papers - 25.09.2020.pdf',
+        'files/2. Education/4. Webinars Attended/70. Virtual Reality and Augmentation - 3.10.2020.pdf',
+        'files/2. Education/4. Webinars Attended/71. National Education Policy (NEP)-2020  - 9.10.2020.pdf',
+        'files/2. Education/4. Webinars Attended/72. Publication Ethics and Plagiarism - October 16, 2020.pdf',
+        'files/2. Education/4. Webinars Attended/73. Robotics in Everyday Life – Threat or Opportunity -October 23, 2020.pdf',
+        'files/2. Education/4. Webinars Attended/74. Software Defined Networking (SDN) - 31-10-2020.pdf',
+        'files/2. Education/4. Webinars Attended/75. Optimization and AI Techniques - 06-11-2020.pdf',
+        'files/2. Education/4. Webinars Attended/76. Value of IPR in Academic Researches -21-11-2020.pdf',
+        'files/2. Education/4. Webinars Attended/77. Digital Twin Technology for post COVID-19 - 28-11-2020.pdf',
+        'files/2. Education/4. Webinars Attended/78. AI in Everyday Life – Threat or Opportunity -04-12-2020 - Copy.pdf',
+        'files/2. Education/4. Webinars Attended/79. Digital inclusion of underserved communities -18-12-2020.pdf',
+        'files/2. Education/4. Webinars Attended/80. Virtual Interactive Classroom August , 29 2020.pdf'
+      ];
+      document.querySelectorAll('#webinar-grid .compact-card').forEach(function (card, idx) {
+        var path = webinarPaths[idx];
+        if (!path) return;
+        var inner = card.querySelector('div:last-child');
+        if (!inner) return;
+        var a = document.createElement('a');
+        a.href = path;
+        a.target = '_blank';
+        a.className = 'compact-cert-link';
+        var isImg = path.endsWith('.jpg');
+        a.innerHTML = '<i class="fa fa-' + (isImg ? 'file-image-o' : 'file-pdf-o') + '"></i> Certificate';
+        inner.appendChild(a);
+      });
+
+      /* Quizzes: 1-8 have files; 9-11 (Mandsaur 2021) have no uploaded certificate */
+      var quizPaths = [
+        'files/2. Education/6. Quizzes Participated/1. Quiz on COVID-19_25-27.05.2020.pdf',
+        'files/2. Education/6. Quizzes Participated/2. Renewable Energy and Energy Harvesting -05.2020.pdf',
+        'files/2. Education/6. Quizzes Participated/3. Micro Economics - 4.6.2020.pdf',
+        'files/2. Education/6. Quizzes Participated/4. Big Data Analytic-quiz  - 24.06.2020.pdf',
+        'files/2. Education/6. Quizzes Participated/5. C- 25-26.06.2020.pdf',
+        'files/2. Education/6. Quizzes Participated/6. COA 1.7..2020.pdf',
+        'files/2. Education/6. Quizzes Participated/7. IoT 8-11.07.2020.pdf',
+        'files/2. Education/6. Quizzes Participated/8. Mess the Code to be a Master Coder-C++ E-QUIZ- 01.08.2020.pdf',
+        'files/2. Education/6. Quizzes Participated/9. Hadoop DevOps Docker Container - 04.05.2021.html',
+        'files/2. Education/6. Quizzes Participated/10. Problem Solving and Python Programming - 07.05.2021.html',
+        'files/2. Education/6. Quizzes Participated/11. Artificial Intelligence and Machine Learning - 08.05.2021.html'
+      ];
+      document.querySelectorAll('#quiz-grid .compact-card').forEach(function (card, idx) {
+        var path = quizPaths[idx];
+        if (!path) return;
+        var inner = card.querySelector('div:last-child');
+        if (!inner) return;
+        var a = document.createElement('a');
+        a.href = path;
+        a.target = '_blank';
+        a.className = 'compact-cert-link';
+        var icon = /\.(jpg|jpeg|png)$/i.test(path) ? 'file-image-o' : /\.html$/i.test(path) ? 'file-text-o' : 'file-pdf-o';
+        a.innerHTML = '<i class="fa fa-' + icon + '"></i> Certificate';
+        inner.appendChild(a);
+      });
+    });
+  </script>
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>
