@@ -174,6 +174,46 @@
     .cert-row-org {
       font-size: .75rem; color: #888; font-style: italic;
     }
+    .drawing-cert-post-list { display: grid; gap: 18px; margin: 18px 0 8px; }
+    .drawing-cert-post-card {
+      display: grid; grid-template-columns: minmax(210px, 38%) 1fr; gap: 18px;
+      background: #fff; border: 1px solid #edf1f8; border-radius: 10px;
+      padding: 14px; box-shadow: 0 5px 18px rgba(80,0,120,.06);
+      scroll-margin-top: 130px;
+    }
+    .drawing-cert-media a {
+      position: relative; display: block; overflow: hidden; border-radius: 8px;
+      aspect-ratio: 4/3; background: #f7f3ff;
+    }
+    .drawing-cert-media img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform .3s;
+    }
+    .drawing-cert-media a:hover img { transform: scale(1.04); }
+    .drawing-cert-media a::after {
+      content: "\f00e"; font-family: FontAwesome; position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; background: rgba(60,0,100,.42); opacity: 0; transition: opacity .25s;
+    }
+    .drawing-cert-media a:hover::after { opacity: 1; }
+    .drawing-cert-gallery {
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-top: 12px;
+    }
+    .drawing-cert-gallery a {
+      aspect-ratio: 4/3; border-radius: 7px; overflow: hidden; display: block;
+      position: relative; background: #f7f3ff;
+    }
+    .drawing-cert-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .drawing-cert-copy { align-self: center; }
+    .drawing-cert-meta {
+      color: #7c3aed; font-size: .68rem; font-weight: 900; letter-spacing: 1.4px;
+      text-transform: uppercase; margin-bottom: 7px;
+    }
+    .drawing-cert-copy h4 {
+      color: #3b0764; font-size: 1.05rem; font-weight: 900;
+      line-height: 1.35; margin: 0 0 8px;
+    }
+    .drawing-cert-copy p { color: #5f6873; font-size: .9rem; line-height: 1.72; margin: 0; }
 
     .blog-gallery-section { margin: 28px 0 8px; scroll-margin-top: 130px; }
     .blog-gallery-label { font-size: .68rem; font-weight: 800; letter-spacing: 1.5px; color: #7c3aed; text-transform: uppercase; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
@@ -254,6 +294,8 @@
       .art-story-grid { grid-template-columns: 1fr; }
       .art-gallery-grid { grid-template-columns: repeat(2,1fr); }
       .gal-grid { grid-template-columns: repeat(2,1fr); }
+      .drawing-cert-post-card { grid-template-columns: 1fr; }
+      .drawing-cert-gallery { grid-template-columns: repeat(2,1fr); }
       .conf-card-header, .conf-card-body { padding-left: 14px; padding-right: 14px; }
     }
 
@@ -820,8 +862,86 @@
 
       <div id="painting-folder-galleries" data-github-root="files/8. Blog/4. Avocations/2. Drawing"></div>
 
-      <!-- Certificate Gallery — descending chronological order -->
+      <!-- Certificate Posts -->
       <div style="margin-top:36px;">
+        <div class="blog-gallery-label"><i class="fa fa-trophy"></i> Recognition &amp; Certificates &nbsp;<span style="font-weight:400;color:#888;font-size:.7rem;letter-spacing:0;">5 certificate posts</span></div>
+
+        <div class="drawing-cert-post-list">
+          <article class="drawing-cert-post-card" id="drawing-cert-post-01">
+            <div class="drawing-cert-media">
+              <a href="files/8. Blog/4. Avocations/2. Drawing/1/20260516_164941.jpg" class="gal-item">
+                <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/1/20260516_164941.jpg" alt="Xpression MUJ Rangoli Certificate and Medal">
+              </a>
+              <div class="drawing-cert-gallery">
+                <a href="files/8. Blog/4. Avocations/2. Drawing/1/IMG_2577.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/1/IMG_2577.JPG" alt="Xpression rangoli memory"></a>
+                <a href="files/8. Blog/4. Avocations/2. Drawing/1/IMG_2618.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/1/IMG_2618.JPG" alt="Xpression rangoli artwork"></a>
+                <a href="files/8. Blog/4. Avocations/2. Drawing/1/WhatsApp Image 2023-10-09 at 17.19.35.png" class="gal-item"><img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/1/WhatsApp Image 2023-10-09 at 17.19.35.png" alt="Rangoli certificate memory"></a>
+                <a href="files/8. Blog/4. Avocations/2. Drawing/1/WhatsApp Image 2023-10-09 at 17.19.46.png" class="gal-item"><img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/1/WhatsApp Image 2023-10-09 at 17.19.46.png" alt="Rangoli event memory"></a>
+              </div>
+            </div>
+            <div class="drawing-cert-copy">
+              <div class="drawing-cert-meta">Post 01 / Certificate</div>
+              <h4>Xpression Cultural &amp; Sports Fest - 1st Position, Rangoli Competition</h4>
+              <p>This certificate and medal preserve a special Rangoli achievement at Manipal University Jaipur, where creativity, patience, and tradition came together beautifully.</p>
+            </div>
+          </article>
+
+          <article class="drawing-cert-post-card" id="drawing-cert-post-02">
+            <div class="drawing-cert-media">
+              <a href="files/8. Blog/4. Avocations/2. Drawing/2.jpg" class="gal-item">
+                <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/2.jpg" alt="Tanishq Mega Painting Competition Certificate">
+              </a>
+            </div>
+            <div class="drawing-cert-copy">
+              <div class="drawing-cert-meta">Post 02 / Certificate</div>
+              <h4>Tanishq Mega Painting Competition - Certificate of Appreciation</h4>
+              <p>A school painting recognition that reflects early creative confidence and the joy of participating in a wider art competition.</p>
+            </div>
+          </article>
+
+          <article class="drawing-cert-post-card" id="drawing-cert-post-03">
+            <div class="drawing-cert-media">
+              <a href="files/8. Blog/4. Avocations/2. Drawing/3.jpg" class="gal-item">
+                <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/3.jpg" alt="Tanishq Painting Certificate">
+              </a>
+            </div>
+            <div class="drawing-cert-copy">
+              <div class="drawing-cert-meta">Post 03 / Certificate</div>
+              <h4>Tanishq Mega Painting Competition - Creative Participation</h4>
+              <p>This certificate keeps another school art milestone visible, marking the discipline and care that drawing competitions encouraged.</p>
+            </div>
+          </article>
+
+          <article class="drawing-cert-post-card" id="drawing-cert-post-04">
+            <div class="drawing-cert-media">
+              <a href="files/8. Blog/4. Avocations/2. Drawing/4.jpg" class="gal-item">
+                <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/4.jpg" alt="All India Drawing and Painting Competition Certificate">
+              </a>
+            </div>
+            <div class="drawing-cert-copy">
+              <div class="drawing-cert-meta">Post 04 / Certificate</div>
+              <h4>All India Drawing &amp; Painting Competition - Certificate of Merit</h4>
+              <p>An All India drawing and painting certificate from the school years, showing how art became a source of confidence and focus early on.</p>
+            </div>
+          </article>
+
+          <article class="drawing-cert-post-card" id="drawing-cert-post-05">
+            <div class="drawing-cert-media">
+              <a href="files/8. Blog/4. Avocations/2. Drawing/5.jpg" class="gal-item">
+                <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/5.jpg" alt="TSI Prestigious Drawing Competition Certificate">
+              </a>
+            </div>
+            <div class="drawing-cert-copy">
+              <div class="drawing-cert-meta">Post 05 / Certificate</div>
+              <h4>TSI Prestigious Drawing Competition - Certificate of Merit</h4>
+              <p>This early certificate from 1997 is one of the first reminders that drawing was more than a pastime; it was a place where imagination found confidence.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Certificate Gallery — descending chronological order -->
+      <div style="display:none;margin-top:36px;" aria-hidden="true">
         <div class="blog-gallery-label"><i class="fa fa-trophy"></i> Recognition &amp; Certificates &nbsp;<span style="font-weight:400;color:#888;font-size:.7rem;letter-spacing:0;">5 certificates · newest first</span></div>
 
         <!-- 1. Xpression MUJ — most recent -->
@@ -1344,7 +1464,7 @@ $(document).ready(function(){
 
   function initAvocationLightbox(scope) {
     if (!window.jQuery || !jQuery.fn || !jQuery.fn.magnificPopup) return;
-    jQuery(scope).find('.gal-grid, .art-gallery-grid, .blog-gallery-grid, .auto-folder-grid').each(function() {
+    jQuery(scope).find('.gal-grid, .art-gallery-grid, .blog-gallery-grid, .auto-folder-grid, .drawing-cert-media, .drawing-cert-gallery').each(function() {
       var $gallery = jQuery(this);
       try { $gallery.magnificPopup('destroy'); } catch (error) {}
       $gallery.magnificPopup({
