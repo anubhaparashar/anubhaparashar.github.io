@@ -908,6 +908,25 @@ $(function(){
     gallery: { enabled: true },
     image: { titleSrc: function(item){ return item.el.find('img').attr('alt'); } }
   });
+
+  function scrollToSportsHash() {
+    var hash = (window.location.hash || '').slice(1);
+    if (!hash) return;
+    var target = document.getElementById(hash);
+    if (!target) return;
+    setTimeout(function() {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.style.outline = '3px solid #50c878';
+      target.style.borderRadius = '16px';
+      setTimeout(function() {
+        target.style.outline = '';
+        target.style.borderRadius = '';
+      }, 2200);
+    }, 120);
+  }
+
+  scrollToSportsHash();
+  $(window).on('hashchange load', scrollToSportsHash);
 });
 </script>
 <script type="module" src="assets/js/firebase-blog.js"></script>

@@ -816,10 +816,19 @@
       var tabId = sectionForHash(hash);
       if (!tabId) return;
       activateTab(tabId);
-      setTimeout(function() {
-        var target = document.getElementById(hash);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 80);
+      [80, 350, 900].forEach(function(delay) {
+        setTimeout(function() {
+          var target = document.getElementById(hash);
+          if (!target) return;
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          target.style.outline = '3px solid #d6a235';
+          target.style.borderRadius = '16px';
+          setTimeout(function() {
+            target.style.outline = '';
+            target.style.borderRadius = '';
+          }, 2200);
+        }, delay);
+      });
     }
 
     buttons.forEach(function(btn) {
@@ -830,6 +839,7 @@
     });
 
     openHashTarget();
+    window.addEventListener('load', openHashTarget);
     window.addEventListener('hashchange', openHashTarget);
   })();
 
@@ -969,6 +979,12 @@
       gallery: { enabled: true },
       image: { titleSrc: function(item){ return item.el.find('img').attr('alt'); } }
     });
+
+    if (window.location.hash) {
+      setTimeout(function() {
+        window.dispatchEvent(new Event('hashchange'));
+      }, 120);
+    }
   })();
 </script>
 <script type="module" src="assets/js/firebase-blog.js"></script>
