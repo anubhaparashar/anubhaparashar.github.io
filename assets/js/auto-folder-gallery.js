@@ -440,7 +440,15 @@
     });
   }
 
+  function hasGalleryWork() {
+    return !!document.querySelector(
+      '[data-auto-gallery-root],.gal-grid,.blog-gallery-grid,.gal-container,.auto-art-gallery,.auto-folder-grid,.conf-video-grid,.video-row,.trek-video-grid'
+    );
+  }
+
   function run() {
+    if (!hasGalleryWork()) return;
+
     injectStyles();
     getTree().then(function(tree) {
       document.querySelectorAll('[data-auto-gallery-root]').forEach(function(container) {
