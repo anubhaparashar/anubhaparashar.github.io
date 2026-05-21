@@ -793,17 +793,44 @@
     var sections = Array.from(document.querySelectorAll('.connection-section'));
     if (!buttons.length || !sections.length) return;
 
+    function activateTab(id) {
+      buttons.forEach(function(item) {
+        item.classList.toggle('active', item.getAttribute('data-target') === id);
+      });
+      sections.forEach(function(section) {
+        section.classList.toggle('active', section.id === 'connection-section-' + id);
+      });
+      window.dispatchEvent(new Event('resize'));
+    }
+
+    function sectionForHash(hash) {
+      if (!hash) return null;
+      var target = document.getElementById(hash);
+      if (!target) return null;
+      var section = target.closest('.connection-section');
+      return section ? section.id.replace('connection-section-', '') : null;
+    }
+
+    function openHashTarget() {
+      var hash = (window.location.hash || '').slice(1);
+      var tabId = sectionForHash(hash);
+      if (!tabId) return;
+      activateTab(tabId);
+      setTimeout(function() {
+        var target = document.getElementById(hash);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    }
+
     buttons.forEach(function(btn) {
       btn.addEventListener('click', function() {
         var id = btn.getAttribute('data-target');
-        buttons.forEach(function(item) { item.classList.remove('active'); });
-        sections.forEach(function(section) { section.classList.remove('active'); });
-        btn.classList.add('active');
-        var target = document.getElementById('connection-section-' + id);
-        if (target) target.classList.add('active');
-        window.dispatchEvent(new Event('resize'));
+        activateTab(id);
       });
     });
+
+    openHashTarget();
+    window.addEventListener('hashchange', openHashTarget);
   })();
 
   // ── Gallery restructure: fancy slider ──
