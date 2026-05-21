@@ -111,6 +111,28 @@
     }
     .soc-hero h1 { font-size: 2.9rem !important; font-weight: 900 !important; color: #fff !important; letter-spacing: 1px; margin-bottom: 8px; }
     .soc-hero-sub { font-size: .98rem; color: rgba(255,255,255,.6); margin-bottom: 0; }
+    .connection-tab-wrap {
+      background:#fff; border-bottom:1px solid #e4e9f5;
+      box-shadow:0 2px 14px rgba(15,52,96,.06);
+      position:sticky; top:93px; z-index:1000;
+    }
+    .connection-tab-nav { display:flex; overflow-x:auto; max-width:1200px; margin:0 auto; padding:0; scrollbar-width:none; }
+    .connection-tab-nav::-webkit-scrollbar { display:none; }
+    .connection-tab-btn {
+      flex:1 0 140px; background:none; border:none; border-bottom:3px solid transparent;
+      padding:14px 6px 12px; font-size:.68rem; font-weight:700;
+      letter-spacing:.3px; text-transform:uppercase; color:#999;
+      cursor:pointer; white-space:nowrap; transition:all .2s;
+      display:flex; align-items:center; justify-content:center; gap:5px;
+    }
+    .connection-tab-btn:hover { color:#0f3460; background:#f6f8ff; }
+    .connection-tab-btn.active { color:#0f3460; border-bottom-color:#0f3460; }
+    .connection-tab-count {
+      background:#edf0fa; color:#666; font-size:.6rem; font-weight:800;
+      padding:2px 7px; border-radius:20px;
+    }
+    .connection-tab-btn.active .connection-tab-count { background:#0f3460; color:#7eb8e0; }
+    .connection-anchor { scroll-margin-top:165px; }
     /* floating particles */
     .soc-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 2; }
     .soc-particles span {
@@ -273,6 +295,24 @@
   </div>
 </section>
 
+<!-- Sub header navigation -->
+<div class="connection-tab-wrap">
+  <div class="connection-tab-nav">
+    <button class="connection-tab-btn active" type="button" data-target="connection-overview">
+      Overview <span class="connection-tab-count">1</span>
+    </button>
+    <button class="connection-tab-btn" type="button" data-target="conference-outings">
+      Conference Outings <span class="connection-tab-count">2</span>
+    </button>
+    <button class="connection-tab-btn" type="button" data-target="memories">
+      Memories <span class="connection-tab-count">1</span>
+    </button>
+    <button class="connection-tab-btn" type="button" data-target="family">
+      Family <span class="connection-tab-count">1</span>
+    </button>
+  </div>
+</div>
+
 <section class="blog_area single-post-area section_gap">
   <div class="container">
     <div class="row">
@@ -280,7 +320,7 @@
         <div class="single-post row">
 
           <!-- Article body -->
-          <div class="col-lg-12 col-md-12 blog_details">
+          <div class="col-lg-12 col-md-12 blog_details connection-anchor" id="connection-overview">
             <h2>Connecting Beyond Research: Community Engagement &amp; Professional Networking</h2>
             <p class="excert">
               Life as a researcher is rich with connections — from spirited debates at international conferences to late-evening discussions at local AI meetups. These moments of human connection are as vital to my work as any experiment or paper.
@@ -318,7 +358,7 @@
         <!-- Photo Galleries -->
         <div class="col-lg-12 px-0" style="margin-bottom:32px;">
 
-          <div class="connection-section-title" id="conference-outings">
+          <div class="connection-section-title connection-anchor" id="conference-outings">
             <h2>Conference Outings</h2>
             <p>Professional gatherings, conference memories, and the friendships formed around academic events.</p>
           </div>
@@ -376,7 +416,7 @@
             </div>
           </div>
 
-          <div class="connection-section-title" id="memories">
+          <div class="connection-section-title connection-anchor" id="memories">
             <h2>Memories</h2>
             <p>Recent snapshots and quiet moments worth keeping close.</p>
           </div>
@@ -403,7 +443,7 @@
             </div>
           </div>
 
-          <div class="connection-section-title" id="family">
+          <div class="connection-section-title connection-anchor" id="family">
             <h2>Family</h2>
             <p>Personal milestones, blessings, and the relationships that hold every journey together.</p>
           </div>
@@ -738,6 +778,38 @@
       index = (index + 1) % slides.length;
       slides[index].classList.add('active');
     }, 3000);
+  })();
+
+  (function() {
+    var buttons = Array.from(document.querySelectorAll('.connection-tab-btn'));
+    var sections = buttons
+      .map(function(btn) { return document.getElementById(btn.getAttribute('data-target')); })
+      .filter(Boolean);
+
+    if (!buttons.length || !sections.length) return;
+
+    var setActive = function(id) {
+      buttons.forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-target') === id);
+      });
+    };
+
+    buttons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var target = document.getElementById(btn.getAttribute('data-target'));
+        if (!target) return;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setActive(target.id);
+      });
+    });
+
+    window.addEventListener('scroll', function() {
+      var current = sections[0].id;
+      sections.forEach(function(section) {
+        if (section.getBoundingClientRect().top <= 150) current = section.id;
+      });
+      setActive(current);
+    }, { passive: true });
   })();
 
   // ── Gallery restructure: fancy slider ──
