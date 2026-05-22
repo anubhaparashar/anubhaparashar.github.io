@@ -333,6 +333,23 @@
   }
 
   /* ── CARD BODY ── */
+  .pub-post-photo {
+    flex-shrink: 0; width: 92px; height: 68px; border-radius: 10px;
+    overflow: hidden; display: block; background: #eef2ff;
+    border: 1px solid #d8e1f4; box-shadow: 0 2px 10px rgba(15,52,96,.08);
+    position: relative;
+  }
+  .pub-post-photo img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform .25s;
+  }
+  .pub-post-photo::after {
+    content: "\f08e"; font-family: FontAwesome; position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; background: rgba(15,52,96,.42); opacity: 0; transition: opacity .25s;
+  }
+  .pub-post-photo:hover img { transform: scale(1.05); }
+  .pub-post-photo:hover::after { opacity: 1; }
   .pub-body { flex: 1; min-width: 0; }
   .pub-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 5px; }
   .pub-title { font-size: .95rem; font-weight: 700; color: #1a1a2e; line-height: 1.45; flex: 1; }
@@ -400,7 +417,8 @@
     .featured-grid { grid-template-columns: 1fr; }
     .pub-hero h1 { font-size: 2.1rem !important; }
     .pub-stats { gap: 24px; }
-    .pub-card { padding: 16px 18px; }
+    .pub-card { padding: 16px 18px; flex-wrap: wrap; }
+    .pub-post-photo { width: calc(100% - 54px); height: 150px; }
     .pub-stat-divider { display: none; }
   }
   </style>
@@ -1020,6 +1038,9 @@
 
     <div class="pub-card" data-year="2023">
       <div class="pub-num">01</div>
+      <a class="pub-post-photo" href="academics.html#c-icct23" title="Open ICCT 2023 conference post">
+        <img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/icct 2023/dji_mimo_20230120_152400_0_1674208966086_photo.jpg" alt="ICCT 2023 conference photo">
+      </a>
       <div class="pub-body">
         <div class="pub-header">
           <div class="pub-title">Deep Learning-based Framework for Accurate Clothing Attribute Recognition and Style Navigation for Gait Recognition</div>
@@ -1133,10 +1154,13 @@
 
     <div class="pub-card" data-year="2020">
       <div class="pub-num">07</div>
+      <a class="pub-post-photo" href="academics.html#c-dubai" title="Open Dubai conference post">
+        <img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130125344.jpg" alt="Dubai conference photo">
+      </a>
       <div class="pub-body">
         <div class="pub-header">
           <div class="pub-title">Surveillance System To Provide Secured Gait Signatures In Multi View Variations Using Deep Learning</div>
-          <span class="pub-year-badge">2020</ICCT17_paper_308span>
+          <span class="pub-year-badge">2020</span>
         </div>
         <div class="pub-authors"><strong>Anubha Parashar</strong>, Apoorva Parashar, RS Shekhawat, Vidyadhar Aski</div>
         <div class="pub-venue">International Conference on Modelling, Simulation &amp; Intelligent Computing · BITS Dubai · Jan 29–31, 2020</div>
@@ -1153,6 +1177,9 @@
 
     <div class="pub-card" data-year="2019">
       <div class="pub-num">08</div>
+      <a class="pub-post-photo" href="academics.html#c-icct19" title="Open ICCT 2019 conference post">
+        <img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/ICCT 2019/IMG_0205.JPG" alt="ICCT 2019 conference photo">
+      </a>
       <div class="pub-body">
         <div class="pub-header">
           <div class="pub-title">IoT Based Automated Weather Report Generation and Prediction Using Machine Learning</div>
@@ -1172,6 +1199,9 @@
 
     <div class="pub-card" data-year="2019">
       <div class="pub-num">09</div>
+      <a class="pub-post-photo" href="academics.html#c-ssic2" title="Open SSIC 2019 conference post">
+        <img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/20190118_102321.jpg" alt="SSIC 2019 conference photo">
+      </a>
       <div class="pub-body">
         <div class="pub-header">
           <div class="pub-title">IoT Based Cloud Enabled Smart Electricity Management System</div>
@@ -1192,6 +1222,9 @@
 
     <div class="pub-card" data-year="2019">
       <div class="pub-num">10</div>
+      <a class="pub-post-photo" href="academics.html#c-ssic2" title="Open SSIC 2019 conference post">
+        <img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/20190118_102321.jpg" alt="SSIC 2019 conference photo">
+      </a>
       <div class="pub-body">
         <div class="pub-header">
           <div class="pub-title">Cloud Assisted IoT Enabled Smoke Monitoring System (e-Nose) Using Machine Learning Techniques</div>
@@ -1212,6 +1245,9 @@
 
     <div class="pub-card award" data-year="2018">
       <div class="pub-num">11</div>
+      <a class="pub-post-photo" href="academics.html#c-coratia" title="Open Croatia conference post">
+        <img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/Coratia Conference/20180906_103004.jpg" alt="Croatia 2018 conference photo">
+      </a>
       <div class="pub-body">
         <div class="pub-header">
           <div class="pub-title">Tracing Gesture and Extracting Gait Features to Recognize Parkinson's Disease Using Multi-layered Back Propagation Algorithm</div>
@@ -1251,6 +1287,9 @@
 
     <div class="pub-card" data-year="2018">
       <div class="pub-num">13</div>
+      <a class="pub-post-photo" href="academics.html#c-sin17" title="Open SIN conference post">
+        <img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/sIN 17/20171013_153105.jpg" alt="SIN conference photo">
+      </a>
       <div class="pub-body">
         <div class="pub-header">
           <div class="pub-title">Identification of gait data using machine learning technique to categories human locomotion</div>
@@ -1270,6 +1309,9 @@
 
     <div class="pub-card" data-year="2016">
       <div class="pub-num">14</div>
+      <a class="pub-post-photo" href="academics.html#c-jaipur" title="Open Jaipur conference post">
+        <img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/3. jaipur/IMG-20160812-WA0001.jpg" alt="Jaipur 2016 conference photo">
+      </a>
       <div class="pub-body">
         <div class="pub-header">
           <div class="pub-title">Clustering Gait Data using different machine learning techniques and finding the best technique</div>
@@ -1308,6 +1350,9 @@
 
     <div class="pub-card" data-year="2016">
       <div class="pub-num">16</div>
+      <a class="pub-post-photo" href="academics.html#c-udaipur" title="Open Udaipur conference post">
+        <img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/1. Udaipur/20160304_181813.jpg" alt="Udaipur 2016 conference photo">
+      </a>
       <div class="pub-body">
         <div class="pub-header">
           <div class="pub-title">Push recovery for humanoid robot in dynamic environment and classifying the data using K-mean</div>
