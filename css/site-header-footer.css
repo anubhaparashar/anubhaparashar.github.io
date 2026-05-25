@@ -41,9 +41,17 @@
   padding: 0 !important;
   display: flex !important;
   align-items: center !important;
-  gap: 11px;
   height: 90px;
   text-decoration: none !important;
+  max-width: 240px;
+  overflow: hidden;
+}
+.nav-logo-img {
+  display: block;
+  width: 230px;
+  height: 64px;
+  object-fit: contain;
+  object-position: left center;
 }
 .nav-mono {
   display: inline-flex;
@@ -191,6 +199,7 @@
     box-shadow: 0 12px 32px rgba(26,26,46,.12) !important;
   }
   .nav-wordmark { display: none; }
+  .nav-logo-img { width: 180px; height: 56px; }
 }
 
 /* ══════════════════════════════════════════════════════
