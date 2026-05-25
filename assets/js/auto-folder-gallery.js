@@ -67,7 +67,7 @@
   }
 
   function rawUrl(path) {
-    return 'https://raw.githubusercontent.com/' + OWNER + '/' + REPO + '/' + BRANCH + '/' + encodePath(path);
+    return encodePath(path);
   }
 
   function cleanTitle(text) {

@@ -1243,11 +1243,11 @@ async function loadPaintingFolderGallery($gallery) {
     files = data
       .filter(function(item) { return item.type === 'file' && /\.(jpe?g|png|gif|webp)$/i.test(item.name); })
       .sort(function(a, b) { return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }); })
-      .map(function(item) { return { name: item.name, url: item.download_url }; });
+      .map(function(item) { return { name: item.name, url: encodeGithubPath(item.path || (folder + '/' + item.name)) }; });
   } catch (error) {
     console.warn('Using local fallback gallery for ' + folder, error);
     files = (PAINTING_FALLBACKS[folder] || []).map(function(name) {
-      return { name: name, url: folder + '/' + name };
+      return { name: name, url: encodeGithubPath(folder + '/' + name) };
     });
   }
 
@@ -1303,7 +1303,8 @@ function renderTrekCard(folder, index) {
     '<div class="trek-video-label"><i class="fa fa-film"></i> Videos &nbsp;<span style="font-weight:400;color:#888;font-size:.7rem;letter-spacing:0;">' + videoCount + (videoCount === 1 ? ' clip' : ' clips') + '</span></div>' +
     '<div class="trek-video-grid">' +
       folder.videos.map(function(item) {
-        return '<video controls preload="metadata"><source src="' + avocEscape(item.download_url) + '" type="video/mp4"></video>';
+        var videoUrl = item.path ? encodeGithubPath(item.path) : item.download_url;
+        return '<video controls preload="metadata"><source src="' + avocEscape(videoUrl) + '" type="video/mp4"></video>';
       }).join('') +
     '</div>' : '';
   return '' +
@@ -1320,8 +1321,9 @@ function renderTrekCard(folder, index) {
         '<p class="conf-desc">' + avocEscape(meta.desc) + '</p>' +
         '<div class="gal-grid" id="g-trek-' + trekFolderNumber(folder.name, index) + '">' +
           folder.images.map(function(item) {
-            return '<a href="' + avocEscape(item.download_url) + '" class="gal-item">' +
-              '<img loading="lazy" src="' + avocEscape(item.download_url) + '" alt="' + avocEscape(meta.title) + '">' +
+            var imageUrl = item.path ? encodeGithubPath(item.path) : item.download_url;
+            return '<a href="' + avocEscape(imageUrl) + '" class="gal-item">' +
+              '<img loading="lazy" src="' + avocEscape(imageUrl) + '" alt="' + avocEscape(meta.title) + '">' +
               '<div class="gal-overlay"><i class="fa fa-search-plus"></i></div>' +
             '</a>';
           }).join('') +

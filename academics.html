@@ -84,6 +84,28 @@
       font-size: .84rem; color: #555; line-height: 1.6;
       margin: 0 0 16px; padding: 0;
     }
+    .conf-overview {
+      background: #fff; border-radius: 16px; margin-bottom: 36px;
+      box-shadow: 0 4px 24px rgba(15,52,96,.08);
+      border-left: 5px solid #0f3460; padding: 24px 28px;
+    }
+    .conf-overview h2 {
+      font-size: 1.35rem !important; font-weight: 900 !important;
+      color: #0f3460 !important; margin: 0 0 10px;
+    }
+    .conf-overview p {
+      font-size: .9rem; color: #4f5b66; line-height: 1.7;
+      margin: 0 0 12px;
+    }
+    .conf-overview p:last-child { margin-bottom: 0; }
+    .conf-overview-stats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .conf-overview-stat {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: #f5f8ff; border: 1px solid #e3eaff;
+      border-radius: 999px; padding: 7px 12px;
+      font-size: .74rem; font-weight: 800; color: #0f3460;
+    }
+    .conf-overview-stat i { color: #7eb8e0; }
 
     /* -- GALLERY CONTAINER -- */
     .gal-container { margin: 0; }
@@ -443,6 +465,18 @@
         <!-- -------- CONFERENCES -------- -->
         <div class="acad-section" id="acad-conferences">
 
+          <div class="conf-overview">
+            <h2>Conference Presentations, Participation &amp; Organisation</h2>
+            <p>This archive brings together the conference record from the local folder <strong>Conferences and ppt</strong>: early regional presentations in Udaipur and Jaipur, the first BVICAM paper presentation, international exposure in Croatia and Dubai, and a long series of ICCT, SSIC, SIN, ICICV, and SPEC academic events.</p>
+            <p>The section documents more than attendance. It shows the progression from presenting research as a young scholar to helping organise, coordinate, and lead academic gatherings at Manipal University Jaipur and beyond. Several cards combine presentation memories with organiser-side photographs from the same conference series, so the timeline reflects both scholarly participation and institutional responsibility.</p>
+            <div class="conf-overview-stats">
+              <span class="conf-overview-stat"><i class="fa fa-folder-open-o"></i>19 source folders</span>
+              <span class="conf-overview-stat"><i class="fa fa-calendar-check-o"></i>14 grouped conference entries</span>
+              <span class="conf-overview-stat"><i class="fa fa-image"></i>175 photos</span>
+              <span class="conf-overview-stat"><i class="fa fa-film"></i>4 conference videos</span>
+            </div>
+          </div>
+
           <!-- 01 Udaipur 2016 -->
           <div class="conf-card" id="c-icct17">
             <div class="conf-card-header">
@@ -591,7 +625,7 @@
               <div class="conf-meta">
                 <span><i class="fa fa-calendar"></i>January 30, 2020</span>
                 <span><i class="fa fa-map-marker"></i>Dubai, UAE</span>
-                <span><i class="fa fa-image"></i>16 Photos, 2 Videos</span>
+                <span><i class="fa fa-image"></i>24 Photos</span>
               </div>
             </div>
             <div class="conf-card-body">
@@ -746,7 +780,7 @@
               <div class="conf-meta">
                 <span><i class="fa fa-calendar"></i>March 4-5, 2016</span>
                 <span><i class="fa fa-map-marker"></i>Udaipur, Rajasthan</span>
-                <span><i class="fa fa-image"></i>6 Photos - 2 Videos</span>
+                <span><i class="fa fa-image"></i>6 Photos - 3 Videos</span>
               </div>
             </div>
             <div class="conf-card-body">
