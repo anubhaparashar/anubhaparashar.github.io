@@ -43,13 +43,13 @@
   align-items: center !important;
   height: 90px;
   text-decoration: none !important;
-  max-width: 170px;
+  max-width: 220px;
   overflow: hidden;
 }
 .nav-logo-img {
   display: block;
-  width: 164px;
-  height: 54px;
+  width: 214px;
+  height: 58px;
   object-fit: contain;
   object-position: left center;
 }
@@ -84,7 +84,7 @@
 }
 
 /* ── Nav items ── */
-.header_area .nav .nav-item { margin-right: 26px !important; }
+.header_area .nav .nav-item { margin-right: 18px !important; }
 .header_area .nav .nav-item:last-child { margin-right: 0 !important; }
 
 /* ── Nav links — tall 90px bar ── */
@@ -199,7 +199,7 @@
     box-shadow: 0 12px 32px rgba(26,26,46,.12) !important;
   }
   .nav-wordmark { display: none; }
-  .nav-logo-img { width: 150px; height: 48px; }
+  .nav-logo-img { width: 172px; height: 50px; }
 }
 
 /* ══════════════════════════════════════════════════════
