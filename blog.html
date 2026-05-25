@@ -76,7 +76,7 @@
     .feat-card:hover img { transform:scale(1.06); filter:brightness(.65); }
     .feat-card-overlay {
       position:absolute; inset:0;
-      background:linear-gradient(to top, rgba(5,10,30,.95) 0%, rgba(5,10,30,.5) 50%, rgba(5,10,30,.15) 100%);
+      background:linear-gradient(to top, rgba(255,255,255,.95) 0%, rgba(255,255,255,.76) 46%, rgba(255,255,255,.22) 100%);
     }
     /* coloured bottom stripe */
     .feat-card::after {
@@ -96,15 +96,15 @@
       font-size:.62rem; font-weight:800; letter-spacing:1px; text-transform:uppercase;
       margin-bottom:12px;
     }
-    .feat-badge.academics { background:rgba(126,184,224,.18); color:var(--col-academics); border:1.5px solid rgba(126,184,224,.5); }
-    .feat-badge.social    { background:rgba(240,165,0,.15);   color:var(--col-social);    border:1.5px solid rgba(240,165,0,.5); }
-    .feat-badge.sports    { background:rgba(80,200,120,.15);  color:var(--col-sports);    border:1.5px solid rgba(80,200,120,.5); }
-    .feat-badge.avocations   { background:rgba(192,132,252,.18); color:var(--col-avocations);   border:1.5px solid rgba(192,132,252,.5); }
+    .feat-badge.academics { background:rgba(126,184,224,.24); color:#123047; border:1.5px solid rgba(126,184,224,.62); }
+    .feat-badge.social    { background:rgba(240,165,0,.22);   color:#4d3100; border:1.5px solid rgba(240,165,0,.62); }
+    .feat-badge.sports    { background:rgba(80,200,120,.22);  color:#0d3d20; border:1.5px solid rgba(80,200,120,.62); }
+    .feat-badge.avocations   { background:rgba(192,132,252,.24); color:#35145b; border:1.5px solid rgba(192,132,252,.62); }
     .feat-card-title {
       font-size:1rem !important; font-weight:900 !important;
-      color:#fff !important; margin:0 0 8px; line-height:1.35;
+      color:#101827 !important; margin:0 0 8px; line-height:1.35;
     }
-    .feat-card-excerpt { font-size:.75rem; color:rgba(255,255,255,.72); margin:0 0 14px; line-height:1.45; }
+    .feat-card-excerpt { font-size:.75rem; color:#263244; margin:0 0 14px; line-height:1.45; }
     /* visit button */
     .feat-visit-btn {
       display:inline-flex; align-items:center; gap:8px; white-space:nowrap;
@@ -205,6 +205,8 @@
     .post-card .card-body { padding:16px 16px 14px; flex:1; display:flex; flex-direction:column; }
     .post-card .card-meta { font-size:.7rem; color:#aaa; margin-bottom:8px; display:flex; align-items:center; gap:10px; }
     .post-card .card-meta i { color:#c8d4f7; }
+    .post-card h3 a { color:inherit; text-decoration:none; }
+    .post-card h3 a:hover { color:#0f3460; }
     .post-card h3 { font-size:.9rem !important; font-weight:800 !important; color:#0f3460 !important; margin:0 0 8px; line-height:1.35; }
     .post-card p { font-size:.78rem; color:#666; line-height:1.5; margin:0 0 14px; flex:1; }
     .post-card .card-footer-row { display:flex; align-items:center; justify-content:space-between; margin-top:auto; }
@@ -314,7 +316,7 @@
       <!-- Academics -->
       <div class="col-lg-3 col-md-6 mb-4 feat-academics">
         <a href="academics.html" class="feat-card feat-academics">
-          <img src="files/8. Blog Web/box image/academic.jpeg" alt="Expert Talk on AI">
+          <img src="files/8. Blog/box/1.jpeg" alt="Expert Talk on AI">
           <div class="feat-card-overlay"></div>
           <div class="feat-card-body">
             <span class="feat-badge academics"><i class="fa fa-graduation-cap"></i> Academics</span>
@@ -328,7 +330,7 @@
       <!-- Social Life -->
       <div class="col-lg-3 col-md-6 mb-4 feat-social">
         <a href="connection.html" class="feat-card feat-social">
-          <img src="files/8. Blog Web/box image/connection.jpg" alt="Social Life">
+          <img src="files/8. Blog/box/2.jpeg" alt="Social Life">
           <div class="feat-card-overlay"></div>
           <div class="feat-card-body">
             <span class="feat-badge social"><i class="fa fa-users"></i> Social Life</span>
@@ -342,7 +344,7 @@
       <!-- Sports -->
       <div class="col-lg-3 col-md-6 mb-4 feat-sports">
         <a href="sports.html" class="feat-card feat-sports">
-          <img src="files/8. Blog Web/box image/sports.jpg" alt="Sports and Wellness">
+          <img src="files/8. Blog/box/3.jpg" alt="Sports and Wellness">
           <div class="feat-card-overlay"></div>
           <div class="feat-card-body">
             <span class="feat-badge sports"><i class="fa fa-heartbeat"></i> Sports</span>
@@ -356,7 +358,7 @@
       <!-- Avocations -->
       <div class="col-lg-3 col-md-6 mb-4 feat-avocations">
         <a href="avocations.html" class="feat-card feat-avocations">
-          <img src="files/8. Blog Web/box image/avocations.jpg" alt="Avocations">
+          <img src="files/8. Blog/box/4.png" alt="Avocations">
           <div class="feat-card-overlay"></div>
           <div class="feat-card-body">
             <span class="feat-badge avocations"><i class="fa fa-paint-brush"></i> Avocations</span>
@@ -526,16 +528,16 @@
             <div class="cat-group">
               <div class="cat-group-header">
                 <a href="academics.html"><i class="fa fa-graduation-cap" style="color:#7eb8e0;"></i> Academics</a>
-                <span class="cat-total">55</span>
+                <span class="cat-total" id="cat-count-academics">55</span>
               </div>
               <ul class="cat-sub">
-                <li><a href="academics.html#conferences">Conferences</a><span>13</span></li>
-                <li><a href="academics.html#workshops">Workshops</a><span>15</span></li>
-                <li><a href="academics.html#experttalks">Expert Talks</a><span>2</span></li>
-                <li><a href="academics.html#facultyvisits">Faculty Visits</a><span>6</span></li>
-                <li><a href="academics.html#events">Events</a><span>6</span></li>
-                <li><a href="academics.html#hackathon">Hackathon</a><span>3</span></li>
-                <li><a href="academics.html#social">Social Activities</a><span>10</span></li>
+                <li><a href="academics.html#acad-conferences">Conferences</a><span>13</span></li>
+                <li><a href="academics.html#acad-workshops">Workshops</a><span>15</span></li>
+                <li><a href="academics.html#acad-experttalks">Expert Talks</a><span>2</span></li>
+                <li><a href="academics.html#acad-facultyvisits">Faculty Visits</a><span>6</span></li>
+                <li><a href="academics.html#acad-events">Events</a><span>6</span></li>
+                <li><a href="academics.html#acad-hackathon">Hackathon</a><span>3</span></li>
+                <li><a href="academics.html#acad-social">Social Activities</a><span>10</span></li>
               </ul>
             </div>
 
@@ -547,8 +549,8 @@
               </div>
               <ul class="cat-sub">
                 <li><a href="connection.html#mom-birthday">Birthday to Mom</a><span>10 photos</span></li>
-                <li><a href="connection.html#sg-01">Conference Outing</a><span>10 photos</span></li>
-                <li><a href="connection.html#sg-02">MUJ SSIC Event</a><span>24 photos</span></li>
+                <li><a href="connection.html#sg-02">Conference Outing</a><span>10 photos</span></li>
+                <li><a href="connection.html#sg-01">MUJ SSIC Event</a><span>24 photos</span></li>
               </ul>
             </div>
 
@@ -559,7 +561,8 @@
                 <span class="cat-total" id="cat-count-sports" style="background:#2d8a50;">1</span>
               </div>
               <ul class="cat-sub">
-                <li><a href="sports.html">Sports &amp; Wellness</a><span id="cat-sub-sports-wellness">1</span></li>
+                <li><a href="sports.html#sports-post-29">College Sports Day</a><span>1</span></li>
+                <li><a href="sports.html#sports-post-30">Cricket Match Win</a><span>1</span></li>
               </ul>
             </div>
 
@@ -570,10 +573,10 @@
                 <span class="cat-total" id="cat-count-avocations" style="background:#7c3aed;">4</span>
               </div>
               <ul class="cat-sub">
-                <li><a href="avocations.html#trekking"><i class="fa fa-tree" style="color:#c084fc;margin-right:5px;"></i>Trekking</a><span></span></li>
-                <li><a href="avocations.html#painting"><i class="fa fa-paint-brush" style="color:#c084fc;margin-right:5px;"></i>Painting</a><span></span></li>
-                <li><a href="avocations.html#origami"><i class="fa fa-star" style="color:#c084fc;margin-right:5px;"></i>Origami</a><span></span></li>
-                <li><a href="avocations.html#magic-tricks"><i class="fa fa-magic" style="color:#c084fc;margin-right:5px;"></i>Magic Tricks</a><span></span></li>
+                <li><a href="avocations.html#tab-trekking"><i class="fa fa-tree" style="color:#c084fc;margin-right:5px;"></i>Trekking</a><span></span></li>
+                <li><a href="avocations.html#tab-painting"><i class="fa fa-paint-brush" style="color:#c084fc;margin-right:5px;"></i>Painting</a><span></span></li>
+                <li><a href="avocations.html#tab-origami"><i class="fa fa-star" style="color:#c084fc;margin-right:5px;"></i>Origami</a><span></span></li>
+                <li><a href="avocations.html#tab-magic"><i class="fa fa-magic" style="color:#c084fc;margin-right:5px;"></i>Magic Tricks</a><span></span></li>
               </ul>
             </div>
           </aside>
@@ -771,10 +774,10 @@
       col.setAttribute('data-blog-post-url', p.link);
       col.innerHTML =
         '<div class="post-card cat-' + escapeHtml(p.cat) + '">' +
-          '<div class="card-img-wrap">' +
-            '<img src="' + escapeHtml(p.img) + '" alt="' + escapeHtml(p.title) + '" loading="lazy">' +
+          '<a class="card-img-wrap" href="' + escapeHtml(p.link) + '">' +
+            '<img src="' + escapeHtml(p.img) + '" alt="' + escapeHtml(p.title) + '" loading="lazy" onerror="this.onerror=null;this.src=\'files/8. Blog/1.png\';">' +
             '<span class="card-cat-badge">' + escapeHtml(p.badge || p.cat) + '</span>' +
-          '</div>' +
+          '</a>' +
           '<div class="card-body">' +
             '<div class="card-meta">' +
               '<span><i class="fa fa-calendar"></i> Date: <span data-firebase-date>' + escapeHtml(p.date) + '</span></span>' +
@@ -783,7 +786,7 @@
               '<span><i class="fa fa-comment"></i> <span data-firebase-comments>0</span> Comments</span>' +
               '<button type="button" class="firebase-share-btn" data-firebase-share><i class="fa fa-share-alt"></i> Share</button>' +
             '</div>' +
-            '<h3>' + escapeHtml(p.title) + '</h3>' +
+            '<h3><a href="' + escapeHtml(p.link) + '">' + escapeHtml(p.title) + '</a></h3>' +
             '<p>' + escapeHtml(p.excerpt) + '</p>' +
             '<div class="card-footer-row">' +
               '<a href="' + escapeHtml(p.link) + '" class="read-btn">Read More <i class="fa fa-arrow-right"></i></a>' +
