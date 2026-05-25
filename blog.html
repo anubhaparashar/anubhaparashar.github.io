@@ -273,6 +273,8 @@
     }
     .timeline-strip h4 { font-size:.9rem !important; font-weight:800 !important; color:#0f3460 !important; margin-bottom:16px; padding-bottom:10px; border-bottom:2px solid #e8eeff; }
     .tl-item { display:flex; align-items:flex-start; gap:12px; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid #f0f2ff; }
+    .tl-item:has(a[href]) { cursor:pointer; }
+    .tl-item:has(a[href]):hover .tl-text strong { color:#7eb8e0; }
     .tl-item:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
     .tl-dot { width:10px; height:10px; border-radius:50%; background:#7eb8e0; flex-shrink:0; margin-top:5px; }
     .tl-dot.dot-social { background:#f0a500; }
@@ -469,7 +471,7 @@
             <div class="tl-item">
               <div class="tl-dot dot-social"></div>
               <div class="tl-text">
-                <a href="connection.html" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#f0a500;">Global AI Jaipur Meetup</strong></a>
+                <a href="connection.html#connection-overview" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#f0a500;">Global AI Jaipur Meetup</strong></a>
                 Hosted a session on AI applications — connecting researchers and practitioners.
                 <span>3 May, 2025</span>
               </div>
@@ -477,7 +479,7 @@
             <div class="tl-item">
               <div class="tl-dot"></div>
               <div class="tl-text">
-                <a href="award.html" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#7eb8e0;">Top Researcher of the Month</strong></a>
+                <a href="award.html#top-researcher-jan-2023" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#7eb8e0;">Top Researcher of the Month</strong></a>
                 Published in Artificial Intelligence Review (Q1, IF 9.588).
                 <span>Feb, 2023</span>
               </div>
@@ -493,7 +495,7 @@
             <div class="tl-item">
               <div class="tl-dot dot-social"></div>
               <div class="tl-text">
-                <a href="connection.html#sg-02" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#f0a500;">MUJ SSIC Event</strong></a>
+                <a href="connection.html#sg-01" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#f0a500;">MUJ SSIC Event</strong></a>
                 Facilitated the Student Symposium on Intelligent Computing at MUJ.
                 <span>Jan, 2019</span>
               </div>
@@ -501,7 +503,7 @@
             <div class="tl-item">
               <div class="tl-dot"></div>
               <div class="tl-text">
-                <a href="connection.html#sg-01" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#7eb8e0;">Conference Outing</strong></a>
+                <a href="connection.html#sg-02" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#7eb8e0;">Conference Outing</strong></a>
                 Team bonding and networking at an international conference.
                 <span>Feb, 2020</span>
               </div>
@@ -528,7 +530,7 @@
             <div class="cat-group">
               <div class="cat-group-header">
                 <a href="academics.html"><i class="fa fa-graduation-cap" style="color:#7eb8e0;"></i> Academics</a>
-                <span class="cat-total" id="cat-count-academics">55</span>
+                <span class="cat-total" id="cat-count-academics">61</span>
               </div>
               <ul class="cat-sub">
                 <li><a href="academics.html#acad-conferences">Conferences</a><span>13</span></li>
@@ -558,7 +560,7 @@
             <div class="cat-group">
               <div class="cat-group-header">
                 <a href="sports.html"><i class="fa fa-heartbeat" style="color:#50c878;"></i> Sports</a>
-                <span class="cat-total" id="cat-count-sports" style="background:#2d8a50;">1</span>
+                <span class="cat-total" id="cat-count-sports" style="background:#2d8a50;">2</span>
               </div>
               <ul class="cat-sub">
                 <li><a href="sports.html#sports-post-29">College Sports Day</a><span>1</span></li>
@@ -923,6 +925,21 @@
         renderArchive();
       });
     }
+    document.querySelectorAll('.timeline-strip .tl-item').forEach(function(item) {
+      var link = item.querySelector('a[href]');
+      if (!link) return;
+      item.setAttribute('tabindex', '0');
+      item.addEventListener('click', function(event) {
+        if (event.target.closest('a')) return;
+        window.location.href = link.href;
+      });
+      item.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          window.location.href = link.href;
+        }
+      });
+    });
     discoverPostsFromPages().then(function(posts) {
       mergeDiscoveredPosts(posts);
       updatePostTools();

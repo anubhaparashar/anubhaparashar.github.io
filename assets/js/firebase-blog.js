@@ -562,6 +562,9 @@ function hydrateBlogIndex() {
   addFirebaseBlogStyles();
 
   document.querySelectorAll("[data-blog-post-id]").forEach(card => {
+    if (card.dataset.firebaseBlogHydrated === "true") return;
+    card.dataset.firebaseBlogHydrated = "true";
+
     const postId = slugify(card.dataset.blogPostId || card.id);
     const dateEl = card.querySelector("[data-firebase-date]");
     const viewsEl = card.querySelector("[data-firebase-views]");
@@ -601,6 +604,10 @@ function hydrateBlogIndex() {
 
   });
 }
+
+window.FirebaseBlog = {
+  refresh: hydrateBlogIndex
+};
 
 function renderPostComments(listEl, postId, comments) {
   if (!listEl) return;
