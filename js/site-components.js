@@ -1,10 +1,13 @@
 (function () {
+  if (window.__siteComponentsLoaded) return;
+  window.__siteComponentsLoaded = true;
+
   /* ── Detect current page for active nav ── */
   var PAGE_MAP = {
     'index.html': 'home', '': 'home',
     'education.html': 'education',
     'experience.html': 'experience',
-    'publication.html': 'publication',
+    'publication.html': 'publication', 'conferences.html': 'publication',
     'project.html': 'project', 'grant.html': 'project', 'industry.html': 'project',
     'award.html': 'award',
     'event.html': 'event', 'leadership-activities.html': 'event',
@@ -161,6 +164,82 @@
       .catch(function () {});
   }
 
+  function initImageViewer() {
+    var imagePattern = /\.(jpe?g|png|gif|webp|bmp|svg)(\?.*)?(#.*)?$/i;
+    var viewer = null;
+    var previousFocus = null;
+
+    function isImageLink(link) {
+      if (!link || !link.href) return false;
+      return imagePattern.test(link.href);
+    }
+
+    function ensureViewer() {
+      if (viewer) return viewer;
+
+      var style = document.createElement('style');
+      style.textContent =
+        '.site-image-viewer{position:fixed;inset:0;z-index:2147483000;display:none;align-items:center;justify-content:center;background:rgba(5,8,18,.88);padding:24px;}' +
+        '.site-image-viewer.is-open{display:flex;}' +
+        '.site-image-viewer__frame{position:relative;max-width:min(1120px,96vw);max-height:92vh;display:flex;align-items:center;justify-content:center;}' +
+        '.site-image-viewer__image{display:block;max-width:100%;max-height:92vh;border-radius:6px;box-shadow:0 22px 70px rgba(0,0,0,.48);background:#fff;}' +
+        '.site-image-viewer__close{position:fixed;top:18px;right:18px;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:#111827;font-size:28px;line-height:1;cursor:pointer;box-shadow:0 10px 28px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;}' +
+        '.site-image-viewer__close:hover,.site-image-viewer__close:focus{background:#f3f4f6;outline:2px solid rgba(255,255,255,.85);outline-offset:2px;}' +
+        'body.site-image-viewer-open{overflow:hidden;}';
+      document.head.appendChild(style);
+
+      viewer = document.createElement('div');
+      viewer.className = 'site-image-viewer';
+      viewer.setAttribute('role', 'dialog');
+      viewer.setAttribute('aria-modal', 'true');
+      viewer.setAttribute('aria-label', 'Image preview');
+      viewer.innerHTML =
+        '<button type="button" class="site-image-viewer__close" aria-label="Close image preview">&times;</button>' +
+        '<div class="site-image-viewer__frame"><img class="site-image-viewer__image" alt=""></div>';
+      document.body.appendChild(viewer);
+
+      viewer.querySelector('.site-image-viewer__close').addEventListener('click', closeViewer);
+      viewer.addEventListener('click', function (event) {
+        if (event.target === viewer) closeViewer();
+      });
+
+      return viewer;
+    }
+
+    function openViewer(src, alt) {
+      var el = ensureViewer();
+      var image = el.querySelector('.site-image-viewer__image');
+      previousFocus = document.activeElement;
+      image.src = src;
+      image.alt = alt || 'Preview image';
+      el.classList.add('is-open');
+      document.body.classList.add('site-image-viewer-open');
+      el.querySelector('.site-image-viewer__close').focus();
+    }
+
+    function closeViewer() {
+      if (!viewer || !viewer.classList.contains('is-open')) return;
+      viewer.classList.remove('is-open');
+      document.body.classList.remove('site-image-viewer-open');
+      viewer.querySelector('.site-image-viewer__image').removeAttribute('src');
+      if (previousFocus && previousFocus.focus) previousFocus.focus();
+    }
+
+    document.addEventListener('click', function (event) {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      var link = event.target.closest ? event.target.closest('a') : null;
+      if (!isImageLink(link) || link.hasAttribute('download')) return;
+      event.preventDefault();
+      event.stopPropagation();
+      var img = link.querySelector('img');
+      openViewer(link.href, img ? img.alt : link.getAttribute('aria-label'));
+    }, true);
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeViewer();
+    });
+  }
+
   /* ── Site-wide ambient particle canvas ── */
   function initParticles() {
     var canvas = document.createElement('canvas');
@@ -262,9 +341,10 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() { init(); initParticles(); });
+    document.addEventListener('DOMContentLoaded', function() { init(); initImageViewer(); initParticles(); });
   } else {
     init();
+    initImageViewer();
     initParticles();
   }
 })();
