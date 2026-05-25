@@ -32,6 +32,8 @@
     .social_icon a:hover { color: #7eb8e0; }
     .author_widget p:last-child { font-size: .8rem; color: #666; line-height: 1.65; text-align: left; margin-top: 12px; }
     .post_item { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .post_item:has(a[href]) { cursor: pointer; }
+    .post_item:has(a[href]):hover h3 { color: #7eb8e0 !important; }
     .post_item img { width: 58px; height: 48px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
     .post_item h3 { font-size: .82rem !important; font-weight: 700 !important; color: #0f3460 !important; margin-bottom: 2px; }
     .post_item p { font-size: .73rem; color: #888; margin: 0; }
@@ -707,21 +709,21 @@
             <div class="media post_item">
               <img src="files/8. Blog/2. Connection/header/IMG20200128140641.jpg" alt="post">
               <div class="media-body">
-                <a href="connection.html"><h3>Global AI Jaipur Webinar</h3></a>
+                <a href="connection.html#connection-overview"><h3>Global AI Jaipur Webinar</h3></a>
                 <p>3 May, 2025</p>
               </div>
             </div>
             <div class="media post_item">
               <img src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2746.JPG" alt="post">
               <div class="media-body">
-                <a href="academics.html"><h3>Top Researcher of the Month</h3></a>
+                <a href="award.html#top-researcher-jan-2023"><h3>Top Researcher of the Month</h3></a>
                 <p>7 Feb, 2023</p>
               </div>
             </div>
             <div class="media post_item">
               <img src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213200238.jpg" alt="post">
               <div class="media-body">
-                <a href="academics.html"><h3>ICCT 2023 Conference</h3></a>
+                <a href="academics.html#c-icct23"><h3>ICCT 2023 Conference</h3></a>
                 <p>20 Jan, 2023</p>
               </div>
             </div>
@@ -842,6 +844,22 @@
     window.addEventListener('load', openHashTarget);
     window.addEventListener('hashchange', openHashTarget);
   })();
+
+  document.querySelectorAll('.popular_post_widget .post_item').forEach(function(item) {
+    var link = item.querySelector('a[href]');
+    if (!link) return;
+    item.setAttribute('tabindex', '0');
+    item.addEventListener('click', function(event) {
+      if (event.target.closest('a')) return;
+      window.location.href = link.href;
+    });
+    item.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        window.location.href = link.href;
+      }
+    });
+  });
 
   // ── Gallery restructure: fancy slider ──
   (function() {
