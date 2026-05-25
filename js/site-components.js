@@ -41,12 +41,12 @@
     '            <li class="nav-item" data-nav="home"><a class="nav-link" href="index.html">Home</a></li>' +
     '            <li class="nav-item" data-nav="education"><a class="nav-link" href="education.html">Education</a></li>' +
     '            <li class="nav-item" data-nav="experience"><a class="nav-link" href="experience.html">Experience</a></li>' +
-    '            <li class="nav-item" data-nav="publication"><a class="nav-link" href="publication.html">Publication</a></li>' +
+    '            <li class="nav-item" data-nav="publication"><a class="nav-link" href="publication.html">Publications</a></li>' +
     '            <li class="nav-item submenu dropdown" data-nav="project">' +
     '              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"' +
-    '                aria-haspopup="true" aria-expanded="false">Project</a>' +
+    '                aria-haspopup="true" aria-expanded="false">Projects</a>' +
     '              <ul class="dropdown-menu">' +
-    '                <li class="nav-item"><a class="nav-link" href="project.html">Project</a></li>' +
+    '                <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>' +
     '                <li class="nav-item"><a class="nav-link" href="grant.html">Grant</a></li>' +
     '                <li class="nav-item"><a class="nav-link" href="industry.html">Industry</a></li>' +
     '              </ul>' +

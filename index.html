@@ -266,6 +266,74 @@
     /* ══════════════════════════════════════════════════════
        RESPONSIVE
        ══════════════════════════════════════════════════════ */
+    .contact-section { padding:70px 0; background:#f5f7fa; }
+    .contact-panel {
+      display:grid; grid-template-columns:minmax(300px,1fr) minmax(280px,.86fr);
+      gap:20px; align-items:stretch; margin-bottom:20px;
+    }
+    .contact-info, .contact-form-card {
+      background:#fff; border:1px solid #e6edf5; border-radius:18px;
+      box-shadow:0 16px 44px rgba(15,23,42,.07);
+    }
+    .contact-info { padding:24px; display:flex; flex-direction:column; }
+    .contact-info h3, .contact-form-card h3, .contact-interests h3 {
+      color:#0f172a !important; font-size:1.08rem !important; font-weight:900 !important; margin-bottom:12px !important;
+    }
+    .contact-card-title {
+      display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px;
+    }
+    .contact-card-title h3 { margin-bottom:0 !important; }
+    .contact-card-meta {
+      display:inline-flex; align-items:center; gap:7px; color:#334155; font-size:.76rem; font-weight:800;
+      text-decoration:none; white-space:nowrap;
+    }
+    .contact-card-meta:hover { color:#2d4a6e; text-decoration:none; }
+    .contact-info p { color:#475569; line-height:1.68; font-size:.88rem; margin-bottom:14px; }
+    .contact-info .contact-prompt { color:#1e293b; font-weight:700; margin-bottom:16px; }
+    .contact-line {
+      display:flex; align-items:center; gap:10px; color:#334155; font-size:.82rem;
+      padding:9px 0; border-top:1px solid #edf2f7;
+    }
+    .contact-line i {
+      width:30px; height:30px; border-radius:9px; display:inline-flex; align-items:center; justify-content:center;
+      background:#e8eef6; color:#2d4a6e; flex:0 0 30px;
+    }
+    .contact-line a { color:#334155; text-decoration:none; overflow-wrap:anywhere; }
+    .contact-line a:hover { color:#2d4a6e; }
+    .contact-location { margin-left:auto; display:inline-flex; align-items:center; gap:10px; }
+    .contact-company-image {
+      display:block; position:relative; max-width:100%; margin-top:10px; border-radius:12px; overflow:hidden;
+      border:1px solid #e6edf5; background:#0f172a;
+    }
+    .contact-company-image img { width:100%; height:auto; display:block; }
+    .contact-form-card { padding:24px; }
+    .contact-form .form-group { margin-bottom:10px; }
+    .contact-form label {
+      display:block; color:#334155; font-size:.62rem; font-weight:800; letter-spacing:.8px;
+      text-transform:uppercase; margin-bottom:4px;
+    }
+    .contact-form .form-control {
+      height:34px; border:1px solid #d9e2ee; border-radius:8px; color:#0f172a;
+      font-size:.8rem; box-shadow:none; padding:6px 10px; background:#fbfdff;
+    }
+    .contact-form textarea.form-control { min-height:78px; resize:vertical; }
+    .contact-form .form-control:focus { border-color:#2d4a6e; background:#fff; box-shadow:0 0 0 3px rgba(45,74,110,.10); }
+    .contact-submit {
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      min-height:34px; border:0; border-radius:18px; padding:0 18px;
+      background:linear-gradient(135deg,#2d4a6e,#3d6080); color:#fff;
+      font-size:.74rem; font-weight:800; letter-spacing:.2px; cursor:pointer;
+      box-shadow:0 8px 24px rgba(45,74,110,.22); transition:all .22s;
+    }
+    .contact-submit:hover { transform:translateY(-1px); box-shadow:0 12px 30px rgba(45,74,110,.30); }
+    .contact-submit[disabled] { opacity:.62; cursor:not-allowed; transform:none; }
+    .contact-status {
+      display:none; margin-top:10px; border-radius:8px; padding:9px 10px;
+      font-size:.76rem; line-height:1.45;
+    }
+    .contact-status.is-visible { display:block; }
+    .contact-status.success { background:#ecfdf3; color:#166534; border:1px solid #bbf7d0; }
+    .contact-status.error { background:#fff1f2; color:#9f1239; border:1px solid #fecdd3; }
     @media (max-width:767px) {
       .hero-name { font-size:2.4rem !important; }
       .hero-impacts { gap:18px; }
@@ -274,6 +342,8 @@
       .about-photo-wrap { margin-bottom:40px; }
       .testi-card { flex:0 0 300px; }
       .impact-num { font-size:2.4rem; }
+      .contact-panel { grid-template-columns:1fr; }
+      .contact-info, .contact-form-card { padding:18px 16px; }
     }
   </style>
 </head>
@@ -795,6 +865,51 @@
 <!--================ End Testimonial Area =================-->
 
 
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-panel">
+      <div class="contact-info">
+        <div class="contact-card-title">
+          <h3>Let's Connect</h3>
+          <a class="contact-card-meta" href="mailto:dranubhaparashar@gmail.com"><i class="fa fa-envelope"></i>dranubhaparashar@gmail.com</a>
+        </div>
+        <p>I am open to AI collaborations, research partnerships, consulting, invited talks, and industry projects in Computer Vision, Biometrics, LLMs, and Applied AI.</p>
+        <a class="contact-company-image" href="file:///C:/Users/Anubha/Documents/website/gaitai/research.html" target="_blank" rel="noopener">
+          <img src="files/1.%20Home/GaitAI.png" alt="GaitAI">
+        </a>
+      </div>
+      <div class="contact-form-card">
+        <div class="contact-card-title">
+          <h3>Contact Form</h3>
+          <span class="contact-card-meta"><i class="fa fa-map-marker"></i>India</span>
+        </div>
+        <form class="contact-form" id="contactForm" method="POST" action="https://formspree.io/f/maqkpeyb" data-endpoint="https://formspree.io/f/maqkpeyb">
+          <input type="hidden" name="_subject" value="New form submission on My Portfolio">
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input class="form-control" id="contact-name" type="text" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input class="form-control" id="contact-email" type="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <input class="form-control" id="contact-subject" type="text" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea class="form-control" id="contact-message" name="message" required></textarea>
+          </div>
+          <button class="contact-submit" type="submit"><i class="fa fa-paper-plane"></i> Send Message</button>
+          <div class="contact-status" id="contactStatus" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <div id="site-footer"></div>
 
 <!-- Scripts -->
@@ -880,6 +995,52 @@ $(document).ready(function () {
   });
 
 });
+
+/* GitHub Pages contact form via Formspree */
+(function () {
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('contactStatus');
+  if (!form || !status) return;
+
+  function showStatus(type, message) {
+    status.className = 'contact-status is-visible ' + type;
+    status.textContent = message;
+  }
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    var endpoint = form.getAttribute('data-endpoint') || form.action;
+    if (!endpoint || endpoint.indexOf('YOUR_FORM_ID') !== -1) {
+      showStatus('error', 'Formspree is ready to connect. Replace YOUR_FORM_ID in index.html with your Formspree form ID.');
+      return;
+    }
+
+    var submit = form.querySelector('button[type="submit"]');
+    var oldText = submit.innerHTML;
+    submit.disabled = true;
+    submit.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending';
+    showStatus('success', 'Sending your message...');
+
+    fetch(endpoint, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Form submission failed');
+        form.reset();
+        showStatus('success', 'Thank you. Your message has been sent.');
+      })
+      .catch(function () {
+        showStatus('error', 'The message could not be sent. Please email dranubhaparashar@gmail.com directly.');
+      })
+      .finally(function () {
+        submit.disabled = false;
+        submit.innerHTML = oldText;
+      });
+  });
+})();
 </script>
 </body>
 </html>
