@@ -607,6 +607,30 @@ var SITE_POSTS = [
     badge:   'Academics'
   },
   {
+    id:      'post-soc-donation',
+    cat:     'academics',
+    tags:    'Social,Donation,Community,Service,Outreach',
+    date:    'May, 2026',
+    views:   '',
+    img:     'files/8. Blog/1. academic/8. Social Activities/donation/20260516_161425.jpg',
+    title:   'Donation Drive',
+    excerpt: 'Donation drive - a recent community service activity reflecting continued commitment to service, sharing, and social support.',
+    link:    'academics.html#soc-donation',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-soc-donation-copy',
+    cat:     'academics',
+    tags:    'Social,Donation,Community,Service,Memories',
+    date:    'May, 2026',
+    views:   '',
+    img:     'files/8. Blog/1. academic/8. Social Activities/donation - Copy/20260516_161550.jpg',
+    title:   'Donation Drive Memories',
+    excerpt: 'Donation drive memories - an additional moment preserving the people and purpose behind the community service activity.',
+    link:    'academics.html#soc-donation-copy',
+    badge:   'Academics'
+  },
+  {
     id:      'post-ws-icicv',
     cat:     'academics',
     tags:    'Workshop,Conference,MUJ,Learning,AI',

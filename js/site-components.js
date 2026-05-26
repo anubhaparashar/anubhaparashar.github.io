@@ -10,7 +10,7 @@
     'publication.html': 'publication', 'conferences.html': 'publication',
     'project.html': 'project', 'grant.html': 'project', 'industry.html': 'project',
     'award.html': 'award',
-    'event.html': 'event', 'leadership-activities.html': 'event',
+    'leadership-activities.html': 'event',
     'blog.html': 'blog', 'connection.html': 'blog', 'academics.html': 'blog', 'sports.html': 'blog', 'avocations.html': 'blog'
   };
   var currentFile = window.location.pathname.split('/').pop() || '';
