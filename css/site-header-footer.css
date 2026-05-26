@@ -85,7 +85,7 @@
 }
 
 /* ── Nav items ── */
-.header_area .nav .nav-item { margin-right: 12px !important; }
+.header_area .nav .nav-item { margin-right: 18px !important; }
 .header_area .nav .nav-item:last-child { margin-right: 0 !important; }
 
 /* ── Nav links — tall 90px bar ── */
