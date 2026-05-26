@@ -23,7 +23,7 @@
     '  <div class="main_menu">' +
     '    <nav class="navbar navbar-expand-lg navbar-light">' +
     '      <div class="container">' +
-    '        <a class="navbar-brand logo_h" href="index.html">' +
+    '        <a class="navbar-brand logo_h" href="index.html#contact">' +
     '          <img class="nav-logo-img" src="files/1.%20Home/logo-header-name-only.png" alt="Dr. Anubha Parashar">' +
     '        </a>' +
     '        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"' +
