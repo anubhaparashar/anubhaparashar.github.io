@@ -816,7 +816,7 @@
     if (label) label.textContent = total === 1 ? 'Post matched' : 'Posts matched';
   }
 
-  function filterPosts(cat, btn) {
+  function filterPosts(cat, btn, updateHash) {
     document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
     if (btn) btn.classList.add('active');
     archiveState.cat = cat || 'all';
@@ -825,6 +825,12 @@
     archiveState.visibleLimit = 12;
     document.querySelectorAll('#tag-cloud .tag-pill').forEach(function(p){ p.classList.remove('active'); });
     renderArchive();
+    if (updateHash !== false) {
+      var nextHash = archiveState.cat === 'all' ? '#all' : '#filter-' + archiveState.cat;
+      if (window.location.hash !== nextHash) {
+        history.replaceState(null, '', nextHash);
+      }
+    }
   }
 
   var _activeTag = null;
@@ -884,7 +890,7 @@
   function scrollToPost(id) {
     var target = document.getElementById(id);
     if (!target) return;
-    filterPosts('all', document.querySelector('[data-filter="all"]'));
+    filterPosts('all', document.querySelector('[data-filter="all"]'), false);
     setTimeout(function() {
       target.scrollIntoView({ behavior:'smooth', block:'center' });
       target.style.outline = '3px solid #f0a500';
@@ -945,7 +951,15 @@
       updatePostTools();
       renderArchive();
       var hash = (location.hash || '').slice(1);
-      if (hash) setTimeout(function(){ scrollToPost(hash); }, 120);
+      if (hash && hash.indexOf('filter-') === 0) {
+        var cat = hash.replace('filter-', '');
+        var btn = document.querySelector('[data-filter="' + cat + '"]');
+        if (btn) filterPosts(cat, btn, false);
+      } else if (hash === 'all') {
+        filterPosts('all', document.querySelector('[data-filter="all"]'), false);
+      } else if (hash) {
+        setTimeout(function(){ scrollToPost(hash); }, 120);
+      }
     });
   })();
 </script>

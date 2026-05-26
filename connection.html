@@ -795,18 +795,22 @@
     var sections = Array.from(document.querySelectorAll('.connection-section'));
     if (!buttons.length || !sections.length) return;
 
-    function activateTab(id) {
+    function activateTab(id, updateHash) {
       buttons.forEach(function(item) {
         item.classList.toggle('active', item.getAttribute('data-target') === id);
       });
       sections.forEach(function(section) {
         section.classList.toggle('active', section.id === 'connection-section-' + id);
       });
+      if (updateHash !== false && window.location.hash !== '#' + id) {
+        history.replaceState(null, '', '#' + id);
+      }
       window.dispatchEvent(new Event('resize'));
     }
 
     function sectionForHash(hash) {
       if (!hash) return null;
+      if (buttons.some(function(btn) { return btn.getAttribute('data-target') === hash; })) return hash;
       var target = document.getElementById(hash);
       if (!target) return null;
       var section = target.closest('.connection-section');
@@ -817,7 +821,8 @@
       var hash = (window.location.hash || '').slice(1);
       var tabId = sectionForHash(hash);
       if (!tabId) return;
-      activateTab(tabId);
+      activateTab(tabId, false);
+      if (hash === tabId) return;
       [80, 350, 900].forEach(function(delay) {
         setTimeout(function() {
           var target = document.getElementById(hash);
