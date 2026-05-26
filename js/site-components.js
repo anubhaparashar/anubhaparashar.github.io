@@ -49,7 +49,7 @@
     '              </ul>' +
     '            </li>' +
     '            <li class="nav-item" data-nav="award"><a class="nav-link" href="award.html">Awards</a></li>' +
-    '            <li class="nav-item" data-nav="event"><a class="nav-link" href="leadership-activities.html">Leadership &amp; Activities</a></li>' +
+    '            <li class="nav-item" data-nav="event"><a class="nav-link" href="leadership-activities.html">Leadership</a></li>' +
     '            <li class="nav-item submenu dropdown" data-nav="blog">' +
     '              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"' +
     '                aria-haspopup="true" aria-expanded="false">Blog</a>' +

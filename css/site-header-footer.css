@@ -43,14 +43,14 @@
   align-items: center !important;
   height: 90px;
   text-decoration: none !important;
-  max-width: 326px;
+  max-width: 310px;
   overflow: hidden;
 }
 .nav-logo-img {
   display: block;
-  width: 322px;
+  width: 310px;
   height: auto;
-  max-height: 74px;
+  max-height: 80px;
   object-fit: contain;
   object-position: left center;
 }
@@ -85,7 +85,7 @@
 }
 
 /* ── Nav items ── */
-.header_area .nav .nav-item { margin-right: 14px !important; }
+.header_area .nav .nav-item { margin-right: 12px !important; }
 .header_area .nav .nav-item:last-child { margin-right: 0 !important; }
 
 /* ── Nav links — tall 90px bar ── */
@@ -200,7 +200,7 @@
     box-shadow: 0 12px 32px rgba(26,26,46,.12) !important;
   }
   .nav-wordmark { display: none; }
-  .nav-logo-img { width: 246px; max-height: 56px; }
+  .nav-logo-img { width: 236px; max-height: 62px; }
 }
 
 /* ══════════════════════════════════════════════════════
