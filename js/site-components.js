@@ -163,12 +163,31 @@
 
   function initImageViewer() {
     var imagePattern = /\.(jpe?g|png|gif|webp|bmp|svg)(\?.*)?(#.*)?$/i;
+    var documentPattern = /\.(pdf|docx?|pptx?|xlsx?|csv)(\?.*)?(#.*)?$/i;
     var viewer = null;
     var previousFocus = null;
 
     function isImageLink(link) {
       if (!link || !link.href) return false;
       return imagePattern.test(link.href);
+    }
+
+    function shouldOpenInNewTab(link) {
+      if (!link || !link.href) return false;
+      var href = link.getAttribute('href') || '';
+      if (!href || href.charAt(0) === '#' || /^mailto:|^tel:|^javascript:/i.test(href)) return false;
+      if (link.classList.contains('dropdown-toggle')) return false;
+      if (link.classList.contains('cert-btn') || link.classList.contains('lead-photo-link')) return true;
+      if (documentPattern.test(href)) return true;
+      if (link.target === '_blank') return true;
+      return isMultiPhotoLink(link);
+    }
+
+    function isMultiPhotoLink(link) {
+      if (!isImageLink(link)) return false;
+      var container = link.closest('.gal-grid,.gal-container,.gal-slider,.gal-slides-track,.award-gallery,.cert-gallery,.mfp-gallery,.gallery,.portfolio_area,.blog-gallery-section,.sports-post-gallery,.mom-main-photos');
+      if (!container) return false;
+      return container.querySelectorAll('a[href]').length > 1;
     }
 
     function ensureViewer() {
@@ -225,12 +244,34 @@
     document.addEventListener('click', function (event) {
       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       var link = event.target.closest ? event.target.closest('a') : null;
-      if (!isImageLink(link) || link.hasAttribute('download')) return;
+      if (!isImageLink(link) || isMultiPhotoLink(link) || link.hasAttribute('download')) return;
       event.preventDefault();
       event.stopPropagation();
       var img = link.querySelector('img');
       openViewer(link.href, img ? img.alt : link.getAttribute('aria-label'));
     }, true);
+
+    function applyOpenInNewTabTargets(root) {
+      var scope = root && root.querySelectorAll ? root : document;
+      scope.querySelectorAll('a[href]').forEach(function (link) {
+        if (!shouldOpenInNewTab(link)) return;
+        link.target = '_blank';
+        var rel = (link.getAttribute('rel') || '').split(/\s+/);
+        if (rel.indexOf('noopener') === -1) rel.push('noopener');
+        link.setAttribute('rel', rel.filter(Boolean).join(' '));
+      });
+    }
+
+    applyOpenInNewTabTargets(document);
+    if (window.MutationObserver) {
+      new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          mutation.addedNodes.forEach(function (node) {
+            if (node.nodeType === 1) applyOpenInNewTabTargets(node);
+          });
+        });
+      }).observe(document.body, { childList: true, subtree: true });
+    }
 
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape') closeViewer();
