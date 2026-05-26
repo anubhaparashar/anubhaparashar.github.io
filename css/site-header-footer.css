@@ -43,14 +43,14 @@
   align-items: center !important;
   height: 90px;
   text-decoration: none !important;
-  max-width: 252px;
+  max-width: 326px;
   overflow: hidden;
 }
 .nav-logo-img {
   display: block;
-  width: 248px;
+  width: 322px;
   height: auto;
-  max-height: 46px;
+  max-height: 74px;
   object-fit: contain;
   object-position: left center;
 }
@@ -200,7 +200,7 @@
     box-shadow: 0 12px 32px rgba(26,26,46,.12) !important;
   }
   .nav-wordmark { display: none; }
-  .nav-logo-img { width: 190px; max-height: 38px; }
+  .nav-logo-img { width: 246px; max-height: 56px; }
 }
 
 /* ══════════════════════════════════════════════════════
