@@ -315,12 +315,12 @@ var SITE_POSTS = [
   {
     id:      'post-fv-itday',
     cat:     'academics',
-    tags:    'Faculty Visit,IT Day,Jaipur,Industry,Technology',
+    tags:    'Faculty Visit,Rajasthan Dijifest,Jaipur,Industry,Technology',
     date:    'Mar, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/5. faculty visits/3. Rajasthan Dijifest/20180320_154838.jpg',
-    title:   'IT Day – Jaipur',
-    excerpt: 'IT Day celebrations in Jaipur — showcasing technology innovations and connecting with the broader IT and industry community.',
+    title:   'Rajasthan Dijifest',
+    excerpt: 'Rajasthan Dijifest in Jaipur — showcasing technology innovations and connecting with the broader IT and industry community.',
     link:    'academics.html#fv-itday',
     badge:   'Academics'
   },
