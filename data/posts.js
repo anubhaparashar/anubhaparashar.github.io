@@ -775,15 +775,15 @@ var SITE_POSTS = [
     badge:   'Academics'
   },
   {
-    id:      'post-ws-mun',
+    id:      'post-c-mun',
     cat:     'academics',
-    tags:    'Workshop,MUN,Students,Leadership,Community',
-    date:    '2019',
+    tags:    'Conference,MUN,Students,Leadership,Community',
+    date:    'Apr 14-15, 2018',
     views:   '',
-    img:     'files/8. Blog/1. academic/3. workshops/37. MUN/IMG_7544.JPG',
+    img:     'files/8. Blog/1. academic/2. Conferences and ppt/37. MUN/IMG_7544.JPG',
     title:   'Model United Nations (MUN)',
-    excerpt: 'Mentoring students in global diplomacy, debate, and policy — building critical thinking and collaborative leadership skills.',
-    link:    'academics.html#w-mun',
+    excerpt: 'Model United Nations conference — mentoring students in global diplomacy, debate, and policy discussions that build critical thinking and collaborative leadership skills.',
+    link:    'academics.html#c-mun',
     badge:   'Academics'
   },
   {
