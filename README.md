@@ -231,17 +231,6 @@ files/
 data/
 ```
 
-## Suggested Future Enhancements
-
-- Add analytics dashboard for page views, likes, comments, and blog engagement
-- Connect blog interactions to Firebase or another backend
-- Add structured data using JSON-LD for better search visibility
-- Optimize large images for faster loading
-- Add sitemap and robots.txt
-- Add GitHub Actions workflow for link checking and asset validation
-- Add accessibility improvements such as alt text audits and keyboard navigation checks
-- Add publication filters by journal, year, topic, and indexing category
-
 ## Author
 
 **Dr. Anubha Parashar**  
