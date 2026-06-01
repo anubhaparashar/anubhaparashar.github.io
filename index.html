@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/site-header-footer.css">
   <style>
@@ -176,6 +179,142 @@
       height: 100%;
     }
     .about-photo-wrap img { width:100%; height:100%; min-height:520px; object-fit:cover; object-position:center top; display:block; }
+    .founder-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      padding: 22px;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(180deg,#111827 0%,#0b1120 100%);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 28px 70px rgba(15,23,42,.28);
+      color: #f8fafc;
+    }
+    .founder-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(148,163,184,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148,163,184,.08) 1px, transparent 1px);
+      background-size: 56px 56px;
+      opacity: .30;
+      -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, #000 50%, transparent 100%);
+      mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, #000 50%, transparent 100%);
+      pointer-events: none;
+    }
+    .founder-card-inner { position: relative; z-index: 1; }
+    .founder-portrait {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      background: linear-gradient(135deg,rgba(79,209,255,.18),rgba(124,58,237,.18));
+      border: 1px solid rgba(255,255,255,.12);
+      aspect-ratio: 1 / 1;
+    }
+    .founder-portrait img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .founder-portrait::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 96px;
+      background: linear-gradient(0deg,rgba(15,23,42,.84),rgba(15,23,42,.38),transparent);
+      pointer-events: none;
+    }
+    .founder-badge {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(103,232,249,.42);
+      background: rgba(15,23,42,.72);
+      color: #67e8f9;
+      padding: 6px 10px;
+      font-size: .62rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+    }
+    .founder-name {
+      margin-top: 20px;
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: 1.45rem;
+      line-height: 1.2;
+      font-weight: 600;
+      color: #f8fafc;
+    }
+    .founder-role {
+      margin-top: 5px;
+      color: #67e8f9;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .founder-summary {
+      margin: 14px 0 0;
+      color: rgba(226,232,240,.76);
+      font-size: .83rem;
+      line-height: 1.75;
+    }
+    .founder-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+    .founder-link {
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:.72rem;
+      font-weight:800;
+      text-decoration:none !important;
+      transition:all .2s;
+    }
+    .founder-link.primary {
+      color:#a5f3fc !important;
+      background:rgba(103,232,249,.08);
+      border:1px solid rgba(103,232,249,.30);
+    }
+    .founder-link.secondary {
+      color:#f8fafc !important;
+      background:rgba(255,255,255,.035);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .founder-link:hover { transform:translateY(-1px); }
+    .founder-credential {
+      margin-top: 18px;
+      border-radius: 16px;
+      padding: 14px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.10);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .founder-credential-icon {
+      width: 32px;
+      height: 32px;
+      flex: 0 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      color: #c4b5fd;
+      background: rgba(167,139,250,.15);
+      border: 1px solid rgba(196,181,253,.30);
+    }
+    .founder-credential-title { color:#f8fafc; font-family:'Space Grotesk',system-ui,sans-serif; font-size:.82rem; font-weight:600; line-height:1.35; }
+    .founder-credential-text { margin-top:4px; color:rgba(226,232,240,.68); font-size:.74rem; line-height:1.65; }
     .about-btn {
       display:inline-flex; align-items:center; gap:8px;
       padding:12px 26px; border-radius:30px; font-size:.84rem; font-weight:700;
@@ -461,8 +600,38 @@
     <!-- Top row: photo + heading/quote/first para -->
     <div class="row align-items-start">
       <div class="col-lg-6 mb-5 mb-lg-0">
-        <div class="about-photo-wrap">
-          <img src="files/1. Home/Picture1.png" alt="Dr. Anubha Parashar" loading="lazy" decoding="async">
+        <div class="founder-card">
+          <div class="founder-card-inner">
+            <div class="founder-portrait">
+              <img src="files/1. Home/Picture1.png" alt="Dr. Anubha Parashar" loading="lazy" decoding="async">
+              <div class="founder-badge"><i class="fa fa-magic"></i> Founder, GaitAI</div>
+            </div>
+
+            <div class="founder-name">Dr. Anubha Parashar</div>
+            <div class="founder-role">AI Research Scientist &middot; Founder, GaitAI</div>
+            <p class="founder-summary">
+              AI Research Scientist, Analytics &amp; AI Engineer, educator and technology innovator with 10+ years of experience across AI, deep learning, computer vision, biometrics, generative AI, NLP and intelligent systems.
+            </p>
+
+            <div class="founder-links">
+              <a class="founder-link primary" href="https://gaitai-analysis.github.io/GaitAI/" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-globe"></i> GaitAI <i class="fa fa-external-link"></i>
+              </a>
+              <a class="founder-link secondary" href="#contact">
+                <i class="fa fa-envelope"></i> Reach out
+              </a>
+            </div>
+
+            <div class="founder-credential">
+              <div class="founder-credential-icon"><i class="fa fa-graduation-cap"></i></div>
+              <div>
+                <div class="founder-credential-title">Ph.D. in Computer Science &amp; Engineering</div>
+                <div class="founder-credential-text">
+                  Specialization in Artificial Intelligence &middot; Manipal University Jaipur. Doctoral research on gait recognition under occlusions, clothing variation and viewpoint changes.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-lg-5 offset-lg-1">
@@ -472,15 +641,16 @@
           "Always walk through life as if you've something new to learn and you will."
         </blockquote>
         <p class="about-bio-p">Dr. Anubha Parashar is an accomplished <strong>Analytics &amp; AI Engineer</strong>, AI researcher, and educator with <strong>over a decade of experience</strong> in deep learning, computer vision, generative AI, biometrics, NLP, and intelligent systems. She currently works at <strong>Pearce Services, Gurugram</strong>, where she develops production-grade AI solutions for real-world applications, including solar panel defect detection, edge AI systems, forecasting models, scheduling optimization, OCR pipelines, and GIS-based analytics.</p>
-      </div>
-    </div>
-
-    <!-- Full-width remaining paragraphs -->
-    <div class="row mt-4">
-      <div class="col-12">
         <div class="about-bio-full">
           <p>Prior to her current role, she served as a <strong>Research Scientist – Artificial Intelligence &amp; Metaverse</strong> at <strong>Invincible Ocean, Gurugram</strong> (Apr 2024 – Dec 2024), where she delivered a suite of production AI systems: a <strong>Vehicle RC Data Chatbot</strong> powered by a fine-tuned LLM that reduced manual search time by 70%, a <strong>Virtual Try-On (VITON) platform</strong> using deep learning to overlay clothing on user photos at 95% satisfaction, and a <strong>Text Recognition &amp; OCR pipeline</strong> built with Tesseract, PaddleOCR, and Paddle NLP achieving 98% accuracy with a Dockerized, Gemini-assisted backend.</p>
 
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="about-bio-full">
           <p>Before her industry journey, she spent nearly eight years as a <strong>Senior Assistant Professor in Computer Science &amp; Engineering</strong> at <strong>Manipal University Jaipur</strong> (Jul 2016 – Apr 2024), teaching and designing curriculum across AI, Deep Learning, Computer Vision, NLP, IoT, Image Processing, and Humanoid Robotics. She supervised <strong>15+ M.Tech theses</strong>, collaborated with industry partners, and was recognised with the <strong>Excellent Young Researcher Award 2022</strong> by Manipal University Jaipur.</p>
 
           <p>She holds a <strong>Ph.D. in Computer Science and Engineering</strong> with a specialization in Artificial Intelligence from <strong>Manipal University Jaipur</strong>. Her doctoral research focused on <strong>robust gait recognition using deep learning</strong> to handle real-world covariates such as clothing variation, occlusion, viewpoint changes, and appearance differences. She has also served as a <strong>Visiting Scholar at the University of Zagreb, Croatia</strong>, and has extensive academic experience as a faculty member and research mentor.</p>
