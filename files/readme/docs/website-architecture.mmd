@@ -1,0 +1,21 @@
+flowchart TD
+    U["Visitor / Recruiter / Professor / Collaborator"] --> B["Web Browser"]
+
+    B --> GP["GitHub Pages<br/>Static Hosting"]
+    GP --> H["Root HTML Pages<br/>index.html, education.html, experience.html,<br/>publication.html, project.html, award.html,<br/>blog.html, contact sections"]
+
+    H --> CSS["CSS Layer<br/>css/bootstrap.css, css/style.css,<br/>css/site-header-footer.css"]
+    H --> JS["JavaScript Layer<br/>js/theme.js, site-components.js,<br/>site-header-footer.js, contact.js,<br/>blog-post-actions.js"]
+    H --> AS["Static Assets<br/>assets/, files/, fonts/, data/"]
+
+    CSS --> UI["Responsive Portfolio UI<br/>Bootstrap grid, typography, cards,<br/>hero sections, navigation, footer"]
+    JS --> UX["Interactive Experience<br/>carousels, filtering, popups,<br/>lightbox galleries, validation,<br/>shared header/footer injection"]
+    AS --> CONTENT["Profile Content<br/>CV/resume files, research images,<br/>project media, certificates, publications"]
+
+    JS --> LIB["Vendor Libraries<br/>jQuery, Bootstrap, Owl Carousel,<br/>Magnific Popup, SimpleLightbox,<br/>Nice Select, Isotope, Linericon,<br/>Font Awesome"]
+    LIB --> UX
+
+    H --> CONTACT["Contact Form"]
+    CONTACT --> FORM["Formspree / Contact Processing<br/>form submission layer"]
+
+    B --> OUT["External Links<br/>LinkedIn, GaitAI, CV, research pages"]

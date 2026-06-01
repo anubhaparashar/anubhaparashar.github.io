@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 400 17px Arial, sans-serif; fill: #4b5563; }
+      .box { fill: #ffffff; stroke: #1f2937; stroke-width: 2.2; rx: 18; }
+      .box2 { fill: #f8fafc; stroke: #334155; stroke-width: 2; rx: 16; }
+      .accent { fill: #eef2ff; stroke: #3730a3; stroke-width: 2.2; rx: 18; }
+      .green { fill: #ecfdf5; stroke: #047857; stroke-width: 2.2; rx: 18; }
+      .orange { fill: #fff7ed; stroke: #c2410c; stroke-width: 2.2; rx: 18; }
+      .pink { fill: #fdf2f8; stroke: #be185d; stroke-width: 2.2; rx: 18; }
+      .blue { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2.2; rx: 18; }
+      .text { font: 700 18px Arial, sans-serif; fill: #111827; }
+      .small { font: 400 14px Arial, sans-serif; fill: #374151; }
+      .tiny { font: 400 12.5px Arial, sans-serif; fill: #4b5563; }
+      .arrow { stroke: #374151; stroke-width: 2.4; fill: none; marker-end: url(#arrowhead); }
+      .dash { stroke: #64748b; stroke-width: 2; stroke-dasharray: 7 6; fill: none; marker-end: url(#arrowhead); }
+      .label { font: 600 13px Arial, sans-serif; fill: #475569; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1500" height="1050" fill="#ffffff"/>
+  <text x="750" y="58" text-anchor="middle" class="title">Dr. Anubha Parashar Portfolio Website Architecture</text>
+  <text x="750" y="88" text-anchor="middle" class="subtitle">Static GitHub Pages portfolio using HTML, CSS, JavaScript, Bootstrap, jQuery and UI vendor libraries</text>
+
+  <rect x="65" y="145" width="250" height="105" class="accent"/>
+  <text x="190" y="180" text-anchor="middle" class="text">Visitor</text>
+  <text x="190" y="207" text-anchor="middle" class="small">Recruiter · Professor</text>
+  <text x="190" y="230" text-anchor="middle" class="small">Collaborator · Client</text>
+
+  <rect x="410" y="145" width="250" height="105" class="blue"/>
+  <text x="535" y="180" text-anchor="middle" class="text">Web Browser</text>
+  <text x="535" y="207" text-anchor="middle" class="small">Loads static pages</text>
+  <text x="535" y="230" text-anchor="middle" class="small">Runs CSS and JS</text>
+
+  <rect x="755" y="145" width="250" height="105" class="green"/>
+  <text x="880" y="180" text-anchor="middle" class="text">GitHub Pages</text>
+  <text x="880" y="207" text-anchor="middle" class="small">Static hosting</text>
+  <text x="880" y="230" text-anchor="middle" class="small">anubhaparashar.github.io</text>
+
+  <rect x="1095" y="145" width="305" height="105" class="orange"/>
+  <text x="1247.5" y="180" text-anchor="middle" class="text">Repository Source</text>
+  <text x="1247.5" y="207" text-anchor="middle" class="small">anubhaparashar.github.io</text>
+  <text x="1247.5" y="230" text-anchor="middle" class="small">main branch</text>
+
+  <path class="arrow" d="M315 197 L410 197"/>
+  <path class="arrow" d="M660 197 L755 197"/>
+  <path class="dash" d="M1095 197 L1005 197"/>
+
+  <rect x="85" y="335" width="300" height="165" class="box"/>
+  <text x="235" y="370" text-anchor="middle" class="text">Root HTML Pages</text>
+  <text x="235" y="400" text-anchor="middle" class="small">index.html · education.html</text>
+  <text x="235" y="423" text-anchor="middle" class="small">experience.html · publication.html</text>
+  <text x="235" y="446" text-anchor="middle" class="small">project.html · award.html</text>
+  <text x="235" y="469" text-anchor="middle" class="small">blog.html · contact sections</text>
+
+  <rect x="455" y="335" width="285" height="165" class="box"/>
+  <text x="597.5" y="370" text-anchor="middle" class="text">Styling Layer</text>
+  <text x="597.5" y="400" text-anchor="middle" class="small">css/bootstrap.css</text>
+  <text x="597.5" y="423" text-anchor="middle" class="small">css/style.css</text>
+  <text x="597.5" y="446" text-anchor="middle" class="small">site-header-footer.css</text>
+  <text x="597.5" y="469" text-anchor="middle" class="small">scss source styles</text>
+
+  <rect x="810" y="335" width="305" height="165" class="box"/>
+  <text x="962.5" y="370" text-anchor="middle" class="text">JavaScript Layer</text>
+  <text x="962.5" y="400" text-anchor="middle" class="small">theme.js · contact.js</text>
+  <text x="962.5" y="423" text-anchor="middle" class="small">site-components.js</text>
+  <text x="962.5" y="446" text-anchor="middle" class="small">site-header-footer.js</text>
+  <text x="962.5" y="469" text-anchor="middle" class="small">blog-post-actions.js</text>
+
+  <rect x="1185" y="335" width="245" height="165" class="box"/>
+  <text x="1307.5" y="370" text-anchor="middle" class="text">Content Assets</text>
+  <text x="1307.5" y="400" text-anchor="middle" class="small">assets/ · files/</text>
+  <text x="1307.5" y="423" text-anchor="middle" class="small">fonts/ · data/</text>
+  <text x="1307.5" y="446" text-anchor="middle" class="small">images, CVs, docs</text>
+  <text x="1307.5" y="469" text-anchor="middle" class="small">research media</text>
+
+  <path class="arrow" d="M880 250 C880 295, 235 295, 235 335"/>
+  <path class="arrow" d="M880 250 C880 305, 597 305, 597 335"/>
+  <path class="arrow" d="M880 250 C880 305, 962 305, 962 335"/>
+  <path class="arrow" d="M880 250 C880 295, 1307 295, 1307 335"/>
+
+  <rect x="95" y="595" width="310" height="170" class="blue"/>
+  <text x="250" y="632" text-anchor="middle" class="text">Portfolio UI</text>
+  <text x="250" y="662" text-anchor="middle" class="small">responsive sections</text>
+  <text x="250" y="685" text-anchor="middle" class="small">hero · about · skills</text>
+  <text x="250" y="708" text-anchor="middle" class="small">research · projects · awards</text>
+  <text x="250" y="731" text-anchor="middle" class="small">blog · leadership · contact</text>
+
+  <rect x="465" y="595" width="310" height="170" class="pink"/>
+  <text x="620" y="632" text-anchor="middle" class="text">Interactive UX</text>
+  <text x="620" y="662" text-anchor="middle" class="small">carousel sliders</text>
+  <text x="620" y="685" text-anchor="middle" class="small">image lightbox / popup</text>
+  <text x="620" y="708" text-anchor="middle" class="small">filtering and animations</text>
+  <text x="620" y="731" text-anchor="middle" class="small">form validation</text>
+
+  <rect x="835" y="595" width="310" height="170" class="green"/>
+  <text x="990" y="632" text-anchor="middle" class="text">Vendor Libraries</text>
+  <text x="990" y="662" text-anchor="middle" class="small">jQuery · Bootstrap</text>
+  <text x="990" y="685" text-anchor="middle" class="small">Owl Carousel · Isotope</text>
+  <text x="990" y="708" text-anchor="middle" class="small">Magnific Popup · Lightbox</text>
+  <text x="990" y="731" text-anchor="middle" class="small">Nice Select · Font Awesome</text>
+
+  <rect x="1205" y="595" width="210" height="170" class="orange"/>
+  <text x="1310" y="632" text-anchor="middle" class="text">Contact Layer</text>
+  <text x="1310" y="662" text-anchor="middle" class="small">contact form</text>
+  <text x="1310" y="685" text-anchor="middle" class="small">Formspree /</text>
+  <text x="1310" y="708" text-anchor="middle" class="small">contact processing</text>
+  <text x="1310" y="731" text-anchor="middle" class="small">email workflow</text>
+
+  <path class="arrow" d="M235 500 C235 545, 250 545, 250 595"/>
+  <path class="arrow" d="M597 500 C597 545, 620 545, 620 595"/>
+  <path class="arrow" d="M962 500 C962 545, 990 545, 990 595"/>
+  <path class="arrow" d="M1307 500 C1307 545, 1310 545, 1310 595"/>
+  <path class="arrow" d="M990 595 C990 550, 620 550, 620 595"/>
+
+  <rect x="130" y="855" width="1240" height="120" class="box2"/>
+  <text x="750" y="890" text-anchor="middle" class="text">Deployment and Maintenance Flow</text>
+  <text x="750" y="922" text-anchor="middle" class="small">Edit HTML/CSS/JS/assets locally → commit changes → push to GitHub main branch → GitHub Pages publishes the static website</text>
+  <text x="750" y="950" text-anchor="middle" class="tiny">No backend server is required for page rendering. Dynamic behavior is handled in the browser using JavaScript and third-party/static integrations.</text>
+
+  <path class="dash" d="M1247 250 C1247 805, 750 805, 750 855"/>
+
+</svg>
