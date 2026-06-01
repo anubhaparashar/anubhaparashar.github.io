@@ -1,167 +1,242 @@
-# Dr. Anubha Parashar Portfolio Website
+# Dr. Anubha Parashar — Personal Portfolio Website
 
-[![Website](https://img.shields.io/badge/Live%20Website-anubhaparashar.github.io-blue?style=for-the-badge)](https://anubhaparashar.github.io/)
-[![Hosted on GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-black?style=for-the-badge&logo=github)](https://github.com/anubhaparashar/anubhaparashar.github.io)
-[![Portfolio](https://img.shields.io/badge/Type-AI%20Research%20Portfolio-purple?style=for-the-badge)](https://anubhaparashar.github.io/)
+[![Live Website](https://img.shields.io/badge/Live%20Website-anubhaparashar.github.io-blue?style=for-the-badge)](https://anubhaparashar.github.io/)
+[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-black?style=for-the-badge&logo=github)](https://github.com/anubhaparashar/anubhaparashar.github.io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-AI%20%7C%20Research%20%7C%20Projects-purple?style=for-the-badge)](https://anubhaparashar.github.io/)
 
 ## Overview
 
-This repository contains the source code for the personal academic, research, and professional portfolio website of **Dr. Anubha Parashar**. The website presents her profile as an **Analytics & AI Engineer, AI Research Scientist, Computer Vision Expert, Deep Learning Researcher, Educator, and Founder of GaitAI**.
+This repository contains the source code for the personal academic, research, and professional portfolio website of **Dr. Anubha Parashar**.
 
-The website is designed as a static, responsive portfolio hosted on **GitHub Pages**. It showcases professional experience, education, research areas, publications, patents, projects, awards, leadership activities, blog posts, and contact information.
+The website is designed as a static, responsive portfolio hosted using **GitHub Pages**. It presents education, professional experience, research publications, projects, awards, leadership activities, blogs, and contact information.
 
-## Live Website
+The portfolio highlights work in **Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Gait Recognition, Biometrics, Generative AI, Agentic AI, MLOps, DevSecOps, and Data Science**.
 
-**Website:** [https://anubhaparashar.github.io/](https://anubhaparashar.github.io/)  
-**Repository:** [https://github.com/anubhaparashar/anubhaparashar.github.io](https://github.com/anubhaparashar/anubhaparashar.github.io)
+---
 
-## Key Features
+## Live Links
 
-- Professional landing page with research and industry profile
-- Responsive portfolio layout for desktop, tablet, and mobile
-- Dedicated pages for education, experience, publications, projects, awards, conferences, leadership, sports, and blog content
-- Research-focused sections covering AI, computer vision, deep learning, gait recognition, biometrics, NLP, IoT, robotics, and data science
-- Project and publication showcase
-- Downloadable CV and resume links
-- Interactive UI components such as sliders, popups, filters, lightbox galleries, and smooth navigation
-- Contact form integration using Formspree/contact processing
-- Static hosting through GitHub Pages
-
-## Technology Stack
-
-| Layer | Technologies |
+| Resource | Link |
 |---|---|
-| Structure | HTML |
-| Styling | CSS, SCSS, Bootstrap |
-| Interactivity | JavaScript, jQuery |
-| Icons | Font Awesome, Linericon |
-| UI Components | Owl Carousel, Magnific Popup, Nice Select, SimpleLightbox, Isotope |
-| Contact | Formspree / Contact form processing |
-| Hosting | GitHub Pages |
-| Assets | Images, fonts, documents, CV, resume, research media |
+| Live Website | <https://anubhaparashar.github.io/> |
+| GitHub Repository | <https://github.com/anubhaparashar/anubhaparashar.github.io> |
 
-## Website Architecture
+---
 
-The website follows a **static front-end architecture**. GitHub Pages serves the HTML, CSS, JavaScript, images, documents, and vendor libraries directly to the browser. All page rendering happens client-side. Interactive behavior is handled using JavaScript and jQuery-based plugins.
+## Technologies Used Here
 
-```mermaid
-flowchart TD
-    U["Visitor / Recruiter / Professor / Collaborator"] --> B["Web Browser"]
+This website is built using the following front-end technologies, libraries, plugins, and hosting services:
 
-    B --> GP["GitHub Pages<br/>Static Hosting"]
-    GP --> H["Root HTML Pages<br/>index.html, education.html, experience.html,<br/>publication.html, project.html, award.html,<br/>blog.html, contact sections"]
+| Technology | Purpose in Website |
+|---|---|
+| **HTML** | Defines the structure of all portfolio pages such as home, education, experience, publications, projects, awards, blog, and contact sections |
+| **CSS** | Provides custom styling, layout refinement, spacing, typography, and visual presentation |
+| **JavaScript** | Adds interactive behavior, dynamic components, form behavior, filtering, animation support, and client-side logic |
+| **Bootstrap** | Provides responsive grid system, layout utilities, buttons, navigation, and mobile-friendly page design |
+| **jQuery** | Supports DOM manipulation and works with several UI plugins used in the website |
+| **Font Awesome** | Provides scalable icons used across the website UI |
+| **Linericon** | Provides additional icon support for sections, cards, and interface elements |
+| **Owl Carousel** | Enables carousel and slider-based content presentation |
+| **Magnific Popup** | Provides popup and modal-style image/content display |
+| **Nice Select** | Enhances select/dropdown styling and user interface consistency |
+| **SimpleLightbox** | Enables image lightbox/gallery viewing |
+| **Isotope** | Supports filtering and grid layout behavior for portfolio/project-style sections |
+| **Formspree** | Handles contact form submissions without requiring a custom backend server |
+| **GitHub Pages** | Hosts and publishes the static website online |
 
-    H --> CSS["CSS Layer<br/>css/bootstrap.css, css/style.css,<br/>css/site-header-footer.css"]
-    H --> JS["JavaScript Layer<br/>js/theme.js, site-components.js,<br/>site-header-footer.js, contact.js,<br/>blog-post-actions.js"]
-    H --> AS["Static Assets<br/>assets/, files/, fonts/, data/"]
+---
 
-    CSS --> UI["Responsive Portfolio UI<br/>Bootstrap grid, typography, cards,<br/>hero sections, navigation, footer"]
-    JS --> UX["Interactive Experience<br/>carousels, filtering, popups,<br/>lightbox galleries, validation,<br/>shared header/footer injection"]
-    AS --> CONTENT["Profile Content<br/>CV/resume files, research images,<br/>project media, certificates, publications"]
+## Detected Repository Language Stack
 
-    JS --> LIB["Vendor Libraries<br/>jQuery, Bootstrap, Owl Carousel,<br/>Magnific Popup, SimpleLightbox,<br/>Nice Select, Isotope, Linericon,<br/>Font Awesome"]
-    LIB --> UX
+GitHub detects the repository mainly as a static front-end website, with the largest portions written in:
 
-    H --> CONTACT["Contact Form"]
-    CONTACT --> FORM["Formspree / Contact Processing<br/>form submission layer"]
+| Language | Usage |
+|---|---|
+| **HTML** | Main page structure |
+| **JavaScript** | Interactivity and UI behavior |
+| **CSS** | Styling |
+| **SCSS** | Source styling files |
+| **Python** | Utility/helper scripts |
+| **PowerShell** | Asset or file management scripts |
+| **PHP** | Contact processing file |
 
-    B --> OUT["External Links<br/>LinkedIn, GaitAI, CV, research pages"]
+---
 
-```
+## Key Website Features
 
-A separate SVG version of this architecture is available here:
+- Responsive personal portfolio website
+- Professional academic and industry profile
+- Research publication showcase
+- AI/ML and computer vision project portfolio
+- Awards and achievements section
+- Education and experience timeline
+- Leadership, activities, sports, and avocations sections
+- Blog and connection pages
+- Downloadable CV/resume and related files
+- Image galleries and interactive UI elements
+- Contact form integration
+- Static deployment using GitHub Pages
 
-```text
-docs/website-architecture.svg
-```
+---
 
-## High-Level Architecture Diagram
+## Website Pages
 
-![Website Architecture](docs/website-architecture.svg)
+| Page | Description |
+|---|---|
+| `index.html` | Main homepage and professional introduction |
+| `education.html` | Education profile and academic background |
+| `experience.html` | Professional, academic, and industry experience |
+| `publication.html` | Research publications and journal papers |
+| `project.html` | Projects in AI, computer vision, analytics, and engineering |
+| `award.html` | Awards, honors, and recognitions |
+| `conferences.html` | Conferences and academic participation |
+| `grant.html` | Grant and funded-work related page |
+| `industry.html` | Industry-oriented work and applied AI projects |
+| `academics.html` | Academic profile and teaching/research content |
+| `leadership-activities.html` | Leadership positions and activities |
+| `avocations.html` | Personal interests and hobbies |
+| `blog.html` | Blog listing and article-style content |
+| `connection.html` | Professional connections and network-oriented content |
+| `sports.html` | Sports and extracurricular activities |
 
-## Repository Structure
+---
+
+## Folder Structure
 
 ```text
 anubhaparashar.github.io/
-├── index.html                         # Main landing page
-├── education.html                     # Education profile
-├── experience.html                    # Professional experience
-├── publication.html                   # Publications and journals
-├── project.html                       # Project portfolio
-├── award.html                         # Awards and recognitions
-├── conferences.html                   # Conferences and academic activities
-├── grant.html                         # Grants and funded work
-├── industry.html                      # Industry projects and contributions
-├── leadership-activities.html         # Leadership, activities, and responsibilities
-├── academics.html                     # Academic profile
-├── avocations.html                    # Hobbies and personal interests
-├── blog.html                          # Blog listing page
-├── connection.html                    # Connections and networking page
-├── sports.html                        # Sports and extracurricular activities
-├── contact_process.php                # Contact processing file, if server-side processing is enabled
+├── index.html
+├── education.html
+├── experience.html
+├── publication.html
+├── project.html
+├── award.html
+├── conferences.html
+├── grant.html
+├── industry.html
+├── academics.html
+├── leadership-activities.html
+├── avocations.html
+├── blog.html
+├── connection.html
+├── sports.html
+├── contact_process.php
 │
-├── assets/                            # Website images and visual assets
-├── css/                               # Main stylesheets and Bootstrap CSS
-├── scss/                              # SCSS source files
-├── js/                                # JavaScript files and site behavior
-├── vendors/                           # Third-party UI plugins and libraries
-├── fonts/                             # Font assets and icon fonts
-├── files/                             # CV, resume, documents, and downloadable files
-├── data/                              # Static data files
-├── forms/                             # Contact or form-related assets
-├── docs/                              # Documentation and architecture diagrams
-├── .nojekyll                          # Disables Jekyll processing for GitHub Pages
-└── README.md                          # Project documentation
+├── assets/              # Images and visual assets
+├── css/                 # CSS files including Bootstrap and custom styles
+├── scss/                # SCSS source files
+├── js/                  # JavaScript files and website behavior
+├── vendors/             # Third-party libraries and plugins
+├── fonts/               # Font and icon font assets
+├── files/               # CV, resume, documents, and downloadable files
+├── data/                # Static data files
+├── forms/               # Contact/form-related files
+├── docs/                # Documentation and architecture diagrams
+├── .nojekyll            # Prevents GitHub Pages from applying Jekyll processing
+└── README.md
 ```
 
-## Main Pages
+---
 
-| Page | Purpose |
-|---|---|
-| `index.html` | Main homepage and personal brand introduction |
-| `education.html` | Academic background and qualifications |
-| `experience.html` | Teaching, research, and industry experience |
-| `publication.html` | Journal and research publication record |
-| `project.html` | AI, computer vision, analytics, and engineering projects |
-| `award.html` | Awards, recognitions, and achievements |
-| `conferences.html` | Conference participation and academic engagement |
-| `leadership-activities.html` | Leadership roles and responsibilities |
-| `blog.html` | Blog and article listing |
-| `connection.html` | Networking and professional connection section |
-| `avocations.html` | Personal interests and activities |
-| `sports.html` | Sports-related achievements and activities |
+## Website Architecture
 
-## Front-End Modules
+The website uses a **static front-end architecture**. GitHub Pages serves the HTML, CSS, JavaScript, images, fonts, and documents directly to the browser. No custom backend server is required for rendering the website.
 
-### HTML Pages
+```mermaid
+flowchart TD
+    A["Visitor / Recruiter / Professor / Collaborator"] --> B["Browser"]
+    B --> C["GitHub Pages Hosting"]
+    C --> D["Static Website Pages"]
 
-The website uses multiple standalone HTML pages. Each page represents a major section of the portfolio and links to shared CSS, JavaScript, fonts, images, and vendor libraries.
+    D --> E["HTML Pages<br/>index.html, education.html, experience.html,<br/>publication.html, project.html, award.html, blog.html"]
+    D --> F["CSS / SCSS Styling<br/>Bootstrap, custom CSS, responsive layout"]
+    D --> G["JavaScript Interaction<br/>jQuery, theme scripts, shared components"]
+    D --> H["Assets and Content<br/>Images, CV, resume, certificates, publications, project media"]
 
-### CSS and SCSS
+    G --> I["UI Libraries"]
+    I --> I1["Owl Carousel"]
+    I --> I2["Magnific Popup"]
+    I --> I3["Nice Select"]
+    I --> I4["SimpleLightbox"]
+    I --> I5["Isotope"]
 
-The styling layer includes Bootstrap for responsive layout, custom CSS for visual design, and SCSS files for maintainable style development.
+    F --> J["Icons and Fonts"]
+    J --> J1["Font Awesome"]
+    J --> J2["Linericon"]
+    J --> J3["Custom fonts"]
 
-### JavaScript
+    E --> K["Portfolio Sections"]
+    K --> K1["Home / About"]
+    K --> K2["Education"]
+    K --> K3["Experience"]
+    K --> K4["Publications"]
+    K --> K5["Projects"]
+    K --> K6["Awards"]
+    K --> K7["Blog / Activities"]
 
-The JavaScript layer handles navigation behavior, page interactions, UI effects, contact form behavior, reusable site components, and blog-related actions.
+    E --> L["Contact Form"]
+    L --> M["Formspree / Contact Processing"]
 
-### Vendor Libraries
+    H --> N["Downloadable and Visual Material"]
+    N --> N1["CV / Resume"]
+    N --> N2["Research Images"]
+    N --> N3["Certificates"]
+    N --> N4["Project Assets"]
+```
 
-The website uses third-party front-end libraries to improve visual presentation and interactivity:
+A separate architecture diagram is also included:
 
-- **Bootstrap** for responsive layout and UI structure
-- **jQuery** for DOM manipulation and plugin support
-- **Font Awesome** and **Linericon** for icons
-- **Owl Carousel** for sliders and carousels
-- **Magnific Popup** and **SimpleLightbox** for image/gallery popups
-- **Nice Select** for styled select controls
-- **Isotope** for filtering and grid layouts
+```text
+docs/website-architecture.svg
+docs/website-architecture.mmd
+```
+
+---
+
+## Architecture Diagram
+
+![Website Architecture](docs/website-architecture.svg)
+
+---
+
+## How the Website Works
+
+1. The user opens the website URL in a browser.
+2. GitHub Pages serves the static HTML page.
+3. The HTML page loads CSS, JavaScript, fonts, images, and vendor plugins.
+4. Bootstrap and custom CSS control layout and responsiveness.
+5. JavaScript and jQuery provide interactions such as sliders, filtering, galleries, popups, and form behavior.
+6. Formspree/contact processing handles contact form submission.
+7. Updates are made by editing files, committing changes, and pushing them to the GitHub repository.
+
+---
+
+## Local Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/anubhaparashar/anubhaparashar.github.io.git
+cd anubhaparashar.github.io
+```
+
+Run a simple local server:
+
+```bash
+python -m http.server 8000
+```
+
+Open in browser:
+
+```text
+http://localhost:8000
+```
+
+---
 
 ## Deployment
 
-The website is deployed using **GitHub Pages** from the repository's main branch.
-
-### Typical Deployment Flow
+The website is hosted using GitHub Pages. A typical deployment flow is:
 
 ```bash
 git add .
@@ -169,27 +244,15 @@ git commit -m "Update portfolio website"
 git push origin main
 ```
 
-After pushing to the configured GitHub Pages branch, GitHub Pages publishes the static site automatically.
+After pushing to the configured GitHub Pages branch, GitHub Pages publishes the latest version automatically.
 
-## Local Development
+---
 
-Because this is a static website, it can be opened directly in a browser. For a cleaner local preview, run a simple local server from the repository root:
+## Maintenance Notes
 
-```bash
-python -m http.server 8000
-```
+### To update content
 
-Then open:
-
-```text
-http://localhost:8000
-```
-
-## Customization Guide
-
-### Update Personal Information
-
-Edit the relevant HTML page, usually:
+Edit the relevant HTML file:
 
 ```text
 index.html
@@ -197,11 +260,13 @@ education.html
 experience.html
 publication.html
 project.html
+award.html
+blog.html
 ```
 
-### Update Styling
+### To update styling
 
-Modify:
+Edit:
 
 ```text
 css/style.css
@@ -209,9 +274,9 @@ css/site-header-footer.css
 scss/
 ```
 
-### Update Scripts
+### To update interactivity
 
-Modify:
+Edit:
 
 ```text
 js/theme.js
@@ -221,9 +286,9 @@ js/contact.js
 js/blog-post-actions.js
 ```
 
-### Update Images and Documents
+### To update images, CV, resume, or documents
 
-Add or replace files inside:
+Add or replace files in:
 
 ```text
 assets/
@@ -231,11 +296,28 @@ files/
 data/
 ```
 
+---
+
+
 ## Author
 
 **Dr. Anubha Parashar**  
-Analytics & AI Engineer · AI Research Scientist · Computer Vision Expert · Deep Learning Researcher · Educator · Founder, GaitAI
+AI Researcher · Analytics & AI Engineer · Computer Vision Specialist · Deep Learning Researcher · Educator · Founder, GaitAI
 
-## License
+Website:
 
-This repository is maintained as a personal portfolio website. Reuse of design, text, images, CV, documents, or personal academic content should be done only with permission from the author.
+```text
+https://anubhaparashar.github.io/
+```
+
+GitHub:
+
+```text
+https://github.com/anubhaparashar
+```
+
+---
+
+## License and Usage
+
+This repository contains personal portfolio content, research profile information, documents, images, and website assets. Reuse of text, images, CV, documents, or personal academic/professional material should be done only with permission from the author.
