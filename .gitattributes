@@ -19,4 +19,6 @@
 "files/8. Blog/4. Avocations/**/*.M4V" -filter -diff -merge -text
 "files/8. Blog/4. Avocations/**/*.webm" -filter -diff -merge -text
 "files/8. Blog/4. Avocations/**/*.WEBM" -filter -diff -merge -text
+"files/8. Blog/2. Connection/**/*.mp4" -filter -diff -merge -text
+"files/8. Blog/2. Connection/**/*.MP4" -filter -diff -merge -text
 *.pdf -diff -merge -text
