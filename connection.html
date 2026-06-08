@@ -172,6 +172,14 @@
     .conf-meta i { color:#7eb8e0; }
     .conf-card-body { padding:18px 26px 26px; }
     .conf-desc { font-size:.84rem; color:#555; line-height:1.6; margin:0 0 16px; padding:0; }
+    .connection-video-label {
+      display:flex; align-items:center; gap:8px; margin:18px 0 12px;
+      color:#0f3460; font-size:.72rem; font-weight:900; letter-spacing:1.5px; text-transform:uppercase;
+    }
+    .connection-video-label::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,#c8d4f7,transparent); }
+    .connection-video-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .connection-video-grid video { width:100%; border-radius:10px; background:#000; box-shadow:0 2px 12px rgba(15,52,96,.12); }
+    @media(max-width:767px){.connection-video-grid{grid-template-columns:1fr}}
     .connection-section-title {
       margin:34px 0 18px; padding:18px 22px; border-radius:14px;
       background:linear-gradient(135deg,#0f3460,#7eb8e0); color:#fff;
@@ -305,7 +313,7 @@
       Conference Outings <span class="connection-tab-count">2</span>
     </button>
     <button class="connection-tab-btn" type="button" data-target="memories">
-      Memories <span class="connection-tab-count">1</span>
+      Memories <span class="connection-tab-count">3</span>
     </button>
     <button class="connection-tab-btn" type="button" data-target="family">
       Family <span class="connection-tab-count">1</span>
@@ -449,6 +457,86 @@
             </div>
           </div>
 
+          <!-- PhD Defence -->
+          <div class="conf-card" id="phd-defence">
+            <div class="conf-card-header">
+              <h3><span class="conf-num">04</span>PhD Defence</h3>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>12 April 2023</span>
+                <span><i class="fa fa-folder-open"></i>2. Memories / phd defence</span>
+                <span><i class="fa fa-image"></i>10 Photos</span>
+                <span><i class="fa fa-film"></i>2 Videos</span>
+              </div>
+            </div>
+            <div class="conf-card-body">
+              <p class="conf-desc">A doctoral milestone from the PhD defence, preserving the presentation day, academic discussions, and the people who made the journey meaningful.</p>
+              <div class="gal-grid" id="gal-phd-defence">
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_130141.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_130141.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140056.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140056.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140109.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140109.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140117.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140117.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140120.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140120.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140658.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140658.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140846.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140846.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140857.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140857.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_141826.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_141826.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_150938.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_150938.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              </div>
+              <div class="connection-video-label"><i class="fa fa-film"></i> Defence Videos</div>
+              <div class="connection-video-grid">
+                <video controls preload="metadata"><source src="files/8. Blog/2. Connection/2. Memories/phd defence/video_20230412_131215.mp4" type="video/mp4"><a href="files/8. Blog/2. Connection/2. Memories/phd defence/video_20230412_131215.mp4">Open defence video 1</a></video>
+                <video controls preload="metadata"><source src="files/8. Blog/2. Connection/2. Memories/phd defence/video_20230412_131225.mp4" type="video/mp4"><a href="files/8. Blog/2. Connection/2. Memories/phd defence/video_20230412_131225.mp4">Open defence video 2</a></video>
+              </div>
+            </div>
+          </div>
+
+          <!-- PhD Convocation -->
+          <div class="conf-card" id="phd-convocation">
+            <div class="conf-card-header">
+              <h3><span class="conf-num">05</span>PhD Convocation</h3>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>2 December 2023</span>
+                <span><i class="fa fa-folder-open"></i>2. Memories / phd convocation</span>
+                <span><i class="fa fa-image"></i>23 Photos</span>
+                <span><i class="fa fa-film"></i>3 Videos</span>
+              </div>
+            </div>
+            <div class="conf-card-body">
+              <p class="conf-desc">Convocation memories from the PhD journey, celebrating the degree, ceremony, family moments, and the completion of an important academic chapter.</p>
+              <div class="gal-grid" id="gal-phd-convocation">
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b0c1af9b7add3860eb776.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b0c1af9b7add3860eb776.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b1a6077fab2c23891405b.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b1a6077fab2c23891405b.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b1d91b77209f5828a1103.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b1d91b77209f5828a1103.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe156121df.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe156121df.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe156121f3.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe156121f3.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe15612211.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe15612211.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe15612225.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe15612225.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fddc6defebe156122cd.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fddc6defebe156122cd.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG_20231202_133850.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG_20231202_133850.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202120845.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202120845.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202134823.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202134823.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202153607.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202153607.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202154430.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202154430.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202154500.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202154500.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202155154.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202155154.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202162555.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202162555.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202162658.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202162658.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202164552.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202164552.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202171839.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202171839.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202175748.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202175748.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202182528.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202182528.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202182620.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202182620.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202191545.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202191545.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              </div>
+              <div class="connection-video-label"><i class="fa fa-film"></i> Convocation Videos</div>
+              <div class="connection-video-grid">
+                <video controls preload="metadata"><source src="files/8. Blog/2. Connection/2. Memories/phd convocation/5b0d-1fb0-4da0-a09b-26b3a9ba6300.mp4" type="video/mp4"><a href="files/8. Blog/2. Connection/2. Memories/phd convocation/5b0d-1fb0-4da0-a09b-26b3a9ba6300.mp4">Open convocation video 1</a></video>
+                <video controls preload="metadata"><source src="files/8. Blog/2. Connection/2. Memories/phd convocation/730e-732d-4719-97bc-7429e51f1f04.mp4" type="video/mp4"><a href="files/8. Blog/2. Connection/2. Memories/phd convocation/730e-732d-4719-97bc-7429e51f1f04.mp4">Open convocation video 2</a></video>
+                <video controls preload="metadata"><source src="files/8. Blog/2. Connection/2. Memories/phd convocation/VID20231202152701 - Trim.mp4" type="video/mp4"><a href="files/8. Blog/2. Connection/2. Memories/phd convocation/VID20231202152701 - Trim.mp4">Open convocation video 3</a></video>
+              </div>
+            </div>
+          </div>
+
           </div>
 
           <div class="connection-section" id="connection-section-family">
@@ -460,7 +548,7 @@
           <!-- Happy Birthday Mom -->
           <div class="conf-card mom-birthday-post" id="mom-birthday" data-blog-post-id="mom-birthday" data-photo-taken-on="May 19, 2026">
             <div class="conf-card-header">
-              <h3><span class="conf-num">04</span>Happy Birthday to Our Beautiful Mom <span style="color:#d6a235;">&hearts;</span></h3>
+              <h3><span class="conf-num">06</span>Happy Birthday to Our Beautiful Mom <span style="color:#d6a235;">&hearts;</span></h3>
               <div class="conf-meta">
                 <span><i class="fa fa-calendar"></i>May 19, 2026</span>
                 <span><i class="fa fa-heart"></i>Family &amp; Blessings</span>
@@ -707,6 +795,20 @@
               </div>
             </div>
             <div class="media post_item">
+              <img src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG_20231202_133850.jpg" alt="PhD Convocation">
+              <div class="media-body">
+                <a href="connection.html#phd-convocation"><h3>PhD Convocation</h3></a>
+                <p>2 Dec, 2023</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_130141.jpg" alt="PhD Defence">
+              <div class="media-body">
+                <a href="connection.html#phd-defence"><h3>PhD Defence</h3></a>
+                <p>12 Apr, 2023</p>
+              </div>
+            </div>
+            <div class="media post_item">
               <img src="files/8. Blog/2. Connection/header/IMG20200128140641.jpg" alt="post">
               <div class="media-body">
                 <a href="connection.html#connection-overview"><h3>Global AI Jaipur Webinar</h3></a>
@@ -734,7 +836,7 @@
             <h4 class="widget_title">Blog Sections</h4>
             <ul class="list cat-list">
               <li><a href="academics.html" class="d-flex justify-content-between"><p>Academics</p><p>65</p></a></li>
-              <li><a href="connection.html" class="d-flex justify-content-between"><p>Connections</p><p>4</p></a></li>
+              <li><a href="connection.html" class="d-flex justify-content-between"><p>Connections</p><p>6</p></a></li>
               <li><a href="avocations.html" class="d-flex justify-content-between"><p>Avocations</p><p>14</p></a></li>
               <li><a href="sports.html" class="d-flex justify-content-between"><p>Sports &amp; Wellness</p><p>1</p></a></li>
               <li><a href="publication.html" class="d-flex justify-content-between"><p>Publications</p><p>1</p></a></li>
