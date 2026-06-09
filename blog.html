@@ -643,7 +643,8 @@
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/site-components.js"></script>
-<!-- Central posts data — add new posts to data/posts.js only -->
+<script src="data/academic-data.js"></script>
+<!-- Central posts data; academic/gallery counts are generated from data/academic-data.js -->
 <script src="data/posts.js"></script>
 <script>
   var archiveState = {
@@ -693,14 +694,14 @@
     { url: 'sports.html', cat: 'sports', badge: 'Sports' },
     { url: 'avocations.html', cat: 'avocations', badge: 'Avocations' }
   ];
-  var BLOG_CATEGORY_TOTALS = {
+  var BLOG_CATEGORY_TOTALS = window.AcademicData ? window.AcademicData.getBlogCategoryCounts() : {
     academics: 80,
     social: 6,
     sports: 2,
     avocations: 11
   };
   var BLOG_CATEGORY_ORDER = ['academics','social','sports','avocations'];
-  var BLOG_TOTAL_POSTS = BLOG_CATEGORY_ORDER.reduce(function(total, cat) {
+  var BLOG_TOTAL_POSTS = window.AcademicData ? window.AcademicData.getBlogTotalCount() : BLOG_CATEGORY_ORDER.reduce(function(total, cat) {
     return total + BLOG_CATEGORY_TOTALS[cat];
   }, 0);
 
@@ -917,6 +918,10 @@
       var btn = document.querySelector('[data-filter="' + cat + '"] .f-count');
       if (btn) btn.textContent = n;
     });
+    if (window.AcademicData) {
+      window.AcademicData.renderBlogCategoryCounts();
+      window.AcademicData.renderFilterCounts();
+    }
     var sw = document.getElementById('cat-sub-sports-wellness');
     if (sw) sw.textContent = SITE_POSTS.filter(function(p){ return p.cat === 'sports'; }).length;
     var allBtn = document.querySelector('[data-filter="all"] .f-count');
