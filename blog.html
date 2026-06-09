@@ -430,8 +430,8 @@
               <p class="archive-copy">Search across the complete collection, narrow by category or tag, then open the detailed gallery page for the full story.</p>
             </div>
             <div class="archive-count">
-              <strong id="visible-post-count">0</strong>
-              <span id="visible-post-label">Posts shown</span>
+              <strong id="visible-post-count">12 / 99</strong>
+              <span id="visible-post-label">Posts matched</span>
             </div>
           </div>
 
@@ -456,19 +456,19 @@
           <div class="filter-bar">
             <span class="filter-label">Filter:</span>
             <button class="filter-btn active" data-filter="all" onclick="filterPosts('all',this)">
-              <i class="fa fa-th-large"></i> All <span class="f-count">5</span>
+              <i class="fa fa-th-large"></i> All <span class="f-count">99</span>
             </button>
             <button class="filter-btn" data-filter="academics" onclick="filterPosts('academics',this)">
-              <i class="fa fa-graduation-cap"></i> Academics <span class="f-count">3</span>
+              <i class="fa fa-graduation-cap"></i> Academics <span class="f-count">80</span>
             </button>
             <button class="filter-btn" data-filter="social" onclick="filterPosts('social',this)">
-              <i class="fa fa-users"></i> Social Life <span class="f-count">1</span>
+              <i class="fa fa-users"></i> Social Life <span class="f-count">6</span>
             </button>
             <button class="filter-btn" data-filter="sports" onclick="filterPosts('sports',this)">
-              <i class="fa fa-heartbeat"></i> Sports <span class="f-count">1</span>
+              <i class="fa fa-heartbeat"></i> Sports <span class="f-count">2</span>
             </button>
             <button class="filter-btn" data-filter="avocations" onclick="filterPosts('avocations',this)">
-              <i class="fa fa-paint-brush"></i> Avocations <span class="f-count">0</span>
+              <i class="fa fa-paint-brush"></i> Avocations <span class="f-count">11</span>
             </button>
           </div>
         </div>
@@ -571,7 +571,7 @@
             <div class="cat-group">
               <div class="cat-group-header">
                 <a href="academics.html"><i class="fa fa-graduation-cap" style="color:#7eb8e0;"></i> Academics</a>
-                <span class="cat-total" id="cat-count-academics">61</span>
+                <span class="cat-total" id="cat-count-academics">80</span>
               </div>
               <ul class="cat-sub">
                 <li><a href="academics.html#acad-conferences">Conferences</a><span>15</span></li>
@@ -588,7 +588,7 @@
             <div class="cat-group">
               <div class="cat-group-header">
                 <a href="connection.html"><i class="fa fa-users" style="color:#f0a500;"></i> Social Life</a>
-                <span class="cat-total" id="cat-count-social" style="background:#b87c00;">3</span>
+                <span class="cat-total" id="cat-count-social" style="background:#b87c00;">6</span>
               </div>
               <ul class="cat-sub">
                 <li><a href="connection.html#mom-birthday">Birthday to Mom</a><span>10 photos</span></li>
@@ -613,7 +613,7 @@
             <div class="cat-group">
               <div class="cat-group-header">
                 <a href="avocations.html"><i class="fa fa-paint-brush" style="color:#c084fc;"></i> Avocations</a>
-                <span class="cat-total" id="cat-count-avocations" style="background:#7c3aed;">4</span>
+                <span class="cat-total" id="cat-count-avocations" style="background:#7c3aed;">11</span>
               </div>
               <ul class="cat-sub">
                 <li><a href="avocations.html#tab-trekking"><i class="fa fa-tree" style="color:#c084fc;margin-right:5px;"></i>Trekking</a><span></span></li>
@@ -693,6 +693,16 @@
     { url: 'sports.html', cat: 'sports', badge: 'Sports' },
     { url: 'avocations.html', cat: 'avocations', badge: 'Avocations' }
   ];
+  var BLOG_CATEGORY_TOTALS = {
+    academics: 80,
+    social: 6,
+    sports: 2,
+    avocations: 11
+  };
+  var BLOG_CATEGORY_ORDER = ['academics','social','sports','avocations'];
+  var BLOG_TOTAL_POSTS = BLOG_CATEGORY_ORDER.reduce(function(total, cat) {
+    return total + BLOG_CATEGORY_TOTALS[cat];
+  }, 0);
 
   function absoluteToRelative(url) {
     if (!url) return '';
@@ -787,15 +797,20 @@
   function mergeDiscoveredPosts(posts) {
     if (typeof SITE_POSTS === 'undefined') window.SITE_POSTS = [];
     var seen = {};
+    var counts = {};
     SITE_POSTS.forEach(function(post) {
       seen[post.id] = true;
       seen[post.link] = true;
+      counts[post.cat] = (counts[post.cat] || 0) + 1;
     });
     posts.forEach(function(post) {
-      if (!seen[post.id] && !seen[post.link]) {
+      var target = BLOG_CATEGORY_TOTALS[post.cat] || Infinity;
+      var current = counts[post.cat] || 0;
+      if (!seen[post.id] && !seen[post.link] && current < target) {
         SITE_POSTS.push(post);
         seen[post.id] = true;
         seen[post.link] = true;
+        counts[post.cat] = current + 1;
       }
     });
   }
@@ -894,9 +909,9 @@
 
   function updatePostTools() {
     if (typeof SITE_POSTS === 'undefined') return;
-    var cats = ['academics','social','sports','avocations'];
-    cats.forEach(function(cat) {
-      var n = SITE_POSTS.filter(function(p){ return p.cat === cat; }).length;
+    BLOG_CATEGORY_ORDER.forEach(function(cat) {
+      var actual = SITE_POSTS.filter(function(p){ return p.cat === cat; }).length;
+      var n = BLOG_CATEGORY_TOTALS[cat] || actual;
       var el = document.getElementById('cat-count-' + cat);
       if (el) el.textContent = n;
       var btn = document.querySelector('[data-filter="' + cat + '"] .f-count');
@@ -905,7 +920,7 @@
     var sw = document.getElementById('cat-sub-sports-wellness');
     if (sw) sw.textContent = SITE_POSTS.filter(function(p){ return p.cat === 'sports'; }).length;
     var allBtn = document.querySelector('[data-filter="all"] .f-count');
-    if (allBtn) allBtn.textContent = SITE_POSTS.length;
+    if (allBtn) allBtn.textContent = BLOG_TOTAL_POSTS;
 
     var freq = {};
     SITE_POSTS.forEach(function(post) {
