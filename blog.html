@@ -375,7 +375,7 @@
 
       <!-- Social Life -->
       <div class="col-lg-3 col-md-6 mb-4 feat-social">
-        <a href="connection.html" class="feat-card feat-social">
+        <a href="social-life.html" class="feat-card feat-social">
           <img src="files/8. Blog/box/2.jpeg" alt="Social Life">
           <div class="feat-card-overlay"></div>
           <div class="feat-card-body">
@@ -482,7 +482,7 @@
         <!-- Empty state -->
         <div id="no-posts" style="display:none;text-align:center;padding:40px 0;">
           <i class="fa fa-inbox" style="font-size:2.5rem;color:#c8d4f7;margin-bottom:12px;display:block;"></i>
-          <p style="color:#aaa;font-size:.9rem;">No posts match this view. Try another category, tag, or search term.</p>
+          <p style="color:#aaa;font-size:.9rem;">No matching posts found. Try another category, tag, or search term.</p>
         </div>
 
         <div class="archive-footer">
@@ -515,7 +515,7 @@
             <div class="tl-item">
               <div class="tl-dot dot-social"></div>
               <div class="tl-text">
-                <a href="connection.html#connection-overview" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#f0a500;">Global AI Jaipur Meetup</strong></a>
+                <a href="social-life.html#connection-overview" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#f0a500;">Global AI Jaipur Meetup</strong></a>
                 Hosted a session on AI applications — connecting researchers and practitioners.
                 <span>3 May, 2025</span>
               </div>
@@ -539,7 +539,7 @@
             <div class="tl-item">
               <div class="tl-dot dot-social"></div>
               <div class="tl-text">
-                <a href="connection.html#sg-01" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#f0a500;">MUJ SSIC Event</strong></a>
+                <a href="social-life.html#sg-01" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#f0a500;">MUJ SSIC Event</strong></a>
                 Facilitated the Student Symposium on Intelligent Computing at MUJ.
                 <span>Jan, 2019</span>
               </div>
@@ -547,7 +547,7 @@
             <div class="tl-item">
               <div class="tl-dot"></div>
               <div class="tl-text">
-                <a href="connection.html#sg-02" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#7eb8e0;">Conference Outing</strong></a>
+                <a href="social-life.html#sg-02" style="color:inherit;text-decoration:none;"><strong style="text-decoration:underline;text-decoration-color:#7eb8e0;">Conference Outing</strong></a>
                 Team bonding and networking at an international conference.
                 <span>Feb, 2020</span>
               </div>
@@ -591,13 +591,13 @@
             <!-- Social Life -->
             <div class="cat-group">
               <div class="cat-group-header">
-                <a href="connection.html"><i class="fa fa-users" style="color:#f0a500;"></i> Social Life</a>
+                <a href="social-life.html"><i class="fa fa-users" style="color:#f0a500;"></i> Social Life</a>
                 <span class="cat-total" id="cat-count-social" style="background:#b87c00;"></span>
               </div>
               <ul class="cat-sub">
-                <li><a href="connection.html#mom-birthday">Birthday to Mom</a><span>10 photos</span></li>
-                <li><a href="connection.html#sg-02">Conference Outing</a><span>10 photos</span></li>
-                <li><a href="connection.html#sg-01">MUJ SSIC Event</a><span>24 photos</span></li>
+                <li><a href="social-life.html#mom-birthday">Birthday to Mom</a><span>10 photos</span></li>
+                <li><a href="social-life.html#sg-02">Conference Outing</a><span>10 photos</span></li>
+                <li><a href="social-life.html#sg-01">MUJ SSIC Event</a><span>24 photos</span></li>
               </ul>
             </div>
 
@@ -692,7 +692,7 @@
 
   var BLOG_SOURCE_PAGES = [
     { url: 'academics.html', cat: 'academics', badge: 'Academics' },
-    { url: 'connection.html', cat: 'social', badge: 'Social Life' },
+    { url: 'social-life.html', cat: 'social', badge: 'Social Life' },
     { url: 'sports.html', cat: 'sports', badge: 'Sports' },
     { url: 'avocations.html', cat: 'avocations', badge: 'Avocations' }
   ];
@@ -856,7 +856,7 @@
     document.getElementById('no-posts').style.display = matched.length ? 'none' : 'block';
     var more = document.getElementById('show-more-posts');
     if (more) {
-      more.hidden = visible.length >= matched.length;
+      more.hidden = !matched.length || visible.length >= matched.length;
       more.textContent = 'Show More Posts' + (visible.length < matched.length ? ' (' + (matched.length - visible.length) + ')' : '');
     }
     if (window.FirebaseBlog && typeof window.FirebaseBlog.refresh === 'function') {

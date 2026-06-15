@@ -596,7 +596,7 @@
         <button class="year-chip" data-year="2020-2021">2020–2021</button>
       </div>
     </div>
-    <p class="pub-no-results" style="display:none;"><i class="fa fa-search"></i>No matching patents found.</p>
+    <p class="pub-no-results" style="display:none;"><i class="fa fa-search"></i>No patent entries match the current filters.</p>
 
     <div class="pub-card patent" data-year="2023">
       <div class="pub-num">01</div>
@@ -741,7 +741,7 @@
         <button class="year-chip" data-year="pre2018">Pre-2018</button>
       </div>
     </div>
-    <p class="pub-no-results" style="display:none;"><i class="fa fa-search"></i>No matching journals found.</p>
+    <p class="pub-no-results" style="display:none;"><i class="fa fa-search"></i>No journal entries match the current filters.</p>
 
     <div class="pub-card q1" data-year="2026">
       <div class="pub-num">01</div>
@@ -1875,7 +1875,8 @@
       if (show) visible++;
     });
     var noResults = section.querySelector('.pub-no-results');
-    if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
+    var hasActiveFilter = !!query || (yearRange && yearRange !== 'all');
+    if (noResults) noResults.style.display = (hasActiveFilter && visible === 0) ? 'block' : 'none';
   }
 
   /* ── Counter animation ── */

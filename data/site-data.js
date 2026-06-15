@@ -66,7 +66,7 @@ var SITE_POSTS = [
     img:     'files/8. Blog/2. Connection/3. Family/3. mom birthday/111111.png',
     title:   'Happy Birthday to My Beautiful Mom',
     excerpt: 'A heartfelt birthday tribute to my mother - my strength, blessing, first home, and forever safe place.',
-    link:    'connection.html#mom-birthday',
+    link:    'social-life.html#mom-birthday',
     badge:   'Family'
   },
   {
@@ -78,7 +78,7 @@ var SITE_POSTS = [
     img:     'files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213200238.jpg',
     title:   'Conference Outing',
     excerpt: 'Team bonding and networking at an international conference — building connections that go beyond research and the lab.',
-    link:    'connection.html#sg-02',
+    link:    'social-life.html#sg-02',
     badge:   'Connections'
   },
   {
@@ -90,7 +90,7 @@ var SITE_POSTS = [
     img:     'files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2746.JPG',
     title:   'MUJ SSIC Event',
     excerpt: 'Facilitated the Student Symposium on Intelligent Computing at MUJ — fostering a strong student research culture.',
-    link:    'connection.html#sg-01',
+    link:    'social-life.html#sg-01',
     badge:   'Connections'
   },
 

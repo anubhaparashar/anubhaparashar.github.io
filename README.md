@@ -93,10 +93,10 @@ GitHub detects the repository mainly as a static front-end website, with the lar
 | `grant.html` | Grant and funded-work related page |
 | `industry.html` | Industry-oriented work and applied AI projects |
 | `academics.html` | Academic profile and teaching/research content |
-| `leadership-activities.html` | Leadership positions and activities |
+| `event.html` | Leadership positions and activities |
 | `avocations.html` | Personal interests and hobbies |
 | `blog.html` | Blog listing and article-style content |
-| `connection.html` | Professional connections and network-oriented content |
+| `social-life.html` | Professional connections and network-oriented content |
 | `sports.html` | Sports and extracurricular activities |
 
 ---
@@ -115,10 +115,10 @@ anubhaparashar.github.io/
 ├── grant.html
 ├── industry.html
 ├── academics.html
-├── leadership-activities.html
+├── event.html
 ├── avocations.html
 ├── blog.html
-├── connection.html
+├── social-life.html
 ├── sports.html
 ├── contact_process.php
 │

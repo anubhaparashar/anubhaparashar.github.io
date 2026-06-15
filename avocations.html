@@ -145,6 +145,16 @@
     }
     .art-gallery-grid img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
     .art-gallery-grid a:hover img { transform: scale(1.05); }
+    .art-gallery-grid .blog-gal-overlay {
+      position: absolute; inset: 0; background: rgba(60,0,100,.42); opacity: 0;
+      display: flex; align-items: center; justify-content: center; transition: opacity .25s;
+    }
+    .art-gallery-grid a:hover .blog-gal-overlay { opacity: 1; }
+    .art-gallery-grid .blog-gal-overlay i { color: #fff; font-size: 1.1rem; }
+    .artwork-gallery-block {
+      margin-top: 34px; padding-top: 4px; scroll-margin-top: 130px;
+    }
+    .artwork-gallery-block .art-caption { margin-bottom: 0; }
     .art-caption { color: #777; font-size: .78rem; line-height: 1.6; margin-top: 8px; }
 
     /* placeholder */
@@ -863,7 +873,44 @@
         Today, painting and drawing remain very close to me. They are not only hobbies; they are a way of returning to myself. In research, I solve problems by breaking them down logically. In art, I solve them by feeling my way through colour, shape, and composition. Both require discipline. Both require courage. Both begin with a blank space and the belief that something meaningful can emerge from it.
       </p>
 
-      <div id="painting-folder-galleries" data-github-root="files/8. Blog/4. Avocations/2. Drawing"></div>
+      <div class="artwork-gallery-block" id="artwork-gallery">
+        <div class="blog-gallery-label"><i class="fa fa-picture-o"></i> Artwork Gallery &nbsp;<span style="font-weight:400;color:#888;font-size:.7rem;letter-spacing:0;">8 artwork images</span></div>
+        <div class="art-gallery-grid" data-avoc-static-grid="true">
+          <a href="files/8. Blog/4. Avocations/2. Drawing/artwork/oil painting--.png" class="gal-item">
+            <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/artwork/oil painting--.png" alt="Featured oil painting artwork">
+            <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+          <a href="files/8. Blog/4. Avocations/2. Drawing/artwork/DSC03041.JPG" class="gal-item">
+            <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/artwork/DSC03041.JPG" alt="Handmade artwork">
+            <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+          <a href="files/8. Blog/4. Avocations/2. Drawing/artwork/IMG20220528064540.jpg" class="gal-item">
+            <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/artwork/IMG20220528064540.jpg" alt="Decorative artwork">
+            <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+          <a href="files/8. Blog/4. Avocations/2. Drawing/artwork/oil painting.JPG" class="gal-item">
+            <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/artwork/oil painting.JPG" alt="Oil painting artwork">
+            <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+          <a href="files/8. Blog/4. Avocations/2. Drawing/artwork/water color.jpg" class="gal-item">
+            <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/artwork/water color.jpg" alt="Water colour artwork">
+            <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+          <a href="files/8. Blog/4. Avocations/2. Drawing/artwork/with ice cream stick.png" class="gal-item">
+            <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/artwork/with ice cream stick.png" alt="Ice-cream-stick craft artwork">
+            <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+          <a href="files/8. Blog/4. Avocations/2. Drawing/artwork/with pop-.png" class="gal-item">
+            <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/artwork/with pop-.png" alt="POP handmade artwork">
+            <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+          <a href="files/8. Blog/4. Avocations/2. Drawing/artwork/with pop.png" class="gal-item">
+            <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/artwork/with pop.png" alt="Decorative POP artwork">
+            <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+        </div>
+        <p class="art-caption">This gallery keeps the complete artwork archive visible as thumbnails and opens each piece in the lightbox.</p>
+      </div>
 
       <!-- Certificate Posts -->
       <div style="margin-top:36px;">
@@ -943,91 +990,11 @@
         </div>
       </div>
 
-      <!-- Certificate Gallery — descending chronological order -->
-      <div style="display:none;margin-top:36px;" aria-hidden="true">
-        <div class="blog-gallery-label"><i class="fa fa-trophy"></i> Recognition &amp; Certificates &nbsp;<span style="font-weight:400;color:#888;font-size:.7rem;letter-spacing:0;">5 certificates · newest first</span></div>
-
-        <!-- 1. Xpression MUJ — most recent -->
-        <div style="margin-bottom:28px;">
-          <div class="cert-row-label">
-            <span class="cert-year-badge">~2018–19</span>
-            <span class="cert-row-title">Xpression Cultural &amp; Sports Fest — 1st Position, Rangoli Competition</span>
-            <span class="cert-row-org">Manipal University Jaipur</span>
-          </div>
-          <div class="blog-gallery-grid blog-gallery-grid-1" id="gal-paint-xpression">
-            <a href="files/8. Blog/4. Avocations/2. Drawing/rangoli/20260516_164941.jpg" class="gal-item">
-              <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/rangoli/20260516_164941.jpg" alt="Xpression MUJ – 1st Position Rangoli – Certificate &amp; Gold Medal">
-              <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
-            </a>
-          </div>
-        </div>
-
-        <!-- 2. Tanishq Class XII -->
-        <div style="margin-bottom:28px;">
-          <div class="cert-row-label">
-            <span class="cert-year-badge">Class XII</span>
-            <span class="cert-row-title">Tanishq Mega Painting Competition — Certificate of Appreciation</span>
-            <span class="cert-row-org">Titan Industries Limited · Model School</span>
-          </div>
-          <div class="blog-gallery-grid blog-gallery-grid-1" id="gal-paint-tanishq-xii">
-            <a href="files/8. Blog/4. Avocations/2. Drawing/20260516_162621.jpg" class="gal-item">
-              <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/20260516_162621.jpg" alt="Tanishq Mega Painting Competition – Class XII Certificate">
-              <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
-            </a>
-          </div>
-        </div>
-
-        <!-- 3. Tanishq Class XI -->
-        <div style="margin-bottom:28px;">
-          <div class="cert-row-label">
-            <span class="cert-year-badge">Class XI</span>
-            <span class="cert-row-title">Tanishq Mega Painting Competition — Certificate of Appreciation</span>
-            <span class="cert-row-org">Titan Industries Limited · Model School</span>
-          </div>
-          <div class="blog-gallery-grid blog-gallery-grid-1" id="gal-paint-tanishq-xi">
-            <a href="files/8. Blog/4. Avocations/2. Drawing/20260516_162628.jpg" class="gal-item">
-              <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/20260516_162628.jpg" alt="Tanishq Mega Painting Competition – Class XI Certificate">
-              <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
-            </a>
-          </div>
-        </div>
-
-        <!-- 4. FX World, All India -->
-        <div style="margin-bottom:28px;">
-          <div class="cert-row-label">
-            <span class="cert-year-badge">Class VIII</span>
-            <span class="cert-row-title">All India Drawing &amp; Painting Competition — Certificate of Merit</span>
-            <span class="cert-row-org">FX World · St. George's Girls Grammar School, Hyderabad</span>
-          </div>
-          <div class="blog-gallery-grid blog-gallery-grid-1" id="gal-paint-fxworld">
-            <a href="files/8. Blog/4. Avocations/2. Drawing/20260516_162438.jpg" class="gal-item">
-              <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/20260516_162438.jpg" alt="FX World All India Drawing &amp; Painting Competition – Certificate of Merit">
-              <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
-            </a>
-          </div>
-        </div>
-
-        <!-- 5. TSI 1997 — earliest -->
-        <div style="margin-bottom:8px;">
-          <div class="cert-row-label">
-            <span class="cert-year-badge">1997</span>
-            <span class="cert-row-title">TSI Prestigious Drawing Competition — Certificate of Merit, Meritorious Position</span>
-            <span class="cert-row-org">Talent Search Institute · S.D.A. Mission School</span>
-          </div>
-          <div class="blog-gallery-grid blog-gallery-grid-1" id="gal-paint-tsi">
-            <a href="files/8. Blog/4. Avocations/2. Drawing/20260516_162432.jpg" class="gal-item">
-              <img loading="lazy" src="files/8. Blog/4. Avocations/2. Drawing/20260516_162432.jpg" alt="TSI Prestigious Drawing Competition 1997 – Certificate of Merit">
-              <div class="blog-gal-overlay"><i class="fa fa-search-plus"></i></div>
-            </a>
-          </div>
-        </div>
-
-      </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════ ORIGAMI ════════════════════ -->
+<!-- ORIGAMI ════════════════════ -->
 <section class="hobby-section" id="tab-origami">
   <div class="container">
     <div class="text-center">
@@ -1053,7 +1020,7 @@
       </p>
       <div class="hobby-placeholder">
         <i class="fa fa-image"></i>
-        Origami gallery coming soon.
+        Selected archive will be added soon.
       </div>
     </div>
   </div>
@@ -1085,7 +1052,7 @@
       </p>
       <div class="hobby-placeholder">
         <i class="fa fa-image"></i>
-        Performance clips coming soon.
+        Selected archive will be added soon.
       </div>
     </div>
   </div>
@@ -1280,6 +1247,7 @@ function renderPaintingFolderSections($root, rootPath, folders) {
 
 async function loadAutoPaintingGalleries() {
   var $root = $('#painting-folder-galleries');
+  if (!$root.length) return;
   var rootPath = $root.data('github-root');
   var folders = [];
 
@@ -1644,6 +1612,10 @@ $(document).ready(function(){
   function enhanceAvocationImageGalleries() {
     enhanceTrekCards();
     document.querySelectorAll('#tab-painting .art-gallery-grid, #tab-painting .blog-gallery-grid, #tab-painting .auto-folder-grid').forEach(function(gallery) {
+      if (gallery.dataset.avocStaticGrid === 'true') {
+        initAvocationLightbox(gallery.parentNode);
+        return;
+      }
       enhanceGalleryElement(gallery, 4);
     });
   }

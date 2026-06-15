@@ -1,0 +1,1575 @@
+.\_workshop-contact-sheet.png
+.\assets\img\about.jpg
+.\assets\img\apple-touch-icon.png
+.\assets\img\favicon.png
+.\assets\img\hero-bg.jpg
+.\assets\img\portfolio\portfolio-1.jpg
+.\assets\img\portfolio\portfolio-2.jpg
+.\assets\img\portfolio\portfolio-3.jpg
+.\assets\img\portfolio\portfolio-4.jpg
+.\assets\img\portfolio\portfolio-5.jpg
+.\assets\img\portfolio\portfolio-6.jpg
+.\assets\img\portfolio\portfolio-7.jpg
+.\assets\img\portfolio\portfolio-8.jpg
+.\assets\img\portfolio\portfolio-9.jpg
+.\assets\img\portfolio\portfolio-details-1.jpg
+.\assets\img\portfolio\portfolio-details-2.jpg
+.\assets\img\portfolio\portfolio-details-3.jpg
+.\assets\img\testimonials\testimonials-1.jpg
+.\assets\img\testimonials\testimonials-2.jpg
+.\assets\img\testimonials\testimonials-3.jpg
+.\assets\img\testimonials\testimonials-4.jpg
+.\assets\img\testimonials\testimonials-5.jpg
+.\files\1. Home\Anubha_cv.pdf
+.\files\1. Home\Anubha_resume.pdf
+.\files\1. Home\Anu-logo (3).png
+.\files\1. Home\GaitAI.png
+.\files\1. Home\logo - Copy.png
+.\files\1. Home\logo.png
+.\files\1. Home\logo-header-name-only.png
+.\files\1. Home\pic.jpg
+.\files\1. Home\Picture1.png
+.\files\1. Home\testimonials\t1.png
+.\files\1. Home\testimonials\t2.jpg
+.\files\1. Home\testimonials\t3.jpg
+.\files\1. Home\testimonials\t4.jpg
+.\files\1. Home\testimonials\t5.png
+.\files\2. Education\1. Degree certificate, thesis, ppt\10th.pdf
+.\files\2. Education\1. Degree certificate, thesis, ppt\12th.pdf
+.\files\2. Education\1. Degree certificate, thesis, ppt\btech ppt.pdf
+.\files\2. Education\1. Degree certificate, thesis, ppt\btech.pdf
+.\files\2. Education\1. Degree certificate, thesis, ppt\Final PPT-thesis ppt mtech.pdf
+.\files\2. Education\1. Degree certificate, thesis, ppt\mtech.pdf
+.\files\2. Education\1. Degree certificate, thesis, ppt\phd ppt.pdf
+.\files\2. Education\1. Degree certificate, thesis, ppt\phd.pdf
+.\files\2. Education\1. Degree certificate, thesis, ppt\thesis_btech.pdf
+.\files\2. Education\1. Degree certificate, thesis, ppt\thesis_mtech.pdf
+.\files\2. Education\1. Degree certificate, thesis, ppt\thesis_phd.pdf
+.\files\2. Education\2. Certifications - Part 2\20260516_160402.jpg
+.\files\2. Education\2. Certifications - Part 2\20260516_160410.jpg
+.\files\2. Education\2. Certifications - Part 2\20260516_160419.png
+.\files\2. Education\2. Certifications\1. Coursera AB65YTVLW3X6.pdf
+.\files\2. Education\2. Certifications\2. Coursera 876JXJGLETWF.pdf
+.\files\2. Education\2. Certifications\3. Coursera E4XTJ786HPFA.pdf
+.\files\2. Education\2. Certifications\4. Coursera XBY4EKKVJQ9U.pdf
+.\files\2. Education\2. Certifications\5. The Fundamentals of Digital Marketing - google.pdf
+.\files\2. Education\2. Certifications\6. DLI S-RX-02 Certificate _ Deep Learning Institute.pdf
+.\files\2. Education\2. Certifications\7. DLI C-IV-02 Certificate _ Deep Learning Institute.pdf
+.\files\2. Education\3. Short Term Courses Attended\1. hacking.jpg
+.\files\2. Education\3. Short Term Courses Attended\10.png
+.\files\2. Education\3. Short Term Courses Attended\11.png
+.\files\2. Education\3. Short Term Courses Attended\12.jpeg
+.\files\2. Education\3. Short Term Courses Attended\13.jpeg
+.\files\2. Education\3. Short Term Courses Attended\15.jpeg
+.\files\2. Education\3. Short Term Courses Attended\16.png
+.\files\2. Education\3. Short Term Courses Attended\18.jpg
+.\files\2. Education\3. Short Term Courses Attended\19.jpeg
+.\files\2. Education\3. Short Term Courses Attended\2.jpeg
+.\files\2. Education\3. Short Term Courses Attended\20.png
+.\files\2. Education\3. Short Term Courses Attended\21.png
+.\files\2. Education\3. Short Term Courses Attended\22. Applied research in multidisciplinary studies 18-19.05.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\23. One Week Colloquium on Research Methodology through Digital - 18-23.05.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\24. Emerging Effective  Digital Tools for Teaching Pedagogy - 25-29.05.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\25 ICT Tools for E-Content Development - 26-29.05.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\26. Real Time Cognitive Services on Azure Cloud 10-12.06.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\27. YOGA FOR HUMAN EXCELLENCE - 21.06.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\28. emerging trends in information teahnology -23-27.06.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\29. Essentials for Blended Learning - 13-20.07.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\3.jpeg
+.\files\2. Education\3. Short Term Courses Attended\30. Participation Certificate - 21.07.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\31. Data Analysis with SPSS - 23-24.07.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\32. Python for Data Science - 23-25.07.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\33. Next Generation Smart Machines (NGSM v1.0) - 27-29.07.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\34. Microsoft Teams Tool Training - 27-31.07.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\35. Environmental Impacts of COVID-19 Pandemic  Challenges and Remedies through Science & Engineering - 27-31.08.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\36. Fundamentals of RADAR System.pdf
+.\files\2. Education\3. Short Term Courses Attended\37. Artificial Intelligence and Machine Learning Application in Healthcare- 3-7.09.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\38. Artificial Intelligence using Python - 14-19.09.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\39. Machine Learning for Natural Language Processing - 12-17.10.2020.pdf
+.\files\2. Education\3. Short Term Courses Attended\4.jpeg
+.\files\2. Education\3. Short Term Courses Attended\40. Research Trends in Artificial Intelligence and.pdf
+.\files\2. Education\3. Short Term Courses Attended\41.jpg
+.\files\2. Education\3. Short Term Courses Attended\43.pdf
+.\files\2. Education\3. Short Term Courses Attended\5.jpeg
+.\files\2. Education\3. Short Term Courses Attended\6.jpeg
+.\files\2. Education\3. Short Term Courses Attended\7.jpeg
+.\files\2. Education\3. Short Term Courses Attended\8.png
+.\files\2. Education\3. Short Term Courses Attended\9.jpeg
+.\files\2. Education\4. Webinars Attended\1. FOG COMPUTING 23.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\10. sKILLS TO STAY RELEVANT - 26.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\11. Employability Skills for - 27.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\12. National Digital Library of India - 28.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\13. Introduction to Cybersecurity - 28.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\14. Wireless MeshTechnologies - 28.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\15. Revolution of ClOUD AND FOG COMPUTING - 28.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\16. Financial Planning & Investment Management in Current Scenario - 29.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\17. Art of Writing Research Paper - 29.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\18. Importance and scope of IPR in - 29.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\19. Joy of Engineering - 29.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\2. Energy, Water & Resources Savings - 23.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\20. Bird View on Technologies - 30.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\21. Globalization After Covid 19 - 31.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\22. Research Methodology - 31.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\23. Current Trends and career - 02.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\24. hOW TO IDENTIFY RIGHT JOURNAL - 3.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\25. Introduction to machine learning and python -03.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\26. Compentency -4.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\27. Highlighting Ageing Issues of Software Unavailability - 05.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\28. Introduction to Angular - 05.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\29. How to write research paper from indexed journals - 6.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\3. Demystifying Machine Learning Predictive Modelling and Real-Time Analytics - 24.5.2020.pdf
+.\files\2. Education\4. Webinars Attended\30. JAVASCRIPT -06.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\31. Machine Learning and artificail intelligence - 8.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\32. Intelligence to Machine learning - 11.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\33. Forecastingintuitivepredictive visionview making the body and mind firm.12.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\34. LMS with Data Science  - 13-15.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\35. Webinar on Encouraging Learners Engaging in Remote Learning - 13.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\36. jOB OPPURTUNITIES IN automation testing 13.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\37. Machine Learning - 13.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\38. India in the global economy - 17.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\39. Forecastingintuitivepredictive visionview making the body and mind firm 20.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\4. AN IDEA TO - 25.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\40. COVID 19 OUTBREAK - 22.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\41. COLLABORATIVE LEARNING STRATEGIES AND PRACTICES - 25.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\42. Mathematical models on transmitting behavior of covid-19 - 25.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\43. aPPLICATION OF mACHINE lEARNING IN iMAGE pROCESSING - 26.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\44. Probing the matter beyond five senses - 28.06.2020.pdf
+.\files\2. Education\4. Webinars Attended\45. Cloud Services - 04.07.2020.pdf
+.\files\2. Education\4. Webinars Attended\46. BlockChain – Technological Perspective -18.07.2020.pdf
+.\files\2. Education\4. Webinars Attended\47. Reshape of Commerce Education in Post Covid-19 Scenario - 20.07.2020.jpg
+.\files\2. Education\4. Webinars Attended\48. Webinar on Simplifying IPR and Patent Filing - 24.07.2020.pdf
+.\files\2. Education\4. Webinars Attended\49. Future of Cyber Security - 25.07.2020.pdf
+.\files\2. Education\4. Webinars Attended\5. Cloud security - 25.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\50. Know How Legal Patent Procedures - 27.07.2020.pdf
+.\files\2. Education\4. Webinars Attended\51. Challenges in Vaccine Development And Therapeutic Applications of Chemistry - 28.07.2020.pdf
+.\files\2. Education\4. Webinars Attended\52. Numerical and Scientific Computing - 28.07.2020.pdf
+.\files\2. Education\4. Webinars Attended\53. A Road Map of Social Media Analysis - 20.07.2020.pdf
+.\files\2. Education\4. Webinars Attended\54. COVID-19 Threat or Opportunity - 1.08.2020 Copy.pdf
+.\files\2. Education\4. Webinars Attended\55. Web Security and Cyber Crimes - 08-08-2020.pdf
+.\files\2. Education\4. Webinars Attended\56.  Unleashing Data Science and AI- 08.08.2020 Copy.pdf
+.\files\2. Education\4. Webinars Attended\57. Simulation Tools for Research in Computer & Communication Networks Webinar - 2.07.2020.pdf
+.\files\2. Education\4. Webinars Attended\58. Citations and Reference Management using Mendeley -14.08.2020.pdf
+.\files\2. Education\4. Webinars Attended\59. Risk and Insurance In Covid 19 20.07.2020.pdf
+.\files\2. Education\4. Webinars Attended\6. Impact and Adoption of DevOps post COVID-19 - 25.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\60. Is Edge Computing, the savior of IoT - 22.08.2020.pdf
+.\files\2. Education\4. Webinars Attended\61. Impact of COVID-19 on Indian Agriculture Sector.pdf
+.\files\2. Education\4. Webinars Attended\62. How to Write Technical Books.pdf
+.\files\2. Education\4. Webinars Attended\63. Blockchain Technology - 29.08.2020.pdf
+.\files\2. Education\4. Webinars Attended\64. Cross Platform Mobile App Development using Flutter - 31.08.2020.pdf
+.\files\2. Education\4. Webinars Attended\65. The Impact of COVID-19 on Technical Education - 25.07.2020.pdf
+.\files\2. Education\4. Webinars Attended\66. Webinar on Research Methodology - 05.09.2020.pdf
+.\files\2. Education\4. Webinars Attended\67. Webinar on Robotics and Automation Processes - 12.09.2020.pdf
+.\files\2. Education\4. Webinars Attended\68. Webinar on Cyber Warfare, Cyber Security and Cyber Citizenship   -18.09.2020.pdf
+.\files\2. Education\4. Webinars Attended\69. The Art of Writing Research Papers - 25.09.2020.pdf
+.\files\2. Education\4. Webinars Attended\7. High Performance Computing 26.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\70. Virtual Reality and Augmentation - 3.10.2020.pdf
+.\files\2. Education\4. Webinars Attended\71. National Education Policy (NEP)-2020  - 9.10.2020.pdf
+.\files\2. Education\4. Webinars Attended\72. Publication Ethics and Plagiarism - October 16, 2020.pdf
+.\files\2. Education\4. Webinars Attended\73. Robotics in Everyday Life – Threat or Opportunity -October 23, 2020.pdf
+.\files\2. Education\4. Webinars Attended\74. Software Defined Networking (SDN) - 31-10-2020.pdf
+.\files\2. Education\4. Webinars Attended\75. Optimization and AI Techniques - 06-11-2020.pdf
+.\files\2. Education\4. Webinars Attended\76. Value of IPR in Academic Researches -21-11-2020.pdf
+.\files\2. Education\4. Webinars Attended\77. Digital Twin Technology for post COVID-19 - 28-11-2020.pdf
+.\files\2. Education\4. Webinars Attended\78. AI in Everyday Life – Threat or Opportunity -04-12-2020 - Copy.pdf
+.\files\2. Education\4. Webinars Attended\79. Digital inclusion of underserved communities -18-12-2020.pdf
+.\files\2. Education\4. Webinars Attended\8. Recent Trends in Renewable Energy Sources - 26.05.2020.pdf
+.\files\2. Education\4. Webinars Attended\80. Virtual Interactive Classroom August , 29 2020.pdf
+.\files\2. Education\4. Webinars Attended\9. Sql server database - 26.05.2020.pdf
+.\files\2. Education\5. Seminars Attended\2.jpg
+.\files\2. Education\6. Quizzes Participated\1. Quiz on COVID-19_25-27.05.2020.pdf
+.\files\2. Education\6. Quizzes Participated\2. Renewable Energy and Energy Harvesting -05.2020.pdf
+.\files\2. Education\6. Quizzes Participated\3. Micro Economics - 4.6.2020.pdf
+.\files\2. Education\6. Quizzes Participated\4. Big Data Analytic-quiz  - 24.06.2020.pdf
+.\files\2. Education\6. Quizzes Participated\5. C- 25-26.06.2020.pdf
+.\files\2. Education\6. Quizzes Participated\6. COA 1.7..2020.pdf
+.\files\2. Education\6. Quizzes Participated\7. IoT 8-11.07.2020.pdf
+.\files\2. Education\6. Quizzes Participated\8. Mess the Code to be a Master Coder-C++ E-QUIZ- 01.08.2020.pdf
+.\files\2. Education\logo\1.jpeg
+.\files\2. Education\logo\1.png
+.\files\2. Education\logo\2.png
+.\files\2. Education\logo\3.gif
+.\files\2. Education\logo\cbse.jpg
+.\files\2. Education\logo\coursera-logo.png
+.\files\2. Education\logo\google-logo.png
+.\files\2. Education\logo\mdu-logo.png
+.\files\2. Education\logo\muj.png
+.\files\2. Education\logo\nvidia-logo.png
+.\files\3. Experience\1. Certificate\1. Sconad Communication.pdf
+.\files\3. Experience\1. Certificate\2. IO Experience Letter.pdf
+.\files\3. Experience\1. Certificate\34 Anubha Parashar doctoral experience.pdf
+.\files\3. Experience\1. Certificate\Anubha Parashar-pearce.pdf
+.\files\3. Experience\1. Certificate\essilor.jpg
+.\files\3. Experience\1. Certificate\muj_experience.pdf
+.\files\3. Experience\1. Certificate\zmq industrial training.pdf
+.\files\3. Experience\logo\76702379_112363003557246_8532570068196786176_n.jpg
+.\files\3. Experience\logo\essilor-india-private-limited-customer-care-new-delhi-delhi-contact-lense-dealers-essilor-1uk5fv1.jpg
+.\files\3. Experience\logo\invincible_ocean_logo.jpg
+.\files\3. Experience\logo\muj.png
+.\files\3. Experience\logo\pearce.png
+.\files\3. Experience\logo\zmq_web_logo.jpg
+.\files\4. Publication\1. patent\1\Certificate of inventorship.pdf
+.\files\4. Publication\1. patent\2\202111034240 Patent Certificate.pdf
+.\files\4. Publication\1. patent\3\Scan0003.pdf
+.\files\4. Publication\1. patent\4\Inexpensive Nail-fold Capillaroscopy fo...pdf
+.\files\4. Publication\1. patent\5\Innovation_Patent_Notice_of_Grant_27-10-2021.pdf
+.\files\4. Publication\1. patent\6\E_Journal_December 2021 Part 2.pdf
+.\files\4. Publication\2. journal\1\1-s2.0-S2590005626000329-main.pdf
+.\files\4. Publication\2. journal\10\ppr.pdf
+.\files\4. Publication\2. journal\11\IET Biometrics - 2022 - Parashar - Protection of gait data set for preserving its privacy in deep learning pipeline.pdf
+.\files\4. Publication\2. journal\12\IET Biometrics 2022.pdf
+.\files\4. Publication\2. journal\13\ijimai20164_2_5_pdf_12005.pdf
+.\files\4. Publication\2. journal\14\ijimai20142_6_8_pdf_20898.pdf
+.\files\4. Publication\2. journal\15\IJITCS-V10-N3-5.pdf
+.\files\4. Publication\2. journal\16\1407.2125.pdf
+.\files\4. Publication\2. journal\17\9vi2-2.pdf
+.\files\4. Publication\2. journal\2\cas-dc-template (1).pdf
+.\files\4. Publication\2. journal\3\bd2d4a96-84de-4b5c-8500-323699ba3648 (1).pdf
+.\files\4. Publication\2. journal\4\gait_review.pdf
+.\files\4. Publication\2. journal\5\U.pdf
+.\files\4. Publication\2. journal\6\cas-dc-template (2).pdf
+.\files\4. Publication\2. journal\7\TSP_CMC_42886.pdf
+.\files\4. Publication\2. journal\8\10.1515_biol-2022-0611.pdf
+.\files\4. Publication\2. journal\9\survey_2_HIoT_Ieee_comst_edit_20_1_23.pdf
+.\files\4. Publication\3. conference\1\Anubha Parashar.png
+.\files\4. Publication\3. conference\1\conference_041818.pdf
+.\files\4. Publication\3. conference\1\Deep Learning-based Framework for Accurate Clothing Attribute Recognition.pdf
+.\files\4. Publication\3. conference\10\certi.pdf
+.\files\4. Publication\3. conference\10\e_nose_smoke_monitoring_presentation.pdf
+.\files\4. Publication\3. conference\10\ICCT17_paper_308.pdf
+.\files\4. Publication\3. conference\11\2.jpg
+.\files\4. Publication\3. conference\11\Final PPT _40 .pdf
+.\files\4. Publication\3. conference\11\IN-TECH_2018_paper_40 (2).pdf
+.\files\4. Publication\3. conference\12\attribute_break_glass_access_control_presentation.pdf
+.\files\4. Publication\3. conference\12\certi.jpg
+.\files\4. Publication\3. conference\12\final_uc.pdf
+.\files\4. Publication\3. conference\13\certi.png
+.\files\4. Publication\3. conference\13\Final PPT-thesis ppt.pdf
+.\files\4. Publication\3. conference\13\Identification of GAIT data using machine learning technique to categorise human locomotion (2).pdf
+.\files\4. Publication\3. conference\14\110.pdf
+.\files\4. Publication\3. conference\14\110-.pdf
+.\files\4. Publication\3. conference\14\certi.jpeg
+.\files\4. Publication\3. conference\15\243.pdf.pdf
+.\files\4. Publication\3. conference\15\certi.png
+.\files\4. Publication\3. conference\15\Final PPT-thesis ppt.pdf
+.\files\4. Publication\3. conference\16\aSS10-03-Parashar.pdf
+.\files\4. Publication\3. conference\16\certi.png
+.\files\4. Publication\3. conference\16\main.pdf
+.\files\4. Publication\3. conference\2\BIOSIG_2022_paper_45.pdf
+.\files\4. Publication\3. conference\2\Certificate-Anubha.pdf
+.\files\4. Publication\3. conference\2\ppt.pdf
+.\files\4. Publication\3. conference\3\certificate.jpg
+.\files\4. Publication\3. conference\3\ICICV_2021_Gait_Analysis_Presentation.pdf
+.\files\4. Publication\3. conference\3\ICICV-2021_paper_363.pdf
+.\files\4. Publication\3. conference\4\certi.png
+.\files\4. Publication\3. conference\4\HIoT_Elderly_Monitoring_Privacy_Presentation.pdf
+.\files\4. Publication\3. conference\4\ICICI-21_paper_springer_format_revised_final-pages-1.pdf
+.\files\4. Publication\3. conference\5\1. DAY 2 S5_8.pdf
+.\files\4. Publication\3. conference\5\9vi2-2.pdf
+.\files\4. Publication\3. conference\5\Smart_Autonomous_Vehicle_End_to_End_Learning.pdf
+.\files\4. Publication\3. conference\6\certi.jpeg
+.\files\4. Publication\3. conference\6\Healthcare_IoT_Access_Control_Presentation.pdf
+.\files\4. Publication\3. conference\6\ICSCA_2020_paper_110.pdf
+.\files\4. Publication\3. conference\7\certi.jpeg
+.\files\4. Publication\3. conference\7\Surveillance System to Provide Secured Gait Signatures for Multi View Angles Using Deep Learning.pdf
+.\files\4. Publication\3. conference\7\Surveillance System to Provide Secured Gait Signatures Using.pdf
+.\files\4. Publication\3. conference\8\certi.pdf
+.\files\4. Publication\3. conference\8\IoT Based Automated Weather Report Generation.pdf
+.\files\4. Publication\3. conference\8\ppt_icct_anubha.pdf
+.\files\4. Publication\3. conference\9\certi.pdf
+.\files\4. Publication\3. conference\9\IoT Based Cloud Enabled Smart Electricity Management System.pdf
+.\files\4. Publication\3. conference\9\IoT_Smart_Electricity_Management_Presentation.pdf
+.\files\4. Publication\4. book chapter\2\IOTBC-2020_paper_44.pdf
+.\files\4. Publication\4. book chapter\3\Joseph_9780367499747-chapter 09.pdf
+.\files\4. Publication\4. book chapter\4\Joseph_9780367499747-chapter 24.pdf
+.\files\4. Publication\4. book chapter\5\9781003107521_previewpdf.pdf
+.\files\4. Publication\4. book chapter\6\IOS_AnubhaParashar.docx.pdf
+.\files\4. Publication\4. book chapter\7\IOS.pdf
+.\files\4. Publication\5. article\1\1407.2125.pdf
+.\files\4. Publication\5. article\2\1407.6952.pdf
+.\files\4. Publication\5. article\3\1407.6090.pdf
+.\files\4. Publication\5. article\4\1407.5197.pdf
+.\files\4. Publication\5. article\5\A_Proposed_Solution_to_Knapsack_Problem.pdf
+.\files\4. Publication\5. article\5\certificate.png
+.\files\4. Publication\5. article\6\vishwa.pdf
+.\files\4. Publication\6. presentation\1\certi.jpeg
+.\files\4. Publication\6. presentation\2\certi.pdf
+.\files\4. Publication\6. presentation\2\Online International conference (ICA3C).PDF
+.\files\4. Publication\6. presentation\3\2..pdf
+.\files\4. Publication\6. presentation\3\certi.jpg
+.\files\4. Publication\7. poster\Anubha_Poster_Gait_Biometrics.pdf
+.\files\5. Project\1. Project\1.png
+.\files\5. Project\1. Project\10.png
+.\files\5. Project\1. Project\11.png
+.\files\5. Project\1. Project\12.png
+.\files\5. Project\1. Project\13.jpeg
+.\files\5. Project\1. Project\14.jpeg
+.\files\5. Project\1. Project\15.png
+.\files\5. Project\1. Project\16.jpeg
+.\files\5. Project\1. Project\17.png
+.\files\5. Project\1. Project\18.png
+.\files\5. Project\1. Project\19.png
+.\files\5. Project\1. Project\2.png
+.\files\5. Project\1. Project\20.jpeg
+.\files\5. Project\1. Project\21.png
+.\files\5. Project\1. Project\22.png
+.\files\5. Project\1. Project\23.jpeg
+.\files\5. Project\1. Project\23.png
+.\files\5. Project\1. Project\24.jpeg
+.\files\5. Project\1. Project\25.jpg
+.\files\5. Project\1. Project\27.png
+.\files\5. Project\1. Project\28.jpeg
+.\files\5. Project\1. Project\29.jpeg
+.\files\5. Project\1. Project\3.png
+.\files\5. Project\1. Project\30.jpeg
+.\files\5. Project\1. Project\31.jpeg
+.\files\5. Project\1. Project\32.png
+.\files\5. Project\1. Project\33.jpeg
+.\files\5. Project\1. Project\34.jpeg
+.\files\5. Project\1. Project\35.png
+.\files\5. Project\1. Project\36.jpeg
+.\files\5. Project\1. Project\37.png
+.\files\5. Project\1. Project\38.jpeg
+.\files\5. Project\1. Project\39.png
+.\files\5. Project\1. Project\4.png
+.\files\5. Project\1. Project\40.jpg
+.\files\5. Project\1. Project\41.jpeg
+.\files\5. Project\1. Project\42.png
+.\files\5. Project\1. Project\43.png
+.\files\5. Project\1. Project\44.png
+.\files\5. Project\1. Project\45.png
+.\files\5. Project\1. Project\46.png
+.\files\5. Project\1. Project\47.png
+.\files\5. Project\1. Project\48.png
+.\files\5. Project\1. Project\49.jpeg
+.\files\5. Project\1. Project\5.png
+.\files\5. Project\1. Project\50.png
+.\files\5. Project\1. Project\52.jpeg
+.\files\5. Project\1. Project\53.png
+.\files\5. Project\1. Project\54.jpeg
+.\files\5. Project\1. Project\55.jpeg
+.\files\5. Project\1. Project\56.jpeg
+.\files\5. Project\1. Project\57.png
+.\files\5. Project\1. Project\58.jpeg
+.\files\5. Project\1. Project\6.png
+.\files\5. Project\1. Project\60.jpeg
+.\files\5. Project\1. Project\61.jpeg
+.\files\5. Project\1. Project\7.jpeg
+.\files\5. Project\1. Project\8.png
+.\files\5. Project\1. Project\9.png
+.\files\5. Project\1. Project\project-video-1.mp4
+.\files\5. Project\1. Project\project-video-10.mp4
+.\files\5. Project\1. Project\project-video-11.mp4
+.\files\5. Project\1. Project\project-video-12.mp4
+.\files\5. Project\1. Project\project-video-13.mp4
+.\files\5. Project\1. Project\project-video-14.mp4
+.\files\5. Project\1. Project\project-video-15.mp4
+.\files\5. Project\1. Project\project-video-16.mp4
+.\files\5. Project\1. Project\project-video-17.mp4
+.\files\5. Project\1. Project\project-video-2.mp4
+.\files\5. Project\1. Project\project-video-3.mp4
+.\files\5. Project\1. Project\project-video-4.mp4
+.\files\5. Project\1. Project\project-video-5.mp4
+.\files\5. Project\1. Project\project-video-6.mp4
+.\files\5. Project\1. Project\project-video-7.mp4
+.\files\5. Project\1. Project\project-video-8.mp4
+.\files\5. Project\1. Project\project-video-9.mp4
+.\files\6. Award\1. Best Paper award, Zagreb Coratia\2.jpg
+.\files\6. Award\1. Best Paper award, Zagreb Coratia\62.jpg
+.\files\6. Award\1. Best Paper award, Zagreb Coratia\63.jpeg
+.\files\6. Award\1. Best Paper award, Zagreb Coratia\IMG_1594.JPG
+.\files\6. Award\1. Best Paper award, Zagreb Coratia\img_all.png
+.\files\6. Award\10. Top researcher of the month - July 2023\fb75daef-863e-4b75-8e98-9a2a38c1c7ec.jpg
+.\files\6. Award\10. Top researcher of the month - July 2023\WhatsApp Image 2026-05-14 at 2.09.26 PM.jpeg
+.\files\6. Award\11. First in class\20260516_164811.jpg
+.\files\6. Award\12. First Position in class\20260516_164733.jpg
+.\files\6. Award\2. muj excellence award\fb75daef-863e-4b75-8e98-9a2a38c1c7ec.jpg
+.\files\6. Award\2. muj excellence award\IMG20221012113012.jpg
+.\files\6. Award\2. muj excellence award\IMG20221013175112.jpg
+.\files\6. Award\2. muj excellence award\IMG20221013175317.jpg
+.\files\6. Award\3. First award in project in icct conference\20260516_175706.jpg
+.\files\6. Award\3. First award in project in icct conference\20260516_180447.jpg
+.\files\6. Award\3. First award in project in icct conference\20260516_180724.jpg
+.\files\6. Award\3. First award in project in icct conference\20260516_180728.jpg
+.\files\6. Award\3. First award in project in icct conference\certificate.png
+.\files\6. Award\3. First award in project in icct conference\IMG_0235.JPG
+.\files\6. Award\3. First award in project in icct conference\IMG20190928113511.jpg
+.\files\6. Award\3. First award in project in icct conference\IMG20190930090821.jpg
+.\files\6. Award\4. poster award\20260516_180450.jpg
+.\files\6. Award\4. poster award\20260516_180458.jpg
+.\files\6. Award\4. poster award\certificate.png
+.\files\6. Award\4. poster award\IMG_0293.JPG
+.\files\6. Award\4. poster award\IMG20190928115652.jpg
+.\files\6. Award\4. poster award\IMG20190928120305.jpg
+.\files\6. Award\4. poster award\IMG20190928120307.jpg
+.\files\6. Award\4. poster award\IMG20190928120311.jpg
+.\files\6. Award\4. poster award\IMG20190928120322.jpg
+.\files\6. Award\4. poster award\IMG20190928120326.jpg
+.\files\6. Award\4. poster award\IMG20190928120336.jpg
+.\files\6. Award\4. poster award\IMG20190928123455.jpg
+.\files\6. Award\4. poster award\IMG20190928130009.jpg
+.\files\6. Award\5. second award in project in icct conference\20260516_175706.jpg
+.\files\6. Award\5. second award in project in icct conference\20260516_180743.jpg
+.\files\6. Award\5. second award in project in icct conference\IMG20190928111729.jpg
+.\files\6. Award\5. second award in project in icct conference\IMG20190929154902.jpg
+.\files\6. Award\5. second award in project in icct conference\IMG20190929154905.jpg
+.\files\6. Award\6. employee of the year\Black Music Seminar Attendance Certificate (4).jpg
+.\files\6. Award\6. employee of the year\Black Music Seminar Attendance Certificate.pdf
+.\files\6. Award\7. Top researcher of the month - Jan 2023\IMG20230207111227.jpg
+.\files\6. Award\7. Top researcher of the month - Jan 2023\IMG20230207115706.jpg
+.\files\6. Award\7. Top researcher of the month - Jan 2023\IMG20230208093200.jpg
+.\files\6. Award\8. Top researcher of the month - August 2022\c0fe2f61-b456-4791-900f-d0790ef61a95.jpeg
+.\files\6. Award\8. Top researcher of the month - August 2022\WhatsApp Image 2026-05-14 at 2.09.24 PM.jpeg
+.\files\6. Award\9. Top researcher of the month - June 2023\e82c0c0b-49e3-49b7-a504-92c8e73bb037.jpg
+.\files\6. Award\9. Top researcher of the month - June 2023\WhatsApp Image 2026-05-14 at 2.09.25 PM.jpeg
+.\files\7. Leadership\3. Seminar organised\2\certificate.jpeg
+.\files\7. Leadership\5. Conferences\08324068.pdf
+.\files\7. Leadership\5. Conferences\1.pdf
+.\files\7. Leadership\5. Conferences\AIC 2022 TPC Certificate_Page_066.jpg
+.\files\7. Leadership\5. Conferences\WCAIAA 2023_TPC_Certificate_Page_025.jpg
+.\files\7. Leadership\6. Reviewer\Certificate_EAAI_Recognised.pdf
+.\files\7. Leadership\6. Reviewer\Certificate_INS_Recognised (2).pdf
+.\files\7. Leadership\6. Reviewer\Certificate_INS_Recognised.pdf
+.\files\7. Leadership\6. Reviewer\Certificate_JISA_Recognised.pdf
+.\files\7. Leadership\6. Reviewer\Certificate_NEUCOM_Recognised (2).pdf
+.\files\7. Leadership\6. Reviewer\IJIMAI.png
+.\files\7. Leadership\6. Reviewer\rev...pdf
+.\files\7. Leadership\7. Membership\1. IEEE Checkout.pdf
+.\files\7. Leadership\7. Membership\10. WRU Member Badge.pdf
+.\files\7. Leadership\7. Membership\10. WRU Membership Certificate.pdf
+.\files\7. Leadership\7. Membership\3. Application Submitted.pdf
+.\files\7. Leadership\7. Membership\4. IREDAM10100057578.pdf
+.\files\7. Leadership\7. Membership\5. CSTA.pdf
+.\files\7. Leadership\7. Membership\6. Anubha Parashar - Profile _ Internet Society.pdf
+.\files\7. Leadership\7. Membership\7. IAENG_membership_173727.pdf
+.\files\7. Leadership\7. Membership\8. SCIEI.pdf
+.\files\7. Leadership\7. Membership\9. ANUBHA PARASHAR-IEDRC Membership Letter.pdf
+.\files\8. Blog\1. academic\1. leadership\1. warden\Office Order Anubha Parashar.pdf
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\14.jpg
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\20260516_162135.jpg
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\DSC00306.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\DSC00307.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\DSC00308.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\DSC00309.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\DSC00310.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\DSC00326.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\DSC00328.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\DSC00330.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\DSC00331.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\S5030161.mp4
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\S5030162.mp4
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\S5030166.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\S5030167.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\S5030169.JPG
+.\files\8. Blog\1. academic\1. leadership\2. wise captain\vice captain.png
+.\files\8. Blog\1. academic\1. leadership\3. senior perfect\13.jpg
+.\files\8. Blog\1. academic\1. leadership\3. senior perfect\DSC00628.JPG
+.\files\8. Blog\1. academic\1. leadership\3. senior perfect\sp.jpeg
+.\files\8. Blog\1. academic\2. Conferences and ppt\1. Udaipur\20160304_181813.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\1. Udaipur\20160305_124021.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\1. Udaipur\20160305_141233.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\1. Udaipur\20160305_141254.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\1. Udaipur\20160807_165205.mp4
+.\files\8. Blog\1. academic\2. Conferences and ppt\1. Udaipur\20260516_173656.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\1. Udaipur\20260516_173659.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\1. Udaipur\MOV07929.mp4
+.\files\8. Blog\1. academic\2. Conferences and ppt\27. Organised ICCT conference\IMG20211213123342.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\27. Organised ICCT conference\IMG20211213123347.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\3. jaipur\20160807_165205 - Trim - Trim.mp4
+.\files\8. Blog\1. academic\2. Conferences and ppt\3. jaipur\20260516_174955.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\3. jaipur\20260516_175000.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\3. jaipur\IMG-20160812-WA0001.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\3. jaipur\IMG-20160812-WA0004.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\37. MUN\IMG_7544.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\37. MUN\IMG_7545.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\37. MUN\IMG_7547.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\37. MUN\IMG_7548.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\37. MUN\IMG_7549.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\37. MUN\OC.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\39. first ppt BVICAM\DSC03523.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\39. first ppt BVICAM\DSC03524.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\39. first ppt BVICAM\DSC03525.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\39. first ppt BVICAM\DSC03526.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\39. first ppt BVICAM\DSC03527.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\39. first ppt BVICAM\DSC03541.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\39. first ppt BVICAM\DSC03545.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\39. first ppt BVICAM\DSC03546.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\39. first ppt BVICAM\DSC03551.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\39. first ppt BVICAM\DSC03557.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\20180906_103004.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\20180906_103007.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\20180906_103024.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\20180906_103027.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\20180906_104746.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\20180906_123039(0).jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\20180918_001524.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\20180918_083356.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\20180918_083513.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\20260516_191825.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_0223 - Copy.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_0223.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_0226.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_1594.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_1598.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_1600.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_20180906_105102.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_20180906_105102_1.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_20180906_105107.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_20180906_105108.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_20180906_105115.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Coratia Conference\IMG_20180906_105115_1.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\20260516_173357.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\20260516_173407.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130125344.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130130722.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130142435.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130142449.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130142535.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130142635.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130142641.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130142642.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130143035.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130143111.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130143117.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130143151.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130143224.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130143225.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130143230.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130143241.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130143242.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130151549.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130151552.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130151555.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130152327.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\dubai\IMG20200130155858.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\20260516_180547.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG_0205.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG_0236.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG_0237.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG_0244.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG_0245.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG_0292.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190929120158.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190929120200.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190929120204.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190929120206.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190929120234.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190929121757.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190929154801.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190929154804.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190929154805.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190929154907.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190929154908.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICCT 2019\IMG20190930090821.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\icct 2023\20260516_175832.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\icct 2023\20260516_180003.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\icct 2023\dji_mimo_20230120_152400_0_1674208966086_photo.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\icct 2023\IMG_1009.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICICV\IMG20200117195203.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICICV\IMG20200117200925.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICICV\IMG20200117200933.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICICV\IMG20200117201052.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICICV\IMG20200118120332.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\ICICV\IMG20200118141657.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\20260516_173546.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\20260516_173556.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\20260516_173601.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\20260516_173608.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\20260516_180651.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\20260516_180656.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\20260516_180810.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\IMG20190928115646.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\IMG20190928123603.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\IMG20190928130009.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\IMG20190928130323.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\IMG20190928140440.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\IMG20190928140514.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\IMG20191001124303.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICCT 2019\IMG20191001124305.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised icct-17\20171222_120557.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised icct-17\20171223_164449.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised icct-17\20171223_164453.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised icct-17\20171223_164454.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised icct-17\20260516_175404.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised icct-17\20260516_175410.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised icct-17\20260516_175413.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICICV 2020\20260516_173202.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICICV 2020\20260516_173210.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICICV 2020\20260516_173241.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICICV 2020\20260516_173251.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICICV 2020\20260516_174221.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICICV 2020\20260516_174226.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised ICICV 2020\IMG20200118141710.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SIN Conference\20171015_125339.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SIN Conference\20260516_175020.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SIN Conference\20260516_175057.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SIN Conference\20260516_175622.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SIN Conference\20260516_175627.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SIN Conference\IMG_8811.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised Spec Conference\20260516_172947.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised Spec Conference\20260516_173216.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised Spec Conference\20260516_173300.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised Spec Conference\20260516_173315.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised Spec Conference\20260516_173319.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised Spec Conference\20260516_174040.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SSIC -1\20260516_175510.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SSIC -1\20260516_175513.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SSIC -1\20260516_175522.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SSIC-2\20260516_180300.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SSIC-2\20260516_180304.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\Organised SSIC-2\20260516_180312.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\sIN 17\20171013_153105.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\sIN 17\20171014_095620.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\sIN 17\20171014_154309.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\sIN 17\20171015_110015.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\sIN 17\20260516_175125.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\sIN 17\20260516_175631.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\sIN 17\IMG_8813.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-1\20170414_170023.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-1\20170414_170912.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-1\20170415_083940.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-1\20170415_132947.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-1\20170415_150135.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-1\20170502_175547.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-1\WhatsApp Image 2023-10-09 at 17.03.21.jpeg
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\20190118_102321.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\20190120_144305.jpg
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\DSC_0153.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\DSC_1087.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_1003.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_1009.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_1082.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_2894.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_2901.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_2911.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_2919.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_2922.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_2924.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_2927.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_3185.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_3204.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_3244.JPG
+.\files\8. Blog\1. academic\2. Conferences and ppt\SSIC-2\IMG_3288.JPG
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\20170627_093813.jpg
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\20170629_115953.jpg
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\20170629_120003.jpg
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\20170629_120004.jpg
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\20170629_120348.jpg
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\20170629_120354.jpg
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\DSC00136.JPG
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\DSC00138.JPG
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\DSC00140.JPG
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\DSC00142.JPG
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\DSC00144.JPG
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\DSC00150.JPG
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\DSC00151.JPG
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\DSC00153.JPG
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\DSC00156.JPG
+.\files\8. Blog\1. academic\3. workshops\10. IoT workshop\organised.jpeg
+.\files\8. Blog\1. academic\3. workshops\12. one week FDP - Computational Intelligence\20170119_134736.jpg
+.\files\8. Blog\1. academic\3. workshops\12. one week FDP - Computational Intelligence\20170119_134748.jpg
+.\files\8. Blog\1. academic\3. workshops\12. one week FDP - Computational Intelligence\org.png
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\1.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\2.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161219_130639.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161219_131344.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161219_132938.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161219_133037.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161219_133152.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161220_090831.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161220_135849.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161220_135918.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161220_140023.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161220_185536.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161224_125425.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161224_125442.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161224_133659.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161224_184627.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161225_100821.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161225_114445.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161225_120510.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161225_131929.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20161225_135355.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20260516_174916.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\20260516_174921.jpg
+.\files\8. Blog\1. academic\3. workshops\13. gian mnit - 2016\3.jpg
+.\files\8. Blog\1. academic\3. workshops\15. workshop-expert talk\20180208_143012.jpg
+.\files\8. Blog\1. academic\3. workshops\15. workshop-expert talk\20180208_143029.jpg
+.\files\8. Blog\1. academic\3. workshops\15. workshop-expert talk\20180208_143033.jpg
+.\files\8. Blog\1. academic\3. workshops\15. workshop-expert talk\IMG-20180211-WA0001.jpg
+.\files\8. Blog\1. academic\3. workshops\15. workshop-expert talk\IMG-20180212-WA0001.jpg
+.\files\8. Blog\1. academic\3. workshops\15. workshop-expert talk\Invitation Letter_Ms.Anubha Parashar.pdf
+.\files\8. Blog\1. academic\3. workshops\15. workshop-expert talk\news paper.jpg
+.\files\8. Blog\1. academic\3. workshops\16. image processing workshop\20180225_154426(0).jpg
+.\files\8. Blog\1. academic\3. workshops\16. image processing workshop\20260516_173848.jpg
+.\files\8. Blog\1. academic\3. workshops\16. image processing workshop\20260516_173852.jpg
+.\files\8. Blog\1. academic\3. workshops\16. image processing workshop\IMG-20180221-WA0002.jpg
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\20260516_174630.jpg
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\20260516_174650.jpg
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\20260516_174654.jpg
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\20260516_174657.jpg
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_20190708_110041.jpg
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_9117.jpg
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_9118.jpg
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_9120.jpg
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_9145.jpg
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_9626.JPG
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_9643.JPG
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_9646.JPG
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_9666.JPG
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_9693.JPG
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_9858.JPG
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG_9861.JPG
+.\files\8. Blog\1. academic\3. workshops\20. muj deep learning fdp\IMG20190710173317.jpg
+.\files\8. Blog\1. academic\3. workshops\30. Telemetry workshop\20190326_125529.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_111113.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_111956 - Trim.mp4
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_112456.mp4
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_112823.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_113024.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_113040.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_113522.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_113523.mp4
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_113553.mp4
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_113651.mp4
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_114408.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_114427.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_114747.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_115455.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_115508.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_115846.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_115903.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_115949.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_120413.mp4
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_120727.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_120744.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_120747.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_120751.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_122100.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170625_122821.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170626_113722.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20170626_123228.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20260516_174406.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20260516_174414.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20260516_174441.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20260516_174448.jpg
+.\files\8. Blog\1. academic\3. workshops\34. IIT delhi workshop\20260516_174454.jpg
+.\files\8. Blog\1. academic\3. workshops\38. workshop on AI\_MG_1065.jpg
+.\files\8. Blog\1. academic\3. workshops\38. workshop on AI\_MG_1088.jpg
+.\files\8. Blog\1. academic\3. workshops\38. workshop on AI\_MG_1110.jpg
+.\files\8. Blog\1. academic\3. workshops\38. workshop on AI\_MG_1124.jpg
+.\files\8. Blog\1. academic\3. workshops\38. workshop on AI\_MG_1126.jpg
+.\files\8. Blog\1. academic\3. workshops\38. workshop on AI\_MG_1129.jpg
+.\files\8. Blog\1. academic\3. workshops\38. workshop on AI\_MG_1132.jpg
+.\files\8. Blog\1. academic\3. workshops\38. workshop on AI\1.jpg
+.\files\8. Blog\1. academic\3. workshops\38. workshop on AI\2.jpg
+.\files\8. Blog\1. academic\3. workshops\38. workshop on AI\20260516_160631.jpg
+.\files\8. Blog\1. academic\3. workshops\38. workshop on AI\IMG_1163.jpg
+.\files\8. Blog\1. academic\3. workshops\6. Gian MNIT - 2017\20170103_131338.jpg
+.\files\8. Blog\1. academic\3. workshops\6. Gian MNIT - 2017\20170103_131348.jpg
+.\files\8. Blog\1. academic\3. workshops\6. Gian MNIT - 2017\WhatsApp Image 2023-10-09 at 16.22.13 (1).jpeg
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\10.png
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0276.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0277.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0281.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0282.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0283.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0285.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0290.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0292.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0303.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0304.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0305.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\DSC_0309.JPG
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\Screenshot_2020-06-23-06-02-18-55.jpg
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\smart-city-expo-delegate-dr-anubha-parashar.png
+.\files\8. Blog\1. academic\3. workshops\7. Novelence\White with Photo Header Workshop Certificate.pdf
+.\files\8. Blog\1. academic\3. workshops\9. Oracle Workshop\DSC_0175.JPG
+.\files\8. Blog\1. academic\3. workshops\9. Oracle Workshop\DSC_0176.JPG
+.\files\8. Blog\1. academic\3. workshops\9. Oracle Workshop\DSC_0181.JPG
+.\files\8. Blog\1. academic\3. workshops\9. Oracle Workshop\DSC_0183.JPG
+.\files\8. Blog\1. academic\3. workshops\9. Oracle Workshop\DSC_0185.JPG
+.\files\8. Blog\1. academic\3. workshops\9. Oracle Workshop\DSC_0201.JPG
+.\files\8. Blog\1. academic\3. workshops\9. Oracle Workshop\DSC_0240.JPG
+.\files\8. Blog\1. academic\3. workshops\Gian 2018\20161224_184627.jpg
+.\files\8. Blog\1. academic\3. workshops\Gian 2018\20161225_100821.jpg
+.\files\8. Blog\1. academic\3. workshops\Gian 2018\20161225_114445.jpg
+.\files\8. Blog\1. academic\3. workshops\Gian 2018\20161225_120510.jpg
+.\files\8. Blog\1. academic\3. workshops\Gian 2018\20161225_131929.jpg
+.\files\8. Blog\1. academic\3. workshops\Gian 2018\20161225_135355.jpg
+.\files\8. Blog\1. academic\3. workshops\Gian 2018\20260516_173750.jpg
+.\files\8. Blog\1. academic\3. workshops\Gian 2018\20260516_173757.jpg
+.\files\8. Blog\1. academic\3. workshops\icicv workshop\20260516_174310.jpg
+.\files\8. Blog\1. academic\3. workshops\icicv workshop\20260516_174338.jpg
+.\files\8. Blog\1. academic\3. workshops\icicv workshop\IMG20200111103219.jpg
+.\files\8. Blog\1. academic\3. workshops\icicv workshop\IMG20200111135912.jpg
+.\files\8. Blog\1. academic\3. workshops\icicv workshop\IMG20200111140157.jpg
+.\files\8. Blog\1. academic\3. workshops\icicv workshop\IMG20200111143408.jpg
+.\files\8. Blog\1. academic\4. expert talk\1\20180208_143012.jpg
+.\files\8. Blog\1. academic\4. expert talk\1\20180208_143029.jpg
+.\files\8. Blog\1. academic\4. expert talk\1\20180208_143033.jpg
+.\files\8. Blog\1. academic\4. expert talk\1\DR. ANUBHA PARASHAR.pdf
+.\files\8. Blog\1. academic\4. expert talk\1\FDP MAY 2019.pdf
+.\files\8. Blog\1. academic\4. expert talk\1\FDP MAY 2019_Page_1.jpg
+.\files\8. Blog\1. academic\4. expert talk\1\FDP MAY 2019_Page_2.jpg
+.\files\8. Blog\1. academic\4. expert talk\1\IMG-20180211-WA0001.jpg
+.\files\8. Blog\1. academic\4. expert talk\1\IMG-20180212-WA0001.jpg
+.\files\8. Blog\1. academic\4. expert talk\1\Invitation Letter_Ms.Anubha Parashar.pdf
+.\files\8. Blog\1. academic\4. expert talk\1\New Doc 2018-02-10.jpg
+.\files\8. Blog\1. academic\4. expert talk\1\news paper.jpg
+.\files\8. Blog\1. academic\4. expert talk\2\certi.pdf
+.\files\8. Blog\1. academic\4. expert talk\2\FB_IMG_1594393539551.jpg
+.\files\8. Blog\1. academic\4. expert talk\3. expert talk on AI\_MG_1110.jpg
+.\files\8. Blog\1. academic\4. expert talk\3. expert talk on AI\_MG_1124.jpg
+.\files\8. Blog\1. academic\4. expert talk\3. expert talk on AI\_MG_1126.jpg
+.\files\8. Blog\1. academic\4. expert talk\3. expert talk on AI\_MG_1129.jpg
+.\files\8. Blog\1. academic\4. expert talk\3. expert talk on AI\_MG_1132.jpg
+.\files\8. Blog\1. academic\4. expert talk\3. expert talk on AI\1.jpeg
+.\files\8. Blog\1. academic\4. expert talk\3. expert talk on AI\20260516_160631.jpg
+.\files\8. Blog\1. academic\4. expert talk\4. expert talk on IoT\IMG-20190326-WA0004.jpg
+.\files\8. Blog\1. academic\4. expert talk\4. expert talk on IoT\IMG-20200107-WA0008.jpg
+.\files\8. Blog\1. academic\4. expert talk\4. expert talk on IoT\IMG-20200107-WA0009.jpg
+.\files\8. Blog\1. academic\4. expert talk\5. iot speaker\IMG_20210214_105415.jpg
+.\files\8. Blog\1. academic\4. expert talk\6\1.png
+.\files\8. Blog\1. academic\4. expert talk\7\20260516_172526.jpg
+.\files\8. Blog\1. academic\4. expert talk\7\20260516_172531.jpg
+.\files\8. Blog\1. academic\4. expert talk\7\20260516_172546.jpg
+.\files\8. Blog\1. academic\4. expert talk\8. Expert talk on AI\AIU-VGU-AADC_FDP_ENHANCING ONLINE TEACHIN AND LEARNING.pdf
+.\files\8. Blog\1. academic\4. expert talk\8. Expert talk on AI\Dr. Anubha Parashar.pdf
+.\files\8. Blog\1. academic\4. expert talk\9. times of india\1.png
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_112911.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_114545.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_114558.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_132520.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_140538.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_140541.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_143416.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_143422.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_143429.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_143436.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_143444.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_143455.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_143503.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_143515.jpg
+.\files\8. Blog\1. academic\5. faculty visits\1. zagreb, coratia\20180904_150657.jpg
+.\files\8. Blog\1. academic\5. faculty visits\2. rijeka, coratia\20180911_104449.jpg
+.\files\8. Blog\1. academic\5. faculty visits\2. rijeka, coratia\20180911_105019.jpg
+.\files\8. Blog\1. academic\5. faculty visits\2. rijeka, coratia\20180911_105713.jpg
+.\files\8. Blog\1. academic\5. faculty visits\2. rijeka, coratia\20180911_110623.jpg
+.\files\8. Blog\1. academic\5. faculty visits\2. rijeka, coratia\20180911_110642.jpg
+.\files\8. Blog\1. academic\5. faculty visits\2. rijeka, coratia\20180911_110644.jpg
+.\files\8. Blog\1. academic\5. faculty visits\2. rijeka, coratia\20180911_110652.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180320_154838.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180320_155001.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180320_155359.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180320_155707.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_105324.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_105452.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_105455.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_105511.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_114915.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_115034.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_124422.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_133833.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_133836.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_133840.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_133848.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_133904.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_133922.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_133924.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_133927.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_134029.mp4
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_134113.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_134812.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_135456.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_141157.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_141305.mp4
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_141352.mp4
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_141452.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_141455.mp4
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_141615.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_141643.mp4
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_144009.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_144033.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_144037.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20180321_144259.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\20260516_175737.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\IMG20230320174938.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\IMG20230320174945.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\IMG20230320174948.jpg
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\VID-20180323-WA0012.mp4
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\VID-20180323-WA0013.mp4
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\VID-20180324-WA0004.mp4
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\VID-20180324-WA0006.mp4
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\VID-20180324-WA0008.mp4
+.\files\8. Blog\1. academic\5. faculty visits\3. Rajasthan Dijifest\VID-20180324-WA0010.mp4
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180926_114045.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180926_145019.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180926_145841.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180926_145843.mp4
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180926_150141.mp4
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180926_153654.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180927_134950.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180927_134955.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180927_142833.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180927_153928.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180927_153942.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180927_153955.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180927_155031.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180927_155038.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180927_155058.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180927_155107.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180928_114619.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180928_124540.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180928_153025.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180928_153055.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180928_153541.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180928_153549.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20180928_153635.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20260516_175743.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\20260516_175754.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\IMG-20180925-WA0010.jpeg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\IMG-20180926-WA0057.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\IMG-20180927-WA0008.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\IMG-20180927-WA0010.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\IMG-20180927-WA0017.jpg
+.\files\8. Blog\1. academic\5. faculty visits\4. IT day and muj stall\IMG-20180928-WA0012.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_135450.mp4
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_135523.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_135621.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_135635.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_135742.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_135747.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_135750.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_135755.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_135806.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_135812.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_140030.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_140033.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170318_140209.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_141535.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_141540.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_141541.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_141544.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_141546.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_141552.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_141555.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_141722.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_141726(0).jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_141726.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_141825.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_143313.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_144408.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_154955.jpg
+.\files\8. Blog\1. academic\5. faculty visits\5. robotics fair\20170319_203809.mp4
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712121659.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712121811.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712121820.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712121907.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712121911.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712121952.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712121955.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712122006.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712122019.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712122025.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712122033.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712122039.jpg
+.\files\8. Blog\1. academic\5. faculty visits\6. physics day\IMG20220712122050.jpg
+.\files\8. Blog\1. academic\6. Events done\0. mou\IMG_3037.JPG
+.\files\8. Blog\1. academic\6. Events done\0. mou\IMG_3041.JPG
+.\files\8. Blog\1. academic\6. Events done\0. mou\IMG_3051.JPG
+.\files\8. Blog\1. academic\6. Events done\1. Alumni\Aditya Agarwal\20190826_180500.jpeg
+.\files\8. Blog\1. academic\6. Events done\1. Alumni\Aditya Agarwal\20190826_180521.jpeg
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5615.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5617.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5620.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5621.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5625.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5626.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5645.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5646.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5648.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5655.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5657.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5661.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5662.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5669.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5672.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5676.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5705.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5714.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5725.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\IMG_5764.JPG
+.\files\8. Blog\1. academic\6. Events done\11. Vikram award\Vikram award.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_182726.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184130.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184141.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184142.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184154.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184229.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184237.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184241.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184254.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184317.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184330.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184332.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_184344.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_185234.jpg
+.\files\8. Blog\1. academic\6. Events done\14. Self defence\20180319_185322.jpg
+.\files\8. Blog\1. academic\6. Events done\17. yoga day\20180226_112614.jpg
+.\files\8. Blog\1. academic\6. Events done\17. yoga day\20180226_112618.jpg
+.\files\8. Blog\1. academic\6. Events done\17. yoga day\20180226_112926.jpg
+.\files\8. Blog\1. academic\6. Events done\17. yoga day\20180226_113135.jpg
+.\files\8. Blog\1. academic\6. Events done\17. yoga day\20180226_113139.jpg
+.\files\8. Blog\1. academic\6. Events done\18. Alumni talk\IMG20200108161445.jpg
+.\files\8. Blog\1. academic\6. Events done\18. Alumni talk\IMG20200108161523.jpg
+.\files\8. Blog\1. academic\6. Events done\18. Alumni talk\IMG20200108161550.jpg
+.\files\8. Blog\1. academic\6. Events done\18. Alumni talk\IMG-20201017-WA0031.jpg
+.\files\8. Blog\1. academic\6. Events done\18. Alumni talk\VID20200108161559 - Trim.mp4
+.\files\8. Blog\1. academic\6. Events done\expert talk by big basket CEO\20181101_140529.jpg
+.\files\8. Blog\1. academic\6. Events done\expert talk by big basket CEO\KQZS8149.JPG
+.\files\8. Blog\1. academic\7. Hackathon Head\28. school hackathon\IMG20191113111251.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\28. school hackathon\IMG20191113111254.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\28. school hackathon\IMG20191113111300.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\28. school hackathon\IMG20191113111306.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\28. school hackathon\IMG20191113111314.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\28. school hackathon\IMG20191113111451.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\28. school hackathon\IMG20191113111455.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\28. school hackathon\IMG20191113111653.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\28. school hackathon\IMG20191113112224.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\28. school hackathon\IMG20191113112227.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\31. hackathon head\20181114_102243.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\31. hackathon head\20181114_102539.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\31. hackathon head\20181114_102544.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\31. hackathon head\20190113_205506.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\31. hackathon head\IMG_1163.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\31. hackathon head\MUJHACKS 2 JUDGING CRITERIA.pdf
+.\files\8. Blog\1. academic\7. Hackathon Head\31. hackathon head\smart-city-expo-delegate-dr-anubha-parashar.png
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181027_184509.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181027_190904.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181028_165236.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181028_165243.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181028_182839.mp4
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181028_183028.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181028_183044.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181028_184248.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181028_184310.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181028_184349.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181028_200405.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\20181028_200428.jpg
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\IMG_1754.JPG
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\IMG_2521.JPG
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\IMG_2522.JPG
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\IMG_2525.JPG
+.\files\8. Blog\1. academic\7. Hackathon Head\8. Hackathon winners-neemrana\IMG_2527.JPG
+.\files\8. Blog\1. academic\7. Hackathon Head\rajasthan it day hackathon head\20260516_175748.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0004.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0006.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0007.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0008.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0009.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0010.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0012.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0013.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0014.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0016.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0017.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.01.2018Green club Hangout\IMG-20180112-WA0027.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.02.2018. Chair table distribution\IMG-20180212-WA0017.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.02.2018. Chair table distribution\IMG-20180212-WA0018.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.02.2018. Chair table distribution\IMG-20180212-WA0021.jpg
+.\files\8. Blog\1. academic\8. Social Activities\12.02.2018. Chair table distribution\IMG-20180212-WA0023.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2016\New Doc 8 - Copy.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2016\New Doc 8.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\certificate_anubha_parashar.pdf
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2474.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2480.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2483.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2484.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2490.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2492.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2495.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2496.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2505.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2508.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2511.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2514.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2520.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2534.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2535.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2536.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2537.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2538.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2541.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2018\IMG_2543.JPG
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2019\IMG20191114104421.png
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2019\IMG20191114141747.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2019\IMG20191114141904.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2019\IMG20191114141906.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2019\IMG20191114142411.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation - 2019\IMG20191114142442.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation-2017\20171116_142416.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation-2017\20171116_165911.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation-2017\img.jpeg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation-2017\IMG-20171116-WA0002.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation-2017\IMG-20171116-WA0003.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation-2017\IMG-20171116-WA0011.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation-2017\IMG-20171116-WA0012.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation-2017\IMG-20171116-WA0018.jpg
+.\files\8. Blog\1. academic\8. Social Activities\2. Blood Donation-2017\IMG-20171116-WA0022.jpg
+.\files\8. Blog\1. academic\8. Social Activities\25.11.2017 Dhemi School visit\DOC-20180228-WA0001.pdf
+.\files\8. Blog\1. academic\8. Social Activities\25.11.2017 Dhemi School visit\IMG-20171125-WA0001.jpg
+.\files\8. Blog\1. academic\8. Social Activities\25.11.2017 Dhemi School visit\IMG-20171125-WA0002.jpg
+.\files\8. Blog\1. academic\8. Social Activities\25.11.2017 Dhemi School visit\IMG-20171125-WA0003.jpg
+.\files\8. Blog\1. academic\8. Social Activities\25.11.2017 Dhemi School visit\IMG-20171125-WA0004.jpg
+.\files\8. Blog\1. academic\8. Social Activities\25.11.2017 Dhemi School visit\IMG-20171125-WA0005.jpg
+.\files\8. Blog\1. academic\8. Social Activities\25.11.2017 Dhemi School visit\IMG-20171125-WA0006.jpg
+.\files\8. Blog\1. academic\8. Social Activities\25.11.2017 Dhemi School visit\IMG-20171125-WA0007.jpg
+.\files\8. Blog\1. academic\8. Social Activities\25.11.2017 Dhemi School visit\IMG-20171125-WA0008.jpg
+.\files\8. Blog\1. academic\8. Social Activities\25.11.2017 Dhemi School visit\IMG-20171125-WA0009.jpg
+.\files\8. Blog\1. academic\8. Social Activities\26.02.2018. Beti Bachao Beti Padhao\IMG-20180227-WA0006.jpg
+.\files\8. Blog\1. academic\8. Social Activities\26.02.2018. Beti Bachao Beti Padhao\IMG-20180227-WA0007.jpg
+.\files\8. Blog\1. academic\8. Social Activities\26.02.2018. Beti Bachao Beti Padhao\IMG-20180227-WA0008.jpg
+.\files\8. Blog\1. academic\8. Social Activities\26.02.2018. Beti Bachao Beti Padhao\IMG-20180227-WA0009.jpg
+.\files\8. Blog\1. academic\8. Social Activities\26.02.2018. Beti Bachao Beti Padhao\IMG-20180227-WA0010.jpg
+.\files\8. Blog\1. academic\8. Social Activities\26.02.2018. Beti Bachao Beti Padhao\IMG-20180227-WA0011.jpg
+.\files\8. Blog\1. academic\8. Social Activities\26.02.2018. Beti Bachao Beti Padhao\IMG-20180227-WA0012.jpg
+.\files\8. Blog\1. academic\8. Social Activities\26.02.2018. Beti Bachao Beti Padhao\IMG-20180227-WA0013.jpg
+.\files\8. Blog\1. academic\8. Social Activities\26.02.2018. Beti Bachao Beti Padhao\IMG-20180227-WA0014.jpg
+.\files\8. Blog\1. academic\8. Social Activities\27.02.2018 Village visit\IMG-20180227-WA0015.jpg
+.\files\8. Blog\1. academic\8. Social Activities\27.02.2018 Village visit\IMG-20180227-WA0016.jpg
+.\files\8. Blog\1. academic\8. Social Activities\27.02.2018 Village visit\IMG-20180227-WA0017.jpg
+.\files\8. Blog\1. academic\8. Social Activities\27.02.2018 Village visit\IMG-20180227-WA0018.jpg
+.\files\8. Blog\1. academic\8. Social Activities\27.02.2018 Village visit\IMG-20180227-WA0019.jpg
+.\files\8. Blog\1. academic\8. Social Activities\27.02.2018 Village visit\IMG-20180227-WA0020.jpg
+.\files\8. Blog\1. academic\8. Social Activities\27.02.2018 Village visit\IMG-20180227-WA0021.jpg
+.\files\8. Blog\1. academic\8. Social Activities\32. cleanileness drive\20181002_091119.jpg
+.\files\8. Blog\1. academic\8. Social Activities\32. cleanileness drive\20181002_092144.jpg
+.\files\8. Blog\1. academic\8. Social Activities\32. cleanileness drive\20181002_092635.jpg
+.\files\8. Blog\1. academic\8. Social Activities\32. cleanileness drive\20181002_092657.jpg
+.\files\8. Blog\1. academic\8. Social Activities\donation - Copy\20260516_161550.jpg
+.\files\8. Blog\1. academic\8. Social Activities\donation\20260516_161425.jpg
+.\files\8. Blog\1. academic\8. Social Activities\projector distribution\IMG-20171230-WA0008.jpg
+.\files\8. Blog\1. academic\8. Social Activities\projector distribution\IMG-20180208-WA0001.jpg
+.\files\8. Blog\1. academic\8. Social Activities\projector distribution\IMG-20180208-WA0012.jpg
+.\files\8. Blog\1. academic\8. Social Activities\projector distribution\IMG-20180208-WA0015.jpg
+.\files\8. Blog\1. academic\8. Social Activities\projector distribution\IMG-20180208-WA0016.jpg
+.\files\8. Blog\1. academic\8. Social Activities\projector distribution\IMG-20180208-WA0017.jpg
+.\files\8. Blog\1. academic\academic.jpg
+.\files\8. Blog\1.png
+.\files\8. Blog\2. Connection\1. Conference outings\1. MUJ SSIC\_DSC1190.JPG
+.\files\8. Blog\2. Connection\1. Conference outings\1. MUJ SSIC\IMG_2746.JPG
+.\files\8. Blog\2. Connection\1. Conference outings\1. MUJ SSIC\IMG_2782.JPG
+.\files\8. Blog\2. Connection\1. Conference outings\1. MUJ SSIC\IMG_2790.JPG
+.\files\8. Blog\2. Connection\1. Conference outings\1. MUJ SSIC\IMG_2795.JPG
+.\files\8. Blog\2. Connection\1. Conference outings\1. MUJ SSIC\IMG_2806.JPG
+.\files\8. Blog\2. Connection\1. Conference outings\1. MUJ SSIC\IMG_2841.JPG
+.\files\8. Blog\2. Connection\1. Conference outings\1. MUJ SSIC\IMG_2855.JPG
+.\files\8. Blog\2. Connection\1. Conference outings\1. MUJ SSIC\IMG_2878.JPG
+.\files\8. Blog\2. Connection\1. Conference outings\1. MUJ SSIC\IMG_2892.JPG
+.\files\8. Blog\2. Connection\1. Conference outings\1. MUJ SSIC\IMG_2908.JPG
+.\files\8. Blog\2. Connection\1. Conference outings\2. ICICV conference outing\IMG20200213200238.jpg
+.\files\8. Blog\2. Connection\1. Conference outings\2. ICICV conference outing\IMG20200213200257.jpg
+.\files\8. Blog\2. Connection\1. Conference outings\2. ICICV conference outing\IMG20200213201825.jpg
+.\files\8. Blog\2. Connection\1. Conference outings\2. ICICV conference outing\IMG20200213203430.jpg
+.\files\8. Blog\2. Connection\1. Conference outings\2. ICICV conference outing\IMG20200213210742.jpg
+.\files\8. Blog\2. Connection\1. Conference outings\2. ICICV conference outing\IMG20200213210750.jpg
+.\files\8. Blog\2. Connection\1. Conference outings\2. ICICV conference outing\IMG20200213210800.jpg
+.\files\8. Blog\2. Connection\1. Conference outings\2. ICICV conference outing\IMG20200213212414.jpg
+.\files\8. Blog\2. Connection\1. Conference outings\2. ICICV conference outing\IMG20200213214307.jpg
+.\files\8. Blog\2. Connection\1. Conference outings\2. ICICV conference outing\IMG20200213214329.jpg
+.\files\8. Blog\2. Connection\2. Memories\20260516_161721.jpg
+.\files\8. Blog\2. Connection\2. Memories\20260516_161827.jpg
+.\files\8. Blog\2. Connection\2. Memories\20260516_162101.jpg
+.\files\8. Blog\2. Connection\2. Memories\20260516_162114.jpg
+.\files\8. Blog\2. Connection\2. Memories\20260516_162123.jpg
+.\files\8. Blog\2. Connection\2. Memories\20260516_162201.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\5b0d-1fb0-4da0-a09b-26b3a9ba6300.mp4
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\656b0c1af9b7add3860eb776.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\656b1a6077fab2c23891405b.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\656b1d91b77209f5828a1103.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\656b3fdcc6defebe156121df.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\656b3fdcc6defebe156121f3.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\656b3fdcc6defebe15612211.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\656b3fdcc6defebe15612225.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\656b3fddc6defebe156122cd.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\730e-732d-4719-97bc-7429e51f1f04.mp4
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG_20231202_133850.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202120845.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202134823.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202153607.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202154430.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202154500.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202155154.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202162555.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202162658.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202164552.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202171839.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202175748.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202182528.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202182620.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\IMG20231202191545.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\VID20231202152701 - Trim.mp4
+.\files\8. Blog\2. Connection\2. Memories\phd convocation\VID20231202152701.mp4
+.\files\8. Blog\2. Connection\2. Memories\phd defence\IMG_20230412_130141.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd defence\IMG_20230412_140056.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd defence\IMG_20230412_140109.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd defence\IMG_20230412_140117.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd defence\IMG_20230412_140120.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd defence\IMG_20230412_140658.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd defence\IMG_20230412_140846.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd defence\IMG_20230412_140857.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd defence\IMG_20230412_141826.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd defence\IMG_20230412_150938.jpg
+.\files\8. Blog\2. Connection\2. Memories\phd defence\video_20230412_131215.mp4
+.\files\8. Blog\2. Connection\2. Memories\phd defence\video_20230412_131225.mp4
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\111.jpeg
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\111111.png
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\2222.png
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\beautiful mom.jpg
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\beautiful mom-.jpg
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\beautiful mom--.jpg
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\DSC03664.JPG
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\DSC06037.JPG
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\DSC07045.JPG
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\first ppt at bvicam.JPG
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\first ppt.JPG
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\me my sis my mom.jpg
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\nosu.jpeg
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\phd ppt.jpeg
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\phd ppt-.jpeg
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\WhatsApp Image 2021-05-18 at 09.58.29 (9).jpeg
+.\files\8. Blog\2. Connection\3. Family\3. mom birthday\with Sam at office.jpeg
+.\files\8. Blog\2. Connection\header\DSC03831.JPG
+.\files\8. Blog\2. Connection\header\IMG20200128140641.jpg
+.\files\8. Blog\2. Connection\header\IMG20200128140658.jpg
+.\files\8. Blog\2. Connection\header\IMG20200128164947.jpg
+.\files\8. Blog\3. Sports\1. State\1.jpg
+.\files\8. Blog\3. Sports\1. State\2.jpg
+.\files\8. Blog\3. Sports\1. State\3.jpg
+.\files\8. Blog\3. Sports\1. State\4.jpg
+.\files\8. Blog\3. Sports\2. Regional & Inter University\10.jpg
+.\files\8. Blog\3. Sports\2. Regional & Inter University\5\20260516_175143.jpg
+.\files\8. Blog\3. Sports\2. Regional & Inter University\5\602033_351514388292755_1099466682_n.jpg
+.\files\8. Blog\3. Sports\2. Regional & Inter University\5\9.jpg
+.\files\8. Blog\3. Sports\2. Regional & Inter University\5\DSC01012.JPG
+.\files\8. Blog\3. Sports\2. Regional & Inter University\5\DSC01014.JPG
+.\files\8. Blog\3. Sports\2. Regional & Inter University\5\DSC01029.JPG
+.\files\8. Blog\3. Sports\2. Regional & Inter University\5\Photo1299.jpg
+.\files\8. Blog\3. Sports\2. Regional & Inter University\5\Photo1303.jpg
+.\files\8. Blog\3. Sports\2. Regional & Inter University\6.jpg
+.\files\8. Blog\3. Sports\2. Regional & Inter University\7.jpg
+.\files\8. Blog\3. Sports\2. Regional & Inter University\8.jpg
+.\files\8. Blog\3. Sports\2. Regional & Inter University\9.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\11\20260516_162143.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\11\20260516_162148.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\11\20260516_170948.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\11\getting medal.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\12.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\13.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\14.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\15.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\16.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\17.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\18.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\19.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\20.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\21.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\22.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\23.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\24.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\25.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\26.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\27.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\28.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\29\10.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\29\20181218_132223.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\29\20181218_132224.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\29\20181218_132226.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\29\20181218_132227.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\29\20181218_132232.jpg
+.\files\8. Blog\3. Sports\3. Office  College  School\30. won in cricket match in invincible ocean on July 2024.jpg
+.\files\8. Blog\3. Sports\header\1.png
+.\files\8. Blog\3. Sports\header\2.png
+.\files\8. Blog\3. Sports\header\3.png
+.\files\8. Blog\3. Sports\header\4.png
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702070832_BURST000_COVER.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702070932.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702070939.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702071120.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702071229.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702071507.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702072341.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702072357.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702072545.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702072851.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702073157.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702073442.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702073454.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702073515.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702073629.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702073634.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702073636.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702073656.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702073659.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702073825.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702074329.jpg
+.\files\8. Blog\4. Avocations\1. trekking\1. gad ganesh with minki\IMG20230702074534.jpg
+.\files\8. Blog\4. Avocations\1. trekking\10. samod with mom\IMG_20230430_064856.jpg
+.\files\8. Blog\4. Avocations\1. trekking\10. samod with mom\IMG_20230430_065742.jpg
+.\files\8. Blog\4. Avocations\1. trekking\10. samod with mom\IMG_20230430_070056.jpg
+.\files\8. Blog\4. Avocations\1. trekking\10. samod with mom\IMG_20230430_071250.jpg
+.\files\8. Blog\4. Avocations\1. trekking\10. samod with mom\IMG_20230430_071607.jpg
+.\files\8. Blog\4. Avocations\1. trekking\10. samod with mom\IMG_20230430_072252.jpg
+.\files\8. Blog\4. Avocations\1. trekking\10. samod with mom\IMG_20230430_072312.jpg
+.\files\8. Blog\4. Avocations\1. trekking\10. samod with mom\IMG_20230430_072428.jpg
+.\files\8. Blog\4. Avocations\1. trekking\10. samod with mom\IMG_20230430_072556.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_163503.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_164103.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_164346.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_164717.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_164803.mp4
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_165018.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_165305.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_165404.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_165422.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_165511.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_165629.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_170112.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_170328.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_170732.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_170851.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_170949.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_171246.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_172806.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_173627.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_174153.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_174230.jpg
+.\files\8. Blog\4. Avocations\1. trekking\11. girjadevi temple and tracking\20170127_174348.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\0.mp4
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\1.mp4
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\3.mp4
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512133839.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512133842.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512134216.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512134235.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512134709.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512134711.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512135011.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512135140.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512140341.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512140413.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512140451.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512140454.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512140550.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512140928.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512141130.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512141421.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512142523.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512143759.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512144744.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512150018.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512150115.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230512150821.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230521061912.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230521063442.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230521063627.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\IMG20230521064543.jpg
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\VID20230512134259.mp4
+.\files\8. Blog\4. Avocations\1. trekking\2. JAL MAHAL WITH YASH\VID20230512134658.mp4
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205165949.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205170517.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205170639.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205170648.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205170651.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205170703.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205170842.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205171024.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205171029.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205171034.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205171040.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205171126.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205172400.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205172406.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205172410.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205172439.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205172636.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205172640.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205172709.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205172824.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205172837.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205173010.jpg
+.\files\8. Blog\4. Avocations\1. trekking\3. Samod with minki\IMG20230205185028.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212165616.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212165618.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212165802.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212165805.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212165820.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212170005.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212170008.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212170624.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212170638.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212170643.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212170749.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212170806.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212171047.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212171106.jpg
+.\files\8. Blog\4. Avocations\1. trekking\4. chulgiri with minki\IMG20230212171129.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028064400.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028064736.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028065411.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028070743.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028071446.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028071750.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028071814.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028072127.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028072138.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028072154.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028072239.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028072736.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028072923.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028074853.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028075534.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028075923.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028075935.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028080304.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028081448.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028081857.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028082237.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028082432.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028082448.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028082513.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028082611.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028083136.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028083201.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028084905.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028085627.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028090236.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028090452.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028091450.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG20231028093234.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG-20240408-WA0013.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG-20240408-WA0020.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG-20240408-WA0021.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG-20240408-WA0024.jpg
+.\files\8. Blog\4. Avocations\1. trekking\5. gad ganesh with Apoo\IMG-20240409-WA0002.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407074915.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407080646.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407081528.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407081622.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407082246.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407082259.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407082352.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407082524.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407082750.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407083255.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407083332.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407083812.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407084244.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407084736.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407085040.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407085231.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407085327.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407091743.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407091747.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407091823.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407092112.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407092445.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407092749.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407093043.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407093109.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407093707.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407095045.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\IMG20240407095414.jpg
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\VID20240407075305 - Trim - Trim.mp4
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\VID20240407085624.mp4
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\VID20240407085648.mp4
+.\files\8. Blog\4. Avocations\1. trekking\6. gad ganesh with mom\video_20240406_173514 - Trim - Trim - Trim.mp4
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827060829.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827060941.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827060945.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827062835.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827062922.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827064551.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827065520.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827065648.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827065723.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827071152.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827073057.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827073810.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827074154.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827074720.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827074735.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827075018.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827075158.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827075615.jpg
+.\files\8. Blog\4. Avocations\1. trekking\7. dence forest\IMG20230827083209.jpg
+.\files\8. Blog\4. Avocations\1. trekking\8. Jal mahal\IMG20230820061053.jpg
+.\files\8. Blog\4. Avocations\1. trekking\8. Jal mahal\IMG20230820061056.jpg
+.\files\8. Blog\4. Avocations\1. trekking\8. Jal mahal\IMG20230820061255.jpg
+.\files\8. Blog\4. Avocations\1. trekking\8. Jal mahal\IMG20230820062450.jpg
+.\files\8. Blog\4. Avocations\1. trekking\8. Jal mahal\IMG20230820062736.jpg
+.\files\8. Blog\4. Avocations\1. trekking\8. Jal mahal\VID20230820064300 - Trim - Trim - Trim.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\DCIM2495430.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331064839.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331064933.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331065111.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331065501.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331065513.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331065516.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331065607.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331065842.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331070001.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331070621.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331071222.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331071827.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331072032.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331073557.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331082421.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331082805.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331083204.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331083219.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331083253.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331083536.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331083543.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331083649.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331083739.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331083923.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331084149.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\IMG20240331084217.jpg
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331065126 - Trim.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331065852.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331070137 - Trim.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331071048 - Trim - Trim.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331071132.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331072951 - Trim.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331082445.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331082533 - Trim.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331082631.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331082809.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331082818 - Trim.mp4
+.\files\8. Blog\4. Avocations\1. trekking\9. amer\VID20240331083014 - Trim - Trim.mp4
+.\files\8. Blog\4. Avocations\2. Drawing\1\20260516_164941.jpg
+.\files\8. Blog\4. Avocations\2. Drawing\1\IMG_2577.JPG
+.\files\8. Blog\4. Avocations\2. Drawing\1\IMG_2618.JPG
+.\files\8. Blog\4. Avocations\2. Drawing\1\WhatsApp Image 2023-10-09 at 17.19.35.png
+.\files\8. Blog\4. Avocations\2. Drawing\1\WhatsApp Image 2023-10-09 at 17.19.46.png
+.\files\8. Blog\4. Avocations\2. Drawing\2.jpg
+.\files\8. Blog\4. Avocations\2. Drawing\3.jpg
+.\files\8. Blog\4. Avocations\2. Drawing\4.jpg
+.\files\8. Blog\4. Avocations\2. Drawing\5.jpg
+.\files\8. Blog\4. Avocations\2. Drawing\artwork\DSC03041.JPG
+.\files\8. Blog\4. Avocations\2. Drawing\artwork\IMG20220528064540.jpg
+.\files\8. Blog\4. Avocations\2. Drawing\artwork\oil painting.JPG
+.\files\8. Blog\4. Avocations\2. Drawing\artwork\oil painting--.png
+.\files\8. Blog\4. Avocations\2. Drawing\artwork\water color.jpg
+.\files\8. Blog\4. Avocations\2. Drawing\artwork\with ice cream stick.png
+.\files\8. Blog\4. Avocations\2. Drawing\artwork\with pop.png
+.\files\8. Blog\4. Avocations\2. Drawing\artwork\with pop-.png
+.\files\8. Blog\4. Avocations\header\avocation.png
+.\files\8. Blog\author.jpg
+.\files\8. Blog\box\1.jpeg
+.\files\8. Blog\box\2.jpeg
+.\files\8. Blog\box\3.jpg
+.\files\8. Blog\box\4.png
+.\Satner Portfolio -doc\img\logo.png
+.\vendors\owl-carousel\assets\ajax-loader.gif

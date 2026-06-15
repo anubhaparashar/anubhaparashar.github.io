@@ -10,8 +10,8 @@
     'publication.html': 'publication', 'conferences.html': 'publication',
     'project.html': 'project', 'grant.html': 'project', 'industry.html': 'project',
     'award.html': 'award',
-    'leadership-activities.html': 'event',
-    'blog.html': 'blog', 'connection.html': 'blog', 'academics.html': 'blog', 'sports.html': 'blog', 'avocations.html': 'blog'
+    'event.html': 'event',
+    'blog.html': 'blog', 'social-life.html': 'blog', 'academics.html': 'blog', 'sports.html': 'blog', 'avocations.html': 'blog'
   };
   var currentFile = window.location.pathname.split('/').pop() || '';
   var activePage  = PAGE_MAP[currentFile] || '';
@@ -49,14 +49,14 @@
     '              </ul>' +
     '            </li>' +
     '            <li class="nav-item" data-nav="award"><a class="nav-link" href="award.html">Awards</a></li>' +
-    '            <li class="nav-item" data-nav="event"><a class="nav-link" href="leadership-activities.html">Leadership</a></li>' +
+    '            <li class="nav-item" data-nav="event"><a class="nav-link" href="event.html">Leadership</a></li>' +
     '            <li class="nav-item submenu dropdown" data-nav="blog">' +
     '              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"' +
     '                aria-haspopup="true" aria-expanded="false">Blog</a>' +
     '              <ul class="dropdown-menu">' +
     '                <li class="nav-item"><a class="nav-link" href="blog.html">Blog Overview</a></li>' +
     '                <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>' +
-    '                <li class="nav-item"><a class="nav-link" href="connection.html">Social Life</a></li>' +
+    '                <li class="nav-item"><a class="nav-link" href="social-life.html">Social Life</a></li>' +
     '                <li class="nav-item"><a class="nav-link" href="sports.html">Sports</a></li>' +
     '                <li class="nav-item"><a class="nav-link" href="avocations.html">Avocations</a></li>' +
     '              </ul>' +
@@ -110,7 +110,7 @@
     '      <a href="mailto:anubhaparashar1025@gmail.com" class="footer-email-link"><i class="fa fa-envelope-o"></i> anubhaparashar1025@gmail.com</a>' +
     '      <a href="mailto:anubha.parashar@cbre.com" class="footer-email-link"><i class="fa fa-envelope-square"></i> anubha.parashar@cbre.com</a>' +
     '    </div>' +
-    '    <p class="footer-copy">&copy; 2025 Dr. Anubha Parashar &nbsp;&middot;&nbsp; Analytics &amp; AI Engineer</p>' +
+    '    <p class="footer-copy">&copy; Dr. Anubha Parashar &nbsp;&middot;&nbsp; Analytics &amp; AI Engineer</p>' +
     '    <p class="footer-views"><i class="fa fa-eye"></i> <span id="footer-view-count">—</span> page views</p>' +
     '  </div>' +
     '</footer>';

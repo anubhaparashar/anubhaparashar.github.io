@@ -141,6 +141,14 @@
       padding: 7px 16px; border-radius: 22px; text-decoration: none !important; transition: all .2s;
     }
     .proj-link-btn:hover { background: #0f3460; color: #fff !important; }
+    .proj-link-muted {
+      cursor: default;
+      opacity: .82;
+    }
+    .proj-link-muted:hover {
+      background: rgba(15,52,96,.06);
+      color: #0f3460 !important;
+    }
 
     /* specs */
     .proj-specs { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; padding: 20px 32px; }
@@ -217,8 +225,8 @@
     <p class="hero-sub">A collection of 19 research and development projects spanning deep learning, computer vision, IoT, robotics, AI, and embedded systems.</p>
     <div class="proj-stats">
       <div><span class="proj-stat-num">19</span><span class="proj-stat-lbl">Projects</span></div>
-      <div><span class="proj-stat-num">6+</span><span class="proj-stat-lbl">Domains</span></div>
-      <div><span class="proj-stat-num">2012</span><span class="proj-stat-lbl">Since</span></div>
+      <div><span class="proj-stat-num">6+ Domains</span><span class="proj-stat-lbl">Areas Covered</span></div>
+      <div><span class="proj-stat-num">Since 2012</span><span class="proj-stat-lbl">Project Timeline</span></div>
     </div>
   </div>
 </section>
@@ -277,8 +285,8 @@
           <div class="proj-intro-desc">
             <p>Human gait recognition using model-free approaches is done through analysis of moving shape and motion of the subject's body. This approach enables recognition at large distances with sufficiently low-resolution images and is simple and intuitive for extracting gait signatures from gait frames.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/4.png" alt="Gait Biometrics Surveillance"></div>
@@ -329,8 +337,8 @@
           <div class="proj-intro-desc">
             <p>We proposed a reversible face de-identification pipeline that modifies face geometry and texture. Fourteen parameters for geometrical modification are used. For texture modification, a fixed face texture template is applied.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/9.png" alt="Face De-Identification"></div>
@@ -382,8 +390,8 @@
           <div class="proj-intro-desc">
             <p>Demonstrated the importance of gait recognition in order to detect whether a human gait is normal or pathological. Three main approaches were explored: back propagation and KNN. After comparing testing and training results, better outcomes were achieved using back propagation.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/10.png" alt="Gait Classification"></div>
@@ -435,8 +443,8 @@
           <div class="proj-intro-desc">
             <p>This project is based on robotics. Robots have been easing human tasks for decades; this time they contribute toward modern education. A robot is fed a reference drawing — mostly text-based input or a diagram — which it replicates on a whiteboard or notebook.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/13.jpeg" alt="IoT Board Marker"></div>
@@ -489,8 +497,8 @@
           <div class="proj-intro-desc">
             <p>An automated AI chess board — a physical chess board that lets the player play against an AI. Powered by Raspberry Pi, using core XY motion of two motors enabling an electromagnet to span the full chess board and slide pieces across it.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/16.jpeg" alt="AI Chess Board"></div>
@@ -543,8 +551,8 @@
           <div class="proj-intro-desc">
             <p>This study uses end-to-end learning and replaces numerous sensors with a single camera, commandeering only forward, backward, left, and right controls — a cost-effective solution for autonomous driving navigation.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/19.png" alt="Autonomous Vehicle"></div>
@@ -597,8 +605,8 @@
           <div class="proj-intro-desc">
             <p>A microcontroller-based robotic arm with 4 servo motors designed to assist Parkinson's disease patients. Parkinson's disease causes uncontrollable shaking, making it difficult for affected persons to eat. This device automates the feeding process with no effort needed from the patient.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/22.png" alt="Smart Spoon Robotic Arm"></div>
@@ -651,8 +659,8 @@
           <div class="proj-intro-desc">
             <p>An all-purpose medical drone toolkit that can be automatically flown to any emergency situation and used to guide citizens to make non-technical lifesaving procedures — dramatically increasing survival rates in hard-to-reach areas.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/23.png" alt="UAV Surveillance Drone"></div>
@@ -705,8 +713,8 @@
           <div class="proj-intro-desc">
             <p>A smartphone-based sleep staging system that informs the user with information such as the duration of each sleep stage, the current sleep stage, etc. — conveniently on a smartphone without the need for external servers, allowing sleep staging without network access.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/28.jpeg" alt="Sleep Staging EEG"></div>
@@ -759,8 +767,8 @@
           <div class="proj-intro-desc">
             <p>The objective is to monitor and report weather conditions so that one is informed beforehand and necessary actions can be taken to reduce damage by any calamity by forecasting it. The system analyzes temperature, pollutants, humidity and pressure to predict weather — cheaper than existing models.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/30.jpeg" alt="Weather System"></div>
@@ -813,8 +821,8 @@
           <div class="proj-intro-desc">
             <p>Implemented the basic functionalities of an electric meter in a smarter and more efficient manner. Simplified the process of electric meter reading collection and analysis, thereby making it efficient instead of the tedious traditional approach. Users can view consumption remotely from anywhere in the world.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/33.jpeg" alt="Smart Electricity Management"></div>
@@ -866,8 +874,8 @@
           <div class="proj-intro-desc">
             <p>A self-navigation robot designed to navigate autonomously in any environment. The HAR (Human Assistant Robot) is a personal assistant robot designed to take over tasks such as retrieving water bottles, making tea or coffee, and basic pick-and-place functions without human intervention.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/36.jpeg" alt="Human Assistant Robot"></div>
@@ -926,8 +934,8 @@
           <div class="proj-intro-desc">
             <p>Sensors monitor vital health parameters (ECG, heartbeat, Temperature, Pressure) via a wearable device. A drone carries the device to the destination and then carries medications back from the doctor to the patient for temporary relief — bridging the gap in disaster zones.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/39.png" alt="Medical Drone"></div>
@@ -971,8 +979,8 @@
           <div class="proj-intro-desc">
             <p>Development of a chatbot or intelligent conversational agent using Machine Learning/Deep Learning. The project experiments with two main self-learning bot techniques: retrieval-based and generative techniques. A GUI was also developed to explore both techniques interactively.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/44.png" alt="Chatbot"></div>
@@ -1016,8 +1024,8 @@
           <div class="proj-intro-desc">
             <p>The primary strategy to interrupt transmission of wild poliovirus in India is to improve supplemental immunization activities and routine immunization coverage in priority districts, with a focus on 107 high-risk blocks of western Uttar Pradesh and central Bihar.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/45.png" alt="Polio M-Training Toolkit"></div>
@@ -1069,8 +1077,8 @@
           <div class="proj-intro-desc">
             <p>A wireless communication system designed and developed for remote patient monitoring, enabling instant data collection, content development and better client interaction for eye care monitoring.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/51.jfif" alt="Eye Monitoring System"></div>
@@ -1113,8 +1121,8 @@
           <div class="proj-intro-desc">
             <p>Reduces unnecessary energy consumption of a smart home, office or classroom using Computer Vision. An integrated system in each room transfers environmental parameters to the management station, directly controlling home appliances.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/54.jpeg" alt="Energy CV System"></div>
@@ -1166,8 +1174,8 @@
           <div class="proj-intro-desc">
             <p>The inevitability of robots is fundamentally a result of the need to reduce manpower requirements in military organizations while sustaining capability needs. The evolving operational environment places increasing demands on soldiers and exposes the limitations of the human body — supporting the adoption of autonomous robots.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/58.jpeg" alt="Ground Surveillance Rover"></div>
@@ -1211,8 +1219,8 @@
           <div class="proj-intro-desc">
             <p>A mini robot with a self-neural schema framework for autonomous control and decision making. Most application systems give outputs according to predefined conditions. This robot overcomes that limitation, navigating autonomously through a maze while avoiding obstacles and using a camera for extended view.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link-btn"><i class="fa fa-github"></i> Github Link</a>
-              <a href="#" class="proj-link-btn"><i class="fa fa-file-text-o"></i> Research Paper</a>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-github"></i> GitHub</span>
+              <span class="proj-link-btn proj-link-muted"><i class="fa fa-file-text-o"></i> Research Paper</span>
             </div>
           </div>
           <div class="proj-intro-img"><img src="files/5. Project/1. Project/61.jpeg" alt="IoT Surveillance Rover"></div>

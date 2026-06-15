@@ -1,0 +1,1335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Events – Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+  /* ── BASE ── */
+  body { background: #f0f2f8; }
+
+  /* ── HERO ── */
+  .evt-hero {
+    background: linear-gradient(135deg, #0d0d1f 0%, #1a1a2e 45%, #0f3460 100%);
+    padding: 130px 0 68px; text-align: center; position: relative; overflow: hidden;
+  }
+  .evt-hero::before {
+    content: ''; position: absolute; inset: 0; z-index: 1;
+    background-image: linear-gradient(rgba(126,184,224,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(126,184,224,.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .evt-hero-inner { position: relative; z-index: 2; }
+  .evt-eyebrow { font-size: .68rem; letter-spacing: 4px; text-transform: uppercase; color: #7eb8e0; font-weight: 700; margin-bottom: 14px; }
+  .evt-hero h1 { font-size: 2.9rem !important; font-weight: 900 !important; color: #fff !important; letter-spacing: 1px; margin-bottom: 8px; }
+  .evt-hero-sub { font-size: .98rem; color: rgba(255,255,255,.6); margin-bottom: 44px; }
+  .evt-stats { display: flex; justify-content: center; gap: 44px; flex-wrap: wrap; }
+  .evt-stat-num { display: block; font-size: 2.3rem; font-weight: 900; color: #7eb8e0; line-height: 1; }
+  .evt-stat-lbl { display: block; font-size: .63rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,.45); margin-top: 5px; }
+
+  /* ── TAB NAV ── */
+  .evt-tab-wrap {
+    background: #fff; border-bottom: 1px solid #e4e9f5;
+    position: sticky; top: 60px; z-index: 100;
+    box-shadow: 0 2px 14px rgba(15,52,96,.06);
+  }
+  .evt-tab-nav { display: flex; overflow-x: auto; scrollbar-width: none; max-width: 1200px; margin: 0 auto; padding: 0 8px; }
+  .evt-tab-nav::-webkit-scrollbar { display: none; }
+  .evt-tab-btn {
+    background: none; border: none; border-bottom: 3px solid transparent;
+    padding: 15px 18px 13px; font-size: .76rem; font-weight: 700;
+    letter-spacing: .5px; text-transform: uppercase; color: #999;
+    cursor: pointer; white-space: nowrap; transition: all .2s;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .evt-tab-btn i { font-size: .85rem; }
+  .evt-tab-btn:hover { color: #0f3460; background: #f6f8ff; }
+  .evt-tab-btn.active { color: #0f3460; border-bottom-color: #0f3460; }
+  .tab-count { background: #edf0fa; color: #666; font-size: .6rem; font-weight: 800; padding: 2px 7px; border-radius: 20px; }
+  .evt-tab-btn.active .tab-count { background: #0f3460; color: #7eb8e0; }
+
+  /* ── SECTION ── */
+  .evt-section { display: none; padding: 52px 0 80px; }
+  .evt-section.active { display: block; }
+  .section-label { display: inline-block; font-size: .66rem; letter-spacing: 2.5px; text-transform: uppercase; color: #7eb8e0; font-weight: 700; margin-bottom: 6px; }
+  .section-title { font-size: 1.9rem !important; font-weight: 800 !important; color: #1a1a2e !important; margin-bottom: 8px; }
+  .section-title-bar { width: 50px; height: 4px; background: linear-gradient(90deg, #7eb8e0, #0f3460); border-radius: 2px; margin: 0 auto 36px; }
+
+  /* ── EVENT CARD (full) ── */
+  .evt-card {
+    background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 14px;
+    box-shadow: 0 2px 10px rgba(15,52,96,.05); border-left: 4px solid #c8d4e8;
+    display: flex; gap: 16px; align-items: flex-start;
+    transition: transform .2s, box-shadow .22s;
+    animation: cardIn .35s ease both;
+  }
+  .evt-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(15,52,96,.11); }
+  @keyframes cardIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Color variants */
+  .evt-card.talk        { border-left-color: #2980b9; }
+  .evt-card.seminar     { border-left-color: #27ae60; }
+  .evt-card.workshop    { border-left-color: #d68910; }
+  .evt-card.conference  { border-left-color: #1a5276; }
+  .evt-card.review      { border-left-color: #8e44ad; }
+  .evt-card.membership  { border-left-color: #148f77; }
+  .evt-card.other       { border-left-color: #717d7e; }
+  .evt-card.leadership  { border-left-color: #c0392b; }
+
+  /* ── Leadership photo links ── */
+  .lead-photo-link {
+    display: block; border-radius: 10px; overflow: hidden;
+    margin: 14px 0 10px; position: relative; max-width: 340px;
+    box-shadow: 0 4px 16px rgba(192,57,43,.16);
+    border: 2px solid rgba(192,57,43,.3); text-decoration: none;
+    transition: box-shadow .25s, border-color .25s;
+  }
+  .lead-photo-link:hover { box-shadow: 0 8px 28px rgba(192,57,43,.32); border-color: #c0392b; }
+  .lead-photo-link img { width:100%; display:block; max-height:180px; object-fit:cover; transition: transform .3s; }
+  .lead-photo-link:hover img { transform: scale(1.04); }
+  .lead-photo-caption {
+    background: linear-gradient(135deg,#7e0b0b,#c0392b); color:#fff;
+    font-size:.7rem; font-weight:700; letter-spacing:.4px;
+    padding: 7px 14px; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  }
+  .lead-blog-btn {
+    display: inline-flex; align-items: center; gap: 7px; margin-top: 12px;
+    color: #c0392b; font-size: .76rem; font-weight: 700; text-decoration: none;
+    padding: 6px 16px; border: 2px solid #c0392b; border-radius: 20px;
+    transition: background .2s, color .2s;
+  }
+  .lead-blog-btn:hover { background: #c0392b; color: #fff; }
+
+  /* ── NUMBER BADGE ── */
+  .evt-num {
+    flex-shrink: 0; width: 36px; height: 36px;
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    color: #7eb8e0; font-size: .72rem; font-weight: 900;
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+
+  /* ── CARD BODY ── */
+  .evt-body { flex: 1; min-width: 0; }
+  .evt-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 4px; }
+  .evt-title { font-size: .95rem; font-weight: 700; color: #1a1a2e; line-height: 1.4; flex: 1; }
+  .evt-date-badge { flex-shrink: 0; background: #eef2ff; color: #4a5580; font-size: .63rem; font-weight: 800; padding: 3px 9px; border-radius: 20px; margin-top: 2px; white-space: nowrap; }
+  .evt-venue { font-size: .79rem; color: #888; margin-bottom: 5px; font-style: italic; }
+  .evt-venue i { margin-right: 4px; }
+  .evt-desc { font-size: .82rem; color: #666; margin-bottom: 8px; line-height: 1.5; }
+  .evt-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 4px; }
+
+  /* ── MEMBERSHIP ID BADGE ── */
+  .evt-id { font-size: .72rem; color: #555; background: #f4f6f9; border: 1.5px solid #dde4f2; border-radius: 8px; padding: 3px 9px; font-family: monospace; }
+
+  /* ── CERTIFICATE LINK BUTTON ── */
+  .cert-btn {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: .71rem; font-weight: 700; color: #0f3460 !important;
+    text-decoration: none !important; border: 1.5px solid #b8cfe8;
+    padding: 4px 12px; border-radius: 20px; transition: all .18s;
+  }
+  .cert-btn:hover { background: #0f3460; color: #fff !important; border-color: #0f3460; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 767px) {
+    .evt-hero h1 { font-size: 2rem !important; }
+    .evt-stats { gap: 22px; }
+    .evt-card { padding: 15px 16px; gap: 12px; }
+  }
+  </style>
+</head>
+
+<body>
+<div id="site-header"></div>
+
+<!-- ════════════════════ HERO ════════════════════ -->
+<section class="evt-hero">
+  <div class="evt-hero-inner">
+    <div class="container">
+      <p class="evt-eyebrow">Professional Activities</p>
+      <h1>Events &amp; Activities</h1>
+      <p class="evt-hero-sub">Leadership, talks, workshops, conference organisation, reviewing &amp; memberships</p>
+      <div class="evt-stats">
+        <div><span class="evt-stat-num">3</span><span class="evt-stat-lbl">Leadership Roles</span></div>
+        <div><span class="evt-stat-num">9</span><span class="evt-stat-lbl">Talks</span></div>
+        <div><span class="evt-stat-num">2</span><span class="evt-stat-lbl">Seminars</span></div>
+        <div><span class="evt-stat-num">3</span><span class="evt-stat-lbl">Workshops<br>Organised</span></div>
+        <div><span class="evt-stat-num">23</span><span class="evt-stat-lbl">Conferences<br>Organised</span></div>
+        <div><span class="evt-stat-num">6</span><span class="evt-stat-lbl">Reviewing</span></div>
+        <div><span class="evt-stat-num">9</span><span class="evt-stat-lbl">Memberships</span></div>
+        <div><span class="evt-stat-num">15</span><span class="evt-stat-lbl">Social Activities</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ TAB NAVIGATION ════════════════════ -->
+<div class="evt-tab-wrap">
+  <div class="container">
+    <div class="evt-tab-nav">
+      <button class="evt-tab-btn active" onclick="evtTab('leadership',this)">Leadership <span class="tab-count">3</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('talks',this)">Talks <span class="tab-count">9</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('seminars',this)">Seminars <span class="tab-count">2</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('workshops',this)">Workshops <span class="tab-count">3</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('conferences',this)">Conferences <span class="tab-count">23</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('reviewer',this)">Reviewing <span class="tab-count">6</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('memberships',this)">Memberships <span class="tab-count">9</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('other',this)">Social <span class="tab-count">15</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ LEADERSHIP & RESPONSIBILITIES ════════════════════ -->
+<section class="evt-section active" id="tab-leadership">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Student &amp; Administrative Leadership</span>
+      <h2 class="section-title">Leadership &amp; Responsibilities</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <!-- Warden -->
+    <div class="evt-card leadership" style="animation-delay:.05s" data-cert="files/8. Blog/1. academic/1. leadership/1. warden/Office Order Anubha Parashar.pdf">
+      <div class="evt-num">01</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Warden</div>
+          <span class="evt-date-badge">July 2016 – April 2024</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur</div>
+        <div class="evt-desc">Managed student supervision, discipline, coordination, and overall responsibility for assigned students and hostel activities for nearly eight years. Duties spanned day-to-day student management, hostel coordination, conflict resolution, emergency response, and maintaining a safe, structured, and supportive residential environment.</div>
+        <a href="academics.html#lead-warden" class="lead-blog-btn"><i class="fa fa-book"></i> Read full story in Blog</a>
+        <div class="evt-meta">
+          <span class="evt-id"><i class="fa fa-home" style="color:#c0392b;margin-right:4px;"></i>Administrative Leadership</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vice Captain -->
+    <div class="evt-card leadership" style="animation-delay:.1s">
+      <div class="evt-num">02</div>
+      <div class="evt-body">
+        <div class="evt-header" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+          <div>
+            <div class="evt-title">Vice Captain, School</div>
+            <span class="evt-date-badge">2007 · Class 10</span>
+          </div>
+          <img src="files/8.%20Blog/1.%20academic/1.%20leadership/2.%20wise%20captain/vice%20captain.png" alt="Vice Captain Badge" style="height:35px;width:auto;object-fit:contain;flex-shrink:0;border-radius:6px;">
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> St. George's Girls Grammar School</div>
+        <div class="evt-desc">Elected as Vice Captain of the school, representing the student body at the highest level of student governance. Responsibilities included supporting school-level discipline, coordinating inter-house events and cultural activities, liaising between students and school administration, and upholding the school's values of integrity and service. The role was formalised at the annual Investiture Ceremony — a formal occasion where student leaders take a public oath of commitment to the school and its community.</div>
+        <a href="academics.html#lead-vc" class="lead-photo-link">
+          <img src="files/8.%20Blog/1.%20academic/1.%20leadership/2.%20wise%20captain/DSC00326.JPG" alt="Taking the Oath as Vice Captain — Investiture Ceremony, 2007">
+          <div class="lead-photo-caption">
+            <span><i class="fa fa-camera" style="margin-right:5px;"></i>Taking the Oath — Investiture Ceremony, 2007</span>
+            <span>View in Blog &nbsp;<i class="fa fa-external-link"></i></span>
+          </div>
+        </a>
+        <div class="evt-meta">
+          <span class="evt-id">Student Leadership</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Senior Prefect -->
+    <div class="evt-card leadership" style="animation-delay:.15s">
+      <div class="evt-num">03</div>
+      <div class="evt-body">
+        <div class="evt-header" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+          <div>
+            <div class="evt-title">Senior Prefect</div>
+            <span class="evt-date-badge">2005–2006 · Class 9</span>
+          </div>
+          <img src="files/8.%20Blog/1.%20academic/1.%20leadership/3.%20senior%20perfect/sp.jpeg" alt="Senior Prefect Badge" style="height:35px;width:auto;object-fit:contain;flex-shrink:0;border-radius:6px;">
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> St. George's Girls Grammar School</div>
+        <div class="evt-desc">Assisted in maintaining discipline, mentoring junior students, and coordinating student activities. The role involved acting as a bridge between the student body and faculty, upholding school values, and taking an active part in ceremonial and extracurricular functions including school parades, march-pasts, and formal events.</div>
+        <a href="academics.html#lead-sp" class="lead-photo-link">
+          <img src="files/8.%20Blog/1.%20academic/1.%20leadership/3.%20senior%20perfect/DSC00628.JPG" alt="Senior Prefect — School Activity">
+          <div class="lead-photo-caption">
+            <span><i class="fa fa-camera" style="margin-right:5px;"></i>Senior Prefect, St. George's Girls Grammar School</span>
+            <span>View in Blog &nbsp;<i class="fa fa-external-link"></i></span>
+          </div>
+        </a>
+        <div class="evt-meta">
+          <span class="evt-id"><i class="fa fa-shield" style="color:#c0392b;margin-right:4px;"></i>Student Leadership</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ EXPERT TALKS ════════════════════ -->
+<section class="evt-section" id="tab-talks">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Invited Lectures</span>
+      <h2 class="section-title">Talks Delivered</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="evt-card talk"
+         data-photo="files/8. Blog/1. academic/4. expert talk/3. expert talk on AI/1.jpeg"
+         data-blog="academics.html#et-01">
+      <div class="evt-num">01</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Speaker for an Expert Talk</div>
+          <span class="evt-date-badge">Expert Talk</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-microphone"></i> Academic expert talk</div>
+        <div class="evt-desc">Invited expert talk sharing knowledge and insights on contemporary topics in technology and research with students and faculty.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card talk"
+         data-photo="files/8. Blog/1. academic/4. expert talk/4. expert talk on IoT/IMG-20190326-WA0004.jpg"
+         data-blog="academics.html#et-02">
+      <div class="evt-num">02</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Speaker for an Expert Talk on IoT</div>
+          <span class="evt-date-badge">2019-2020</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-wifi"></i> Internet of Things expert talk series</div>
+        <div class="evt-desc">Delivered sessions on IoT architecture, security, and emerging applications for students and young professionals.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card talk"
+         data-photo="files/8. Blog/1. academic/4. expert talk/1/20180208_143012.jpg"
+         data-cert="files/8. Blog/1. academic/4. expert talk/1/DR. ANUBHA PARASHAR.pdf"
+         data-blog="academics.html#et-03">
+      <div class="evt-num">03</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Speaker for an Expert Talk &amp; FDP</div>
+          <span class="evt-date-badge">2018-2019</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Bhimrao Aambedkar University, Agra, India</div>
+        <div class="evt-desc">Expert talk and Faculty Development Programme sessions sharing research insights and technical knowledge with academic communities.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card talk"
+         data-photo="files/8. Blog/1. academic/4. expert talk/2/FB_IMG_1594393539551.jpg"
+         data-cert="files/8. Blog/1. academic/4. expert talk/2/certi.pdf"
+         data-blog="academics.html#et-04">
+      <div class="evt-num">04</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Speaker for an Expert Talk</div>
+          <span class="evt-date-badge">2020</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Academic expert talk</div>
+        <div class="evt-desc">Expert talk session delivering specialised knowledge and research insights to academic and professional audiences.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card talk"
+         data-photo="files/8. Blog/1. academic/4. expert talk/6/1.png"
+         data-blog="academics.html#et-05">
+      <div class="evt-num">05</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Speaker for an Expert Talk on Technology and Innovation</div>
+          <span class="evt-date-badge">Expert Talk</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-lightbulb-o"></i> Academic expert talk</div>
+        <div class="evt-desc">Invited expert talk on technology and innovation for academic participants.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card talk"
+         data-photo="files/8. Blog/1. academic/4. expert talk/7/20260516_172526.jpg"
+         data-cert="files/8. Blog/1. academic/4. expert talk/7/20260516_172526.jpg"
+         data-blog="academics.html#et-06">
+      <div class="evt-num">06</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Speaker for an Expert Talk on Recent Trends in Machine Intelligence</div>
+          <span class="evt-date-badge">May 29, 2019</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Institute of Engineering &amp; Technology, Dr. B. R. Ambedkar University, Agra, India</div>
+        <div class="evt-desc">Delivered a session on recent trends in machine intelligence and its challenges during the one-week FDP on Advancement in Computer Science under TEQIP-III.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card talk"
+         data-photo="files/8. Blog/1. academic/4. expert talk/5. iot speaker/IMG_20210214_105415.jpg"
+         data-blog="academics.html#et-07">
+      <div class="evt-num">07</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Speaker for an IoT Session</div>
+          <span class="evt-date-badge">2021</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-wifi"></i> IoT speaker session</div>
+        <div class="evt-desc">Invited IoT speaker session sharing applied Internet of Things concepts and practical perspectives with students and participants.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card talk"
+         data-cert="files/8. Blog/1. academic/4. expert talk/8. Expert talk on AI/Dr. Anubha Parashar.pdf"
+         data-blog="academics.html#et-08">
+      <div class="evt-num">08</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Speaker for an Expert Talk on AI</div>
+          <span class="evt-date-badge">Expert Talk</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-file-pdf-o"></i> Artificial Intelligence and online teaching-learning practices</div>
+        <div class="evt-desc">Expert talk on Artificial Intelligence and online teaching-learning practices, documented through the event certificate and related FDP record.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card talk"
+         data-photo="files/8. Blog/1. academic/4. expert talk/9. times of india/1.png"
+         data-blog="academics.html#et-09">
+      <div class="evt-num">09</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Talk on Java as a Language</div>
+          <span class="evt-date-badge">2006</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-newspaper-o"></i> Times of India feature, St. George's Grammar School, Hyderabad</div>
+        <div class="evt-desc">Talk on Java as a Language, featured in a Times of India article during school years at St. George's Grammar School, Hyderabad.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ SEMINARS ════════════════════ -->
+<section class="evt-section" id="tab-seminars">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Academic Outreach</span>
+      <h2 class="section-title">Seminars Organised</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="evt-card seminar"
+         data-photo="academics.html#w-novelence"
+         data-cert="files/8. Blog/1. academic/3. workshops/7. Novelence/White with Photo Header Workshop Certificate.pdf"
+         data-blog="academics.html#w-novelence">
+      <div class="evt-num">01</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Industrial Internships &amp; Forming Community on Upcoming Technologies by Novelence Core</div>
+          <span class="evt-date-badge">Oct 13, 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">Talk and hands-on session for students on getting placements and industrial connect. Novelence Core later hired many students for paid internships.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card seminar" data-cert="files/7. Leadership/3. Seminar organised/2/certificate.jpeg">
+      <div class="evt-num">02</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Inertial System and Global Positioning System Technology Trends</div>
+          <span class="evt-date-badge">Nov 2, 2010</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> PDMCE, Bahadurgarh, Haryana, India</div>
+        <div class="evt-desc">Distinguished lecture by Prof. (Dr.) George T. Schmidt, MIT-USA (Distinguished Lecturer, IEEE).</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ WORKSHOPS ════════════════════ -->
+<section class="evt-section" id="tab-workshops">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Hands-On Learning</span>
+      <h2 class="section-title">Workshops Organised</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="evt-card workshop"
+         data-photo="academics.html#w-oracle"
+         data-cert=""
+         data-blog="academics.html#w-oracle">
+      <div class="evt-num">01</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Convener — Workshop on IoT Solution with Oracle</div>
+          <span class="evt-date-badge">Feb 14, 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">One-day hands-on session on using IoT and Analytics Cloud, whitepaper for IoT and Big Data with Oracle technology.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card workshop"
+         data-photo="academics.html#w-iot"
+         data-cert="files/8. Blog/1. academic/3. workshops/10. IoT workshop/organised.jpeg"
+         data-blog="academics.html#w-iot">
+      <div class="evt-num">02</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Convener — Workshop on Design and Building IoT Solution with Azure</div>
+          <span class="evt-date-badge">Jun 27–29, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">Three-day hands-on session with the objective of gaining exposure on how to build IoT solutions with Microsoft Azure technology.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card workshop"
+         data-photo="academics.html#w-fdp12"
+         data-cert="files/8. Blog/1. academic/3. workshops/12. one week FDP - Computational Intelligence/org.png"
+         data-blog="academics.html#w-fdp12">
+      <div class="evt-num">03</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">One Week FDP on Computational Intelligence</div>
+          <span class="evt-date-badge">Jan 18–22, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">Faculty Development Programme spanning one week, covering core topics in computational intelligence for academic staff.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ CONFERENCES ════════════════════ -->
+<section class="evt-section" id="tab-conferences">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Academic Service</span>
+      <h2 class="section-title">Conferences Organised</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="evt-card conference" id="conferences01" data-cert="files/7. Leadership/5. Conferences/1.pdf">
+      <div class="evt-num">01</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Organising Committee Member — SIN 2019</div>
+          <span class="evt-date-badge">Sep 12–15, 2019</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Sochi, Russia</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-mun"
+         data-cert="files/8. Blog/1. academic/2. Conferences and ppt/37. MUN/OC.jpg"
+         data-blog="academics.html#c-mun">
+      <div class="evt-num">02</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Convener — Conference MUN 5.0</div>
+          <span class="evt-date-badge">Apr 14–15, 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference" data-cert="">
+      <div class="evt-num">03</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Convener — Conference MUN 4.0</div>
+          <span class="evt-date-badge">Apr 15–16, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-ssic1-organised"
+         data-cert=""
+         data-blog="academics.html#c-ssic1-organised">
+      <div class="evt-num">04</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee — Accommodation Committee, SSIC 2017</div>
+          <span class="evt-date-badge">Apr 15–16, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-sin-organised"
+         data-cert=""
+         data-blog="academics.html#c-sin-organised">
+      <div class="evt-num">05</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee — Accommodation Committee, SIN 2018</div>
+          <span class="evt-date-badge">Oct 13–15, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-sin-organised"
+         data-cert=""
+         data-blog="academics.html#c-sin-organised">
+      <div class="evt-num">06</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee — ACM Proceedings, SIN 2018</div>
+          <span class="evt-date-badge">Oct 13–15, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-sin-organised"
+         data-cert=""
+         data-blog="academics.html#c-sin-organised">
+      <div class="evt-num">07</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee — Local Promotion &amp; Publicity Committee, SIN 2018</div>
+          <span class="evt-date-badge">Oct 13–15, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-sin-organised"
+         data-cert=""
+         data-blog="academics.html#c-sin-organised">
+      <div class="evt-num">08</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee — Publication &amp; Printing Committee, SIN 2018</div>
+          <span class="evt-date-badge">Oct 13–15, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-sin-organised"
+         data-cert=""
+         data-blog="academics.html#c-sin-organised">
+      <div class="evt-num">09</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee — Local Organising Committee, SIN 2018</div>
+          <span class="evt-date-badge">Oct 13–15, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-icct17-organised"
+         data-cert="files/8. Blog/1. academic/2. Conferences and ppt/Organised icct-17/20171223_164453.jpg"
+         data-blog="academics.html#c-icct17-organised">
+      <div class="evt-num">10</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Chair — Accommodation Committee, ICCT 2017</div>
+          <span class="evt-date-badge">Dec 22–23, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference" data-cert="">
+      <div class="evt-num">11</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee Member — Review Committee, SIN 2019</div>
+          <span class="evt-date-badge">Sep 12–15, 2019</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Sochi, Russia</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-ssic2"
+         data-cert="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_3288.JPG"
+         data-blog="academics.html#c-ssic2">
+      <div class="evt-num">12</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee Member — Review Committee, SSIC 2019</div>
+          <span class="evt-date-badge">Jan 18–20, 2019</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-ssic2-organised"
+         data-cert="files/8. Blog/1. academic/2. Conferences and ppt/SSIC-2/IMG_3288.JPG"
+         data-blog="academics.html#c-ssic2-organised">
+      <div class="evt-num">13</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee Member — Accommodation Committee, SSIC 2019</div>
+          <span class="evt-date-badge">Jan 18–20, 2019</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference" data-cert="">
+      <div class="evt-num">14</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee Member — Review Committee, SIN 2018</div>
+          <span class="evt-date-badge">Sep 10–12, 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Cardiff University, United Kingdom</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference" data-cert="">
+      <div class="evt-num">15</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">PC Member — Review Committee, RICE 2018</div>
+          <span class="evt-date-badge">Aug 22–24, 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Universidad Don Bosco, El Salvador, America</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference" data-cert="">
+      <div class="evt-num">16</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee Member — Review Committee, NGCT 2017</div>
+          <span class="evt-date-badge">Oct 30–31, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference" data-cert="">
+      <div class="evt-num">17</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee Member — Review Committee, TENCON 2017</div>
+          <span class="evt-date-badge">Nov 5–8, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Penang, Malaysia</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-icct17-organised"
+         data-cert="files/7. Leadership/5. Conferences/08324068.pdf"
+         data-blog="academics.html#c-icct17-organised">
+      <div class="evt-num">18</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee Member — Review Committee, ICCT 2017</div>
+          <span class="evt-date-badge">Dec 22–23, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference"
+         data-photo="academics.html#c-ssic1"
+         data-cert=""
+         data-blog="academics.html#c-ssic1">
+      <div class="evt-num">19</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee Member — Review Committee, SSIC 2017</div>
+          <span class="evt-date-badge">Apr 15–16, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference" data-cert="">
+      <div class="evt-num">20</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Program Committee Member — Review Committee, RICE 2017</div>
+          <span class="evt-date-badge">Mar 24–26, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> IT Gopeshwar, Uttarakhand, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference" data-cert="">
+      <div class="evt-num">21</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">PC Member — Review Committee, ICISSP 2015</div>
+          <span class="evt-date-badge">Feb 9–11, 2015</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> ESEO, Angers, Loire Valley, France</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference" data-cert="files/7. Leadership/5. Conferences/AIC 2022 TPC Certificate_Page_066.jpg">
+      <div class="evt-num">22</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Technical Program Committee — AIC 2022</div>
+          <span class="evt-date-badge">2022</span>
+        </div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card conference" data-cert="files/7. Leadership/5. Conferences/WCAIAA 2023_TPC_Certificate_Page_025.jpg">
+      <div class="evt-num">23</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Technical Program Committee — WCAIAA 2023</div>
+          <span class="evt-date-badge">2023</span>
+        </div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ REVIEWER ════════════════════ -->
+<section class="evt-section" id="tab-reviewer">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Peer Review Service</span>
+      <h2 class="section-title">Journal Reviewing</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="evt-card review" data-cert="files/7. Leadership/6. Reviewer/rev...pdf">
+      <div class="evt-num">01</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">IEEE Transactions on Neural Networks and Learning Systems</div>
+          <span class="evt-date-badge">Nov 14, 2022</span>
+        </div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card review" data-cert="">
+      <div class="evt-num">02</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">International Journal of Interactive Multimedia and Artificial Intelligence</div>
+          <span class="evt-date-badge">Mar 11, 2017</span>
+        </div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card review" data-cert="files/7. Leadership/6. Reviewer/Certificate_NEUCOM_Recognised (2).pdf">
+      <div class="evt-num">03</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Neurocomputing</div>
+          <span class="evt-date-badge">Dec 17, 2022</span>
+        </div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card review" data-cert="files/7. Leadership/6. Reviewer/Certificate_INS_Recognised (2).pdf">
+      <div class="evt-num">04</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Information Sciences</div>
+          <span class="evt-date-badge">Nov 14, 2022</span>
+        </div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card review" data-cert="files/7. Leadership/6. Reviewer/Certificate_EAAI_Recognised.pdf">
+      <div class="evt-num">05</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Engineering Applications of Artificial Intelligence</div>
+          <span class="evt-date-badge">Jun-Jul, 2023</span>
+        </div>
+        <div class="evt-meta">
+          <a href="files/7. Leadership/5. Conferences/1.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="evt-card review" data-cert="files/7. Leadership/6. Reviewer/Certificate_JISA_Recognised.pdf">
+      <div class="evt-num">06</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Journal of Information Security and Applications</div>
+          <span class="evt-date-badge">Jul, 2023</span>
+        </div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ MEMBERSHIPS ════════════════════ -->
+<section class="evt-section" id="tab-memberships">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Professional Bodies</span>
+      <h2 class="section-title">Professional Memberships</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="evt-card membership" data-cert="files/7. Leadership/7. Membership/1. IEEE Checkout.pdf">
+      <div class="evt-num">01</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Member of IEEE (Institute of Electrical and Electronics Engineers)</div>
+        </div>
+        <div class="evt-meta">
+          <span class="evt-id">ID: 93426265</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="evt-card membership" data-cert="files/7. Leadership/7. Membership/2. ACM Membership.html">
+      <div class="evt-num">02</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Member of ACM (Association for Computing Machinery)</div>
+        </div>
+        <div class="evt-meta">
+          <span class="evt-id">ID: 9763989</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="evt-card membership" data-cert="files/7. Leadership/7. Membership/3. Application Submitted.pdf">
+      <div class="evt-num">03</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Member of CSI (Computer Society of India)</div>
+        </div>
+        <div class="evt-meta">
+          <span class="evt-id">ID: 2010000571</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="evt-card membership" data-cert="files/7. Leadership/7. Membership/4. IREDAM10100057578.pdf">
+      <div class="evt-num">04</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Member of theIRED (Institution of Research Engineers and Doctors) — Universal Association of Computer and Electronics Engineers</div>
+        </div>
+        <div class="evt-meta">
+          <span class="evt-id">ID: AM10100057578</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="evt-card membership" data-cert="files/7. Leadership/7. Membership/5. CSTA.pdf">
+      <div class="evt-num">05</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Member of CSTA (Computer Science Teachers Association)</div>
+        </div>
+        <div class="evt-meta">
+          <span class="evt-id">ID: 300000629</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="evt-card membership" data-cert="files/7. Leadership/7. Membership/6. Anubha Parashar - Profile _ Internet Society.pdf">
+      <div class="evt-num">06</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Member of Internet Society</div>
+        </div>
+        <div class="evt-meta">
+          <span class="evt-id">ID: 138776</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="evt-card membership" data-cert="files/7. Leadership/7. Membership/7. IAENG_membership_173727.pdf">
+      <div class="evt-num">07</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Member of IAENG (International Association of Engineers)</div>
+        </div>
+        <div class="evt-meta">
+          <span class="evt-id">ID: 173727</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="evt-card membership" data-cert="files/7. Leadership/7. Membership/8. SCIEI.pdf">
+      <div class="evt-num">08</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Member of SCIEI (Science and Engineering Institute)</div>
+        </div>
+        <div class="evt-meta">
+          <span class="evt-id">ID: 201610190002</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="evt-card membership" data-cert="files/7. Leadership/7. Membership/9. ANUBHA PARASHAR-IEDRC Membership Letter.pdf">
+      <div class="evt-num">09</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Member of IEDRC (International Economics Development Research Center)</div>
+        </div>
+        <div class="evt-meta">
+          <span class="evt-id">ID: 90080958</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ OTHER EVENTS ════════════════════ -->
+<section class="evt-section" id="tab-other">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Community &amp; Social</span>
+      <h2 class="section-title">Social Activities</h2>
+      <div class="section-title-bar"></div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-blood16" data-cert="files/8. Blog/1. academic/8. Social Activities/2. Blood Donation - 2016/New Doc 8.jpg" data-blog="academics.html#soc-blood16">
+      <div class="evt-num">01</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Blood Donation Camp 2016</div>
+          <span class="evt-date-badge">2016</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">An early blood donation initiative encouraging voluntary donation and community health awareness.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-blood17" data-cert="files/8. Blog/1. academic/8. Social Activities/2. Blood Donation-2017/img.jpeg" data-blog="academics.html#soc-blood17">
+      <div class="evt-num">02</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Blood Donation Camp 2017</div>
+          <span class="evt-date-badge">Nov 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">Blood donation camp with active student and faculty participation in community health service.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-blood18" data-cert="files/8. Blog/1. academic/8. Social Activities/2. Blood Donation - 2018/certificate_anubha_parashar.pdf" data-blog="academics.html#soc-blood18">
+      <div class="evt-num">03</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Blood Donation Camp 2018</div>
+          <span class="evt-date-badge">2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">Annual blood donation camp mobilising faculty, students, and staff for a life-saving cause.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-blood19" data-cert="files/8. Blog/1. academic/8. Social Activities/2. Blood Donation - 2019/IMG20191114104421.png" data-blog="academics.html#soc-blood19">
+      <div class="evt-num">04</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Blood Donation Camp 2019</div>
+          <span class="evt-date-badge">Nov 2019</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">Continued campus blood donation initiative encouraging voluntary donations and community health awareness.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-cert="" data-blog="academics.html#social">
+      <div class="evt-num">05</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Coordinator of NSS - Conducting Project/Workshop Activities and Campaign Programs</div>
+          <span class="evt-date-badge">Jan 9, 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-cert="" data-blog="academics.html#social">
+      <div class="evt-num">06</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Coordinator of Rotaract Club - Collaborating with International Organisations and Organising Club Activities</div>
+          <span class="evt-date-badge">Nov 12, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-projector" data-blog="academics.html#soc-projector">
+      <div class="evt-num">07</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Projector Distribution</div>
+          <span class="evt-date-badge">Dec 2017 - Feb 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">Projector distribution to schools, helping improve access to visual learning tools and classroom resources.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-greenclub" data-blog="academics.html#soc-greenclub">
+      <div class="evt-num">08</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Green Club Hangout</div>
+          <span class="evt-date-badge">Jan 12, 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">Green Club faculty and student hangout, strengthening campus community through environmental awareness, teamwork, and shared service.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-chair" data-blog="academics.html#soc-chair">
+      <div class="evt-num">09</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Chair &amp; Table Distribution</div>
+          <span class="evt-date-badge">Feb 12, 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">Furniture distribution drive supporting education access through practical resource sharing with the community.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-dhemi" data-blog="academics.html#soc-dhemi">
+      <div class="evt-num">10</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Dhemi School Visit</div>
+          <span class="evt-date-badge">Nov 25, 2017</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Dhemi School, Rajasthan</div>
+        <div class="evt-desc">School outreach visit focused on community engagement, education support, and understanding local learning needs.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-beti" data-blog="academics.html#soc-beti">
+      <div class="evt-num">11</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Beti Bachao Beti Padhao</div>
+          <span class="evt-date-badge">Feb 26-27, 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">Awareness initiative supporting girl child education, empowerment, and gender equality.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-village" data-blog="academics.html#soc-village">
+      <div class="evt-num">12</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Village Visit</div>
+          <span class="evt-date-badge">Feb 27, 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Rajasthan, India</div>
+        <div class="evt-desc">Rural community visit to understand grassroots challenges and explore sustainable development needs.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-clean" data-blog="academics.html#soc-clean">
+      <div class="evt-num">13</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Cleanliness Drive</div>
+          <span class="evt-date-badge">Oct 2018</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, India</div>
+        <div class="evt-desc">Swachh Bharat cleanliness drive with students and colleagues participating in campus and neighbourhood cleaning activities.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-donation" data-blog="academics.html#soc-donation">
+      <div class="evt-num">14</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Donation Drive</div>
+          <span class="evt-date-badge">Class III</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Seventh Day Adventist School</div>
+        <div class="evt-desc">Appreciation certificate from Savior Educational Society for helping its noble mission during Class III.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+    <div class="evt-card other" data-photo="academics.html#soc-donation-copy" data-blog="academics.html#soc-donation-copy">
+      <div class="evt-num">15</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Donation Drive Memories</div>
+          <span class="evt-date-badge">May 2026</span>
+        </div>
+        <div class="evt-venue"><i class="fa fa-map-marker"></i> Community Service</div>
+        <div class="evt-desc">Additional moment from the donation activity, preserving the people and purpose behind the service.</div>
+        <div class="evt-meta"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+
+<div id="site-footer"></div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/site-components.js"></script>
+<script>
+(function () {
+
+  /* Tab switching */
+  function evtTab(id, btn) {
+    document.querySelectorAll('.evt-section').forEach(function (s) { s.classList.remove('active'); });
+    document.querySelectorAll('.evt-tab-btn').forEach(function (b) { b.classList.remove('active'); });
+    var section = document.getElementById('tab-' + id);
+    if (!section || !btn) return;
+    section.classList.add('active');
+    btn.classList.add('active');
+    if (window.location.hash !== '#' + id) {
+      history.replaceState(null, '', '#' + id);
+    }
+    section.querySelectorAll('.evt-card').forEach(function (card, i) {
+      card.style.animation = 'none';
+      void card.offsetWidth;
+      card.style.animation = '';
+      card.style.animationDelay = (i * 0.04) + 's';
+    });
+  }
+  window.evtTab = evtTab;
+
+  /* Media links: inject photo, certificate, and blog buttons into .evt-meta */
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.evt-card').forEach(function (card) {
+      var meta = card.querySelector('.evt-meta');
+      if (!meta) return;
+
+      function addMediaButton(url, label, icon) {
+        if (!url || url.trim() === '') return;
+        var a = document.createElement('a');
+        a.href = url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.className = 'cert-btn';
+        a.innerHTML = '<i class="fa fa-' + icon + '"></i> ' + label;
+        meta.appendChild(a);
+      }
+
+      var cert = card.getAttribute('data-cert');
+      var certIcon = /\.(jpg|jpeg|png)$/i.test(cert || '') ? 'file-image-o'
+                   : /\.html?$/i.test(cert || '') ? 'file-text-o' : 'file-pdf-o';
+
+      addMediaButton(card.getAttribute('data-photo'), 'Photos', 'picture-o');
+      addMediaButton(cert, 'Certificate', certIcon);
+      addMediaButton(card.getAttribute('data-blog'), 'Blog', 'book');
+    });
+
+    /* Stagger initial animations */
+    var activeSection = document.querySelector('.evt-section.active');
+    if (activeSection) {
+      activeSection.querySelectorAll('.evt-card').forEach(function (card, i) {
+        card.style.animationDelay = (i * 0.05) + 's';
+      });
+    }
+
+    var initialTab = (window.location.hash || '').replace('#', '');
+    if (initialTab) {
+      var initialBtn = document.querySelector('.evt-tab-btn[onclick*="' + initialTab + '"]');
+      if (initialBtn && document.getElementById('tab-' + initialTab)) {
+        evtTab(initialTab, initialBtn);
+      }
+    }
+  });
+
+})();
+</script>
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>

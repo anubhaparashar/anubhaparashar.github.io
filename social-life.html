@@ -1,0 +1,1121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Social Life - Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <style>
+    .blog_area { background: #f5f6ff; }
+    .single_sidebar_widget, .single-sidebar-widget {
+      background: #fff; border-radius: 12px; padding: 24px 22px;
+      margin-bottom: 24px; box-shadow: 0 3px 18px rgba(15,52,96,.07);
+    }
+    .widget_title {
+      font-size: 1rem !important; font-weight: 800 !important; color: #0f3460 !important;
+      background: none !important;
+      margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e8eeff;
+    }
+    .author_widget { text-align: center; }
+    .author_img { width: 80px; height: 80px; object-fit: cover; border: 3px solid #7eb8e0; margin-bottom: 12px; }
+    .author_widget h4 { font-weight: 800 !important; color: #0f3460 !important; margin-bottom: 2px; }
+    .author_widget > p:first-of-type { color: #7eb8e0; font-size: .82rem; font-weight: 600; margin-bottom: 10px; }
+    .social_icon a { color: #0f3460; margin: 0 6px; font-size: 1rem; transition: color .2s; }
+    .social_icon a:hover { color: #7eb8e0; }
+    .author_widget p:last-child { font-size: .8rem; color: #666; line-height: 1.65; text-align: left; margin-top: 12px; }
+    .post_item { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .post_item:has(a[href]) { cursor: pointer; }
+    .post_item:has(a[href]):hover h3 { color: #7eb8e0 !important; }
+    .post_item img { width: 58px; height: 48px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+    .post_item h3 { font-size: .82rem !important; font-weight: 700 !important; color: #0f3460 !important; margin-bottom: 2px; }
+    .post_item p { font-size: .73rem; color: #888; margin: 0; }
+    .cat-list li a { display: flex; justify-content: space-between; color: #444; font-size: .85rem;
+      padding: 7px 0; border-bottom: 1px solid #eef0ff; transition: color .2s; }
+    .cat-list li a:hover { color: #7eb8e0; }
+    .cat-list li a p { margin: 0; }
+    .tag_cloud_widget ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+    .tag_cloud_widget ul li a { display: block; padding: 5px 12px; background: #f0f4ff;
+      border-radius: 20px; font-size: .76rem; color: #0f3460; font-weight: 600;
+      border: 1px solid #d0d8ff; transition: background .2s, color .2s; }
+    .tag_cloud_widget ul li a:hover { background: #7eb8e0; color: #fff; }
+    .feature-img img { border-radius: 14px; margin-bottom: 30px; }
+    .blog_details h2 { color: #0f3460 !important; font-weight: 900 !important; }
+    .blog_details p.excert { font-size: 1rem; color: #333; font-weight: 500; }
+    .blog_details p { color: #555; line-height: 1.8; }
+    .post_tag a { font-size: .76rem; color: #0f3460; font-weight: 700; }
+    .post_tag a.active { color: #7eb8e0; }
+    .blog_meta li a { color: #444 !important; font-size: .8rem; }
+    .blog_meta li a i { color: #7eb8e0; margin-left: 4px; }
+    .blog_meta li .blog-like-btn { border: 0; background: transparent; color: #444; font-size: .8rem; padding: 0; cursor: pointer; }
+    .blog_meta li .blog-like-btn:hover, .blog_meta li .blog-like-btn.liked { color: #7eb8e0; }
+    .blog_meta li .blog-like-count { color: #444; font-size: .8rem; }
+    .social-links li a { color: #0f3460 !important; transition: color .2s; }
+    .social-links li a:hover { color: #7eb8e0 !important; }
+    .quotes { background: linear-gradient(135deg,#f0f4ff,#e8eeff); border-left: 5px solid #7eb8e0;
+      padding: 22px 28px; border-radius: 8px; color: #0f3460; font-style: italic;
+      font-size: 1rem; line-height: 1.75; margin: 28px 0; }
+    .navigation-area { background: #fff; border-radius: 12px; padding: 24px; margin: 30px 0;
+      box-shadow: 0 3px 18px rgba(15,52,96,.07); }
+    .navigation-area h4 { color: #0f3460 !important; font-size: .92rem !important; font-weight: 700 !important; }
+    .navigation-area p { color: #888; font-size: .78rem; margin-bottom: 2px; }
+    .navigation-area .lnr { color: #7eb8e0; font-size: 1.2rem; }
+    .comments-area { background: #fff; border-radius: 12px; padding: 28px; margin-bottom: 24px;
+      box-shadow: 0 3px 18px rgba(15,52,96,.07); }
+    .comments-area h4 { color: #0f3460 !important; font-weight: 800 !important; margin-bottom: 20px; }
+    .single-comment .thumb img { width: 52px; height: 52px; object-fit: cover; border-radius: 50%;
+      border: 2px solid #7eb8e0; }
+    .single-comment .desc h5 a { color: #0f3460 !important; font-weight: 700; }
+    .single-comment .desc .date { font-size: .75rem; color: #999; }
+    .single-comment .desc .comment { color: #555; font-size: .88rem; }
+    .btn-reply { color: #7eb8e0; font-size: .75rem; font-weight: 700; border: 1px solid #7eb8e0;
+      padding: 4px 12px; border-radius: 20px; transition: all .2s; }
+    .btn-reply:hover { background: #7eb8e0; color: #fff; }
+    .comment-form { background: #fff; border-radius: 12px; padding: 28px;
+      box-shadow: 0 3px 18px rgba(15,52,96,.07); }
+    .comment-form h4 { color: #0f3460 !important; font-weight: 800 !important; margin-bottom: 20px; }
+    .comment-form .form-control { border: 1px solid #d0d8ff; border-radius: 8px; }
+    .comment-form .form-control:focus { border-color: #7eb8e0; box-shadow: none; }
+    .primary_btn { background: linear-gradient(135deg,#0f3460,#7eb8e0); color: #fff !important;
+      font-size: .82rem; padding: 10px 28px; border-radius: 24px; display: inline-block;
+      font-weight: 700; text-decoration: none; transition: opacity .2s; }
+    .primary_btn:hover { opacity: .85; }
+    .search_widget .input-group input { border-radius: 8px 0 0 8px; border: 1px solid #d0d8ff; }
+    .search_widget .btn { border-radius: 0 8px 8px 0; background: #7eb8e0; color: #fff; }
+    /* ── SOCIAL HERO (matches avocations.html style) ── */
+    .soc-hero {
+      background: #1a0533;
+      padding: 130px 0 70px; text-align: center; position: relative; overflow: hidden;
+      margin-top: 60px;
+    }
+    .soc-hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(135deg, rgba(15,52,96,.72), rgba(26,5,51,.58));
+    }
+    .soc-hero-slides { position: absolute; inset: 0; z-index: 0; }
+    .soc-hero-slides img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; opacity: 0; transform: scale(1.03);
+      transition: opacity .8s ease, transform 3.8s ease;
+    }
+    .soc-hero-slides img.active { opacity: 1; transform: scale(1); }
+    .soc-hero-inner { position: relative; z-index: 3; }
+    .soc-eyebrow {
+      font-size: .68rem; letter-spacing: 4px; text-transform: uppercase;
+      color: #c084fc; font-weight: 700; margin-bottom: 14px;
+    }
+    .soc-hero h1 { font-size: 2.9rem !important; font-weight: 900 !important; color: #fff !important; letter-spacing: 1px; margin-bottom: 8px; }
+    .soc-hero-sub { font-size: .98rem; color: rgba(255,255,255,.6); margin-bottom: 0; }
+    .connection-tab-wrap {
+      background:#fff; border-bottom:1px solid #e4e9f5;
+      box-shadow:0 2px 14px rgba(15,52,96,.06);
+    }
+    .connection-tab-nav { display:flex; overflow-x:auto; max-width:1200px; margin:0 auto; padding:0; scrollbar-width:none; }
+    .connection-tab-nav::-webkit-scrollbar { display:none; }
+    .connection-tab-btn {
+      flex:1 0 140px; background:none; border:none; border-bottom:3px solid transparent;
+      padding:14px 6px 12px; font-size:.68rem; font-weight:700;
+      letter-spacing:.3px; text-transform:uppercase; color:#999;
+      cursor:pointer; white-space:nowrap; transition:all .2s;
+      display:flex; align-items:center; justify-content:center; gap:5px;
+    }
+    .connection-tab-btn:hover { color:#0f3460; background:#f6f8ff; }
+    .connection-tab-btn.active { color:#0f3460; border-bottom-color:#0f3460; }
+    .connection-tab-count {
+      background:#edf0fa; color:#666; font-size:.6rem; font-weight:800;
+      padding:2px 7px; border-radius:20px;
+    }
+    .connection-tab-btn.active .connection-tab-count { background:#0f3460; color:#7eb8e0; }
+    .connection-anchor { scroll-margin-top:120px; }
+    .connection-section { display:none; }
+    .connection-section.active { display:block; }
+    /* floating particles */
+    .soc-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 2; }
+    .soc-particles span {
+      position: absolute; display: block; width: 4px; height: 4px;
+      border-radius: 50%; background: rgba(192,132,252,.5);
+      animation: socFloat 8s infinite ease-in-out;
+    }
+    .soc-particles span:nth-child(1)  { left:10%; top:20%; animation-delay:0s;   animation-duration:7s; }
+    .soc-particles span:nth-child(2)  { left:25%; top:70%; animation-delay:1s;   animation-duration:9s; }
+    .soc-particles span:nth-child(3)  { left:50%; top:35%; animation-delay:2s;   animation-duration:6s; }
+    .soc-particles span:nth-child(4)  { left:75%; top:60%; animation-delay:3s;   animation-duration:8s; }
+    .soc-particles span:nth-child(5)  { left:88%; top:25%; animation-delay:0.5s; animation-duration:10s; }
+    .soc-particles span:nth-child(6)  { left:35%; top:80%; animation-delay:1.5s; animation-duration:7s; }
+    .soc-particles span:nth-child(7)  { left:60%; top:15%; animation-delay:2.5s; animation-duration:9s; }
+    .soc-particles span:nth-child(8)  { left:5%;  top:55%; animation-delay:4s;   animation-duration:8s; }
+    @keyframes socFloat {
+      0%, 100% { transform: translateY(0) scale(1); opacity: .5; }
+      50%       { transform: translateY(-22px) scale(1.3); opacity: 1; }
+    }
+    /* Fix magnific popup z-index */
+    .mfp-bg   { z-index: 20000 !important; }
+    .mfp-wrap { z-index: 20001 !important; }
+    .mfp-close {
+      color:#fff !important; opacity:1 !important; font-size:34px !important;
+      right:10px !important; top:10px !important; text-shadow:0 2px 8px rgba(0,0,0,.65);
+    }
+    /* ── GALLERY CARDS ── */
+    .conf-card { background:#fff; border-radius:16px; margin-bottom:36px; box-shadow:0 4px 24px rgba(15,52,96,.08); border-left:5px solid #7eb8e0; overflow:hidden; scroll-margin-top:130px; }
+    .conf-card-header { padding:20px 26px 14px; border-bottom:1px solid #eef0ff; }
+    .conf-card-header h3 { font-size:1.15rem !important; font-weight:900 !important; color:#0f3460 !important; margin:0 0 6px; }
+    .conf-num { display:inline-block; background:linear-gradient(135deg,#0f3460,#7eb8e0); color:#fff; font-size:.63rem; font-weight:800; letter-spacing:1px; padding:3px 10px; border-radius:10px; margin-right:8px; text-transform:uppercase; vertical-align:middle; }
+    .conf-meta { display:flex; flex-wrap:wrap; gap:14px; margin-top:4px; }
+    .conf-meta span { font-size:.76rem; color:#666; display:inline-flex; align-items:center; gap:5px; }
+    .conf-meta i { color:#7eb8e0; }
+    .conf-card-body { padding:18px 26px 26px; }
+    .conf-desc { font-size:.84rem; color:#555; line-height:1.6; margin:0 0 16px; padding:0; }
+    .connection-video-label {
+      display:flex; align-items:center; gap:8px; margin:18px 0 12px;
+      color:#0f3460; font-size:.72rem; font-weight:900; letter-spacing:1.5px; text-transform:uppercase;
+    }
+    .connection-video-label::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,#c8d4f7,transparent); }
+    .connection-video-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .connection-video-grid video { width:100%; border-radius:10px; background:#000; box-shadow:0 2px 12px rgba(15,52,96,.12); }
+    @media(max-width:767px){.connection-video-grid{grid-template-columns:1fr}}
+    .connection-section-title {
+      margin:34px 0 18px; padding:18px 22px; border-radius:14px;
+      background:linear-gradient(135deg,#0f3460,#7eb8e0); color:#fff;
+      box-shadow:0 4px 20px rgba(15,52,96,.12);
+    }
+    .connection-section-title:first-child { margin-top:0; }
+    .connection-section-title h2 {
+      color:#fff !important; font-size:1.28rem !important; font-weight:900 !important;
+      margin:0 0 4px; letter-spacing:.2px;
+    }
+    .connection-section-title p { color:rgba(255,255,255,.82); font-size:.84rem; margin:0; line-height:1.5; }
+    .mom-birthday-post { border-left-color:#d6a235; background:linear-gradient(180deg,#fffdf7,#fff); }
+    .mom-birthday-post .conf-card-header {
+      background:linear-gradient(135deg,#fff8e6,#fff);
+      border-bottom-color:#f3e2bd;
+    }
+    .mom-birthday-post .conf-num { background:linear-gradient(135deg,#9f6b16,#d6a235); }
+    .mom-birthday-post .conf-meta i { color:#d6a235; }
+    .mom-hero {
+      position:relative; overflow:hidden; border-radius:18px; margin-bottom:24px;
+      box-shadow:0 12px 34px rgba(120,76,12,.18); background:#fff8e8;
+    }
+    .mom-hero img { width:100%; display:block; }
+    .mom-main-photos {
+      display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-bottom:24px;
+    }
+    .mom-main-photos a {
+      display:block; position:relative; overflow:hidden; border-radius:18px; aspect-ratio:4/5;
+      box-shadow:0 12px 34px rgba(120,76,12,.18); background:#fff8e8;
+    }
+    .mom-main-photos img { width:100%; height:100%; object-fit:cover; display:block; }
+    .mom-main-photos .mom-main-caption {
+      position:absolute; left:50%; bottom:6px; transform:translateX(-50%);
+      background:rgba(255,255,255,.88); color:#7a4a05; font-size:.64rem;
+      font-weight:900; letter-spacing:.8px; text-transform:uppercase; padding:5px 10px;
+      border-radius:999px; text-align:center; white-space:nowrap; max-width:calc(100% - 14px);
+      overflow:hidden; text-overflow:ellipsis;
+      box-shadow:0 6px 18px rgba(0,0,0,.12);
+    }
+    .mom-hero-badge {
+      position:absolute; left:18px; bottom:18px; background:rgba(255,255,255,.92);
+      color:#7a4a05; font-size:.72rem; font-weight:900; letter-spacing:1.6px;
+      text-transform:uppercase; padding:8px 14px; border-radius:999px;
+      box-shadow:0 6px 18px rgba(0,0,0,.12);
+    }
+    .mom-letter {
+      color:#4b3b2a; font-size:.96rem; line-height:1.92;
+      background:linear-gradient(135deg,#fffaf0,#fff); border:1px solid #f2dfb8;
+      border-radius:16px; padding:28px; margin-bottom:24px;
+    }
+    .mom-letter p { color:#4b3b2a; margin-bottom:16px; }
+    .mom-letter p:last-child { margin-bottom:0; }
+    .mom-letter .lead-love {
+      font-size:1.06rem; color:#2f2418; font-weight:600;
+    }
+    .mom-quote {
+      margin:26px 0; padding:20px 24px; border-left:5px solid #d6a235;
+      background:#fff4d8; border-radius:12px; color:#6f4508;
+      font-size:1.02rem; font-style:italic; line-height:1.8;
+    }
+    .mom-signoff {
+      margin-top:24px; text-align:center; color:#7a4a05; font-size:1.08rem;
+      font-weight:800;
+    }
+    .mom-gallery-title {
+      display:flex; align-items:center; gap:8px; margin:22px 0 12px;
+      color:#7a4a05; font-size:.72rem; font-weight:900; letter-spacing:1.7px;
+      text-transform:uppercase;
+    }
+    .mom-gallery-title::after { content:''; height:1px; flex:1; background:linear-gradient(90deg,#e9c977,transparent); }
+    @media(max-width:575px){.mom-main-photos{grid-template-columns:1fr}.mom-main-photos a{aspect-ratio:4/3}}
+    /* ── GALLERY CONTAINER ── */
+    .gal-container { margin:0; }
+    .gal-featured { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:14px; }
+    .gal-featured-label { grid-column:1/-1; font-size:.66rem; font-weight:800; letter-spacing:1.5px; color:#d4900a; text-transform:uppercase; display:flex; align-items:center; gap:8px; margin-bottom:2px; }
+    .gal-featured-label::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,#f5e0a8,transparent); }
+    /* ── FANCY SLIDER ── */
+    .gal-slider-wrap { background:linear-gradient(135deg,#f7f9ff,#eef1ff); border-radius:14px; padding:14px 14px 12px; box-shadow:0 2px 14px rgba(15,52,96,.08); border:1px solid #e0e6ff; }
+    .gal-slider-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+    .gal-slider-counter { font-size:.72rem; font-weight:800; color:#0f3460; background:rgba(15,52,96,.07); padding:4px 12px; border-radius:20px; letter-spacing:.2px; }
+    .gal-slider-nav { display:flex; align-items:center; gap:6px; }
+    .gal-nav-btn { width:32px; height:32px; border-radius:50%; border:2px solid #c8d4f7; background:#fff; color:#0f3460; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; font-size:.78rem; transition:all .22s; box-shadow:0 2px 8px rgba(15,52,96,.1); line-height:1; padding:0; }
+    .gal-nav-btn:hover:not([disabled]) { background:#0f3460; color:#fff; border-color:#0f3460; box-shadow:0 4px 16px rgba(15,52,96,.28); transform:scale(1.12); }
+    .gal-nav-btn[disabled] { opacity:.28; cursor:default; transform:none !important; box-shadow:none; }
+    .gal-slider-viewport { overflow-x:scroll; overflow-y:hidden; scrollbar-width:none; scroll-behavior:smooth; border-radius:10px; }
+    .gal-slider-viewport::-webkit-scrollbar { display:none; }
+    .gal-slides-track { display:flex; gap:10px; }
+    .gal-slides-track a.gal-item { flex:0 0 160px; width:160px; }
+    .gal-progress { height:4px; background:#dde4f7; border-radius:2px; margin-top:10px; overflow:hidden; }
+    .gal-progress-bar { height:100%; background:linear-gradient(90deg,#7eb8e0,#f0a500); border-radius:2px; transition:width .25s ease; width:0%; min-width:14px; }
+    .gal-more-count { text-align:center; margin-top:9px; font-size:.77rem; font-weight:700; letter-spacing:.2px; color:#7eb8e0; transition:color .25s; }
+    .gal-more-count.done { color:#b0b8d0; }
+    .gal-more-count strong { color:#f0a500; }
+    /* ── GAL-ITEM ── */
+    .gal-featured a.gal-item, .gal-slides-track a.gal-item { display:block; border-radius:8px; overflow:hidden; position:relative; aspect-ratio:4/3; box-shadow:0 2px 10px rgba(15,52,96,.10); transition:transform .22s,box-shadow .22s; }
+    .gal-featured a.gal-item:hover, .gal-slides-track a.gal-item:hover { transform:scale(1.03); box-shadow:0 6px 20px rgba(15,52,96,.18); }
+    .gal-featured a.gal-item img, .gal-slides-track a.gal-item img { width:100%; height:100%; object-fit:cover; display:block; }
+    .gal-item .gal-overlay { position:absolute; inset:0; background:rgba(15,52,96,.35); display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .22s; }
+    .gal-item:hover .gal-overlay { opacity:1; }
+    .gal-item .gal-overlay i { color:#fff; font-size:1.5rem; }
+  </style>
+</head>
+
+<body class="blog_version">
+
+<div id="site-header"></div>
+
+<!-- Hero header (matches avocations.html style) -->
+<section class="soc-hero">
+  <div class="soc-hero-slides" aria-hidden="true">
+    <img src="files/8. Blog/2. Connection/header/IMG20200128140658.jpg" alt="">
+    <img class="active" src="files/8. Blog/2. Connection/header/IMG20200128140641.jpg" alt="">
+    <img src="files/8. Blog/2. Connection/header/DSC03831.JPG" alt="">
+    <img src="files/8. Blog/2. Connection/header/IMG20200128164947.jpg" alt="">
+  </div>
+  <div class="soc-particles">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <div class="soc-hero-inner container">
+    <div class="soc-eyebrow">Beyond the Lab</div>
+    <h1>Social Life</h1>
+    <p class="soc-hero-sub">Friendships, gatherings, and moments that make life meaningful.</p>
+  </div>
+</section>
+
+<!-- Sub header navigation -->
+<div class="connection-tab-wrap">
+  <div class="connection-tab-nav">
+    <button class="connection-tab-btn active" type="button" data-target="conference-outings">
+      Conference Outings <span class="connection-tab-count">2</span>
+    </button>
+    <button class="connection-tab-btn" type="button" data-target="memories">
+      Memories <span class="connection-tab-count">3</span>
+    </button>
+    <button class="connection-tab-btn" type="button" data-target="family">
+      Family <span class="connection-tab-count">1</span>
+    </button>
+  </div>
+</div>
+
+<section class="blog_area single-post-area section_gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 posts-list">
+        <div class="single-post row">
+
+          <!-- Article body -->
+          <div class="col-lg-12 col-md-12 blog_details connection-anchor" id="connection-overview">
+            <h2>Connecting Beyond Research: Community Engagement &amp; Professional Networking</h2>
+            <p class="excert">
+              Life as a researcher is rich with connections — from spirited debates at international conferences to late-evening discussions at local AI meetups. These moments of human connection are as vital to my work as any experiment or paper.
+            </p>
+            <p>
+              In May 2025, I had the privilege of hosting a session at the Global AI Jaipur Meetup — a vibrant gathering of AI practitioners, students, and enthusiasts from across Rajasthan and beyond. Events like these are where abstract research meets real-world curiosity. Sharing insights on deep learning applications and hearing fresh perspectives from attendees always reignites my enthusiasm for the field.
+            </p>
+            <p>
+              Beyond formal conferences, I believe strongly in nurturing an academic community that is welcoming and collaborative. Whether it is mentoring junior researchers, participating in faculty development workshops, or simply being present at departmental seminars, the social fabric of academia is what transforms individual effort into collective progress.
+            </p>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="quotes">
+              "The best ideas often emerge not in solitude, but in the conversations that happen between sessions at a conference — over chai, at a whiteboard, or walking back to the hotel."
+            </div>
+            <div class="row">
+              <div class="col-6">
+              </div>
+              <div class="col-6">
+              </div>
+              <div class="col-lg-12 mt-25">
+                <p>
+                  Professionally, the value of networking cannot be overstated. Collaborations on grants, co-authored publications, and interdisciplinary projects have all grown from connections made at events, workshops, and online communities. I am grateful for every researcher, student, and practitioner who has taken the time to engage, question, and inspire.
+                </p>
+                <p>
+                  If you are an AI or tech enthusiast in the Jaipur region — or anywhere in the world — I warmly invite you to connect, attend events, and join the growing community of curious minds pushing the boundaries of intelligent technology.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /single-post -->
+
+        <!-- Photo Galleries -->
+        <div class="col-lg-12 px-0" style="margin-bottom:32px;">
+
+          <div class="connection-section active" id="connection-section-conference-outings">
+          <div class="connection-section-title connection-anchor" id="conference-outings">
+            <h2>Conference Outings</h2>
+            <p>Professional gatherings, conference memories, and the friendships formed around academic events.</p>
+          </div>
+
+          <!-- 1. MUJ SSIC -->
+          <div class="conf-card" id="sg-01">
+            <div class="conf-card-header">
+              <h3><span class="conf-num">01</span>MUJ SSIC Event</h3>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>January 2019</span>
+                <span><i class="fa fa-folder-open"></i>1. Conference outings / 1. MUJ SSIC</span>
+                <span><i class="fa fa-image"></i>11 Photos</span>
+              </div>
+            </div>
+            <div class="conf-card-body">
+              <p class="conf-desc">Highlights from the MUJ Student Symposium on Intelligent Computing (SSIC), using only photos from the folder <strong>1. Conference outings / 1. MUJ SSIC</strong>.</p>
+              <div class="gal-grid" id="gal-muj-ssic">
+                <a href="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/_DSC1190.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/_DSC1190.JPG" alt="MUJ SSIC"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2746.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2746.JPG" alt="MUJ SSIC"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2782.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2782.JPG" alt="MUJ SSIC"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2790.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2790.JPG" alt="MUJ SSIC"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2795.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2795.JPG" alt="MUJ SSIC"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2806.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2806.JPG" alt="MUJ SSIC"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2841.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2841.JPG" alt="MUJ SSIC"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2855.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2855.JPG" alt="MUJ SSIC"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2878.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2878.JPG" alt="MUJ SSIC"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2892.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2892.JPG" alt="MUJ SSIC"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2908.JPG" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2908.JPG" alt="MUJ SSIC"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. ICICV conference outing -->
+          <div class="conf-card" id="sg-02">
+            <div class="conf-card-header">
+              <h3><span class="conf-num">02</span>ICICV Conference Outing</h3>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>February 2020</span>
+                <span><i class="fa fa-folder-open"></i>1. Conference outings / 2. ICICV conference outing</span>
+                <span><i class="fa fa-image"></i>10 Photos</span>
+              </div>
+            </div>
+            <div class="conf-card-body">
+              <p class="conf-desc">An evening outing with colleagues during the ICICV conference, using only photos from the folder <strong>1. Conference outings / 2. ICICV conference outing</strong>.</p>
+              <div class="gal-grid" id="gal-conf-outing">
+                <a href="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213200238.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213200238.jpg" alt="ICICV Conference Outing 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213200257.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213200257.jpg" alt="ICICV Conference Outing 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213201825.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213201825.jpg" alt="ICICV Conference Outing 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213203430.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213203430.jpg" alt="ICICV Conference Outing 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213210742.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213210742.jpg" alt="ICICV Conference Outing 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213210750.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213210750.jpg" alt="ICICV Conference Outing 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213210800.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213210800.jpg" alt="ICICV Conference Outing 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213212414.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213212414.jpg" alt="ICICV Conference Outing 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213214307.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213214307.jpg" alt="ICICV Conference Outing 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213214329.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213214329.jpg" alt="ICICV Conference Outing 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+          <div class="connection-section" id="connection-section-memories">
+          <div class="connection-section-title connection-anchor" id="memories">
+            <h2>Memories</h2>
+            <p>Recent snapshots and quiet moments worth keeping close.</p>
+          </div>
+
+          <!-- Memories -->
+          <div class="conf-card" id="memories-post">
+            <div class="conf-card-header">
+              <h3><span class="conf-num">03</span>Memories</h3>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>May 2026</span>
+                <span><i class="fa fa-image"></i>6 Photos</span>
+              </div>
+            </div>
+            <div class="conf-card-body">
+              <p class="conf-desc">A small collection of everyday moments, captured as simple reminders of connection, warmth, and shared time.</p>
+              <div class="gal-grid" id="gal-memories">
+                <a href="files/8. Blog/2. Connection/2. Memories/20260516_161721.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/20260516_161721.jpg" alt="Memory from May 2026"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/20260516_161827.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/20260516_161827.jpg" alt="Memory from May 2026"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/20260516_162101.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/20260516_162101.jpg" alt="Memory from May 2026"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/20260516_162114.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/20260516_162114.jpg" alt="Memory from May 2026"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/20260516_162123.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/20260516_162123.jpg" alt="Memory from May 2026"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/20260516_162201.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/20260516_162201.jpg" alt="Memory from May 2026"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PhD Defence -->
+          <div class="conf-card" id="phd-defence">
+            <div class="conf-card-header">
+              <h3><span class="conf-num">04</span>PhD Defence</h3>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>12 April 2023</span>
+                <span><i class="fa fa-folder-open"></i>2. Memories / phd defence</span>
+                <span><i class="fa fa-image"></i>10 Photos</span>
+                <span><i class="fa fa-film"></i>2 Videos</span>
+              </div>
+            </div>
+            <div class="conf-card-body">
+              <p class="conf-desc">A doctoral milestone from the PhD defence, preserving the presentation day, academic discussions, and the people who made the journey meaningful.</p>
+              <div class="gal-grid" id="gal-phd-defence">
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_130141.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_130141.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140056.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140056.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140109.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140109.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140117.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140117.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140120.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140120.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140658.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140658.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140846.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140846.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140857.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_140857.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_141826.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_141826.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_150938.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_150938.jpg" alt="PhD Defence on 12 April 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              </div>
+              <div class="connection-video-label"><i class="fa fa-film"></i> Defence Videos</div>
+              <div class="connection-video-grid">
+                <video controls preload="metadata"><source src="files/8. Blog/2. Connection/2. Memories/phd defence/video_20230412_131215.mp4" type="video/mp4"><a href="files/8. Blog/2. Connection/2. Memories/phd defence/video_20230412_131215.mp4">Open defence video 1</a></video>
+                <video controls preload="metadata"><source src="files/8. Blog/2. Connection/2. Memories/phd defence/video_20230412_131225.mp4" type="video/mp4"><a href="files/8. Blog/2. Connection/2. Memories/phd defence/video_20230412_131225.mp4">Open defence video 2</a></video>
+              </div>
+            </div>
+          </div>
+
+          <!-- PhD Convocation -->
+          <div class="conf-card" id="phd-convocation">
+            <div class="conf-card-header">
+              <h3><span class="conf-num">05</span>PhD Convocation</h3>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>2 December 2023</span>
+                <span><i class="fa fa-folder-open"></i>2. Memories / phd convocation</span>
+                <span><i class="fa fa-image"></i>23 Photos</span>
+                <span><i class="fa fa-film"></i>3 Videos</span>
+              </div>
+            </div>
+            <div class="conf-card-body">
+              <p class="conf-desc">Convocation memories from the PhD journey, celebrating the degree, ceremony, family moments, and the completion of an important academic chapter.</p>
+              <div class="gal-grid" id="gal-phd-convocation">
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b0c1af9b7add3860eb776.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b0c1af9b7add3860eb776.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b1a6077fab2c23891405b.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b1a6077fab2c23891405b.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b1d91b77209f5828a1103.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b1d91b77209f5828a1103.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe156121df.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe156121df.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe156121f3.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe156121f3.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe15612211.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe15612211.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe15612225.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fdcc6defebe15612225.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fddc6defebe156122cd.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/656b3fddc6defebe156122cd.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG_20231202_133850.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG_20231202_133850.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202120845.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202120845.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202134823.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202134823.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202153607.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202153607.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202154430.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202154430.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202154500.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202154500.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202155154.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202155154.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202162555.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202162555.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202162658.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202162658.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202164552.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202164552.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202171839.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202171839.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202175748.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202175748.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202182528.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202182528.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202182620.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202182620.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202191545.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG20231202191545.jpg" alt="PhD Convocation on 2 December 2023"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              </div>
+              <div class="connection-video-label"><i class="fa fa-film"></i> Convocation Videos</div>
+              <div class="connection-video-grid">
+                <video controls preload="metadata"><source src="files/8. Blog/2. Connection/2. Memories/phd convocation/5b0d-1fb0-4da0-a09b-26b3a9ba6300.mp4" type="video/mp4"><a href="files/8. Blog/2. Connection/2. Memories/phd convocation/5b0d-1fb0-4da0-a09b-26b3a9ba6300.mp4">Open convocation video 1</a></video>
+                <video controls preload="metadata"><source src="files/8. Blog/2. Connection/2. Memories/phd convocation/730e-732d-4719-97bc-7429e51f1f04.mp4" type="video/mp4"><a href="files/8. Blog/2. Connection/2. Memories/phd convocation/730e-732d-4719-97bc-7429e51f1f04.mp4">Open convocation video 2</a></video>
+                <video controls preload="metadata"><source src="files/8. Blog/2. Connection/2. Memories/phd convocation/VID20231202152701 - Trim.mp4" type="video/mp4"><a href="files/8. Blog/2. Connection/2. Memories/phd convocation/VID20231202152701 - Trim.mp4">Open convocation video 3</a></video>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+          <div class="connection-section" id="connection-section-family">
+          <div class="connection-section-title connection-anchor" id="family">
+            <h2>Family</h2>
+            <p>Personal milestones, blessings, and the relationships that hold every journey together.</p>
+          </div>
+
+          <!-- Happy Birthday Mom -->
+          <div class="conf-card mom-birthday-post" id="mom-birthday" data-blog-post-id="mom-birthday" data-photo-taken-on="May 19, 2026">
+            <div class="conf-card-header">
+              <h3><span class="conf-num">06</span>Happy Birthday to Our Beautiful Mom <span style="color:#d6a235;">&hearts;</span></h3>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>May 19, 2026</span>
+                <span><i class="fa fa-heart"></i>Family &amp; Blessings</span>
+                <span><i class="fa fa-image"></i>16 Photos</span>
+              </div>
+            </div>
+            <div class="conf-card-body">
+              <div class="mom-main-photos gal-container">
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/111111.png" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/111111.png" alt="Happy Birthday Mom main memory">
+                  <span class="mom-main-caption">Our beautiful Mom</span>
+                </a>
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/2222.png" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/2222.png" alt="Happy Birthday Mom special memory">
+                  <span class="mom-main-caption">Love you forever</span>
+                </a>
+              </div>
+
+              <div class="mom-letter">
+                <p class="lead-love">Today is not just another day. Today is the birthday of the most beautiful woman in our lives &mdash; our mother, our strength, our blessing, our first home, and our forever safe place.</p>
+
+                <p>Mom, when we look at you, we see beauty in its purest form. Not only the beauty of your face, your smile, and your presence, but the beauty of your heart, your soul, your patience, your sacrifices, and your unconditional love. You have given so much of yourself to us that no words will ever be enough to thank you. You have loved us silently, supported us endlessly, and stood by us through every season of life.</p>
+
+                <p>You are the person who has always been there &mdash; not only in our happy moments, but also in our struggles, fears, confusion, failures, and nervous days. Whenever life felt difficult, your presence made it lighter. Whenever we felt weak, your blessings made us stronger. Whenever we doubted ourselves, your belief in us reminded us that we could do it.</p>
+
+                <p>For me, you have been present in every important milestone of my life. From my very first presentation, to my PhD presentation, to my company presentation &mdash; you were always there. You stood beside me like my biggest support system, encouraging me, blessing me, and making sure I never felt alone. In every hurdle, every nervous moment, and every difficult day, your presence gave me strength. You may not always say much, but your silent support has always spoken the loudest.</p>
+
+                <div class="mom-quote">One memory that will always stay close to my heart is how you looked after Sam for eight long hours in a room while I completed my company presentation. You never complained. You never made me feel guilty. You never made me feel like I was asking too much. You simply stood by me, like you always do &mdash; with love, patience, strength, and a smile.</div>
+
+                <p>I truly believe that the luckiest people are those who can take their mother with them to the most important milestones of their life. Lucky are those who can have their mother sitting beside them at their first presentation, standing proudly with them at their PhD presentation, and even being present at their company presentation. I am one of those blessed people. I can take you everywhere with me &mdash; in my achievements, in my struggles, in my journey, in my motherhood, and in every new chapter of my life.</p>
+
+                <p>And this birthday wish is from both of us &mdash; from me and Apoo, your two daughters, who love you more than words can ever express. Apoo is not just a part of this bond; she is one whole heart of it. You, Apoo, and I share a connection that is so pure, so deep, and so precious that it cannot be explained in simple words. We three have grown together through every phase of life &mdash; sharing love, laughter, worries, dreams, small fights, big emotions, silent understanding, and endless memories.</p>
+
+                <p>Mom, you have held both of us with the same love, protected both of us with the same strength, and blessed both of us with the same heart. Apoo and I may be different in many ways, but when it comes to you, our love is the same &mdash; deep, emotional, and unconditional. You are the center of our world, and together the three of us are not just mother and daughters; we are each other&rsquo;s comfort, strength, and home.</p>
+
+                <p>From Apoo&rsquo;s heart too, this message is for you: Mom, you are our biggest blessing. Your love has shaped us, your sacrifices have protected us, and your prayers have guided us. We may not always say it perfectly, but we feel it every day &mdash; life is better, safer, and more beautiful because we have you. Thank you for loving us so deeply, for standing by us so strongly, and for being the most beautiful mother we could ever ask for.</p>
+
+                <p>And even today, your love and support continue in the most beautiful way. Till date, Sam is being looked after with so much care, love, and patience by only you and Papa. The way both of you take care of him, protect him, love him, and make sure he never feels alone is something I can never repay in this lifetime.</p>
+
+                <p>For a mother, seeing her own parents take care of her child with the same love and warmth is the biggest blessing. Sam is growing under your love, your values, your affection, and your blessings. Whatever I am able to do today &mdash; my work, my responsibilities, my dreams, and my journey &mdash; it is possible because I know Sam is safe, loved, and cared for by you and Papa.</p>
+
+                <p>You and Papa have become his first home, his comfort, and his biggest support. The love you both give him is priceless. I feel blessed not only because you are my mother, but because Sam also has you and Papa as his strongest protectors and most loving grandparents.</p>
+
+                <p>Mom, your love did not stop with me. It continues through Sam. And that makes me even more grateful, even more emotional, and even more proud to be your daughter.</p>
+
+                <p>This era of our life is truly the best because we have you with us. We are living our dreams, building our lives, facing our responsibilities, raising our family, and growing every day &mdash; and through it all, you are there. Your presence makes everything more meaningful. Our success feels happier because you are there to witness it. Our struggles feel easier because you are there to hold us. Our journey feels complete because you are walking beside us.</p>
+
+                <p>Whatever I am today is because of you. Whatever we are today is because of you. Every achievement carries your prayers. Every milestone carries your blessings. Every success carries your sacrifices. Behind our confidence is your encouragement. Behind our courage is your strength. Behind our smiles is your love. Behind everything we have become, there is you.</p>
+
+                <p>You have taught us what true love looks like. You have taught us what sacrifice means. You have taught us how to be strong without becoming hard, how to care without expecting anything, and how to keep giving even when life is not easy. You are not just our mother &mdash; you are our inspiration, our guide, our protector, our blessing, and the reason we believe in ourselves.</p>
+
+                <p>Sometimes &ldquo;thank you&rdquo; feels too small for everything you have done. How can we thank someone who gave us life, raised us with love, stood by us in every difficulty, supported our dreams, cared for our family, and still continues to give without asking for anything in return?</p>
+
+                <p>Mom, you are our greatest blessing. We feel proud to be your daughters. We feel lucky to have your hand on our heads, your prayers in our lives, and your presence in our journey. No matter how much we achieve in life, our biggest blessing will always be having a mother like you.</p>
+
+                <p>On your birthday, we only pray that God gives you all the happiness, peace, love, health, and comfort that you truly deserve. May your life be filled with smiles, good health, beautiful memories, and endless love. You have spent your life making others happy, and now we wish that every day brings happiness back to you.</p>
+
+                <p class="mom-signoff">
+                  Happy Birthday, Mom.<br>
+                  We love you more than words can ever express.<br>
+                  Whatever we are today, and whatever we will become tomorrow, it will always be because of you.
+                  <span style="color:#d6a235;">&hearts;</span>
+                  <br><br>
+                  Love you forever, Mom.<br>
+                  From both your daughters, with all our love &mdash; and with heartfelt love and respect from Ashu.
+                  <span style="color:#d6a235;">&hearts;</span>
+                </p>
+              </div>
+
+              <div class="mom-gallery-title"><i class="fa fa-heart"></i> Moments with Mom</div>
+              <div class="gal-grid" id="gal-mom-birthday">
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/111111.png" class="gal-item cert-a">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/111111.png" alt="Happy Birthday Mom main memory">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/2222.png" class="gal-item cert-b">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/2222.png" alt="Happy Birthday Mom special memory">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/phd ppt.jpeg" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/phd ppt.jpeg" alt="PhD presentation with Mom">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/phd ppt-.jpeg" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/phd ppt-.jpeg" alt="PhD presentation group photo">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/with Sam at office.jpeg" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/with Sam at office.jpeg" alt="Mom caring for Sam at office">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/nosu.jpeg" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/nosu.jpeg" alt="Old memory with Mom">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/WhatsApp Image 2021-05-18 at 09.58.29 (9).jpeg" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/WhatsApp Image 2021-05-18 at 09.58.29 (9).jpeg" alt="Mom and Ashu">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/me my sis my mom.jpg" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/me my sis my mom.jpg" alt="Me, Apoo, and Mom">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/beautiful mom.jpg" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/beautiful mom.jpg" alt="Beautiful Mom">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/beautiful mom-.jpg" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/beautiful mom-.jpg" alt="Beautiful Mom portrait">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/beautiful mom--.jpg" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/beautiful mom--.jpg" alt="Beautiful Mom at Dubai">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/DSC07045.JPG" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/DSC07045.JPG" alt="Family memory with Mom">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/DSC03664.JPG" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/DSC03664.JPG" alt="Mom with daughters">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/first ppt.JPG" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/first ppt.JPG" alt="First presentation memory with Mom">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/first ppt at bvicam.JPG" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/first ppt at bvicam.JPG" alt="First presentation at BVICAM">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/DSC06037.JPG" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/DSC06037.JPG" alt="Mom with both daughters">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+
+                <a href="files/8. Blog/2. Connection/3. Family/3. mom birthday/111.jpeg" class="gal-item">
+                  <img loading="lazy" src="files/8. Blog/2. Connection/3. Family/3. mom birthday/111.jpeg" alt="Birthday memory with Mom">
+                  <div class="gal-overlay"><i class="fa fa-search-plus"></i></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+        <!-- Post navigation -->
+        <div class="navigation-area">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+              <div class="thumb">
+                <a href="academics.html"><img class="img-fluid" src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/_DSC1190.JPG" alt="" style="border-radius:8px;width:56px;height:48px;object-fit:cover;"></a>
+              </div>
+              <div class="arrow">
+                <a href="academics.html"><span class="lnr text-white lnr-arrow-left"></span></a>
+              </div>
+              <div class="detials">
+                <p>Prev Post</p>
+                <a href="academics.html"><h4>ICCT 2023 Conference</h4></a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+              <div class="detials">
+                <p>Next Post</p>
+                <a href="sports.html"><h4>Sports &amp; Wellness</h4></a>
+              </div>
+              <div class="arrow">
+                <a href="sports.html"><span class="lnr text-white lnr-arrow-right"></span></a>
+              </div>
+              <div class="thumb">
+                <a href="sports.html"><img class="img-fluid" src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213214329.jpg" alt="" style="border-radius:8px;width:56px;height:48px;object-fit:cover;"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /col-lg-8 -->
+
+      <!-- SIDEBAR -->
+      <div class="col-lg-4">
+        <div class="blog_right_sidebar">
+          <aside class="single_sidebar_widget search_widget">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search Posts">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
+              </span>
+            </div>
+            <div class="br"></div>
+          </aside>
+
+          <aside class="single_sidebar_widget author_widget">
+            <img class="author_img rounded-circle" src="files/8.%20Blog/author.jpg" alt="Anubha Parashar">
+            <h4>Anubha Parashar</h4>
+            <p>Analytics &amp; AI Engineer | AI Researcher | Educator</p>
+            <div class="social_icon">
+              <a href="https://www.facebook.com/anubha.parashar" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/anubhaparashar/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/anubhaparashar" target="_blank"><i class="fa fa-github"></i></a>
+              <a href="https://twitter.com/parashar_anubha" target="_blank"><i class="fa fa-twitter"></i></a>
+            </div>
+            <p>Analytics &amp; AI Engineer and AI researcher specializing in Computer Vision, Biometrics, GenAI, LLMs, NLP, Deep Learning, and Machine Learning. My work bridges research and deployment through real-world AI systems, including drone-based solar panel defect detection, edge AI chatbots, OCR pipelines, GIS-based analytics, scheduling optimization, and robust gait recognition. I hold a Ph.D. in Computer Science and Engineering with a focus on Artificial Intelligence, and I bring experience across industry research, academic teaching, publications, patents, and applied AI product development.</p>
+            <div class="br"></div>
+          </aside>
+
+          <aside class="single_sidebar_widget popular_post_widget">
+            <h3 class="widget_title">Popular Posts</h3>
+            <div class="media post_item">
+              <img src="files/8. Blog/2. Connection/3. Family/3. mom birthday/111111.png" alt="Happy Birthday Mom">
+              <div class="media-body">
+                <a href="social-life.html#mom-birthday"><h3>Happy Birthday to My Beautiful Mom</h3></a>
+                <p>19 May, 2026</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="files/8. Blog/2. Connection/2. Memories/20260516_161721.jpg" alt="Memories">
+              <div class="media-body">
+                <a href="social-life.html#memories-post"><h3>Memories</h3></a>
+                <p>16 May, 2026</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="files/8. Blog/2. Connection/2. Memories/phd convocation/IMG_20231202_133850.jpg" alt="PhD Convocation">
+              <div class="media-body">
+                <a href="social-life.html#phd-convocation"><h3>PhD Convocation</h3></a>
+                <p>2 Dec, 2023</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="files/8. Blog/2. Connection/2. Memories/phd defence/IMG_20230412_130141.jpg" alt="PhD Defence">
+              <div class="media-body">
+                <a href="social-life.html#phd-defence"><h3>PhD Defence</h3></a>
+                <p>12 Apr, 2023</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="files/8. Blog/2. Connection/header/IMG20200128140641.jpg" alt="post">
+              <div class="media-body">
+                <a href="social-life.html#connection-overview"><h3>Global AI Jaipur Webinar</h3></a>
+                <p>3 May, 2025</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2746.JPG" alt="post">
+              <div class="media-body">
+                <a href="award.html#top-researcher-jan-2023"><h3>Top Researcher of the Month</h3></a>
+                <p>7 Feb, 2023</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213200238.jpg" alt="post">
+              <div class="media-body">
+                <a href="academics.html#c-icct23"><h3>ICCT 2023 Conference</h3></a>
+                <p>20 Jan, 2023</p>
+              </div>
+            </div>
+            <div class="br"></div>
+          </aside>
+
+          <aside class="single_sidebar_widget post_category_widget">
+            <h4 class="widget_title">Blog Sections</h4>
+            <ul class="list cat-list">
+              <li><a href="academics.html" class="d-flex justify-content-between"><p>Academics</p><p>65</p></a></li>
+              <li><a href="social-life.html" class="d-flex justify-content-between"><p>Connections</p><p>6</p></a></li>
+              <li><a href="avocations.html" class="d-flex justify-content-between"><p>Avocations</p><p>14</p></a></li>
+              <li><a href="sports.html" class="d-flex justify-content-between"><p>Sports &amp; Wellness</p><p>1</p></a></li>
+              <li><a href="publication.html" class="d-flex justify-content-between"><p>Publications</p><p>1</p></a></li>
+              <li><a href="project.html" class="d-flex justify-content-between"><p>Projects</p><p>1</p></a></li>
+            </ul>
+            <div class="br"></div>
+          </aside>
+
+          <aside class="single-sidebar-widget tag_cloud_widget">
+            <h4 class="widget_title">Topics</h4>
+            <ul class="list">
+              <li><a href="project.html">Technology</a></li>
+              <li><a href="academics.html">Academics</a></li>
+              <li><a href="publication.html">Research</a></li>
+              <li><a href="project.html">AI</a></li>
+              <li><a href="avocations.html">Avocations</a></li>
+              <li><a href="sports.html">Wellness</a></li>
+              <li><a href="publication.html">Innovation</a></li>
+              <li><a href="social-life.html">Community</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/isotope/isotope-min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/site-components.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script>
+  (function() {
+    var slides = document.querySelectorAll('.soc-hero-slides img');
+    if (slides.length < 2) return;
+    var index = 0;
+    setInterval(function() {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 3000);
+  })();
+
+  (function() {
+    var buttons = Array.from(document.querySelectorAll('.connection-tab-btn'));
+    var sections = Array.from(document.querySelectorAll('.connection-section'));
+    if (!buttons.length || !sections.length) return;
+
+    function activateTab(id, updateHash) {
+      buttons.forEach(function(item) {
+        item.classList.toggle('active', item.getAttribute('data-target') === id);
+      });
+      sections.forEach(function(section) {
+        section.classList.toggle('active', section.id === 'connection-section-' + id);
+      });
+      if (updateHash !== false && window.location.hash !== '#' + id) {
+        history.replaceState(null, '', '#' + id);
+      }
+      window.dispatchEvent(new Event('resize'));
+    }
+
+    function sectionForHash(hash) {
+      if (!hash) return null;
+      if (buttons.some(function(btn) { return btn.getAttribute('data-target') === hash; })) return hash;
+      var target = document.getElementById(hash);
+      if (!target) return null;
+      var section = target.closest('.connection-section');
+      return section ? section.id.replace('connection-section-', '') : null;
+    }
+
+    function openHashTarget() {
+      var hash = (window.location.hash || '').slice(1);
+      var tabId = sectionForHash(hash);
+      if (!tabId) return;
+      activateTab(tabId, false);
+      if (hash === tabId) return;
+      [80, 350, 900].forEach(function(delay) {
+        setTimeout(function() {
+          var target = document.getElementById(hash);
+          if (!target) return;
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          target.style.outline = '3px solid #d6a235';
+          target.style.borderRadius = '16px';
+          setTimeout(function() {
+            target.style.outline = '';
+            target.style.borderRadius = '';
+          }, 2200);
+        }, delay);
+      });
+    }
+
+    buttons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var id = btn.getAttribute('data-target');
+        activateTab(id);
+      });
+    });
+
+    openHashTarget();
+    window.addEventListener('load', openHashTarget);
+    window.addEventListener('hashchange', openHashTarget);
+  })();
+
+  document.querySelectorAll('.popular_post_widget .post_item').forEach(function(item) {
+    var link = item.querySelector('a[href]');
+    if (!link) return;
+    item.setAttribute('tabindex', '0');
+    item.addEventListener('click', function(event) {
+      if (event.target.closest('a')) return;
+      window.location.href = link.href;
+    });
+    item.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        window.location.href = link.href;
+      }
+    });
+  });
+
+  // ── Gallery restructure: fancy slider ──
+  (function() {
+    document.querySelectorAll('.gal-grid').forEach(function(grid) {
+      var allItems = Array.from(grid.querySelectorAll('a.gal-item'));
+      if (!allItems.length) return;
+
+      var certItems    = allItems.filter(function(i){ return i.classList.contains('cert-a') || i.classList.contains('cert-b'); });
+      var regularItems = allItems.filter(function(i){ return !i.classList.contains('cert-a') && !i.classList.contains('cert-b'); });
+      var gridId = grid.id;
+
+      var wrap = document.createElement('div');
+      wrap.className = 'gal-container';
+      wrap.id = gridId;
+      grid.removeAttribute('id');
+
+      if (certItems.length) {
+        var featured = document.createElement('div');
+        featured.className = 'gal-featured';
+        if (gridId !== 'gal-mom-birthday') {
+          var label = document.createElement('span');
+          label.className = 'gal-featured-label';
+          label.innerHTML = '<i class="fa fa-star" style="font-size:.6rem;"></i> Certificate Highlights';
+          featured.appendChild(label);
+        }
+        certItems.forEach(function(item){ featured.appendChild(item); });
+        wrap.appendChild(featured);
+      }
+
+      var sizeItems = null;
+
+      if (regularItems.length) {
+        var sliderWrap = document.createElement('div');
+        sliderWrap.className = 'gal-slider-wrap';
+
+        var header = document.createElement('div');
+        header.className = 'gal-slider-header';
+
+        var counter = document.createElement('span');
+        counter.className = 'gal-slider-counter';
+        counter.textContent = regularItems.length + ' photos';
+
+        var navDiv = document.createElement('div');
+        navDiv.className = 'gal-slider-nav';
+
+        var prevBtn = document.createElement('button');
+        prevBtn.className = 'gal-nav-btn';
+        prevBtn.innerHTML = '<i class="fa fa-chevron-left"></i>';
+        prevBtn.setAttribute('disabled', '');
+
+        var nextBtn = document.createElement('button');
+        nextBtn.className = 'gal-nav-btn';
+        nextBtn.innerHTML = '<i class="fa fa-chevron-right"></i>';
+
+        navDiv.appendChild(prevBtn);
+        navDiv.appendChild(nextBtn);
+        header.appendChild(counter);
+        header.appendChild(navDiv);
+
+        var viewport = document.createElement('div');
+        viewport.className = 'gal-slider-viewport';
+
+        var track = document.createElement('div');
+        track.className = 'gal-slides-track';
+        regularItems.forEach(function(item){ track.appendChild(item); });
+        viewport.appendChild(track);
+
+        var progress = document.createElement('div');
+        progress.className = 'gal-progress';
+        var bar = document.createElement('div');
+        bar.className = 'gal-progress-bar';
+        progress.appendChild(bar);
+
+        var moreCount = document.createElement('div');
+        moreCount.className = 'gal-more-count';
+
+        sliderWrap.appendChild(header);
+        sliderWrap.appendChild(viewport);
+        sliderWrap.appendChild(progress);
+        sliderWrap.appendChild(moreCount);
+        wrap.appendChild(sliderWrap);
+
+        var updateNav = function() {
+          var maxScroll = viewport.scrollWidth - viewport.clientWidth;
+          var scrollLeft = viewport.scrollLeft;
+          var vw = viewport.clientWidth;
+          var gap = 10;
+          var perPage = vw < 480 ? 1 : (vw < 768 ? 2 : 3);
+          bar.style.width = maxScroll > 0 ? Math.max((scrollLeft / maxScroll) * 100, 2) + '%' : '100%';
+          prevBtn.disabled = scrollLeft < 4;
+          nextBtn.disabled = maxScroll < 4 || scrollLeft >= maxScroll - 4;
+          var firstItemW = regularItems[0] ? (regularItems[0].offsetWidth + gap) : (vw / perPage + gap);
+          var firstVisible = firstItemW > 0 ? Math.round(scrollLeft / firstItemW) : 0;
+          var shown = Math.min(firstVisible + perPage, regularItems.length);
+          var remaining = regularItems.length - shown;
+          if (remaining > 0) {
+            moreCount.className = 'gal-more-count';
+            moreCount.innerHTML = '<strong>+' + remaining + '</strong> more photo' + (remaining === 1 ? '' : 's') + ' →';
+          } else {
+            moreCount.className = 'gal-more-count done';
+            moreCount.innerHTML = '✓ All ' + regularItems.length + ' photos shown';
+          }
+        };
+
+        sizeItems = function() {
+          var vw = viewport.clientWidth;
+          if (vw === 0) return;
+          var gap = 10;
+          var perPage = vw < 480 ? 1 : (vw < 768 ? 2 : 3);
+          var itemW = Math.floor((vw - gap * (perPage - 1)) / perPage);
+          regularItems.forEach(function(item){
+            item.style.flex  = '0 0 ' + itemW + 'px';
+            item.style.width = itemW + 'px';
+          });
+          updateNav();
+        };
+
+        viewport.addEventListener('scroll', function(){ requestAnimationFrame(updateNav); });
+        prevBtn.addEventListener('click', function(){ viewport.scrollBy({ left: -viewport.clientWidth, behavior: 'smooth' }); });
+        nextBtn.addEventListener('click', function(){ viewport.scrollBy({ left: viewport.clientWidth, behavior: 'smooth' }); });
+
+        if (typeof ResizeObserver !== 'undefined') {
+          new ResizeObserver(function() { sizeItems(); }).observe(viewport);
+        }
+        window.addEventListener('resize', sizeItems);
+      }
+
+      grid.parentNode.insertBefore(wrap, grid);
+      grid.parentNode.removeChild(grid);
+      if (sizeItems) sizeItems();
+    });
+
+    $('.gal-container').magnificPopup({
+      delegate: 'a.gal-item', type: 'image',
+      gallery: { enabled: true },
+      image: { titleSrc: function(item){ return item.el.find('img').attr('alt'); } }
+    });
+
+    if (window.location.hash) {
+      setTimeout(function() {
+        window.dispatchEvent(new Event('hashchange'));
+      }, 120);
+    }
+  })();
+</script>
+<script type="module" src="assets/js/firebase-blog.js"></script>
+<script src="assets/js/auto-folder-gallery.js"></script>
+</body>
+</html>
