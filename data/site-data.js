@@ -1,9 +1,60 @@
 /**
+ * CENTRAL SITE DATA
+ *
+ * To add a new academic/blog/gallery item, add it only to the central data source.
+ * Quick Stats, Blog counts, Sidebar counts, Filters, and Tags update automatically.
+ *
+ * Fields: id, cat ('academics'|'social'|'sports'|'avocations'), tags (curated CSV string or array),
+ *         date, views (optional), img, title, excerpt, link, badge (optional label),
+ *         subCategory (optional for academics; otherwise inferred from the link/id prefix).
+ */
+
+/**
  * CENTRAL POSTS DATA — add a new object here and blog.html auto-updates.
  * Fields: id, cat ('academics'|'social'|'sports'), tags (CSV string),
  *         date, views (optional), img, title, excerpt, link, badge (optional label)
  */
 var SITE_POSTS = [
+
+  {
+    id:      'post-lead-warden',
+    cat:     'academics',
+    subCategory: 'Leadership',
+    tags:    ['Leadership','Academics','Mentoring','Responsibility'],
+    date:    '2016 - 2024',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'Warden',
+    excerpt: 'Academic leadership responsibility as warden, supporting students through mentoring, administration, and campus life coordination.',
+    link:    'academics.html#lead-warden',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-lead-vc',
+    cat:     'academics',
+    subCategory: 'Leadership',
+    tags:    ['Leadership','School','Responsibility','Academics'],
+    date:    '2007',
+    views:   '',
+    img:     'files/8. Blog/1. academic/1. leadership/2. wise captain/vice captain.png',
+    title:   'Vice Captain, School',
+    excerpt: 'School leadership role as Vice Captain, reflecting early responsibility, teamwork, and student representation.',
+    link:    'academics.html#lead-vc',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-lead-sp',
+    cat:     'academics',
+    subCategory: 'Leadership',
+    tags:    ['Leadership','School','Student Life','Academics'],
+    date:    '2005 - 2006',
+    views:   '',
+    img:     'files/8. Blog/1. academic/1. leadership/3. senior perfect/sp.jpeg',
+    title:   'Senior Prefect',
+    excerpt: 'Senior Prefect role during school years, contributing to student discipline, coordination, and leadership activities.',
+    link:    'academics.html#lead-sp',
+    badge:   'Academics'
+  },
 
   /* ── SOCIAL LIFE ────────────────────────────────────── */
   {
@@ -53,7 +104,7 @@ var SITE_POSTS = [
     img:     'files/8. Blog/1. academic/2. Conferences and ppt/Organised icct-17/20171222_120557.jpg',
     title:   'ICCT 2017',
     excerpt: '1st International Conference on Intelligent Communication and Computational Techniques — an inaugural gathering advancing intelligent systems.',
-    link:    'academics.html#c-icct17',
+    link:    'academics.html#c-icct17-organised',
     badge:   'Academics'
   },
   {
@@ -125,7 +176,7 @@ var SITE_POSTS = [
     img:     'files/8. Blog/1. academic/2. Conferences and ppt/Coratia Conference/20180906_103004.jpg',
     title:   'International Conference – Croatia',
     excerpt: 'International conference in Croatia — sharing research with European academics and exploring collaborative opportunities abroad.',
-    link:    'academics.html#c-coratia',
+    link:    'academics.html#c-croatia',
     badge:   'Academics'
   },
   {
@@ -137,7 +188,7 @@ var SITE_POSTS = [
     img:     'files/8. Blog/1. academic/2. Conferences and ppt/27. Organised ICCT conference/IMG20211213123342.jpg',
     title:   'ICCT 2021 – Organised Conference',
     excerpt: 'ICCT 2021, organised and chaired — leading the coordination of an international conference as chief organiser and programme committee member.',
-    link:    'academics.html#c-icct21',
+    link:    'academics.html#c-icct21-organised',
     badge:   'Academics'
   },
   {
@@ -771,7 +822,8 @@ var SITE_POSTS = [
     img:     'files/8. Blog/1. academic/4. expert talk/5. iot speaker/IMG_20210214_105415.jpg',
     title:   'IoT Speaker Session',
     excerpt: 'Expert speaker session on Internet of Things — industry and academic speakers sharing real-world IoT applications and research.',
-    link:    'academics.html#w-iotspeaker',
+    subCategory: 'Expert Talks',
+    link:    'academics.html#et-07',
     badge:   'Academics'
   },
   {
@@ -812,6 +864,162 @@ var SITE_POSTS = [
   },
   /* ── SPORTS ──────────────────────────────────────────── */
   {
+    id:      'post-c-spec-organised',
+    cat:     'academics',
+    subCategory: 'Conferences',
+    tags:    'Conference,Organised,SPEC,Research,Academics',
+    date:    '2021',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'SPEC Conference - Organised',
+    excerpt: 'Organising committee contribution for the SPEC conference.',
+    link:    'academics.html#c-spec-organised',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-c-icct19-organised',
+    cat:     'academics',
+    subCategory: 'Conferences',
+    tags:    'Conference,Organised,ICCT,Research,Academics',
+    date:    '2019',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'ICCT 2019 - Organised Conference',
+    excerpt: 'Organising committee contribution for ICCT 2019.',
+    link:    'academics.html#c-icct19-organised',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-c-icicv20-organised',
+    cat:     'academics',
+    subCategory: 'Conferences',
+    tags:    'Conference,Organised,ICICV,Research,Academics',
+    date:    '2020',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'ICICV 2020 - Organised Conference',
+    excerpt: 'Organising committee contribution for ICICV 2020.',
+    link:    'academics.html#c-icicv20-organised',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-c-sin-organised',
+    cat:     'academics',
+    subCategory: 'Conferences',
+    tags:    'Conference,Organised,SIN,Research,Academics',
+    date:    '2017',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'SIN 2017 - Organised Conference',
+    excerpt: 'Organising committee contribution for SIN 2017.',
+    link:    'academics.html#c-sin-organised',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-c-ssic1-organised',
+    cat:     'academics',
+    subCategory: 'Conferences',
+    tags:    'Conference,Organised,SSIC,Students,Academics',
+    date:    '2017',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'SSIC 2017 - Organised Symposium',
+    excerpt: 'Organising committee contribution for SSIC 2017.',
+    link:    'academics.html#c-ssic1-organised',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-c-ssic2-organised',
+    cat:     'academics',
+    subCategory: 'Conferences',
+    tags:    'Conference,Organised,SSIC,Students,Academics',
+    date:    '2019',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'SSIC 2019 - Organised Symposium',
+    excerpt: 'Organising committee contribution for SSIC 2019.',
+    link:    'academics.html#c-ssic2-organised',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-w-gian-2018',
+    cat:     'academics',
+    subCategory: 'Workshops',
+    tags:    'Workshop,GIAN,Research,Training,Academics',
+    date:    '2018',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'GIAN 2018',
+    excerpt: 'GIAN 2018 academic training and workshop participation.',
+    link:    'academics.html#w-gian-2018',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-et-03',
+    cat:     'academics',
+    subCategory: 'Expert Talks',
+    tags:    'Expert Talk,FDP,Research,Training,Academics',
+    date:    '2019 - 2020',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'Expert Talk & FDP',
+    excerpt: 'Expert talk and Faculty Development Programme sessions sharing research insights and technical knowledge with academic communities.',
+    link:    'academics.html#et-03',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-et-04',
+    cat:     'academics',
+    subCategory: 'Expert Talks',
+    tags:    'Expert Talk,IoT,Technology,Academics',
+    date:    '2020',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'Expert Talk on IoT',
+    excerpt: 'Expert talk on IoT and emerging technology themes.',
+    link:    'academics.html#et-04',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-et-05',
+    cat:     'academics',
+    subCategory: 'Expert Talks',
+    tags:    'Expert Talk,Technology,Teaching,Academics',
+    date:    '',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'Expert Talk',
+    excerpt: 'Academic expert talk session.',
+    link:    'academics.html#et-05',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-et-08',
+    cat:     'academics',
+    subCategory: 'Expert Talks',
+    tags:    'Expert Talk,AI,Lecture,Academics',
+    date:    '',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'Expert Talk on AI',
+    excerpt: 'Expert talk on AI and related academic themes.',
+    link:    'academics.html#et-08',
+    badge:   'Academics'
+  },
+  {
+    id:      'post-et-09',
+    cat:     'academics',
+    subCategory: 'Expert Talks',
+    tags:    'Expert Talk,Java,Teaching,Academics',
+    date:    '2006',
+    views:   '',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'Java as a Language',
+    excerpt: 'Academic session on Java as a programming language.',
+    link:    'academics.html#et-09',
+    badge:   'Academics'
+  },
+  {
     id:      'post-sports-sack',
     cat:     'sports',
     tags:    'Sports,Xpression,Achievement,Campus,Fitness',
@@ -837,3 +1045,257 @@ var SITE_POSTS = [
   }
 
 ];
+
+(function(global) {
+  var CATEGORY_ORDER = ['academics', 'social', 'sports', 'avocations'];
+  var CATEGORY_LABELS = {
+    academics: 'Academics',
+    social: 'Social Life',
+    sports: 'Sports',
+    avocations: 'Avocations'
+  };
+  var SUBCATEGORY_LABELS = {
+    leadership: 'Leadership',
+    conferences: 'Conferences',
+    workshops: 'Workshops',
+    experttalks: 'Expert Talks',
+    facultyvisits: 'Faculty Visits',
+    events: 'Events',
+    hackathon: 'Hackathon',
+    social: 'Social Activities'
+  };
+  var SUBCATEGORY_ORDER = [
+    'leadership',
+    'conferences',
+    'workshops',
+    'experttalks',
+    'facultyvisits',
+    'events',
+    'hackathon',
+    'social'
+  ];
+
+  function normalizeKey(value) {
+    return String(value || '')
+      .toLowerCase()
+      .replace(/&/g, 'and')
+      .replace(/[^a-z0-9]+/g, '');
+  }
+
+  function tagsArray(item) {
+    if (Array.isArray(item.tags)) return item.tags.filter(Boolean);
+    return String(item.tags || '')
+      .split(',')
+      .map(function(tag) { return tag.trim(); })
+      .filter(Boolean);
+  }
+
+  function hashFromLink(item) {
+    var link = String(item.link || '');
+    return link.indexOf('#') === -1 ? '' : link.split('#').pop();
+  }
+
+  function inferSubCategoryKey(item) {
+    var explicit = normalizeKey(item.subCategory || item.subCategoryKey);
+    if (explicit) {
+      if (explicit === 'experttalk' || explicit === 'experttalks') return 'experttalks';
+      if (explicit === 'facultyvisit' || explicit === 'facultyvisits') return 'facultyvisits';
+      if (explicit === 'socialactivity' || explicit === 'socialactivities') return 'social';
+      if (explicit === 'conference') return 'conferences';
+      if (explicit === 'workshop') return 'workshops';
+      if (explicit === 'event') return 'events';
+      return explicit;
+    }
+    var hash = hashFromLink(item);
+    var id = String(item.id || '');
+    var source = hash || id;
+    if (/^(lead|warden|vice|senior)/i.test(source)) return 'leadership';
+    if (/^c-/i.test(source) || /post-c-/i.test(id)) return 'conferences';
+    if (/^w-/i.test(source) || /post-ws-/i.test(id)) return 'workshops';
+    if (/^et-/i.test(source) || /post-et-/i.test(id)) return 'experttalks';
+    if (/^fv-/i.test(source) || /post-fv-/i.test(id)) return 'facultyvisits';
+    if (/^ev-/i.test(source) || /post-ev-/i.test(id)) return 'events';
+    if (/^hk-/i.test(source) || /post-hk-/i.test(id)) return 'hackathon';
+    if (/^soc-/i.test(source) || /post-soc-/i.test(id)) return 'social';
+    if (tagsArray(item).some(function(tag) { return normalizeKey(tag) === 'leadership'; })) return 'leadership';
+    return '';
+  }
+
+  function normalizeItem(item) {
+    var category = String(item.mainCategory || item.cat || '').toLowerCase();
+    if (category === 'academic') category = 'academics';
+    var subKey = category === 'academics' ? inferSubCategoryKey(item) : '';
+    return Object.assign({}, item, {
+      type: item.type || (category === 'academics' ? 'academic' : 'blog'),
+      cat: category,
+      mainCategory: CATEGORY_LABELS[category] || item.mainCategory || item.cat || '',
+      subCategoryKey: subKey,
+      subCategory: item.subCategory || SUBCATEGORY_LABELS[subKey] || '',
+      hash: item.hash || hashFromLink(item),
+      photoCount: Number(item.photoCount || 0),
+      images: item.images || [],
+      tags: tagsArray(item),
+      description: item.description || item.excerpt || ''
+    });
+  }
+
+  function sourceItems() {
+    return (global.SITE_POSTS || SITE_POSTS || []).map(normalizeItem);
+  }
+
+  function getItemsByCategory(category) {
+    var key = normalizeKey(category);
+    return sourceItems().filter(function(item) {
+      return normalizeKey(item.cat) === key || normalizeKey(item.mainCategory) === key;
+    });
+  }
+
+  function getItemsBySubCategory(subCategory) {
+    var key = normalizeKey(subCategory);
+    var seen = {};
+    return sourceItems().filter(function(item) {
+      var itemKey = item.hash || item.id;
+      if (seen[itemKey]) return false;
+      return item.cat === 'academics' && (
+        normalizeKey(item.subCategoryKey) === key ||
+        normalizeKey(item.subCategory) === key
+      ) && (seen[itemKey] = true);
+    });
+  }
+
+  function getCategoryCount(category) {
+    if (normalizeKey(category) === 'all') return sourceItems().length;
+    return getItemsByCategory(category).length;
+  }
+
+  function getSubCategoryCount(subCategory) {
+    return getItemsBySubCategory(subCategory).length;
+  }
+
+  function getTagCounts(items) {
+    var counts = {};
+    (items || sourceItems()).forEach(function(item) {
+      tagsArray(item).forEach(function(tag) {
+        counts[tag] = (counts[tag] || 0) + 1;
+      });
+    });
+    return counts;
+  }
+
+  function setText(selector, value, root) {
+    var node = (root || document).querySelector(selector);
+    if (node) node.textContent = value;
+  }
+
+  function renderAcademicQuickStats(root) {
+    root = root || document;
+    var container = root.querySelector('#academicQuickStats');
+    if (container) {
+      var rows = [{ key: 'academics', label: 'Total Academic Items', count: getCategoryCount('academics') }];
+      SUBCATEGORY_ORDER.forEach(function(key) {
+        rows.push({ key: key, label: SUBCATEGORY_LABELS[key], count: getSubCategoryCount(key) });
+      });
+      container.innerHTML = '<ul style="list-style:none;padding:0;margin:0;">' + rows.map(function(row, index) {
+        var border = index === rows.length - 1 ? '' : 'border-bottom:1px solid #eef0ff;';
+        return '<li style="display:flex;justify-content:space-between;padding:8px 0;' + border + 'font-size:.84rem;">' +
+          '<span style="color:#555;">' + row.label + '</span>' +
+          '<strong id="qs-' + row.key + '" style="color:#0f3460;">' + row.count + '</strong>' +
+        '</li>';
+      }).join('') + '</ul>';
+    }
+    SUBCATEGORY_ORDER.forEach(function(key) {
+      setText('[data-academic-tab="' + key + '"] .acad-tab-count', getSubCategoryCount(key), root);
+    });
+  }
+
+  function renderBlogCategorySidebar(root) {
+    root = root || document;
+    CATEGORY_ORDER.forEach(function(category) {
+      setText('#cat-count-' + category, getCategoryCount(category), root);
+    });
+    SUBCATEGORY_ORDER.forEach(function(key) {
+      setText('[data-subcategory-count="' + key + '"]', getSubCategoryCount(key), root);
+    });
+  }
+
+  function renderBlogFilters(root) {
+    root = root || document;
+    CATEGORY_ORDER.forEach(function(category) {
+      setText('[data-filter="' + category + '"] .f-count', getCategoryCount(category), root);
+    });
+    setText('[data-filter="all"] .f-count', sourceItems().length, root);
+  }
+
+  function escapeHtml(value) {
+    return String(value || '').replace(/[&<>"']/g, function(ch) {
+      return ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[ch];
+    });
+  }
+
+  function renderTags(root, onTagClickName) {
+    root = root || document;
+    var cloud = root.querySelector('#tagCloud') || root.querySelector('#tag-cloud');
+    if (!cloud) return;
+    var counts = getTagCounts();
+    var tags = Object.keys(counts).sort(function(a, b) {
+      return counts[b] - counts[a] || a.localeCompare(b);
+    });
+    cloud.innerHTML = '';
+    tags.forEach(function(tag) {
+      var pill = document.createElement('span');
+      pill.className = 'tag-pill';
+      pill.title = 'Filter: ' + tag;
+      if (onTagClickName) {
+        pill.setAttribute('onclick', onTagClickName + '("' + tag.replace(/"/g, '&quot;') + '",this)');
+      }
+      pill.innerHTML = escapeHtml(tag) + ' <small>(' + counts[tag] + ')</small>';
+      cloud.appendChild(pill);
+    });
+  }
+
+  function getBlogCategoryCounts() {
+    return CATEGORY_ORDER.reduce(function(counts, category) {
+      counts[category] = getCategoryCount(category);
+      return counts;
+    }, {});
+  }
+
+  function getBlogTotalCount() {
+    return sourceItems().length;
+  }
+
+  var api = {
+    items: sourceItems(),
+    categoryOrder: CATEGORY_ORDER.slice(),
+    subcategoryOrder: SUBCATEGORY_ORDER.slice(),
+    labels: SUBCATEGORY_LABELS,
+    getItems: sourceItems,
+    getItemsByCategory: getItemsByCategory,
+    getItemsBySubCategory: getItemsBySubCategory,
+    getCategoryCount: getCategoryCount,
+    getSubCategoryCount: getSubCategoryCount,
+    getTagCounts: getTagCounts,
+    renderAcademicQuickStats: renderAcademicQuickStats,
+    renderBlogCategorySidebar: renderBlogCategorySidebar,
+    renderBlogFilters: renderBlogFilters,
+    renderTags: renderTags,
+    getTotalCount: function() { return getCategoryCount('academics'); },
+    getBlogCategoryCounts: getBlogCategoryCounts,
+    getBlogTotalCount: getBlogTotalCount,
+    renderQuickStats: renderAcademicQuickStats,
+    renderBlogCategoryCounts: renderBlogCategorySidebar,
+    renderFilterCounts: renderBlogFilters
+  };
+
+  global.SiteData = api;
+  global.AcademicData = api;
+  global.getItemsByCategory = getItemsByCategory;
+  global.getItemsBySubCategory = getItemsBySubCategory;
+  global.getCategoryCount = getCategoryCount;
+  global.getSubCategoryCount = getSubCategoryCount;
+  global.getTagCounts = getTagCounts;
+  global.renderAcademicQuickStats = renderAcademicQuickStats;
+  global.renderBlogCategorySidebar = renderBlogCategorySidebar;
+  global.renderBlogFilters = renderBlogFilters;
+  global.renderTags = renderTags;
+})(window);

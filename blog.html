@@ -430,7 +430,7 @@
               <p class="archive-copy">Search across the complete collection, narrow by category or tag, then open the detailed gallery page for the full story.</p>
             </div>
             <div class="archive-count">
-              <strong id="visible-post-count">12 / 99</strong>
+              <strong id="visible-post-count"></strong>
               <span id="visible-post-label">Posts matched</span>
             </div>
           </div>
@@ -456,24 +456,24 @@
           <div class="filter-bar">
             <span class="filter-label">Filter:</span>
             <button class="filter-btn active" data-filter="all" onclick="filterPosts('all',this)">
-              <i class="fa fa-th-large"></i> All <span class="f-count">99</span>
+              <i class="fa fa-th-large"></i> All <span class="f-count"></span>
             </button>
             <button class="filter-btn" data-filter="academics" onclick="filterPosts('academics',this)">
-              <i class="fa fa-graduation-cap"></i> Academics <span class="f-count">80</span>
+              <i class="fa fa-graduation-cap"></i> Academics <span class="f-count"></span>
             </button>
             <button class="filter-btn" data-filter="social" onclick="filterPosts('social',this)">
-              <i class="fa fa-users"></i> Social Life <span class="f-count">6</span>
+              <i class="fa fa-users"></i> Social Life <span class="f-count"></span>
             </button>
             <button class="filter-btn" data-filter="sports" onclick="filterPosts('sports',this)">
-              <i class="fa fa-heartbeat"></i> Sports <span class="f-count">2</span>
+              <i class="fa fa-heartbeat"></i> Sports <span class="f-count"></span>
             </button>
             <button class="filter-btn" data-filter="avocations" onclick="filterPosts('avocations',this)">
-              <i class="fa fa-paint-brush"></i> Avocations <span class="f-count">11</span>
+              <i class="fa fa-paint-brush"></i> Avocations <span class="f-count"></span>
             </button>
           </div>
         </div>
 
-        <!-- Post grid — rendered dynamically from data/posts.js -->
+        <!-- Post grid — rendered dynamically from data/site-data.js -->
         <div class="row" id="posts-grid"></div><!-- /posts-grid -->
 
         <!-- Empty state -->
@@ -571,16 +571,17 @@
             <div class="cat-group">
               <div class="cat-group-header">
                 <a href="academics.html"><i class="fa fa-graduation-cap" style="color:#7eb8e0;"></i> Academics</a>
-                <span class="cat-total" id="cat-count-academics">80</span>
+                <span class="cat-total" id="cat-count-academics"></span>
               </div>
               <ul class="cat-sub">
-                <li><a href="academics.html#acad-conferences">Conferences</a><span>15</span></li>
-                <li><a href="academics.html#acad-workshops">Workshops</a><span>14</span></li>
-                <li><a href="academics.html#acad-experttalks">Expert Talks</a><span>2</span></li>
-                <li><a href="academics.html#acad-facultyvisits">Faculty Visits</a><span>6</span></li>
-                <li><a href="academics.html#acad-events">Events</a><span>6</span></li>
-                <li><a href="academics.html#acad-hackathon">Hackathon</a><span>3</span></li>
-                <li><a href="academics.html#acad-social">Social Activities</a><span>10</span></li>
+                <li><a href="academics.html#acad-leadership">Leadership</a><span data-subcategory-count="leadership"></span></li>
+                <li><a href="academics.html#acad-conferences">Conferences</a><span data-subcategory-count="conferences"></span></li>
+                <li><a href="academics.html#acad-workshops">Workshops</a><span data-subcategory-count="workshops"></span></li>
+                <li><a href="academics.html#acad-experttalks">Expert Talks</a><span data-subcategory-count="experttalks"></span></li>
+                <li><a href="academics.html#acad-facultyvisits">Faculty Visits</a><span data-subcategory-count="facultyvisits"></span></li>
+                <li><a href="academics.html#acad-events">Events</a><span data-subcategory-count="events"></span></li>
+                <li><a href="academics.html#acad-hackathon">Hackathon</a><span data-subcategory-count="hackathon"></span></li>
+                <li><a href="academics.html#acad-social">Social Activities</a><span data-subcategory-count="social"></span></li>
               </ul>
             </div>
 
@@ -588,7 +589,7 @@
             <div class="cat-group">
               <div class="cat-group-header">
                 <a href="connection.html"><i class="fa fa-users" style="color:#f0a500;"></i> Social Life</a>
-                <span class="cat-total" id="cat-count-social" style="background:#b87c00;">6</span>
+                <span class="cat-total" id="cat-count-social" style="background:#b87c00;"></span>
               </div>
               <ul class="cat-sub">
                 <li><a href="connection.html#mom-birthday">Birthday to Mom</a><span>10 photos</span></li>
@@ -601,7 +602,7 @@
             <div class="cat-group">
               <div class="cat-group-header">
                 <a href="sports.html"><i class="fa fa-heartbeat" style="color:#50c878;"></i> Sports</a>
-                <span class="cat-total" id="cat-count-sports" style="background:#2d8a50;">2</span>
+                <span class="cat-total" id="cat-count-sports" style="background:#2d8a50;"></span>
               </div>
               <ul class="cat-sub">
                 <li><a href="sports.html#sports-post-29">College Sports Day</a><span>1</span></li>
@@ -613,7 +614,7 @@
             <div class="cat-group">
               <div class="cat-group-header">
                 <a href="avocations.html"><i class="fa fa-paint-brush" style="color:#c084fc;"></i> Avocations</a>
-                <span class="cat-total" id="cat-count-avocations" style="background:#7c3aed;">11</span>
+                <span class="cat-total" id="cat-count-avocations" style="background:#7c3aed;"></span>
               </div>
               <ul class="cat-sub">
                 <li><a href="avocations.html#tab-trekking"><i class="fa fa-tree" style="color:#c084fc;margin-right:5px;"></i>Trekking</a><span></span></li>
@@ -643,9 +644,7 @@
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/site-components.js"></script>
-<script src="data/academic-data.js"></script>
-<!-- Central posts data; academic/gallery counts are generated from data/academic-data.js -->
-<script src="data/posts.js"></script>
+<script src="data/site-data.js"></script>
 <script>
   var archiveState = {
     cat: 'all',
@@ -694,16 +693,18 @@
     { url: 'sports.html', cat: 'sports', badge: 'Sports' },
     { url: 'avocations.html', cat: 'avocations', badge: 'Avocations' }
   ];
-  var BLOG_CATEGORY_TOTALS = window.AcademicData ? window.AcademicData.getBlogCategoryCounts() : {
-    academics: 80,
-    social: 6,
-    sports: 2,
-    avocations: 11
-  };
+  var BLOG_CATEGORY_TOTALS = window.SiteData ? window.SiteData.getBlogCategoryCounts() : {};
   var BLOG_CATEGORY_ORDER = ['academics','social','sports','avocations'];
-  var BLOG_TOTAL_POSTS = window.AcademicData ? window.AcademicData.getBlogTotalCount() : BLOG_CATEGORY_ORDER.reduce(function(total, cat) {
-    return total + BLOG_CATEGORY_TOTALS[cat];
-  }, 0);
+  var BLOG_TOTAL_POSTS = window.SiteData ? window.SiteData.getBlogTotalCount() : 0;
+
+  function refreshBlogTotals() {
+    BLOG_CATEGORY_TOTALS = BLOG_CATEGORY_ORDER.reduce(function(counts, cat) {
+      counts[cat] = SITE_POSTS.filter(function(post){ return post.cat === cat; }).length;
+      return counts;
+    }, {});
+    BLOG_TOTAL_POSTS = SITE_POSTS.length;
+    return BLOG_CATEGORY_TOTALS;
+  }
 
   function absoluteToRelative(url) {
     if (!url) return '';
@@ -743,12 +744,7 @@
   }
 
   function tagsForPost(source, title) {
-    var tags = [source.badge];
-    String(title || '').split(/[\s&,-]+/).forEach(function(part) {
-      part = part.trim();
-      if (part.length > 3 && tags.indexOf(part) === -1) tags.push(part);
-    });
-    return tags.slice(0, 6).join(',');
+    return source.badge;
   }
 
   function cardsFromDocument(doc, source) {
@@ -805,15 +801,14 @@
       counts[post.cat] = (counts[post.cat] || 0) + 1;
     });
     posts.forEach(function(post) {
-      var target = BLOG_CATEGORY_TOTALS[post.cat] || Infinity;
-      var current = counts[post.cat] || 0;
-      if (!seen[post.id] && !seen[post.link] && current < target) {
+      if (!seen[post.id] && !seen[post.link]) {
         SITE_POSTS.push(post);
         seen[post.id] = true;
         seen[post.link] = true;
-        counts[post.cat] = current + 1;
+        counts[post.cat] = (counts[post.cat] || 0) + 1;
       }
     });
+    refreshBlogTotals();
   }
 
   function renderArchive() {
@@ -910,29 +905,25 @@
 
   function updatePostTools() {
     if (typeof SITE_POSTS === 'undefined') return;
+    refreshBlogTotals();
     BLOG_CATEGORY_ORDER.forEach(function(cat) {
       var actual = SITE_POSTS.filter(function(p){ return p.cat === cat; }).length;
-      var n = BLOG_CATEGORY_TOTALS[cat] || actual;
+      var n = actual;
       var el = document.getElementById('cat-count-' + cat);
       if (el) el.textContent = n;
       var btn = document.querySelector('[data-filter="' + cat + '"] .f-count');
       if (btn) btn.textContent = n;
     });
-    if (window.AcademicData) {
-      window.AcademicData.renderBlogCategoryCounts();
-      window.AcademicData.renderFilterCounts();
+    if (window.SiteData) {
+      window.SiteData.renderBlogCategorySidebar();
+      window.SiteData.renderBlogFilters();
     }
     var sw = document.getElementById('cat-sub-sports-wellness');
     if (sw) sw.textContent = SITE_POSTS.filter(function(p){ return p.cat === 'sports'; }).length;
     var allBtn = document.querySelector('[data-filter="all"] .f-count');
-    if (allBtn) allBtn.textContent = BLOG_TOTAL_POSTS;
+    if (allBtn) allBtn.textContent = SITE_POSTS.length;
 
-    var freq = {};
-    SITE_POSTS.forEach(function(post) {
-      (post.tags || '').split(',').forEach(function(t) {
-        t = t.trim(); if (t) freq[t] = (freq[t] || 0) + 1;
-      });
-    });
+    var freq = window.SiteData ? window.SiteData.getTagCounts() : {};
     var sorted = Object.keys(freq).sort(function(a,b){ return freq[b]-freq[a]; });
     var cloud = document.getElementById('tag-cloud');
     if (cloud) {
