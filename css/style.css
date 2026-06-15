@@ -16,7 +16,6 @@ Author E-mail: naimlasker@gmail.com
 /*font Variables*/
 /*Color Variables*/
 /*=================== fonts ====================*/
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Rubik:500,700");
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Medium Layout: 1280px */
@@ -26,11 +25,11 @@ Author E-mail: naimlasker@gmail.com
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 body {
-  line-height: 26px;
-  font-size: 15px;
-  font-family: "Roboto", sans-serif;
+  line-height: 1.72;
+  font-size: 16px;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 400;
-  color: #777777;
+  color: #334155;
   background: url(../img/body-bg.png) no-repeat center; }
 
 h1,
@@ -39,8 +38,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rubik", sans-serif;
-  font-weight: 500;
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: #000000; }
 
 .list {
@@ -54,6 +54,18 @@ a {
   a:hover, a:focus {
     text-decoration: none;
     outline: none; }
+
+p {
+  line-height: 1.75; }
+
+p,
+li,
+button,
+input,
+select,
+textarea,
+label {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 
 button:focus {
   outline: none;
@@ -169,7 +181,7 @@ button:focus {
   display: inline-block;
   color: #fff;
   letter-spacing: 0px;
-  font-family: "Rubik", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 46px;
@@ -227,7 +239,7 @@ button:focus {
     .header_area .navbar .nav .nav-item {
       margin-right: 45px; }
       .header_area .navbar .nav .nav-item .nav-link {
-        font: 500 14px/100px "Rubik", sans-serif;
+        font: 600 14px/100px "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         text-transform: uppercase;
         color: #000000;
         padding: 0px;
@@ -431,7 +443,7 @@ button:focus {
       .banner_area .banner_inner .banner_content h2 {
         color: #fff;
         font-size: 50px;
-        font-family: "Rubik", sans-serif;
+        font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
         margin-bottom: 10px;
         text-transform: uppercase;
         font-weight: 700; }
@@ -441,7 +453,7 @@ button:focus {
       .banner_area .banner_inner .banner_content .page_link a {
         font-size: 14px;
         color: #fff;
-        font-family: "Roboto", sans-serif;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         margin-right: 20px;
         position: relative; }
         .banner_area .banner_inner .banner_content .page_link a:before {
@@ -473,7 +485,7 @@ button:focus {
   padding: 0px 32px;
   font-size: 13px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #000000;
   line-height: 34px;
   display: inline-block; }
@@ -489,7 +501,7 @@ button:focus {
   line-height: 40px;
   padding: 0px 28px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   -webkit-transition: all 0.4s ease 0s;
@@ -547,7 +559,7 @@ button:focus {
     padding: 30px 35px 40px 30px; }
     .causes_item .causes_text h4 {
       color: #000000;
-      font-family: "Roboto", sans-serif;
+      font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 15px;
@@ -568,7 +580,7 @@ button:focus {
     line-height: 50px;
     background: #2d4a6e;
     color: #fff;
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 14px;
     font-weight: 500; }
     .causes_item .causes_bottom a + a {
@@ -670,14 +682,14 @@ button:focus {
   .blog_info .post_tag {
     padding-bottom: 20px; }
     .blog_info .post_tag a {
-      font: 300 14px/21px "Roboto", sans-serif;
+      font: 400 14px/21px "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: #000000; }
       .blog_info .post_tag a:hover {
         color: #777777; }
       .blog_info .post_tag a.active {
         color: #2d4a6e; }
   .blog_info .blog_meta li a {
-    font: 300 14px/20px "Roboto", sans-serif;
+    font: 400 14px/20px "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: #777777;
     vertical-align: middle;
     padding-bottom: 12px;
@@ -1164,7 +1176,6 @@ button:focus {
   .contact_info .info_item h6 {
     font-size: 16px;
     line-height: 24px;
-    color: "Roboto", sans-serif;
     font-weight: bold;
     margin-bottom: 0px;
     color: #000000; }
@@ -1182,7 +1193,7 @@ button:focus {
     line-height: 26px;
     color: #999;
     border: 1px solid #eeeeee;
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     border-radius: 0px;
     padding-left: 20px; }
     .contact_form .form-group .form-control:focus {
@@ -1232,7 +1243,7 @@ button:focus {
       text-align: center;
       color: #2d4a6e;
       padding-bottom: 10px;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
     .modal-message .modal-dialog .modal-content .modal-header p {
       display: block; }
 
@@ -2570,7 +2581,7 @@ h6 {
       align-items: center; } }
   .client-info .lage {
     color: #1e3a5f;
-    font-family: "Rubik", sans-serif;
+    font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
     font-size: 100px;
     font-weight: 700;
     line-height: 85px;
@@ -2579,7 +2590,7 @@ h6 {
   .client-info .smll {
     text-align: left;
     color: #000000;
-    font-family: "Rubik", sans-serif;
+    font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
     font-size: 20px;
     margin-left: 20px; }
 
@@ -2716,7 +2727,7 @@ h6 {
     font-weight: normal;
     font-size: 14px; }
     .portfolio_details_inner .portfolio_right_text .list li span {
-      font-family: "Rubik", sans-serif;
+      font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
       color: #000000;
       font-size: 16px;
       font-weight: 500;
@@ -2844,7 +2855,7 @@ h6 {
     border-radius: 5px;
     line-height: 48px;
     font-size: 14px;
-    font-family: "Rubik", sans-serif;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     padding: 0px 38px;
     cursor: pointer; }
     @media (max-width: 767px) {

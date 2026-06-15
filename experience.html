@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/site-header-footer.css">
   <style>
@@ -110,6 +113,14 @@
     .hero-cta-exp:hover { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.38); color: #fff !important; }
     .hero-cta-exp i { font-size: .85rem; }
     .hero-cta-exp img { width: 15px; height: 15px; object-fit: contain; filter: brightness(0) invert(1); }
+    .hero-cta-exp .hf-icon {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      display: inline-block;
+      vertical-align: middle;
+      filter: none;
+    }
 
     /* ── TIMELINE SECTION ── */
     .timeline-section {
@@ -586,8 +597,9 @@
         <a href="https://pearce-services.com/" target="_blank" class="hero-cta-exp">
           <i class="fa fa-building-o"></i> Pearce Services
         </a>
-        <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="hero-cta-exp">
-          <img src="img/icons/10.png" alt="HF"> HuggingFace
+        <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="hero-cta-exp" aria-label="Open Hugging Face profile">
+          <img src="img/icons/hugging-face.svg" alt="" class="hf-icon" aria-hidden="true">
+          <span>Hugging Face</span>
         </a>
       </div>
     </div>

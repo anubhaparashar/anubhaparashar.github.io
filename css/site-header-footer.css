@@ -29,6 +29,7 @@
   background: #ffffff !important;
   border-bottom: 1px solid rgba(0,0,0,.06);
   transition: box-shadow .3s ease;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 .header_area.glass-active {
   box-shadow: 0 4px 24px rgba(26,26,46,.10) !important;
@@ -62,7 +63,7 @@
   border-radius: 50%;
   background: linear-gradient(135deg, #1e4d7b 0%, #2d6b5e 100%);
   color: #fff !important;
-  font: 800 14px/1 "Rubik", sans-serif;
+  font: 800 14px/1 "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   flex-shrink: 0;
   box-shadow: 0 4px 14px rgba(30,77,123,.45);
   transition: transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
@@ -73,12 +74,12 @@
 }
 .nav-wordmark { display: flex; flex-direction: column; line-height: 1; }
 .nav-wm-name {
-  font: 700 13px/1 "Rubik", sans-serif;
+  font: 700 13px/1 "Space Grotesk", "Inter", system-ui, sans-serif;
   color: #1a1a2e !important;
   letter-spacing: .3px;
 }
 .nav-wm-sub {
-  font: 400 10px/1 "Rubik", sans-serif;
+  font: 500 10px/1 "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #999 !important;
   letter-spacing: .5px;
   margin-top: 5px;
@@ -91,7 +92,7 @@
 /* ── Nav links — tall 90px bar ── */
 .header_area .nav .nav-item .nav-link,
 .header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
-  font: 600 12px/90px "Rubik", sans-serif !important;
+  font: 600 12px/90px "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   text-transform: uppercase !important;
   letter-spacing: 1.4px !important;
   color: #555 !important;
@@ -153,7 +154,7 @@
   margin-top: -4px !important;
 }
 .header_area .nav .nav-item.submenu ul .nav-item .nav-link {
-  font: 500 12px/1 "Rubik", sans-serif !important;
+  font: 500 12px/1 "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   color: #444 !important;
   padding: 10px 16px !important;
   letter-spacing: .5px !important;
@@ -210,6 +211,7 @@
   background: #0d0d1a;
   padding: 56px 0 32px;
   text-align: center;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 .exp-footer .back-top {
   display: inline-flex;
@@ -227,6 +229,7 @@
 }
 .exp-footer .back-top:hover { background: rgba(255,255,255,.2); }
 .exp-footer h5 {
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   color: #fff !important;
   font-size: .7rem !important;
   letter-spacing: 2.5px;
