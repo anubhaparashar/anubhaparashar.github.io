@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" href="img/favicon.png" type="image/png">
   <title>Publications – Dr. Anubha Parashar</title>
+  <meta name="description" content="Publications, patents, journal papers, conference papers, book chapters, articles, presentations, and posters by Dr. Anubha Parashar.">
+  <link rel="canonical" href="https://anubhaparashar.github.io/publication.html">
+  <meta property="og:title" content="Publications - Dr. Anubha Parashar">
+  <meta property="og:description" content="Research publications, patents, and scholarly outputs in AI, computer vision, biometrics, IoT, and deep learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anubhaparashar.github.io/publication.html">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="vendors/linericon/style.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -456,42 +462,42 @@
 
       <div class="pub-stats">
         <div class="pub-stat-item">
-          <span class="pub-stat-num" data-target="6">6</span>
+          <span class="pub-stat-num" data-site-stat="publicationTypes.patents" data-target="6">6</span>
           <span class="pub-stat-lbl">Patents</span>
         </div>
         <div class="pub-stat-divider"></div>
         <div class="pub-stat-item">
-          <span class="pub-stat-num" data-target="16">16</span>
+          <span class="pub-stat-num" data-site-stat="publicationTypes.journals" data-target="16">16</span>
           <span class="pub-stat-lbl">Journals</span>
         </div>
         <div class="pub-stat-divider"></div>
         <div class="pub-stat-item">
-          <span class="pub-stat-num" data-target="16">16</span>
+          <span class="pub-stat-num" data-site-stat="publicationTypes.conferences" data-target="16">16</span>
           <span class="pub-stat-lbl">Conferences</span>
         </div>
         <div class="pub-stat-divider"></div>
         <div class="pub-stat-item">
-          <span class="pub-stat-num" data-target="7">7</span>
+          <span class="pub-stat-num" data-site-stat="publicationTypes.bookchapters" data-target="7">7</span>
           <span class="pub-stat-lbl">Book Chapters</span>
         </div>
         <div class="pub-stat-divider"></div>
         <div class="pub-stat-item">
-          <span class="pub-stat-num" data-target="6">6</span>
+          <span class="pub-stat-num" data-site-stat="publicationTypes.articles" data-target="6">6</span>
           <span class="pub-stat-lbl">Articles</span>
         </div>
         <div class="pub-stat-divider"></div>
         <div class="pub-stat-item">
-          <span class="pub-stat-num" data-target="3">3</span>
+          <span class="pub-stat-num" data-site-stat="publicationTypes.presentations" data-target="3">3</span>
           <span class="pub-stat-lbl">Presentations</span>
         </div>
         <div class="pub-stat-divider"></div>
         <div class="pub-stat-item">
-          <span class="pub-stat-num" data-target="1">1</span>
+          <span class="pub-stat-num" data-site-stat="publicationTypes.posters" data-target="1">1</span>
           <span class="pub-stat-lbl">Poster</span>
         </div>
         <div class="pub-stat-divider"></div>
         <div class="pub-stat-item">
-          <span class="pub-stat-num" data-target="50" data-suffix="+">50+</span>
+          <span class="pub-stat-num" data-site-stat="publicationTypes.total" data-target="50" data-suffix="+">50+</span>
           <span class="pub-stat-lbl">Total Publications</span>
         </div>
       </div>
@@ -544,13 +550,13 @@
 <div class="pub-tab-wrap">
   <div class="container">
     <div class="pub-tab-nav">
-      <button class="pub-tab-btn active" onclick="switchTab('patents',this)">Patents <span class="tab-count">6</span></button>
-      <button class="pub-tab-btn" onclick="switchTab('journals',this)">Journals <span class="tab-count">16</span></button>
-      <button class="pub-tab-btn" onclick="switchTab('conferences',this)">Conferences <span class="tab-count">16</span></button>
-      <button class="pub-tab-btn" onclick="switchTab('bookchapters',this)">Book Chapters <span class="tab-count">7</span></button>
-      <button class="pub-tab-btn" onclick="switchTab('articles',this)">Articles <span class="tab-count">6</span></button>
-      <button class="pub-tab-btn" onclick="switchTab('presentations',this)">Presentations <span class="tab-count">3</span></button>
-      <button class="pub-tab-btn" onclick="switchTab('posters',this)">Posters <span class="tab-count">1</span></button>
+      <button class="pub-tab-btn active" onclick="switchTab('patents',this)">Patents <span class="tab-count" data-site-stat="publicationTypes.patents">6</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('journals',this)">Journals <span class="tab-count" data-site-stat="publicationTypes.journals">16</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('conferences',this)">Conferences <span class="tab-count" data-site-stat="publicationTypes.conferences">16</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('bookchapters',this)">Book Chapters <span class="tab-count" data-site-stat="publicationTypes.bookchapters">7</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('articles',this)">Articles <span class="tab-count" data-site-stat="publicationTypes.articles">6</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('presentations',this)">Presentations <span class="tab-count" data-site-stat="publicationTypes.presentations">3</span></button>
+      <button class="pub-tab-btn" onclick="switchTab('posters',this)">Posters <span class="tab-count" data-site-stat="publicationTypes.posters">1</span></button>
     </div>
   </div>
 </div>
@@ -1789,6 +1795,7 @@
 <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/site-components.js"></script>
+<script src="data/site-data.js"></script>
 <script>
 (function () {
 
@@ -1846,9 +1853,11 @@
   function filterSection(section, query, yearRange) {
     var cards = section.querySelectorAll('.pub-card');
     var visible = 0;
+    query = String(query || '').toLowerCase().trim();
+    yearRange = yearRange || 'all';
     cards.forEach(function (card) {
       var textMatch = !query || card.textContent.toLowerCase().includes(query);
-      var yearMatch = inRange(card.getAttribute('data-year') || '', yearRange || 'all');
+      var yearMatch = inRange(card.getAttribute('data-year') || '', yearRange);
       var show = textMatch && yearMatch;
       card.style.display = show ? '' : 'none';
       if (show) visible++;
@@ -1879,6 +1888,9 @@
 
   /* ── Init ── */
   document.addEventListener('DOMContentLoaded', function () {
+    if (window.SiteData && typeof window.SiteData.renderSiteStats === 'function') {
+      window.SiteData.renderSiteStats();
+    }
 
     /* Animated counters */
     setTimeout(function () {
@@ -1895,6 +1907,7 @@
 
     /* Wire up search inputs */
     document.querySelectorAll('.pub-section').forEach(function (section) {
+      filterSection(section, '', 'all');
       var searchEl = section.querySelector('.pub-search');
       if (searchEl) {
         searchEl.addEventListener('input', function () {

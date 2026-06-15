@@ -1048,6 +1048,36 @@ var SITE_POSTS = [
 
 (function(global) {
   var CATEGORY_ORDER = ['academics', 'social', 'sports', 'avocations'];
+  var SITE_STATS = {
+    academicArchive: {
+      academics: 80,
+      conferences: 15,
+      workshops: 14,
+      experttalks: 2,
+      facultyvisits: 6,
+      events: 6,
+      hackathon: 3,
+      social: 10
+    },
+    profile: {
+      publications: { value: 50, suffix: '+' },
+      patents: { value: 6, suffix: '' },
+      citations: { value: 600, suffix: '+' },
+      keynoteTalks: { value: 10, suffix: '+' },
+      yearsResearch: { value: 15, suffix: '+' },
+      yearsExperience: { value: 12, suffix: '+' }
+    },
+    publicationTypes: {
+      patents: 6,
+      journals: 16,
+      conferences: 16,
+      bookchapters: 7,
+      articles: 6,
+      presentations: 3,
+      posters: 1,
+      total: { value: 50, suffix: '+' }
+    }
+  };
   var BLOG_SECTION_COUNTS = {
     publications: 1,
     projects: 1
@@ -1304,12 +1334,57 @@ var SITE_POSTS = [
   }
 
   function getCategoryCount(category) {
+    var catKey = normalizeKey(category);
+    if (catKey === 'academics' && SITE_STATS.academicArchive.academics) return SITE_STATS.academicArchive.academics;
     if (normalizeKey(category) === 'all') return sourceItems().length;
     return getItemsByCategory(category).length;
   }
 
   function getSubCategoryCount(subCategory) {
+    var key = normalizeKey(subCategory);
+    var statKeys = {
+      conferences: 'conferences',
+      conference: 'conferences',
+      workshops: 'workshops',
+      workshop: 'workshops',
+      experttalks: 'experttalks',
+      experttalk: 'experttalks',
+      talks: 'experttalks',
+      talk: 'experttalks',
+      facultyvisits: 'facultyvisits',
+      facultyvisit: 'facultyvisits',
+      events: 'events',
+      event: 'events',
+      hackathon: 'hackathon',
+      social: 'social',
+      socialactivities: 'social'
+    };
+    if (SITE_STATS.academicArchive[statKeys[key]]) return SITE_STATS.academicArchive[statKeys[key]];
     return getItemsBySubCategory(subCategory).length;
+  }
+
+  function statValue(path) {
+    var parts = String(path || '').split('.');
+    var value = SITE_STATS;
+    for (var i = 0; i < parts.length; i++) {
+      value = value && value[parts[i]];
+    }
+    return value;
+  }
+
+  function renderSiteStats(root) {
+    root = root || document;
+    root.querySelectorAll('[data-site-stat]').forEach(function(node) {
+      var value = statValue(node.getAttribute('data-site-stat'));
+      if (value && typeof value === 'object' && 'value' in value) {
+        node.textContent = value.value + (value.suffix || '');
+        node.setAttribute('data-target', value.value);
+        if (value.suffix) node.setAttribute('data-suffix', value.suffix);
+      } else if (value !== undefined && value !== null) {
+        node.textContent = value;
+        node.setAttribute('data-target', value);
+      }
+    });
   }
 
   function getTagCounts(items) {
@@ -1343,7 +1418,7 @@ var SITE_POSTS = [
     root = root || document;
     var container = root.querySelector('#academicQuickStats');
     if (container) {
-      var rows = [{ key: 'academics', label: 'Total Academic Items', count: getCategoryCount('academics') }];
+      var rows = [{ key: 'academics', label: 'Academic Archive', count: SITE_STATS.academicArchive.academics }];
       SUBCATEGORY_ORDER.forEach(function(key) {
         rows.push({ key: key, label: SUBCATEGORY_LABELS[key], count: getSubCategoryCount(key) });
       });
@@ -1451,6 +1526,9 @@ var SITE_POSTS = [
     getItems: sourceItems,
     getItemsByCategory: getItemsByCategory,
     getItemsBySubCategory: getItemsBySubCategory,
+    stats: SITE_STATS,
+    getSiteStats: function() { return SITE_STATS; },
+    renderSiteStats: renderSiteStats,
     getCategoryCount: getCategoryCount,
     getSubCategoryCount: getSubCategoryCount,
     getTagCounts: getTagCounts,
@@ -1479,4 +1557,5 @@ var SITE_POSTS = [
   global.renderBlogCategorySidebar = renderBlogCategorySidebar;
   global.renderBlogFilters = renderBlogFilters;
   global.renderTags = renderTags;
+  global.renderSiteStats = renderSiteStats;
 })(window);

@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" href="img/favicon.png" type="image/png">
   <title>Blog – Dr. Anubha Parashar</title>
+  <meta name="description" content="Blog archive for Dr. Anubha Parashar, covering academic milestones, research events, community outreach, sports, and selected personal interests.">
+  <link rel="canonical" href="https://anubhaparashar.github.io/blog.html">
+  <meta property="og:title" content="Blog - Dr. Anubha Parashar">
+  <meta property="og:description" content="Academic and professional archive of research milestones, events, outreach, and selected activities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anubhaparashar.github.io/blog.html">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="vendors/linericon/style.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -517,7 +523,7 @@
               <a href="https://github.com/anubhaparashar" target="_blank"><i class="fa fa-github"></i></a>
               <a href="https://twitter.com/parashar_anubha" target="_blank"><i class="fa fa-twitter"></i></a>
             </div>
-            <p class="blog-profile-intro">Analytics & AI Engineer and AI researcher specializing in Computer Vision, Biometrics, GenAI, LLMs, NLP, Deep Learning, and Machine Learning. My work bridges research and deployment through real-world AI systems, including drone-based solar panel defect detection, edge AI chatbots, OCR pipelines, GIS-based analytics, scheduling optimization, and robust gait recognition. I hold a Ph.D. in Computer Science and Engineering with a focus on Artificial Intelligence, and I bring experience across industry research, academic teaching, Publication work, patents, and applied AI product development.</p>
+            <p class="blog-profile-intro">Analytics & AI Engineer and AI researcher specializing in Computer Vision, Biometrics, GenAI, LLMs, NLP, Deep Learning, and Machine Learning. My work bridges research and deployment through real-world AI systems, including drone-based solar panel defect detection, edge AI chatbots, OCR pipelines, GIS-based analytics, scheduling optimization, and robust gait recognition. I hold a Ph.D. in Computer Science and Engineering with a focus on Artificial Intelligence, and I bring experience across industry research, academic teaching, publication work, patents, and applied AI product development.</p>
           </aside>
 
           <!-- Recent Activity Timeline -->
@@ -885,7 +891,9 @@
       grid.appendChild(col);
     });
     updateArchiveSummary(matched.length, visible.length);
-    document.getElementById('no-posts').style.display = matched.length ? 'none' : 'block';
+    var noPosts = document.getElementById('no-posts');
+    var hasActiveFilter = archiveState.cat !== 'all' || !!archiveState.tag || !!archiveState.query;
+    if (noPosts) noPosts.style.display = (!matched.length && hasActiveFilter) ? 'block' : 'none';
     var more = document.getElementById('show-more-posts');
     if (more) {
       more.hidden = !matched.length || visible.length >= matched.length;
@@ -1027,6 +1035,11 @@
         }
       });
     });
+    archiveState.cat = 'all';
+    archiveState.tag = null;
+    archiveState.query = '';
+    updatePostTools();
+    renderArchive();
     discoverPostsFromPages().then(function(posts) {
       mergeDiscoveredPosts(posts);
       updatePostTools();
@@ -1038,7 +1051,7 @@
         if (btn) filterPosts(cat, btn, false);
       } else if (hash === 'all') {
         filterPosts('all', document.querySelector('[data-filter="all"]'), false);
-      } else if (hash) {
+      } else if (hash && document.getElementById(hash)) {
         setTimeout(function(){ scrollToPost(hash); }, 120);
       }
     });

@@ -86,7 +86,7 @@
     '        <a href="https://www.youtube.com/channel/UCmC85DV_GWSe3scjD-PcRhg" target="_blank" class="ficon" title="YouTube" style="background:#ff0000;border-color:#ff0000;"><i class="fa fa-youtube"></i></a>' +
     '        <a href="https://in.pinterest.com/anubhaparashar1025/" target="_blank" class="ficon" title="Pinterest" style="background:#e60023;border-color:#e60023;"><i class="fa fa-pinterest"></i></a>' +
     '        <a href="https://pearce-services.com/" target="_blank" class="ficon" title="Pearce Services"><i class="fa fa-building-o"></i></a>' +
-    '        <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="ficon" title="HuggingFace"><img src="img/icons/10.png" alt="HuggingFace"></a>' +
+    '        <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="ficon" title="Hugging Face"><img src="img/icons/10.png" alt="Hugging Face"></a>' +
     '        <a href="https://anubhaparashar.blogspot.com/" target="_blank" class="ficon" title="Anubha\'s Blog" style="background:#e07b39;border-color:#e07b39;font-size:.75rem;font-weight:800;">Blog</a>' +
     '        <a href="http://cooltechnoupdates.blogspot.com/" target="_blank" class="ficon" title="Cool Tech Updates" style="background:#c0622a;border-color:#c0622a;font-size:.75rem;font-weight:800;">Tech</a>' +
     '        <a href="https://cool-computer-tricks-n-tips.blogspot.com/" target="_blank" class="ficon" title="Computer Tricks Blog" style="background:#a0522d;border-color:#a0522d;font-size:.75rem;font-weight:800;">Tips</a>' +
@@ -378,11 +378,47 @@
     draw();
   }
 
+  function initAccessibilityPolish() {
+    document.querySelectorAll('a').forEach(function(link) {
+      var href = (link.getAttribute('href') || '').trim();
+      var text = (link.textContent || '').replace(/\s+/g, ' ').trim();
+      var title = link.getAttribute('title') || '';
+      if (!href && !text && !link.querySelector('img')) {
+        link.hidden = true;
+        link.setAttribute('aria-hidden', 'true');
+        return;
+      }
+      if (!link.getAttribute('aria-label') && !text) {
+        var img = link.querySelector('img[alt]');
+        var label = title || (img ? img.getAttribute('alt') : '') || href;
+        if (label) link.setAttribute('aria-label', label);
+      }
+      if (link.target === '_blank' && !/\bnoopener\b/.test(link.rel || '')) {
+        link.rel = ((link.rel || '') + ' noopener').trim();
+      }
+    });
+
+    document.querySelectorAll('button').forEach(function(button) {
+      var text = (button.textContent || '').replace(/\s+/g, ' ').trim();
+      if (!button.getAttribute('aria-label') && !text) {
+        var icon = button.querySelector('.fa');
+        button.setAttribute('aria-label', button.getAttribute('title') || (icon ? 'Button' : 'Action'));
+      }
+    });
+
+    document.querySelectorAll('img:not([alt])').forEach(function(img) {
+      var src = img.getAttribute('src') || '';
+      var name = src.split('/').pop().replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ').trim();
+      img.setAttribute('alt', name || 'Image');
+    });
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() { init(); initImageViewer(); initParticles(); });
+    document.addEventListener('DOMContentLoaded', function() { init(); initImageViewer(); initParticles(); initAccessibilityPolish(); });
   } else {
     init();
     initImageViewer();
     initParticles();
+    initAccessibilityPolish();
   }
 })();
