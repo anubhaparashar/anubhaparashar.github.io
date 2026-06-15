@@ -20,7 +20,7 @@ var SITE_POSTS = [
     id:      'post-lead-warden',
     cat:     'academics',
     subCategory: 'Leadership',
-    tags:    ['Leadership','Academics','Mentoring','Responsibility'],
+    tags:    ['Leadership','Academics','Mentoring','Community Outreach'],
     date:    '2016 - 2024',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -33,7 +33,7 @@ var SITE_POSTS = [
     id:      'post-lead-vc',
     cat:     'academics',
     subCategory: 'Leadership',
-    tags:    ['Leadership','School','Responsibility','Academics'],
+    tags:    ['Leadership','Academics','Mentoring','Community Outreach'],
     date:    '2007',
     views:   '',
     img:     'files/8. Blog/1. academic/1. leadership/2. wise captain/vice captain.png',
@@ -60,7 +60,7 @@ var SITE_POSTS = [
   {
     id:      'post-mom-birthday',
     cat:     'social',
-    tags:    'Family,Mom,Birthday,Love,Blessings',
+    tags:    'Social Life',
     date:    'May 19, 2026',
     views:   '',
     img:     'files/8. Blog/2. Connection/3. Family/3. mom birthday/111111.png',
@@ -72,7 +72,7 @@ var SITE_POSTS = [
   {
     id:      'post-conf-outing',
     cat:     'social',
-    tags:    'Networking,Community,Travel,Conference',
+    tags:    'Social Life,Collaboration,Conference',
     date:    'Feb, 2020',
     views:   '',
     img:     'files/8. Blog/2. Connection/1. Conference outings/2. ICICV conference outing/IMG20200213200238.jpg',
@@ -84,7 +84,7 @@ var SITE_POSTS = [
   {
     id:      'post-muj-ssic',
     cat:     'social',
-    tags:    'Event,Students,Community,MUJ,Symposium',
+    tags:    'Events,Students,Community Outreach,MUJ',
     date:    'Jan, 2019',
     views:   '',
     img:     'files/8. Blog/2. Connection/1. Conference outings/1. MUJ SSIC/IMG_2746.JPG',
@@ -134,7 +134,7 @@ var SITE_POSTS = [
   {
     id:      'post-c-dubai',
     cat:     'academics',
-    tags:    'Conference,International,Dubai,Research,Travel',
+    tags:    'Conference,Research,Collaboration',
     date:    'Jan, 2020',
     views:   '',
     img:     'files/8. Blog/1. academic/2. Conferences and ppt/dubai/IMG20200130125344.jpg',
@@ -158,7 +158,7 @@ var SITE_POSTS = [
   {
     id:      'post-c-bvicam',
     cat:     'academics',
-    tags:    'Conference,Research,Delhi,First Paper,Publications',
+    tags:    'Conference,Research,Publications',
     date:    '2010',
     views:   '',
     img:     'files/8. Blog/1. academic/2. Conferences and ppt/39. first ppt BVICAM/DSC03523.JPG',
@@ -182,7 +182,7 @@ var SITE_POSTS = [
   {
     id:      'post-c-icct21',
     cat:     'academics',
-    tags:    'Conference,Organised,ICCT,Chair,Research',
+    tags:    'Conference,Events,Research',
     date:    'Dec, 2021',
     views:   '',
     img:     'files/8. Blog/1. academic/2. Conferences and ppt/27. Organised ICCT conference/IMG20211213123342.jpg',
@@ -194,7 +194,7 @@ var SITE_POSTS = [
   {
     id:      'post-c-udaipur',
     cat:     'academics',
-    tags:    'Conference,Research,Udaipur,Rajasthan,Technology',
+    tags:    'Conference,Research,Technology',
     date:    'Mar, 2016',
     views:   '',
     img:     'files/8. Blog/1. academic/2. Conferences and ppt/1. Udaipur/20160304_181813.jpg',
@@ -206,7 +206,7 @@ var SITE_POSTS = [
   {
     id:      'post-c-jaipur',
     cat:     'academics',
-    tags:    'Conference,Research,Jaipur,Rajasthan,Technology',
+    tags:    'Conference,Research,Technology',
     date:    'Aug, 2016',
     views:   '',
     img:     'files/8. Blog/1. academic/2. Conferences and ppt/3. jaipur/IMG-20160812-WA0001.jpg',
@@ -256,7 +256,7 @@ var SITE_POSTS = [
   {
     id:      'post-et-workshop-2018',
     cat:     'academics',
-    tags:    'Expert Talk,Workshop,FDP,Teaching,Technology',
+    tags:    'Talks,Workshop,FDP,Teaching,Technology',
     date:    'Feb, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/4. expert talk/1/20180208_143012.jpg',
@@ -268,7 +268,7 @@ var SITE_POSTS = [
   {
     id:      'post-et-online-session',
     cat:     'academics',
-    tags:    'Expert Talk,Online Session,Faculty,Technology,Learning',
+    tags:    'Talks,Faculty Visit,Technology,Teaching',
     date:    '2020',
     views:   '',
     img:     'files/8. Blog/1. academic/4. expert talk/2/FB_IMG_1594393539551.jpg',
@@ -280,7 +280,7 @@ var SITE_POSTS = [
   {
     id:      'post-et-01',
     cat:     'academics',
-    tags:    'Expert Talk,AI,Lecture,Faculty,Teaching',
+    tags:    'Talks,AI,Faculty Visit,Teaching',
     date:    '2022',
     views:   '',
     img:     'files/8. Blog/1. academic/4. expert talk/3. expert talk on AI/1.jpeg',
@@ -292,7 +292,7 @@ var SITE_POSTS = [
   {
     id:      'post-et-02',
     cat:     'academics',
-    tags:    'Expert Talk,IoT,Lecture,Industry,Technology',
+    tags:    'Talks,IoT,Industry,Technology',
     date:    '2019 – 2020',
     views:   '',
     img:     'files/8. Blog/1. academic/4. expert talk/4. expert talk on IoT/IMG-20190326-WA0004.jpg',
@@ -304,7 +304,7 @@ var SITE_POSTS = [
   {
     id:      'post-et-academic-session',
     cat:     'academics',
-    tags:    'Expert Talk,Academic Session,Students,Technology,Learning',
+    tags:    'Talks,Academic Session,Students,Technology',
     date:    '2021',
     views:   '',
     img:     'files/8. Blog/1. academic/4. expert talk/6/1.png',
@@ -316,7 +316,7 @@ var SITE_POSTS = [
   {
     id:      'post-et-machine-intelligence-2019',
     cat:     'academics',
-    tags:    'Expert Talk,Machine Intelligence,FDP,TEQIP,Computer Science',
+    tags:    'Talks,FDP,AI,Academics',
     date:    'May 29, 2019',
     views:   '',
     img:     'files/8. Blog/1. academic/4. expert talk/7/20260516_172526.jpg',
@@ -330,7 +330,7 @@ var SITE_POSTS = [
   {
     id:      'post-fv-zagreb',
     cat:     'academics',
-    tags:    'Faculty Visit,Croatia,Zagreb,International,Research',
+    tags:    'Faculty Visit,Research,Collaboration',
     date:    'Sep, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/5. faculty visits/1. zagreb, coratia/20180904_112911.jpg',
@@ -342,7 +342,7 @@ var SITE_POSTS = [
   {
     id:      'post-fv-rijeka',
     cat:     'academics',
-    tags:    'Faculty Visit,Croatia,Rijeka,International,Research',
+    tags:    'Faculty Visit,Research,Collaboration',
     date:    'Sep, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/5. faculty visits/2. rijeka, coratia/20180911_104449.jpg',
@@ -366,7 +366,7 @@ var SITE_POSTS = [
   {
     id:      'post-fv-itday',
     cat:     'academics',
-    tags:    'Faculty Visit,Rajasthan Dijifest,Jaipur,Industry,Technology',
+    tags:    'Faculty Visit,Industry,Technology',
     date:    'Mar, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/5. faculty visits/3. Rajasthan Dijifest/20180320_154838.jpg',
@@ -390,7 +390,7 @@ var SITE_POSTS = [
   {
     id:      'post-fv-mujstall',
     cat:     'academics',
-    tags:    'Faculty Visit,IT Day,MUJ,Outreach,Community',
+    tags:    'Faculty Visit,MUJ,Community Outreach',
     date:    'Sep, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/5. faculty visits/4. IT day and muj stall/20180926_114045.jpg',
@@ -404,7 +404,7 @@ var SITE_POSTS = [
   {
     id:      'post-ev-mou',
     cat:     'academics',
-    tags:    'Event,MOU,Partnership,Research,Collaboration',
+    tags:    'Events,Research,Collaboration',
     date:    '2019',
     views:   '',
     img:     'files/8. Blog/1. academic/6. Events done/0. mou/IMG_3037.JPG',
@@ -416,7 +416,7 @@ var SITE_POSTS = [
   {
     id:      'post-ev-vikram',
     cat:     'academics',
-    tags:    'Event,Award,Vikram,Achievement,MUJ',
+    tags:    'Events,Awards,MUJ',
     date:    '2022',
     views:   '',
     img:     'files/8. Blog/1. academic/6. Events done/11. Vikram award/IMG_5615.JPG',
@@ -428,7 +428,7 @@ var SITE_POSTS = [
   {
     id:      'post-ev-selfdefence',
     cat:     'academics',
-    tags:    'Event,Self Defence,Students,Safety,Community',
+    tags:    'Events,Students,Community Outreach',
     date:    'Mar, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/6. Events done/14. Self defence/20180319_182726.jpg',
@@ -440,7 +440,7 @@ var SITE_POSTS = [
   {
     id:      'post-ev-yoga',
     cat:     'academics',
-    tags:    'Event,Yoga,Wellness,Students,Health',
+    tags:    'Events,Sports & Wellness,Students,Health',
     date:    'Feb, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/6. Events done/17. yoga day/20180226_112614.jpg',
@@ -452,7 +452,7 @@ var SITE_POSTS = [
   {
     id:      'post-ev-alumni',
     cat:     'academics',
-    tags:    'Event,Alumni,Talk,Community,Networking',
+    tags:    'Events,Alumni,Talks,Community Outreach',
     date:    'Jan, 2020',
     views:   '',
     img:     'files/8. Blog/1. academic/6. Events done/18. Alumni talk/IMG20200108161445.jpg',
@@ -464,7 +464,7 @@ var SITE_POSTS = [
   {
     id:      'post-ev-aditya-alumni',
     cat:     'academics',
-    tags:    'Event,Alumni,Interaction,Students,Career',
+    tags:    'Events,Alumni,Students,Mentoring',
     date:    'Aug, 2019',
     views:   '',
     img:     'files/8. Blog/1. academic/6. Events done/1. Alumni/Aditya Agarwal/20190826_180500.jpeg',
@@ -476,7 +476,7 @@ var SITE_POSTS = [
   {
     id:      'post-ev-bigbasket',
     cat:     'academics',
-    tags:    'Event,Expert Talk,Industry,CEO,Innovation',
+    tags:    'Events,Talks,Industry,Innovation',
     date:    'Nov, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/6. Events done/expert talk by big basket CEO/20181101_140529.jpg',
@@ -502,7 +502,7 @@ var SITE_POSTS = [
   {
     id:      'post-hk-head',
     cat:     'academics',
-    tags:    'Hackathon,Head,Mentor,MUJ,Innovation',
+    tags:    'Hackathon,Mentoring,MUJ,Innovation',
     date:    'Nov 2018 – Jan 2019',
     views:   '',
     img:     'files/8. Blog/1. academic/7. Hackathon Head/31. hackathon head/20181114_102243.jpg',
@@ -514,7 +514,7 @@ var SITE_POSTS = [
   {
     id:      'post-hk-neemrana',
     cat:     'academics',
-    tags:    'Hackathon,Winners,Neemrana,National,Competition',
+    tags:    'Hackathon,Awards,Innovation',
     date:    'Oct, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/7. Hackathon Head/8. Hackathon winners-neemrana/20181027_184509.jpg',
@@ -528,7 +528,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-greenclub',
     cat:     'academics',
-    tags:    'Social,Green Club,Environment,Community,MUJ',
+    tags:    'Social Life,Environment,Community Outreach,MUJ',
     date:    'Jan, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/12.01.2018Green club Hangout/IMG-20180112-WA0004.jpg',
@@ -540,7 +540,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-chair',
     cat:     'academics',
-    tags:    'Social,Community,Distribution,Village,Outreach',
+    tags:    'Social Life,Community Outreach',
     date:    'Feb, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/12.02.2018. Chair table distribution/IMG-20180212-WA0017.jpg',
@@ -552,7 +552,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-blood18',
     cat:     'academics',
-    tags:    'Social,Blood Donation,Health,Community,MUJ',
+    tags:    'Social Life,Blood Donation,Health,Community Outreach,MUJ',
     date:    '2018',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/2. Blood Donation - 2018/IMG_2474.JPG',
@@ -564,7 +564,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-blood19',
     cat:     'academics',
-    tags:    'Social,Blood Donation,Health,Community,MUJ',
+    tags:    'Social Life,Blood Donation,Health,Community Outreach,MUJ',
     date:    'Nov, 2019',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/2. Blood Donation - 2019/IMG20191114104421.png',
@@ -576,7 +576,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-blood17',
     cat:     'academics',
-    tags:    'Social,Blood Donation,Health,Community,MUJ',
+    tags:    'Social Life,Blood Donation,Health,Community Outreach,MUJ',
     date:    'Nov, 2017',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/2. Blood Donation-2017/20171116_142416.jpg',
@@ -588,7 +588,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-dhemi',
     cat:     'academics',
-    tags:    'Social,School Visit,Community,Education,Outreach',
+    tags:    'Social Life,Community Outreach,Teaching',
     date:    'Nov, 2017',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/25.11.2017 Dhemi School visit/IMG-20171125-WA0001.jpg',
@@ -600,7 +600,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-beti',
     cat:     'academics',
-    tags:    'Social,Beti Bachao,Women,Community,Awareness',
+    tags:    'Social Life,Women Awareness,Community Outreach',
     date:    'Feb, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/26.02.2018. Beti Bachao Beti Padhao/IMG-20180227-WA0006.jpg',
@@ -612,7 +612,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-village',
     cat:     'academics',
-    tags:    'Social,Village Visit,Community,Outreach,Education',
+    tags:    'Social Life,Community Outreach,Teaching',
     date:    'Feb, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/27.02.2018 Village visit/IMG-20180227-WA0015.jpg',
@@ -624,7 +624,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-clean',
     cat:     'academics',
-    tags:    'Social,Cleanliness,Environment,Community,Swachh Bharat',
+    tags:    'Social Life,Environment,Community Outreach',
     date:    'Oct, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/32. cleanileness drive/20181002_091119.jpg',
@@ -636,7 +636,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-projector',
     cat:     'academics',
-    tags:    'Social,Projector,Community,Education,Outreach',
+    tags:    'Social Life,Community Outreach,Teaching',
     date:    'Dec 2017 – Feb 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/projector distribution/IMG-20171230-WA0008.jpg',
@@ -648,7 +648,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-blood16',
     cat:     'academics',
-    tags:    'Social,Blood Donation,Health,Community,MUJ',
+    tags:    'Social Life,Blood Donation,Health,Community Outreach,MUJ',
     date:    '2016',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/2. Blood Donation - 2016/New Doc 8.jpg',
@@ -660,7 +660,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-donation',
     cat:     'academics',
-    tags:    'Social,Donation,Community,Service,Outreach',
+    tags:    'Social Life,Blood Donation,Community Outreach',
     date:    'May, 2026',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/donation/20260516_161425.jpg',
@@ -672,7 +672,7 @@ var SITE_POSTS = [
   {
     id:      'post-soc-donation-copy',
     cat:     'academics',
-    tags:    'Social,Donation,Community,Service,Memories',
+    tags:    'Social Life,Blood Donation,Community Outreach',
     date:    'May, 2026',
     views:   '',
     img:     'files/8. Blog/1. academic/8. Social Activities/donation - Copy/20260516_161550.jpg',
@@ -708,7 +708,7 @@ var SITE_POSTS = [
   {
     id:      'post-ws-fdp',
     cat:     'academics',
-    tags:    'Workshop,FDP,Faculty,Training,Technology',
+    tags:    'Workshop,FDP,Faculty Visit,Training,Technology',
     date:    'Jan, 2017',
     views:   '',
     img:     'files/8. Blog/1. academic/3. workshops/12. one week FDP/20170119_134736.jpg',
@@ -732,7 +732,7 @@ var SITE_POSTS = [
   {
     id:      'post-ws-iitdel',
     cat:     'academics',
-    tags:    'Workshop,IIT Delhi,Research,Training,AI',
+    tags:    'Workshop,Research,Training,AI',
     date:    'Jun, 2017',
     views:   '',
     img:     'files/8. Blog/1. academic/3. workshops/34. IIT delhi workshop/20170625_111113.jpg',
@@ -744,7 +744,7 @@ var SITE_POSTS = [
   {
     id:      'post-ws-expttalk',
     cat:     'academics',
-    tags:    'Workshop,Expert Talk,Faculty,Learning,Technology',
+    tags:    'Workshop,Talks,Faculty Visit,Technology',
     date:    'Feb, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/3. workshops/15. workshop-expert talk/20180208_143012.jpg',
@@ -829,7 +829,7 @@ var SITE_POSTS = [
   {
     id:      'post-c-mun',
     cat:     'academics',
-    tags:    'Conference,MUN,Students,Leadership,Community',
+    tags:    'Conference,Students,Leadership,Community Outreach',
     date:    'Apr 14-15, 2018',
     views:   '',
     img:     'files/8. Blog/1. academic/2. Conferences and ppt/37. MUN/IMG_7544.JPG',
@@ -867,7 +867,7 @@ var SITE_POSTS = [
     id:      'post-c-spec-organised',
     cat:     'academics',
     subCategory: 'Conferences',
-    tags:    'Conference,Organised,SPEC,Research,Academics',
+    tags:    'Conference,Events,Research,Academics',
     date:    '2021',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -880,7 +880,7 @@ var SITE_POSTS = [
     id:      'post-c-icct19-organised',
     cat:     'academics',
     subCategory: 'Conferences',
-    tags:    'Conference,Organised,ICCT,Research,Academics',
+    tags:    'Conference,Events,Research,Academics',
     date:    '2019',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -893,7 +893,7 @@ var SITE_POSTS = [
     id:      'post-c-icicv20-organised',
     cat:     'academics',
     subCategory: 'Conferences',
-    tags:    'Conference,Organised,ICICV,Research,Academics',
+    tags:    'Conference,Events,Research,Academics',
     date:    '2020',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -906,7 +906,7 @@ var SITE_POSTS = [
     id:      'post-c-sin-organised',
     cat:     'academics',
     subCategory: 'Conferences',
-    tags:    'Conference,Organised,SIN,Research,Academics',
+    tags:    'Conference,Events,Research,Academics',
     date:    '2017',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -919,7 +919,7 @@ var SITE_POSTS = [
     id:      'post-c-ssic1-organised',
     cat:     'academics',
     subCategory: 'Conferences',
-    tags:    'Conference,Organised,SSIC,Students,Academics',
+    tags:    'Conference,Events,Students,Academics',
     date:    '2017',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -932,7 +932,7 @@ var SITE_POSTS = [
     id:      'post-c-ssic2-organised',
     cat:     'academics',
     subCategory: 'Conferences',
-    tags:    'Conference,Organised,SSIC,Students,Academics',
+    tags:    'Conference,Events,Students,Academics',
     date:    '2019',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -958,7 +958,7 @@ var SITE_POSTS = [
     id:      'post-et-03',
     cat:     'academics',
     subCategory: 'Expert Talks',
-    tags:    'Expert Talk,FDP,Research,Training,Academics',
+    tags:    'Talks,FDP,Research,Training,Academics',
     date:    '2019 - 2020',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -971,7 +971,7 @@ var SITE_POSTS = [
     id:      'post-et-04',
     cat:     'academics',
     subCategory: 'Expert Talks',
-    tags:    'Expert Talk,IoT,Technology,Academics',
+    tags:    'Talks,IoT,Technology,Academics',
     date:    '2020',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -984,7 +984,7 @@ var SITE_POSTS = [
     id:      'post-et-05',
     cat:     'academics',
     subCategory: 'Expert Talks',
-    tags:    'Expert Talk,Technology,Teaching,Academics',
+    tags:    'Talks,Technology,Teaching,Academics',
     date:    '',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -997,7 +997,7 @@ var SITE_POSTS = [
     id:      'post-et-08',
     cat:     'academics',
     subCategory: 'Expert Talks',
-    tags:    'Expert Talk,AI,Lecture,Academics',
+    tags:    'Talks,AI,Academics',
     date:    '',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -1010,7 +1010,7 @@ var SITE_POSTS = [
     id:      'post-et-09',
     cat:     'academics',
     subCategory: 'Expert Talks',
-    tags:    'Expert Talk,Java,Teaching,Academics',
+    tags:    'Talks,Teaching,Academics',
     date:    '2006',
     views:   '',
     img:     'files/8. Blog/1. academic/academic.jpg',
@@ -1022,7 +1022,7 @@ var SITE_POSTS = [
   {
     id:      'post-sports-sack',
     cat:     'sports',
-    tags:    'Sports,Xpression,Achievement,Campus,Fitness',
+    tags:    'Sports & Wellness,Awards,Health',
     date:    'Dec 2018',
     views:   '',
     img:     'files/8. Blog/3. Sports/3. Office  College  School/29/20181218_132223.jpg',
@@ -1034,7 +1034,7 @@ var SITE_POSTS = [
   {
     id:      'post-sports-cricket',
     cat:     'sports',
-    tags:    'Sports,Cricket,Achievement,Teamwork,Office',
+    tags:    'Sports & Wellness,Awards,Health',
     date:    'Jul 2024',
     views:   '',
     img:     'files/8. Blog/3. Sports/3. Office  College  School/30. won in cricket match in invincible ocean on July 2024.jpg',
@@ -1048,6 +1048,10 @@ var SITE_POSTS = [
 
 (function(global) {
   var CATEGORY_ORDER = ['academics', 'social', 'sports', 'avocations'];
+  var BLOG_SECTION_COUNTS = {
+    publications: 1,
+    projects: 1
+  };
   var CATEGORY_LABELS = {
     academics: 'Academics',
     social: 'Social Life',
@@ -1088,6 +1092,142 @@ var SITE_POSTS = [
       .split(',')
       .map(function(tag) { return tag.trim(); })
       .filter(Boolean);
+  }
+
+  var TAG_ALIASES = {
+    'expert talk': 'Talks',
+    'talk': 'Talks',
+    'talks': 'Talks',
+    'social': 'Social Life',
+    'community': 'Community Outreach',
+    'outreach': 'Community Outreach',
+    'responsibility': 'Community Outreach',
+    'service': 'Community Outreach',
+    'donation': 'Blood Donation',
+    'women': 'Women Awareness',
+    'awareness': 'Women Awareness',
+    'faculty': 'Faculty Visit',
+    'event': 'Events',
+    'events': 'Events',
+    'organised': 'Events',
+    'achievement': 'Awards',
+    'award': 'Awards',
+    'awards': 'Awards',
+    'project': 'Projects',
+    'projects': 'Projects',
+    'publication': 'Publications',
+    'publications': 'Publications',
+    'patent': 'Patents',
+    'patents': 'Patents',
+    'innovation': 'Innovation',
+    'technology': 'Technology',
+    'academics': 'Academics',
+    'research': 'Research',
+    'conference': 'Conference',
+    'workshop': 'Workshop',
+    'training': 'Training',
+    'fdp': 'FDP',
+    'hackathon': 'Hackathon',
+    'sports': 'Sports & Wellness',
+    'yoga': 'Sports & Wellness',
+    'fitness': 'Sports & Wellness',
+    'wellness': 'Sports & Wellness'
+  };
+
+  var TAG_BLOCKLIST = {
+    'vikram': true,
+    'mom': true,
+    'birthday': true,
+    'love': true,
+    'blessings': true,
+    'family': true,
+    'memories': true,
+    'first paper': true,
+    'ceo': true,
+    'head': true,
+    'winners': true,
+    'teamwork': true,
+    'office': true,
+    'dubai': true,
+    'delhi': true,
+    'udaipur': true,
+    'neemrana': true,
+    'zagreb': true,
+    'rijeka': true,
+    'jaipur': true,
+    'rajasthan': true
+  };
+
+  var TAG_ALLOWLIST = {
+    'research': true,
+    'ai': true,
+    'machine learning': true,
+    'deep learning': true,
+    'computer vision': true,
+    'biometrics': true,
+    'nlp': true,
+    'genai': true,
+    'llms': true,
+    'publications': true,
+    'projects': true,
+    'patents': true,
+    'conference': true,
+    'workshop': true,
+    'talks': true,
+    'fdp': true,
+    'training': true,
+    'gian': true,
+    'faculty visit': true,
+    'academic session': true,
+    'teaching': true,
+    'mentoring': true,
+    'students': true,
+    'muj': true,
+    'leadership': true,
+    'innovation': true,
+    'iot': true,
+    'robotics': true,
+    'security': true,
+    'networks': true,
+    'cloud': true,
+    'remote sensing': true,
+    'health': true,
+    'sports & wellness': true,
+    'social life': true,
+    'community outreach': true,
+    'blood donation': true,
+    'women awareness': true,
+    'environment': true,
+    'hackathon': true,
+    'awards': true,
+    'collaboration': true,
+    'industry': true,
+    'alumni': true,
+    'academics': true
+  };
+
+  var IMPORTANT_SINGLE_TAGS = {
+    'publications': true,
+    'projects': true,
+    'patents': true,
+    'sports & wellness': true
+  };
+
+  var VISIBLE_TAG_LIMIT = 30;
+
+  function displayTagsArray(item) {
+    var seen = {};
+    return tagsArray(item).map(function(tag) {
+      var normalized = String(tag || '').trim();
+      var key = normalized.toLowerCase();
+      if (TAG_BLOCKLIST[key]) return '';
+      normalized = TAG_ALIASES[key] || normalized;
+      key = normalized.toLowerCase();
+      if (!TAG_ALLOWLIST[key]) return '';
+      if (seen[key]) return '';
+      seen[key] = true;
+      return normalized;
+    }).filter(Boolean);
   }
 
   function hashFromLink(item) {
@@ -1175,11 +1315,23 @@ var SITE_POSTS = [
   function getTagCounts(items) {
     var counts = {};
     (items || sourceItems()).forEach(function(item) {
-      tagsArray(item).forEach(function(tag) {
+      displayTagsArray(item).forEach(function(tag) {
         counts[tag] = (counts[tag] || 0) + 1;
       });
     });
     return counts;
+  }
+
+  function professionalTagEntries(items) {
+    var counts = getTagCounts(items);
+    return Object.keys(counts).filter(function(tag) {
+      var key = tag.toLowerCase();
+      return counts[tag] > 1 || IMPORTANT_SINGLE_TAGS[key];
+    }).sort(function(a, b) {
+      return counts[b] - counts[a] || a.localeCompare(b);
+    }).map(function(tag) {
+      return { tag: tag, count: counts[tag] };
+    });
   }
 
   function setText(selector, value, root) {
@@ -1213,6 +1365,9 @@ var SITE_POSTS = [
     CATEGORY_ORDER.forEach(function(category) {
       setText('#cat-count-' + category, getCategoryCount(category), root);
     });
+    Object.keys(BLOG_SECTION_COUNTS).forEach(function(section) {
+      setText('[data-section-count="' + section + '"]', BLOG_SECTION_COUNTS[section], root);
+    });
     SUBCATEGORY_ORDER.forEach(function(key) {
       setText('[data-subcategory-count="' + key + '"]', getSubCategoryCount(key), root);
     });
@@ -1236,21 +1391,45 @@ var SITE_POSTS = [
     root = root || document;
     var cloud = root.querySelector('#tagCloud') || root.querySelector('#tag-cloud');
     if (!cloud) return;
-    var counts = getTagCounts();
-    var tags = Object.keys(counts).sort(function(a, b) {
-      return counts[b] - counts[a] || a.localeCompare(b);
-    });
+    var tags = professionalTagEntries();
     cloud.innerHTML = '';
-    tags.forEach(function(tag) {
+    tags.forEach(function(entry, index) {
       var pill = document.createElement('span');
       pill.className = 'tag-pill';
+      if (index >= VISIBLE_TAG_LIMIT) pill.hidden = true;
+      var tag = entry.tag;
       pill.title = 'Filter: ' + tag;
       if (onTagClickName) {
         pill.setAttribute('onclick', onTagClickName + '("' + tag.replace(/"/g, '&quot;') + '",this)');
       }
-      pill.innerHTML = escapeHtml(tag) + ' <small>(' + counts[tag] + ')</small>';
+      pill.innerHTML = escapeHtml(tag) + ' <small>(' + entry.count + ')</small>';
       cloud.appendChild(pill);
     });
+    if (tags.length > VISIBLE_TAG_LIMIT) {
+      var more = document.createElement('button');
+      more.type = 'button';
+      more.className = 'tag-pill tag-more-toggle';
+      more.textContent = 'More Tags';
+      more.addEventListener('click', function() {
+        var expanded = more.getAttribute('aria-expanded') === 'true';
+        cloud.querySelectorAll('.tag-pill[hidden]').forEach(function(pill) {
+          pill.hidden = expanded;
+        });
+        if (expanded) {
+          Array.from(cloud.querySelectorAll('.tag-pill')).forEach(function(pill, index) {
+            if (pill !== more && index >= VISIBLE_TAG_LIMIT) pill.hidden = true;
+          });
+        } else {
+          Array.from(cloud.querySelectorAll('.tag-pill')).forEach(function(pill) {
+            if (pill !== more) pill.hidden = false;
+          });
+        }
+        more.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        more.textContent = expanded ? 'More Tags' : 'Fewer Tags';
+      });
+      more.setAttribute('aria-expanded', 'false');
+      cloud.appendChild(more);
+    }
   }
 
   function getBlogCategoryCounts() {
@@ -1275,6 +1454,8 @@ var SITE_POSTS = [
     getCategoryCount: getCategoryCount,
     getSubCategoryCount: getSubCategoryCount,
     getTagCounts: getTagCounts,
+    getProfessionalTagEntries: professionalTagEntries,
+    getDisplayTags: displayTagsArray,
     renderAcademicQuickStats: renderAcademicQuickStats,
     renderBlogCategorySidebar: renderBlogCategorySidebar,
     renderBlogFilters: renderBlogFilters,

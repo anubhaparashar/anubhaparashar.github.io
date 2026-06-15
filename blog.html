@@ -266,6 +266,7 @@
     .tag_cloud_widget ul li a { display:block; padding:5px 12px; background:#f0f4ff; border-radius:20px; font-size:.76rem; color:#0f3460; font-weight:600; border:1px solid #d0d8ff; transition:background .2s, color .2s; }
     .tag_cloud_widget ul li a:hover { background:#7eb8e0; color:#fff; }
     .tag-pill { display:inline-block; padding:5px 12px; background:#f0f4ff; border-radius:20px; font-size:.76rem; color:#0f3460; font-weight:600; border:1px solid #d0d8ff; cursor:pointer; transition:background .2s, color .2s, border-color .2s; }
+    .tag-pill[hidden] { display:none !important; }
     .tag-pill:hover, .tag-pill.active { background:#0f3460; color:#fff; border-color:#0f3460; }
     .tag-pill small { opacity:.7; font-size:.65rem; }
 
@@ -338,6 +339,16 @@
       font-size: 10px !important;
       margin-left: 3px !important;
     }
+    .blog-profile-intro {
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+    @media (max-width: 768px) {
+      .blog-profile-intro {
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+    }
   </style>
 </head>
 
@@ -362,7 +373,7 @@
       <!-- Academics -->
       <div class="col-lg-3 col-md-6 mb-4 feat-academics">
         <a href="academics.html" class="feat-card feat-academics">
-          <img src="files/8. Blog/box/1.jpeg" alt="Expert Talk on AI">
+          <img src="files/8. Blog/box/1.jpeg" alt="Talk on AI">
           <div class="feat-card-overlay"></div>
           <div class="feat-card-body">
             <span class="feat-badge academics"><i class="fa fa-graduation-cap"></i> Academics</span>
@@ -506,7 +517,7 @@
               <a href="https://github.com/anubhaparashar" target="_blank"><i class="fa fa-github"></i></a>
               <a href="https://twitter.com/parashar_anubha" target="_blank"><i class="fa fa-twitter"></i></a>
             </div>
-            <p>Analytics & AI Engineer and AI researcher specializing in Computer Vision, Biometrics, GenAI, LLMs, NLP, Deep Learning, and Machine Learning. My work bridges research and deployment through real-world AI systems, including drone-based solar panel defect detection, edge AI chatbots, OCR pipelines, GIS-based analytics, scheduling optimization, and robust gait recognition. I hold a Ph.D. in Computer Science and Engineering with a focus on Artificial Intelligence, and I bring experience across industry research, academic teaching, publications, patents, and applied AI product development.</p>
+            <p class="blog-profile-intro">Analytics & AI Engineer and AI researcher specializing in Computer Vision, Biometrics, GenAI, LLMs, NLP, Deep Learning, and Machine Learning. My work bridges research and deployment through real-world AI systems, including drone-based solar panel defect detection, edge AI chatbots, OCR pipelines, GIS-based analytics, scheduling optimization, and robust gait recognition. I hold a Ph.D. in Computer Science and Engineering with a focus on Artificial Intelligence, and I bring experience across industry research, academic teaching, Publication work, patents, and applied AI product development.</p>
           </aside>
 
           <!-- Recent Activity Timeline -->
@@ -556,7 +567,7 @@
 
           <!-- Categories -->
           <aside class="single_sidebar_widget post_category_widget">
-            <h4 class="widget_title">Browse by Category</h4>
+            <h4 class="widget_title">Blog Sections</h4>
             <style>
               .cat-group { margin-bottom:6px; }
               .cat-group-header { display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #eef0ff; }
@@ -580,7 +591,7 @@
                 <li><a href="academics.html#acad-leadership">Leadership</a><span data-subcategory-count="leadership"></span></li>
                 <li><a href="academics.html#acad-conferences">Conferences</a><span data-subcategory-count="conferences"></span></li>
                 <li><a href="academics.html#acad-workshops">Workshops</a><span data-subcategory-count="workshops"></span></li>
-                <li><a href="academics.html#acad-experttalks">Expert Talks</a><span data-subcategory-count="experttalks"></span></li>
+                <li><a href="academics.html#acad-experttalks">Talks</a><span data-subcategory-count="experttalks"></span></li>
                 <li><a href="academics.html#acad-facultyvisits">Faculty Visits</a><span data-subcategory-count="facultyvisits"></span></li>
                 <li><a href="academics.html#acad-events">Events</a><span data-subcategory-count="events"></span></li>
                 <li><a href="academics.html#acad-hackathon">Hackathon</a><span data-subcategory-count="hackathon"></span></li>
@@ -595,7 +606,7 @@
                 <span class="cat-total" id="cat-count-social" style="background:#b87c00;"></span>
               </div>
               <ul class="cat-sub">
-                <li><a href="social-life.html#mom-birthday">Birthday to Mom</a><span>10 photos</span></li>
+                <li><a href="social-life.html#connection-overview">Social Life Highlights</a><span>6 posts</span></li>
                 <li><a href="social-life.html#sg-02">Conference Outing</a><span>10 photos</span></li>
                 <li><a href="social-life.html#sg-01">MUJ SSIC Event</a><span>24 photos</span></li>
               </ul>
@@ -604,7 +615,7 @@
             <!-- Sports -->
             <div class="cat-group">
               <div class="cat-group-header">
-                <a href="sports.html"><i class="fa fa-heartbeat" style="color:#50c878;"></i> Sports</a>
+                <a href="sports.html"><i class="fa fa-heartbeat" style="color:#50c878;"></i> Sports &amp; Wellness</a>
                 <span class="cat-total" id="cat-count-sports" style="background:#2d8a50;"></span>
               </div>
               <ul class="cat-sub">
@@ -625,6 +636,20 @@
                 <li><a href="avocations.html#tab-origami"><i class="fa fa-star" style="color:#c084fc;margin-right:5px;"></i>Origami</a><span></span></li>
                 <li><a href="avocations.html#tab-magic"><i class="fa fa-magic" style="color:#c084fc;margin-right:5px;"></i>Magic Tricks</a><span></span></li>
               </ul>
+            </div>
+
+            <div class="cat-group">
+              <div class="cat-group-header">
+                <a href="publication.html"><i class="fa fa-book" style="color:#0f3460;"></i> Publications</a>
+                <span class="cat-total" data-section-count="publications" style="background:#0f3460;"></span>
+              </div>
+            </div>
+
+            <div class="cat-group">
+              <div class="cat-group-header">
+                <a href="project.html"><i class="fa fa-cogs" style="color:#0f3460;"></i> Projects</a>
+                <span class="cat-total" data-section-count="projects" style="background:#0f3460;"></span>
+              </div>
             </div>
           </aside>
 
@@ -669,11 +694,18 @@
     return match ? parseInt(match[match.length - 1], 10) : 0;
   }
 
+  function postDisplayTags(post) {
+    if (window.SiteData && typeof window.SiteData.getDisplayTags === 'function') {
+      return window.SiteData.getDisplayTags(post);
+    }
+    return String(post.tags || '').split(',').map(function(t){ return t.trim(); }).filter(Boolean);
+  }
+
   function postMatches(post) {
-    var haystack = [post.title, post.excerpt, post.date, post.badge, post.cat, post.tags].join(' ').toLowerCase();
-    var tags = String(post.tags || '').split(',').map(function(t){ return t.trim(); });
+    var displayTags = postDisplayTags(post);
+    var haystack = [post.title, post.excerpt, post.date, post.badge, post.cat, post.tags, displayTags.join(' ')].join(' ').toLowerCase();
     if (archiveState.cat !== 'all' && post.cat !== archiveState.cat) return false;
-    if (archiveState.tag && tags.indexOf(archiveState.tag) === -1) return false;
+    if (archiveState.tag && displayTags.indexOf(archiveState.tag) === -1) return false;
     if (archiveState.query && haystack.indexOf(archiveState.query) === -1) return false;
     return true;
   }
@@ -838,9 +870,9 @@
           '<div class="card-body">' +
             '<div class="card-meta">' +
               '<span><i class="fa fa-calendar"></i> Date: <span data-firebase-date>' + escapeHtml(p.date) + '</span></span>' +
-              '<span><i class="fa fa-eye"></i> <span data-firebase-views>0</span> Views</span>' +
-              '<span><i class="fa fa-heart"></i> <span data-firebase-likes>0</span> Likes</span>' +
-              '<span><i class="fa fa-comment"></i> <span data-firebase-comments>0</span> Comments</span>' +
+              '<span><i class="fa fa-eye"></i> <span data-firebase-views></span> Views</span>' +
+              '<span><i class="fa fa-heart"></i> <span data-firebase-likes></span> Likes</span>' +
+              '<span><i class="fa fa-comment"></i> <span data-firebase-comments></span> Comments</span>' +
               '<button type="button" class="firebase-share-btn" data-firebase-share><i class="fa fa-share-alt"></i> Share</button>' +
             '</div>' +
             '<h3><a href="' + escapeHtml(p.link) + '">' + escapeHtml(p.title) + '</a></h3>' +
@@ -926,19 +958,13 @@
     var allBtn = document.querySelector('[data-filter="all"] .f-count');
     if (allBtn) allBtn.textContent = SITE_POSTS.length;
 
-    var freq = window.SiteData ? window.SiteData.getTagCounts() : {};
-    var sorted = Object.keys(freq).sort(function(a,b){ return freq[b]-freq[a]; });
     var cloud = document.getElementById('tag-cloud');
     if (cloud) {
-      cloud.innerHTML = '';
-      sorted.forEach(function(tag) {
-        var pill = document.createElement('span');
-        pill.className = 'tag-pill';
-        pill.setAttribute('onclick', 'filterByTag("' + tag.replace(/"/g,'&quot;') + '",this)');
-        pill.title = 'Filter: ' + tag;
-        pill.innerHTML = escapeHtml(tag) + (freq[tag] > 1 ? ' <small>(' + freq[tag] + ')</small>' : '');
-        cloud.appendChild(pill);
-      });
+      if (window.SiteData && typeof window.SiteData.renderTags === 'function') {
+        window.SiteData.renderTags(document, 'filterByTag');
+      } else {
+        cloud.innerHTML = '';
+      }
     }
   }
 

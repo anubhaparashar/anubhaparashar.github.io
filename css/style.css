@@ -1147,7 +1147,7 @@ button:focus {
     font-size: 13px;
     color: #777; }
   .comment-form :-ms-input-placeholder {
-    /* IE 10+ */
+    /* IE 10 and newer */
     font-size: 13px;
     color: #777; }
   .comment-form :-moz-placeholder {

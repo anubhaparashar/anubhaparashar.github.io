@@ -1571,5 +1571,6 @@
 .\files\8. Blog\box\2.jpeg
 .\files\8. Blog\box\3.jpg
 .\files\8. Blog\box\4.png
+.\img\favicon.png
 .\Satner Portfolio -doc\img\logo.png
 .\vendors\owl-carousel\assets\ajax-loader.gif
