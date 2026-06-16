@@ -384,7 +384,7 @@
           <div class="feat-card-body">
             <span class="feat-badge academics"><i class="fa fa-graduation-cap"></i> Academics</span>
             <h3 class="feat-card-title">Leadership, Conferences, Workshops &amp; Research</h3>
-            <p class="feat-card-excerpt">15 conferences, 14 workshops, expert talks, faculty visits, hackathons and more — a decade of academic milestones.</p>
+            <p class="feat-card-excerpt"><span data-academic-summary-count="conferences">0</span> conferences, <span data-academic-summary-count="workshops">0</span> workshops, talks, faculty visits, hackathons and more - a decade of academic milestones.</p>
             <span class="feat-visit-btn">Visit Academics <i class="fa fa-arrow-right"></i></span>
           </div>
         </a>
@@ -594,14 +594,14 @@
                 <span class="cat-total" id="cat-count-academics"></span>
               </div>
               <ul class="cat-sub">
-                <li><a href="academics.html#acad-leadership">Leadership</a><span data-subcategory-count="leadership"></span></li>
-                <li><a href="academics.html#acad-conferences">Conferences</a><span data-subcategory-count="conferences"></span></li>
-                <li><a href="academics.html#acad-workshops">Workshops</a><span data-subcategory-count="workshops"></span></li>
-                <li><a href="academics.html#acad-experttalks">Talks</a><span data-subcategory-count="experttalks"></span></li>
-                <li><a href="academics.html#acad-facultyvisits">Faculty Visits</a><span data-subcategory-count="facultyvisits"></span></li>
-                <li><a href="academics.html#acad-events">Events</a><span data-subcategory-count="events"></span></li>
-                <li><a href="academics.html#acad-hackathon">Hackathon</a><span data-subcategory-count="hackathon"></span></li>
-                <li><a href="academics.html#acad-social">Social Activities</a><span data-subcategory-count="social"></span></li>
+                <li><a href="academics.html#acad-leadership">Leadership</a><span data-subcategory-count="leadership" data-count-for="leadership"></span></li>
+                <li><a href="academics.html#acad-conferences">Conferences</a><span data-subcategory-count="conferences" data-count-for="conferences"></span></li>
+                <li><a href="academics.html#acad-workshops">Workshops</a><span data-subcategory-count="workshops" data-count-for="workshops"></span></li>
+                <li><a href="academics.html#acad-experttalks">Talks</a><span data-subcategory-count="experttalks" data-count-for="talks"></span></li>
+                <li><a href="academics.html#acad-facultyvisits">Faculty Visits</a><span data-subcategory-count="facultyvisits" data-count-for="faculty-visits"></span></li>
+                <li><a href="academics.html#acad-events">Events</a><span data-subcategory-count="events" data-count-for="events"></span></li>
+                <li><a href="academics.html#acad-hackathon">Hackathon</a><span data-subcategory-count="hackathon" data-count-for="hackathon"></span></li>
+                <li><a href="academics.html#acad-social">Social Activities</a><span data-subcategory-count="social" data-count-for="social-activities"></span></li>
               </ul>
             </div>
 
@@ -973,6 +973,9 @@
       } else {
         cloud.innerHTML = '';
       }
+    }
+    if (window.SiteData && typeof window.SiteData.renderAcademicCountsFromUrl === 'function') {
+      window.SiteData.renderAcademicCountsFromUrl('academics.html', document);
     }
   }
 

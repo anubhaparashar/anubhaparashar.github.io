@@ -1049,16 +1049,6 @@ var SITE_POSTS = [
 (function(global) {
   var CATEGORY_ORDER = ['academics', 'social', 'sports', 'avocations'];
   var SITE_STATS = {
-    academicArchive: {
-      academics: 80,
-      conferences: 15,
-      workshops: 14,
-      experttalks: 2,
-      facultyvisits: 6,
-      events: 6,
-      hackathon: 3,
-      social: 10
-    },
     profile: {
       publications: { value: 50, suffix: '+' },
       patents: { value: 6, suffix: '' },
@@ -1108,6 +1098,45 @@ var SITE_POSTS = [
     'hackathon',
     'social'
   ];
+  var ACADEMIC_CATEGORY_ORDER = [
+    'leadership',
+    'conferences',
+    'workshops',
+    'talks',
+    'faculty-visits',
+    'events',
+    'hackathon',
+    'social-activities'
+  ];
+  var ACADEMIC_CATEGORY_LABELS = {
+    academics: 'Academic Archive',
+    leadership: 'Leadership',
+    conferences: 'Conferences',
+    workshops: 'Workshops',
+    talks: 'Talks',
+    'faculty-visits': 'Faculty Visits',
+    events: 'Events',
+    hackathon: 'Hackathon',
+    'social-activities': 'Social Activities'
+  };
+  var SUBCATEGORY_TO_ACADEMIC_SLUG = {
+    leadership: 'leadership',
+    conferences: 'conferences',
+    conference: 'conferences',
+    workshops: 'workshops',
+    workshop: 'workshops',
+    experttalks: 'talks',
+    experttalk: 'talks',
+    talks: 'talks',
+    talk: 'talks',
+    facultyvisits: 'faculty-visits',
+    facultyvisit: 'faculty-visits',
+    events: 'events',
+    event: 'events',
+    hackathon: 'hackathon',
+    social: 'social-activities',
+    socialactivities: 'social-activities'
+  };
 
   function normalizeKey(value) {
     return String(value || '')
@@ -1335,31 +1364,12 @@ var SITE_POSTS = [
 
   function getCategoryCount(category) {
     var catKey = normalizeKey(category);
-    if (catKey === 'academics' && SITE_STATS.academicArchive.academics) return SITE_STATS.academicArchive.academics;
     if (normalizeKey(category) === 'all') return sourceItems().length;
     return getItemsByCategory(category).length;
   }
 
   function getSubCategoryCount(subCategory) {
     var key = normalizeKey(subCategory);
-    var statKeys = {
-      conferences: 'conferences',
-      conference: 'conferences',
-      workshops: 'workshops',
-      workshop: 'workshops',
-      experttalks: 'experttalks',
-      experttalk: 'experttalks',
-      talks: 'experttalks',
-      talk: 'experttalks',
-      facultyvisits: 'facultyvisits',
-      facultyvisit: 'facultyvisits',
-      events: 'events',
-      event: 'events',
-      hackathon: 'hackathon',
-      social: 'social',
-      socialactivities: 'social'
-    };
-    if (SITE_STATS.academicArchive[statKeys[key]]) return SITE_STATS.academicArchive[statKeys[key]];
     return getItemsBySubCategory(subCategory).length;
   }
 
@@ -1414,25 +1424,83 @@ var SITE_POSTS = [
     if (node) node.textContent = value;
   }
 
-  function renderAcademicQuickStats(root) {
+  function setAllText(selector, value, root) {
+    (root || document).querySelectorAll(selector).forEach(function(node) {
+      node.textContent = value;
+    });
+  }
+
+  function countAcademicCards(root) {
     root = root || document;
+    var counts = {};
+    ACADEMIC_CATEGORY_ORDER.forEach(function(slug) {
+      counts[slug] = root.querySelectorAll('[data-academic-category="' + slug + '"]').length;
+    });
+    counts.academics = ACADEMIC_CATEGORY_ORDER.reduce(function(total, slug) {
+      return total + (counts[slug] || 0);
+    }, 0);
+    return counts;
+  }
+
+  function applyAcademicCounts(counts, root) {
+    root = root || document;
+    counts = counts || {};
+    setAllText('[data-count-for="academics"]', counts.academics || 0, root);
+    setAllText('[data-academic-summary-count="academics"]', counts.academics || 0, root);
+    setText('#cat-count-academics', counts.academics || 0, root);
+
+    ACADEMIC_CATEGORY_ORDER.forEach(function(slug) {
+      var count = counts[slug] || 0;
+      setAllText('[data-count-for="' + slug + '"]', count, root);
+      setAllText('[data-academic-summary-count="' + slug + '"]', count, root);
+    });
+
+    SUBCATEGORY_ORDER.forEach(function(key) {
+      var slug = SUBCATEGORY_TO_ACADEMIC_SLUG[key] || key;
+      var count = counts[slug] || 0;
+      setAllText('[data-subcategory-count="' + key + '"]', count, root);
+      setAllText('[data-academic-tab="' + key + '"] .acad-tab-count', count, root);
+    });
+  }
+
+  function renderAcademicDomCounts(root) {
+    root = root || document;
+    var counts = countAcademicCards(root);
     var container = root.querySelector('#academicQuickStats');
     if (container) {
-      var rows = [{ key: 'academics', label: 'Academic Archive', count: SITE_STATS.academicArchive.academics }];
-      SUBCATEGORY_ORDER.forEach(function(key) {
-        rows.push({ key: key, label: SUBCATEGORY_LABELS[key], count: getSubCategoryCount(key) });
+      var rows = [{ key: 'academics', label: ACADEMIC_CATEGORY_LABELS.academics, count: counts.academics }];
+      ACADEMIC_CATEGORY_ORDER.forEach(function(slug) {
+        rows.push({ key: slug, label: ACADEMIC_CATEGORY_LABELS[slug], count: counts[slug] || 0 });
       });
       container.innerHTML = '<ul style="list-style:none;padding:0;margin:0;">' + rows.map(function(row, index) {
         var border = index === rows.length - 1 ? '' : 'border-bottom:1px solid #eef0ff;';
         return '<li style="display:flex;justify-content:space-between;padding:8px 0;' + border + 'font-size:.84rem;">' +
           '<span style="color:#555;">' + row.label + '</span>' +
-          '<strong id="qs-' + row.key + '" style="color:#0f3460;">' + row.count + '</strong>' +
+          '<strong id="qs-' + row.key + '" data-count-for="' + row.key + '" style="color:#0f3460;">' + row.count + '</strong>' +
         '</li>';
       }).join('') + '</ul>';
     }
-    SUBCATEGORY_ORDER.forEach(function(key) {
-      setText('[data-academic-tab="' + key + '"] .acad-tab-count', getSubCategoryCount(key), root);
-    });
+    applyAcademicCounts(counts, root);
+    return counts;
+  }
+
+  function renderAcademicCountsFromUrl(url, root) {
+    root = root || document;
+    if (!global.fetch || typeof global.DOMParser === 'undefined') return Promise.resolve(null);
+    return global.fetch(url || 'academics.html', { cache: 'no-cache' })
+      .then(function(response) { return response.ok ? response.text() : ''; })
+      .then(function(html) {
+        if (!html) return null;
+        var doc = new DOMParser().parseFromString(html, 'text/html');
+        var counts = countAcademicCards(doc);
+        applyAcademicCounts(counts, root);
+        return counts;
+      })
+      .catch(function() { return null; });
+  }
+
+  function renderAcademicQuickStats(root) {
+    return renderAcademicDomCounts(root || document);
   }
 
   function renderBlogCategorySidebar(root) {
@@ -1534,6 +1602,10 @@ var SITE_POSTS = [
     getTagCounts: getTagCounts,
     getProfessionalTagEntries: professionalTagEntries,
     getDisplayTags: displayTagsArray,
+    countAcademicCards: countAcademicCards,
+    applyAcademicCounts: applyAcademicCounts,
+    renderAcademicDomCounts: renderAcademicDomCounts,
+    renderAcademicCountsFromUrl: renderAcademicCountsFromUrl,
     renderAcademicQuickStats: renderAcademicQuickStats,
     renderBlogCategorySidebar: renderBlogCategorySidebar,
     renderBlogFilters: renderBlogFilters,
