@@ -292,6 +292,179 @@
     .academic-media-actions a {
       text-decoration: none;
     }
+    .academic-hero {
+      background: #f5f6ff;
+      padding: 34px 0 10px;
+    }
+    .academic-hero h1 {
+      color: #0f3460 !important;
+      font-weight: 900 !important;
+      margin: 0 0 8px;
+    }
+    .academic-hero p {
+      color: #4f5b66;
+      max-width: 780px;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .academic-controls-panel {
+      background: #fff;
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 24px rgba(15,52,96,.08);
+      border: 1px solid #e8eeff;
+    }
+    .academic-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin: 0 0 16px;
+    }
+    .academic-search {
+      width: min(100%, 420px);
+      border: 1px solid #d8e1f5;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: .9rem;
+      outline: none;
+    }
+    .academic-search:focus {
+      border-color: #7eb8e0;
+      box-shadow: 0 0 0 3px rgba(126,184,224,.16);
+    }
+    .academic-filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .academic-filter {
+      border: 1px solid #d8e1f5;
+      background: #f8faff;
+      color: #0f3460;
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: .78rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all .18s;
+    }
+    .academic-filter:hover,
+    .academic-filter.active {
+      background: #0f3460;
+      border-color: #0f3460;
+      color: #fff;
+    }
+    .academic-filter span {
+      margin-left: 6px;
+      opacity: .78;
+    }
+    .academic-enhanced .acad-section {
+      display: block;
+      margin-bottom: 30px;
+    }
+    .academic-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .academic-enhanced .conf-card {
+      margin-bottom: 18px;
+    }
+    .academic-enhanced .conf-card.is-hidden {
+      display: none !important;
+    }
+    .academic-card-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin: 0 0 10px;
+    }
+    .academic-badge,
+    .academic-year {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+    }
+    .academic-badge {
+      background: #eaf3fb;
+      color: #0f3460;
+    }
+    .academic-year {
+      background: #fff8e6;
+      color: #a56a00;
+    }
+    .academic-summary {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: #4f5b66;
+      font-size: .86rem;
+      line-height: 1.62;
+      margin: 12px 26px 14px;
+    }
+    .academic-card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 26px 18px;
+    }
+    .academic-toggle,
+    .academic-media-toggle,
+    .academic-show-more {
+      border: 1px solid #bfd4ec;
+      background: #f7fbff;
+      color: #0f3460;
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: .78rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all .18s;
+    }
+    .academic-toggle:hover,
+    .academic-media-toggle:hover,
+    .academic-show-more:hover {
+      background: #0f3460;
+      color: #fff;
+      border-color: #0f3460;
+    }
+    .academic-details[hidden],
+    .academic-media-panel[hidden] {
+      display: none;
+    }
+    .academic-media-panel {
+      margin: 0 26px 18px;
+      padding: 12px;
+      background: #f8faff;
+      border: 1px solid #e3eaff;
+      border-radius: 14px;
+    }
+    .academic-show-more-wrap {
+      text-align: center;
+      margin: 4px 0 28px;
+    }
+    .academic-empty-state {
+      display: none;
+      text-align: center;
+      background: #fff;
+      border: 1px solid #e8eeff;
+      border-radius: 18px;
+      padding: 38px 18px;
+      color: #64748b;
+      box-shadow: 0 4px 24px rgba(15,52,96,.06);
+    }
+    .academic-empty-state.is-visible {
+      display: block;
+    }
 
     /* -- EMPTY STATE -- */
     .empty-state {
@@ -360,6 +533,13 @@
   <img src="files/8. Blog/1. academic/academic.jpg" alt="Academics - Anubha Parashar">
 </div>
 
+<section class="academic-hero">
+  <div class="container">
+    <h1>Academics</h1>
+    <p>Academic leadership, conferences, workshops, talks, faculty visits, events, hackathons, and social impact activities.</p>
+  </div>
+</section>
+
 <!-- ---------- STICKY TAB BAR ---------- -->
 <div class="acad-tab-wrap">
   <div class="acad-tab-nav">
@@ -372,7 +552,7 @@
     <button class="acad-tab-btn" data-academic-tab="workshops" onclick="switchAcadTab('workshops',this)">
       Workshops <span class="acad-tab-count" data-count-for="workshops"></span>
     </button>
-    <button class="acad-tab-btn" data-academic-tab="experttalks" onclick="switchAcadTab('experttalks',this)">
+    <button class="acad-tab-btn" data-academic-tab="talks" onclick="switchAcadTab('talks',this)">
       Talks <span class="acad-tab-count" data-count-for="talks"></span>
     </button>
     <button class="acad-tab-btn" data-academic-tab="facultyvisits" onclick="switchAcadTab('facultyvisits',this)">
@@ -397,12 +577,30 @@
 
       <!-- LEFT: tab sections -->
       <div class="col-lg-8">
+        <div class="academic-controls-panel">
+          <div class="academic-controls">
+            <input id="academic-search" class="academic-search" type="search" placeholder="Search academics, conferences, workshops, talks..." aria-label="Search academic records">
+          </div>
+          <div class="academic-filter-row" aria-label="Filter academic archive">
+            <button type="button" class="academic-filter active" data-filter="all">All <span data-count-for="all">0</span></button>
+            <button type="button" class="academic-filter" data-filter="leadership">Leadership <span data-count-for="leadership">0</span></button>
+            <button type="button" class="academic-filter" data-filter="conferences">Conferences <span data-count-for="conferences">0</span></button>
+            <button type="button" class="academic-filter" data-filter="workshops">Workshops <span data-count-for="workshops">0</span></button>
+            <button type="button" class="academic-filter" data-filter="talks">Talks <span data-count-for="talks">0</span></button>
+            <button type="button" class="academic-filter" data-filter="faculty-visits">Faculty Visits <span data-count-for="faculty-visits">0</span></button>
+            <button type="button" class="academic-filter" data-filter="events">Events <span data-count-for="events">0</span></button>
+            <button type="button" class="academic-filter" data-filter="hackathon">Hackathon <span data-count-for="hackathon">0</span></button>
+            <button type="button" class="academic-filter" data-filter="social-activities">Social Activities <span data-count-for="social-activities">0</span></button>
+          </div>
+        </div>
+
+        <div id="academic-empty-state" class="academic-empty-state">No academic records match this filter.</div>
 
         <!-- -------- LEADERSHIP & RESPONSIBILITIES -------- -->
         <div class="acad-section active" id="acad-leadership">
 
           <!-- -- Warden -- -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="leadership" id="lead-warden">
+          <div class="conf-card academic-card" data-academic-item data-year="2024" data-tags="leadership, warden" data-blog-post data-blog-section="academics" data-academic-category="leadership" id="lead-warden">
             <div class="conf-card-header">
               <h3><span class="conf-num" style="background:linear-gradient(135deg,#8b0000,#c0392b);">01</span>Warden</h3>
               <div class="conf-meta">
@@ -420,7 +618,7 @@
           </div>
 
           <!-- -- Vice Captain -- -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="leadership" id="lead-vc">
+          <div class="conf-card academic-card" data-academic-item data-year="2007" data-tags="leadership, vice captain, school" data-blog-post data-blog-section="academics" data-academic-category="leadership" id="lead-vc">
             <div class="conf-card-header">
               <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
                 <div>
@@ -470,7 +668,7 @@
           </div>
 
           <!-- -- Senior Prefect -- -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="leadership" id="lead-sp">
+          <div class="conf-card academic-card" data-academic-item data-year="2006" data-tags="leadership, senior prefect" data-blog-post data-blog-section="academics" data-academic-category="leadership" id="lead-sp">
             <div class="conf-card-header">
               <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
                 <div>
@@ -499,7 +697,7 @@
         <!-- -------- CONFERENCES -------- -->
                 <div class="acad-section" id="acad-conferences">
           <!-- C01 ICCT 2017 - Organised Conference -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icct17-organised">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="conferences, icct 2017 - organised conference" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icct17-organised">
             <div class="conf-card-header">
               <h3><span class="conf-num">01</span>ICCT 2017 - Organised Conference</h3>
               <div class="conf-meta">
@@ -521,7 +719,7 @@
             </div>
           </div>
           <!-- C02 ICCT 2021 - Organised Conference -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icct21-organised">
+          <div class="conf-card academic-card" data-academic-item data-year="2021" data-tags="conferences, icct 2021 - organised conference" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icct21-organised">
             <div class="conf-card-header">
               <h3><span class="conf-num">02</span>ICCT 2021 - Organised Conference</h3>
               <div class="conf-meta">
@@ -538,7 +736,7 @@
             </div>
           </div>
           <!-- C03 SPEC Conference - Organised -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-spec-organised">
+          <div class="conf-card academic-card" data-academic-item data-year="2021" data-tags="conferences, spec conference - organised" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-spec-organised">
             <div class="conf-card-header">
               <h3><span class="conf-num">03</span>SPEC Conference - Organised</h3>
               <div class="conf-meta">
@@ -559,7 +757,7 @@
             </div>
           </div>
           <!-- C04 ICCT 2019 - Organised Conference -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icct19-organised">
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="conferences, icct 2019 - organised conference" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icct19-organised">
             <div class="conf-card-header">
               <h3><span class="conf-num">04</span>ICCT 2019 - Organised Conference</h3>
               <div class="conf-meta">
@@ -589,7 +787,7 @@
             </div>
           </div>
           <!-- C05 ICICV 2020 - Organised Conference -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icicv20-organised">
+          <div class="conf-card academic-card" data-academic-item data-year="2020" data-tags="conferences, icicv 2020 - organised conference" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icicv20-organised">
             <div class="conf-card-header">
               <h3><span class="conf-num">05</span>ICICV 2020 - Organised Conference</h3>
               <div class="conf-meta">
@@ -611,7 +809,7 @@
             </div>
           </div>
           <!-- C06 SIN Conference - Organised -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-sin-organised">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="conferences, sin conference - organised" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-sin-organised">
             <div class="conf-card-header">
               <h3><span class="conf-num">06</span>SIN Conference - Organised</h3>
               <div class="conf-meta">
@@ -632,7 +830,7 @@
             </div>
           </div>
           <!-- C07 SSIC 2017 - Organised -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-ssic1-organised">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="conferences, ssic 2017 - organised" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-ssic1-organised">
             <div class="conf-card-header">
               <h3><span class="conf-num">07</span>SSIC 2017 - Organised</h3>
               <div class="conf-meta">
@@ -650,7 +848,7 @@
             </div>
           </div>
           <!-- C08 SSIC 2019 - Organised -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-ssic2-organised">
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="conferences, ssic 2019 - organised" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-ssic2-organised">
             <div class="conf-card-header">
               <h3><span class="conf-num">08</span>SSIC 2019 - Organised</h3>
               <div class="conf-meta">
@@ -668,7 +866,7 @@
             </div>
           </div>
           <!-- C09 Udaipur Conference -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-udaipur">
+          <div class="conf-card academic-card" data-academic-item data-year="2016" data-tags="conferences, udaipur conference" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-udaipur">
             <div class="conf-card-header">
               <h3><span class="conf-num">09</span>Udaipur Conference</h3>
               <div class="conf-meta">
@@ -697,7 +895,7 @@
             </div>
           </div>
           <!-- C10 Jaipur Conference -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-jaipur">
+          <div class="conf-card academic-card" data-academic-item data-year="2016" data-tags="conferences, jaipur conference" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-jaipur">
             <div class="conf-card-header">
               <h3><span class="conf-num">10</span>Jaipur Conference</h3>
               <div class="conf-meta">
@@ -722,7 +920,7 @@
             </div>
           </div>
           <!-- C11 SSIC 2017 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-ssic1">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="conferences, ssic 2017" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-ssic1">
             <div class="conf-card-header">
               <h3><span class="conf-num">11</span>SSIC 2017</h3>
               <div class="conf-meta">
@@ -744,7 +942,7 @@
             </div>
           </div>
           <!-- C12 SIN 2017 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-sin17">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="conferences, sin 2017" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-sin17">
             <div class="conf-card-header">
               <h3><span class="conf-num">12</span>SIN 2017</h3>
               <div class="conf-meta">
@@ -766,7 +964,7 @@
             </div>
           </div>
           <!-- C13 Model United Nations -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-mun">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="conferences, model united nations" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-mun">
             <div class="conf-card-header">
               <h3><span class="conf-num">13</span>Model United Nations</h3>
               <div class="conf-meta">
@@ -787,7 +985,7 @@
             </div>
           </div>
           <!-- C14 First PPT at BVICAM -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-bvicam">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="conferences, first ppt at bvicam" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-bvicam">
             <div class="conf-card-header">
               <h3><span class="conf-num">14</span>First PPT at BVICAM</h3>
               <div class="conf-meta">
@@ -812,7 +1010,7 @@
             </div>
           </div>
           <!-- C15 Croatia Conference -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-croatia">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="conferences, croatia conference" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-croatia">
             <div class="conf-card-header">
               <h3><span class="conf-num">15</span>Croatia Conference</h3>
               <div class="conf-meta">
@@ -849,7 +1047,7 @@
             </div>
           </div>
           <!-- C16 SSIC 2019 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-ssic2">
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="conferences, ssic 2019" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-ssic2">
             <div class="conf-card-header">
               <h3><span class="conf-num">16</span>SSIC 2019</h3>
               <div class="conf-meta">
@@ -882,7 +1080,7 @@
             </div>
           </div>
           <!-- C17 ICCT 2019 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icct19">
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="conferences, icct 2019" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icct19">
             <div class="conf-card-header">
               <h3><span class="conf-num">17</span>ICCT 2019</h3>
               <div class="conf-meta">
@@ -916,7 +1114,7 @@
             </div>
           </div>
           <!-- C18 ICICV 2020 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icicv">
+          <div class="conf-card academic-card" data-academic-item data-year="2020" data-tags="conferences, icicv 2020" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icicv">
             <div class="conf-card-header">
               <h3><span class="conf-num">18</span>ICICV 2020</h3>
               <div class="conf-meta">
@@ -937,7 +1135,7 @@
             </div>
           </div>
           <!-- C19 Dubai Conference -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-dubai">
+          <div class="conf-card academic-card" data-academic-item data-year="2020" data-tags="conferences, dubai conference" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-dubai">
             <div class="conf-card-header">
               <h3><span class="conf-num">19</span>Dubai Conference</h3>
               <div class="conf-meta">
@@ -976,7 +1174,7 @@
             </div>
           </div>
           <!-- C20 ICCT 2023 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icct23">
+          <div class="conf-card academic-card" data-academic-item data-year="2023" data-tags="conferences, icct 2023" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icct23">
             <div class="conf-card-header">
               <h3><span class="conf-num">20</span>ICCT 2023</h3>
               <div class="conf-meta">
@@ -999,7 +1197,7 @@
         <div class="acad-section" id="acad-workshops">
 
           <!-- 09 Dubai 2020 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-icicv">
+          <div class="conf-card academic-card" data-academic-item data-year="2020" data-tags="workshops, icicv 2020 - pre-conference workshop" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-icicv">
             <div class="conf-card-header">
               <h3><span class="conf-num">01</span>ICICV 2020 - Pre-Conference Workshop</h3>
               <div class="conf-meta">
@@ -1022,7 +1220,7 @@
           </div>
 
           <!-- W02 GIAN Course -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-gian">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="workshops, gian mnit - 2017" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-gian">
             <div class="conf-card-header">
               <h3><span class="conf-num">02</span>GIAN MNIT - 2017</h3>
               <div class="conf-meta">
@@ -1041,7 +1239,7 @@
           </div>
 
           <!-- W03 One Week FDP -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-fdp12">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="workshops, one week fdp - computational intelligence" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-fdp12">
             <div class="conf-card-header">
               <h3><span class="conf-num">03</span>One Week FDP - Computational Intelligence</h3>
               <div class="conf-meta">
@@ -1060,7 +1258,7 @@
           </div>
 
           <!-- W04 IoT Workshop -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-iot">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="workshops, iot workshop" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-iot">
             <div class="conf-card-header">
               <h3><span class="conf-num">04</span>IoT Workshop</h3>
               <div class="conf-meta">
@@ -1092,7 +1290,7 @@
           </div>
 
           <!-- W05 IIT Delhi Workshop -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-iitdel">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="workshops, iit delhi workshop" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-iitdel">
             <div class="conf-card-header">
               <h3><span class="conf-num">05</span>IIT Delhi Workshop</h3>
               <div class="conf-meta">
@@ -1146,7 +1344,7 @@
           </div>
 
           <!-- W06 Workshop / Expert Talk -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-expttalk">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="workshops, workshop &amp;amp expert talk" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-expttalk">
             <div class="conf-card-header">
               <h3><span class="conf-num">06</span>Workshop &amp; Expert Talk</h3>
               <div class="conf-meta">
@@ -1168,7 +1366,7 @@
           </div>
 
           <!-- W07 Image Processing Workshop -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-imgproc">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="workshops, image processing workshop" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-imgproc">
             <div class="conf-card-header">
               <h3><span class="conf-num">07</span>Image Processing Workshop</h3>
               <div class="conf-meta">
@@ -1188,7 +1386,7 @@
           </div>
 
           <!-- W08 Novelence / MUJ Hacks -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-novelence">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="workshops, novelence - muj hacks 2" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-novelence">
             <div class="conf-card-header">
               <h3><span class="conf-num">08</span>Novelence - MUJ Hacks 2</h3>
               <div class="conf-meta">
@@ -1243,7 +1441,7 @@
           </div>
 
           <!-- W09 Oracle Workshop -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-oracle">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="workshops, oracle workshop" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-oracle">
             <div class="conf-card-header">
               <h3><span class="conf-num">09</span>Oracle Workshop</h3>
               <div class="conf-meta">
@@ -1283,7 +1481,7 @@
           </div>
 
           <!-- W10 Telemetry Workshop -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-telemetry">
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="workshops, telemetry workshop" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-telemetry">
             <div class="conf-card-header">
               <h3><span class="conf-num">10</span>Telemetry Workshop</h3>
               <div class="conf-meta">
@@ -1300,7 +1498,7 @@
           </div>
 
           <!-- W11 MUJ Deep Learning FDP -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-deeplearn">
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="workshops, muj deep learning fdp" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-deeplearn">
             <div class="conf-card-header">
               <h3><span class="conf-num">11</span>MUJ Deep Learning FDP</h3>
               <div class="conf-meta">
@@ -1334,7 +1532,7 @@
           </div>
 
           <!-- W12 Workshop on AI -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-ai">
+          <div class="conf-card academic-card" data-academic-item data-year="2022" data-tags="workshops, workshop on artificial intelligence" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-ai">
             <div class="conf-card-header">
               <h3><span class="conf-num">12</span>Workshop on Artificial Intelligence</h3>
               <div class="conf-meta">
@@ -1358,7 +1556,7 @@
           </div>
 
           <!-- W13 GIAN Course - MNIT Jaipur -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-gian-mnit">
+          <div class="conf-card academic-card" data-academic-item data-year="2016" data-tags="workshops, gian course - mnit jaipur 2016" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-gian-mnit">
             <div class="conf-card-header">
               <h3><span class="conf-num">13</span>GIAN Course - MNIT Jaipur 2016</h3>
               <div class="conf-meta">
@@ -1396,7 +1594,7 @@
           </div>
 
           <!-- W14 GIAN 2018 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-gian-2018">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="workshops, gian 2018" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-gian-2018">
             <div class="conf-card-header">
               <h3><span class="conf-num">14</span>GIAN 2018</h3>
               <div class="conf-meta">
@@ -1415,10 +1613,10 @@
         </div><!-- /acad-workshops -->
 
         <!-- -------- EXPERT TALKS -------- -->
-        <div class="acad-section" id="acad-experttalks">
+        <div class="acad-section" id="acad-talks">
 
           <!-- ET 01 Expert Talk -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-01">
+          <div class="conf-card academic-card" data-academic-item data-year="2022" data-tags="talks, expert talk" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-01">
             <div class="conf-card-header">
               <h3><span class="conf-num">01</span>Expert Talk</h3>
               <div class="conf-meta">
@@ -1439,7 +1637,7 @@
           </div>
 
           <!-- ET 02 Expert Talk on IoT -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-02">
+          <div class="conf-card academic-card" data-academic-item data-year="2020" data-tags="talks, expert talk on iot" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-02">
             <div class="conf-card-header">
               <h3><span class="conf-num">02</span>Expert Talk on IoT</h3>
               <div class="conf-meta">
@@ -1458,7 +1656,7 @@
           </div>
 
           <!-- ET 03 Expert Talk & FDP (2019-2020) -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-03">
+          <div class="conf-card academic-card" data-academic-item data-year="2020" data-tags="talks, expert talk &amp;amp fdp" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-03">
             <div class="conf-card-header">
               <h3><span class="conf-num">03</span>Expert Talk &amp; FDP</h3>
               <div class="conf-meta">
@@ -1488,7 +1686,7 @@
           </div>
 
           <!-- ET 04 Expert Talk (2020) -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-04">
+          <div class="conf-card academic-card" data-academic-item data-year="2020" data-tags="talks, expert talk" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-04">
             <div class="conf-card-header">
               <h3><span class="conf-num">04</span>Expert Talk</h3>
               <div class="conf-meta">
@@ -1508,7 +1706,7 @@
           </div>
 
           <!-- ET 05 Expert Talk -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-05">
+          <div class="conf-card academic-card" data-academic-item data-year="" data-tags="talks, expert talk" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-05">
             <div class="conf-card-header">
               <h3><span class="conf-num">05</span>Expert Talk</h3>
               <div class="conf-meta">
@@ -1524,7 +1722,7 @@
           </div>
 
           <!-- ET 06 Expert Talk at IET Agra -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-06">
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="talks, expert talk on recent trends in machine intelligence" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-06">
             <div class="conf-card-header">
               <h3><span class="conf-num">06</span>Expert Talk on Recent Trends in Machine Intelligence</h3>
               <div class="conf-meta">
@@ -1544,7 +1742,7 @@
           </div>
 
           <!-- ET 07 IoT Speaker -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-07">
+          <div class="conf-card academic-card" data-academic-item data-year="2021" data-tags="talks, iot speaker" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-07">
             <div class="conf-card-header">
               <h3><span class="conf-num">07</span>IoT Speaker</h3>
               <div class="conf-meta">
@@ -1561,7 +1759,7 @@
           </div>
 
           <!-- ET 08 Expert Talk on AI -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-08">
+          <div class="conf-card academic-card" data-academic-item data-year="" data-tags="talks, expert talk on ai" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-08">
             <div class="conf-card-header">
               <h3><span class="conf-num">08</span>Expert Talk on AI</h3>
               <div class="conf-meta">
@@ -1578,7 +1776,7 @@
           </div>
 
           <!-- ET 09 Times of India Article -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-09">
+          <div class="conf-card academic-card" data-academic-item data-year="2006" data-tags="talks, java as a language" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-09">
             <div class="conf-card-header">
               <h3><span class="conf-num">09</span>Java as a Language</h3>
               <div class="conf-meta">
@@ -1595,13 +1793,13 @@
             </div>
           </div>
 
-        </div><!-- /acad-experttalks -->
+        </div><!-- /acad-talks -->
 
         <!-- -------- FACULTY VISITS -------- -->
         <div class="acad-section" id="acad-facultyvisits">
 
           <!-- FV 01 Zagreb -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-zagreb">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="faculty-visits, faculty visit - zagreb, croatia" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-zagreb">
             <div class="conf-card-header">
               <h3><span class="conf-num">01</span>Faculty Visit - Zagreb, Croatia</h3>
               <div class="conf-meta">
@@ -1633,7 +1831,7 @@
           </div>
 
           <!-- FV 02 Rijeka -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-rijeka">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="faculty-visits, faculty visit - rijeka, croatia" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-rijeka">
             <div class="conf-card-header">
               <h3><span class="conf-num">02</span>Faculty Visit - Rijeka, Croatia</h3>
               <div class="conf-meta">
@@ -1657,7 +1855,7 @@
           </div>
 
           <!-- FV 03 Physics Day -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-physics">
+          <div class="conf-card academic-card" data-academic-item data-year="2022" data-tags="faculty-visits, physics day visit" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-physics">
             <div class="conf-card-header">
               <h3><span class="conf-num">03</span>Physics Day Visit</h3>
               <div class="conf-meta">
@@ -1686,7 +1884,7 @@
           </div>
 
           <!-- FV 04 Rajasthan Dijifest -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-itday">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="faculty-visits, rajasthan dijifest" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-itday">
             <div class="conf-card-header">
               <h3><span class="conf-num">04</span>Rajasthan Dijifest</h3>
               <div class="conf-meta">
@@ -1743,7 +1941,7 @@
           </div>
 
           <!-- FV 05 Robotics Fair -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-robotics">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="faculty-visits, robotics fair" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-robotics">
             <div class="conf-card-header">
               <h3><span class="conf-num">05</span>Robotics Fair</h3>
               <div class="conf-meta">
@@ -1785,7 +1983,7 @@
           </div>
 
           <!-- FV 06 IT Day MUJ Stall -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-mujstall">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="faculty-visits, it day &amp;amp muj stall" data-blog-post data-blog-section="academics" data-academic-category="faculty-visits" id="fv-mujstall">
             <div class="conf-card-header">
               <h3><span class="conf-num">06</span>IT Day &amp; MUJ Stall</h3>
               <div class="conf-meta">
@@ -1840,7 +2038,7 @@
         <div class="acad-section" id="acad-events">
 
           <!-- EV 01 MOU -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-mou">
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="events, mou signing ceremony" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-mou">
             <div class="conf-card-header">
               <h3><span class="conf-num">01</span>MOU Signing Ceremony</h3>
               <div class="conf-meta">
@@ -1858,7 +2056,7 @@
           </div>
 
           <!-- EV 02 Vikram Award -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-vikram">
+          <div class="conf-card academic-card" data-academic-item data-year="2022" data-tags="events, vikram award ceremony" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-vikram">
             <div class="conf-card-header">
               <h3><span class="conf-num">02</span>Vikram Award Ceremony</h3>
               <div class="conf-meta">
@@ -1901,7 +2099,7 @@
           </div>
 
           <!-- EV 03 Self Defence -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-selfdefence">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="events, self defence workshop" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-selfdefence">
             <div class="conf-card-header">
               <h3><span class="conf-num">03</span>Self Defence Workshop</h3>
               <div class="conf-meta">
@@ -1941,7 +2139,7 @@
           </div>
 
           <!-- EV 04 Yoga Day -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-yoga">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="events, yoga day" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-yoga">
             <div class="conf-card-header">
               <h3><span class="conf-num">04</span>Yoga Day</h3>
               <div class="conf-meta">
@@ -1962,7 +2160,7 @@
           </div>
 
           <!-- EV 05 Alumni Talk -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-alumni">
+          <div class="conf-card academic-card" data-academic-item data-year="2020" data-tags="events, alumni talk" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-alumni">
             <div class="conf-card-header">
               <h3><span class="conf-num">05</span>Alumni Talk</h3>
               <div class="conf-meta">
@@ -1993,7 +2191,7 @@
           </div>
 
           <!-- EV 06 Big Basket CEO -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-bigbasket">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="events, expert talk - big basket ceo" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-bigbasket">
             <div class="conf-card-header">
               <h3><span class="conf-num">06</span>Expert Talk - Big Basket CEO</h3>
               <div class="conf-meta">
@@ -2016,7 +2214,7 @@
         <div class="acad-section" id="acad-hackathon">
 
           <!-- HK 01 School Hackathon -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="hackathon" id="hk-school">
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="hackathon, school hackathon" data-blog-post data-blog-section="academics" data-academic-category="hackathon" id="hk-school">
             <div class="conf-card-header">
               <h3><span class="conf-num">01</span>School Hackathon</h3>
               <div class="conf-meta">
@@ -2042,7 +2240,7 @@
           </div>
 
           <!-- HK 02 Hackathon Head -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="hackathon" id="hk-head">
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="hackathon, hackathon head" data-blog-post data-blog-section="academics" data-academic-category="hackathon" id="hk-head">
             <div class="conf-card-header">
               <h3><span class="conf-num">02</span>Hackathon Head</h3>
               <div class="conf-meta">
@@ -2064,7 +2262,7 @@
           </div>
 
           <!-- HK 03 Neemrana -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="hackathon" id="hk-neemrana">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="hackathon, hackathon winners - neemrana" data-blog-post data-blog-section="academics" data-academic-category="hackathon" id="hk-neemrana">
             <div class="conf-card-header">
               <h3><span class="conf-num">03</span>Hackathon Winners - Neemrana</h3>
               <div class="conf-meta">
@@ -2110,7 +2308,7 @@
         <!-- -------- SOCIAL ACTIVITIES -------- -->
         <div class="acad-section" id="acad-social">
           <!-- SOC 01 Green Club Hangout -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-greenclub">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="social-activities, green club hangout" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-greenclub">
             <div class="conf-card-header">
               <h3><span class="conf-num">01</span>Green Club Hangout</h3>
               <div class="conf-meta">
@@ -2137,7 +2335,7 @@
             </div>
           </div>
           <!-- SOC 02 Chair &amp; Table Distribution -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-chair">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="social-activities, chair &amp;amp table distribution" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-chair">
             <div class="conf-card-header">
               <h3><span class="conf-num">02</span>Chair &amp; Table Distribution</h3>
               <div class="conf-meta">
@@ -2156,7 +2354,7 @@
             </div>
           </div>
           <!-- SOC 03 Blood Donation Camp 2018 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-blood18">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="social-activities, blood donation camp 2018" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-blood18">
             <div class="conf-card-header">
               <h3><span class="conf-num">03</span>Blood Donation Camp 2018</h3>
               <div class="conf-meta">
@@ -2192,7 +2390,7 @@
             </div>
           </div>
           <!-- SOC 04 Blood Donation Camp 2019 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-blood19">
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="social-activities, blood donation camp 2019" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-blood19">
             <div class="conf-card-header">
               <h3><span class="conf-num">04</span>Blood Donation Camp 2019</h3>
               <div class="conf-meta">
@@ -2213,7 +2411,7 @@
             </div>
           </div>
           <!-- SOC 05 Blood Donation Camp 2017 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-blood17">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="social-activities, blood donation camp 2017" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-blood17">
             <div class="conf-card-header">
               <h3><span class="conf-num">05</span>Blood Donation Camp 2017</h3>
               <div class="conf-meta">
@@ -2237,7 +2435,7 @@
             </div>
           </div>
           <!-- SOC 06 Dhemi School Visit -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-dhemi">
+          <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="social-activities, dhemi school visit" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-dhemi">
             <div class="conf-card-header">
               <h3><span class="conf-num">06</span>Dhemi School Visit</h3>
               <div class="conf-meta">
@@ -2261,7 +2459,7 @@
             </div>
           </div>
           <!-- SOC 07 Beti Bachao Beti Padhao -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-beti">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="social-activities, beti bachao beti padhao" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-beti">
             <div class="conf-card-header">
               <h3><span class="conf-num">07</span>Beti Bachao Beti Padhao</h3>
               <div class="conf-meta">
@@ -2285,7 +2483,7 @@
             </div>
           </div>
           <!-- SOC 08 Village Visit -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-village">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="social-activities, village visit" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-village">
             <div class="conf-card-header">
               <h3><span class="conf-num">08</span>Village Visit</h3>
               <div class="conf-meta">
@@ -2307,7 +2505,7 @@
             </div>
           </div>
           <!-- SOC 09 Cleanliness Drive -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-clean">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="social-activities, cleanliness drive" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-clean">
             <div class="conf-card-header">
               <h3><span class="conf-num">09</span>Cleanliness Drive</h3>
               <div class="conf-meta">
@@ -2326,7 +2524,7 @@
             </div>
           </div>
           <!-- SOC 10 Projector Distribution -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-projector">
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="social-activities, projector distribution" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-projector">
             <div class="conf-card-header">
               <h3><span class="conf-num">10</span>Projector Distribution</h3>
               <div class="conf-meta">
@@ -2347,7 +2545,7 @@
             </div>
           </div>
           <!-- SOC 11 Blood Donation Camp 2016 -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-blood16">
+          <div class="conf-card academic-card" data-academic-item data-year="2016" data-tags="social-activities, blood donation camp 2016" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-blood16">
             <div class="conf-card-header">
               <h3><span class="conf-num">11</span>Blood Donation Camp 2016</h3>
               <div class="conf-meta">
@@ -2364,7 +2562,7 @@
             </div>
           </div>
           <!-- SOC 12 Donation Drive -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-donation">
+          <div class="conf-card academic-card" data-academic-item data-year="" data-tags="social-activities, donation drive" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-donation">
             <div class="conf-card-header">
               <h3><span class="conf-num">12</span>Donation Drive</h3>
               <div class="conf-meta">
@@ -2380,7 +2578,7 @@
             </div>
           </div>
           <!-- SOC 13 Donation Drive Memories -->
-          <div class="conf-card" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-donation-copy">
+          <div class="conf-card academic-card" data-academic-item data-year="2026" data-tags="social-activities, donation drive memories" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-donation-copy">
             <div class="conf-card-header">
               <h3><span class="conf-num">13</span>Donation Drive Memories</h3>
               <div class="conf-meta">
@@ -2460,7 +2658,7 @@
           </div>
 
           <!-- Talks ToC (hidden by default) -->
-          <div class="sidebar-box" id="sidebar-experttalks" style="display:none;">
+          <div class="sidebar-box" id="sidebar-talks" style="display:none;">
             <h4>Talks</h4>
             <ul class="toc-list">
               <li><a href="#et-01">Expert Talk on AI</a></li>
@@ -2581,7 +2779,7 @@
     document.getElementById('acad-' + id).classList.add('active');
     btn.classList.add('active');
     // show/hide matching sidebar ToC
-    ['leadership','conferences','workshops','experttalks','facultyvisits','events','hackathon','social'].forEach(function(name) {
+    ['leadership','conferences','workshops','talks','facultyvisits','events','hackathon','social'].forEach(function(name) {
       var el = document.getElementById('sidebar-' + name);
       if (el) el.style.display = (name === id) ? '' : 'none';
     });
@@ -2599,7 +2797,7 @@
   }
 
   function getAcadTabForHash(hash) {
-    var valid = ['leadership','conferences','workshops','experttalks','facultyvisits','events','hackathon','social'];
+    var valid = ['leadership','conferences','workshops','talks','facultyvisits','events','hackathon','social'];
     if (valid.indexOf(hash) !== -1) return hash;
 
     var target = document.getElementById(hash);
@@ -2810,6 +3008,286 @@
   // -- Render generated counts from the actual academic cards. --
   (function() {
     if (window.AcademicData) window.AcademicData.renderAcademicDomCounts(document);
+  })();
+
+  // -- Compact academic archive: counts, filters, search, show-more, collapsible details. --
+  (function() {
+    var categories = [
+      'leadership',
+      'conferences',
+      'workshops',
+      'talks',
+      'faculty-visits',
+      'events',
+      'hackathon',
+      'social-activities'
+    ];
+    var labels = {
+      leadership: 'Leadership',
+      conferences: 'Conferences',
+      workshops: 'Workshops',
+      talks: 'Talks',
+      'faculty-visits': 'Faculty Visits',
+      events: 'Events',
+      hackathon: 'Hackathon',
+      'social-activities': 'Social Activities'
+    };
+    var tabAliases = {
+      all: 'all',
+      academics: 'all',
+      leadership: 'leadership',
+      conferences: 'conferences',
+      workshops: 'workshops',
+      talks: 'talks',
+      experttalks: 'talks',
+      'expert-talks': 'talks',
+      facultyvisits: 'faculty-visits',
+      'faculty-visits': 'faculty-visits',
+      events: 'events',
+      hackathon: 'hackathon',
+      social: 'social-activities',
+      'social-activities': 'social-activities'
+    };
+    var state = { filter: 'all', query: '', expanded: {} };
+    var allLimit = 4;
+    var categoryLimit = 8;
+
+    function normalizeCategory(value) {
+      value = String(value || '').toLowerCase();
+      return tabAliases[value] || value;
+    }
+
+    function deriveYear(card) {
+      var text = card.textContent || '';
+      var matches = text.match(/\b(19|20)\d{2}\b/g);
+      return matches ? matches[matches.length - 1] : '';
+    }
+
+    function deriveTags(card, category) {
+      var title = card.querySelector('h3') ? card.querySelector('h3').textContent : '';
+      return [labels[category] || category, title]
+        .join(', ')
+        .toLowerCase()
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    function cards() {
+      return Array.from(document.querySelectorAll('[data-academic-item]'));
+    }
+
+    function enhanceCards() {
+      document.body.classList.add('academic-enhanced');
+      cards().forEach(function(card) {
+        var category = normalizeCategory(card.getAttribute('data-academic-category'));
+        card.setAttribute('data-academic-category', category);
+        card.classList.add('academic-card');
+        if (!card.getAttribute('data-year')) card.setAttribute('data-year', deriveYear(card));
+        if (!card.getAttribute('data-tags')) card.setAttribute('data-tags', deriveTags(card, category));
+
+        var header = card.querySelector('.conf-card-header');
+        var body = card.querySelector('.conf-card-body');
+        var title = card.querySelector('h3');
+        var year = card.getAttribute('data-year') || 'Archive';
+        if (header && !header.querySelector('.academic-card-top')) {
+          var top = document.createElement('div');
+          top.className = 'academic-card-top';
+          top.innerHTML =
+            '<span class="academic-badge">' + (labels[category] || 'Academics') + '</span>' +
+            '<span class="academic-year">' + year + '</span>';
+          header.insertBefore(top, title || header.firstChild);
+        }
+
+        if (body && !body.classList.contains('academic-details')) {
+          var firstDescription = body.querySelector('.conf-desc');
+          var summary = document.createElement('p');
+          summary.className = 'academic-summary';
+          summary.textContent = firstDescription
+            ? firstDescription.textContent.trim()
+            : (title ? title.textContent.trim() : 'Academic archive record.');
+          body.parentNode.insertBefore(summary, body);
+
+          var actions = document.createElement('div');
+          actions.className = 'academic-card-actions';
+          var toggle = document.createElement('button');
+          toggle.className = 'academic-toggle';
+          toggle.type = 'button';
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'View Details';
+          actions.appendChild(toggle);
+          body.parentNode.insertBefore(actions, body);
+
+          body.classList.add('academic-details');
+          body.hidden = true;
+
+          toggle.addEventListener('click', function() {
+            var expanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!expanded));
+            toggle.textContent = expanded ? 'View Details' : 'Hide Details';
+            body.hidden = expanded;
+          });
+        }
+      });
+    }
+
+    function renderCounts() {
+      categories.forEach(function(category) {
+        var count = document.querySelectorAll('[data-academic-item][data-academic-category="' + category + '"]').length;
+        document.querySelectorAll('[data-count-for="' + category + '"]').forEach(function(el) {
+          el.textContent = count;
+        });
+      });
+      var total = document.querySelectorAll('[data-academic-item]').length;
+      document.querySelectorAll('[data-count-for="all"], [data-count-for="academics"]').forEach(function(el) {
+        el.textContent = total;
+      });
+
+      var quick = document.getElementById('academicQuickStats');
+      if (quick) {
+        quick.innerHTML = '<ul style="list-style:none;padding:0;margin:0;">' +
+          '<li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eef0ff;font-size:.84rem;"><span>Total Academics</span><strong data-count-for="academics">' + total + '</strong></li>' +
+          categories.map(function(category, index) {
+            var border = index === categories.length - 1 ? '' : 'border-bottom:1px solid #eef0ff;';
+            var count = document.querySelectorAll('[data-academic-item][data-academic-category="' + category + '"]').length;
+            return '<li style="display:flex;justify-content:space-between;padding:8px 0;' + border + 'font-size:.84rem;">' +
+              '<span>' + labels[category] + '</span><strong data-count-for="' + category + '">' + count + '</strong></li>';
+          }).join('') +
+        '</ul>';
+      }
+    }
+
+    function textMatches(card) {
+      var haystack = [
+        card.textContent,
+        card.getAttribute('data-year'),
+        card.getAttribute('data-tags'),
+        card.getAttribute('data-academic-category')
+      ].join(' ').toLowerCase();
+      return !state.query || haystack.indexOf(state.query) !== -1;
+    }
+
+    function categoryMatches(card) {
+      return state.filter === 'all' || card.getAttribute('data-academic-category') === state.filter;
+    }
+
+    function clearShowMoreButtons() {
+      document.querySelectorAll('.academic-show-more-wrap').forEach(function(el) { el.remove(); });
+    }
+
+    function addShowMoreButton(section, category, hiddenCount) {
+      if (!hiddenCount) return;
+      var wrap = document.createElement('div');
+      wrap.className = 'academic-show-more-wrap';
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'academic-show-more';
+      btn.textContent = state.filter === 'all'
+        ? 'Show all ' + labels[category]
+        : 'Show all ' + labels[category];
+      btn.addEventListener('click', function() {
+        state.expanded[category] = true;
+        applyFilters();
+      });
+      wrap.appendChild(btn);
+      section.appendChild(wrap);
+    }
+
+    function updateActiveControls() {
+      document.querySelectorAll('.academic-filter').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-filter') === state.filter);
+      });
+      document.querySelectorAll('.acad-tab-btn').forEach(function(btn) {
+        var key = normalizeCategory(btn.getAttribute('data-academic-tab'));
+        btn.classList.toggle('active', key === state.filter || (state.filter === 'all' && key === 'leadership'));
+      });
+      categories.forEach(function(category) {
+        var sidebar = document.getElementById('sidebar-' + category.replace('-', ''));
+        if (!sidebar && category === 'faculty-visits') sidebar = document.getElementById('sidebar-facultyvisits');
+        if (!sidebar && category === 'social-activities') sidebar = document.getElementById('sidebar-social');
+        if (sidebar) sidebar.style.display = (state.filter === category) ? '' : 'none';
+      });
+    }
+
+    function applyFilters() {
+      clearShowMoreButtons();
+      updateActiveControls();
+      var visibleCount = 0;
+      var hasQuery = Boolean(state.query);
+
+      document.querySelectorAll('.acad-section').forEach(function(section) {
+        var sectionCards = Array.from(section.querySelectorAll('[data-academic-item]'));
+        if (!sectionCards.length) return;
+        var category = sectionCards[0].getAttribute('data-academic-category');
+        var matching = sectionCards.filter(function(card) {
+          return categoryMatches(card) && textMatches(card);
+        });
+        var limit = state.filter === 'all' ? allLimit : categoryLimit;
+        if (hasQuery || state.expanded[category]) limit = matching.length;
+
+        sectionCards.forEach(function(card) { card.classList.add('is-hidden'); });
+        matching.forEach(function(card, index) {
+          if (index < limit) {
+            card.classList.remove('is-hidden');
+            visibleCount += 1;
+          }
+        });
+
+        section.style.display = matching.length ? '' : 'none';
+        if (matching.length > limit) addShowMoreButton(section, category, matching.length - limit);
+      });
+
+      var empty = document.getElementById('academic-empty-state');
+      if (empty) empty.classList.toggle('is-visible', visibleCount === 0);
+    }
+
+    function setFilter(filter, updateHash) {
+      state.filter = normalizeCategory(filter) || 'all';
+      state.expanded = {};
+      applyFilters();
+      if (updateHash !== false) {
+        var hash = state.filter === 'all' ? 'academics' : state.filter;
+        history.replaceState(null, '', '#' + hash);
+      }
+    }
+
+    window.switchAcadTab = function(id, btn) {
+      setFilter(id, true);
+      if (btn) btn.classList.add('active');
+    };
+
+    function filterFromHash(hash) {
+      hash = String(hash || '').replace(/^#/, '');
+      if (!hash) return 'all';
+      if (tabAliases[hash]) return tabAliases[hash];
+      var target = document.getElementById(hash);
+      var card = target && target.closest('[data-academic-item]');
+      return card ? card.getAttribute('data-academic-category') : 'all';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      enhanceCards();
+      renderCounts();
+
+      document.querySelectorAll('.academic-filter').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          setFilter(btn.getAttribute('data-filter'), true);
+        });
+      });
+
+      var search = document.getElementById('academic-search');
+      if (search) {
+        search.addEventListener('input', function() {
+          state.query = search.value.trim().toLowerCase();
+          state.expanded = {};
+          applyFilters();
+        });
+      }
+
+      setFilter(filterFromHash(location.hash), false);
+      window.addEventListener('hashchange', function() {
+        setFilter(filterFromHash(location.hash), false);
+      });
+    });
   })();
 </script>
 <script src="js/blog-section-counts.js"></script>

@@ -648,10 +648,12 @@
   }
 
   var BLOG_SOURCE_PAGES = [
-    { url: 'academics.html', cat: 'academics', badge: 'Academics' },
-    { url: 'social-life.html', cat: 'social', badge: 'Social Life' },
-    { url: 'sports.html', cat: 'sports', badge: 'Sports' },
-    { url: 'avocations.html', cat: 'avocations', badge: 'Avocations' }
+    { url: 'academics.html', cat: 'academics', sectionSlug: 'academics', badge: 'Academics' },
+    { url: 'social-life.html', cat: 'social', sectionSlug: 'social-life', badge: 'Social Life' },
+    { url: 'sports.html', cat: 'sports', sectionSlug: 'sports-wellness', badge: 'Sports & Wellness' },
+    { url: 'avocations.html', cat: 'avocations', sectionSlug: 'avocations', badge: 'Avocations' },
+    { url: 'publication.html', cat: 'publications', sectionSlug: 'publications', badge: 'Publications' },
+    { url: 'project.html', cat: 'projects', sectionSlug: 'projects', badge: 'Projects' }
   ];
   var BLOG_CATEGORY_TOTALS = window.SiteData ? window.SiteData.getBlogCategoryCounts() : {};
   var BLOG_CATEGORY_ORDER = ['academics','social','sports','avocations'];
@@ -707,28 +709,39 @@
     return source.badge;
   }
 
+  function sectionSlugForCat(cat) {
+    return ({
+      academics: 'academics',
+      social: 'social-life',
+      sports: 'sports-wellness',
+      avocations: 'avocations',
+      publications: 'publications',
+      projects: 'projects'
+    })[cat] || cat;
+  }
+
   function cardsFromDocument(doc, source) {
     var selectors = [
-      '.conf-card[id]',
-      '.blog-gallery-section[id]',
-      '.mom-birthday-post[id]',
-      '.hobby-section[id]'
+      '[data-blog-post][data-blog-section]'
     ];
     return Array.from(doc.querySelectorAll(selectors.join(','))).map(function(card) {
-      var id = card.id;
+      var sectionSlug = card.getAttribute('data-blog-section') || source.sectionSlug;
+      if (sectionSlug !== source.sectionSlug) return null;
+      var id = card.id || sectionSlug + '-index';
       var title = cleanPostTitle(card);
-      var img = firstImageFrom(card, doc);
-      if (!id || !title || !img) return null;
+      var img = firstImageFrom(card, doc) || 'files/8. Blog/1.png';
+      if (!id) return null;
       return {
         id: 'auto-' + source.cat + '-' + id,
         cat: source.cat,
+        sectionSlug: sectionSlug,
         tags: tagsForPost(source, title),
         date: postDateFrom(card),
         views: '',
         img: img,
-        title: title,
+        title: title || source.badge,
         excerpt: postExcerptFrom(card, title),
-        link: source.url + '#' + id,
+        link: card.id ? source.url + '#' + id : source.url,
         badge: source.badge,
         autoDiscovered: true
       };
@@ -753,6 +766,12 @@
 
   function mergeDiscoveredPosts(posts) {
     if (typeof SITE_POSTS === 'undefined') window.SITE_POSTS = [];
+    if (posts.length) {
+      SITE_POSTS = posts;
+      window.SITE_POSTS = SITE_POSTS;
+      refreshBlogTotals();
+      return;
+    }
     var seen = {};
     var counts = {};
     SITE_POSTS.forEach(function(post) {
@@ -784,6 +803,8 @@
       col.className = archiveState.view === 'list' ? 'col-md-12 post-col list-mode' : 'col-md-6 post-col';
       col.setAttribute('data-cat', p.cat);
       col.setAttribute('data-tags', p.tags);
+      col.setAttribute('data-blog-post', '');
+      col.setAttribute('data-blog-section', p.sectionSlug || sectionSlugForCat(p.cat));
       col.setAttribute('data-blog-post-id', firebasePostId);
       col.setAttribute('data-blog-post-url', p.link);
       col.innerHTML =

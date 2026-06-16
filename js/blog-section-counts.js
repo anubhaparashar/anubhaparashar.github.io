@@ -19,6 +19,10 @@
     return doc.querySelectorAll('[data-blog-post][data-blog-section="' + slug + '"]').length;
   }
 
+  function sectionBySlug(slug) {
+    return BLOG_SECTIONS.filter(function(section) { return section.slug === slug; })[0] || null;
+  }
+
   function fetchCount(section) {
     if (currentPageName() === section.source) {
       return Promise.resolve(countInDocument(document, section.slug) || section.fallbackCount);
@@ -52,6 +56,11 @@
 
   function render(counts) {
     ensureStyles();
+    Object.keys(counts).forEach(function(slug) {
+      document.querySelectorAll('[data-blog-section-count="' + slug + '"]').forEach(function(node) {
+        node.textContent = counts[slug];
+      });
+    });
     document.querySelectorAll('[data-blog-sections]').forEach(function(container) {
       container.innerHTML = '<ul class="blog-section-list">' + BLOG_SECTIONS.map(function(section) {
         var count = counts[section.slug] == null ? section.fallbackCount : counts[section.slug];
@@ -80,6 +89,8 @@
 
   window.BlogSectionCounts = {
     sections: BLOG_SECTIONS.slice(),
+    countInDocument: countInDocument,
+    sectionBySlug: sectionBySlug,
     update: updateBlogSections
   };
 
