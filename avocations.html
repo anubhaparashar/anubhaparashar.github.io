@@ -349,6 +349,8 @@
     .gal-slider-counter { font-size:.72rem; font-weight:800; color:#7c3aed; background:rgba(124,58,237,.07); padding:4px 12px; border-radius:20px; letter-spacing:.2px; }
     .gal-slider-nav { display:flex; align-items:center; gap:6px; }
     .gal-nav-btn { width:32px; height:32px; border-radius:50%; border:2px solid #ddd6fe; background:#fff; color:#7c3aed; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; font-size:1rem; transition:all .22s; box-shadow:0 2px 8px rgba(80,0,120,.10); line-height:1; padding:0; }
+    .gal-gallery-cta { border:0; background:transparent; color:#7c3aed; font:inherit; font-weight:800; cursor:pointer; padding:0; }
+    .gal-gallery-cta:hover { color:#5b21b6; text-decoration:underline; }
     .gal-nav-btn:hover:not([disabled]) { background:#7c3aed; color:#fff; border-color:#7c3aed; box-shadow:0 4px 16px rgba(124,58,237,.28); transform:scale(1.12); }
     .gal-nav-btn[disabled] { opacity:.28; cursor:default; transform:none!important; box-shadow:none; }
     .gal-slider-viewport { overflow-x:scroll; overflow-y:hidden; scrollbar-width:none; scroll-behavior:smooth; border-radius:10px; }
@@ -437,7 +439,7 @@
 
     <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-1">
       <div class="conf-card-header">
-        <h3><span class="conf-num">01</span>Gad Ganesh with Minki</h3>
+        <h3><span class="conf-num">01</span>Gad Ganesh Sunrise Trek</h3>
         <div class="conf-meta">
           <span><i class="fa fa-calendar"></i>July 2023</span>
           <span><i class="fa fa-map-marker"></i>Gad Ganesh Temple, Jaipur</span>
@@ -452,10 +454,10 @@
         </div>
         <div class="gal-slider-wrap">
           <div class="gal-slider-header">
-            <span class="gal-slider-counter">3 more photos</span>
+            <button type="button" class="gal-slider-counter gal-gallery-cta" onclick="openSliderGallery(this)" aria-label="View all photos in this gallery">View Gallery</button>
             <div class="gal-slider-nav">
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,-1)" aria-label="Previous gallery photos" disabled>&#8249;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,1)" aria-label="Next gallery photos">&#8250;</button>
             </div>
           </div>
           <div class="gal-slider-viewport">
@@ -472,7 +474,7 @@
 
     <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-2">
       <div class="conf-card-header">
-        <h3><span class="conf-num">02</span>Jal Mahal with Yash</h3>
+        <h3><span class="conf-num">02</span>Jal Mahal Lakeside Walk</h3>
         <div class="conf-meta">
           <span><i class="fa fa-calendar"></i>May 2023</span>
           <span><i class="fa fa-map-marker"></i>Jal Mahal, Jaipur</span>
@@ -487,10 +489,10 @@
         </div>
         <div class="gal-slider-wrap">
           <div class="gal-slider-header">
-            <span class="gal-slider-counter">3 more photos</span>
+            <button type="button" class="gal-slider-counter gal-gallery-cta" onclick="openSliderGallery(this)" aria-label="View all photos in this gallery">View Gallery</button>
             <div class="gal-slider-nav">
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,-1)" aria-label="Previous gallery photos" disabled>&#8249;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,1)" aria-label="Next gallery photos">&#8250;</button>
             </div>
           </div>
           <div class="gal-slider-viewport">
@@ -505,7 +507,7 @@
 
     <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-3">
       <div class="conf-card-header">
-        <h3><span class="conf-num">03</span>Samod with Minki</h3>
+        <h3><span class="conf-num">03</span>Samod Trail Walk</h3>
         <div class="conf-meta">
           <span><i class="fa fa-calendar"></i>February 2023</span>
           <span><i class="fa fa-map-marker"></i>Samod, Rajasthan</span>
@@ -520,10 +522,10 @@
         </div>
         <div class="gal-slider-wrap">
           <div class="gal-slider-header">
-            <span class="gal-slider-counter">3 more photos</span>
+            <button type="button" class="gal-slider-counter gal-gallery-cta" onclick="openSliderGallery(this)" aria-label="View all photos in this gallery">View Gallery</button>
             <div class="gal-slider-nav">
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,-1)" aria-label="Previous gallery photos" disabled>&#8249;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,1)" aria-label="Next gallery photos">&#8250;</button>
             </div>
           </div>
           <div class="gal-slider-viewport">
@@ -540,7 +542,7 @@
 
     <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-4">
       <div class="conf-card-header">
-        <h3><span class="conf-num">04</span>Chulgiri with Minki</h3>
+        <h3><span class="conf-num">04</span>Chulgiri Ridge Walk</h3>
         <div class="conf-meta">
           <span><i class="fa fa-calendar"></i>February 2023</span>
           <span><i class="fa fa-map-marker"></i>Chulgiri, Jaipur</span>
@@ -556,10 +558,10 @@
         </div>
         <div class="gal-slider-wrap">
           <div class="gal-slider-header">
-            <span class="gal-slider-counter">3 more photos</span>
+            <button type="button" class="gal-slider-counter gal-gallery-cta" onclick="openSliderGallery(this)" aria-label="View all photos in this gallery">View Gallery</button>
             <div class="gal-slider-nav">
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,-1)" aria-label="Previous gallery photos" disabled>&#8249;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,1)" aria-label="Next gallery photos">&#8250;</button>
             </div>
           </div>
           <div class="gal-slider-viewport">
@@ -576,7 +578,7 @@
 
     <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-5">
       <div class="conf-card-header">
-        <h3><span class="conf-num">05</span>Gad Ganesh with Apoo</h3>
+        <h3><span class="conf-num">05</span>Gad Ganesh Trail Walk</h3>
         <div class="conf-meta">
           <span><i class="fa fa-calendar"></i>October 2023</span>
           <span><i class="fa fa-map-marker"></i>Gad Ganesh Temple, Jaipur</span>
@@ -589,10 +591,10 @@
         </div>
         <div class="gal-slider-wrap">
           <div class="gal-slider-header">
-            <span class="gal-slider-counter">3 more photos</span>
+            <button type="button" class="gal-slider-counter gal-gallery-cta" onclick="openSliderGallery(this)" aria-label="View all photos in this gallery">View Gallery</button>
             <div class="gal-slider-nav">
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,-1)" aria-label="Previous gallery photos" disabled>&#8249;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,1)" aria-label="Next gallery photos">&#8250;</button>
             </div>
           </div>
           <div class="gal-slider-viewport">
@@ -606,7 +608,7 @@
 
     <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-6">
       <div class="conf-card-header">
-        <h3><span class="conf-num">06</span>Gad Ganesh with Mom</h3>
+        <h3><span class="conf-num">06</span>Gad Ganesh Temple Trek</h3>
         <div class="conf-meta">
           <span><i class="fa fa-calendar"></i>April 2024</span>
           <span><i class="fa fa-map-marker"></i>Gad Ganesh Temple, Jaipur</span>
@@ -616,14 +618,14 @@
       <div class="conf-card-body">
         <p class="conf-desc">A meaningful sunrise trek shared with my mother — up the Aravalli hillside to an ancient temple, a quiet hour together before the day began.</p>
         <div class="gal-grid" id="g-trek-6">
-          <a href="files/8. Blog/4. Avocations/1. trekking/6. gad ganesh with mom/IMG20240407074915.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/4. Avocations/1. trekking/6. gad ganesh with mom/IMG20240407074915.jpg" alt="Gad Ganesh with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="files/8. Blog/4. Avocations/1. trekking/6. gad ganesh with mom/IMG20240407074915.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/4. Avocations/1. trekking/6. gad ganesh with mom/IMG20240407074915.jpg" alt="Gad Ganesh Temple Trek"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
         </div>
         <div class="gal-slider-wrap">
           <div class="gal-slider-header">
-            <span class="gal-slider-counter">3 more photos</span>
+            <button type="button" class="gal-slider-counter gal-gallery-cta" onclick="openSliderGallery(this)" aria-label="View all photos in this gallery">View Gallery</button>
             <div class="gal-slider-nav">
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,-1)" aria-label="Previous gallery photos" disabled>&#8249;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,1)" aria-label="Next gallery photos">&#8250;</button>
             </div>
           </div>
           <div class="gal-slider-viewport">
@@ -651,10 +653,10 @@
         </div>
         <div class="gal-slider-wrap">
           <div class="gal-slider-header">
-            <span class="gal-slider-counter">3 more photos</span>
+            <button type="button" class="gal-slider-counter gal-gallery-cta" onclick="openSliderGallery(this)" aria-label="View all photos in this gallery">View Gallery</button>
             <div class="gal-slider-nav">
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,-1)" aria-label="Previous gallery photos" disabled>&#8249;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,1)" aria-label="Next gallery photos">&#8250;</button>
             </div>
           </div>
           <div class="gal-slider-viewport">
@@ -685,10 +687,10 @@
         </div>
         <div class="gal-slider-wrap">
           <div class="gal-slider-header">
-            <span class="gal-slider-counter">3 more photos</span>
+            <button type="button" class="gal-slider-counter gal-gallery-cta" onclick="openSliderGallery(this)" aria-label="View all photos in this gallery">View Gallery</button>
             <div class="gal-slider-nav">
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,-1)" aria-label="Previous gallery photos" disabled>&#8249;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,1)" aria-label="Next gallery photos">&#8250;</button>
             </div>
           </div>
           <div class="gal-slider-viewport">
@@ -716,10 +718,10 @@
         </div>
         <div class="gal-slider-wrap">
           <div class="gal-slider-header">
-            <span class="gal-slider-counter">3 more photos</span>
+            <button type="button" class="gal-slider-counter gal-gallery-cta" onclick="openSliderGallery(this)" aria-label="View all photos in this gallery">View Gallery</button>
             <div class="gal-slider-nav">
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,-1)" aria-label="Previous gallery photos" disabled>&#8249;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,1)" aria-label="Next gallery photos">&#8250;</button>
             </div>
           </div>
           <div class="gal-slider-viewport">
@@ -733,7 +735,7 @@
 
     <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-10">
       <div class="conf-card-header">
-        <h3><span class="conf-num">10</span>Samod with Mom</h3>
+        <h3><span class="conf-num">10</span>Samod Trail Walk</h3>
         <div class="conf-meta">
           <span><i class="fa fa-calendar"></i>April 2023</span>
           <span><i class="fa fa-map-marker"></i>Samod, Rajasthan</span>
@@ -743,14 +745,14 @@
       <div class="conf-card-body">
         <p class="conf-desc">A quiet spring morning on the trails above Samod — wildflowers, clean air, and a peaceful hour shared before the day began.</p>
         <div class="gal-grid" id="g-trek-10">
-          <a href="files/8. Blog/4. Avocations/1. trekking/10. samod with mom/IMG_20230430_064856.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/4. Avocations/1. trekking/10. samod with mom/IMG_20230430_064856.jpg" alt="Samod with Mom"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+          <a href="files/8. Blog/4. Avocations/1. trekking/10. samod with mom/IMG_20230430_064856.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/4. Avocations/1. trekking/10. samod with mom/IMG_20230430_064856.jpg" alt="Samod Trail Walk"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
         </div>
         <div class="gal-slider-wrap">
           <div class="gal-slider-header">
-            <span class="gal-slider-counter">3 more photos</span>
+            <button type="button" class="gal-slider-counter gal-gallery-cta" onclick="openSliderGallery(this)" aria-label="View all photos in this gallery">View Gallery</button>
             <div class="gal-slider-nav">
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,-1)" disabled>&#8249;</button>
-              <button class="gal-nav-btn" onclick="galSliderScroll(this,1)">&#8250;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,-1)" aria-label="Previous gallery photos" disabled>&#8249;</button>
+              <button type="button" class="gal-nav-btn" onclick="galSliderScroll(this,1)" aria-label="Next gallery photos">&#8250;</button>
             </div>
           </div>
           <div class="gal-slider-viewport">
@@ -794,16 +796,16 @@
           <div class="sidebar-box">
             <h4><i class="fa fa-map-marker" style="color:#c084fc;margin-right:8px;"></i>Trek Log</h4>
             <ul class="toc-list">
-              <li><a href="#trek-1">Gad Ganesh with Minki <span class="toc-year">Jul 2023</span></a></li>
-              <li><a href="#trek-2">Jal Mahal with Yash <span class="toc-year">May 2023</span></a></li>
-              <li><a href="#trek-3">Samod with Minki <span class="toc-year">Feb 2023</span></a></li>
-              <li><a href="#trek-4">Chulgiri with Minki <span class="toc-year">Feb 2023</span></a></li>
-              <li><a href="#trek-5">Gad Ganesh with Apoo <span class="toc-year">Oct 2023</span></a></li>
-              <li><a href="#trek-6">Gad Ganesh with Mom <span class="toc-year">Apr 2024</span></a></li>
+              <li><a href="#trek-1">Gad Ganesh Sunrise Trek <span class="toc-year">Jul 2023</span></a></li>
+              <li><a href="#trek-2">Jal Mahal Lakeside Walk <span class="toc-year">May 2023</span></a></li>
+              <li><a href="#trek-3">Samod Trail Walk <span class="toc-year">Feb 2023</span></a></li>
+              <li><a href="#trek-4">Chulgiri Ridge Walk <span class="toc-year">Feb 2023</span></a></li>
+              <li><a href="#trek-5">Gad Ganesh Trail Walk <span class="toc-year">Oct 2023</span></a></li>
+              <li><a href="#trek-6">Gad Ganesh Temple Trek <span class="toc-year">Apr 2024</span></a></li>
               <li><a href="#trek-7">Dense Forest Trail <span class="toc-year">Aug 2023</span></a></li>
               <li><a href="#trek-8">Jal Mahal <span class="toc-year">Aug 2023</span></a></li>
               <li><a href="#trek-9">Amer <span class="toc-year">Mar 2024</span></a></li>
-              <li><a href="#trek-10">Samod with Mom <span class="toc-year">Apr 2023</span></a></li>
+              <li><a href="#trek-10">Samod Trail Walk <span class="toc-year">Apr 2023</span></a></li>
             </ul>
           </div>
         </div>
@@ -863,15 +865,18 @@
       <div class="hobby-quote">
         "Art has always been my pause button. It slows the world down, lets the mind breathe, and reminds me that precision can also be gentle."
       </div>
-      <p>
-        Over time, this creative practice expanded beyond paper. I explored oil painting, water colour, craft-based compositions, ice-cream-stick work, POP-based art, and decorative handmade pieces. Each medium taught something different. Water colour taught softness and restraint. Oil painting taught layering. Craft work taught structure. POP work taught texture and patience. Together, they made art feel less like a single hobby and more like a language with many dialects.
-      </p>
-      <p>
-        Years later, this love for visual expression continued at Manipal University Jaipur, where I won <strong>1st Position</strong> in the Rangoli Competition at Xpression Cultural &amp; Sports Fest. That recognition felt special because Rangoli connects creativity with tradition. It is detailed, colourful, temporary, and deeply Indian. Creating it felt different from painting on paper, but the heart of the process was the same: patience, balance, and devotion to detail.
-      </p>
-      <p>
-        Today, painting and drawing remain very close to me. They are not only hobbies; they are a way of returning to myself. In research, I solve problems by breaking them down logically. In art, I solve them by feeling my way through colour, shape, and composition. Both require discipline. Both require courage. Both begin with a blank space and the belief that something meaningful can emerge from it.
-      </p>
+      <details>
+        <summary>Read More</summary>
+        <p>
+          Over time, this creative practice expanded beyond paper. I explored oil painting, water colour, craft-based compositions, ice-cream-stick work, POP-based art, and decorative handmade pieces. Each medium taught something different. Water colour taught softness and restraint. Oil painting taught layering. Craft work taught structure. POP work taught texture and patience. Together, they made art feel less like a single hobby and more like a language with many dialects.
+        </p>
+        <p>
+          Years later, this love for visual expression continued at Manipal University Jaipur, where I won <strong>1st Position</strong> in the Rangoli Competition at Xpression Cultural &amp; Sports Fest. That recognition felt special because Rangoli connects creativity with tradition. It is detailed, colourful, temporary, and deeply Indian. Creating it felt different from painting on paper, but the heart of the process was the same: patience, balance, and devotion to detail.
+        </p>
+        <p>
+          Today, painting and drawing remain very close to me. They are not only hobbies; they are a way of returning to myself. In research, I solve problems by breaking them down logically. In art, I solve them by feeling my way through colour, shape, and composition. Both require discipline. Both require courage. Both begin with a blank space and the belief that something meaningful can emerge from it.
+        </p>
+      </details>
 
       <div class="artwork-gallery-block" id="artwork-gallery">
         <div class="blog-gallery-label"><i class="fa fa-picture-o"></i> Artwork Gallery &nbsp;<span style="font-weight:400;color:#888;font-size:.7rem;letter-spacing:0;">8 artwork images</span></div>
@@ -1101,16 +1106,16 @@ const PAINTING_FOLDER_TITLES = {
 };
 const TREKKING_ROOT = 'files/8. Blog/4. Avocations/1. trekking';
 const TREK_META = {
-  '1. gad ganesh with minki': { date: 'July 2023', shortDate: 'Jul 2023', location: 'Gad Ganesh Temple, Jaipur', title: 'Gad Ganesh with Minki', desc: 'An early-morning hike to the Gad Ganesh temple perched in the Aravalli foothills above Jaipur - rocky trails, cool air, and sweeping Pink City views at sunrise.' },
-  '2. JAL MAHAL WITH YASH': { date: 'May 2023', shortDate: 'May 2023', location: 'Jal Mahal, Jaipur', title: 'Jal Mahal with Yash', desc: 'A dawn walk along the shores of Man Sagar Lake with the Water Palace shimmering in still water and the Aravalli range as a backdrop.' },
-  '3. Samod with minki': { date: 'February 2023', shortDate: 'Feb 2023', location: 'Samod, Rajasthan', title: 'Samod with Minki', desc: 'An offbeat trail through the hills surrounding Samod - ancient walls, quiet paths, and a winter afternoon well away from the city.' },
-  '4. chulgiri with minki': { date: 'February 2023', shortDate: 'Feb 2023', location: 'Chulgiri, Jaipur', title: 'Chulgiri with Minki', desc: 'A brisk winter-morning hike along Chulgiri\'s rocky ridgeline, known for its Jain temple at the summit and uninterrupted views across Jaipur.' },
-  '5. gad ganesh with Apoo': { date: 'October 2023', shortDate: 'Oct 2023', location: 'Gad Ganesh Temple, Jaipur', title: 'Gad Ganesh with Apoo', desc: 'A return to Gad Ganesh in the cool of autumn - crisp air, golden-hour light on the hillside, and the quiet satisfaction of reaching the top.' },
-  '6. gad ganesh with mom': { date: 'April 2024', shortDate: 'Apr 2024', location: 'Gad Ganesh Temple, Jaipur', title: 'Gad Ganesh with Mom', desc: 'A meaningful sunrise trek shared with my mother - up the Aravalli hillside to an ancient temple, a quiet hour together before the day began.' },
+  '1. gad ganesh with minki': { date: 'July 2023', shortDate: 'Jul 2023', location: 'Gad Ganesh Temple, Jaipur', title: 'Gad Ganesh Sunrise Trek', desc: 'An early-morning hike to the Gad Ganesh temple perched in the Aravalli foothills above Jaipur - rocky trails, cool air, and sweeping Pink City views at sunrise.' },
+  '2. JAL MAHAL WITH YASH': { date: 'May 2023', shortDate: 'May 2023', location: 'Jal Mahal, Jaipur', title: 'Jal Mahal Lakeside Walk', desc: 'A dawn walk along the shores of Man Sagar Lake with the Water Palace shimmering in still water and the Aravalli range as a backdrop.' },
+  '3. Samod with minki': { date: 'February 2023', shortDate: 'Feb 2023', location: 'Samod, Rajasthan', title: 'Samod Trail Walk', desc: 'An offbeat trail through the hills surrounding Samod - ancient walls, quiet paths, and a winter afternoon well away from the city.' },
+  '4. chulgiri with minki': { date: 'February 2023', shortDate: 'Feb 2023', location: 'Chulgiri, Jaipur', title: 'Chulgiri Ridge Walk', desc: 'A brisk winter-morning hike along Chulgiri\'s rocky ridgeline, known for its Jain temple at the summit and uninterrupted views across Jaipur.' },
+  '5. gad ganesh with apoo': { date: 'October 2023', shortDate: 'Oct 2023', location: 'Gad Ganesh Temple, Jaipur', title: 'Gad Ganesh Trail Walk', desc: 'A return to Gad Ganesh in the cool of autumn - crisp air, golden-hour light on the hillside, and the quiet satisfaction of reaching the top.' },
+  '6. gad ganesh with mom': { date: 'April 2024', shortDate: 'Apr 2024', location: 'Gad Ganesh Temple, Jaipur', title: 'Gad Ganesh Temple Trek', desc: 'A meaningful sunrise trek shared with my mother - up the Aravalli hillside to an ancient temple, a quiet hour together before the day began.' },
   '7. dence forest': { date: 'August 2023', shortDate: 'Aug 2023', location: 'Aravalli Forest, Jaipur', title: 'Dense Forest Trail', desc: 'A monsoon-season walk through lush Aravalli greenery - mist on the ridgeline, birdsong replacing the city noise, and the trail entirely to ourselves.' },
   '8. Jal mahal': { date: 'August 2023', shortDate: 'Aug 2023', location: 'Jal Mahal, Jaipur', title: 'Jal Mahal', desc: 'A morning walk by Man Sagar Lake - still water, the floating palace at first light, and the Aravalli hills reflected on the surface.' },
   '9. amer': { date: 'March 2024', shortDate: 'Mar 2024', location: 'Amer, Jaipur', title: 'Amer', desc: 'A pre-dawn hike up the Aravalli ridge above Amer Fort, rewarded with a golden sunrise over ancient battlements and the valley below.' },
-  '10. samod with mom': { date: 'April 2023', shortDate: 'Apr 2023', location: 'Samod, Rajasthan', title: 'Samod with Mom', desc: 'A quiet spring morning on the trails above Samod - wildflowers, clean air, and a peaceful hour shared before the day began.' },
+  '10. samod with mom': { date: 'April 2023', shortDate: 'Apr 2023', location: 'Samod, Rajasthan', title: 'Samod Trail Walk', desc: 'A quiet spring morning on the trails above Samod - wildflowers, clean air, and a peaceful hour shared before the day began.' },
   '11. girjadevi temple and tracking': { date: 'May 2026', shortDate: 'May 2026', location: 'Girja Devi Temple Trail', title: 'Girja Devi Temple Trekking', desc: 'A temple trail that blends devotion, movement, and the quiet pleasure of walking through a landscape that slowly opens with every step.' }
 };
 
@@ -1157,7 +1162,7 @@ function trekFolderNumber(name, index) {
 }
 
 function trekFallbackMeta(name) {
-  return TREK_META[name] || {
+  return TREK_META[name] || TREK_META[String(name || '').toLowerCase()] || {
     date: 'Date: recent trek',
     shortDate: 'Trek',
     location: 'Trekking trail',
@@ -1392,6 +1397,17 @@ $(document).ready(function(){
     }, 280);
   }
 
+  function openSliderGallery(btn) {
+    var wrap = btn.closest('.gal-slider-wrap');
+    var cardBody = btn.closest('.conf-card-body');
+    var first = wrap && wrap.querySelector('a.gal-item');
+    if (first) first.click();
+    else if (cardBody) {
+      var fallback = cardBody.querySelector('a.gal-item');
+      if (fallback) fallback.click();
+    }
+  }
+
   function switchTab(id, btn) {
     document.querySelectorAll('.hobby-section').forEach(function(s) { s.classList.remove('active'); });
     document.querySelectorAll('.hobby-tab-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -1457,9 +1473,12 @@ $(document).ready(function(){
     var head = document.createElement('div');
     head.className = 'gal-slider-header';
 
-    var count = document.createElement('span');
+    var count = document.createElement('button');
+    count.type = 'button';
     count.className = 'gal-slider-counter';
-    count.textContent = items.length + (items.length === 1 ? ' more photo' : ' more photos');
+    count.classList.add('gal-gallery-cta');
+    count.setAttribute('aria-label', 'View all photos in this gallery');
+    count.textContent = 'View Gallery';
 
     var nav = document.createElement('div');
     nav.className = 'gal-slider-nav';
@@ -1467,11 +1486,13 @@ $(document).ready(function(){
     var prev = document.createElement('button');
     prev.type = 'button';
     prev.className = 'gal-nav-btn';
+    prev.setAttribute('aria-label', 'Previous gallery photos');
     prev.innerHTML = '<i class="fa fa-chevron-left"></i>';
 
     var next = document.createElement('button');
     next.type = 'button';
     next.className = 'gal-nav-btn';
+    next.setAttribute('aria-label', 'Next gallery photos');
     next.innerHTML = '<i class="fa fa-chevron-right"></i>';
 
     nav.appendChild(prev);
@@ -1499,6 +1520,11 @@ $(document).ready(function(){
     slider.appendChild(viewport);
     slider.appendChild(progress);
     slider.appendChild(foot);
+
+    count.addEventListener('click', function() {
+      var first = track.querySelector('a.gal-item');
+      if (first) first.click();
+    });
 
     var updateSlider = function() {
       var maxScroll = Math.max(0, viewport.scrollWidth - viewport.clientWidth);

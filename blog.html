@@ -384,7 +384,7 @@
           <div class="feat-card-body">
             <span class="feat-badge academics"><i class="fa fa-graduation-cap"></i> Academics</span>
             <h3 class="feat-card-title">Leadership, Conferences, Workshops &amp; Research</h3>
-            <p class="feat-card-excerpt"><span data-academic-summary-count="conferences">0</span> conferences, <span data-academic-summary-count="workshops">0</span> workshops, talks, faculty visits, hackathons and more - a decade of academic milestones.</p>
+            <p class="feat-card-excerpt"><span data-academic-summary-count="conferences">20</span> conferences, <span data-academic-summary-count="workshops">14</span> workshops, talks, faculty visits, hackathons and more - a decade of academic milestones.</p>
             <span class="feat-visit-btn">Visit Academics <i class="fa fa-arrow-right"></i></span>
           </div>
         </a>
@@ -450,8 +450,8 @@
               <p class="archive-copy">Search across the complete collection, narrow by category or tag, then open the detailed gallery page for the full story.</p>
             </div>
             <div class="archive-count">
-              <strong id="visible-post-count"></strong>
-              <span id="visible-post-label">Posts matched</span>
+              <strong id="visible-post-count">0 / 0</strong>
+              <span id="visible-post-label">Posts</span>
             </div>
           </div>
 
@@ -499,11 +499,11 @@
         <!-- Empty state -->
         <div id="no-posts" style="display:none;text-align:center;padding:40px 0;">
           <i class="fa fa-inbox" style="font-size:2.5rem;color:#c8d4f7;margin-bottom:12px;display:block;"></i>
-          <p style="color:#aaa;font-size:.9rem;">No matching posts found. Try another category, tag, or search term.</p>
+          <p style="color:#aaa;font-size:.9rem;">No posts match the current category, tag, or search term.</p>
         </div>
 
         <div class="archive-footer">
-          <button type="button" id="show-more-posts" class="show-more-btn">Show More Posts</button>
+          <button type="button" id="show-more-posts" class="show-more-btn" hidden>Load More Posts</button>
         </div>
 
       </div><!-- /col-lg-8 -->
@@ -816,7 +816,7 @@
     var more = document.getElementById('show-more-posts');
     if (more) {
       more.hidden = !matched.length || visible.length >= matched.length;
-      more.textContent = 'Show More Posts' + (visible.length < matched.length ? ' (' + (matched.length - visible.length) + ')' : '');
+      more.textContent = 'Load More Posts' + (visible.length < matched.length ? ' (' + (matched.length - visible.length) + ')' : '');
     }
     if (window.FirebaseBlog && typeof window.FirebaseBlog.refresh === 'function') {
       window.FirebaseBlog.refresh();
@@ -827,7 +827,7 @@
     var count = document.getElementById('visible-post-count');
     var label = document.getElementById('visible-post-label');
     if (count) count.textContent = shown + ' / ' + total;
-    if (label) label.textContent = total === 1 ? 'Post matched' : 'Posts matched';
+    if (label) label.textContent = total === 1 ? 'Post' : 'Posts';
   }
 
   function filterPosts(cat, btn, updateHash) {

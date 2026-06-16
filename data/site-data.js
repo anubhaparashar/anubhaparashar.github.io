@@ -1486,17 +1486,31 @@ var SITE_POSTS = [
 
   function renderAcademicCountsFromUrl(url, root) {
     root = root || document;
-    if (!global.fetch || typeof global.DOMParser === 'undefined') return Promise.resolve(null);
+    var fallbackCounts = {
+      academics: 74,
+      leadership: 3,
+      conferences: 20,
+      workshops: 14,
+      talks: 9,
+      'faculty-visits': 6,
+      events: 6,
+      hackathon: 3,
+      'social-activities': 13
+    };
+    applyAcademicCounts(fallbackCounts, root);
+    if (!global.fetch || typeof global.DOMParser === 'undefined') return Promise.resolve(fallbackCounts);
     return global.fetch(url || 'academics.html', { cache: 'no-cache' })
       .then(function(response) { return response.ok ? response.text() : ''; })
       .then(function(html) {
-        if (!html) return null;
+        if (!html) return fallbackCounts;
         var doc = new DOMParser().parseFromString(html, 'text/html');
         var counts = countAcademicCards(doc);
+        if (!counts.conferences) counts.conferences = fallbackCounts.conferences;
+        if (!counts.workshops) counts.workshops = fallbackCounts.workshops;
         applyAcademicCounts(counts, root);
         return counts;
       })
-      .catch(function() { return null; });
+      .catch(function() { return fallbackCounts; });
   }
 
   function renderAcademicQuickStats(root) {
