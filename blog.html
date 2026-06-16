@@ -574,89 +574,8 @@
           <!-- Categories -->
           <aside class="single_sidebar_widget post_category_widget">
             <h4 class="widget_title">Blog Sections</h4>
-            <style>
-              .cat-group { margin-bottom:6px; }
-              .cat-group-header { display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #eef0ff; }
-              .cat-group-header a { font-weight:800; font-size:.86rem; color:#0f3460; text-decoration:none; display:flex; align-items:center; gap:6px; }
-              .cat-group-header a:hover { color:#7eb8e0; }
-              .cat-group-header .cat-total { font-size:.72rem; font-weight:700; color:#fff; background:#0f3460; padding:2px 8px; border-radius:12px; }
-              .cat-sub { list-style:none; padding:0; margin:0 0 6px 18px; }
-              .cat-sub li { display:flex; justify-content:space-between; padding:5px 0; border-bottom:1px solid #f5f5ff; font-size:.78rem; }
-              .cat-sub li a { color:#555; text-decoration:none; transition:color .2s; }
-              .cat-sub li a:hover { color:#7eb8e0; }
-              .cat-sub li span { color:#aaa; font-weight:700; font-size:.72rem; }
-            </style>
-
-            <!-- Academics -->
-            <div class="cat-group">
-              <div class="cat-group-header">
-                <a href="academics.html"><i class="fa fa-graduation-cap" style="color:#7eb8e0;"></i> Academics</a>
-                <span class="cat-total" id="cat-count-academics"></span>
-              </div>
-              <ul class="cat-sub">
-                <li><a href="academics.html#acad-leadership">Leadership</a><span data-subcategory-count="leadership" data-count-for="leadership"></span></li>
-                <li><a href="academics.html#acad-conferences">Conferences</a><span data-subcategory-count="conferences" data-count-for="conferences"></span></li>
-                <li><a href="academics.html#acad-workshops">Workshops</a><span data-subcategory-count="workshops" data-count-for="workshops"></span></li>
-                <li><a href="academics.html#acad-experttalks">Talks</a><span data-subcategory-count="experttalks" data-count-for="talks"></span></li>
-                <li><a href="academics.html#acad-facultyvisits">Faculty Visits</a><span data-subcategory-count="facultyvisits" data-count-for="faculty-visits"></span></li>
-                <li><a href="academics.html#acad-events">Events</a><span data-subcategory-count="events" data-count-for="events"></span></li>
-                <li><a href="academics.html#acad-hackathon">Hackathon</a><span data-subcategory-count="hackathon" data-count-for="hackathon"></span></li>
-                <li><a href="academics.html#acad-social">Social Activities</a><span data-subcategory-count="social" data-count-for="social-activities"></span></li>
-              </ul>
-            </div>
-
-            <!-- Social Life -->
-            <div class="cat-group">
-              <div class="cat-group-header">
-                <a href="social-life.html"><i class="fa fa-users" style="color:#f0a500;"></i> Social Life</a>
-                <span class="cat-total" id="cat-count-social" style="background:#b87c00;"></span>
-              </div>
-              <ul class="cat-sub">
-                <li><a href="social-life.html#connection-overview">Social Life Highlights</a><span>6 posts</span></li>
-                <li><a href="social-life.html#sg-02">Conference Outing</a><span>10 photos</span></li>
-                <li><a href="social-life.html#sg-01">MUJ SSIC Event</a><span>24 photos</span></li>
-              </ul>
-            </div>
-
-            <!-- Sports -->
-            <div class="cat-group">
-              <div class="cat-group-header">
-                <a href="sports.html"><i class="fa fa-heartbeat" style="color:#50c878;"></i> Sports &amp; Wellness</a>
-                <span class="cat-total" id="cat-count-sports" style="background:#2d8a50;"></span>
-              </div>
-              <ul class="cat-sub">
-                <li><a href="sports.html#sports-post-29">College Sports Day</a><span>1</span></li>
-                <li><a href="sports.html#sports-post-30">Cricket Match Win</a><span>1</span></li>
-              </ul>
-            </div>
-
-            <!-- Avocations -->
-            <div class="cat-group">
-              <div class="cat-group-header">
-                <a href="avocations.html"><i class="fa fa-paint-brush" style="color:#c084fc;"></i> Avocations</a>
-                <span class="cat-total" id="cat-count-avocations" style="background:#7c3aed;"></span>
-              </div>
-              <ul class="cat-sub">
-                <li><a href="avocations.html#tab-trekking"><i class="fa fa-tree" style="color:#c084fc;margin-right:5px;"></i>Trekking</a><span></span></li>
-                <li><a href="avocations.html#tab-painting"><i class="fa fa-paint-brush" style="color:#c084fc;margin-right:5px;"></i>Painting</a><span></span></li>
-                <li><a href="avocations.html#tab-origami"><i class="fa fa-star" style="color:#c084fc;margin-right:5px;"></i>Origami</a><span></span></li>
-                <li><a href="avocations.html#tab-magic"><i class="fa fa-magic" style="color:#c084fc;margin-right:5px;"></i>Magic Tricks</a><span></span></li>
-              </ul>
-            </div>
-
-            <div class="cat-group">
-              <div class="cat-group-header">
-                <a href="publication.html"><i class="fa fa-book" style="color:#0f3460;"></i> Publications</a>
-                <span class="cat-total" data-section-count="publications" style="background:#0f3460;"></span>
-              </div>
-            </div>
-
-            <div class="cat-group">
-              <div class="cat-group-header">
-                <a href="project.html"><i class="fa fa-cogs" style="color:#0f3460;"></i> Projects</a>
-                <span class="cat-total" data-section-count="projects" style="background:#0f3460;"></span>
-              </div>
-            </div>
+            <div class="blog-sections-widget" data-blog-sections></div>
+            <div class="br"></div>
           </aside>
 
           <!-- Tags — auto-generated from post data-tags attributes -->
@@ -1060,6 +979,7 @@
     });
   })();
 </script>
+<script src="js/blog-section-counts.js"></script>
 <script type="module" src="assets/js/firebase-blog.js"></script>
 <script src="assets/js/auto-folder-gallery.js"></script>
 </body>

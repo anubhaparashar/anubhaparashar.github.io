@@ -393,7 +393,7 @@
           </div>
 
           <!-- 1. MUJ SSIC -->
-          <div class="conf-card" id="sg-01">
+          <div class="conf-card" data-blog-post data-blog-section="social-life" id="sg-01">
             <div class="conf-card-header">
               <h3><span class="conf-num">01</span>MUJ SSIC Event</h3>
               <div class="conf-meta">
@@ -421,7 +421,7 @@
           </div>
 
           <!-- 2. ICICV conference outing -->
-          <div class="conf-card" id="sg-02">
+          <div class="conf-card" data-blog-post data-blog-section="social-life" id="sg-02">
             <div class="conf-card-header">
               <h3><span class="conf-num">02</span>ICICV Conference Outing</h3>
               <div class="conf-meta">
@@ -456,7 +456,7 @@
           </div>
 
           <!-- Memories -->
-          <div class="conf-card" id="memories-post">
+          <div class="conf-card" data-blog-post data-blog-section="social-life" id="memories-post">
             <div class="conf-card-header">
               <h3><span class="conf-num">03</span>Memories</h3>
               <div class="conf-meta">
@@ -478,7 +478,7 @@
           </div>
 
           <!-- PhD Defence -->
-          <div class="conf-card" id="phd-defence">
+          <div class="conf-card" data-blog-post data-blog-section="social-life" id="phd-defence">
             <div class="conf-card-header">
               <h3><span class="conf-num">04</span>PhD Defence</h3>
               <div class="conf-meta">
@@ -511,7 +511,7 @@
           </div>
 
           <!-- PhD Convocation -->
-          <div class="conf-card" id="phd-convocation">
+          <div class="conf-card" data-blog-post data-blog-section="social-life" id="phd-convocation">
             <div class="conf-card-header">
               <h3><span class="conf-num">05</span>PhD Convocation</h3>
               <div class="conf-meta">
@@ -566,7 +566,7 @@
           </div>
 
           <!-- Happy Birthday Mom -->
-          <div class="conf-card mom-birthday-post" id="mom-birthday" data-blog-post-id="mom-birthday" data-photo-taken-on="May 19, 2026">
+          <div class="conf-card mom-birthday-post" data-blog-post data-blog-section="social-life" id="mom-birthday" data-blog-post-id="mom-birthday" data-photo-taken-on="May 19, 2026">
             <div class="conf-card-header">
               <h3><span class="conf-num">06</span>Happy Birthday to Our Beautiful Mom <span style="color:#d6a235;">&hearts;</span></h3>
               <div class="conf-meta">
@@ -854,14 +854,7 @@
 
           <aside class="single_sidebar_widget post_category_widget">
             <h4 class="widget_title">Blog Sections</h4>
-            <ul class="list cat-list">
-              <li><a href="academics.html" class="d-flex justify-content-between"><p>Academics</p><p>65</p></a></li>
-              <li><a href="social-life.html" class="d-flex justify-content-between"><p>Social Life</p><p>6</p></a></li>
-              <li><a href="avocations.html" class="d-flex justify-content-between"><p>Avocations</p><p>14</p></a></li>
-              <li><a href="sports.html" class="d-flex justify-content-between"><p>Sports &amp; Wellness</p><p>1</p></a></li>
-              <li><a href="publication.html" class="d-flex justify-content-between"><p>Publications</p><p>1</p></a></li>
-              <li><a href="project.html" class="d-flex justify-content-between"><p>Projects</p><p>1</p></a></li>
-            </ul>
+            <div class="blog-sections-widget" data-blog-sections></div>
             <div class="br"></div>
           </aside>
 
@@ -1133,6 +1126,7 @@
   })();
 </script>
 <script type="module" src="assets/js/firebase-blog.js"></script>
+<script src="js/blog-section-counts.js"></script>
 <script src="assets/js/auto-folder-gallery.js"></script>
 </body>
 </html>

@@ -412,7 +412,7 @@
       <div class="section-title-bar"></div>
     </div>
 
-    <div class="hobby-card">
+    <div class="hobby-card" data-blog-post data-blog-section="avocations">
       <div class="hobby-card-icon"><i class="fa fa-tree"></i></div>
       <h3>Hitting the Trail</h3>
       <p>
@@ -435,7 +435,7 @@
     <div class="row">
       <div class="col-lg-8">
 
-    <div class="conf-card" id="trek-1">
+    <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-1">
       <div class="conf-card-header">
         <h3><span class="conf-num">01</span>Gad Ganesh with Minki</h3>
         <div class="conf-meta">
@@ -470,7 +470,7 @@
       </div>
     </div>
 
-    <div class="conf-card" id="trek-2">
+    <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-2">
       <div class="conf-card-header">
         <h3><span class="conf-num">02</span>Jal Mahal with Yash</h3>
         <div class="conf-meta">
@@ -503,7 +503,7 @@
       </div>
     </div>
 
-    <div class="conf-card" id="trek-3">
+    <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-3">
       <div class="conf-card-header">
         <h3><span class="conf-num">03</span>Samod with Minki</h3>
         <div class="conf-meta">
@@ -538,7 +538,7 @@
       </div>
     </div>
 
-    <div class="conf-card" id="trek-4">
+    <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-4">
       <div class="conf-card-header">
         <h3><span class="conf-num">04</span>Chulgiri with Minki</h3>
         <div class="conf-meta">
@@ -574,7 +574,7 @@
       </div>
     </div>
 
-    <div class="conf-card" id="trek-5">
+    <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-5">
       <div class="conf-card-header">
         <h3><span class="conf-num">05</span>Gad Ganesh with Apoo</h3>
         <div class="conf-meta">
@@ -604,7 +604,7 @@
       </div>
     </div>
 
-    <div class="conf-card" id="trek-6">
+    <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-6">
       <div class="conf-card-header">
         <h3><span class="conf-num">06</span>Gad Ganesh with Mom</h3>
         <div class="conf-meta">
@@ -635,7 +635,7 @@
       </div>
     </div>
 
-    <div class="conf-card" id="trek-7">
+    <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-7">
       <div class="conf-card-header">
         <h3><span class="conf-num">07</span>Dense Forest Trail</h3>
         <div class="conf-meta">
@@ -668,7 +668,7 @@
       </div>
     </div>
 
-    <div class="conf-card" id="trek-8">
+    <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-8">
       <div class="conf-card-header">
         <h3><span class="conf-num">08</span>Jal Mahal</h3>
         <div class="conf-meta">
@@ -700,7 +700,7 @@
       </div>
     </div>
 
-    <div class="conf-card" id="trek-9">
+    <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-9">
       <div class="conf-card-header">
         <h3><span class="conf-num">09</span>Amer</h3>
         <div class="conf-meta">
@@ -731,7 +731,7 @@
       </div>
     </div>
 
-    <div class="conf-card" id="trek-10">
+    <div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-10">
       <div class="conf-card-header">
         <h3><span class="conf-num">10</span>Samod with Mom</h3>
         <div class="conf-meta">
@@ -822,7 +822,7 @@
       <div class="section-title-bar"></div>
     </div>
 
-    <div class="hobby-card" data-blog-post-id="painting-drawing" data-photo-taken-on="May 16, 2026">
+    <div class="hobby-card" data-blog-post data-blog-section="avocations" data-blog-post-id="painting-drawing" data-photo-taken-on="May 16, 2026">
       <div class="hobby-card-icon"><i class="fa fa-paint-brush"></i></div>
       <h3>Painting &amp; Drawing: The Quiet Space Where Imagination Learnt Discipline</h3>
       <p>
@@ -1003,7 +1003,7 @@
       <div class="section-title-bar"></div>
     </div>
 
-    <div class="hobby-card">
+    <div class="hobby-card" data-blog-post data-blog-section="avocations">
       <div class="hobby-card-icon"><i class="fa fa-star"></i></div>
       <h3>The Art of the Fold</h3>
       <p>
@@ -1035,7 +1035,7 @@
       <div class="section-title-bar"></div>
     </div>
 
-    <div class="hobby-card">
+    <div class="hobby-card" data-blog-post data-blog-section="avocations">
       <div class="hobby-card-icon"><i class="fa fa-magic"></i></div>
       <h3>Sleight of Hand</h3>
       <p>
@@ -1279,7 +1279,7 @@ function renderTrekCard(folder, index) {
       }).join('') +
     '</div>' : '';
   return '' +
-    '<div class="conf-card" id="trek-' + trekFolderNumber(folder.name, index) + '">' +
+    '<div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-' + trekFolderNumber(folder.name, index) + '">' +
       '<div class="conf-card-header">' +
         '<h3><span class="conf-num">' + number + '</span>' + avocEscape(meta.title) + '</h3>' +
         '<div class="conf-meta">' +
@@ -1649,5 +1649,6 @@ if (location.protocol !== 'file:') {
   document.body.appendChild(autoFolderGalleryScript);
 }
 </script>
+<script src="js/blog-section-counts.js"></script>
 </body>
 </html>

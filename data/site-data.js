@@ -79,7 +79,7 @@ var SITE_POSTS = [
     title:   'Conference Outing',
     excerpt: 'Team bonding and networking at an international conference — building connections that go beyond research and the lab.',
     link:    'social-life.html#sg-02',
-    badge:   'Connections'
+    badge:   'Social Life'
   },
   {
     id:      'post-muj-ssic',
@@ -91,7 +91,7 @@ var SITE_POSTS = [
     title:   'MUJ SSIC Event',
     excerpt: 'Facilitated the Student Symposium on Intelligent Computing at MUJ — fostering a strong student research culture.',
     link:    'social-life.html#sg-01',
-    badge:   'Connections'
+    badge:   'Social Life'
   },
 
   /* ── ACADEMICS — CONFERENCES ────────────────────────── */
