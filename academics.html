@@ -583,15 +583,15 @@
             <input id="academic-search" class="academic-search" type="search" placeholder="Search academics, conferences, workshops, talks..." aria-label="Search academic records">
           </div>
           <div class="academic-filter-row" aria-label="Filter academic archive">
-            <button type="button" class="academic-filter active" data-filter="all">All <span data-count-for="all">0</span></button>
-            <button type="button" class="academic-filter" data-filter="leadership">Leadership <span data-count-for="leadership">0</span></button>
-            <button type="button" class="academic-filter" data-filter="conferences">Conferences <span data-count-for="conferences">0</span></button>
-            <button type="button" class="academic-filter" data-filter="workshops">Workshops <span data-count-for="workshops">0</span></button>
-            <button type="button" class="academic-filter" data-filter="talks">Talks <span data-count-for="talks">0</span></button>
-            <button type="button" class="academic-filter" data-filter="faculty-visits">Faculty Visits <span data-count-for="faculty-visits">0</span></button>
-            <button type="button" class="academic-filter" data-filter="events">Events <span data-count-for="events">0</span></button>
-            <button type="button" class="academic-filter" data-filter="hackathon">Hackathon <span data-count-for="hackathon">0</span></button>
-            <button type="button" class="academic-filter" data-filter="social-activities">Social Activities <span data-count-for="social-activities">0</span></button>
+            <button type="button" class="academic-filter active" data-filter="all">All <span data-count-for="all">…</span></button>
+            <button type="button" class="academic-filter" data-filter="leadership">Leadership <span data-count-for="leadership">…</span></button>
+            <button type="button" class="academic-filter" data-filter="conferences">Conferences <span data-count-for="conferences">…</span></button>
+            <button type="button" class="academic-filter" data-filter="workshops">Workshops <span data-count-for="workshops">…</span></button>
+            <button type="button" class="academic-filter" data-filter="talks">Talks <span data-count-for="talks">…</span></button>
+            <button type="button" class="academic-filter" data-filter="faculty-visits">Faculty Visits <span data-count-for="faculty-visits">…</span></button>
+            <button type="button" class="academic-filter" data-filter="events">Events <span data-count-for="events">…</span></button>
+            <button type="button" class="academic-filter" data-filter="hackathon">Hackathon <span data-count-for="hackathon">…</span></button>
+            <button type="button" class="academic-filter" data-filter="social-activities">Social Activities <span data-count-for="social-activities">…</span></button>
           </div>
         </div>
 
@@ -3291,7 +3291,7 @@
       applyFilters();
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
+    function initAcademicArchive() {
       enhanceCards();
       renderCounts();
 
@@ -3314,7 +3314,13 @@
       window.addEventListener('hashchange', function() {
         setFilter(filterFromHash(location.hash), false);
       });
-    });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAcademicArchive);
+    } else {
+      initAcademicArchive();
+    }
   })();
 </script>
 <script src="js/blog-section-counts.js"></script>

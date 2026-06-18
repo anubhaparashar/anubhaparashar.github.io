@@ -1247,7 +1247,7 @@
 
     <div class="pub-card award" data-year="2018" data-publication-item data-publication-type="conferences" data-blog-post data-blog-section="publications">
       <div class="pub-num">11</div>
-      <a class="pub-post-photo" href="academics.html#c-coratia" target="_blank" rel="noopener" title="Open Croatia conference post">
+      <a class="pub-post-photo" href="academics.html#c-croatia" target="_blank" rel="noopener" title="Open Croatia conference post">
         <img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/Coratia Conference/20180906_103004.jpg" alt="Croatia 2018 conference photo">
       </a>
       <div class="pub-body">
@@ -1891,10 +1891,32 @@
   }
 
   /* ── Init ── */
-  document.addEventListener('DOMContentLoaded', function () {
+  function initPublicationArchive() {
     if (window.SiteData && typeof window.SiteData.renderSiteStats === 'function') {
       window.SiteData.renderSiteStats();
     }
+
+    var publicationTypes = {
+      patents: 'patents',
+      journals: 'journals',
+      conferences: 'conferences',
+      bookchapters: 'book-chapters',
+      articles: 'articles',
+      presentations: 'presentations',
+      posters: 'posters'
+    };
+    var totalRecords = 0;
+    Object.keys(publicationTypes).forEach(function(statKey) {
+      var count = document.querySelectorAll('[data-publication-type="' + publicationTypes[statKey] + '"]').length;
+      totalRecords += count;
+      document.querySelectorAll('[data-site-stat="publicationTypes.' + statKey + '"]').forEach(function(node) {
+        node.textContent = count;
+      });
+    });
+    document.querySelectorAll('[data-site-stat="publicationTypes.total"]').forEach(function(node) {
+      node.textContent = totalRecords;
+      node.setAttribute('data-suffix', '');
+    });
 
     /* Animated counters */
     setTimeout(function () {
@@ -1933,7 +1955,13 @@
       });
     });
 
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPublicationArchive);
+  } else {
+    initPublicationArchive();
+  }
 
 })();
 </script>

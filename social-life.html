@@ -250,6 +250,17 @@
       background:linear-gradient(135deg,#fffaf0,#fff); border:1px solid #f2dfb8;
       border-radius:16px; padding:28px; margin-bottom:24px;
     }
+    .mom-letter.is-collapsed { max-height:560px; overflow:hidden; position:relative; margin-bottom:10px; }
+    .mom-letter.is-collapsed::after {
+      content:""; position:absolute; left:0; right:0; bottom:0; height:110px;
+      background:linear-gradient(transparent,#fffaf0); pointer-events:none;
+    }
+    .mom-letter-toggle {
+      display:block; margin:0 auto 24px; border:1px solid #d6a235; border-radius:999px;
+      background:#fffaf0; color:#7a4a05; padding:9px 18px; font-size:.8rem; font-weight:800;
+      cursor:pointer;
+    }
+    .mom-letter-toggle:hover { background:#fff4d8; }
     .mom-letter p { color:#4b3b2a; margin-bottom:16px; }
     .mom-letter p:last-child { margin-bottom:0; }
     .mom-letter .lead-love {
@@ -588,7 +599,7 @@
                 </a>
               </div>
 
-              <div class="mom-letter">
+              <div class="mom-letter is-collapsed" id="mom-letter-content">
                 <p class="lead-love">Today is not just another day. Today is the birthday of the most beautiful woman in our lives &mdash; our mother, our strength, our blessing, our first home, and our forever safe place.</p>
 
                 <p>Mom, when we look at you, we see beauty in its purest form. Not only the beauty of your face, your smile, and your presence, but the beauty of your heart, your soul, your patience, your sacrifices, and your unconditional love. You have given so much of yourself to us that no words will ever be enough to thank you. You have loved us silently, supported us endlessly, and stood by us through every season of life.</p>
@@ -807,6 +818,7 @@
                 <a href="social-life.html#mom-birthday"><h3>Happy Birthday to My Beautiful Mom</h3></a>
                 <p>19 May, 2026</p>
               </div>
+              <button class="mom-letter-toggle" type="button" aria-expanded="false" aria-controls="mom-letter-content">Read full message</button>
             </div>
             <div class="media post_item">
               <img src="files/8. Blog/2. Connection/2. Memories/20260516_161721.jpg" alt="Memories">
@@ -979,6 +991,19 @@
     openHashTarget();
     window.addEventListener('load', openHashTarget);
     window.addEventListener('hashchange', openHashTarget);
+  })();
+
+  (function() {
+    var letter = document.getElementById('mom-letter-content');
+    var toggle = document.querySelector('.mom-letter-toggle');
+    if (!letter || !toggle) return;
+    toggle.addEventListener('click', function() {
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      toggle.textContent = expanded ? 'Read full message' : 'Show less';
+      letter.classList.toggle('is-collapsed', expanded);
+      if (expanded) letter.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   })();
 
   document.querySelectorAll('.popular_post_widget .post_item').forEach(function(item) {

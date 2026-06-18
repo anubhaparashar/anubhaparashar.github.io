@@ -465,7 +465,7 @@
               <button type="button" class="view-btn active" data-view="grid" title="Grid view"><i class="fa fa-th-large"></i></button>
               <button type="button" class="view-btn" data-view="list" title="List view"><i class="fa fa-list"></i></button>
             </div>
-            <div class="archive-count" id="archive-status" role="status" aria-live="polite">Archive · 0 posts</div>
+            <div class="archive-count" id="archive-status" role="status" aria-live="polite">Loading archive…</div>
           </div>
 
           <!-- Filter bar -->
@@ -767,12 +767,6 @@
 
   function mergeDiscoveredPosts(posts) {
     if (typeof SITE_POSTS === 'undefined') window.SITE_POSTS = [];
-    if (posts.length) {
-      SITE_POSTS = posts;
-      window.SITE_POSTS = SITE_POSTS;
-      refreshBlogTotals();
-      return;
-    }
     var seen = {};
     var counts = {};
     SITE_POSTS.forEach(function(post) {
@@ -788,6 +782,7 @@
         counts[post.cat] = (counts[post.cat] || 0) + 1;
       }
     });
+    window.SITE_POSTS = SITE_POSTS;
     refreshBlogTotals();
   }
 

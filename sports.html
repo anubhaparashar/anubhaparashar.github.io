@@ -341,7 +341,7 @@
             </p>
             <div class="sports-stats-strip">
               <div class="sports-stat"><strong>3</strong><span>Levels</span></div>
-              <div class="sports-stat"><strong data-blog-count-for="sports-wellness">0</strong><span>Posts</span></div>
+              <div class="sports-stat"><strong data-blog-count-for="sports-wellness">…</strong><span>Posts</span></div>
               <div class="sports-stat"><strong>3</strong><span>Categories</span></div>
             </div>
           </div>
@@ -940,6 +940,14 @@ $(function(){
 });
 </script>
 <script src="js/blog-section-counts.js"></script>
+<script>
+(function() {
+  var count = document.querySelectorAll('[data-blog-post][data-blog-section="sports-wellness"]').length;
+  document.querySelectorAll('[data-blog-count-for="sports-wellness"]').forEach(function(node) {
+    node.textContent = count;
+  });
+})();
+</script>
 <script src="assets/js/auto-folder-gallery.js"></script>
 </body>
 </html>
