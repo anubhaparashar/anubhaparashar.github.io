@@ -883,19 +883,20 @@ function ensureFirebaseBlogElements() {
 }
 
 const IS_BLOG_INDEX = isBlogIndexPage();
+const DISABLE_POST_STATS = document.body?.hasAttribute("data-disable-blog-post-stats") || false;
 const POST_ID = IS_BLOG_INDEX ? "" : getCurrentPostId();
 const visitorId = IS_BLOG_INDEX ? "" : getVisitorId();
-const HAS_POST_STAT_ELEMENTS = !IS_BLOG_INDEX && findPostStatElements().length > 0;
+const HAS_POST_STAT_ELEMENTS = !IS_BLOG_INDEX && !DISABLE_POST_STATS && findPostStatElements().length > 0;
 
 if (IS_BLOG_INDEX) {
   hydrateBlogIndex();
 } else if (HAS_POST_STAT_ELEMENTS) {
   hydratePostStats();
-} else {
+} else if (!DISABLE_POST_STATS) {
   ensureFirebaseBlogElements();
 }
 
-if (!IS_BLOG_INDEX) {
+if (!IS_BLOG_INDEX && !DISABLE_POST_STATS) {
   window.addEventListener("autoFolderGalleriesUpdated", () => {
     hydratePostStats();
   });

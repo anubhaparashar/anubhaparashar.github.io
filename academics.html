@@ -1533,10 +1533,11 @@
           </div>
 
           <!-- W12 Workshop on AI -->
-          <div class="conf-card academic-card" data-academic-item data-year="2022" data-tags="workshops, workshop on artificial intelligence" data-blog-post data-blog-section="academics" data-academic-category="workshops" id="w-ai">
+          <div class="conf-card academic-card" data-academic-item data-year="2023" data-tags="workshops, workshop on artificial intelligence" data-blog-post data-blog-section="academics" data-academic-category="workshops" data-photo-taken-on="25–27 Sept 2023" id="w-ai">
             <div class="conf-card-header">
               <h3><span class="conf-num">12</span>Workshop on Artificial Intelligence</h3>
               <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>25–27 Sept 2023</span>
                 <span><i class="fa fa-image"></i>9 Photos</span>
               </div>
             </div>
@@ -2568,11 +2569,11 @@
             </div>
           </div>
           <!-- SOC 12 Donation Drive -->
-          <div class="conf-card academic-card" data-academic-item data-year="" data-tags="social-activities, donation drive" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-donation">
+          <div class="conf-card academic-card" data-academic-item data-year="1999" data-tags="social-activities, donation drive" data-blog-post data-blog-section="academics" data-academic-category="social-activities" data-photo-taken-on="1999" id="soc-donation">
             <div class="conf-card-header">
               <h3><span class="conf-num">12</span>Donation Drive</h3>
               <div class="conf-meta">
-                <span><i class="fa fa-calendar"></i>Class III</span>
+                <span><i class="fa fa-calendar"></i>1999</span>
                 <span><i class="fa fa-image"></i>1 Photo</span>
               </div>
             </div>
@@ -2584,11 +2585,11 @@
             </div>
           </div>
           <!-- SOC 13 Donation Drive Memories -->
-          <div class="conf-card academic-card" data-academic-item data-year="2026" data-tags="social-activities, donation drive memories" data-blog-post data-blog-section="academics" data-academic-category="social-activities" id="soc-donation-copy">
+          <div class="conf-card academic-card" data-academic-item data-year="1998" data-tags="social-activities, donation drive memories" data-blog-post data-blog-section="academics" data-academic-category="social-activities" data-photo-taken-on="1998" id="soc-donation-copy">
             <div class="conf-card-header">
               <h3><span class="conf-num">13</span>Donation Drive Memories</h3>
               <div class="conf-meta">
-                <span><i class="fa fa-calendar"></i>May 2026</span>
+                <span><i class="fa fa-calendar"></i>1998</span>
                 <span><i class="fa fa-image"></i>1 Photo</span>
               </div>
             </div>
@@ -2657,7 +2658,7 @@
               <li><a href="#w-oracle">Oracle Workshop <span class="toc-year">2018</span></a></li>
               <li><a href="#w-telemetry">Telemetry Workshop <span class="toc-year">2019</span></a></li>
               <li><a href="#w-deeplearn">MUJ Deep Learning FDP <span class="toc-year">2019</span></a></li>
-              <li><a href="#w-ai">Workshop on AI <span class="toc-year">2019</span></a></li>
+              <li><a href="#w-ai">Workshop on AI <span class="toc-year">2023</span></a></li>
               <li><a href="#w-gian-mnit">GIAN Course - MNIT Jaipur <span class="toc-year">2016</span></a></li>
               <li><a href="#w-gian-2018">GIAN 2018 <span class="toc-year">2018</span></a></li>
             </ul>
@@ -2730,8 +2731,8 @@
               <li><a href="#soc-clean">Cleanliness Drive <span class="toc-year">2018</span></a></li>
               <li><a href="#soc-projector">Projector Distribution <span class="toc-year">2017</span></a></li>
               <li><a href="#soc-blood16">Blood Donation Camp 2016 <span class="toc-year">2016</span></a></li>
-              <li><a href="#soc-donation">Donation Drive <span class="toc-year">Class III</span></a></li>
-              <li><a href="#soc-donation-copy">Donation Drive Memories <span class="toc-year">2026</span></a></li>
+              <li><a href="#soc-donation">Donation Drive <span class="toc-year">1999</span></a></li>
+              <li><a href="#soc-donation-copy">Donation Drive Memories <span class="toc-year">1998</span></a></li>
             </ul>
           </div>
 
@@ -3275,6 +3276,20 @@
       var card = target && target.closest('[data-academic-item]');
       return card ? card.getAttribute('data-academic-category') : 'all';
     }
+
+    document.addEventListener('site:prepare-deep-link', function(event) {
+      var target = event.detail && event.detail.target;
+      var card = target && target.closest('[data-academic-item]');
+      if (!card) return;
+
+      var category = normalizeCategory(card.getAttribute('data-academic-category'));
+      state.filter = category;
+      state.query = '';
+      state.expanded[category] = true;
+      var search = document.getElementById('academic-search');
+      if (search) search.value = '';
+      applyFilters();
+    });
 
     document.addEventListener('DOMContentLoaded', function() {
       enhanceCards();

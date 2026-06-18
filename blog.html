@@ -1003,6 +1003,7 @@
       } else if (hash && document.getElementById(hash)) {
         setTimeout(function(){ scrollToPost(hash); }, 120);
       }
+      if (window.SiteDeepLinks) window.SiteDeepLinks.reveal();
     });
   })();
 </script>

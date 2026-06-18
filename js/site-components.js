@@ -413,12 +413,100 @@
     });
   }
 
+  function initDeepLinkNavigation() {
+    var timer = null;
+    var highlightStyle = document.createElement('style');
+    highlightStyle.textContent =
+      '.site-deep-link-target{outline:3px solid rgba(126,184,224,.9);outline-offset:5px;transition:outline-color .35s ease;}' +
+      '@media (prefers-reduced-motion:reduce){.site-deep-link-target{transition:none;}}';
+    document.head.appendChild(highlightStyle);
+
+    function currentHash() {
+      try {
+        return decodeURIComponent((window.location.hash || '').replace(/^#/, ''));
+      } catch (error) {
+        return (window.location.hash || '').replace(/^#/, '');
+      }
+    }
+
+    function visibleShowMoreButton(scope, includeSectionButtons) {
+      var selector = '[data-deep-link-show-more], #show-more-posts';
+      if (includeSectionButtons) selector += ', .academic-show-more';
+      var buttons = (scope || document).querySelectorAll(
+        selector
+      );
+      return Array.from(buttons).find(function(button) {
+        return !button.hidden && button.getAttribute('aria-hidden') !== 'true' && button.getClientRects().length;
+      });
+    }
+
+    function revealHashTarget(attempt) {
+      var hash = currentHash();
+      if (!hash) return;
+
+      var target = document.getElementById(hash);
+      if (!target) {
+        var pageMore = visibleShowMoreButton(document, false);
+        if (pageMore && attempt < 20) {
+          pageMore.click();
+          timer = window.setTimeout(function() { revealHashTarget(attempt + 1); }, 80);
+        }
+        return;
+      }
+
+      document.dispatchEvent(new CustomEvent('site:prepare-deep-link', {
+        detail: { hash: hash, target: target }
+      }));
+
+      window.setTimeout(function() {
+        target = document.getElementById(hash);
+        if (!target) return;
+
+        var details = target.closest('details');
+        if (details) details.open = true;
+
+        var section = target.closest('.acad-section, .connection-section, .hobby-section, section, main');
+        var sectionMore = section && visibleShowMoreButton(section, true);
+        if ((target.classList.contains('is-hidden') || !target.getClientRects().length) && sectionMore && attempt < 20) {
+          sectionMore.click();
+          timer = window.setTimeout(function() { revealHashTarget(attempt + 1); }, 80);
+          return;
+        }
+
+        if (!target.getClientRects().length && attempt < 20) {
+          timer = window.setTimeout(function() { revealHashTarget(attempt + 1); }, 80);
+          return;
+        }
+
+        target.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'start'
+        });
+        target.classList.add('site-deep-link-target');
+        window.setTimeout(function() { target.classList.remove('site-deep-link-target'); }, 2200);
+      }, 40);
+    }
+
+    function scheduleReveal() {
+      if (timer) window.clearTimeout(timer);
+      timer = window.setTimeout(function() { revealHashTarget(0); }, 0);
+    }
+
+    scheduleReveal();
+    window.addEventListener('hashchange', scheduleReveal);
+    window.addEventListener('load', scheduleReveal);
+    window.addEventListener('autoFolderGalleriesUpdated', scheduleReveal);
+    window.addEventListener('site:content-updated', scheduleReveal);
+    window.SiteDeepLinks = { reveal: scheduleReveal };
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() { init(); initImageViewer(); initParticles(); initAccessibilityPolish(); });
+    document.addEventListener('DOMContentLoaded', function() { init(); initImageViewer(); initParticles(); initAccessibilityPolish(); initDeepLinkNavigation(); });
   } else {
     init();
     initImageViewer();
     initParticles();
     initAccessibilityPolish();
+    initDeepLinkNavigation();
   }
 })();
