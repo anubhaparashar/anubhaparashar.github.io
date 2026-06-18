@@ -175,7 +175,7 @@
         <div><span class="evt-stat-num">3</span><span class="evt-stat-lbl">Workshops<br>Organised</span></div>
         <div><span class="evt-stat-num">23</span><span class="evt-stat-lbl">Conferences<br>Organised</span></div>
         <div><span class="evt-stat-num">6</span><span class="evt-stat-lbl">Reviewer Roles</span></div>
-        <div><span class="evt-stat-num">9</span><span class="evt-stat-lbl">Memberships</span></div>
+        <div><span class="evt-stat-num">10</span><span class="evt-stat-lbl">Memberships</span></div>
         <div><span class="evt-stat-num">15</span><span class="evt-stat-lbl">Outreach Items</span></div>
       </div>
     </div>
@@ -192,7 +192,7 @@
       <button class="evt-tab-btn" onclick="evtTab('workshops',this)">Workshops <span class="tab-count">3</span></button>
       <button class="evt-tab-btn" onclick="evtTab('conferences',this)">Conferences <span class="tab-count">23</span></button>
       <button class="evt-tab-btn" onclick="evtTab('reviewer',this)">Reviewing <span class="tab-count">6</span></button>
-      <button class="evt-tab-btn" onclick="evtTab('memberships',this)">Memberships <span class="tab-count">9</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('memberships',this)">Memberships <span class="tab-count">10</span></button>
       <button class="evt-tab-btn" onclick="evtTab('other',this)">Community Outreach <span class="tab-count">15</span></button>
     </div>
   </div>
@@ -1048,6 +1048,19 @@
       </div>
     </div>
 
+    <div class="evt-card membership" data-cert="files/7. Leadership/7. Membership/10. WRU Membership Certificate.pdf" data-badge="files/7. Leadership/7. Membership/10. WRU Member Badge.pdf">
+      <div class="evt-num">10</div>
+      <div class="evt-body">
+        <div class="evt-header">
+          <div class="evt-title">Member of WRU (World Research Union)</div>
+          <span class="evt-date-badge">Valid until May 28, 2027</span>
+        </div>
+        <div class="evt-meta">
+          <span class="evt-id">ID: WRU001617</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1314,6 +1327,7 @@
 
       addMediaButton(card.getAttribute('data-photo'), 'Photos', 'picture-o');
       addMediaButton(cert, 'Certificate', certIcon);
+      addMediaButton(card.getAttribute('data-badge'), 'Member Badge', 'id-badge');
       addMediaButton(card.getAttribute('data-blog'), 'Blog', 'book');
     });
 
