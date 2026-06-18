@@ -693,7 +693,7 @@
   }
 
   function cleanPostTitle(card) {
-    var raw = card.querySelector('h3, h2, .blog-gallery-label, .mom-gallery-title');
+    var raw = card.querySelector('h3, h2, .pub-title, .proj-card-title, .blog-gallery-label, .mom-gallery-title');
     return raw ? raw.textContent.replace(/\s+/g, ' ').replace(/^\d+\s*/, '').trim() : '';
   }
 
@@ -733,10 +733,11 @@
     var selectors = [
       '[data-blog-post][data-blog-section]'
     ];
-    return Array.from(doc.querySelectorAll(selectors.join(','))).map(function(card) {
+    return Array.from(doc.querySelectorAll(selectors.join(','))).map(function(card, index) {
       var sectionSlug = card.getAttribute('data-blog-section') || source.sectionSlug;
       if (sectionSlug !== source.sectionSlug) return null;
-      var id = card.id || sectionSlug + '-index';
+      var recordType = card.getAttribute('data-publication-type') || 'item';
+      var id = card.id || sectionSlug + '-' + recordType + '-' + (index + 1);
       var title = cleanPostTitle(card);
       var img = firstImageFrom(card, doc) || 'files/8. Blog/1.png';
       if (!id) return null;

@@ -2,12 +2,12 @@
   'use strict';
 
   const BLOG_SECTIONS = [
-    { slug: 'academics', label: 'Academics', href: 'academics.html', source: 'academics.html', fallbackCount: 74 },
-    { slug: 'sports-wellness', label: 'Sports & Wellness', href: 'sports.html', source: 'sports.html', fallbackCount: 30 },
-    { slug: 'social-life', label: 'Social Life', href: 'social-life.html', source: 'social-life.html', fallbackCount: 6 },
-    { slug: 'avocations', label: 'Avocations', href: 'avocations.html', source: 'avocations.html', fallbackCount: 14 },
-    { slug: 'publications', label: 'Publications', href: 'publication.html', source: 'publication.html', fallbackCount: 1 },
-    { slug: 'projects', label: 'Projects', href: 'project.html', source: 'project.html', fallbackCount: 1 }
+    { slug: 'academics', label: 'Academics', href: 'academics.html', source: 'academics.html', countSelector: '[data-blog-post][data-blog-section="academics"]', fallbackCount: 74 },
+    { slug: 'social-life', label: 'Social Life', href: 'social-life.html', source: 'social-life.html', countSelector: '[data-blog-post][data-blog-section="social-life"]', fallbackCount: 6 },
+    { slug: 'avocations', label: 'Avocations', href: 'avocations.html', source: 'avocations.html', countSelector: '[data-blog-post][data-blog-section="avocations"]', fallbackCount: 14 },
+    { slug: 'sports-wellness', label: 'Sports & Wellness', href: 'sports.html', source: 'sports.html', countSelector: '[data-blog-post][data-blog-section="sports-wellness"]', fallbackCount: 30 },
+    { slug: 'publications', label: 'Publications', href: 'publication.html', source: 'publication.html', countSelector: '[data-publication-item], [data-blog-post][data-blog-section="publications"]', fallbackLabel: '50+', fallbackCount: 50 },
+    { slug: 'projects', label: 'Projects', href: 'project.html', source: 'project.html', countSelector: '[data-project-item], [data-blog-post][data-blog-section="projects"]', fallbackCount: 19 }
   ];
 
   const CARD_SELECTORS = {
@@ -15,8 +15,8 @@
     'sports-wellness': '.sports-post-card, .sports-card, .sport-card, .post-card, .blog-card, article',
     'social-life': '.social-card, .conf-card, .post-card, .blog-card, article',
     avocations: '.avocation-card, .hobby-card, .conf-card, .post-card, .blog-card, article',
-    publications: '.publication-blog-entry',
-    projects: '.project-blog-entry'
+    publications: '.pub-card, [data-publication-item]',
+    projects: '.proj-card, [data-project-item]'
   };
 
   const EXCLUDED_SELECTOR = [
@@ -53,13 +53,40 @@
     return cards;
   }
 
+  function fallbackValue(section) {
+    return section.fallbackLabel || section.fallbackCount;
+  }
+
   function countInDocument(doc, slug) {
-    return doc.querySelectorAll('[data-blog-post][data-blog-section="' + slug + '"]:not([data-ignore-blog-count])').length;
+    const section = sectionBySlug(slug);
+    if (!section) return 0;
+    return Array.from(doc.querySelectorAll(section.countSelector)).filter(function(item) {
+      return !item.matches('[data-ignore-blog-count]') && !item.closest('template, [data-ignore-blog-count]');
+    }).length;
+  }
+
+  function countFromSummaryStat(doc, section) {
+    let stat = null;
+    if (section.slug === 'publications') {
+      stat = doc.querySelector('[data-site-stat="publicationTypes.total"]');
+    } else if (section.slug === 'projects') {
+      stat = Array.from(doc.querySelectorAll('.proj-stat-num')).find(function(node) {
+        return /projects/i.test(node.parentElement ? node.parentElement.textContent : '');
+      }) || null;
+    }
+    if (!stat) return null;
+    const label = stat.textContent.trim();
+    if (/^\d+\+$/.test(label)) return label;
+    const number = parseInt(label.replace(/[^\d]/g, ''), 10);
+    return Number.isNaN(number) ? null : number;
   }
 
   function countParsedSource(doc, slug) {
+    const section = sectionBySlug(slug);
+    if (!section) return 0;
     markLikelyPosts(doc, slug);
-    return countInDocument(doc, slug);
+    const count = countInDocument(doc, slug);
+    return count || countFromSummaryStat(doc, section) || 0;
   }
 
   function sectionBySlug(slug) {
@@ -69,10 +96,11 @@
   function fetchCount(section) {
     if (currentPageName() === section.source) {
       markLikelyPosts(document, section.slug);
-      return Promise.resolve(countInDocument(document, section.slug));
+      const count = countInDocument(document, section.slug);
+      return Promise.resolve(count || countFromSummaryStat(document, section) || 0);
     }
     if (!window.fetch || typeof DOMParser === 'undefined' || window.location.protocol === 'file:') {
-      return Promise.resolve(section.fallbackCount);
+      return Promise.resolve(fallbackValue(section));
     }
     return fetch(section.source, { cache: 'no-cache' })
       .then(function(response) {
@@ -83,7 +111,7 @@
         const doc = new DOMParser().parseFromString(html, 'text/html');
         return countParsedSource(doc, section.slug);
       })
-      .catch(function() { return section.fallbackCount; });
+      .catch(function() { return fallbackValue(section); });
   }
 
   function ensureStyles() {
@@ -105,21 +133,21 @@
   function render(counts) {
     ensureStyles();
     BLOG_SECTIONS.forEach(function(section) {
-      const count = counts[section.slug] == null ? section.fallbackCount : counts[section.slug];
+      const count = counts[section.slug] == null ? fallbackValue(section) : counts[section.slug];
       document.querySelectorAll('[data-blog-count-for="' + section.slug + '"], [data-blog-section-count="' + section.slug + '"]').forEach(function(node) {
         node.textContent = count;
       });
     });
     document.querySelectorAll('[data-blog-sections]').forEach(function(container) {
       container.innerHTML = '<ul class="blog-section-list">' + BLOG_SECTIONS.map(function(section) {
-        const count = counts[section.slug] == null ? section.fallbackCount : counts[section.slug];
+        const count = counts[section.slug] == null ? fallbackValue(section) : counts[section.slug];
         return '<li><a href="' + section.href + '"><span>' + section.label + '</span>' +
           '<span class="blog-section-count" data-blog-count-for="' + section.slug + '">' + count + '</span></a></li>';
       }).join('') + '</ul>';
     });
     document.querySelectorAll('[data-blog-tags]').forEach(function(container) {
       container.innerHTML = BLOG_SECTIONS.map(function(section) {
-        const count = counts[section.slug] == null ? section.fallbackCount : counts[section.slug];
+        const count = counts[section.slug] == null ? fallbackValue(section) : counts[section.slug];
         return '<a href="' + section.href + '" class="blog-tag">' + section.label + ' ' +
           '<span class="blog-tag-count" data-blog-count-for="' + section.slug + '">' + count + '</span></a>';
       }).join('');
@@ -130,7 +158,7 @@
     const source = document.querySelector('[data-blog-source]');
     if (source) markLikelyPosts(document, source.getAttribute('data-blog-source'));
     const counts = {};
-    BLOG_SECTIONS.forEach(function(section) { counts[section.slug] = section.fallbackCount; });
+    BLOG_SECTIONS.forEach(function(section) { counts[section.slug] = fallbackValue(section); });
     render(counts);
     return Promise.all(BLOG_SECTIONS.map(function(section) {
       return fetchCount(section).then(function(count) { counts[section.slug] = count; });
