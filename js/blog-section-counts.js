@@ -3,9 +3,9 @@
 
   const BLOG_SECTIONS = [
     { slug: 'academics', label: 'Academics', href: 'academics.html', source: 'academics.html', countSelector: '[data-blog-post][data-blog-section="academics"]', fallbackCount: 74 },
+    { slug: 'sports-wellness', label: 'Sports & Wellness', href: 'sports.html', source: 'sports.html', countSelector: '[data-blog-post][data-blog-section="sports-wellness"]', fallbackCount: 30 },
     { slug: 'social-life', label: 'Social Life', href: 'social-life.html', source: 'social-life.html', countSelector: '[data-blog-post][data-blog-section="social-life"]', fallbackCount: 6 },
     { slug: 'avocations', label: 'Avocations', href: 'avocations.html', source: 'avocations.html', countSelector: '[data-blog-post][data-blog-section="avocations"]', fallbackCount: 14 },
-    { slug: 'sports-wellness', label: 'Sports & Wellness', href: 'sports.html', source: 'sports.html', countSelector: '[data-blog-post][data-blog-section="sports-wellness"]', fallbackCount: 30 },
     { slug: 'publications', label: 'Publications', href: 'publication.html', source: 'publication.html', countSelector: '[data-publication-item], [data-blog-post][data-blog-section="publications"]', fallbackLabel: '50+', fallbackCount: 50 },
     { slug: 'projects', label: 'Projects', href: 'project.html', source: 'project.html', countSelector: '[data-project-item], [data-blog-post][data-blog-section="projects"]', fallbackCount: 19 }
   ];
@@ -124,10 +124,20 @@
       '.blog-section-list li:last-child{border-bottom:0;}' +
       '.blog-section-list a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;color:#444;text-decoration:none;font-size:.85rem;transition:color .2s;}' +
       '.blog-section-list a:hover{color:#7eb8e0;}' +
-      '.blog-section-count,.blog-tag-count{min-width:28px;text-align:center;background:#0f3460;color:#fff;border-radius:999px;padding:2px 8px;font-size:.72rem;font-weight:800;}' +
-      '.blog-tags-widget{display:flex;flex-wrap:wrap;gap:8px;}' +
-      '.blog-tag{display:inline-flex;align-items:center;gap:7px;padding:5px 10px;background:#f4f6ff;color:#444;text-decoration:none;border-radius:4px;font-size:.78rem;}';
+      '.blog-section-count{min-width:28px;text-align:center;background:#0f3460;color:#fff;border-radius:999px;padding:2px 8px;font-size:.72rem;font-weight:800;}';
     document.head.appendChild(style);
+  }
+
+  function renderBlogSections(counts) {
+    document.querySelectorAll('[data-blog-sections]').forEach(function(container) {
+      if (container.dataset.rendered === 'true') return;
+      container.dataset.rendered = 'true';
+      container.innerHTML = '<ul class="blog-section-list">' + BLOG_SECTIONS.map(function(section) {
+        const count = counts[section.slug] == null ? fallbackValue(section) : counts[section.slug];
+        return '<li><a href="' + section.href + '"><span>' + section.label + '</span>' +
+          '<span class="blog-section-count" data-blog-count-for="' + section.slug + '">' + count + '</span></a></li>';
+      }).join('') + '</ul>';
+    });
   }
 
   function render(counts) {
@@ -138,20 +148,7 @@
         node.textContent = count;
       });
     });
-    document.querySelectorAll('[data-blog-sections]').forEach(function(container) {
-      container.innerHTML = '<ul class="blog-section-list">' + BLOG_SECTIONS.map(function(section) {
-        const count = counts[section.slug] == null ? fallbackValue(section) : counts[section.slug];
-        return '<li><a href="' + section.href + '"><span>' + section.label + '</span>' +
-          '<span class="blog-section-count" data-blog-count-for="' + section.slug + '">' + count + '</span></a></li>';
-      }).join('') + '</ul>';
-    });
-    document.querySelectorAll('[data-blog-tags]').forEach(function(container) {
-      container.innerHTML = BLOG_SECTIONS.map(function(section) {
-        const count = counts[section.slug] == null ? fallbackValue(section) : counts[section.slug];
-        return '<a href="' + section.href + '" class="blog-tag">' + section.label + ' ' +
-          '<span class="blog-tag-count" data-blog-count-for="' + section.slug + '">' + count + '</span></a>';
-      }).join('');
-    });
+    renderBlogSections(counts);
   }
 
   function updateBlogSections() {
