@@ -145,13 +145,12 @@
     .archive-title { font-size:1.2rem !important; font-weight:900 !important; color:#0f3460 !important; margin:0 0 4px; }
     .archive-copy { font-size:.82rem; color:#667; line-height:1.55; margin:0; max-width:560px; }
     .archive-count {
-      flex:0 0 auto; min-width:120px; text-align:center; background:#f0f4ff;
-      color:#0f3460; border-radius:12px; padding:12px 14px; border:1px solid #dce5ff;
+      justify-self:end; white-space:nowrap; background:#f0f4ff; color:#667;
+      border-radius:999px; padding:7px 12px; border:1px solid #dce5ff;
+      font-size:.74rem; font-weight:700; line-height:1.2;
     }
-    .archive-count strong { display:block; font-size:1.45rem; line-height:1; font-weight:900; }
-    .archive-count span { font-size:.68rem; text-transform:uppercase; letter-spacing:1px; font-weight:800; color:#778; }
     .archive-tools {
-      display:grid; grid-template-columns:minmax(220px,1fr) 160px auto;
+      display:grid; grid-template-columns:minmax(220px,1fr) 160px auto auto;
       gap:12px; align-items:center; margin-bottom:18px;
     }
     .archive-search, .archive-sort {
@@ -297,7 +296,7 @@
       .blog-header-wrap { height: 50vw; }
       .feat-card { height:260px; }
       .archive-head { display:block; }
-      .archive-count { margin-top:14px; text-align:left; }
+      .archive-count { justify-self:start; }
       .archive-tools { grid-template-columns:1fr; }
       .view-toggle { width:max-content; }
       .post-col.list-mode .post-card { flex-direction:column; }
@@ -449,10 +448,6 @@
               <h2 class="archive-title">Browse stories, milestones, and memories</h2>
               <p class="archive-copy">Search across the complete collection, narrow by category or tag, then open the detailed gallery page for the full story.</p>
             </div>
-            <div class="archive-count">
-              <strong id="visible-post-count">0 / 0</strong>
-              <span id="visible-post-label">Posts</span>
-            </div>
           </div>
 
           <div class="archive-tools">
@@ -470,6 +465,7 @@
               <button type="button" class="view-btn active" data-view="grid" title="Grid view"><i class="fa fa-th-large"></i></button>
               <button type="button" class="view-btn" data-view="list" title="List view"><i class="fa fa-list"></i></button>
             </div>
+            <div class="archive-count" id="archive-status" role="status" aria-live="polite">Archive · 0 posts</div>
           </div>
 
           <!-- Filter bar -->
@@ -849,10 +845,16 @@
   }
 
   function updateArchiveSummary(total, shown) {
-    var count = document.getElementById('visible-post-count');
-    var label = document.getElementById('visible-post-label');
-    if (count) count.textContent = total;
-    if (label) label.textContent = total === 1 ? 'Post matched' : 'Posts matched';
+    var status = document.getElementById('archive-status');
+    if (!status) return;
+    if (total === 0) {
+      status.textContent = 'No posts found';
+      return;
+    }
+    var filtered = archiveState.cat !== 'all' || archiveState.tag || archiveState.query;
+    status.textContent = filtered
+      ? 'Showing ' + total + ' matching ' + (total === 1 ? 'post' : 'posts')
+      : 'Archive · ' + total + ' ' + (total === 1 ? 'post' : 'posts');
   }
 
   function filterPosts(cat, btn, updateHash) {

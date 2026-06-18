@@ -79,16 +79,7 @@ function initialPageDate() {
     return explicitDate;
   }
 
-  const lastModified = new Date(document.lastModified);
-  if (!Number.isNaN(lastModified.getTime())) {
-    return lastModified.toLocaleDateString("en-IN", {
-      year: "numeric",
-      month: "short",
-      day: "numeric"
-    });
-  }
-
-  return "Date";
+  return "Date not specified";
 }
 
 function addFirebaseBlogStyles() {
@@ -188,7 +179,7 @@ function fallbackPhotoTakenOn(el) {
     el.querySelector("[data-photo-taken-on]")?.textContent?.trim() ||
     el.querySelector(".conf-meta .fa-calendar")?.parentElement?.textContent?.replace(/\s+/g, " ").trim();
 
-  return explicitDate || initialPageDate();
+  return explicitDate || "Date not specified";
 }
 
 function formatCommentCount(count) {
@@ -701,7 +692,9 @@ function createPostStatsWidget(el, postId, fallbackDate) {
   });
 
   onValue(ref(db, `posts/${postId}/photoTakenOn`), snapshot => {
-    if (snapshot.exists() && !el.dataset.photoTakenOn) {
+    // Academic dates are maintained in the page source. Do not let an older
+    // generated Firebase value replace a real date or "Date not specified".
+    if (snapshot.exists() && !el.dataset.photoTakenOn && !el.matches("[data-academic-item]")) {
       photoTakenOnEl.textContent = snapshot.val();
     }
   });

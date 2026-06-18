@@ -807,6 +807,7 @@
               <li><a href="#trek-8">Jal Mahal <span class="toc-year">Aug 2023</span></a></li>
               <li><a href="#trek-9">Amer <span class="toc-year">Mar 2024</span></a></li>
               <li><a href="#trek-10">Samod Trail Walk <span class="toc-year">Apr 2023</span></a></li>
+              <li><a href="#trek-11">Girja Devi Temple Trekking <span class="toc-year">Jan 2017</span></a></li>
             </ul>
           </div>
           <div class="sidebar-box">
@@ -829,7 +830,7 @@
       <div class="section-title-bar"></div>
     </div>
 
-    <div class="hobby-card" data-blog-post data-blog-section="avocations" data-blog-post-id="painting-drawing" data-photo-taken-on="May 16, 2026">
+    <div class="hobby-card" data-blog-post data-blog-section="avocations" data-blog-post-id="painting-drawing" data-photo-taken-on="11.02.1997 to 2009">
       <div class="hobby-card-icon"><i class="fa fa-paint-brush"></i></div>
       <h3>Painting &amp; Drawing: The Quiet Space Where Imagination Learnt Discipline</h3>
       <p>
@@ -1122,7 +1123,7 @@ const TREK_META = {
   '8. Jal mahal': { date: 'August 2023', shortDate: 'Aug 2023', location: 'Jal Mahal, Jaipur', title: 'Jal Mahal', desc: 'A morning walk by Man Sagar Lake - still water, the floating palace at first light, and the Aravalli hills reflected on the surface.' },
   '9. amer': { date: 'March 2024', shortDate: 'Mar 2024', location: 'Amer, Jaipur', title: 'Amer', desc: 'A pre-dawn hike up the Aravalli ridge above Amer Fort, rewarded with a golden sunrise over ancient battlements and the valley below.' },
   '10. samod with mom': { date: 'April 2023', shortDate: 'Apr 2023', location: 'Samod, Rajasthan', title: 'Samod Trail Walk', desc: 'A quiet spring morning on the trails above Samod - wildflowers, clean air, and a peaceful hour shared before the day began.' },
-  '11. girjadevi temple and tracking': { date: 'May 2026', shortDate: 'May 2026', location: 'Girja Devi Temple Trail', title: 'Girja Devi Temple Trekking', desc: 'A temple trail that blends devotion, movement, and the quiet pleasure of walking through a landscape that slowly opens with every step.' }
+  '11. girjadevi temple and tracking': { date: 'Jan 2017', shortDate: 'Jan 2017', location: 'Girja Devi Temple Trail', title: 'Girja Devi Temple Trekking', desc: 'A temple trail that blends devotion, movement, and the quiet pleasure of walking through a landscape that slowly opens with every step.' }
 };
 
 function encodeGithubPath(path) {
@@ -1290,7 +1291,7 @@ function renderTrekCard(folder, index) {
       }).join('') +
     '</div>' : '';
   return '' +
-    '<div class="conf-card" data-blog-post data-blog-section="avocations" id="trek-' + trekFolderNumber(folder.name, index) + '">' +
+    '<div class="conf-card" data-blog-post data-blog-section="avocations" data-photo-taken-on="' + avocEscape(meta.date) + '" id="trek-' + trekFolderNumber(folder.name, index) + '">' +
       '<div class="conf-card-header">' +
         '<h3><span class="conf-num">' + number + '</span>' + avocEscape(meta.title) + '</h3>' +
         '<div class="conf-meta">' +
