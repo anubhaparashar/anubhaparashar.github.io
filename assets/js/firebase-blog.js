@@ -701,7 +701,7 @@ function createPostStatsWidget(el, postId, fallbackDate) {
   });
 
   onValue(ref(db, `posts/${postId}/photoTakenOn`), snapshot => {
-    if (snapshot.exists()) {
+    if (snapshot.exists() && !el.dataset.photoTakenOn) {
       photoTakenOnEl.textContent = snapshot.val();
     }
   });
