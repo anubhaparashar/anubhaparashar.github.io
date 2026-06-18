@@ -499,11 +499,11 @@
         <!-- Empty state -->
         <div id="no-posts" style="display:none;text-align:center;padding:40px 0;">
           <i class="fa fa-inbox" style="font-size:2.5rem;color:#c8d4f7;margin-bottom:12px;display:block;"></i>
-          <p style="color:#aaa;font-size:.9rem;">No posts match the current category, tag, or search term.</p>
+          <p style="color:#aaa;font-size:.9rem;">No matching posts found.</p>
         </div>
 
         <div class="archive-footer">
-          <button type="button" id="show-more-posts" class="show-more-btn" hidden>Load More Posts</button>
+          <button type="button" id="show-more-posts" class="show-more-btn" hidden>Show More Posts</button>
         </div>
 
       </div><!-- /col-lg-8 -->
@@ -578,6 +578,11 @@
             <div class="br"></div>
           </aside>
 
+          <aside class="single-sidebar-widget tag_cloud_widget">
+            <h4 class="widget_title">Blog Tags</h4>
+            <div class="blog-tags-widget" data-blog-tags></div>
+          </aside>
+
           <!-- Tags — auto-generated from post data-tags attributes -->
           <aside class="single-sidebar-widget tag_cloud_widget">
             <h4 class="widget_title">Tags</h4>
@@ -597,6 +602,7 @@
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/site-components.js"></script>
+<script src="js/blog-section-counts.js"></script>
 <script src="data/site-data.js"></script>
 <script>
   var archiveState = {
@@ -721,6 +727,9 @@
   }
 
   function cardsFromDocument(doc, source) {
+    if (window.BlogSectionCounts && typeof window.BlogSectionCounts.markLikelyPosts === 'function') {
+      window.BlogSectionCounts.markLikelyPosts(doc, source.sectionSlug);
+    }
     var selectors = [
       '[data-blog-post][data-blog-section]'
     ];
@@ -832,12 +841,11 @@
     });
     updateArchiveSummary(matched.length, visible.length);
     var noPosts = document.getElementById('no-posts');
-    var hasActiveFilter = archiveState.cat !== 'all' || !!archiveState.tag || !!archiveState.query;
-    if (noPosts) noPosts.style.display = (!matched.length && hasActiveFilter) ? 'block' : 'none';
+    if (noPosts) noPosts.style.display = matched.length === 0 ? 'block' : 'none';
     var more = document.getElementById('show-more-posts');
     if (more) {
       more.hidden = !matched.length || visible.length >= matched.length;
-      more.textContent = 'Load More Posts' + (visible.length < matched.length ? ' (' + (matched.length - visible.length) + ')' : '');
+      more.textContent = 'Show More Posts' + (visible.length < matched.length ? ' (' + (matched.length - visible.length) + ')' : '');
     }
     if (window.FirebaseBlog && typeof window.FirebaseBlog.refresh === 'function') {
       window.FirebaseBlog.refresh();
@@ -847,8 +855,8 @@
   function updateArchiveSummary(total, shown) {
     var count = document.getElementById('visible-post-count');
     var label = document.getElementById('visible-post-label');
-    if (count) count.textContent = shown + ' / ' + total;
-    if (label) label.textContent = total === 1 ? 'Post' : 'Posts';
+    if (count) count.textContent = total;
+    if (label) label.textContent = total === 1 ? 'Post matched' : 'Posts matched';
   }
 
   function filterPosts(cat, btn, updateHash) {
@@ -1000,7 +1008,6 @@
     });
   })();
 </script>
-<script src="js/blog-section-counts.js"></script>
 <script type="module" src="assets/js/firebase-blog.js"></script>
 <script src="assets/js/auto-folder-gallery.js"></script>
 </body>
