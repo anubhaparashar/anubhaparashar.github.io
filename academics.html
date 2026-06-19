@@ -72,6 +72,14 @@
       border-left: 5px solid #7eb8e0; overflow: hidden;
       scroll-margin-top: 140px;
     }
+    .conference-group-heading {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+      margin: 8px 0 18px; padding: 12px 16px;
+      border-left: 4px solid #7eb8e0; border-radius: 8px;
+      background: #f4f7fc; color: #0f3460;
+    }
+    .conference-group-heading span { font-size: 1rem; font-weight: 900; }
+    .conference-group-heading small { color: #667085; font-size: .75rem; }
     .conf-card-header {
       padding: 20px 26px 14px; border-bottom: 1px solid #eef0ff;
     }
@@ -484,6 +492,10 @@
       font-size: .95rem !important; font-weight: 800 !important; color: #0f3460 !important;
       margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #e8eeff;
     }
+    .academic-sidebar-count {
+      float: right; min-width: 26px; padding: 2px 7px; border-radius: 999px;
+      background: #0f3460; color: #fff; font-size: .68rem; text-align: center;
+    }
     .toc-list { list-style: none; padding: 0; margin: 0; }
     .toc-list li { border-bottom: 1px solid #f0f2ff; }
     .toc-list li:last-child { border-bottom: none; }
@@ -509,6 +521,7 @@
     .conf-video-grid video { width: 100%; border-radius: 10px; box-shadow: 0 2px 12px rgba(15,52,96,.12); }
 
     @media (max-width: 767px) {
+      .conference-group-heading { align-items: flex-start; flex-direction: column; gap: 3px; }
       .gal-featured { grid-template-columns: repeat(2,1fr); }
       .gal-featured.has-highlighted { grid-template-columns: repeat(2,1fr); }
       .gal-featured.has-highlighted a.gal-item.cert-a,
@@ -697,6 +710,10 @@
 
         <!-- -------- CONFERENCES -------- -->
                 <div class="acad-section" id="acad-conferences">
+          <div class="conference-group-heading" role="heading" aria-level="3">
+            <span>Organised Conferences</span>
+            <small>Committee, coordination, and organiser-side archives</small>
+          </div>
           <!-- C01 ICCT 2017 - Organised Conference -->
           <div class="conf-card academic-card" data-academic-item data-year="2017" data-tags="conferences, icct 2017 - organised conference" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-icct17-organised">
             <div class="conf-card-header">
@@ -736,17 +753,17 @@
               </div>
             </div>
           </div>
-          <!-- C03 SPEC Conference - Organised -->
-          <div class="conf-card academic-card" data-academic-item data-year="2021" data-tags="conferences, spec conference - organised" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-spec-organised">
+          <!-- C03 SpaceSec 2021 - Organised Conference -->
+          <div class="conf-card academic-card" data-academic-item data-year="2021" data-tags="conferences, spacesec 2021 - organised conference" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-spec-organised">
             <div class="conf-card-header">
-              <h3><span class="conf-num">03</span>SPEC Conference - Organised</h3>
+              <h3><span class="conf-num">03</span>SpaceSec 2021 - Organised Conference</h3>
               <div class="conf-meta">
                 <span><i class="fa fa-calendar"></i>December 9-10, 2021</span>
                 <span><i class="fa fa-image"></i>6 Photos</span>
               </div>
             </div>
             <div class="conf-card-body">
-              <p class="conf-desc">Organised SPEC conference memories from planning, coordination, sessions, and academic event support.</p>
+              <p class="conf-desc">Organised SpaceSec 2021 conference memories from planning, coordination, sessions, and academic event support.</p>
               <div class="gal-grid" id="g-c-spec-organised">
                 <a href="files/8. Blog/1. academic/2. Conferences and ppt/Organised Spec Conference/20260516_172947.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/Organised Spec Conference/20260516_172947.jpg" alt="SPEC Conference - Organised"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
                 <a href="files/8. Blog/1. academic/2. Conferences and ppt/Organised Spec Conference/20260516_173216.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/1. academic/2. Conferences and ppt/Organised Spec Conference/20260516_173216.jpg" alt="SPEC Conference - Organised"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
@@ -866,6 +883,11 @@
               </div>
             </div>
           </div>
+          <div class="conference-group-heading" role="heading" aria-level="3">
+            <span>Conference Participation / Presentation Archives</span>
+            <small>Attendance, presentations, academic travel, and participation records</small>
+          </div>
+
           <!-- C09 Udaipur Conference -->
           <div class="conf-card academic-card" data-academic-item data-year="2016" data-tags="conferences, udaipur conference" data-blog-post data-blog-section="academics" data-academic-category="conferences" id="c-udaipur">
             <div class="conf-card-header">
@@ -1686,17 +1708,18 @@
             </div>
           </div>
 
-          <!-- ET 03 Expert Talk & FDP (2019-2020) -->
-          <div class="conf-card academic-card" data-academic-item data-year="2020" data-tags="talks, expert talk &amp;amp fdp" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-03">
+          <!-- ET 03 Expert Talk on IoT & Its Applications -->
+          <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="talks, expert talk, iot, applications, fdp" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-03">
             <div class="conf-card-header">
-              <h3><span class="conf-num">03</span>Expert Talk &amp; FDP</h3>
+              <h3><span class="conf-num">03</span>Expert Talk on IoT &amp; Its Applications</h3>
               <div class="conf-meta">
-                <span><i class="fa fa-calendar"></i>2019&ndash;2020</span>
+                <span><i class="fa fa-calendar"></i>8 February 2018</span>
+                <span><i class="fa fa-map-marker"></i>Bhimrao Aambedkar University, Agra, India</span>
                 <span><i class="fa fa-image"></i>9 Photos</span>
               </div>
             </div>
             <div class="conf-card-body">
-              <p class="conf-desc">Expert talk and Faculty Development Programme sessions sharing research insights and technical knowledge with academic communities.</p>
+              <p class="conf-desc">Expert talk delivered during the Faculty Development Programme on Exploration of IoT &amp; Its Applications. The archive also retains related FDP documentation from the same evidence folder.</p>
               <div class="gal-grid" id="g-et-03">
                 <a href="files/8. Blog/1. academic/4. expert talk/1/20180208_143012.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/1. academic/4. expert talk/1/20180208_143012.jpg" alt="Expert Talk 2018"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
                 <a href="files/8. Blog/1. academic/4. expert talk/1/20180208_143029.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/1. academic/4. expert talk/1/20180208_143029.jpg" alt="Expert Talk 2018"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
@@ -1716,17 +1739,18 @@
             </div>
           </div>
 
-          <!-- ET 04 Expert Talk (2020) -->
-          <div class="conf-card academic-card" data-academic-item data-year="2020" data-tags="talks, expert talk" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-04">
+          <!-- ET 04 Introduction to Artificial Intelligence and IoT -->
+          <div class="conf-card academic-card" data-academic-item data-year="2020" data-tags="talks, artificial intelligence, iot, online session" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-04">
             <div class="conf-card-header">
-              <h3><span class="conf-num">04</span>Expert Talk</h3>
+              <h3><span class="conf-num">04</span>Introduction to Artificial Intelligence and IoT</h3>
               <div class="conf-meta">
-                <span><i class="fa fa-calendar"></i>2020</span>
+                <span><i class="fa fa-calendar"></i>20 April 2020</span>
+                <span><i class="fa fa-map-marker"></i>Manipal University Jaipur, Jaipur, India</span>
                 <span><i class="fa fa-image"></i>1 Photo</span>
               </div>
             </div>
             <div class="conf-card-body">
-              <p class="conf-desc">Expert talk session delivering specialised knowledge and research insights to academic and professional audiences.</p>
+              <p class="conf-desc">Project-based online expert session introducing Artificial Intelligence and the Internet of Things.</p>
               <div class="gal-grid" id="g-et-04">
                 <a href="files/8. Blog/1. academic/4. expert talk/2/FB_IMG_1594393539551.jpg" class="gal-item"><img loading="lazy" src="files/8. Blog/1. academic/4. expert talk/2/FB_IMG_1594393539551.jpg" alt="Expert Talk 2020"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
               </div>
@@ -1753,13 +1777,13 @@
             </div>
           </div>
 
-          <!-- ET 06 Expert Talk at IET Agra -->
+          <!-- ET 06 Expert Talk on Machine Intelligence at IET Agra -->
           <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="talks, expert talk on recent trends in machine intelligence" data-blog-post data-blog-section="academics" data-academic-category="talks" id="et-06">
             <div class="conf-card-header">
-              <h3><span class="conf-num">06</span>Expert Talk on Recent Trends in Machine Intelligence</h3>
+              <h3><span class="conf-num">06</span>Expert Talk on Machine Intelligence</h3>
               <div class="conf-meta">
-                <span><i class="fa fa-calendar"></i>29 May 2019</span>
-                <span><i class="fa fa-map-marker"></i>IET Khandari, Agra</span>
+                <span><i class="fa fa-calendar"></i>CV: 27 May 2019 · Certificate: 29 May 2019</span>
+                <span><i class="fa fa-map-marker"></i>Bhimrao Aambedkar University, Agra, India</span>
                 <span><i class="fa fa-image"></i>3 Photos</span>
               </div>
             </div>
@@ -2652,7 +2676,7 @@
             <ul class="toc-list">
               <li><a href="#c-icct17-organised">ICCT 2017 Organising Committee <span class="toc-year">2017</span></a></li>
               <li><a href="#c-icct21-organised">ICCT 2021 Organising Committee <span class="toc-year">2021</span></a></li>
-              <li><a href="#c-spec-organised">SPEC 2021 Organising Committee <span class="toc-year">2021</span></a></li>
+              <li><a href="#c-spec-organised">SpaceSec 2021 Organising Committee <span class="toc-year">2021</span></a></li>
               <li><a href="#c-icct19-organised">ICCT 2019 Organising Committee <span class="toc-year">2019</span></a></li>
               <li><a href="#c-icicv20-organised">ICICV 2020 Organising Committee <span class="toc-year">2020</span></a></li>
               <li><a href="#c-sin-organised">SIN 2017 Organising Committee <span class="toc-year">2017</span></a></li>
@@ -3299,8 +3323,57 @@
       applyFilters();
     });
 
+    function renderSidebarIndexes() {
+      var sidebarIds = {
+        leadership: 'leadership', conferences: 'conferences', workshops: 'workshops',
+        talks: 'talks', 'faculty-visits': 'facultyvisits', events: 'events',
+        hackathon: 'hackathon', 'social-activities': 'social'
+      };
+      categories.forEach(function(category) {
+        var box = document.getElementById('sidebar-' + sidebarIds[category]);
+        if (!box) return;
+        var list = box.querySelector('.toc-list');
+        var heading = box.querySelector('h4');
+        var categoryCards = cards().filter(function(card) {
+          return card.getAttribute('data-academic-category') === category;
+        });
+        if (heading) {
+          var oldCount = heading.querySelector('.academic-sidebar-count');
+          if (oldCount) oldCount.remove();
+          var count = document.createElement('span');
+          count.className = 'academic-sidebar-count';
+          count.setAttribute('data-count-for', category);
+          count.textContent = categoryCards.length;
+          heading.appendChild(count);
+        }
+        if (!list) return;
+        list.innerHTML = '';
+        categoryCards.forEach(function(card) {
+          var title = card.querySelector('h3');
+          if (!title || !card.id) return;
+          var titleCopy = title.cloneNode(true);
+          var number = titleCopy.querySelector('.conf-num');
+          if (number) number.remove();
+          var item = document.createElement('li');
+          var link = document.createElement('a');
+          link.href = '#' + card.id;
+          link.textContent = titleCopy.textContent.trim();
+          var year = card.getAttribute('data-year') || '';
+          if (year) {
+            var yearNode = document.createElement('span');
+            yearNode.className = 'toc-year';
+            yearNode.textContent = year;
+            link.appendChild(yearNode);
+          }
+          item.appendChild(link);
+          list.appendChild(item);
+        });
+      });
+    }
+
     function initAcademicArchive() {
       enhanceCards();
+      renderSidebarIndexes();
       renderCounts();
 
       document.querySelectorAll('.academic-filter').forEach(function(btn) {

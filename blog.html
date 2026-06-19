@@ -593,9 +593,13 @@
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/site-components.js"></script>
-<script src="js/blog-section-counts.js"></script>
 <script src="data/site-data.js"></script>
+<script src="js/blog-section-counts.js"></script>
 <script>
+  var SITE_POSTS = Array.isArray(window.SITE_POSTS)
+    ? window.SITE_POSTS
+    : (window.SiteData ? window.SiteData.getItems() : []);
+
   var archiveState = {
     cat: 'all',
     tag: null,
@@ -788,7 +792,8 @@
 
   function renderArchive() {
     var grid = document.getElementById('posts-grid');
-    if (!grid || typeof SITE_POSTS === 'undefined') return;
+    if (!grid) return;
+    if (!Array.isArray(SITE_POSTS)) SITE_POSTS = [];
     var matched = sortedPosts(SITE_POSTS.filter(postMatches));
     var visible = matched.slice(0, archiveState.visibleLimit);
     grid.innerHTML = '';
