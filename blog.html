@@ -652,13 +652,69 @@
     { url: 'academics.html', cat: 'academics', sectionSlug: 'academics', badge: 'Academics' },
     { url: 'social-life.html', cat: 'social', sectionSlug: 'social-life', badge: 'Social Life' },
     { url: 'sports.html', cat: 'sports', sectionSlug: 'sports-wellness', badge: 'Sports & Wellness' },
-    { url: 'avocations.html', cat: 'avocations', sectionSlug: 'avocations', badge: 'Avocations' },
-    { url: 'publication.html', cat: 'publications', sectionSlug: 'publications', badge: 'Publications' },
-    { url: 'project.html', cat: 'projects', sectionSlug: 'projects', badge: 'Projects' }
+    { url: 'avocations.html', cat: 'avocations', sectionSlug: 'avocations', badge: 'Avocations' }
   ];
   var BLOG_CATEGORY_TOTALS = window.SiteData ? window.SiteData.getBlogCategoryCounts() : {};
   var BLOG_CATEGORY_ORDER = ['academics','social','sports','avocations'];
+  var CENTRAL_SITE_POSTS = Array.isArray(SITE_POSTS) ? SITE_POSTS.slice() : [];
   var BLOG_TOTAL_POSTS = window.SiteData ? window.SiteData.getBlogTotalCount() : 0;
+
+  function normalizeCanonicalLink(value) {
+    var raw = String(value || '').trim();
+    if (!raw) return '';
+    try {
+      var parsed = new URL(raw, window.location.href);
+      raw = parsed.pathname + parsed.search + parsed.hash;
+    } catch (error) {}
+    raw = raw.replace(/\\/g, '/').replace(/\/{2,}/g, '/');
+    raw = raw.replace(/^\/+/, '');
+    var hashIndex = raw.indexOf('#');
+    var beforeHash = hashIndex === -1 ? raw : raw.slice(0, hashIndex);
+    var hash = hashIndex === -1 ? '' : raw.slice(hashIndex);
+    beforeHash = beforeHash.replace(/\/+$/, '');
+    return (beforeHash + hash).toLowerCase();
+  }
+
+  function normalizedIdentityText(value) {
+    return String(value || '').toLowerCase().replace(/\s+/g, ' ').trim();
+  }
+
+  function canonicalPostKey(post) {
+    if (post && post.canonical) {
+      var explicitCanonical = String(post.canonical).trim();
+      var normalizedCanonical = /[\/#.]|^https?:/i.test(explicitCanonical)
+        ? normalizeCanonicalLink(explicitCanonical)
+        : normalizedIdentityText(explicitCanonical);
+      return 'canonical:' + normalizedCanonical;
+    }
+    var link = normalizeCanonicalLink(post && post.link);
+    if (link) return 'link:' + link;
+    return 'content:' + [post && post.title, post && post.date, post && (post.cat || post.category)]
+      .map(normalizedIdentityText).join('|');
+  }
+
+  function mergeUniquePosts(primaryPosts, discoveredPosts) {
+    var unique = [];
+    var seen = Object.create(null);
+    function add(post) {
+      if (!post || BLOG_CATEGORY_ORDER.indexOf(post.cat) === -1) return;
+      var key = canonicalPostKey(post);
+      if (!key || seen[key]) return;
+      seen[key] = true;
+      unique.push(post);
+    }
+    (primaryPosts || []).forEach(add);
+    (discoveredPosts || []).forEach(add);
+    return unique;
+  }
+
+  SITE_POSTS = mergeUniquePosts(CENTRAL_SITE_POSTS, []);
+  window.SITE_POSTS = SITE_POSTS;
+  window.BlogArchiveMerge = {
+    normalizeLink: normalizeCanonicalLink,
+    canonicalKey: canonicalPostKey,
+    merge: mergeUniquePosts
+  };
 
   function refreshBlogTotals() {
     BLOG_CATEGORY_TOTALS = BLOG_CATEGORY_ORDER.reduce(function(counts, cat) {
@@ -725,28 +781,32 @@
     if (window.BlogSectionCounts && typeof window.BlogSectionCounts.markLikelyPosts === 'function') {
       window.BlogSectionCounts.markLikelyPosts(doc, source.sectionSlug);
     }
-    var selectors = [
-      '[data-blog-post][data-blog-section]'
-    ];
+    var selectors = ['[data-blog-post][data-blog-section]', '[data-post-id]', '[data-canonical]'];
     return Array.from(doc.querySelectorAll(selectors.join(','))).map(function(card, index) {
       var sectionSlug = card.getAttribute('data-blog-section') || source.sectionSlug;
       if (sectionSlug !== source.sectionSlug) return null;
       var recordType = card.getAttribute('data-publication-type') || 'item';
-      var id = card.id || sectionSlug + '-' + recordType + '-' + (index + 1);
-      var title = cleanPostTitle(card);
+      var explicitPostId = card.getAttribute('data-post-id');
+      var stableId = explicitPostId || card.getAttribute('data-blog-post-id');
+      var id = stableId || card.id || sectionSlug + '-' + recordType + '-' + (index + 1);
+      var title = card.getAttribute('data-title') || cleanPostTitle(card);
       var img = firstImageFrom(card, doc) || 'files/8. Blog/1.png';
+      var category = card.getAttribute('data-category') || source.cat;
+      var canonical = card.getAttribute('data-canonical') || (explicitPostId ? 'post-id:' + explicitPostId : '');
+      var date = card.getAttribute('data-date') || postDateFrom(card);
       if (!id) return null;
       return {
-        id: 'auto-' + source.cat + '-' + id,
-        cat: source.cat,
+        id: stableId || 'auto-' + category + '-' + id,
+        canonical: canonical,
+        cat: category,
         sectionSlug: sectionSlug,
         tags: tagsForPost(source, title),
-        date: postDateFrom(card),
+        date: date,
         views: '',
         img: img,
         title: title || source.badge,
         excerpt: postExcerptFrom(card, title),
-        link: card.id ? source.url + '#' + id : source.url,
+        link: card.id ? source.url + '#' + card.id : (canonical && /\.html(?:#|$)/i.test(canonical) ? canonical : source.url),
         badge: source.badge,
         autoDiscovered: true
       };
@@ -770,22 +830,7 @@
   }
 
   function mergeDiscoveredPosts(posts) {
-    if (typeof SITE_POSTS === 'undefined') window.SITE_POSTS = [];
-    var seen = {};
-    var counts = {};
-    SITE_POSTS.forEach(function(post) {
-      seen[post.id] = true;
-      seen[post.link] = true;
-      counts[post.cat] = (counts[post.cat] || 0) + 1;
-    });
-    posts.forEach(function(post) {
-      if (!seen[post.id] && !seen[post.link]) {
-        SITE_POSTS.push(post);
-        seen[post.id] = true;
-        seen[post.link] = true;
-        counts[post.cat] = (counts[post.cat] || 0) + 1;
-      }
-    });
+    SITE_POSTS = mergeUniquePosts(CENTRAL_SITE_POSTS, posts || []);
     window.SITE_POSTS = SITE_POSTS;
     refreshBlogTotals();
   }

@@ -151,6 +151,7 @@ var SITE_POSTS = [
     img:     'files/8. Blog/4. Avocations/2. Drawing/artwork/oil painting--.png',
     title:   'Painting & Drawing: The Quiet Space Where Imagination Learnt Discipline',
     excerpt: 'Painting and drawing as a quiet creative practice shaped by patience, observation, and early milestones.',
+    canonical: 'avocations.html#tab-painting',
     link:    'avocations.html#tab-painting',
     badge:   'Avocations'
   },
