@@ -608,7 +608,7 @@
           </div>
         </div>
 
-        <div id="academic-empty-state" class="academic-empty-state">No academic records match this filter.</div>
+        <div id="academic-empty-state" class="academic-empty-state" hidden><span data-empty-message></span></div>
 
         <!-- -------- LEADERSHIP & RESPONSIBILITIES -------- -->
         <div class="acad-section active" id="acad-leadership">
@@ -2249,10 +2249,28 @@
             </div>
           </div>
 
-          <!-- EV 06 Big Basket CEO -->
+          <!-- EV 06 Alumni Interaction - Aditya Agarwal -->
+          <div class="conf-card academic-card" data-academic-item data-year="2019" data-tags="events, alumni interaction, aditya agarwal" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-aditya-alumni">
+            <div class="conf-card-header">
+              <h3><span class="conf-num">06</span>Alumni Interaction - Aditya Agarwal</h3>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>August 2019</span>
+                <span><i class="fa fa-image"></i>2 Photos</span>
+              </div>
+            </div>
+            <div class="conf-card-body">
+              <p class="conf-desc">Alumni interaction with Aditya Agarwal, giving students a closer view of professional pathways, industry expectations, and the value of staying connected with the department.</p>
+              <div class="gal-grid" id="g-ev-aditya-alumni">
+                <a href="files/8. Blog/1. academic/6. Events done/1. Alumni/Aditya Agarwal/20190826_180500.jpeg" class="gal-item"><img loading="lazy" src="files/8. Blog/1. academic/6. Events done/1. Alumni/Aditya Agarwal/20190826_180500.jpeg" alt="Aditya Agarwal alumni interaction with students"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+                <a href="files/8. Blog/1. academic/6. Events done/1. Alumni/Aditya Agarwal/20190826_180521.jpeg" class="gal-item"><img loading="lazy" src="files/8. Blog/1. academic/6. Events done/1. Alumni/Aditya Agarwal/20190826_180521.jpeg" alt="Students attending the Aditya Agarwal alumni interaction"><div class="gal-overlay"><i class="fa fa-search-plus"></i></div></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- EV 07 Big Basket CEO -->
           <div class="conf-card academic-card" data-academic-item data-year="2018" data-tags="events, expert talk - big basket ceo" data-blog-post data-blog-section="academics" data-academic-category="events" id="ev-bigbasket">
             <div class="conf-card-header">
-              <h3><span class="conf-num">06</span>Expert Talk - Big Basket CEO</h3>
+              <h3><span class="conf-num">07</span>Expert Talk - Big Basket CEO</h3>
               <div class="conf-meta">
                 <span><i class="fa fa-calendar"></i>November 2018</span>
                 <span><i class="fa fa-image"></i>2 Photos</span>
@@ -3113,7 +3131,7 @@
       social: 'social-activities',
       'social-activities': 'social-activities'
     };
-    var state = { filter: 'all', query: '', expanded: {} };
+    var state = { filter: 'all', query: '', expanded: {}, hasInteracted: false };
     var allLimit = 4;
     var categoryLimit = 8;
 
@@ -3282,12 +3300,19 @@
       });
 
       var empty = document.getElementById('academic-empty-state');
-      if (empty) empty.classList.toggle('is-visible', visibleCount === 0);
+      if (empty) {
+        var showEmpty = state.hasInteracted && visibleCount === 0;
+        var message = empty.querySelector('[data-empty-message]');
+        if (message) message.textContent = showEmpty ? 'No academic records match this filter.' : '';
+        empty.hidden = !showEmpty;
+        empty.classList.toggle('is-visible', showEmpty);
+      }
     }
 
     function setFilter(filter, updateHash) {
       state.filter = normalizeCategory(filter) || 'all';
       state.expanded = {};
+      if (updateHash !== false) state.hasInteracted = true;
       applyFilters();
       if (updateHash !== false) {
         var hash = state.filter === 'all' ? 'academics' : state.filter;
@@ -3387,6 +3412,7 @@
         search.addEventListener('input', function() {
           state.query = search.value.trim().toLowerCase();
           state.expanded = {};
+          state.hasInteracted = true;
           applyFilters();
         });
       }

@@ -465,7 +465,7 @@
               <button type="button" class="view-btn active" data-view="grid" title="Grid view"><i class="fa fa-th-large"></i></button>
               <button type="button" class="view-btn" data-view="list" title="List view"><i class="fa fa-list"></i></button>
             </div>
-            <div class="archive-count" id="archive-status" role="status" aria-live="polite">Loading archive…</div>
+            <div class="archive-count" id="archive-status" role="status" aria-live="polite">Archive</div>
           </div>
 
           <!-- Filter bar -->
@@ -493,10 +493,14 @@
         <div class="row" id="posts-grid"></div><!-- /posts-grid -->
 
         <!-- Empty state -->
-        <div id="no-posts" style="display:none;text-align:center;padding:40px 0;">
+        <div id="no-posts" hidden style="display:none;text-align:center;padding:40px 0;">
           <i class="fa fa-inbox" style="font-size:2.5rem;color:#c8d4f7;margin-bottom:12px;display:block;"></i>
-          <p style="color:#aaa;font-size:.9rem;">No matching posts found.</p>
+          <p data-empty-message style="color:#aaa;font-size:.9rem;"></p>
         </div>
+
+        <noscript>
+          <div class="archive-count" role="status">Browse posts directly in <a href="academics.html">Academics</a>, <a href="sports.html">Sports &amp; Wellness</a>, <a href="social-life.html">Social Life</a>, and <a href="avocations.html">Avocations</a>.</div>
+        </noscript>
 
         <div class="archive-footer">
           <button type="button" id="show-more-posts" class="show-more-btn" hidden>Show More Posts</button>
@@ -608,6 +612,16 @@
     view: 'grid',
     visibleLimit: 12
   };
+  var archiveHasRendered = false;
+
+  function archiveIsFiltered() {
+    return archiveState.cat !== 'all' || Boolean(archiveState.tag) || Boolean(archiveState.query);
+  }
+
+  function setArchiveLoading(isLoading) {
+    var status = document.getElementById('archive-status');
+    if (status && isLoading) status.textContent = 'Loading archive…';
+  }
 
   function escapeHtml(value) {
     return String(value || '').replace(/[&<>"']/g, function(ch) {
@@ -682,10 +696,10 @@
   function canonicalPostKey(post) {
     if (post && post.canonical) {
       var explicitCanonical = String(post.canonical).trim();
-      var normalizedCanonical = /[\/#.]|^https?:/i.test(explicitCanonical)
-        ? normalizeCanonicalLink(explicitCanonical)
-        : normalizedIdentityText(explicitCanonical);
-      return 'canonical:' + normalizedCanonical;
+      if (/[\/#.]|^https?:/i.test(explicitCanonical)) {
+        return 'link:' + normalizeCanonicalLink(explicitCanonical);
+      }
+      return 'canonical:' + normalizedIdentityText(explicitCanonical);
     }
     var link = normalizeCanonicalLink(post && post.link);
     if (link) return 'link:' + link;
@@ -876,9 +890,20 @@
         '</div>';
       grid.appendChild(col);
     });
+    archiveHasRendered = true;
     updateArchiveSummary(matched.length, visible.length);
     var noPosts = document.getElementById('no-posts');
-    if (noPosts) noPosts.style.display = matched.length === 0 ? 'block' : 'none';
+    if (noPosts) {
+      var showEmpty = archiveHasRendered && matched.length === 0;
+      var emptyMessage = noPosts.querySelector('[data-empty-message]');
+      if (emptyMessage) {
+        emptyMessage.textContent = archiveIsFiltered()
+          ? 'No matching posts found.'
+          : 'No blog posts are available yet.';
+      }
+      noPosts.hidden = !showEmpty;
+      noPosts.style.display = showEmpty ? 'block' : 'none';
+    }
     var more = document.getElementById('show-more-posts');
     if (more) {
       more.hidden = !matched.length || visible.length >= matched.length;
@@ -893,10 +918,10 @@
     var status = document.getElementById('archive-status');
     if (!status) return;
     if (total === 0) {
-      status.textContent = 'No posts found';
+      status.textContent = archiveIsFiltered() ? 'No matching posts' : 'No posts available';
       return;
     }
-    var filtered = archiveState.cat !== 'all' || archiveState.tag || archiveState.query;
+    var filtered = archiveIsFiltered();
     status.textContent = filtered
       ? 'Showing ' + total + ' matching ' + (total === 1 ? 'post' : 'posts')
       : 'Archive · ' + total + ' ' + (total === 1 ? 'post' : 'posts');
@@ -1032,6 +1057,7 @@
     archiveState.cat = 'all';
     archiveState.tag = null;
     archiveState.query = '';
+    setArchiveLoading(true);
     updatePostTools();
     renderArchive();
     discoverPostsFromPages().then(function(posts) {

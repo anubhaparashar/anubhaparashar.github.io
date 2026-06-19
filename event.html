@@ -170,15 +170,15 @@
       <h1>Events &amp; Activities</h1>
       <p class="evt-hero-sub">Leadership, talks, workshops, conference organisation, reviewing &amp; memberships</p>
       <div class="evt-stats">
-        <div><span class="evt-stat-num" data-count-for="leadership">…</span><span class="evt-stat-lbl">Leadership Roles</span></div>
-        <div><span class="evt-stat-num" data-count-for="talks">…</span><span class="evt-stat-lbl">Talks</span></div>
-        <div><span class="evt-stat-num" data-count-for="seminars">…</span><span class="evt-stat-lbl">Seminars</span></div>
-        <div><span class="evt-stat-num" data-count-for="workshops">…</span><span class="evt-stat-lbl">Workshops<br>Organised</span></div>
-        <div><span class="evt-stat-num" data-count-for="conferences">…</span><span class="evt-stat-lbl">Conferences<br>Organised</span></div>
-        <div><span class="evt-stat-num" data-count-for="reviewer">…</span><span class="evt-stat-lbl">Reviewer Roles</span></div>
-        <div><span class="evt-stat-num" data-count-for="hackathons">…</span><span class="evt-stat-lbl">Hackathon Activities</span></div>
-        <div><span class="evt-stat-num" data-count-for="memberships">…</span><span class="evt-stat-lbl">Memberships</span></div>
-        <div><span class="evt-stat-num" data-count-for="other">…</span><span class="evt-stat-lbl">Outreach Items</span></div>
+        <div aria-label="3 Leadership Roles"><span class="evt-stat-num" data-count-for="leadership">3</span><span class="evt-stat-lbl">Leadership Roles</span></div>
+        <div aria-label="11 Talks"><span class="evt-stat-num" data-count-for="talks">11</span><span class="evt-stat-lbl">Talks</span></div>
+        <div aria-label="2 Seminars"><span class="evt-stat-num" data-count-for="seminars">2</span><span class="evt-stat-lbl">Seminars</span></div>
+        <div aria-label="3 Workshops Organised"><span class="evt-stat-num" data-count-for="workshops">3</span><span class="evt-stat-lbl">Workshops<br>Organised</span></div>
+        <div aria-label="29 Conferences Organised"><span class="evt-stat-num" data-count-for="conferences">29</span><span class="evt-stat-lbl">Conferences<br>Organised</span></div>
+        <div aria-label="8 Reviewer Roles"><span class="evt-stat-num" data-count-for="reviewer">8</span><span class="evt-stat-lbl">Reviewer Roles</span></div>
+        <div aria-label="5 Hackathon Activities"><span class="evt-stat-num" data-count-for="hackathons">5</span><span class="evt-stat-lbl">Hackathon Activities</span></div>
+        <div aria-label="10 Memberships"><span class="evt-stat-num" data-count-for="memberships">10</span><span class="evt-stat-lbl">Memberships</span></div>
+        <div aria-label="15 Outreach Items"><span class="evt-stat-num" data-count-for="other">15</span><span class="evt-stat-lbl">Outreach Items</span></div>
       </div>
     </div>
   </div>
@@ -188,15 +188,15 @@
 <div class="evt-tab-wrap">
   <div class="container">
     <div class="evt-tab-nav">
-      <button class="evt-tab-btn active" onclick="evtTab('leadership',this)">Leadership <span class="tab-count" data-count-for="leadership">…</span></button>
-      <button class="evt-tab-btn" onclick="evtTab('talks',this)">Talks <span class="tab-count" data-count-for="talks">…</span></button>
-      <button class="evt-tab-btn" onclick="evtTab('seminars',this)">Seminars <span class="tab-count" data-count-for="seminars">…</span></button>
-      <button class="evt-tab-btn" onclick="evtTab('workshops',this)">Workshops <span class="tab-count" data-count-for="workshops">…</span></button>
-      <button class="evt-tab-btn" onclick="evtTab('conferences',this)">Conferences <span class="tab-count" data-count-for="conferences">…</span></button>
-      <button class="evt-tab-btn" onclick="evtTab('reviewer',this)">Reviewing <span class="tab-count" data-count-for="reviewer">…</span></button>
-      <button class="evt-tab-btn" onclick="evtTab('hackathons',this)">Hackathons <span class="tab-count" data-count-for="hackathons">…</span></button>
-      <button class="evt-tab-btn" onclick="evtTab('memberships',this)">Memberships <span class="tab-count" data-count-for="memberships">…</span></button>
-      <button class="evt-tab-btn" onclick="evtTab('other',this)">Community Outreach <span class="tab-count" data-count-for="other">…</span></button>
+      <button class="evt-tab-btn active" onclick="evtTab('leadership',this)">Leadership <span class="tab-count" data-count-for="leadership">3</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('talks',this)">Talks <span class="tab-count" data-count-for="talks">11</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('seminars',this)">Seminars <span class="tab-count" data-count-for="seminars">2</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('workshops',this)">Workshops <span class="tab-count" data-count-for="workshops">3</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('conferences',this)">Conferences <span class="tab-count" data-count-for="conferences">29</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('reviewer',this)">Reviewing <span class="tab-count" data-count-for="reviewer">8</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('hackathons',this)">Hackathons <span class="tab-count" data-count-for="hackathons">5</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('memberships',this)">Memberships <span class="tab-count" data-count-for="memberships">10</span></button>
+      <button class="evt-tab-btn" onclick="evtTab('other',this)">Community Outreach <span class="tab-count" data-count-for="other">15</span></button>
     </div>
   </div>
 </div>
@@ -1020,12 +1020,16 @@
 
       function addMediaButton(url, label, icon) {
         if (!url || url.trim() === '') return;
+        var alreadyLinked = Array.prototype.some.call(meta.querySelectorAll('a[href]'), function (link) {
+          return link.getAttribute('href') === url;
+        });
+        if (alreadyLinked) return;
         var a = document.createElement('a');
         a.href = url;
         a.target = '_blank';
         a.rel = 'noopener';
         a.className = 'cert-btn';
-        a.innerHTML = '<i class="fa fa-' + icon + '"></i> ' + label;
+        a.innerHTML = '<i class="fa fa-' + icon + '" aria-hidden="true"></i> ' + label;
         meta.appendChild(a);
       }
 
@@ -1033,10 +1037,10 @@
       var certIcon = /\.(jpg|jpeg|png)$/i.test(cert || '') ? 'file-image-o'
                    : /\.html?$/i.test(cert || '') ? 'file-text-o' : 'file-pdf-o';
 
-      addMediaButton(card.getAttribute('data-photo'), 'View photos', 'picture-o');
+      addMediaButton(card.getAttribute('data-photo'), 'View photos / blog', 'picture-o');
       addMediaButton(cert, 'View certificate', certIcon);
       addMediaButton(card.getAttribute('data-badge'), 'View member badge', 'id-badge');
-      addMediaButton(card.getAttribute('data-blog'), 'View blog archive', 'book');
+      addMediaButton(card.getAttribute('data-blog'), 'View photos / blog', 'book');
     });
 
     /* Stagger initial animations */
