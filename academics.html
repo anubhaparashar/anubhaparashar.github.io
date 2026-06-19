@@ -1617,6 +1617,34 @@
         <!-- -------- EXPERT TALKS -------- -->
         <div class="acad-section" id="acad-talks">
 
+          <!-- ET 10 Global AI Jaipur -->
+          <div class="conf-card academic-card" data-academic-item data-year="2025" data-tags="talks, ai, llm, rag, global ai jaipur" data-blog-post data-blog-section="academics" data-academic-category="talks" data-photo-taken-on="3 May 2025" id="et-10">
+            <div class="conf-card-header">
+              <h3><span class="conf-num">10</span>Fundamentals of LLMs &amp; RAG — Global AI Jaipur</h3>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>3 May 2025</span>
+                <span><i class="fa fa-map-marker"></i>Jaipur, India</span>
+              </div>
+            </div>
+            <div class="conf-card-body">
+              <p class="conf-desc">Invited speaker session at Global AI Jaipur covering the fundamentals of large language models and retrieval-augmented generation.</p>
+            </div>
+          </div>
+
+          <!-- ET 11 IoT and AI Workshop -->
+          <div class="conf-card academic-card" data-academic-item data-year="2023" data-tags="talks, workshop, iot, ai, embedded systems, sigai" data-blog-post data-blog-section="academics" data-academic-category="talks" data-photo-taken-on="2 March 2023" id="et-11">
+            <div class="conf-card-header">
+              <h3><span class="conf-num">11</span>IoT and AI Workshop — MUJ ACM SIGAI Student Chapter</h3>
+              <div class="conf-meta">
+                <span><i class="fa fa-calendar"></i>2 March 2023</span>
+                <span><i class="fa fa-map-marker"></i>Manipal University Jaipur, Jaipur, India</span>
+              </div>
+            </div>
+            <div class="conf-card-body">
+              <p class="conf-desc">Workshop session aimed at promoting Embedded Systems, Artificial Intelligence, and the Internet of Things.</p>
+            </div>
+          </div>
+
           <!-- ET 01 Expert Talk -->
           <div class="conf-card academic-card" data-academic-item data-year="2023" data-tags="talks, expert talk" data-blog-post data-blog-section="academics" data-academic-category="talks" data-photo-taken-on="25–27 September 2023" id="et-01">
             <div class="conf-card-header">
@@ -3144,28 +3172,8 @@
     }
 
     function renderCounts() {
-      categories.forEach(function(category) {
-        var count = document.querySelectorAll('[data-academic-item][data-academic-category="' + category + '"]').length;
-        document.querySelectorAll('[data-count-for="' + category + '"]').forEach(function(el) {
-          el.textContent = count;
-        });
-      });
-      var total = document.querySelectorAll('[data-academic-item]').length;
-      document.querySelectorAll('[data-count-for="all"], [data-count-for="academics"]').forEach(function(el) {
-        el.textContent = total;
-      });
-
-      var quick = document.getElementById('academicQuickStats');
-      if (quick) {
-        quick.innerHTML = '<ul style="list-style:none;padding:0;margin:0;">' +
-          '<li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eef0ff;font-size:.84rem;"><span>Total Academics</span><strong data-count-for="academics">' + total + '</strong></li>' +
-          categories.map(function(category, index) {
-            var border = index === categories.length - 1 ? '' : 'border-bottom:1px solid #eef0ff;';
-            var count = document.querySelectorAll('[data-academic-item][data-academic-category="' + category + '"]').length;
-            return '<li style="display:flex;justify-content:space-between;padding:8px 0;' + border + 'font-size:.84rem;">' +
-              '<span>' + labels[category] + '</span><strong data-count-for="' + category + '">' + count + '</strong></li>';
-          }).join('') +
-        '</ul>';
+      if (window.AcademicData) {
+        window.AcademicData.renderAcademicDomCounts(document);
       }
     }
 

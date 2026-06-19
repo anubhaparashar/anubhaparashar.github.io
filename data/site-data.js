@@ -315,27 +315,29 @@ var SITE_POSTS = [
 
   /* ── ACADEMICS — EXPERT TALKS ───────────────────────── */
   {
-    id:      'post-et-workshop-2018',
+    id:      'post-et-global-ai-jaipur-2025',
     cat:     'academics',
-    tags:    'Talks,Workshop,FDP,Teaching,Technology',
-    date:    'Feb, 2018',
+    subCategory: 'Talks',
+    tags:    'Talks,AI,LLM,RAG,Technology',
+    date:    '3 May 2025',
     views:   '',
-    img:     'files/8. Blog/1. academic/4. expert talk/1/20180208_143012.jpg',
-    title:   'Workshop & Expert Session',
-    excerpt: 'A focused workshop and expert session bringing together classroom teaching, faculty development, and applied technology discussion for student and faculty learning.',
-    link:    'academics.html#et-01',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'Fundamentals of LLMs & RAG — Global AI Jaipur',
+    excerpt: 'Invited speaker session at Global AI Jaipur covering the fundamentals of large language models and retrieval-augmented generation.',
+    link:    'academics.html#et-10',
     badge:   'Academics'
   },
   {
-    id:      'post-et-online-session',
+    id:      'post-et-iot-ai-workshop-2023',
     cat:     'academics',
-    tags:    'Talks,Faculty Visit,Technology,Teaching',
-    date:    '2020',
+    subCategory: 'Talks',
+    tags:    'Talks,Workshop,IoT,AI,Embedded Systems',
+    date:    '2 March 2023',
     views:   '',
-    img:     'files/8. Blog/1. academic/4. expert talk/2/FB_IMG_1594393539551.jpg',
-    title:   'Online Expert Session',
-    excerpt: 'An online academic session designed to keep learning active beyond the classroom, combining presentation material, certification, and remote knowledge sharing.',
-    link:    'academics.html#et-01',
+    img:     'files/8. Blog/1. academic/academic.jpg',
+    title:   'IoT and AI Workshop — MUJ ACM SIGAI Student Chapter',
+    excerpt: 'Workshop session aimed at promoting Embedded Systems, Artificial Intelligence, and the Internet of Things at Manipal University Jaipur.',
+    link:    'academics.html#et-11',
     badge:   'Academics'
   },
   {
@@ -1358,6 +1360,7 @@ var SITE_POSTS = [
   function inferSubCategoryKey(item) {
     var explicit = normalizeKey(item.subCategory || item.subCategoryKey);
     if (explicit) {
+      if (explicit === 'talk' || explicit === 'talks') return 'experttalks';
       if (explicit === 'experttalk' || explicit === 'experttalks') return 'experttalks';
       if (explicit === 'facultyvisit' || explicit === 'facultyvisits') return 'facultyvisits';
       if (explicit === 'socialactivity' || explicit === 'socialactivities') return 'social';
@@ -1503,6 +1506,19 @@ var SITE_POSTS = [
     return counts;
   }
 
+  function countAcademicPosts() {
+    var counts = {};
+    ACADEMIC_CATEGORY_ORDER.forEach(function(slug) { counts[slug] = 0; });
+    SUBCATEGORY_ORDER.forEach(function(key) {
+      var slug = SUBCATEGORY_TO_ACADEMIC_SLUG[key] || key;
+      counts[slug] = getItemsBySubCategory(key).length;
+    });
+    counts.academics = ACADEMIC_CATEGORY_ORDER.reduce(function(total, slug) {
+      return total + (counts[slug] || 0);
+    }, 0);
+    return counts;
+  }
+
   function applyAcademicCounts(counts, root) {
     root = root || document;
     counts = counts || {};
@@ -1526,7 +1542,8 @@ var SITE_POSTS = [
 
   function renderAcademicDomCounts(root) {
     root = root || document;
-    var counts = countAcademicCards(root);
+    var counts = countAcademicPosts();
+    if (!counts.academics) counts = countAcademicCards(root);
     var container = root.querySelector('#academicQuickStats');
     if (container) {
       var rows = [{ key: 'academics', label: ACADEMIC_CATEGORY_LABELS.academics, count: counts.academics }];
@@ -1547,31 +1564,9 @@ var SITE_POSTS = [
 
   function renderAcademicCountsFromUrl(url, root) {
     root = root || document;
-    var fallbackCounts = {
-      academics: 74,
-      leadership: 3,
-      conferences: 20,
-      workshops: 14,
-      talks: 9,
-      'faculty-visits': 6,
-      events: 6,
-      hackathon: 3,
-      'social-activities': 13
-    };
-    applyAcademicCounts(fallbackCounts, root);
-    if (!global.fetch || typeof global.DOMParser === 'undefined') return Promise.resolve(fallbackCounts);
-    return global.fetch(url || 'academics.html', { cache: 'no-cache' })
-      .then(function(response) { return response.ok ? response.text() : ''; })
-      .then(function(html) {
-        if (!html) return fallbackCounts;
-        var doc = new DOMParser().parseFromString(html, 'text/html');
-        var counts = countAcademicCards(doc);
-        if (!counts.conferences) counts.conferences = fallbackCounts.conferences;
-        if (!counts.workshops) counts.workshops = fallbackCounts.workshops;
-        applyAcademicCounts(counts, root);
-        return counts;
-      })
-      .catch(function() { return fallbackCounts; });
+    var counts = countAcademicPosts();
+    applyAcademicCounts(counts, root);
+    return Promise.resolve(counts);
   }
 
   function renderAcademicQuickStats(root) {
@@ -1678,6 +1673,7 @@ var SITE_POSTS = [
     getProfessionalTagEntries: professionalTagEntries,
     getDisplayTags: displayTagsArray,
     countAcademicCards: countAcademicCards,
+    countAcademicPosts: countAcademicPosts,
     applyAcademicCounts: applyAcademicCounts,
     renderAcademicDomCounts: renderAcademicDomCounts,
     renderAcademicCountsFromUrl: renderAcademicCountsFromUrl,

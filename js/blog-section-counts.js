@@ -2,7 +2,7 @@
   'use strict';
 
   const BLOG_SECTIONS = [
-    { slug: 'academics', label: 'Academics', href: 'academics.html', source: 'academics.html', countSelector: '[data-blog-post][data-blog-section="academics"]', fallbackCount: 74 },
+    { slug: 'academics', label: 'Academics', href: 'academics.html', source: 'academics.html', countSelector: '[data-blog-post][data-blog-section="academics"]', fallbackCount: 0 },
     { slug: 'sports-wellness', label: 'Sports & Wellness', href: 'sports.html', source: 'sports.html', countSelector: '[data-blog-post][data-blog-section="sports-wellness"]', fallbackCount: 30 },
     { slug: 'social-life', label: 'Social Life', href: 'social-life.html', source: 'social-life.html', countSelector: '[data-blog-post][data-blog-section="social-life"]', fallbackCount: 6 },
     { slug: 'avocations', label: 'Avocations', href: 'avocations.html', source: 'avocations.html', countSelector: '[data-blog-post][data-blog-section="avocations"]', fallbackCount: 14 },
@@ -54,6 +54,9 @@
   }
 
   function fallbackValue(section) {
+    if (section.slug === 'academics' && window.SiteData) {
+      return window.SiteData.countAcademicPosts().academics;
+    }
     return section.fallbackLabel || section.fallbackCount;
   }
 
@@ -94,6 +97,9 @@
   }
 
   function fetchCount(section) {
+    if (section.slug === 'academics' && window.SiteData) {
+      return Promise.resolve(window.SiteData.countAcademicPosts().academics);
+    }
     if (currentPageName() === section.source) {
       markLikelyPosts(document, section.slug);
       const count = countInDocument(document, section.slug);
