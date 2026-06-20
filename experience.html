@@ -579,6 +579,25 @@
       padding: 2px 8px;
       margin-bottom: 4px;
     }
+    .pearce-skill-group {
+      padding: 9px 14px;
+      border-bottom: 1px solid #e8eef5;
+    }
+    .pearce-skill-group:last-child { border-bottom: none; }
+    .pearce-skill-group h5 {
+      color: #1e4d7b;
+      font-size: .72rem;
+      font-weight: 800;
+      margin: 0 0 6px;
+      letter-spacing: .25px;
+    }
+    .pearce-tools-line {
+      color: #66717f;
+      font-size: .68rem;
+      line-height: 1.6;
+      margin: 2px 0 0;
+    }
+    .pearce-tools-line strong { color: #1e4d7b; }
 
     /* ── MOBILE ── */
     @media (max-width: 767px) {
@@ -666,92 +685,191 @@
             <span class="badge-current">&#9679; Current</span>
             <div class="card-period" style="color:#1e4d7b;">Jan 2025 – Present</div>
             <h3>Analytics &amp; AI Engineer</h3>
-            <p class="card-company"><i class="fa fa-cogs" style="color:#1e4d7b;"></i> Pearce Services</p>
+            <p class="card-company"><i class="fa fa-cogs" style="color:#1e4d7b;"></i> Pearce Services Global Pvt. Ltd.</p>
             <p class="card-location"><i class="fa fa-map-marker"></i> Gurugram, India</p>
-            <ul class="card-bullets">
-              <li><strong>Drone-Based Solar Panel Defect Detection:</strong> Designed and trained YOLO-based models on 10,000+ RGB + thermal images — 0.92 mAP, 0.88 recall for cracks, diode failures &amp; hotspots. Optimised for NVIDIA Jetson edge deployment, reducing manual survey time by 70%.</li>
-              <li><strong>Hybrid ACO Scheduling Algorithm:</strong> Built Ant Colony Optimisation with heuristic cost functions for wind technician scheduling — 25% reduction in travel distance, 30% boost in schedule feasibility, projecting $200K annual savings.</li>
-              <li><strong>Wind Speed Forecasting POC:</strong> Compared Linear Regression, LSTM &amp; GRU on 50,000+ turbine records; achieved 0.4 m/s MAE; identified 8-hour maintenance windows based on wind threshold — enabling proactive scheduling and reducing reactive downtime.</li>
-            </ul>
+            <p class="card-overview">Working as an Analytics &amp; AI Engineer at Pearce Services, building production-ready AI, machine learning, GenAI, computer vision, predictive maintenance, forecasting, optimization, GIS automation, Snowflake analytics, and edge AI solutions for field operations and operational decision support.</p>
+            <p class="card-overview">My work focuses on transforming complex field, asset, inspection, scheduling, maintenance, and infrastructure data into scalable AI systems, ML pipelines, inference APIs, intelligent dashboards, automation workflows, and business-ready decision-support platforms. The role combines applied machine learning, cloud-native deployment, geospatial analytics, computer vision, optimization algorithms, data engineering, Snowflake-based analytics, and MLOps practices to solve real-world operational problems.</p>
 
             <!-- Projects toggle -->
-            <button class="pearce-toggle" onclick="togglePearceProjects(this)" aria-expanded="false">
-              <i class="fa fa-briefcase"></i> 12 Projects at Pearce <i class="fa fa-chevron-down pearce-chevron"></i>
+            <button type="button" class="pearce-toggle" onclick="togglePearcePanel(this)" aria-expanded="false" aria-controls="pearceProjectsList">
+              <i class="fa fa-briefcase"></i> 16 Projects at Pearce <i class="fa fa-chevron-down pearce-chevron"></i>
             </button>
             <div class="pearce-projects" id="pearceProjectsList" style="display:none;">
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Jan – Jul 2025</span>
-                <strong>Brute Force Wind Technician Scheduling Optimization</strong>
-                <p>Evaluated and benchmarked an existing brute-force scheduling engine; conducted performance comparison with Ant Colony Optimization (ACO); modeled operational constraints including availability windows, job duration, and skill mapping.</p>
+                <span class="pearce-proj-period">Current Initiative</span>
+                <strong>Predictive &amp; Preventive Maintenance</strong>
+                <p>Built analytics and machine learning workflows to evaluate maintenance effectiveness, forecast short-term asset failure risk, generate risk scores, and recommend prioritized maintenance actions. Developed leakage-safe feature engineering pipelines, model scoring workflows, business-facing dashboards, health scores, priority buckets, reason codes, and maintenance action recommendations using Python, Scikit-learn, Snowflake, Streamlit, and MLOps practices.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Current Initiative</span>
+                <strong>Snowflake-Based Decommissioning Analytics</strong>
+                <p>Built Snowflake-driven analytics workflows for decommissioning operations, including data ingestion, SQL transformation, validation checks, reconciliation logic, and reporting-ready datasets. The solution supports operational visibility across asset and site decommissioning status, exception tracking, dependency checks, progress monitoring, and structured business reporting.</p>
               </div>
               <div class="pearce-proj-item">
                 <span class="pearce-proj-period">Feb 2025 – Present</span>
-                <strong>Drone-Based Inspection for Solar Panel Defects</strong>
-                <p>Designed and trained object detection models for aerial inspection; optimized for edge deployment on Jetson/mobile; reduced manual inspection time significantly with automated detection pipelines.</p>
+                <strong>Drone-Based Solar Panel Defect Detection</strong>
+                <p>Designed and trained YOLO-based object detection models on RGB and thermal inspection data to detect solar panel cracks, diode failures, hotspots, and other defect patterns. Optimized the pipeline for NVIDIA Jetson edge deployment to accelerate field inspection, reduce manual review effort, and enable scalable computer vision-based defect identification.</p>
               </div>
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Mar 2025 – Present</span>
-                <strong>Offline Chatbot Prototype (Mobile Edge AI Initiative)</strong>
-                <p>Designed an offline semantic retrieval assistant for field technicians using embedding + vector search architecture; conducted DeepSeek on-device inference experiments; integrated into React Native mobile app.</p>
-              </div>
-              <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Apr – Jul 2025</span>
-                <strong>Technician Backfill Lifecycle Automation &amp; Cross-Week Schedule Validation</strong>
-                <p>Implemented state-aware backfill lifecycle logic across Week 1–3 scheduling cycles; automated reassignment for technicians returning from PTO; built cross-file consistency validation across CSV and Excel artifacts.</p>
-              </div>
-              <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Apr – Jul 2025</span>
-                <strong>Hybrid Scheduling Algorithm with ACO (Cost Optimization Initiative)</strong>
-                <p>Built ACO-based optimization logic for technician scheduling; integrated heuristic cost functions aligned with real operational constraints; achieved significant reduction in travel cost and improved schedule feasibility.</p>
+                <span class="pearce-proj-period">Jan – Jul 2025</span>
+                <strong>Wind Technician Scheduling Optimization</strong>
+                <p>Developed and benchmarked scheduling optimization workflows using Ant Colony Optimization, heuristic cost functions, technician availability, job duration, skill mapping, PTO handling, and route-efficiency constraints. The system improves technician allocation, reduces travel inefficiencies, and supports feasible field service schedules.</p>
               </div>
               <div class="pearce-proj-item">
                 <span class="pearce-proj-period">May 2025</span>
-                <strong>Wind Speed Forecasting POC – Time Series Intelligence</strong>
-                <p>Analyzed 1-year wind turbine dataset (50,000+ records); implemented and compared Linear Regression, LSTM, and GRU models; identified 8-hour maintenance windows based on wind threshold (&lt; 20.02 m/s).</p>
+                <strong>Wind Speed Forecasting</strong>
+                <p>Built time-series forecasting models using Linear Regression, LSTM, and GRU on wind turbine and weather-related data to identify safe maintenance windows and support proactive scheduling decisions for field operations.</p>
               </div>
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Jun 2025</span>
-                <strong>Azure Cloud Adaptation for Wind Scheduling Data Processing</strong>
-                <p>Refactored offline scheduling preprocessing into Azure Blob storage–compatible pipeline; developed the generate_svc_model_input_technician_func module; conducted deployment validation and integration testing in Azure.</p>
+                <span class="pearce-proj-period">Current Initiative</span>
+                <strong>Execution-Aware Agentic VRP Solver</strong>
+                <p>Developed production-grade vehicle routing and scheduling optimization using OR-Tools, PyVRP, multiple solver backends, operational scenarios, route locking, and Gemini-powered Agentic AI reasoning. The workflow supports re-optimization, constraint-aware routing, scenario comparison, and decision assistance for field planning.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Mar 2025 – Present</span>
+                <strong>Offline Field Chatbot</strong>
+                <p>Designed an offline semantic retrieval assistant for field technicians using embeddings, FAISS vector search, edge AI concepts, and on-device inference experiments. The chatbot supports technicians in low-connectivity environments by providing rapid access to relevant operational and technical information.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Feb 2026 – In Progress</span>
+                <strong>GIS, ArcGIS &amp; Pole Validation Automation</strong>
+                <p>Built AI-assisted workflows for Survey123, ArcGIS Pro, shapefile generation, CRS alignment, OCR, imagery analysis, geospatial visualization, multi-source GIS reconciliation, and confidence-based pole validation. The system supports infrastructure validation, operational quality checks, and human-in-the-loop review.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Feb 2026</span>
+                <strong>End-to-End YOLO Key Detection</strong>
+                <p>Developed a production-ready object detection system using YOLO, FastAPI, Docker, Hugging Face Spaces, and Azure Container Apps. Delivered dataset preparation, model training, inference API development, containerization, cloud deployment, and scalable object detection inference.</p>
               </div>
               <div class="pearce-proj-item">
                 <span class="pearce-proj-period">Jul 2025 – Present</span>
-                <strong>Inventory Data Cleaning &amp; Duplicate Merging (Fuzzy Logic Automation)</strong>
-                <p>Applied fuzzy matching to detect duplicate accounts across Salesforce and Netsuite; standardized naming inconsistencies; automated Excel-based preprocessing pipelines; improved data integrity across enterprise systems.</p>
+                <strong>Data Quality &amp; Fuzzy Logic Automation</strong>
+                <p>Automated duplicate account detection, data cleaning, fuzzy matching, and standardization across Salesforce, Netsuite, Excel, and operational datasets. The workflows improve data consistency, reduce manual validation effort, and support cleaner downstream analytics.</p>
               </div>
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Feb 2026</span>
-                <strong>Offline Key Detection – Mobile Edge AI Deployment</strong>
-                <p>Trained a custom YOLO model for offline key detection; optimized via quantization for TensorFlow Lite / ONNX mobile deployment; implemented real-time inference pipeline within a mobile application.</p>
+                <span class="pearce-proj-period">Current Initiative</span>
+                <strong>DevSecOps &amp; MLOps Automation</strong>
+                <p>Engineered agentic DevSecOps and MLOps workflows for CI/CD readiness checks, code quality validation, security gates, failure explanation, evidence-pack generation, deployment validation, repository preflight checks, and audit-ready automation.</p>
               </div>
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Feb 2026</span>
-                <strong>AI-Integrated Survey123 Model Deployment on ArcGIS Pro</strong>
-                <p>Developed model integration pipeline for Survey123 data in ArcGIS Pro; processed structured field input into GIS-compatible formats; automated shapefile/feature class generation with CRS alignment.</p>
+                <span class="pearce-proj-period">Apr – Jul 2025</span>
+                <strong>Technician Backfill Lifecycle Automation &amp; Cross-Week Validation</strong>
+                <p>Implemented state-aware backfill lifecycle logic across multi-week scheduling cycles, automated technician reassignment after PTO, and built CSV/Excel consistency checks to maintain reliable schedules across operational planning windows.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Jun 2025</span>
+                <strong>Azure Cloud Scheduling Data Processing</strong>
+                <p>Refactored offline scheduling preprocessing into an Azure Blob Storage-compatible data pipeline, implemented reusable technician-input generation modules, and performed deployment validation and integration testing to support cloud-based scheduling operations.</p>
               </div>
               <div class="pearce-proj-item">
                 <span class="pearce-proj-period">Feb 2026 – In Progress</span>
-                <strong>Geospatial Design &amp; GIS-Based Operational Visualization</strong>
-                <p>Building a next-generation GIS-driven visualization platform integrating AI outputs (object detection, anomaly detection) directly into ArcGIS layers; enabling real-time spatial analytics for field operations.</p>
+                <strong>Geospatial Operational Visualization</strong>
+                <p>Developed a GIS-driven visualization platform that integrates object detection and anomaly outputs into ArcGIS layers, enabling spatial analytics, infrastructure context, and clearer operational decision support for field teams.</p>
+              </div>
+              <div class="pearce-proj-item">
+                <span class="pearce-proj-period">Feb 2026</span>
+                <strong>Mobile Edge Key Detection</strong>
+                <p>Trained and quantized a custom YOLO key-detection model for TensorFlow Lite and ONNX deployment, then integrated real-time offline inference into a mobile workflow for responsive detection without continuous cloud connectivity.</p>
               </div>
               <div class="pearce-proj-item" style="border-bottom:none;">
-                <span class="pearce-proj-period">Feb 2026 – In Progress</span>
-                <strong>AI-Assisted Pole Design Validation &amp; Multi-Source Data Reconciliation</strong>
-                <p>Designing a confidence-based AI validation framework automating 13 manual checks for pole ownership verification; reconciling multi-source GIS databases (Portal, OnPath, AEP, Frontier DB) with human-in-the-loop control.</p>
+                <span class="pearce-proj-period">Jan – Jul 2025</span>
+                <strong>Brute-Force Scheduling Benchmark</strong>
+                <p>Evaluated an existing brute-force wind technician scheduling engine against optimization alternatives, modeled availability, duration, and skill constraints, and established performance baselines to guide the transition toward more scalable scheduling algorithms.</p>
               </div>
             </div>
 
-            <div class="skill-tags">
-              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">GenAI</span>
-              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">LLM</span>
-              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">YOLOv11</span>
-              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">GRU-LSTM</span>
-              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">FAISS</span>
-              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Edge AI</span>
-              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">ArcGIS</span>
-              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Azure</span>
-              <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">ACO</span>
+            <button type="button" class="pearce-toggle" onclick="togglePearcePanel(this)" aria-expanded="false" aria-controls="pearceSkillsList">
+              <i class="fa fa-code"></i> Skills &amp; Tech Stack <i class="fa fa-chevron-down pearce-chevron"></i>
+            </button>
+            <div class="pearce-projects" id="pearceSkillsList" style="display:none;">
+              <div class="pearce-skill-group">
+                <h5>AI/ML</h5>
+                <div class="skill-tags skill-tags-static">
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Python</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Machine Learning</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Deep Learning</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Scikit-learn</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Predictive Analytics</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Forecasting</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">LSTM</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">GRU</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">MLOps</span>
+                </div>
+              </div>
+              <div class="pearce-skill-group">
+                <h5>GenAI &amp; Agents</h5>
+                <div class="skill-tags skill-tags-static">
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">GenAI</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Agentic AI</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">LLMs</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Gemini</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">RAG</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">AI Agents</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Evidence Packs</span>
+                </div>
+              </div>
+              <div class="pearce-skill-group">
+                <h5>Computer Vision &amp; Edge AI</h5>
+                <div class="skill-tags skill-tags-static">
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">YOLO</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Computer Vision</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">OCR</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">NVIDIA Jetson</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">TensorFlow Lite</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">ONNX</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">FastAPI</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Docker</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Hugging Face Spaces</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Azure Container Apps</span>
+                </div>
+              </div>
+              <div class="pearce-skill-group">
+                <h5>Data &amp; Cloud</h5>
+                <div class="skill-tags skill-tags-static">
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">SQL</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Snowflake</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Streamlit</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Azure</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Azure Functions</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Azure DevOps</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Data Pipelines</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Data Reconciliation</span>
+                </div>
+              </div>
+              <div class="pearce-skill-group">
+                <h5>GIS &amp; Operations</h5>
+                <div class="skill-tags skill-tags-static">
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">ArcGIS</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Survey123</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">GIS</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Shapefiles</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">CRS Alignment</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Pole Validation</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Field Operations</span>
+                </div>
+              </div>
+              <div class="pearce-skill-group">
+                <h5>Optimization</h5>
+                <div class="skill-tags skill-tags-static">
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">OR-Tools</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">PyVRP</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Ant Colony Optimization</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Vehicle Routing</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Scheduling Optimization</span>
+                </div>
+              </div>
+              <div class="pearce-skill-group">
+                <h5>DevSecOps</h5>
+                <div class="skill-tags skill-tags-static">
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">CI/CD</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">SonarQube</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Security Gates</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Repository Preflight Checks</span>
+                  <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Audit-Ready Automation</span>
+                </div>
+              </div>
             </div>
+
+            <p class="pearce-tools-line"><strong>Tools &amp; Technologies:</strong> Python &middot; SQL &middot; Snowflake &middot; Machine Learning &middot; Deep Learning &middot; Scikit-learn &middot; GenAI &middot; Agentic AI &middot; LLMs &middot; Gemini &middot; Computer Vision &middot; YOLO &middot; OCR &middot; GIS &middot; ArcGIS &middot; Survey123 &middot; FAISS &middot; Vector Search &middot; Edge AI &middot; NVIDIA Jetson &middot; TensorFlow Lite &middot; ONNX &middot; Streamlit &middot; FastAPI &middot; Docker &middot; Azure &middot; Azure Container Apps &middot; Hugging Face &middot; OR-Tools &middot; PyVRP &middot; LSTM &middot; GRU &middot; Ant Colony Optimization &middot; Forecasting &middot; Predictive Maintenance &middot; Data Engineering &middot; Data Pipelines &middot; Data Reconciliation &middot; Fuzzy Matching &middot; MLOps &middot; CI/CD &middot; DevSecOps &middot; Automation</p>
             <div class="card-footer-row">
               <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
               <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
@@ -1209,9 +1327,9 @@
   }, { threshold: 0.12 });
   cards.forEach(function(c) { cardObs.observe(c); });
 
-  /* ── Pearce projects toggle ── */
-  function togglePearceProjects(btn) {
-    var list = document.getElementById('pearceProjectsList');
+  /* ── Pearce projects and skills toggles ── */
+  function togglePearcePanel(btn) {
+    var list = document.getElementById(btn.getAttribute('aria-controls'));
     var expanded = btn.getAttribute('aria-expanded') === 'true';
     btn.setAttribute('aria-expanded', String(!expanded));
     list.style.display = expanded ? 'none' : 'block';
@@ -1222,7 +1340,7 @@
     var groups = document.querySelectorAll('.skill-tags');
 
     groups.forEach(function(group, groupIndex) {
-      if (group.classList.contains('skill-tags-extra')) return;
+      if (group.classList.contains('skill-tags-extra') || group.classList.contains('skill-tags-static')) return;
 
       var skills = Array.prototype.filter.call(group.children, function(child) {
         return child.classList.contains('skill-tag');
