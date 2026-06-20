@@ -198,8 +198,18 @@
     .post-card.cat-social    { border-top-color:#f0a500; }
     .post-card.cat-sports    { border-top-color:#50c878; }
     .post-card.cat-avocations   { border-top-color:#c084fc; }
-    .post-card .card-img-wrap { position:relative; overflow:hidden; flex-shrink:0; }
+    .post-card .card-img-wrap {
+      position:relative; overflow:hidden; flex-shrink:0; height:135px;
+      background:linear-gradient(135deg,#f2f4f7 0%,#e3e8ef 100%);
+    }
+    .post-card .card-img-wrap::before {
+      content:''; position:absolute; inset:0;
+      display:flex; align-items:center; justify-content:center;
+      color:#71809f; font-size:.72rem; font-weight:700;
+    }
+    .post-card .card-img-wrap.thumbnail-missing::before { content:attr(data-placeholder); }
     .post-card .card-img-wrap img { width:100%; height:135px; object-fit:cover; display:block; transition:transform .35s; }
+    .post-card .card-img-wrap img.thumbnail-unavailable { visibility:hidden; }
     .post-card:hover .card-img-wrap img { transform:scale(1.05); }
     .post-card .card-cat-badge {
       position:absolute; top:12px; left:12px;
@@ -232,7 +242,7 @@
     .post-col.hidden { display:none; }
     .post-col.list-mode { flex:0 0 100%; max-width:100%; }
     .post-col.list-mode .post-card { flex-direction:row; min-height:170px; }
-    .post-col.list-mode .card-img-wrap { width:220px; }
+    .post-col.list-mode .card-img-wrap { width:220px; height:auto; min-height:170px; }
     .post-col.list-mode .card-img-wrap img { height:100%; min-height:170px; }
     .post-col.list-mode .card-body { padding:22px 24px; }
     .post-col.list-mode .card-meta { flex-wrap:wrap; }
@@ -300,7 +310,7 @@
       .archive-tools { grid-template-columns:1fr; }
       .view-toggle { width:max-content; }
       .post-col.list-mode .post-card { flex-direction:column; }
-      .post-col.list-mode .card-img-wrap { width:100%; }
+      .post-col.list-mode .card-img-wrap { width:100%; height:135px; min-height:0; }
       .post-col.list-mode .card-img-wrap img { height:135px; min-height:0; }
     }
 
@@ -670,6 +680,10 @@
   ];
   var BLOG_CATEGORY_TOTALS = window.SiteData ? window.SiteData.getBlogCategoryCounts() : {};
   var BLOG_CATEGORY_ORDER = ['academics','social','sports','avocations'];
+  var BLOG_REJECTED_THUMBNAILS = [
+    'files/8. Blog/1.png',
+    'files/8. Blog/1. academic/academic.jpg'
+  ];
   var CENTRAL_SITE_POSTS = Array.isArray(SITE_POSTS) ? SITE_POSTS.slice() : [];
   var BLOG_TOTAL_POSTS = window.SiteData ? window.SiteData.getBlogTotalCount() : 0;
 
@@ -713,9 +727,16 @@
     function add(post) {
       if (!post || BLOG_CATEGORY_ORDER.indexOf(post.cat) === -1) return;
       var key = canonicalPostKey(post);
-      if (!key || seen[key]) return;
-      seen[key] = true;
+      if (!key) return;
+      if (seen[key]) {
+        var existing = unique[seen[key] - 1];
+        if (isGenericThumbnail(existing.img) && !isGenericThumbnail(post.img)) {
+          existing.img = post.img;
+        }
+        return;
+      }
       unique.push(post);
+      seen[key] = unique.length;
     }
     (primaryPosts || []).forEach(add);
     (discoveredPosts || []).forEach(add);
@@ -740,14 +761,72 @@
   }
 
   function absoluteToRelative(url) {
-    if (!url) return '';
+    var raw = String(url || '').trim();
+    if (!raw || /^(?:data|blob|javascript):/i.test(raw)) return '';
     try {
-      var parsed = new URL(url, window.location.href);
+      var parsed = new URL(raw, window.location.href);
       if (parsed.origin === window.location.origin) {
-        return decodeURI(parsed.pathname.replace(/^\/+/, '') + parsed.search + parsed.hash);
+        return parsed.pathname.replace(/^\/+/, '') + parsed.search + parsed.hash;
       }
     } catch (error) {}
-    return url;
+    return raw;
+  }
+
+  function isGenericThumbnail(path) {
+    var normalized = absoluteToRelative(path).toLowerCase();
+    return !normalized || BLOG_REJECTED_THUMBNAILS.some(function(genericPath) {
+      return normalized === absoluteToRelative(genericPath).toLowerCase();
+    });
+  }
+
+  function placeholderLabelForPost(post) {
+    var category = String(post && post.cat || '').toLowerCase();
+    var context = [
+      post && post.subCategory,
+      post && post.subCategoryKey,
+      post && post.tags,
+      post && post.badge,
+      post && post.id,
+      post && post.link
+    ].join(' ').toLowerCase();
+
+    if (/award|achievement/.test(context)) return 'AWARD';
+    if (/hackathon/.test(context)) return 'HACKATHON';
+    if (/conference/.test(context)) return 'CONFERENCE';
+    if (/workshop/.test(context)) return 'WORKSHOP';
+    if (/expert\s*talk|\btalks?\b/.test(context)) return 'TALK';
+    if (category === 'sports') return 'SPORTS';
+    if (category === 'social') return 'SOCIAL';
+    if (category === 'academics') return 'ACADEMICS';
+    return 'BLOG';
+  }
+
+  function configureThumbnail(img, post) {
+    var requested = post && !isGenericThumbnail(post.img) ? absoluteToRelative(post.img) : '';
+    var sources = requested ? [requested] : [];
+    var wrapper = img.parentElement;
+
+    wrapper.setAttribute('data-placeholder', placeholderLabelForPost(post));
+
+    img.addEventListener('error', function() {
+      var nextIndex = Number(img.getAttribute('data-thumbnail-index') || 0) + 1;
+      if (nextIndex < sources.length) {
+        img.setAttribute('data-thumbnail-index', String(nextIndex));
+        img.src = sources[nextIndex];
+        return;
+      }
+      img.classList.add('thumbnail-unavailable');
+      wrapper.classList.add('thumbnail-missing');
+      img.removeAttribute('src');
+    });
+
+    img.setAttribute('data-thumbnail-index', '0');
+    if (sources.length) {
+      img.src = sources[0];
+    } else {
+      img.classList.add('thumbnail-unavailable');
+      wrapper.classList.add('thumbnail-missing');
+    }
   }
 
   function firstImageFrom(card, doc) {
@@ -804,7 +883,7 @@
       var stableId = explicitPostId || card.getAttribute('data-blog-post-id');
       var id = stableId || card.id || sectionSlug + '-' + recordType + '-' + (index + 1);
       var title = card.getAttribute('data-title') || cleanPostTitle(card);
-      var img = firstImageFrom(card, doc) || 'files/8. Blog/1.png';
+      var img = firstImageFrom(card, doc);
       var category = card.getAttribute('data-category') || source.cat;
       var canonical = card.getAttribute('data-canonical') || (explicitPostId ? 'post-id:' + explicitPostId : '');
       var date = card.getAttribute('data-date') || postDateFrom(card);
@@ -870,7 +949,7 @@
       col.innerHTML =
         '<div class="post-card cat-' + escapeHtml(p.cat) + '">' +
           '<a class="card-img-wrap" href="' + escapeHtml(p.link) + '">' +
-            '<img src="' + escapeHtml(p.img) + '" alt="' + escapeHtml(p.title) + '" loading="lazy" onerror="this.onerror=null;this.src=\'files/8. Blog/1.png\';">' +
+            '<img alt="' + escapeHtml(p.title) + '" loading="lazy" decoding="async">' +
             '<span class="card-cat-badge">' + escapeHtml(p.badge || p.cat) + '</span>' +
           '</a>' +
           '<div class="card-body">' +
@@ -888,6 +967,7 @@
             '</div>' +
           '</div>' +
         '</div>';
+      configureThumbnail(col.querySelector('.card-img-wrap img'), p);
       grid.appendChild(col);
     });
     archiveHasRendered = true;
