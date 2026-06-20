@@ -337,6 +337,38 @@
     .skill-tags-extra[hidden] {
       display: none !important;
     }
+    .skill-tags-source { display: none !important; }
+    .skill-groups {
+      margin-top: 12px;
+      display: grid;
+      gap: 10px;
+    }
+    .skill-group h4,
+    .skill-group h5 {
+      margin: 0 0 5px;
+      font-size: .72rem;
+      font-weight: 800;
+      color: #1e4d7b;
+      letter-spacing: .25px;
+    }
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .skill-pills span {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #eef6ff;
+      color: #0f4f8f;
+      border: 1px solid #cfe5ff;
+      font-size: .64rem;
+      font-weight: 600;
+      line-height: 1.45;
+      letter-spacing: .2px;
+    }
     .card-footer-row {
       display: flex;
       align-items: center;
@@ -579,18 +611,19 @@
       padding: 2px 8px;
       margin-bottom: 4px;
     }
-    .pearce-skill-group {
+    .pearce-projects > .skill-group {
       padding: 9px 14px;
       border-bottom: 1px solid #e8eef5;
     }
-    .pearce-skill-group:last-child { border-bottom: none; }
-    .pearce-skill-group h5 {
+    .pearce-projects > .skill-group:last-child { border-bottom: none; }
+    .pearce-projects > .skill-group h4 {
       color: #1e4d7b;
       font-size: .72rem;
       font-weight: 800;
       margin: 0 0 6px;
       letter-spacing: .25px;
     }
+    .pearce-projects.skill-groups { margin-top: 0; gap: 0; }
     .pearce-tools-line {
       color: #66717f;
       font-size: .68rem;
@@ -660,7 +693,7 @@
           <i class="fa fa-github"></i> GitHub
         </a>
         <a href="https://pearce-services.com/" target="_blank" class="hero-cta-exp">
-          <i class="fa fa-building-o"></i> Pearce Services
+          <i class="fa fa-building-o"></i> Pearce Services Global Pvt. Ltd.
         </a>
         <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="hero-cta-exp" aria-label="Open Hugging Face profile">
           <img src="img/icons/hugging-face.svg" alt="" class="hf-icon" aria-hidden="true">
@@ -677,17 +710,17 @@
     <h2 class="tl-heading">Work Experience</h2>
     <div class="timeline">
 
-      <!-- 1 · Pearce Services (left) · deep navy #1e4d7b -->
+      <!-- 1 · Pearce Services Global Pvt. Ltd. (left) · deep navy #1e4d7b -->
       <div class="tl-row">
         <div class="tl-left">
           <div class="tl-card" style="border-top-color:#1e4d7b;">
-            <img src="files/3. Experience/logo/pearce.png" class="card-logo card-logo-lg" alt="Pearce Services">
+            <img src="files/3. Experience/logo/pearce.png" class="card-logo card-logo-lg" alt="Pearce Services Global Pvt. Ltd.">
             <span class="badge-current">&#9679; Current</span>
             <div class="card-period" style="color:#1e4d7b;">Jan 2025 – Present</div>
             <h3>Analytics &amp; AI Engineer</h3>
             <p class="card-company"><i class="fa fa-cogs" style="color:#1e4d7b;"></i> Pearce Services Global Pvt. Ltd.</p>
             <p class="card-location"><i class="fa fa-map-marker"></i> Gurugram, India</p>
-            <p class="card-overview">Working as an Analytics &amp; AI Engineer at Pearce Services, building production-ready AI, machine learning, GenAI, computer vision, predictive maintenance, forecasting, optimization, GIS automation, Snowflake analytics, and edge AI solutions for field operations and operational decision support.</p>
+            <p class="card-overview">Working as an Analytics &amp; AI Engineer at Pearce Services Global Pvt. Ltd., building production-ready Artificial Intelligence (AI), Machine Learning (ML), Generative AI (GenAI), computer vision, predictive maintenance, forecasting, optimization, GIS automation, Snowflake analytics, and edge AI solutions for field operations and operational decision support.</p>
             <p class="card-overview">My work focuses on transforming complex field, asset, inspection, scheduling, maintenance, and infrastructure data into scalable AI systems, ML pipelines, inference APIs, intelligent dashboards, automation workflows, and business-ready decision-support platforms. The role combines applied machine learning, cloud-native deployment, geospatial analytics, computer vision, optimization algorithms, data engineering, Snowflake-based analytics, and MLOps practices to solve real-world operational problems.</p>
 
             <!-- Projects toggle -->
@@ -696,12 +729,12 @@
             </button>
             <div class="pearce-projects" id="pearceProjectsList" style="display:none;">
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Current Initiative</span>
+                <span class="pearce-proj-period">Present</span>
                 <strong>Predictive &amp; Preventive Maintenance</strong>
                 <p>Built analytics and machine learning workflows to evaluate maintenance effectiveness, forecast short-term asset failure risk, generate risk scores, and recommend prioritized maintenance actions. Developed leakage-safe feature engineering pipelines, model scoring workflows, business-facing dashboards, health scores, priority buckets, reason codes, and maintenance action recommendations using Python, Scikit-learn, Snowflake, Streamlit, and MLOps practices.</p>
               </div>
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Current Initiative</span>
+                <span class="pearce-proj-period">Present</span>
                 <strong>Snowflake-Based Decommissioning Analytics</strong>
                 <p>Built Snowflake-driven analytics workflows for decommissioning operations, including data ingestion, SQL transformation, validation checks, reconciliation logic, and reporting-ready datasets. The solution supports operational visibility across asset and site decommissioning status, exception tracking, dependency checks, progress monitoring, and structured business reporting.</p>
               </div>
@@ -711,7 +744,7 @@
                 <p>Designed and trained YOLO-based object detection models on RGB and thermal inspection data to detect solar panel cracks, diode failures, hotspots, and other defect patterns. Optimized the pipeline for NVIDIA Jetson edge deployment to accelerate field inspection, reduce manual review effort, and enable scalable computer vision-based defect identification.</p>
               </div>
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Jan – Jul 2025</span>
+                <span class="pearce-proj-period">Jan 2025 – Jul 2025</span>
                 <strong>Wind Technician Scheduling Optimization</strong>
                 <p>Developed and benchmarked scheduling optimization workflows using Ant Colony Optimization, heuristic cost functions, technician availability, job duration, skill mapping, PTO handling, and route-efficiency constraints. The system improves technician allocation, reduces travel inefficiencies, and supports feasible field service schedules.</p>
               </div>
@@ -721,7 +754,7 @@
                 <p>Built time-series forecasting models using Linear Regression, LSTM, and GRU on wind turbine and weather-related data to identify safe maintenance windows and support proactive scheduling decisions for field operations.</p>
               </div>
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Current Initiative</span>
+                <span class="pearce-proj-period">Present</span>
                 <strong>Execution-Aware Agentic VRP Solver</strong>
                 <p>Developed production-grade vehicle routing and scheduling optimization using OR-Tools, PyVRP, multiple solver backends, operational scenarios, route locking, and Gemini-powered Agentic AI reasoning. The workflow supports re-optimization, constraint-aware routing, scenario comparison, and decision assistance for field planning.</p>
               </div>
@@ -731,7 +764,7 @@
                 <p>Designed an offline semantic retrieval assistant for field technicians using embeddings, FAISS vector search, edge AI concepts, and on-device inference experiments. The chatbot supports technicians in low-connectivity environments by providing rapid access to relevant operational and technical information.</p>
               </div>
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Feb 2026 – In Progress</span>
+                <span class="pearce-proj-period">Feb 2026 – Present</span>
                 <strong>GIS, ArcGIS &amp; Pole Validation Automation</strong>
                 <p>Built AI-assisted workflows for Survey123, ArcGIS Pro, shapefile generation, CRS alignment, OCR, imagery analysis, geospatial visualization, multi-source GIS reconciliation, and confidence-based pole validation. The system supports infrastructure validation, operational quality checks, and human-in-the-loop review.</p>
               </div>
@@ -746,12 +779,12 @@
                 <p>Automated duplicate account detection, data cleaning, fuzzy matching, and standardization across Salesforce, Netsuite, Excel, and operational datasets. The workflows improve data consistency, reduce manual validation effort, and support cleaner downstream analytics.</p>
               </div>
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Current Initiative</span>
+                <span class="pearce-proj-period">Present</span>
                 <strong>DevSecOps &amp; MLOps Automation</strong>
                 <p>Engineered agentic DevSecOps and MLOps workflows for CI/CD readiness checks, code quality validation, security gates, failure explanation, evidence-pack generation, deployment validation, repository preflight checks, and audit-ready automation.</p>
               </div>
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Apr – Jul 2025</span>
+                <span class="pearce-proj-period">Apr 2025 – Jul 2025</span>
                 <strong>Technician Backfill Lifecycle Automation &amp; Cross-Week Validation</strong>
                 <p>Implemented state-aware backfill lifecycle logic across multi-week scheduling cycles, automated technician reassignment after PTO, and built CSV/Excel consistency checks to maintain reliable schedules across operational planning windows.</p>
               </div>
@@ -761,7 +794,7 @@
                 <p>Refactored offline scheduling preprocessing into an Azure Blob Storage-compatible data pipeline, implemented reusable technician-input generation modules, and performed deployment validation and integration testing to support cloud-based scheduling operations.</p>
               </div>
               <div class="pearce-proj-item">
-                <span class="pearce-proj-period">Feb 2026 – In Progress</span>
+                <span class="pearce-proj-period">Feb 2026 – Present</span>
                 <strong>Geospatial Operational Visualization</strong>
                 <p>Developed a GIS-driven visualization platform that integrates object detection and anomaly outputs into ArcGIS layers, enabling spatial analytics, infrastructure context, and clearer operational decision support for field teams.</p>
               </div>
@@ -771,7 +804,7 @@
                 <p>Trained and quantized a custom YOLO key-detection model for TensorFlow Lite and ONNX deployment, then integrated real-time offline inference into a mobile workflow for responsive detection without continuous cloud connectivity.</p>
               </div>
               <div class="pearce-proj-item" style="border-bottom:none;">
-                <span class="pearce-proj-period">Jan – Jul 2025</span>
+                <span class="pearce-proj-period">Jan 2025 – Jul 2025</span>
                 <strong>Brute-Force Scheduling Benchmark</strong>
                 <p>Evaluated an existing brute-force wind technician scheduling engine against optimization alternatives, modeled availability, duration, and skill constraints, and established performance baselines to guide the transition toward more scalable scheduling algorithms.</p>
               </div>
@@ -780,10 +813,10 @@
             <button type="button" class="pearce-toggle" onclick="togglePearcePanel(this)" aria-expanded="false" aria-controls="pearceSkillsList">
               <i class="fa fa-code"></i> Skills &amp; Tech Stack <i class="fa fa-chevron-down pearce-chevron"></i>
             </button>
-            <div class="pearce-projects" id="pearceSkillsList" style="display:none;">
-              <div class="pearce-skill-group">
-                <h5>AI/ML</h5>
-                <div class="skill-tags skill-tags-static">
+            <div class="pearce-projects skill-groups" id="pearceSkillsList" style="display:none;">
+              <div class="skill-group">
+                <h4>AI/ML</h4>
+                <div class="skill-pills">
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Python</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Machine Learning</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Deep Learning</span>
@@ -795,9 +828,9 @@
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">MLOps</span>
                 </div>
               </div>
-              <div class="pearce-skill-group">
-                <h5>GenAI &amp; Agents</h5>
-                <div class="skill-tags skill-tags-static">
+              <div class="skill-group">
+                <h4>GenAI &amp; Agents</h4>
+                <div class="skill-pills">
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">GenAI</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Agentic AI</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">LLMs</span>
@@ -807,9 +840,9 @@
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Evidence Packs</span>
                 </div>
               </div>
-              <div class="pearce-skill-group">
-                <h5>Computer Vision &amp; Edge AI</h5>
-                <div class="skill-tags skill-tags-static">
+              <div class="skill-group">
+                <h4>Computer Vision &amp; Edge AI</h4>
+                <div class="skill-pills">
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">YOLO</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Computer Vision</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">OCR</span>
@@ -822,9 +855,9 @@
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Azure Container Apps</span>
                 </div>
               </div>
-              <div class="pearce-skill-group">
-                <h5>Data &amp; Cloud</h5>
-                <div class="skill-tags skill-tags-static">
+              <div class="skill-group">
+                <h4>Data &amp; Cloud</h4>
+                <div class="skill-pills">
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">SQL</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Snowflake</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Streamlit</span>
@@ -835,9 +868,9 @@
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Data Reconciliation</span>
                 </div>
               </div>
-              <div class="pearce-skill-group">
-                <h5>GIS &amp; Operations</h5>
-                <div class="skill-tags skill-tags-static">
+              <div class="skill-group">
+                <h4>GIS &amp; Operations</h4>
+                <div class="skill-pills">
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">ArcGIS</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Survey123</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">GIS</span>
@@ -847,9 +880,9 @@
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Field Operations</span>
                 </div>
               </div>
-              <div class="pearce-skill-group">
-                <h5>Optimization</h5>
-                <div class="skill-tags skill-tags-static">
+              <div class="skill-group">
+                <h4>Optimization</h4>
+                <div class="skill-pills">
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">OR-Tools</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">PyVRP</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Ant Colony Optimization</span>
@@ -857,9 +890,9 @@
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Scheduling Optimization</span>
                 </div>
               </div>
-              <div class="pearce-skill-group">
-                <h5>DevSecOps</h5>
-                <div class="skill-tags skill-tags-static">
+              <div class="skill-group">
+                <h4>DevSecOps</h4>
+                <div class="skill-pills">
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">CI/CD</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">SonarQube</span>
                   <span class="skill-tag" style="background:#edf2f8;color:#1e4d7b;">Security Gates</span>
@@ -890,10 +923,10 @@
           <div class="tl-card" style="border-top-color:#3d5a7a;">
             <img src="files/3. Experience/logo/invincible_ocean_logo.jpg" class="card-logo" alt="Invincible Ocean">
             <div class="card-period" style="color:#3d5a7a;">Apr 2024 – Dec 2024</div>
-            <h3>Research Scientist – AI &amp; Metaverse</h3>
+            <h3>Research Scientist</h3>
             <p class="card-company"><i class="fa fa-flask" style="color:#3d5a7a;"></i> Invincible Ocean</p>
             <p class="card-location"><i class="fa fa-map-marker"></i> Gurugram, India</p>
-            <p class="card-overview"><strong>Worked as a Research Scientist with a strong focus on designing, deploying, and scaling AI and machine learning systems in production environments.</strong> The work combined ML pipelines, cloud architecture, LLM ecosystems, MLOps automation, real-time data systems, observability, and cloud-native deployment to build reliable AI products end to end.</p>
+            <p class="card-overview"><strong>Worked as a Research Scientist with a strong focus on designing, deploying, and scaling Artificial Intelligence (AI) and Machine Learning (ML) systems in production environments.</strong> The work combined ML pipelines, cloud architecture, Large Language Model (LLM) ecosystems, MLOps automation, real-time data systems, observability, and cloud-native deployment to build reliable AI products end to end.</p>
             <p class="card-overview">Led and contributed to cloud-native AI solutions spanning OCR, computer vision, LLM-based workflows, virtual try-on systems, chatbot development, signature matching, FinOps, automation, and cost optimization platforms. The role involved research, model experimentation, backend integration, API development, deployment planning, microservice architecture, and collaboration with cross-functional teams.</p>
             <h4 class="card-subheading">Key Projects and Contributions</h4>
             <ul class="card-bullets">
@@ -908,48 +941,12 @@
               <li>Built and supported AI/ML workflows involving Python, data science, computer vision, NLP, LLMs, OCR, Dockerized services, cloud architecture, Kubernetes, and production-oriented model deployment.</li>
               <li>Translated research concepts into scalable AI prototypes and practical product features with a structured, engineering-driven execution approach.</li>
             </ul>
-            <div class="skill-tags">
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Artificial Intelligence</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Machine Learning</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Generative AI</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">MLOps</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Cloud Architecture</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Large Language Models</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">LLM Fine-Tuning</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Amazon Bedrock</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Natural Language Processing</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Computer Vision</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">OCR</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Deep Learning</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Data Science</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Python</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">AWS</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Kubernetes</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Helm Charts</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">CI/CD</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Docker</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Microservices</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">API Development</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Model Deployment</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Prometheus</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Grafana</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">OpenTelemetry</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Cloud-Native Architecture</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Observability</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">PaddleOCR</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">PaddleNLP</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Tesseract OCR</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Gemini</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Label Studio</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Virtual Try-On</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Signature Matching</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">FinOps</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Cost Optimization</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Predictive Analytics</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Research and Development</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Product Development</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Technical Documentation</span>
-              <span class="skill-tag" style="background:#edf1f5;color:#3d5a7a;">Team Leadership</span>
+            <div class="skill-groups">
+              <div class="skill-group"><h4>AI/ML &amp; GenAI</h4><div class="skill-pills"><span>Artificial Intelligence</span><span>Machine Learning</span><span>Generative AI</span><span>MLOps</span><span>Large Language Models</span><span>LLM Fine-Tuning</span><span>Natural Language Processing</span><span>Deep Learning</span><span>Data Science</span><span>Predictive Analytics</span></div></div>
+              <div class="skill-group"><h4>Cloud &amp; Deployment</h4><div class="skill-pills"><span>Cloud Architecture</span><span>Amazon Bedrock</span><span>AWS</span><span>Kubernetes</span><span>Helm Charts</span><span>CI/CD</span><span>Docker</span><span>Microservices</span><span>API Development</span><span>Model Deployment</span><span>Cloud-Native Architecture</span></div></div>
+              <div class="skill-group"><h4>Computer Vision &amp; Document AI</h4><div class="skill-pills"><span>Computer Vision</span><span>OCR</span><span>PaddleOCR</span><span>PaddleNLP</span><span>Tesseract OCR</span><span>Gemini</span><span>Label Studio</span><span>Virtual Try-On</span><span>Signature Matching</span></div></div>
+              <div class="skill-group"><h4>Observability &amp; FinOps</h4><div class="skill-pills"><span>Prometheus</span><span>Grafana</span><span>OpenTelemetry</span><span>Observability</span><span>FinOps</span><span>Cost Optimization</span></div></div>
+              <div class="skill-group"><h4>Engineering &amp; Leadership</h4><div class="skill-pills"><span>Python</span><span>Research and Development</span><span>Product Development</span><span>Technical Documentation</span><span>Team Leadership</span></div></div>
             </div>
             <div class="card-footer-row">
               <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
@@ -967,55 +964,29 @@
           <div class="tl-card" style="border-top-color:#2d6b5e;">
             <img src="files/3. Experience/logo/muj.png" class="card-logo card-logo-lg" alt="Manipal University Jaipur">
             <div class="card-period" style="color:#2d6b5e;">Jan 2018 – Apr 2023</div>
-            <h3>Doctoral Research</h3>
+            <h3>Doctoral Researcher</h3>
             <p class="card-company"><i class="fa fa-flask" style="color:#2d6b5e;"></i> Researcher @ Biometrics Lab</p>
             <p class="card-company"><i class="fa fa-graduation-cap" style="color:#2d6b5e;"></i> Manipal University Jaipur</p>
-            <p class="card-location"><i class="fa fa-map-marker"></i> Jaipur, Rajasthan, India</p>
+            <p class="card-location"><i class="fa fa-map-marker"></i> Jaipur, India</p>
             <p class="card-overview">Conducted doctoral research in Artificial Intelligence, Deep Learning, Computer Vision, and Gait Biometrics, with a focus on robust human identification and privacy-preserving recognition systems.</p>
-            <p class="card-overview">The doctoral research focused on developing deep learning-based approaches for gait recognition, enabling automated identification of individuals based on body shape, walking style, motion patterns, and real-world covariates such as clothing variation, occlusion, view angle, and appearance changes.</p>
-            <p class="card-overview">The Ph.D. thesis was titled <strong>&ldquo;Robust Gait Recognition System Using Deep Learning to Handle Covariates.&rdquo;</strong> The work involved designing a universal deep learning pipeline for recognizing individuals from gait patterns under challenging covariate conditions.</p>
-            <p class="card-overview">As part of the doctoral research, collaborated with <strong>FER, University of Zagreb, Croatia</strong>, during <strong>Sep 2018 – Dec 2019</strong>, under the guidance and collaboration of <strong>Prof. Slobodan Ribarić</strong>. The work explored privacy-aware AI methods for human recognition, biometric data protection, and gait de-identification using deep learning techniques.</p>
+            <p class="card-overview">The research focused on developing deep learning-based approaches for gait recognition, enabling automated identification of individuals based on body shape, walking style, silhouette structure, and motion patterns. The work also explored gait de-identification using deep learning techniques to modify geometry and texture while preserving the naturalness and usability of gait data.</p>
+            <p class="card-overview">As part of the doctoral work, collaborated with <strong>FER, University of Zagreb, Croatia</strong>, on privacy-aware AI methods for human recognition and biometric data protection.</p>
             <h4 class="card-subheading">Key Research Areas and Contributions</h4>
             <ul class="card-bullets">
-              <li><strong>Robust Gait Recognition:</strong> Designed deep learning-based gait recognition pipelines for identifying individuals from walking style, body shape, motion patterns, and gait features.</li>
-              <li><strong>Covariate-Invariant Recognition:</strong> Worked on recognition under challenging conditions such as clothing variation, occlusion, view angle changes, appearance differences, and adversarial changes.</li>
-              <li><strong>Privacy-Preserving Gait De-Identification:</strong> Developed deep learning approaches to modify geometry and texture while preserving the naturalness and usability of gait data.</li>
-              <li><strong>Computer Vision-Based Human Recognition:</strong> Applied computer vision and deep learning techniques for human identification, biometric authentication, and surveillance-oriented recognition systems.</li>
-              <li><strong>Biometric Data Protection:</strong> Explored privacy-aware AI methods for protecting gait datasets and reducing identity leakage in biometric recognition pipelines.</li>
-              <li><strong>Model Development and Experimentation:</strong> Built and evaluated PyTorch-based deep learning models for motion analysis, shape analysis, feature extraction, and gait-based classification.</li>
-              <li><strong>International Research Exposure:</strong> Collaborated with FER, University of Zagreb, Croatia, on privacy-preserving human recognition and biometric de-identification research.</li>
+              <li>Developed deep learning-based gait recognition approaches for human identification using body shape, walking patterns, and motion-based biometric cues.</li>
+              <li>Worked on privacy-preserving gait de-identification methods to protect biometric identity while maintaining realistic gait appearance and usability.</li>
+              <li>Explored computer vision and pattern recognition methods for silhouette-based and appearance-based human recognition.</li>
+              <li>Conducted research in biometric authentication, privacy-aware machine learning, and deep learning-based motion analysis.</li>
+              <li>Collaborated with FER, University of Zagreb, Croatia, on gait biometrics, privacy-preserving AI, and human recognition research.</li>
+              <li>Used Python, PyTorch, deep learning models, computer vision workflows, and experimental evaluation pipelines for research implementation.</li>
+              <li>Contributed to research publications, academic writing, experimentation, and evaluation in AI, biometrics, gait recognition, and privacy-preserving recognition systems.</li>
             </ul>
-            <div class="skill-tags">
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Artificial Intelligence</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Machine Learning</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Deep Learning</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Computer Vision</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Gait Recognition</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Gait Biometrics</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Biometrics</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Human Identification</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Privacy-Preserving AI</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Gait De-Identification</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Biometric Authentication</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Pattern Recognition</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Image Processing</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Motion Analysis</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Shape Analysis</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">PyTorch</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Python</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Neural Networks</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Feature Extraction</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Model Development</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Research Methodology</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Academic Research</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Doctoral Research</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Privacy-Aware Machine Learning</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Biometric Data Protection</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">FER University of Zagreb</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">University of Zagreb</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Research Collaboration</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Technical Writing</span>
-              <span class="skill-tag" style="background:#ecf4f2;color:#2d6b5e;">Research Publications</span>
+            <div class="skill-groups">
+              <div class="skill-group"><h4>AI/ML</h4><div class="skill-pills"><span>Python</span><span>Deep Learning</span><span>Machine Learning</span><span>Neural Networks</span><span>PyTorch</span></div></div>
+              <div class="skill-group"><h4>Computer Vision</h4><div class="skill-pills"><span>Computer Vision</span><span>Image Processing</span><span>Pattern Recognition</span><span>Motion Analysis</span></div></div>
+              <div class="skill-group"><h4>Biometrics</h4><div class="skill-pills"><span>Gait Recognition</span><span>Gait Biometrics</span><span>Human Identification</span><span>Biometric Authentication</span></div></div>
+              <div class="skill-group"><h4>Privacy AI</h4><div class="skill-pills"><span>Privacy-Preserving AI</span><span>Gait De-identification</span><span>Biometric Data Protection</span><span>Human Recognition Systems</span></div></div>
+              <div class="skill-group"><h4>Research</h4><div class="skill-pills"><span>Academic Research</span><span>Research Publications</span><span>Experimental Evaluation</span><span>Technical Writing</span></div></div>
             </div>
             <div class="card-footer-row">
               <a href="https://github.com/dranubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
@@ -1055,7 +1026,13 @@
                 <li><strong>Academic Leadership:</strong> Supported academic and administrative responsibilities including alumni coordination, IoT lab coordination, placement coordination, library coordination, and student welfare activities.</li>
                 <li><strong>Research-Oriented Learning:</strong> Strengthened project-based and research-driven learning by encouraging students to work on practical AI, computer vision, IoT, and intelligent system applications.</li>
               </ul>
-              <div class="skill-tags">
+              <div class="skill-groups">
+                <div class="skill-group"><h4>AI &amp; Technical</h4><div class="skill-pills"><span>Artificial Intelligence</span><span>Machine Learning</span><span>Deep Learning</span><span>Computer Vision</span><span>Natural Language Processing</span><span>Internet of Things</span><span>Neural Networks</span><span>Biometrics</span><span>Gait Recognition</span><span>Image Processing</span><span>Humanoid Robotics</span><span>Python</span><span>Privacy-Preserving AI</span><span>Pattern Recognition</span><span>Intelligent Systems</span></div></div>
+                <div class="skill-group"><h4>Research</h4><div class="skill-pills"><span>Research Supervision</span><span>Academic Research</span><span>AI Research</span><span>Research Publications</span><span>Technical Documentation</span></div></div>
+                <div class="skill-group"><h4>Teaching &amp; Mentoring</h4><div class="skill-pills"><span>Student Mentoring</span><span>Higher Education Teaching</span><span>Curriculum Delivery</span><span>Project Guidance</span></div></div>
+                <div class="skill-group"><h4>Academic Leadership</h4><div class="skill-pills"><span>Laboratory Coordination</span><span>Academic Administration</span><span>Placement Coordination</span><span>Alumni Coordination</span><span>Library Coordination</span><span>Student Welfare</span><span>Academic Leadership</span></div></div>
+              </div>
+              <div class="skill-tags skill-tags-source" aria-hidden="true">
                 <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Artificial Intelligence</span>
                 <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Machine Learning</span>
                 <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Deep Learning</span>
@@ -1105,7 +1082,13 @@
                 <li><strong>Academic Coordination:</strong> Managed responsibilities related to lab coordination, alumni coordination, placement coordination, library coordination, and student welfare.</li>
                 <li><strong>Academic Foundation:</strong> Developed strong experience in curriculum delivery, student mentoring, academic documentation, research writing, and interdisciplinary project guidance.</li>
               </ul>
-              <div class="skill-tags">
+              <div class="skill-groups">
+                <div class="skill-group"><h4>AI &amp; Technical</h4><div class="skill-pills"><span>Artificial Intelligence</span><span>Machine Learning</span><span>Deep Learning</span><span>Computer Vision</span><span>Natural Language Processing</span><span>Internet of Things</span><span>Neural Networks</span><span>Biometrics</span><span>Gait Recognition</span><span>Image Processing</span><span>Humanoid Robotics</span><span>Python</span><span>Pattern Recognition</span></div></div>
+                <div class="skill-group"><h4>Teaching &amp; Mentoring</h4><div class="skill-pills"><span>Higher Education</span><span>Higher Education Teaching</span><span>Academic Teaching</span><span>Student Mentoring</span><span>Project Guidance</span><span>Curriculum Delivery</span><span>Interdisciplinary Projects</span></div></div>
+                <div class="skill-group"><h4>Research</h4><div class="skill-pills"><span>AI Research</span><span>Academic Research</span><span>Research Writing</span><span>Research Publications</span><span>Technical Documentation</span></div></div>
+                <div class="skill-group"><h4>Academic Coordination</h4><div class="skill-pills"><span>Laboratory Coordination</span><span>Academic Coordination</span><span>Academic Administration</span><span>Placement Coordination</span><span>Alumni Coordination</span><span>Library Coordination</span><span>Student Welfare</span></div></div>
+              </div>
+              <div class="skill-tags skill-tags-source" aria-hidden="true">
                 <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Higher Education</span>
                 <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Higher Education Teaching</span>
                 <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Academic Teaching</span>
@@ -1160,7 +1143,7 @@
             <p class="card-company"><i class="fa fa-line-chart" style="color:#4a5568;"></i> Sconad Communication</p>
             <p class="card-location"><i class="fa fa-map-marker"></i> Mumbai, India</p>
             <ul class="card-bullets">
-              <li><strong>Profit Optimisation:</strong> Used Python clustering methods to identify model underperformance areas; owned improvements to <strong>increase profit by 4%</strong>.</li>
+              <li><strong>Profit Optimization:</strong> Used Python clustering methods to identify model underperformance areas; owned improvements to <strong>increase profit by 4%</strong>.</li>
               <li><strong>Retention Programme Analytics:</strong> Identified procedural areas through customer data analysis to <strong>improve profitability of a nationwide retention programme by 8%</strong>.</li>
               <li><strong>Reporting Automation:</strong> Developed and owned reporting pipeline using Python, SQL &amp; Excel — saving an average of <strong>60 hours of labour per month</strong>.</li>
             </ul>
@@ -1332,7 +1315,7 @@
     var list = document.getElementById(btn.getAttribute('aria-controls'));
     var expanded = btn.getAttribute('aria-expanded') === 'true';
     btn.setAttribute('aria-expanded', String(!expanded));
-    list.style.display = expanded ? 'none' : 'block';
+    list.style.display = expanded ? 'none' : (list.classList.contains('skill-groups') ? 'grid' : 'block');
   }
 
   /* ── Compact, reusable skill groups ── */
@@ -1340,7 +1323,7 @@
     var groups = document.querySelectorAll('.skill-tags');
 
     groups.forEach(function(group, groupIndex) {
-      if (group.classList.contains('skill-tags-extra') || group.classList.contains('skill-tags-static')) return;
+      if (group.classList.contains('skill-tags-extra') || group.classList.contains('skill-tags-static') || group.classList.contains('skill-tags-source')) return;
 
       var skills = Array.prototype.filter.call(group.children, function(child) {
         return child.classList.contains('skill-tag');
