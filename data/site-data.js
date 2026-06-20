@@ -1099,6 +1099,122 @@ var SITE_POSTS = [
 
 ];
 
+/* Grouped travel, event, and memory data used by the travel map and homepage preview. */
+function travelMapCategory(post) {
+  var haystack = [post.title, post.cat, post.subCategory, Array.isArray(post.tags) ? post.tags.join(' ') : post.tags].join(' ').toLowerCase();
+  if (haystack.indexOf('trek') !== -1) return 'Trekking';
+  if (haystack.indexOf('sports') !== -1) return 'Sports';
+  if (haystack.indexOf('hackathon') !== -1) return 'Hackathons';
+  if (haystack.indexOf('award') !== -1) return 'Awards';
+  if (haystack.indexOf('workshop') !== -1 || haystack.indexOf('fdp') !== -1 || haystack.indexOf('gian') !== -1) return 'Workshops';
+  if (haystack.indexOf('faculty visit') !== -1 || haystack.indexOf('research visit') !== -1) return 'Research Visits';
+  if (haystack.indexOf('talk') !== -1 || haystack.indexOf('speaker') !== -1) return 'Talks';
+  if (haystack.indexOf('conference') !== -1 || /\b(icct|icicv|ssic|sin|mun)\b/.test(haystack)) return 'Conferences';
+  if (haystack.indexOf('social') !== -1 || haystack.indexOf('outreach') !== -1 || haystack.indexOf('donation') !== -1 || haystack.indexOf('village') !== -1) return 'Social / Outreach';
+  return 'Academic';
+}
+
+function travelMapPostItem(id, category) {
+  var post = SITE_POSTS.filter(function(item) { return item.id === id; })[0];
+  if (!post) return null;
+  return {
+    title: post.title,
+    date: post.date || '',
+    category: category || travelMapCategory(post),
+    url: post.link || '',
+    image: post.img || ''
+  };
+}
+
+function buildTravelMapPlace(definition) {
+  var items = (definition.postIds || []).map(function(id) { return travelMapPostItem(id); }).filter(Boolean)
+    .concat(definition.items || []);
+  var categories = [];
+  items.forEach(function(item) {
+    if (categories.indexOf(item.category) === -1) categories.push(item.category);
+  });
+  return {
+    id: definition.id,
+    city: definition.city,
+    state: definition.state || '',
+    country: definition.country || '',
+    lat: definition.lat,
+    lng: definition.lng,
+    status: definition.status || 'Visited',
+    region: definition.country === 'India' ? 'India' : (definition.id === 'location-to-confirm' ? 'Unconfirmed' : 'International'),
+    categories: categories,
+    title: definition.title,
+    summary: definition.summary,
+    tags: definition.tags || [],
+    items: items
+  };
+}
+
+var travelMapData = [
+  buildTravelMapPlace({
+    id: 'jaipur-india', city: 'Jaipur', state: 'Rajasthan', country: 'India', lat: 26.9124, lng: 75.7873, status: 'Visited',
+    title: 'Jaipur Academic, Campus & Personal Memories',
+    summary: 'Conferences, workshops, talks, PhD milestones, MUJ memories, awards, sports, trekking, and community activities.',
+    tags: ['Jaipur', 'MUJ', 'Conference', 'Workshop', 'Talks', 'PhD', 'Sports', 'Trekking'],
+    postIds: [
+      'post-lead-warden','post-conf-outing','post-muj-ssic','post-phd-defence','post-phd-convocation',
+      'post-c-icct17','post-c-ssic2','post-c-icct19','post-c-icct23','post-c-icct21','post-c-jaipur','post-c-ssic1','post-c-sin17','post-c-icicv',
+      'post-et-global-ai-jaipur-2025','post-et-iot-ai-workshop-2023','post-et-01','post-et-02',
+      'post-fv-physics','post-fv-itday','post-fv-robotics','post-fv-mujstall',
+      'post-ev-mou','post-ev-vikram','post-ev-selfdefence','post-ev-yoga','post-ev-alumni','post-ev-aditya-alumni','post-ev-bigbasket',
+      'post-hk-school','post-hk-head','post-soc-greenclub','post-soc-blood18','post-soc-blood19','post-soc-blood17','post-soc-blood16',
+      'post-ws-icicv','post-ws-gian','post-ws-fdp','post-ws-iot','post-ws-expttalk','post-ws-imgproc','post-ws-novelence','post-ws-oracle','post-ws-telemetry','post-ws-deeplearn','post-ws-iotspeaker','post-c-mun','post-ws-ai','post-ws-gian-mnit',
+      'post-c-spec-organised','post-c-icct19-organised','post-c-icicv20-organised','post-c-sin-organised','post-c-ssic1-organised','post-c-ssic2-organised','post-w-gian-2018','post-et-04','post-et-05','post-et-08','post-sports-sack'
+    ],
+    items: [
+      { title: 'Gad Ganesh Sunrise Trek', date: 'July 2023', category: 'Trekking', url: 'avocations.html#trek-1' },
+      { title: 'Jal Mahal Lakeside Walk', date: 'May 2023', category: 'Trekking', url: 'avocations.html#trek-2' },
+      { title: 'Chulgiri Ridge Walk', date: 'February 2023', category: 'Trekking', url: 'avocations.html#trek-4' },
+      { title: 'Gad Ganesh Trail Walk', date: 'October 2023', category: 'Trekking', url: 'avocations.html#trek-5' },
+      { title: 'Gad Ganesh Temple Trek', date: 'April 2024', category: 'Trekking', url: 'avocations.html#trek-6' },
+      { title: 'Aravalli Forest Trail', date: 'August 2023', category: 'Trekking', url: 'avocations.html#trek-7' },
+      { title: 'Jal Mahal', date: 'August 2023', category: 'Trekking', url: 'avocations.html#trek-8' },
+      { title: 'Amer Trek', date: 'March 2024', category: 'Trekking', url: 'avocations.html#trek-9' }
+    ]
+  }),
+  buildTravelMapPlace({ id: 'udaipur-india', city: 'Udaipur', state: 'Rajasthan', country: 'India', lat: 24.5854, lng: 73.7125, title: 'Udaipur Conference Memory', summary: 'An early academic conference and research-sharing experience in Udaipur.', tags: ['Conference', 'Udaipur'], postIds: ['post-c-udaipur'] }),
+  buildTravelMapPlace({ id: 'samod-india', city: 'Samod', state: 'Rajasthan', country: 'India', lat: 27.2050, lng: 75.8160, title: 'Samod Trail Memories', summary: 'Two walks through the hills and heritage landscape around Samod.', tags: ['Samod', 'Trekking'], items: [
+    { title: 'Samod Trail Walk', date: 'February 2023', category: 'Trekking', url: 'avocations.html#trek-3' },
+    { title: 'Samod Trail Walk', date: 'April 2023', category: 'Trekking', url: 'avocations.html#trek-10' }
+  ] }),
+  buildTravelMapPlace({ id: 'neemrana-india', city: 'Neemrana', state: 'Rajasthan', country: 'India', lat: 27.9881, lng: 76.3884, title: 'Neemrana Hackathon Memory', summary: 'Student mentoring and a prize-winning inter-college hackathon experience.', tags: ['Hackathon', 'Awards'], postIds: ['post-hk-neemrana'] }),
+  buildTravelMapPlace({ id: 'rural-rajasthan-india', city: 'Rural Rajasthan', state: 'Rajasthan', country: 'India', lat: 26.8, lng: 74.2, title: 'Rural Outreach & Education', summary: 'School visits, education support, awareness work, distribution drives, and community outreach where the exact village location is not documented.', tags: ['Outreach', 'Education', 'Community'], postIds: ['post-soc-chair','post-soc-dhemi','post-soc-beti','post-soc-village','post-soc-clean','post-soc-projector'] }),
+  buildTravelMapPlace({ id: 'delhi-india', city: 'New Delhi', state: 'Delhi', country: 'India', lat: 28.6139, lng: 77.2090, title: 'Delhi Workshops & Early Research', summary: 'An IIT Delhi workshop and the first conference paper presentation at BVICAM.', tags: ['Workshop', 'Conference', 'Research'], postIds: ['post-ws-iitdel','post-c-bvicam'] }),
+  buildTravelMapPlace({ id: 'agra-india', city: 'Agra', state: 'Uttar Pradesh', country: 'India', lat: 27.1767, lng: 78.0081, title: 'Agra Expert Talks', summary: 'Faculty development talks on the Internet of Things and machine intelligence at Dr. B. R. Ambedkar University.', tags: ['Talks', 'IoT', 'Machine Intelligence'], postIds: ['post-et-03','post-et-machine-intelligence-2019'] }),
+  buildTravelMapPlace({ id: 'hyderabad-india', city: 'Hyderabad', state: 'Telangana', country: 'India', lat: 17.3850, lng: 78.4867, title: 'Hyderabad School & Speaking Memories', summary: 'School leadership memories and an early Java talk featured by the Times of India.', tags: ['School', 'Leadership', 'Talks'], postIds: ['post-lead-vc','post-lead-sp','post-et-09'] }),
+  buildTravelMapPlace({ id: 'haryana-india', city: 'Haryana', state: 'Haryana', country: 'India', lat: 29.0588, lng: 76.0856, title: 'Haryana Academic Memory', summary: 'IEEE Student Branch seminar work at PDM College of Engineering.', tags: ['Seminar', 'Academic'], items: [
+    { title: 'Seminar on Inertial System and Global Positioning System Technology Trends', date: '2 November 2010', category: 'Academic', url: 'event.html' }
+  ] }),
+  buildTravelMapPlace({ id: 'gurugram-india', city: 'Gurugram', state: 'Haryana', country: 'India', lat: 28.4595, lng: 77.0266, title: 'Gurugram Team & Sports Memory', summary: 'A workplace cricket win celebrating teamwork beyond day-to-day engineering.', tags: ['Sports', 'Teamwork'], postIds: ['post-sports-cricket'] }),
+  buildTravelMapPlace({ id: 'gopeshwar-india', city: 'Gopeshwar', state: 'Uttarakhand', country: 'India', lat: 30.4169, lng: 79.3286, status: 'Academic Footprint', title: 'RICE 2017 Academic Footprint', summary: 'Program and review committee involvement for RICE 2017 at IT Gopeshwar.', tags: ['Conference', 'Committee'], items: [
+    { title: 'Program Committee Member, Review Committee — RICE 2017', date: '24–26 March 2017', category: 'Conferences', url: 'event.html' }
+  ] }),
+  buildTravelMapPlace({ id: 'zagreb-croatia', city: 'Zagreb', country: 'Croatia', lat: 45.8150, lng: 15.9819, status: 'Visited', title: 'Zagreb Research & Conference Journey', summary: 'FER research exposure, a faculty visit, an international conference, and the WAIT Best Paper Award.', tags: ['Research Visit', 'Conference', 'Award', 'Croatia'], postIds: ['post-c-coratia','post-fv-zagreb'], items: [
+    { title: 'WAIT Best Paper Award', date: '2018', category: 'Awards', url: 'award.html' },
+    { title: 'FER, University of Zagreb Doctoral Research Exposure', date: 'Sep 2018 – Dec 2019', category: 'Research Visits', url: 'experience.html' }
+  ] }),
+  buildTravelMapPlace({ id: 'rijeka-croatia', city: 'Rijeka', country: 'Croatia', lat: 45.3271, lng: 14.4422, status: 'Visited', title: 'Rijeka Faculty Visit', summary: 'Academic exposure and research exchange at the University of Rijeka.', tags: ['Research Visit', 'Croatia'], postIds: ['post-fv-rijeka'] }),
+  buildTravelMapPlace({ id: 'dubai-uae', city: 'Dubai', country: 'United Arab Emirates', lat: 25.2048, lng: 55.2708, status: 'Visited', title: 'Dubai International Conference', summary: 'International research presentation and academic exchange in Dubai.', tags: ['Conference', 'International'], postIds: ['post-c-dubai'] }),
+  buildTravelMapPlace({ id: 'penang-malaysia', city: 'Penang', country: 'Malaysia', lat: 5.4164, lng: 100.3327, status: 'Academic Footprint', title: 'TENCON 2017 Academic Footprint', summary: 'Program and review committee involvement for TENCON 2017.', tags: ['Conference', 'Committee'], items: [
+    { title: 'Program Committee Member, Review Committee — TENCON 2017', date: '5–8 November 2017', category: 'Conferences', url: 'event.html' }
+  ] }),
+  buildTravelMapPlace({ id: 'cardiff-uk', city: 'Cardiff', country: 'United Kingdom', lat: 51.4816, lng: -3.1791, status: 'Academic Footprint', title: 'SIN 2018 Academic Footprint', summary: 'Program and review committee contribution associated with SIN 2018 at Cardiff University.', tags: ['Conference', 'Committee'], items: [
+    { title: 'Program Committee Member, Review Committee — SIN 2018', date: '10–12 September 2018', category: 'Conferences', url: 'event.html' }
+  ] }),
+  buildTravelMapPlace({ id: 'sochi-russia', city: 'Sochi', country: 'Russia', lat: 43.6028, lng: 39.7342, status: 'Academic Footprint', title: 'SIN 2019 Academic Footprint', summary: 'Organizing, program, and review committee involvement associated with SIN 2019.', tags: ['Conference', 'Committee'], items: [
+    { title: 'Organising Committee Member — SIN 2019', date: '12–15 September 2019', category: 'Conferences', url: 'event.html' },
+    { title: 'Program Committee Member, Review Committee — SIN 2019', date: '12–15 September 2019', category: 'Conferences', url: 'event.html' }
+  ] }),
+  buildTravelMapPlace({ id: 'location-to-confirm', city: 'Location to Confirm', country: '', lat: null, lng: null, status: 'Location to Confirm', title: 'Location to Confirm', summary: 'Memories documented on the website whose exact geographic location is not stated.', tags: ['Location to Confirm'], items: [
+    { title: 'Girja Devi Temple Trekking', date: 'Jan 2017', category: 'Trekking', url: 'avocations.html#trek-11' }
+  ] })
+];
+
 (function(global) {
   var CATEGORY_ORDER = ['academics', 'social', 'sports', 'avocations'];
   var SITE_STATS = {
@@ -1647,6 +1763,7 @@ var SITE_POSTS = [
   }
 
   var api = {
+    travelMapData: travelMapData,
     items: sourceItems(),
     categoryOrder: CATEGORY_ORDER.slice(),
     subcategoryOrder: SUBCATEGORY_ORDER.slice(),
@@ -1680,6 +1797,7 @@ var SITE_POSTS = [
   };
 
   global.SiteData = api;
+  global.travelMapData = travelMapData;
   global.AcademicData = api;
   global.getItemsByCategory = getItemsByCategory;
   global.getItemsBySubCategory = getItemsBySubCategory;

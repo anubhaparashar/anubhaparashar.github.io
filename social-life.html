@@ -22,6 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/site-header-footer.css">
+  <link rel="stylesheet" href="css/travel-map.css">
   <style>
     .blog_area { background: #f5f6ff; }
     .single_sidebar_widget, .single-sidebar-widget {
@@ -335,6 +336,55 @@
     <div class="soc-eyebrow">Beyond the Lab</div>
     <h1>Social Life</h1>
     <p class="soc-hero-sub">Friendships, gatherings, and moments that make life meaningful.</p>
+  </div>
+</section>
+
+<!-- Interactive travel, event, and memory map -->
+<section class="travel-map-section" id="my-travel-map" aria-labelledby="travel-map-title">
+  <div class="container">
+    <header class="travel-map-head">
+      <span class="travel-map-eyebrow">Journeys &amp; Connections</span>
+      <h2 id="travel-map-title">My Travel Map</h2>
+      <p>Places connected to my conferences, workshops, research visits, talks, academic events, awards, sports, treks, outreach activities, and personal memories.</p>
+    </header>
+
+    <div class="travel-map-stats" data-travel-stats aria-label="Travel map statistics"></div>
+    <div class="travel-map-filters" role="group" aria-label="Filter travel map locations">
+      <button type="button" class="travel-filter active" data-travel-filter="All" aria-pressed="true">All</button>
+      <button type="button" class="travel-filter" data-travel-filter="India" aria-pressed="false">India</button>
+      <button type="button" class="travel-filter" data-travel-filter="International" aria-pressed="false">International</button>
+      <button type="button" class="travel-filter" data-travel-filter="Visited" aria-pressed="false">Visited</button>
+      <button type="button" class="travel-filter" data-travel-filter="Academic Footprint" aria-pressed="false">Academic Footprint</button>
+      <button type="button" class="travel-filter" data-travel-filter="Conferences" aria-pressed="false">Conferences</button>
+      <button type="button" class="travel-filter" data-travel-filter="Workshops" aria-pressed="false">Workshops</button>
+      <button type="button" class="travel-filter" data-travel-filter="Talks" aria-pressed="false">Talks</button>
+      <button type="button" class="travel-filter" data-travel-filter="Research Visits" aria-pressed="false">Research Visits</button>
+      <button type="button" class="travel-filter" data-travel-filter="Awards" aria-pressed="false">Awards</button>
+      <button type="button" class="travel-filter" data-travel-filter="Hackathons" aria-pressed="false">Hackathons</button>
+      <button type="button" class="travel-filter" data-travel-filter="Social / Outreach" aria-pressed="false">Social / Outreach</button>
+      <button type="button" class="travel-filter" data-travel-filter="Sports" aria-pressed="false">Sports</button>
+      <button type="button" class="travel-filter" data-travel-filter="Trekking" aria-pressed="false">Trekking</button>
+    </div>
+
+    <div class="travel-map-layout">
+      <div class="travel-map-canvas" role="region" aria-label="Interactive world map showing travel and academic locations">
+        <svg class="travel-world" viewBox="0 0 1000 500" aria-hidden="true">
+          <path d="M72 116L115 69 205 52 274 74 300 120 270 151 232 148 210 190 165 202 128 179 88 184 54 151Z"/>
+          <path d="M244 221L282 231 305 275 291 323 275 382 243 437 218 404 222 350 198 301 207 251Z"/>
+          <path d="M432 86L489 61 561 72 596 103 585 137 532 143 505 124 472 145 427 130 398 105Z"/>
+          <path d="M469 154L519 148 555 177 571 228 550 290 521 355 483 343 464 294 434 255 441 202Z"/>
+          <path d="M564 92L651 61 766 69 866 112 912 157 883 200 815 204 767 177 717 199 665 178 617 190 573 150Z"/>
+          <path d="M713 205L754 212 778 250 753 279 720 263 699 229Z"/>
+          <path d="M825 315L877 302 922 334 906 376 856 392 815 358Z"/>
+          <path d="M922 220L947 225 956 249 937 262 914 247Z"/>
+        </svg>
+        <div class="travel-pin-layer" data-travel-pins></div>
+        <div class="travel-map-legend" aria-label="Map marker legend"><span><i></i> Visited</span><span><i class="footprint"></i> Academic Footprint</span></div>
+      </div>
+      <aside class="travel-place-panel" data-travel-panel aria-live="polite" aria-label="Selected location details"></aside>
+    </div>
+
+    <div class="travel-location-grid" data-travel-cards aria-label="Travel locations"></div>
   </div>
 </section>
 
@@ -1168,6 +1218,7 @@
 </script>
 <script type="module" src="assets/js/firebase-blog.js"></script>
 <script src="data/site-data.js"></script>
+<script src="js/travel-map.js"></script>
 <script src="js/blog-section-counts.js"></script>
 <script src="assets/js/auto-folder-gallery.js"></script>
 </body>

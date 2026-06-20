@@ -557,6 +557,7 @@
     }
 
     /* ── PEARCE PROJECTS TOGGLE ── */
+    .exp-toggle,
     .pearce-toggle {
       display: inline-flex;
       align-items: center;
@@ -572,16 +573,60 @@
       margin-bottom: 12px;
       transition: background .2s, border-color .2s;
     }
+    .exp-toggle:hover,
     .pearce-toggle:hover { background: #d8e8f5; border-color: #1e4d7b; }
+    .exp-toggle[aria-expanded="true"],
     .pearce-toggle[aria-expanded="true"] { background: #1e4d7b; color: #fff; border-color: #1e4d7b; }
+    .exp-toggle[aria-expanded="true"] .exp-chevron,
+    .exp-toggle[aria-expanded="true"] .pearce-chevron,
     .pearce-toggle[aria-expanded="true"] .pearce-chevron { transform: rotate(180deg); }
+    .exp-chevron,
     .pearce-chevron { transition: transform .25s; }
+    .exp-panel,
     .pearce-projects {
       background: #f7fafd;
       border: 1px solid #dde8f2;
       border-radius: 10px;
       padding: 4px 0;
       margin-bottom: 14px;
+    }
+    .exp-panel[hidden] { display: none; }
+    .exp-panel-inner { padding: 12px 14px; }
+    .exp-panel .skill-groups { margin-top: 0; }
+    .exp-panel .card-bullets { margin-bottom: 0; }
+    .accordion-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+    .accordion-actions .exp-toggle,
+    .accordion-actions .pearce-toggle { margin-bottom: 0; }
+    .role-department {
+      margin: -3px 0 5px;
+      color: #3d5a7a;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+    .research-milestone {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #e9f5f2;
+      color: #236052;
+      font-size: .68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+    }
+    .role-block {
+      border-left: 3px solid #c4a882;
+      padding-left: 12px;
+      margin-bottom: 18px;
     }
     .pearce-proj-item {
       padding: 10px 14px;
@@ -723,11 +768,20 @@
             <p class="card-overview">Working as an Analytics &amp; AI Engineer at Pearce Services Global Pvt. Ltd., building production-ready Artificial Intelligence (AI), Machine Learning (ML), Generative AI (GenAI), computer vision, predictive maintenance, forecasting, optimization, GIS automation, Snowflake analytics, and edge AI solutions for field operations and operational decision support.</p>
             <p class="card-overview">My work focuses on transforming complex field, asset, inspection, scheduling, maintenance, and infrastructure data into scalable AI systems, ML pipelines, inference APIs, intelligent dashboards, automation workflows, and business-ready decision-support platforms. The role combines applied machine learning, cloud-native deployment, geospatial analytics, computer vision, optimization algorithms, data engineering, Snowflake-based analytics, and MLOps practices to solve real-world operational problems.</p>
 
+            <h4 class="card-subheading">Selected Impact</h4>
+            <ul class="card-bullets">
+              <li>Built predictive maintenance and Snowflake analytics workflows that convert asset data into risk scores, priorities, and operational recommendations.</li>
+              <li>Developed YOLO-based object detection for solar inspection and edge/mobile deployment on NVIDIA Jetson, TensorFlow Lite, and ONNX.</li>
+              <li>Created production routing and scheduling systems with OR-Tools, PyVRP, Agentic AI, and constraint-aware re-optimization.</li>
+              <li>Automated GIS validation, data reconciliation, and field-quality workflows across ArcGIS, Survey123, Salesforce, Netsuite, and operational datasets.</li>
+              <li>Engineered cloud-ready APIs, data pipelines, CI/CD checks, security gates, and audit-ready MLOps automation.</li>
+            </ul>
+
             <!-- Projects toggle -->
-            <button type="button" class="pearce-toggle" onclick="togglePearcePanel(this)" aria-expanded="false" aria-controls="pearceProjectsList">
+            <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="pearceProjectsList">
               <i class="fa fa-briefcase"></i> 16 Projects at Pearce <i class="fa fa-chevron-down pearce-chevron"></i>
             </button>
-            <div class="pearce-projects" id="pearceProjectsList" style="display:none;">
+            <div class="pearce-projects exp-panel" id="pearceProjectsList" hidden>
               <div class="pearce-proj-item">
                 <span class="pearce-proj-period">Present</span>
                 <strong>Predictive &amp; Preventive Maintenance</strong>
@@ -810,10 +864,10 @@
               </div>
             </div>
 
-            <button type="button" class="pearce-toggle" onclick="togglePearcePanel(this)" aria-expanded="false" aria-controls="pearceSkillsList">
+            <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="pearceSkillsList">
               <i class="fa fa-code"></i> Skills &amp; Tech Stack <i class="fa fa-chevron-down pearce-chevron"></i>
             </button>
-            <div class="pearce-projects skill-groups" id="pearceSkillsList" style="display:none;">
+            <div class="pearce-projects skill-groups exp-panel" id="pearceSkillsList" hidden>
               <div class="skill-group">
                 <h4>AI/ML</h4>
                 <div class="skill-pills">
@@ -902,11 +956,7 @@
               </div>
             </div>
 
-            <p class="pearce-tools-line"><strong>Tools &amp; Technologies:</strong> Python &middot; SQL &middot; Snowflake &middot; Machine Learning &middot; Deep Learning &middot; Scikit-learn &middot; GenAI &middot; Agentic AI &middot; LLMs &middot; Gemini &middot; Computer Vision &middot; YOLO &middot; OCR &middot; GIS &middot; ArcGIS &middot; Survey123 &middot; FAISS &middot; Vector Search &middot; Edge AI &middot; NVIDIA Jetson &middot; TensorFlow Lite &middot; ONNX &middot; Streamlit &middot; FastAPI &middot; Docker &middot; Azure &middot; Azure Container Apps &middot; Hugging Face &middot; OR-Tools &middot; PyVRP &middot; LSTM &middot; GRU &middot; Ant Colony Optimization &middot; Forecasting &middot; Predictive Maintenance &middot; Data Engineering &middot; Data Pipelines &middot; Data Reconciliation &middot; Fuzzy Matching &middot; MLOps &middot; CI/CD &middot; DevSecOps &middot; Automation</p>
             <div class="card-footer-row">
-              <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
-              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
-              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
               <a href="files/3.%20Experience/1.%20Certificate/Anubha%20Parashar-pearce.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
             </div>
           </div>
@@ -924,6 +974,7 @@
             <img src="files/3. Experience/logo/invincible_ocean_logo.jpg" class="card-logo" alt="Invincible Ocean">
             <div class="card-period" style="color:#3d5a7a;">Apr 2024 – Dec 2024</div>
             <h3>Research Scientist</h3>
+            <p class="role-department">Department of AI &amp; Metaverse</p>
             <p class="card-company"><i class="fa fa-flask" style="color:#3d5a7a;"></i> Invincible Ocean</p>
             <p class="card-location"><i class="fa fa-map-marker"></i> Gurugram, India</p>
             <p class="card-overview"><strong>Worked as a Research Scientist with a strong focus on designing, deploying, and scaling Artificial Intelligence (AI) and Machine Learning (ML) systems in production environments.</strong> The work combined ML pipelines, cloud architecture, Large Language Model (LLM) ecosystems, MLOps automation, real-time data systems, observability, and cloud-native deployment to build reliable AI products end to end.</p>
@@ -936,22 +987,29 @@
               <li><strong>Vehicle RC Data Chatbot:</strong> Fine-tuned an LLM on vehicle RC data to enable instant access to vehicle information and reduce manual search time by 70%.</li>
               <li><strong>Virtual Try-On System:</strong> Worked on a deep learning-based VITON platform for overlaying clothing on user photos, achieving 95% user satisfaction.</li>
               <li><strong>Text Recognition &amp; OCR System:</strong> Built OCR workflows using Tesseract, PaddleOCR, and PaddleNLP with 98% accuracy. Integrated Label Studio backend, Dockerized APIs, and a Gemini-powered assistant for intelligent data extraction.</li>
+            </ul>
+            <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="invincibleContributions">
+              <i class="fa fa-list"></i> View More Contributions <i class="fa fa-chevron-down exp-chevron"></i>
+            </button>
+            <div class="exp-panel" id="invincibleContributions" hidden>
+              <div class="exp-panel-inner"><ul class="card-bullets">
               <li><strong>ML/AI Microservices:</strong> Transformed ML modules including OCR, Virtual Try-On, Signature Match, and LLM workflows into scalable production services.</li>
               <li><strong>Observability &amp; Monitoring:</strong> Enabled full observability using Prometheus, Grafana, OpenTelemetry, and cloud-native logging.</li>
               <li>Built and supported AI/ML workflows involving Python, data science, computer vision, NLP, LLMs, OCR, Dockerized services, cloud architecture, Kubernetes, and production-oriented model deployment.</li>
               <li>Translated research concepts into scalable AI prototypes and practical product features with a structured, engineering-driven execution approach.</li>
-            </ul>
-            <div class="skill-groups">
+              </ul></div>
+            </div>
+            <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="invincibleSkills">
+              <i class="fa fa-code"></i> Skills &amp; Tech Stack <i class="fa fa-chevron-down exp-chevron"></i>
+            </button>
+            <div class="exp-panel" id="invincibleSkills" hidden><div class="exp-panel-inner skill-groups">
               <div class="skill-group"><h4>AI/ML &amp; GenAI</h4><div class="skill-pills"><span>Artificial Intelligence</span><span>Machine Learning</span><span>Generative AI</span><span>MLOps</span><span>Large Language Models</span><span>LLM Fine-Tuning</span><span>Natural Language Processing</span><span>Deep Learning</span><span>Data Science</span><span>Predictive Analytics</span></div></div>
               <div class="skill-group"><h4>Cloud &amp; Deployment</h4><div class="skill-pills"><span>Cloud Architecture</span><span>Amazon Bedrock</span><span>AWS</span><span>Kubernetes</span><span>Helm Charts</span><span>CI/CD</span><span>Docker</span><span>Microservices</span><span>API Development</span><span>Model Deployment</span><span>Cloud-Native Architecture</span></div></div>
               <div class="skill-group"><h4>Computer Vision &amp; Document AI</h4><div class="skill-pills"><span>Computer Vision</span><span>OCR</span><span>PaddleOCR</span><span>PaddleNLP</span><span>Tesseract OCR</span><span>Gemini</span><span>Label Studio</span><span>Virtual Try-On</span><span>Signature Matching</span></div></div>
               <div class="skill-group"><h4>Observability &amp; FinOps</h4><div class="skill-pills"><span>Prometheus</span><span>Grafana</span><span>OpenTelemetry</span><span>Observability</span><span>FinOps</span><span>Cost Optimization</span></div></div>
               <div class="skill-group"><h4>Engineering &amp; Leadership</h4><div class="skill-pills"><span>Python</span><span>Research and Development</span><span>Product Development</span><span>Technical Documentation</span><span>Team Leadership</span></div></div>
-            </div>
+            </div></div>
             <div class="card-footer-row">
-              <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
-              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
-              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
               <a href="files/3.%20Experience/1.%20Certificate/2.%20IO%20Experience%20Letter.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
             </div>
           </div>
@@ -963,9 +1021,10 @@
         <div class="tl-left">
           <div class="tl-card" style="border-top-color:#2d6b5e;">
             <img src="files/3. Experience/logo/muj.png" class="card-logo card-logo-lg" alt="Manipal University Jaipur">
+            <span class="research-milestone"><i class="fa fa-graduation-cap"></i> Academic Research Milestone</span>
             <div class="card-period" style="color:#2d6b5e;">Jan 2018 – Apr 2023</div>
             <h3>Doctoral Researcher</h3>
-            <p class="card-company"><i class="fa fa-flask" style="color:#2d6b5e;"></i> Researcher @ Biometrics Lab</p>
+            <p class="role-department" style="color:#2d6b5e;">Doctoral Research / Biometrics Lab</p>
             <p class="card-company"><i class="fa fa-graduation-cap" style="color:#2d6b5e;"></i> Manipal University Jaipur</p>
             <p class="card-location"><i class="fa fa-map-marker"></i> Jaipur, India</p>
             <p class="card-overview">Conducted doctoral research in Artificial Intelligence, Deep Learning, Computer Vision, and Gait Biometrics, with a focus on robust human identification and privacy-preserving recognition systems.</p>
@@ -978,20 +1037,25 @@
               <li>Explored computer vision and pattern recognition methods for silhouette-based and appearance-based human recognition.</li>
               <li>Conducted research in biometric authentication, privacy-aware machine learning, and deep learning-based motion analysis.</li>
               <li>Collaborated with FER, University of Zagreb, Croatia, on gait biometrics, privacy-preserving AI, and human recognition research.</li>
+            </ul>
+            <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="doctoralContributions">
+              <i class="fa fa-book"></i> View More Research Contributions <i class="fa fa-chevron-down exp-chevron"></i>
+            </button>
+            <div class="exp-panel" id="doctoralContributions" hidden><div class="exp-panel-inner"><ul class="card-bullets">
               <li>Used Python, PyTorch, deep learning models, computer vision workflows, and experimental evaluation pipelines for research implementation.</li>
               <li>Contributed to research publications, academic writing, experimentation, and evaluation in AI, biometrics, gait recognition, and privacy-preserving recognition systems.</li>
-            </ul>
-            <div class="skill-groups">
+            </ul></div></div>
+            <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="doctoralSkills">
+              <i class="fa fa-code"></i> Skills &amp; Tech Stack <i class="fa fa-chevron-down exp-chevron"></i>
+            </button>
+            <div class="exp-panel" id="doctoralSkills" hidden><div class="exp-panel-inner skill-groups">
               <div class="skill-group"><h4>AI/ML</h4><div class="skill-pills"><span>Python</span><span>Deep Learning</span><span>Machine Learning</span><span>Neural Networks</span><span>PyTorch</span></div></div>
               <div class="skill-group"><h4>Computer Vision</h4><div class="skill-pills"><span>Computer Vision</span><span>Image Processing</span><span>Pattern Recognition</span><span>Motion Analysis</span></div></div>
               <div class="skill-group"><h4>Biometrics</h4><div class="skill-pills"><span>Gait Recognition</span><span>Gait Biometrics</span><span>Human Identification</span><span>Biometric Authentication</span></div></div>
               <div class="skill-group"><h4>Privacy AI</h4><div class="skill-pills"><span>Privacy-Preserving AI</span><span>Gait De-identification</span><span>Biometric Data Protection</span><span>Human Recognition Systems</span></div></div>
               <div class="skill-group"><h4>Research</h4><div class="skill-pills"><span>Academic Research</span><span>Research Publications</span><span>Experimental Evaluation</span><span>Technical Writing</span></div></div>
-            </div>
+            </div></div>
             <div class="card-footer-row">
-              <a href="https://github.com/dranubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
-              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
-              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
               <a href="files/3.%20Experience/1.%20Certificate/34%20Anubha%20Parashar%20doctoral%20experience.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
             </div>
           </div>
@@ -1016,8 +1080,8 @@
             <div style="border-left:3px solid #7a5c3e; padding-left:12px; margin-bottom:14px;">
               <div style="font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#7a5c3e; margin-bottom:2px;">Jul 2022 – Apr 2024 &middot; 1 yr 10 mos</div>
               <h3 style="margin-bottom:6px;">Senior Assistant Professor</h3>
-              <p class="card-overview">As a Senior Assistant Professor in the Department of Computer Science &amp; Engineering at Manipal University Jaipur, contributed to teaching, research, mentoring, and academic leadership in Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Internet of Things, Biometrics, Gait Recognition, Neural Networks, Image Processing, and Humanoid Robotics.</p>
-              <p class="card-overview">The role focused on bridging advanced AI research with practical learning outcomes through course delivery, research supervision, student mentoring, laboratory coordination, academic administration, and interdisciplinary project guidance.</p>
+              <p class="card-overview">Led teaching, research, mentoring, and academic initiatives in the Department of Computer Science &amp; Engineering, with a focus on Artificial Intelligence (AI), computer vision, biometrics, Internet of Things, and intelligent systems.</p>
+              <p class="card-overview">Bridged advanced research with practical learning through course delivery, research supervision, project guidance, laboratory coordination, and academic administration.</p>
               <h4 class="card-subheading">Key Contributions</h4>
               <ul class="card-bullets">
                 <li><strong>Teaching and Mentoring:</strong> Taught and mentored students in Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, NLP, IoT, Neural Networks, Biometrics, Gait Recognition, and Image Processing.</li>
@@ -1026,12 +1090,15 @@
                 <li><strong>Academic Leadership:</strong> Supported academic and administrative responsibilities including alumni coordination, IoT lab coordination, placement coordination, library coordination, and student welfare activities.</li>
                 <li><strong>Research-Oriented Learning:</strong> Strengthened project-based and research-driven learning by encouraging students to work on practical AI, computer vision, IoT, and intelligent system applications.</li>
               </ul>
-              <div class="skill-groups">
+              <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="seniorProfessorSkills">
+                <i class="fa fa-code"></i> Skills &amp; Tech Stack <i class="fa fa-chevron-down exp-chevron"></i>
+              </button>
+              <div class="exp-panel" id="seniorProfessorSkills" hidden><div class="exp-panel-inner skill-groups">
                 <div class="skill-group"><h4>AI &amp; Technical</h4><div class="skill-pills"><span>Artificial Intelligence</span><span>Machine Learning</span><span>Deep Learning</span><span>Computer Vision</span><span>Natural Language Processing</span><span>Internet of Things</span><span>Neural Networks</span><span>Biometrics</span><span>Gait Recognition</span><span>Image Processing</span><span>Humanoid Robotics</span><span>Python</span><span>Privacy-Preserving AI</span><span>Pattern Recognition</span><span>Intelligent Systems</span></div></div>
                 <div class="skill-group"><h4>Research</h4><div class="skill-pills"><span>Research Supervision</span><span>Academic Research</span><span>AI Research</span><span>Research Publications</span><span>Technical Documentation</span></div></div>
                 <div class="skill-group"><h4>Teaching &amp; Mentoring</h4><div class="skill-pills"><span>Student Mentoring</span><span>Higher Education Teaching</span><span>Curriculum Delivery</span><span>Project Guidance</span></div></div>
                 <div class="skill-group"><h4>Academic Leadership</h4><div class="skill-pills"><span>Laboratory Coordination</span><span>Academic Administration</span><span>Placement Coordination</span><span>Alumni Coordination</span><span>Library Coordination</span><span>Student Welfare</span><span>Academic Leadership</span></div></div>
-              </div>
+              </div></div>
               <div class="skill-tags skill-tags-source" aria-hidden="true">
                 <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Artificial Intelligence</span>
                 <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Machine Learning</span>
@@ -1071,9 +1138,8 @@
             <div style="border-left:3px solid #c4a882; padding-left:12px; margin-bottom:14px;">
               <div style="font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#a07850; margin-bottom:2px;">Jul 2016 – Jul 2022 &middot; 6 yrs 1 mo</div>
               <h3 style="margin-bottom:6px;">Assistant Professor</h3>
-              <p class="card-overview">As an Assistant Professor in the Department of Computer Science &amp; Engineering at Manipal University Jaipur, worked across teaching, research, student mentoring, and academic coordination in Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Internet of Things, Natural Language Processing, Neural Networks, Biometrics, Gait Recognition, Image Processing, and Humanoid Robotics.</p>
-              <p class="card-overview">Contributed to undergraduate and postgraduate teaching, guided student projects, supported research activities, and handled key academic responsibilities including lab coordination, alumni coordination, placement coordination, library coordination, and student welfare roles.</p>
-              <p class="card-overview">This role helped build a strong foundation in AI research, academic leadership, curriculum delivery, and mentoring students toward practical and research-driven technology solutions.</p>
+              <p class="card-overview">Delivered undergraduate and postgraduate teaching, guided student projects, and supported applied research across Artificial Intelligence (AI), computer vision, biometrics, Internet of Things, and robotics.</p>
+              <p class="card-overview">Handled laboratory, alumni, placement, library, and student-welfare coordination while building research-driven curricula and mentoring students toward practical technology solutions.</p>
               <h4 class="card-subheading">Key Contributions</h4>
               <ul class="card-bullets">
                 <li><strong>Higher Education Teaching:</strong> Delivered undergraduate and postgraduate courses in Computer Science and Engineering with focus on AI, ML, Deep Learning, Computer Vision, IoT, NLP, Neural Networks, Biometrics, and Image Processing.</li>
@@ -1082,12 +1148,15 @@
                 <li><strong>Academic Coordination:</strong> Managed responsibilities related to lab coordination, alumni coordination, placement coordination, library coordination, and student welfare.</li>
                 <li><strong>Academic Foundation:</strong> Developed strong experience in curriculum delivery, student mentoring, academic documentation, research writing, and interdisciplinary project guidance.</li>
               </ul>
-              <div class="skill-groups">
+              <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="assistantProfessorSkills">
+                <i class="fa fa-code"></i> Skills &amp; Tech Stack <i class="fa fa-chevron-down exp-chevron"></i>
+              </button>
+              <div class="exp-panel" id="assistantProfessorSkills" hidden><div class="exp-panel-inner skill-groups">
                 <div class="skill-group"><h4>AI &amp; Technical</h4><div class="skill-pills"><span>Artificial Intelligence</span><span>Machine Learning</span><span>Deep Learning</span><span>Computer Vision</span><span>Natural Language Processing</span><span>Internet of Things</span><span>Neural Networks</span><span>Biometrics</span><span>Gait Recognition</span><span>Image Processing</span><span>Humanoid Robotics</span><span>Python</span><span>Pattern Recognition</span></div></div>
                 <div class="skill-group"><h4>Teaching &amp; Mentoring</h4><div class="skill-pills"><span>Higher Education</span><span>Higher Education Teaching</span><span>Academic Teaching</span><span>Student Mentoring</span><span>Project Guidance</span><span>Curriculum Delivery</span><span>Interdisciplinary Projects</span></div></div>
                 <div class="skill-group"><h4>Research</h4><div class="skill-pills"><span>AI Research</span><span>Academic Research</span><span>Research Writing</span><span>Research Publications</span><span>Technical Documentation</span></div></div>
                 <div class="skill-group"><h4>Academic Coordination</h4><div class="skill-pills"><span>Laboratory Coordination</span><span>Academic Coordination</span><span>Academic Administration</span><span>Placement Coordination</span><span>Alumni Coordination</span><span>Library Coordination</span><span>Student Welfare</span></div></div>
-              </div>
+              </div></div>
               <div class="skill-tags skill-tags-source" aria-hidden="true">
                 <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Higher Education</span>
                 <span class="skill-tag" style="background:#f3eeea;color:#7a5c3e;">Higher Education Teaching</span>
@@ -1124,9 +1193,6 @@
               </div>
             </div>
             <div class="card-footer-row">
-              <a href="https://github.com/dranubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
-              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
-              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
               <a href="files/3.%20Experience/1.%20Certificate/muj_experience.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
             </div>
           </div>
@@ -1147,18 +1213,16 @@
               <li><strong>Retention Programme Analytics:</strong> Identified procedural areas through customer data analysis to <strong>improve profitability of a nationwide retention programme by 8%</strong>.</li>
               <li><strong>Reporting Automation:</strong> Developed and owned reporting pipeline using Python, SQL &amp; Excel — saving an average of <strong>60 hours of labour per month</strong>.</li>
             </ul>
-            <div class="skill-tags">
+            <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="sconadSkills"><i class="fa fa-code"></i> Skills &amp; Tech Stack <i class="fa fa-chevron-down exp-chevron"></i></button>
+            <div class="exp-panel" id="sconadSkills" hidden><div class="exp-panel-inner skill-groups"><div class="skill-group"><h4>Analytics &amp; Automation</h4><div class="skill-pills">
               <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">Python</span>
               <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">SQL</span>
               <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">Excel</span>
               <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">Data Analysis</span>
               <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">Clustering</span>
               <span class="skill-tag" style="background:#f0f1f3;color:#4a5568;">Retention Analytics</span>
-            </div>
+            </div></div></div></div>
             <div class="card-footer-row">
-              <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
-              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
-              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
               <a href="files/3.%20Experience/1.%20Certificate/1.%20Sconad%20Communication.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
             </div>
           </div>
@@ -1182,17 +1246,15 @@
               <li><strong>Mobile App Development:</strong> Designed and developed mobile applications using Android and J2ME platform with Oracle as backend.</li>
               <li><strong>Agile Delivery:</strong> Completed eight major projects, working closely with an agile development team to develop, test and maintain production-ready apps.</li>
             </ul>
-            <div class="skill-tags">
+            <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="zmqSkills"><i class="fa fa-code"></i> Skills &amp; Tech Stack <i class="fa fa-chevron-down exp-chevron"></i></button>
+            <div class="exp-panel" id="zmqSkills" hidden><div class="exp-panel-inner skill-groups"><div class="skill-group"><h4>Mobile Engineering</h4><div class="skill-pills">
               <span class="skill-tag" style="background:#eef2f6;color:#4a6785;">Android</span>
               <span class="skill-tag" style="background:#eef2f6;color:#4a6785;">J2ME</span>
               <span class="skill-tag" style="background:#eef2f6;color:#4a6785;">Oracle</span>
               <span class="skill-tag" style="background:#eef2f6;color:#4a6785;">Mobile Dev</span>
               <span class="skill-tag" style="background:#eef2f6;color:#4a6785;">Agile</span>
-            </div>
+            </div></div></div></div>
             <div class="card-footer-row">
-              <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
-              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
-              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
               <a href="files/3.%20Experience/1.%20Certificate/zmq%20industrial%20training.pdf" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
             </div>
           </div>
@@ -1211,15 +1273,13 @@
             <ul class="card-bullets">
               <li><strong>Web Development &amp; Content:</strong> Built and maintained web pages, handled video editing and acted as content developer for the company's digital presence.</li>
             </ul>
-            <div class="skill-tags">
+            <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="essilorSkills"><i class="fa fa-code"></i> Skills &amp; Tech Stack <i class="fa fa-chevron-down exp-chevron"></i></button>
+            <div class="exp-panel" id="essilorSkills" hidden><div class="exp-panel-inner skill-groups"><div class="skill-group"><h4>Digital Production</h4><div class="skill-pills">
               <span class="skill-tag" style="background:#f3eff4;color:#6b4e71;">Web Development</span>
               <span class="skill-tag" style="background:#f3eff4;color:#6b4e71;">Video Editing</span>
               <span class="skill-tag" style="background:#f3eff4;color:#6b4e71;">Content Development</span>
-            </div>
+            </div></div></div></div>
             <div class="card-footer-row">
-              <a href="https://github.com/anubhaparashar?tab=repositories" target="_blank" class="gh-link"><i class="fa fa-github"></i> GitHub</a>
-              <a href="https://www.youtube.com/channel/UCCNTYNKoEH4QVpPxutaWh5A" target="_blank" class="gh-link"><i class="fa fa-youtube"></i> YouTube</a>
-              <a href="https://dranubhaparashar.github.io/projects/" target="_blank" class="gh-link"><i class="fa fa-globe"></i> Blog</a>
               <a href="files/3.%20Experience/1.%20Certificate/essilor.jpg" target="_blank" class="cert-btn"><i class="fa fa-certificate"></i> Certificate</a>
             </div>
           </div>
@@ -1310,13 +1370,34 @@
   }, { threshold: 0.12 });
   cards.forEach(function(c) { cardObs.observe(c); });
 
-  /* ── Pearce projects and skills toggles ── */
-  function togglePearcePanel(btn) {
-    var list = document.getElementById(btn.getAttribute('aria-controls'));
+  /* Reusable experience accordions */
+  function toggleExperiencePanel(btn) {
+    var panel = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!panel) return;
     var expanded = btn.getAttribute('aria-expanded') === 'true';
     btn.setAttribute('aria-expanded', String(!expanded));
-    list.style.display = expanded ? 'none' : (list.classList.contains('skill-groups') ? 'grid' : 'block');
+    if (!expanded) {
+      panel.hidden = false;
+      if (panel.animate) {
+        panel.animate([
+          { opacity: 0, transform: 'translateY(-6px)' },
+          { opacity: 1, transform: 'translateY(0)' }
+        ], { duration: 220, easing: 'ease-out' });
+      }
+    } else if (panel.animate) {
+      var closing = panel.animate([
+        { opacity: 1, transform: 'translateY(0)' },
+        { opacity: 0, transform: 'translateY(-6px)' }
+      ], { duration: 160, easing: 'ease-in' });
+      closing.onfinish = function() { panel.hidden = true; };
+    } else {
+      panel.hidden = true;
+    }
   }
+
+  document.querySelectorAll('.exp-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() { toggleExperiencePanel(btn); });
+  });
 
   /* ── Compact, reusable skill groups ── */
   function initialiseSkillGroups() {
