@@ -295,13 +295,47 @@
       font-size: .68rem;
     }
     .card-bullets li strong { color: #1a1a2e !important; }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
     .skill-tag {
       border-radius: 20px;
-      padding: 3px 11px;
+      padding: 2px 8px;
+      font-size: .64rem;
+      font-weight: 600;
+      line-height: 1.45;
+      letter-spacing: .25px;
+    }
+    .skill-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f3f5f8;
+      border: 1px solid #dce1e8;
+      border-radius: 20px;
+      padding: 4px 10px;
+      margin-top: 7px;
+      color: #4a5568;
       font-size: .68rem;
       font-weight: 700;
-      letter-spacing: .4px;
+      line-height: 1.4;
+      cursor: pointer;
+      transition: background .2s, border-color .2s, color .2s;
+    }
+    .skill-toggle:hover {
+      background: #e9edf2;
+      border-color: #b9c2ce;
+    }
+    .skill-toggle[aria-expanded="true"] {
+      background: #e7ebf0;
+      border-color: #aeb9c6;
+      color: #2f3b49;
+    }
+    .skill-toggle-chevron { transition: transform .25s; }
+    .skill-toggle[aria-expanded="true"] .skill-toggle-chevron { transform: rotate(180deg); }
+    .skill-tags-extra {
+      margin-top: 6px;
+    }
+    .skill-tags-extra[hidden] {
+      display: none !important;
     }
     .card-footer-row {
       display: flex;
@@ -1182,6 +1216,53 @@
     btn.setAttribute('aria-expanded', String(!expanded));
     list.style.display = expanded ? 'none' : 'block';
   }
+
+  /* ── Compact, reusable skill groups ── */
+  function initialiseSkillGroups() {
+    var groups = document.querySelectorAll('.skill-tags');
+
+    groups.forEach(function(group, groupIndex) {
+      if (group.classList.contains('skill-tags-extra')) return;
+
+      var skills = Array.prototype.filter.call(group.children, function(child) {
+        return child.classList.contains('skill-tag');
+      });
+      if (skills.length <= 5) return;
+
+      var hiddenCount = skills.length - 5;
+      var extraId = 'extraSkills' + (groupIndex + 1);
+      var extraSkills = document.createElement('div');
+      extraSkills.className = 'skill-tags skill-tags-extra';
+      extraSkills.id = extraId;
+      extraSkills.hidden = true;
+
+      skills.slice(5).forEach(function(skill) {
+        extraSkills.appendChild(skill);
+      });
+
+      var toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'skill-toggle';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-controls', extraId);
+      toggle.innerHTML = '<i class="fa fa-tags" aria-hidden="true"></i>' +
+        '<span>+ ' + hiddenCount + ' More Skills</span>' +
+        '<i class="fa fa-chevron-down skill-toggle-chevron" aria-hidden="true"></i>';
+
+      toggle.addEventListener('click', function() {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        extraSkills.hidden = expanded;
+        toggle.querySelector('span').textContent = expanded
+          ? '+ ' + hiddenCount + ' More Skills'
+          : 'Hide ' + hiddenCount + ' Skills';
+      });
+
+      group.insertAdjacentElement('afterend', toggle);
+      toggle.insertAdjacentElement('afterend', extraSkills);
+    });
+  }
+  initialiseSkillGroups();
 
   /* ── Story section fade-in ── */
   var story = document.getElementById('story-section');
