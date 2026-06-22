@@ -1,0 +1,63 @@
+﻿# Ignore documents / papers
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+*.csv
+*.tsv
+*.txt
+*.rtf
+*.md
+
+# Ignore LaTeX / research paper files
+*.tex
+*.bib
+*.bbl
+*.aux
+*.log
+*.out
+*.toc
+*.cls
+*.sty
+*.synctex.gz
+
+# Ignore images / media
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.svg
+*.ico
+*.mp4
+*.mov
+*.mp3
+*.wav
+*.avi
+*.mkv
+
+# Ignore common heavy folders
+**/papers/**
+**/paper/**
+**/publications/**
+**/publication/**
+**/certificates/**
+**/certificate/**
+**/images/**
+**/image/**
+**/img/**
+**/assets/images/**
+**/assets/img/**
+**/assets/papers/**
+**/media/**
+**/uploads/**
+**/downloads/**
+
+# Ignore generated / dependency folders
+.git/
+node_modules/
+__pycache__/
+graphify-out/
