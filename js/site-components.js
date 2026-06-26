@@ -57,7 +57,6 @@
     '                <li class="nav-item"><a class="nav-link" href="blog.html">Blog Overview</a></li>' +
     '                <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>' +
     '                <li class="nav-item"><a class="nav-link" href="social-life.html">Social Life</a></li>' +
-    '                <li class="nav-item"><a class="nav-link" href="social-life.html#my-travel-map">My Travel Map</a></li>' +
     '                <li class="nav-item"><a class="nav-link" href="sports.html">Sports</a></li>' +
     '                <li class="nav-item"><a class="nav-link" href="avocations.html">Avocations</a></li>' +
     '              </ul>' +

@@ -998,15 +998,30 @@
 <!-- My Travel Map preview -->
 <section class="travel-preview-section" id="travel-map-preview" aria-labelledby="travel-preview-title">
   <div class="container">
-    <div class="travel-preview-head">
-      <div>
+    <a class="travel-preview-panel" href="social-life.html#my-travel-map" aria-label="Explore My Travel Map">
+      <div class="travel-preview-copy">
         <span class="travel-preview-kicker">Places, People &amp; Memories</span>
         <h2 id="travel-preview-title">My Travel Map</h2>
-        <p>A visual journey through conferences, workshops, research visits, talks, awards, campus memories, sports, treks, and international exposure.</p>
+        <p>A compact glimpse of places connected to conferences, research visits, talks, awards, treks, campus moments, and personal memories.</p>
+        <span class="travel-preview-cta">Explore My Travel Map <i class="fa fa-map-marker"></i></span>
       </div>
-      <a class="travel-preview-cta" href="social-life.html#my-travel-map">Explore My Travel Map <i class="fa fa-map-marker"></i></a>
-    </div>
-    <div class="travel-preview-strip" id="travelPreviewStrip" aria-label="Highlighted travel locations"></div>
+      <div class="travel-mini-map" aria-hidden="true">
+        <div class="travel-mini-globe">
+          <span class="travel-mini-land land-americas"></span>
+          <span class="travel-mini-land land-europe"></span>
+          <span class="travel-mini-land land-asia"></span>
+          <span class="travel-mini-land land-india"></span>
+          <svg class="travel-mini-route" viewBox="0 0 640 320" focusable="false">
+            <path d="M425 166 C398 132 363 101 328 92 C274 78 235 104 205 132" />
+            <path d="M425 166 C449 143 477 129 510 129" />
+            <path d="M425 166 C389 183 355 202 318 232" />
+            <path d="M425 166 C431 186 438 207 446 229" />
+          </svg>
+          <div class="travel-mini-markers" id="travelPreviewMarkers"></div>
+        </div>
+        <div class="travel-preview-locations" id="travelPreviewStrip" aria-label="Highlighted travel locations"></div>
+      </div>
+    </a>
   </div>
 </section>
 

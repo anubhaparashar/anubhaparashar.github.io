@@ -145,7 +145,8 @@
     .archive-title { font-size:1.2rem !important; font-weight:900 !important; color:#0f3460 !important; margin:0 0 4px; }
     .archive-copy { font-size:.82rem; color:#667; line-height:1.55; margin:0; max-width:560px; }
     .archive-count {
-      justify-self:end; white-space:nowrap; background:#f0f4ff; color:#667;
+      justify-self:end; display:inline-flex; align-items:center; max-width:100%;
+      white-space:nowrap; background:#f7f9ff; color:#60708e;
       border-radius:999px; padding:7px 12px; border:1px solid #dce5ff;
       font-size:.74rem; font-weight:700; line-height:1.2;
     }
@@ -630,7 +631,7 @@
 
   function setArchiveLoading(isLoading) {
     var status = document.getElementById('archive-status');
-    if (status && isLoading) status.textContent = 'Loading archive…';
+    if (status && isLoading) status.textContent = 'Loading archive...';
   }
 
   function escapeHtml(value) {
@@ -998,13 +999,13 @@
     var status = document.getElementById('archive-status');
     if (!status) return;
     if (total === 0) {
-      status.textContent = archiveIsFiltered() ? 'No matching posts' : 'No posts available';
+      status.textContent = 'No posts found';
       return;
     }
     var filtered = archiveIsFiltered();
     status.textContent = filtered
       ? 'Showing ' + total + ' matching ' + (total === 1 ? 'post' : 'posts')
-      : 'Archive · ' + total + ' ' + (total === 1 ? 'post' : 'posts');
+      : total + ' ' + (total === 1 ? 'post' : 'posts') + ' in the archive';
   }
 
   function filterPosts(cat, btn, updateHash) {

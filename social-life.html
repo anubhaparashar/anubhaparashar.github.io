@@ -149,8 +149,8 @@
     }
     .connection-tab-btn.active .connection-tab-count { background:#0f3460; color:#7eb8e0; }
     .connection-anchor { scroll-margin-top:120px; }
-    .connection-section { display:none; }
-    .connection-section.active { display:block; }
+    .tab-panel, .connection-section { display:none; }
+    .tab-panel.active, .connection-section.active { display:block; }
     /* floating particles */
     .soc-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 2; }
     .soc-particles span {
@@ -339,65 +339,19 @@
   </div>
 </section>
 
-<!-- Interactive travel, event, and memory map -->
-<section class="travel-map-section" id="my-travel-map" aria-labelledby="travel-map-title">
-  <div class="container">
-    <header class="travel-map-head">
-      <span class="travel-map-eyebrow">Journeys &amp; Connections</span>
-      <h2 id="travel-map-title">My Travel Map</h2>
-      <p>Places connected to my conferences, workshops, research visits, talks, academic events, awards, sports, treks, outreach activities, and personal memories.</p>
-    </header>
-
-    <div class="travel-map-stats" data-travel-stats aria-label="Travel map statistics"></div>
-    <div class="travel-map-filters" role="group" aria-label="Filter travel map locations">
-      <button type="button" class="travel-filter active" data-travel-filter="All" aria-pressed="true">All</button>
-      <button type="button" class="travel-filter" data-travel-filter="India" aria-pressed="false">India</button>
-      <button type="button" class="travel-filter" data-travel-filter="International" aria-pressed="false">International</button>
-      <button type="button" class="travel-filter" data-travel-filter="Visited" aria-pressed="false">Visited</button>
-      <button type="button" class="travel-filter" data-travel-filter="Academic Footprint" aria-pressed="false">Academic Footprint</button>
-      <button type="button" class="travel-filter" data-travel-filter="Conferences" aria-pressed="false">Conferences</button>
-      <button type="button" class="travel-filter" data-travel-filter="Workshops" aria-pressed="false">Workshops</button>
-      <button type="button" class="travel-filter" data-travel-filter="Talks" aria-pressed="false">Talks</button>
-      <button type="button" class="travel-filter" data-travel-filter="Research Visits" aria-pressed="false">Research Visits</button>
-      <button type="button" class="travel-filter" data-travel-filter="Awards" aria-pressed="false">Awards</button>
-      <button type="button" class="travel-filter" data-travel-filter="Hackathons" aria-pressed="false">Hackathons</button>
-      <button type="button" class="travel-filter" data-travel-filter="Social / Outreach" aria-pressed="false">Social / Outreach</button>
-      <button type="button" class="travel-filter" data-travel-filter="Sports" aria-pressed="false">Sports</button>
-      <button type="button" class="travel-filter" data-travel-filter="Trekking" aria-pressed="false">Trekking</button>
-    </div>
-
-    <div class="travel-map-layout">
-      <div class="travel-map-canvas" role="region" aria-label="Interactive world map showing travel and academic locations">
-        <svg class="travel-world" viewBox="0 0 1000 500" aria-hidden="true">
-          <path d="M72 116L115 69 205 52 274 74 300 120 270 151 232 148 210 190 165 202 128 179 88 184 54 151Z"/>
-          <path d="M244 221L282 231 305 275 291 323 275 382 243 437 218 404 222 350 198 301 207 251Z"/>
-          <path d="M432 86L489 61 561 72 596 103 585 137 532 143 505 124 472 145 427 130 398 105Z"/>
-          <path d="M469 154L519 148 555 177 571 228 550 290 521 355 483 343 464 294 434 255 441 202Z"/>
-          <path d="M564 92L651 61 766 69 866 112 912 157 883 200 815 204 767 177 717 199 665 178 617 190 573 150Z"/>
-          <path d="M713 205L754 212 778 250 753 279 720 263 699 229Z"/>
-          <path d="M825 315L877 302 922 334 906 376 856 392 815 358Z"/>
-          <path d="M922 220L947 225 956 249 937 262 914 247Z"/>
-        </svg>
-        <div class="travel-pin-layer" data-travel-pins></div>
-        <div class="travel-map-legend" aria-label="Map marker legend"><span><i></i> Visited</span><span><i class="footprint"></i> Academic Footprint</span></div>
-      </div>
-      <aside class="travel-place-panel" data-travel-panel aria-live="polite" aria-label="Selected location details"></aside>
-    </div>
-
-    <div class="travel-location-grid" data-travel-cards aria-label="Travel locations"></div>
-  </div>
-</section>
-
 <!-- Sub header navigation -->
 <div class="connection-tab-wrap">
-  <div class="connection-tab-nav">
-    <button class="connection-tab-btn active" type="button" data-target="conference-outings">
+  <div class="connection-tab-nav" role="tablist" aria-label="Social Life sections">
+    <button class="connection-tab-btn active" id="tab-conference-outings" type="button" data-target="conference-outings" role="tab" aria-selected="true" aria-controls="connection-section-conference-outings">
       Conference Outings <span class="connection-tab-count">2</span>
     </button>
-    <button class="connection-tab-btn" type="button" data-target="memories">
+    <button class="connection-tab-btn" id="tab-my-travel-map" type="button" data-target="my-travel-map" role="tab" aria-selected="false" aria-controls="connection-section-my-travel-map">
+      My Travel Map
+    </button>
+    <button class="connection-tab-btn" id="tab-memories" type="button" data-target="memories" role="tab" aria-selected="false" aria-controls="connection-section-memories">
       Memories <span class="connection-tab-count">3</span>
     </button>
-    <button class="connection-tab-btn" type="button" data-target="family">
+    <button class="connection-tab-btn" id="tab-family" type="button" data-target="family" role="tab" aria-selected="false" aria-controls="connection-section-family">
       Family <span class="connection-tab-count">1</span>
     </button>
   </div>
@@ -448,7 +402,7 @@
         <!-- Photo Galleries -->
         <div class="col-lg-12 px-0" style="margin-bottom:32px;">
 
-          <div class="connection-section active" id="connection-section-conference-outings">
+          <div class="connection-section tab-panel active" id="connection-section-conference-outings" role="tabpanel" aria-labelledby="tab-conference-outings">
           <div class="connection-section-title connection-anchor" id="conference-outings">
             <h2>Conference Outings</h2>
             <p>Professional gatherings, conference memories, and the friendships formed around academic events.</p>
@@ -511,7 +465,44 @@
 
           </div>
 
-          <div class="connection-section" id="connection-section-memories">
+          <div class="connection-section tab-panel travel-map-tab-panel" id="connection-section-my-travel-map" role="tabpanel" aria-labelledby="tab-my-travel-map">
+            <section class="travel-map-section connection-anchor" id="my-travel-map" aria-labelledby="travel-map-title">
+    <header class="travel-map-head">
+      <span class="travel-map-eyebrow">Journeys &amp; Connections</span>
+      <h2 id="travel-map-title">My Travel Map</h2>
+      <p>Places connected to my conferences, workshops, research visits, talks, academic events, awards, sports, treks, outreach activities, and personal memories.</p>
+    </header>
+
+    <div class="travel-map-stats" data-travel-stats aria-label="Travel map statistics"></div>
+    <div class="travel-map-filters" role="group" aria-label="Filter travel map locations">
+      <button type="button" class="travel-filter active" data-travel-filter="All" aria-pressed="true">All</button>
+      <button type="button" class="travel-filter" data-travel-filter="India" aria-pressed="false">India</button>
+      <button type="button" class="travel-filter" data-travel-filter="International" aria-pressed="false">International</button>
+      <button type="button" class="travel-filter" data-travel-filter="Visited" aria-pressed="false">Visited</button>
+      <button type="button" class="travel-filter" data-travel-filter="Academic Footprint" aria-pressed="false">Academic Footprint</button>
+      <button type="button" class="travel-filter" data-travel-filter="Conferences" aria-pressed="false">Conferences</button>
+      <button type="button" class="travel-filter" data-travel-filter="Workshops" aria-pressed="false">Workshops</button>
+      <button type="button" class="travel-filter" data-travel-filter="Talks" aria-pressed="false">Talks</button>
+      <button type="button" class="travel-filter" data-travel-filter="Research Visits" aria-pressed="false">Research Visits</button>
+      <button type="button" class="travel-filter" data-travel-filter="Awards" aria-pressed="false">Awards</button>
+      <button type="button" class="travel-filter" data-travel-filter="Hackathons" aria-pressed="false">Hackathons</button>
+      <button type="button" class="travel-filter" data-travel-filter="Social / Outreach" aria-pressed="false">Social / Outreach</button>
+      <button type="button" class="travel-filter" data-travel-filter="Sports" aria-pressed="false">Sports</button>
+      <button type="button" class="travel-filter" data-travel-filter="Trekking" aria-pressed="false">Trekking</button>
+    </div>
+
+    <div class="travel-map-layout">
+      <div class="travel-map-canvas" data-leaflet-map role="region" aria-label="Interactive world map showing travel and academic locations">
+        <div class="travel-map-loading">Loading interactive map...</div>
+      </div>
+      <aside class="travel-place-panel" data-travel-panel aria-live="polite" aria-label="Selected location details"></aside>
+    </div>
+
+    <div class="travel-location-grid" data-travel-cards aria-label="Travel locations"></div>
+            </section>
+          </div>
+
+          <div class="connection-section tab-panel" id="connection-section-memories" role="tabpanel" aria-labelledby="tab-memories">
           <div class="connection-section-title connection-anchor" id="memories">
             <h2>Memories</h2>
             <p>Recent snapshots and quiet moments worth keeping close.</p>
@@ -621,7 +612,7 @@
 
           </div>
 
-          <div class="connection-section" id="connection-section-family">
+          <div class="connection-section tab-panel" id="connection-section-family" role="tabpanel" aria-labelledby="tab-family">
           <div class="connection-section-title connection-anchor" id="family">
             <h2>Family</h2>
             <p>Personal milestones, blessings, and the relationships that hold every journey together.</p>
@@ -990,14 +981,19 @@
 
     function activateTab(id, updateHash) {
       buttons.forEach(function(item) {
-        item.classList.toggle('active', item.getAttribute('data-target') === id);
+        var active = item.getAttribute('data-target') === id;
+        item.classList.toggle('active', active);
+        item.setAttribute('aria-selected', String(active));
       });
       sections.forEach(function(section) {
-        section.classList.toggle('active', section.id === 'connection-section-' + id);
+        var active = section.id === 'connection-section-' + id;
+        section.classList.toggle('active', active);
+        section.hidden = !active;
       });
       if (updateHash !== false && window.location.hash !== '#' + id) {
         history.replaceState(null, '', '#' + id);
       }
+      window.dispatchEvent(new CustomEvent('socialtabchange', { detail: { id: id } }));
       window.dispatchEvent(new Event('resize'));
     }
 
@@ -1015,10 +1011,9 @@
       var tabId = sectionForHash(hash);
       if (!tabId) return;
       activateTab(tabId, false);
-      if (hash === tabId) return;
       [80, 350, 900].forEach(function(delay) {
         setTimeout(function() {
-          var target = document.getElementById(hash);
+          var target = document.getElementById(hash) || document.getElementById('connection-section-' + tabId);
           if (!target) return;
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           target.style.outline = '3px solid #d6a235';
