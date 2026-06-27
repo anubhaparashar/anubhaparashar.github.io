@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/site-header-footer.css">
   <link rel="stylesheet" href="css/travel-map.css">
+  <link rel="stylesheet" href="assets/css/global-footprints-map.css">
   <style>
     /* ══════════════════════════════════════════════════════
        GLOBAL RESET
@@ -995,21 +996,31 @@
 </section>
 
 
-<!-- My Travel Map preview -->
-<section class="travel-preview-section" id="travel-map-preview" aria-labelledby="travel-preview-title">
+<!-- Global Footprints map -->
+<section id="global-footprints" class="global-footprints-section" aria-labelledby="global-footprints-title">
   <div class="container">
-    <a class="travel-preview-panel" href="social-life.html#my-travel-map" aria-label="Explore My Travel Map">
-      <div class="travel-preview-copy">
-        <span class="travel-preview-kicker">Places, People &amp; Memories</span>
-        <h2 id="travel-preview-title">My Travel Map</h2>
-        <p>A visual journey through conferences, workshops, research visits, talks, awards, campus memories, sports, treks, and international exposure.</p>
-        <span class="travel-preview-cta">Explore My Travel Map <i class="fa fa-map-marker"></i></span>
+    <div class="global-footprints-header">
+      <p class="section-kicker">Journeys &amp; Connections</p>
+      <h2 id="global-footprints-title">GLOBAL FOOTPRINTS</h2>
+      <p>Places connected to conferences, workshops, research visits, academic events, talks, awards, collaborations, treks, sports, outreach activities, and personal memories.</p>
+    </div>
+
+    <div class="global-footprints-filters" id="home-map-filters" aria-label="Filter Global Footprints map"></div>
+
+    <div class="global-footprints-layout">
+      <div id="home-global-map" class="home-global-map" role="region" aria-label="Interactive Global Footprints map">
+        Loading interactive map...
       </div>
-      <div class="travel-journey-card" aria-hidden="true">
-        <div class="travel-journey-route" id="travelPreviewRoute"></div>
-        <div class="travel-preview-locations" id="travelPreviewStrip" aria-label="Highlighted travel locations"></div>
-      </div>
-    </a>
+
+      <aside id="home-map-details" class="home-map-details" aria-live="polite">
+        <h3>Explore a location</h3>
+        <p>Click any marker to view related entries.</p>
+      </aside>
+    </div>
+
+    <div id="home-map-region-summary" class="home-map-region-summary" aria-label="Global Footprints region summary"></div>
+
+    <a class="global-footprints-full-link" href="social-life.html#my-travel-map">Explore Full Travel Map <i class="fa fa-map-marker"></i></a>
   </div>
 </section>
 
@@ -1172,7 +1183,7 @@
 <script src="js/theme.js"></script>
 <script src="js/site-components.js"></script>
 <script src="data/site-data.js"></script>
-<script src="js/travel-map.js"></script>
+<script src="assets/js/global-footprints-map.js"></script>
 
 <script>
 /* ── Star field (80 random stars) ── */

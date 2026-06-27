@@ -1195,8 +1195,8 @@ var travelMapData = [
     { title: 'Program Committee Member, Review Committee — RICE 2017', date: '24–26 March 2017', category: 'Conferences', url: 'event.html#rice-2017-program-committee-review-committee' }
   ] }),
   buildTravelMapPlace({ id: 'zagreb-croatia', city: 'Zagreb', country: 'Croatia', lat: 45.8150, lng: 15.9819, status: 'Visited', title: 'Zagreb Research & Conference Journey', summary: 'FER research exposure, a faculty visit, an international conference, and the WAIT Best Paper Award.', tags: ['Research Visit', 'Conference', 'Award', 'Croatia'], postIds: ['post-c-coratia','post-fv-zagreb'], items: [
-    { title: 'WAIT Best Paper Award', date: '2018', category: 'Awards', url: 'award.html' },
-    { title: 'FER, University of Zagreb Doctoral Research Exposure', date: 'Sep 2018 – Dec 2019', category: 'Research Visits', url: 'experience.html' }
+    { title: 'WAIT Best Paper Award', date: '2018', category: 'Awards', url: 'award.html#wait-best-paper-award-2018' },
+    { title: 'FER, University of Zagreb Doctoral Research Exposure', date: 'Sep 2018 – Dec 2019', category: 'Research Visits', url: 'experience.html#fer-zagreb-doctoral-research-exposure' }
   ] }),
   buildTravelMapPlace({ id: 'rijeka-croatia', city: 'Rijeka', country: 'Croatia', lat: 45.3271, lng: 14.4422, status: 'Visited', title: 'Rijeka Faculty Visit', summary: 'Academic exposure and research exchange at the University of Rijeka.', tags: ['Research Visit', 'Croatia'], postIds: ['post-fv-rijeka'] }),
   buildTravelMapPlace({ id: 'dubai-uae', city: 'Dubai', country: 'United Arab Emirates', lat: 25.2048, lng: 55.2708, status: 'Visited', title: 'Dubai International Conference', summary: 'International research presentation and academic exchange in Dubai.', tags: ['Conference', 'International'], postIds: ['post-c-dubai'] }),
@@ -1208,7 +1208,7 @@ var travelMapData = [
   ] }),
   buildTravelMapPlace({ id: 'sochi-russia', city: 'Sochi', country: 'Russia', lat: 43.6028, lng: 39.7342, status: 'Academic Footprint', title: 'SIN 2019 Academic Footprint', summary: 'Organizing, program, and review committee involvement associated with SIN 2019.', tags: ['Conference', 'Committee'], items: [
     { title: 'Organising Committee Member — SIN 2019', date: '12–15 September 2019', category: 'Conferences', url: 'event.html#sin-2019-organising-committee' },
-    { title: 'Program Committee Member, Review Committee — SIN 2019', date: '12–15 September 2019', category: 'Conferences', url: 'event.html#sin-2019-program-committee-review-committee' }
+    { title: 'Program Committee Member, Review Committee — SIN 2019', date: '12–15 September 2019', category: 'Conferences', url: 'event.html#sin-2019-program-review-committee' }
   ] }),
   buildTravelMapPlace({ id: 'location-to-confirm', city: 'Location to Confirm', country: '', lat: 20.5937, lng: 78.9629, status: 'Location to Confirm', title: 'Location to Confirm', summary: 'Memories documented on the website whose exact geographic location is not stated.', tags: ['Location to Confirm'], items: [
     { title: 'Girja Devi Temple Trekking', date: 'Jan 2017', category: 'Trekking', url: 'avocations.html#trek-11' }

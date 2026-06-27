@@ -31,7 +31,7 @@
     return trimmed;
   }
 
-  function getItemUrl(item, location) {
+  function getTravelMapItemUrl(item, location) {
     var raw = item && (
       item.url ||
       item.href ||
@@ -50,14 +50,15 @@
   }
 
   function linkAttributes(url) {
-    if (!isExternalUrl(url)) return '';
-    return ' target="_blank" rel="noopener"';
+    if (!url) return '';
+    if (isExternalUrl(url)) return ' target="_blank" rel="noopener"';
+    return ' target="_self"';
   }
 
   function validateTravelMapUrls() {
     data.forEach(function (location) {
       (location.items || []).forEach(function (item) {
-        var url = getItemUrl(item, location);
+        var url = getTravelMapItemUrl(item, location);
         if (!url) {
           window.console.warn('Missing travel map URL:', location.name || placeLocation(location), item.title);
         }
@@ -154,15 +155,15 @@
       '<p>' + escapeHtml(place.summary || '') + '</p>' +
       '<div class="travel-popup-meta"><span>' + escapeHtml(place.status) + '</span><span>' + place.items.length + ' ' + (place.items.length === 1 ? 'entry' : 'entries') + '</span></div>' +
       '<div class="travel-popup-list">' + place.items.slice(0, 6).map(function (item) {
-        var itemUrl = getItemUrl(item, place);
+        var itemUrl = getTravelMapItemUrl(item, place);
         var link = itemUrl ? '<a class="travel-item-link" href="' + escapeHtml(itemUrl) + '"' + linkAttributes(itemUrl) + '>View</a>' : '';
         return '<div class="travel-popup-item"><div><strong>' + escapeHtml(item.title) + '</strong><small>' + [item.date, item.category].filter(Boolean).map(escapeHtml).join(' &middot; ') + '</small></div>' + link + '</div>';
       }).join('') + '</div></div>';
   }
 
   function panelItemHtml(item, itemCount, place) {
-    var url = getItemUrl(item, place);
-    var link = url ? '<a class="travel-item-link" href="' + escapeHtml(url) + '"' + linkAttributes(url) + '>' + (itemCount === 1 ? 'Read More' : 'View') + '</a>' : '';
+    var url = getTravelMapItemUrl(item, place);
+    var link = url ? '<a class="travel-item-link" href="' + escapeHtml(url) + '"' + linkAttributes(url) + '>' + (itemCount === 1 ? 'Read More' : 'View') + '</a>' : (window.console.warn('Missing URL for travel map item:', place && (place.name || place.city || place.title), item.title), '');
     return '<article class="travel-panel-item"><div><h4>' + escapeHtml(item.title) + '</h4><div class="travel-item-meta">' +
       [item.date, item.category].filter(Boolean).map(escapeHtml).join(' &middot; ') + '</div></div>' + link + '</article>';
   }
