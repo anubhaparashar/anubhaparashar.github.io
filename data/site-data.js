@@ -1188,11 +1188,11 @@ var travelMapData = [
   buildTravelMapPlace({ id: 'agra-india', city: 'Agra', state: 'Uttar Pradesh', country: 'India', lat: 27.1767, lng: 78.0081, title: 'Agra Expert Talks', summary: 'Faculty development talks on the Internet of Things and machine intelligence at Dr. B. R. Ambedkar University.', tags: ['Talks', 'IoT', 'Machine Intelligence'], postIds: ['post-et-03','post-et-machine-intelligence-2019'] }),
   buildTravelMapPlace({ id: 'hyderabad-india', city: 'Hyderabad', state: 'Telangana', country: 'India', lat: 17.3850, lng: 78.4867, title: 'Hyderabad School & Speaking Memories', summary: 'School leadership memories and an early Java talk featured by the Times of India.', tags: ['School', 'Leadership', 'Talks'], postIds: ['post-lead-vc','post-lead-sp','post-et-09'] }),
   buildTravelMapPlace({ id: 'haryana-india', city: 'Haryana', state: 'Haryana', country: 'India', lat: 29.0588, lng: 76.0856, title: 'Haryana Academic Memory', summary: 'IEEE Student Branch seminar work at PDM College of Engineering.', tags: ['Seminar', 'Academic'], items: [
-    { title: 'Seminar on Inertial System and Global Positioning System Technology Trends', date: '2 November 2010', category: 'Academic', url: 'event.html' }
+    { title: 'Seminar on Inertial System and Global Positioning System Technology Trends', date: '2 November 2010', category: 'Academic', url: 'event.html#seminar-inertial-system-gps-technology-trends' }
   ] }),
   buildTravelMapPlace({ id: 'gurugram-india', city: 'Gurugram', state: 'Haryana', country: 'India', lat: 28.4595, lng: 77.0266, title: 'Gurugram Team & Sports Memory', summary: 'A workplace cricket win celebrating teamwork beyond day-to-day engineering.', tags: ['Sports', 'Teamwork'], postIds: ['post-sports-cricket'] }),
   buildTravelMapPlace({ id: 'gopeshwar-india', city: 'Gopeshwar', state: 'Uttarakhand', country: 'India', lat: 30.4169, lng: 79.3286, status: 'Academic Footprint', title: 'RICE 2017 Academic Footprint', summary: 'Program and review committee involvement for RICE 2017 at IT Gopeshwar.', tags: ['Conference', 'Committee'], items: [
-    { title: 'Program Committee Member, Review Committee — RICE 2017', date: '24–26 March 2017', category: 'Conferences', url: 'event.html' }
+    { title: 'Program Committee Member, Review Committee — RICE 2017', date: '24–26 March 2017', category: 'Conferences', url: 'event.html#rice-2017-program-committee-review-committee' }
   ] }),
   buildTravelMapPlace({ id: 'zagreb-croatia', city: 'Zagreb', country: 'Croatia', lat: 45.8150, lng: 15.9819, status: 'Visited', title: 'Zagreb Research & Conference Journey', summary: 'FER research exposure, a faculty visit, an international conference, and the WAIT Best Paper Award.', tags: ['Research Visit', 'Conference', 'Award', 'Croatia'], postIds: ['post-c-coratia','post-fv-zagreb'], items: [
     { title: 'WAIT Best Paper Award', date: '2018', category: 'Awards', url: 'award.html' },
@@ -1201,14 +1201,14 @@ var travelMapData = [
   buildTravelMapPlace({ id: 'rijeka-croatia', city: 'Rijeka', country: 'Croatia', lat: 45.3271, lng: 14.4422, status: 'Visited', title: 'Rijeka Faculty Visit', summary: 'Academic exposure and research exchange at the University of Rijeka.', tags: ['Research Visit', 'Croatia'], postIds: ['post-fv-rijeka'] }),
   buildTravelMapPlace({ id: 'dubai-uae', city: 'Dubai', country: 'United Arab Emirates', lat: 25.2048, lng: 55.2708, status: 'Visited', title: 'Dubai International Conference', summary: 'International research presentation and academic exchange in Dubai.', tags: ['Conference', 'International'], postIds: ['post-c-dubai'] }),
   buildTravelMapPlace({ id: 'penang-malaysia', city: 'Penang', country: 'Malaysia', lat: 5.4164, lng: 100.3327, status: 'Academic Footprint', title: 'TENCON 2017 Academic Footprint', summary: 'Program and review committee involvement for TENCON 2017.', tags: ['Conference', 'Committee'], items: [
-    { title: 'Program Committee Member, Review Committee — TENCON 2017', date: '5–8 November 2017', category: 'Conferences', url: 'event.html' }
+    { title: 'Program Committee Member, Review Committee — TENCON 2017', date: '5–8 November 2017', category: 'Conferences', url: 'event.html#tencon-2017-program-committee-review-committee' }
   ] }),
   buildTravelMapPlace({ id: 'cardiff-uk', city: 'Cardiff', country: 'United Kingdom', lat: 51.4816, lng: -3.1791, status: 'Academic Footprint', title: 'SIN 2018 Academic Footprint', summary: 'Program and review committee contribution associated with SIN 2018 at Cardiff University.', tags: ['Conference', 'Committee'], items: [
-    { title: 'Program Committee Member, Review Committee — SIN 2018', date: '10–12 September 2018', category: 'Conferences', url: 'event.html' }
+    { title: 'Program Committee Member, Review Committee — SIN 2018', date: '10–12 September 2018', category: 'Conferences', url: 'event.html#sin-2018-program-committee-review-committee-cardiff' }
   ] }),
   buildTravelMapPlace({ id: 'sochi-russia', city: 'Sochi', country: 'Russia', lat: 43.6028, lng: 39.7342, status: 'Academic Footprint', title: 'SIN 2019 Academic Footprint', summary: 'Organizing, program, and review committee involvement associated with SIN 2019.', tags: ['Conference', 'Committee'], items: [
-    { title: 'Organising Committee Member — SIN 2019', date: '12–15 September 2019', category: 'Conferences', url: 'event.html' },
-    { title: 'Program Committee Member, Review Committee — SIN 2019', date: '12–15 September 2019', category: 'Conferences', url: 'event.html' }
+    { title: 'Organising Committee Member — SIN 2019', date: '12–15 September 2019', category: 'Conferences', url: 'event.html#sin-2019-organising-committee' },
+    { title: 'Program Committee Member, Review Committee — SIN 2019', date: '12–15 September 2019', category: 'Conferences', url: 'event.html#sin-2019-program-committee-review-committee' }
   ] }),
   buildTravelMapPlace({ id: 'location-to-confirm', city: 'Location to Confirm', country: '', lat: 20.5937, lng: 78.9629, status: 'Location to Confirm', title: 'Location to Confirm', summary: 'Memories documented on the website whose exact geographic location is not stated.', tags: ['Location to Confirm'], items: [
     { title: 'Girja Devi Temple Trekking', date: 'Jan 2017', category: 'Trekking', url: 'avocations.html#trek-11' }

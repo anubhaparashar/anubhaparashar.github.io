@@ -31,6 +31,43 @@
     return trimmed;
   }
 
+  function getItemUrl(item, location) {
+    var raw = item && (
+      item.url ||
+      item.href ||
+      item.link ||
+      item.postUrl ||
+      item.sourceUrl ||
+      ''
+    );
+    var itemUrl = validUrl(raw);
+    if (itemUrl) return itemUrl;
+    return validUrl(location && location.url);
+  }
+
+  function isExternalUrl(url) {
+    return /^https?:\/\//i.test(url);
+  }
+
+  function linkAttributes(url) {
+    if (!isExternalUrl(url)) return '';
+    return ' target="_blank" rel="noopener"';
+  }
+
+  function validateTravelMapUrls() {
+    data.forEach(function (location) {
+      (location.items || []).forEach(function (item) {
+        var url = getItemUrl(item, location);
+        if (!url) {
+          window.console.warn('Missing travel map URL:', location.name || placeLocation(location), item.title);
+        }
+        if (url === 'event.html' || /\/event\.html$/i.test(url)) {
+          window.console.warn('Generic event.html link found. Add item-level anchor:', location.name || placeLocation(location), item.title);
+        }
+      });
+    });
+  }
+
   function loadStyle(href) {
     if (document.querySelector('link[href="' + href + '"]')) return;
     var link = document.createElement('link');
@@ -117,13 +154,15 @@
       '<p>' + escapeHtml(place.summary || '') + '</p>' +
       '<div class="travel-popup-meta"><span>' + escapeHtml(place.status) + '</span><span>' + place.items.length + ' ' + (place.items.length === 1 ? 'entry' : 'entries') + '</span></div>' +
       '<div class="travel-popup-list">' + place.items.slice(0, 6).map(function (item) {
-        return '<div class="travel-popup-item"><strong>' + escapeHtml(item.title) + '</strong><small>' + [item.date, item.category].filter(Boolean).map(escapeHtml).join(' &middot; ') + '</small></div>';
+        var itemUrl = getItemUrl(item, place);
+        var link = itemUrl ? '<a class="travel-item-link" href="' + escapeHtml(itemUrl) + '"' + linkAttributes(itemUrl) + '>View</a>' : '';
+        return '<div class="travel-popup-item"><div><strong>' + escapeHtml(item.title) + '</strong><small>' + [item.date, item.category].filter(Boolean).map(escapeHtml).join(' &middot; ') + '</small></div>' + link + '</div>';
       }).join('') + '</div></div>';
   }
 
-  function panelItemHtml(item, itemCount) {
-    var url = validUrl(item.url);
-    var link = url ? '<a class="travel-item-link" href="' + escapeHtml(url) + '">' + (itemCount === 1 ? 'Read More' : 'View') + '</a>' : '';
+  function panelItemHtml(item, itemCount, place) {
+    var url = getItemUrl(item, place);
+    var link = url ? '<a class="travel-item-link" href="' + escapeHtml(url) + '"' + linkAttributes(url) + '>' + (itemCount === 1 ? 'Read More' : 'View') + '</a>' : '';
     return '<article class="travel-panel-item"><div><h4>' + escapeHtml(item.title) + '</h4><div class="travel-item-meta">' +
       [item.date, item.category].filter(Boolean).map(escapeHtml).join(' &middot; ') + '</div></div>' + link + '</article>';
   }
@@ -133,7 +172,7 @@
     if (!panel || !place) return;
     panel.innerHTML = '<div class="travel-panel-kicker">' + escapeHtml(place.status) + ' &middot; ' + place.items.length + ' ' + (place.items.length === 1 ? 'entry' : 'entries') + '</div>' +
       '<h3>' + escapeHtml(placeLocation(place)) + '</h3><p class="travel-panel-summary">' + escapeHtml(place.summary || '') + '</p>' +
-      '<div class="travel-panel-items">' + place.items.map(function (item) { return panelItemHtml(item, place.items.length); }).join('') + '</div>';
+      '<div class="travel-panel-items">' + place.items.map(function (item) { return panelItemHtml(item, place.items.length, place); }).join('') + '</div>';
     panel.scrollTop = 0;
   }
 
@@ -301,34 +340,26 @@
 
   function renderPreview() {
     var strip = document.getElementById('travelPreviewStrip');
-    var markerLayer = document.getElementById('travelPreviewMarkers');
-    if (!strip && !markerLayer) return;
-    var highlights = [
-      { id: 'zagreb-croatia', x: 27, y: 26, label: 'right' },
-      { id: 'dubai-uae', x: 56, y: 52, label: 'left' },
-      { id: 'delhi-india', x: 67, y: 44, label: 'right' },
-      { id: 'jaipur-india', x: 64, y: 53, label: 'left' },
-      { id: 'agra-india', x: 70, y: 59, label: 'right' },
-      { id: 'udaipur-india', x: 61, y: 67, label: 'bottom' }
-    ];
-    var places = highlights.map(function (item) {
-      var place = data.filter(function (entry) { return entry.id === item.id; })[0];
-      return place ? { place: place, x: item.x, y: item.y, label: item.label || 'top' } : null;
+    var route = document.getElementById('travelPreviewRoute');
+    if (!strip && !route) return;
+    var highlights = ['jaipur-india', 'delhi-india', 'agra-india', 'udaipur-india', 'dubai-uae', 'zagreb-croatia'];
+    var places = highlights.map(function (id) {
+      return data.filter(function (entry) { return entry.id === id; })[0];
     }).filter(Boolean);
 
-    if (markerLayer) {
-      markerLayer.innerHTML = places.map(function (item) {
-        return '<span class="travel-mini-marker" data-label="' + escapeHtml(item.label) + '" data-city="' + escapeHtml(item.place.city) + '" style="left:' + item.x + '%;top:' + item.y + '%"></span>';
+    if (route) {
+      route.innerHTML = places.map(function (place) {
+        return '<article class="travel-journey-step"><div class="travel-journey-pin"></div><h3>' + escapeHtml(place.city) + '</h3><p>' + escapeHtml(place.country || place.state || '') + '</p></article>';
       }).join('');
     }
     if (strip) {
-      strip.innerHTML = places.map(function (item) {
-        var place = item.place;
+      strip.innerHTML = places.map(function (place) {
         return '<article class="travel-preview-card"><h3>' + escapeHtml(place.city) + '</h3><p>' + place.items.length + ' related ' + (place.items.length === 1 ? 'entry' : 'entries') + ' &middot; ' + escapeHtml(place.status) + '</p></article>';
       }).join('');
     }
   }
 
+  validateTravelMapUrls();
   renderPreview();
   document.addEventListener('DOMContentLoaded', ensureMapIfVisible);
   window.addEventListener('load', ensureMapIfVisible);
