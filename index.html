@@ -161,7 +161,6 @@
     }
     .hero-btn-glass:hover { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.4); color: #fff !important; }
 
-
     /* ══════════════════════════════════════════════════════
        ABOUT
        ══════════════════════════════════════════════════════ */
@@ -498,7 +497,92 @@
       .contact-panel { grid-template-columns:1fr; }
       .contact-info, .contact-form-card { padding:18px 16px; }
     }
-  </style>
+
+    .gaitai-access-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(5, 10, 18, .68);
+      backdrop-filter: blur(8px);
+    }
+    .gaitai-access-overlay.is-open { display: flex; }
+    .gaitai-access-modal {
+      width: min(100%, 390px);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 18px;
+      background: linear-gradient(145deg, #101827 0%, #18263a 100%);
+      box-shadow: 0 24px 70px rgba(0,0,0,.42);
+      color: #fff;
+      padding: 24px;
+      position: relative;
+    }
+    .gaitai-access-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 34px;
+      height: 34px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.85);
+      cursor: pointer;
+    }
+    .gaitai-access-modal h3 {
+      margin: 0 42px 8px 0;
+      color: #fff !important;
+      font-size: 1.25rem !important;
+      font-weight: 800 !important;
+    }
+    .gaitai-access-modal p {
+      margin: 0 0 18px;
+      color: rgba(255,255,255,.68) !important;
+      font-size: .86rem;
+      line-height: 1.55;
+    }
+    .gaitai-access-field {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 12px;
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      padding: 12px 14px;
+      outline: none;
+      font-size: .95rem;
+    }
+    .gaitai-access-field:focus {
+      border-color: #d3b979;
+      box-shadow: 0 0 0 3px rgba(211,185,121,.18);
+    }
+    .gaitai-access-error {
+      min-height: 18px;
+      margin: 9px 0 0;
+      color: #ffb4b4 !important;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+    .gaitai-access-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .gaitai-access-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: .8rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .gaitai-access-btn.secondary { background: rgba(255,255,255,.1); color: rgba(255,255,255,.82); }
+    .gaitai-access-btn.primary { background: #d3b979; color: #101827; }
+
+</style>
 </head>
 
 <body>
@@ -938,7 +1022,6 @@
   </div>
 </section>
 
-
 <!-- ═══════════════════════════════════════════════════════
      RESEARCH AREAS
      ═══════════════════════════════════════════════════════ -->
@@ -995,7 +1078,6 @@
   </div>
 </section>
 
-
 <!-- Global Footprints map -->
 <section id="global-footprints" class="global-footprints-section" aria-labelledby="global-footprints-title">
   <div class="container">
@@ -1020,8 +1102,6 @@
     <a class="global-footprints-full-link" href="social-life.html#my-travel-map">Explore Full Travel Map <i class="fa fa-map-marker"></i></a>
   </div>
 </section>
-
-
 
 <!--================ Start Testimonial Area =================-->
 <div class="testimonial_area section_gap_bottom" style="padding-top:70px;padding-bottom:12px;">
@@ -1122,7 +1202,6 @@
 </div>
 <!--================ End Testimonial Area =================-->
 
-
 <section class="contact-section" id="contact">
   <div class="container">
     <div class="contact-panel">
@@ -1168,10 +1247,25 @@
   </div>
 </section>
 
-
 <div id="site-footer"></div>
 
 <!-- Scripts -->
+
+<div class="gaitai-access-overlay" id="gaitaiAccessModal" aria-hidden="true">
+  <div class="gaitai-access-modal" role="dialog" aria-modal="true" aria-labelledby="gaitaiAccessTitle">
+    <button type="button" class="gaitai-access-close" data-gaitai-close aria-label="Close GaitAI access dialog">&times;</button>
+    <h3 id="gaitaiAccessTitle">Access GaitAI</h3>
+    <p>Enter the access password to open the GaitAI research initiative.</p>
+    <form id="gaitaiAccessForm" novalidate>
+      <input class="gaitai-access-field" id="gaitaiAccessPassword" type="password" autocomplete="current-password" placeholder="Enter password" aria-label="GaitAI password">
+      <div class="gaitai-access-error" id="gaitaiAccessError" aria-live="polite"></div>
+      <div class="gaitai-access-actions">
+        <button type="button" class="gaitai-access-btn secondary" data-gaitai-close>Cancel</button>
+        <button type="submit" class="gaitai-access-btn primary">Continue</button>
+      </div>
+    </form>
+  </div>
+</div>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -1311,6 +1405,78 @@ $(document).ready(function () {
       });
   });
 })();
+
+/* GaitAI front-end access gate */
+(function () {
+  var GAITAI_PASSWORD = 'as';
+  var GAITAI_URL = 'https://gaitai-analysis.github.io/GaitAI/';
+  var pendingUrl = '';
+  var pendingTarget = '_blank';
+  var modal = document.getElementById('gaitaiAccessModal');
+  var form = document.getElementById('gaitaiAccessForm');
+  var input = document.getElementById('gaitaiAccessPassword');
+  var error = document.getElementById('gaitaiAccessError');
+  if (!modal || !form || !input || !error) return;
+
+
+  function isGaitAILink(link) {
+    if (!link) return false;
+    var rawHref = link.getAttribute('href') || '';
+    var resolvedHref = link.href || '';
+    return /gaitai/i.test(rawHref) || /gaitai/i.test(resolvedHref);
+  }
+
+  function getGaitAIUrl(link) {
+    var rawHref = (link.getAttribute('href') || '').trim();
+    if (/^(www\.)?gaitai\.in(\/|$)/i.test(rawHref)) return 'https://' + rawHref;
+    return link.href || rawHref || GAITAI_URL;
+  }
+
+  function openModal(url, target) {
+    pendingUrl = url;
+    pendingTarget = target || '_blank';
+    input.value = '';
+    error.textContent = '';
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    window.setTimeout(function () { input.focus(); }, 40);
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    pendingUrl = '';
+  }
+
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a[href], button[href]');
+    if (!isGaitAILink(link)) return;
+    event.preventDefault();
+    openModal(getGaitAIUrl(link), link.target || '_blank');
+  });
+
+  modal.addEventListener('click', function (event) {
+    if (event.target === modal || event.target.closest('[data-gaitai-close]')) closeModal();
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (input.value === GAITAI_PASSWORD) {
+      var url = pendingUrl || GAITAI_URL;
+      var target = pendingTarget || '_blank';
+      closeModal();
+      window.open(url, target, 'noopener');
+      return;
+    }
+    error.textContent = 'Incorrect password. Please try again.';
+    input.select();
+  });
+})();
+
 </script>
 </body>
 </html>
