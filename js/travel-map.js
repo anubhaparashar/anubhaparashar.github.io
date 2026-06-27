@@ -171,6 +171,31 @@
   function visiblePlaces() {
     return data.filter(function (place) { return matchesFilter(place, activeFilter); });
   }
+  function coordinatePair(place) {
+    var lat = Number(place && place.lat);
+    var lng = Number(place && place.lng);
+    if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+      if (window.console && typeof window.console.warn === 'function') {
+        window.console.warn('Travel Map location missing coordinates:', (place && (place.city || place.title)) || 'Unknown location', place);
+      }
+      return null;
+    }
+    return [lat, lng];
+  }
+
+  function fitVisibleMarkers() {
+    if (!mapInstance || !window.L) return;
+    var bounds = [];
+    visiblePlaces().forEach(function (place) {
+      var point = coordinatePair(place);
+      if (point) bounds.push(point);
+    });
+    if (bounds.length > 1) {
+      mapInstance.fitBounds(bounds, { padding: [35, 35], maxZoom: 5 });
+    } else if (bounds.length === 1) {
+      mapInstance.setView(bounds[0], 5);
+    }
+  }
 
   function applyFilter(section, filter) {
     activeFilter = filter;
@@ -193,10 +218,11 @@
 
   function renderMarkers(section) {
     if (!mapInstance || !window.L) return;
-    var mappedPlaces = visiblePlaces().filter(function (place) { return typeof place.lat === 'number' && typeof place.lng === 'number'; });
     if (markerLayer) markerLayer.clearLayers();
     placeMarkers = {};
-    mappedPlaces.forEach(function (place) {
+    visiblePlaces().forEach(function (place) {
+      var point = coordinatePair(place);
+      if (!point) return;
       var icon = window.L.divIcon({
         className: '',
         html: '<div class="travel-marker ' + markerClass(place) + '"><span class="travel-marker-count">' + place.items.length + '</span></div>',
@@ -204,17 +230,14 @@
         iconAnchor: [17, 34],
         popupAnchor: [0, -30]
       });
-      var marker = window.L.marker([place.lat, place.lng], { icon: icon, title: place.city })
+      var marker = window.L.marker(point, { icon: icon, title: place.city })
         .bindTooltip(place.city + ' &middot; ' + place.items.length + ' ' + (place.items.length === 1 ? 'entry' : 'entries'), { className: 'travel-tooltip', direction: 'top', offset: [0, -24] })
         .bindPopup(placePopupHtml(place));
       marker.on('click', function () { selectPlace(section, place.id, false); });
       markerLayer.addLayer(marker);
       placeMarkers[place.id] = marker;
     });
-    if (mappedPlaces.length) {
-      var bounds = window.L.latLngBounds(mappedPlaces.map(function (place) { return [place.lat, place.lng]; }));
-      mapInstance.fitBounds(bounds.pad(0.18), { animate: true, maxZoom: 5 });
-    }
+    fitVisibleMarkers();
   }
 
   function initLeaflet(section) {
@@ -241,7 +264,7 @@
     }) : window.L.layerGroup();
     mapInstance.addLayer(markerLayer);
     renderMarkers(section);
-    setTimeout(function () { mapInstance.invalidateSize(); }, 120);
+    setTimeout(function () { mapInstance.invalidateSize(); fitVisibleMarkers(); }, 120);
   }
 
   function renderMap() {
@@ -273,7 +296,7 @@
   function ensureMapIfVisible() {
     var tabPanel = document.getElementById('connection-section-my-travel-map');
     if (tabPanel && tabPanel.classList.contains('active')) renderMap();
-    if (mapInstance) setTimeout(function () { mapInstance.invalidateSize(); }, 80);
+    if (mapInstance) setTimeout(function () { mapInstance.invalidateSize(); fitVisibleMarkers(); }, 80);
   }
 
   function renderPreview() {
@@ -281,21 +304,21 @@
     var markerLayer = document.getElementById('travelPreviewMarkers');
     if (!strip && !markerLayer) return;
     var highlights = [
-      { id: 'jaipur-india', x: 66, y: 52 },
-      { id: 'zagreb-croatia', x: 51, y: 30 },
-      { id: 'dubai-uae', x: 70, y: 48 },
-      { id: 'agra-india', x: 64, y: 57 },
-      { id: 'delhi-india', x: 64, y: 50 },
-      { id: 'udaipur-india', x: 62, y: 62 }
+      { id: 'zagreb-croatia', x: 27, y: 26, label: 'right' },
+      { id: 'dubai-uae', x: 56, y: 52, label: 'left' },
+      { id: 'delhi-india', x: 67, y: 44, label: 'right' },
+      { id: 'jaipur-india', x: 64, y: 53, label: 'left' },
+      { id: 'agra-india', x: 70, y: 59, label: 'right' },
+      { id: 'udaipur-india', x: 61, y: 67, label: 'bottom' }
     ];
     var places = highlights.map(function (item) {
       var place = data.filter(function (entry) { return entry.id === item.id; })[0];
-      return place ? { place: place, x: item.x, y: item.y } : null;
+      return place ? { place: place, x: item.x, y: item.y, label: item.label || 'top' } : null;
     }).filter(Boolean);
 
     if (markerLayer) {
       markerLayer.innerHTML = places.map(function (item) {
-        return '<span class="travel-mini-marker" data-city="' + escapeHtml(item.place.city) + '" style="left:' + item.x + '%;top:' + item.y + '%"></span>';
+        return '<span class="travel-mini-marker" data-label="' + escapeHtml(item.label) + '" data-city="' + escapeHtml(item.place.city) + '" style="left:' + item.x + '%;top:' + item.y + '%"></span>';
       }).join('');
     }
     if (strip) {

@@ -1210,7 +1210,7 @@ var travelMapData = [
     { title: 'Organising Committee Member — SIN 2019', date: '12–15 September 2019', category: 'Conferences', url: 'event.html' },
     { title: 'Program Committee Member, Review Committee — SIN 2019', date: '12–15 September 2019', category: 'Conferences', url: 'event.html' }
   ] }),
-  buildTravelMapPlace({ id: 'location-to-confirm', city: 'Location to Confirm', country: '', lat: null, lng: null, status: 'Location to Confirm', title: 'Location to Confirm', summary: 'Memories documented on the website whose exact geographic location is not stated.', tags: ['Location to Confirm'], items: [
+  buildTravelMapPlace({ id: 'location-to-confirm', city: 'Location to Confirm', country: '', lat: 20.5937, lng: 78.9629, status: 'Location to Confirm', title: 'Location to Confirm', summary: 'Memories documented on the website whose exact geographic location is not stated.', tags: ['Location to Confirm'], items: [
     { title: 'Girja Devi Temple Trekking', date: 'Jan 2017', category: 'Trekking', url: 'avocations.html#trek-11' }
   ] })
 ];
