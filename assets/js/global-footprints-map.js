@@ -207,7 +207,7 @@
     });
     summaryEl.innerHTML = Object.keys(counts).sort().map(function (region) {
       var count = counts[region];
-      return '<article class="home-map-region-card"><strong>' + escapeHtml(region) + '</strong><span>' + count.places + ' ' + (count.places === 1 ? 'place' : 'places') + ' &middot; ' + count.entries + ' entries</span></article>';
+      return '<article class="home-map-region-card"><strong>' + escapeHtml(region) + '</strong><span>' + count.places + ' ' + (count.places === 1 ? 'place' : 'places') + ' &middot; ' + count.entries + ' ' + (count.entries === 1 ? 'entry' : 'entries') + '</span></article>';
     }).join('');
   }
 
