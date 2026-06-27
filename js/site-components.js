@@ -161,6 +161,139 @@
       .catch(function () {});
   }
 
+
+  function initGaitAIGate() {
+    if (window.__gaitAIGateLoaded) return;
+    window.__gaitAIGateLoaded = true;
+
+    var GAITAI_PASSWORD = 'as';
+    var GAITAI_DEFAULT_URL = 'https://gaitai-analysis.github.io/GaitAI/';
+    var pendingUrl = '';
+    var pendingTarget = '_blank';
+
+    function ensureStyle() {
+      if (document.getElementById('gaitai-access-style')) return;
+      var style = document.createElement('style');
+      style.id = 'gaitai-access-style';
+      style.textContent =
+        '.gaitai-access-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(5,10,18,.68);backdrop-filter:blur(8px);}' +
+        '.gaitai-access-overlay.is-open{display:flex;}' +
+        '.gaitai-access-modal{width:min(100%,390px);border:1px solid rgba(255,255,255,.16);border-radius:18px;background:linear-gradient(145deg,#101827 0%,#18263a 100%);box-shadow:0 24px 70px rgba(0,0,0,.42);color:#fff;padding:24px;position:relative;}' +
+        '.gaitai-access-close{position:absolute;top:12px;right:12px;width:34px;height:34px;border:0;border-radius:50%;background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);cursor:pointer;}' +
+        '.gaitai-access-modal h3{margin:0 42px 8px 0;color:#fff!important;font-size:1.25rem!important;font-weight:800!important;}' +
+        '.gaitai-access-modal p{margin:0 0 18px;color:rgba(255,255,255,.68)!important;font-size:.86rem;line-height:1.55;}' +
+        '.gaitai-access-field{width:100%;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.08);color:#fff;padding:12px 14px;outline:none;font-size:.95rem;}' +
+        '.gaitai-access-field:focus{border-color:#d3b979;box-shadow:0 0 0 3px rgba(211,185,121,.18);}' +
+        '.gaitai-access-error{min-height:18px;margin:9px 0 0;color:#ffb4b4!important;font-size:.78rem;font-weight:700;}' +
+        '.gaitai-access-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px;}' +
+        '.gaitai-access-btn{border:0;border-radius:999px;padding:9px 18px;font-size:.8rem;font-weight:800;cursor:pointer;}' +
+        '.gaitai-access-btn.secondary{background:rgba(255,255,255,.1);color:rgba(255,255,255,.82);}' +
+        '.gaitai-access-btn.primary{background:#d3b979;color:#101827;}';
+      document.head.appendChild(style);
+    }
+
+    function ensureModal() {
+      var modal = document.getElementById('gaitaiAccessModal');
+      if (modal) return modal;
+      var wrapper = document.createElement('div');
+      wrapper.innerHTML =
+        '<div class="gaitai-access-overlay" id="gaitaiAccessModal" aria-hidden="true">' +
+        '  <div class="gaitai-access-modal" role="dialog" aria-modal="true" aria-labelledby="gaitaiAccessTitle">' +
+        '    <button type="button" class="gaitai-access-close" data-gaitai-close aria-label="Close GaitAI access dialog">&times;</button>' +
+        '    <h3 id="gaitaiAccessTitle">Access GaitAI</h3>' +
+        '    <p>Enter the access password to open the GaitAI research initiative.</p>' +
+        '    <form id="gaitaiAccessForm" novalidate>' +
+        '      <input class="gaitai-access-field" id="gaitaiAccessPassword" type="password" autocomplete="current-password" placeholder="Enter password" aria-label="GaitAI password">' +
+        '      <div class="gaitai-access-error" id="gaitaiAccessError" aria-live="polite"></div>' +
+        '      <div class="gaitai-access-actions">' +
+        '        <button type="button" class="gaitai-access-btn secondary" data-gaitai-close>Cancel</button>' +
+        '        <button type="submit" class="gaitai-access-btn primary">Continue</button>' +
+        '      </div>' +
+        '    </form>' +
+        '  </div>' +
+        '</div>';
+      document.body.appendChild(wrapper.firstElementChild);
+      return document.getElementById('gaitaiAccessModal');
+    }
+
+    function isGaitAILink(link) {
+      if (!link) return false;
+      var rawHref = link.getAttribute('href') || '';
+      var resolvedHref = link.href || '';
+      var haystack = (rawHref + " " + resolvedHref).toLowerCase();
+      return haystack.indexOf("gaitai") !== -1 || haystack.indexOf("gaitai.in") !== -1 || haystack.indexOf("gaitai-analysis.github.io/gaitai") !== -1;
+    }
+
+    function getGaitAIUrl(link) {
+      var rawHref = link.getAttribute('href') || '';
+      var normalizedHref = rawHref.toLowerCase();
+      if (normalizedHref.indexOf('gaitai.in') === 0 || normalizedHref.indexOf('www.gaitai.in') === 0) return 'https://' + rawHref;
+      return link.href || rawHref || GAITAI_DEFAULT_URL;
+    }
+
+    function modalParts() {
+      var modal = ensureModal();
+      return {
+        modal: modal,
+        form: document.getElementById('gaitaiAccessForm'),
+        input: document.getElementById('gaitaiAccessPassword'),
+        error: document.getElementById('gaitaiAccessError')
+      };
+    }
+
+    function openModal(url, target) {
+      ensureStyle();
+      var parts = modalParts();
+      pendingUrl = url || GAITAI_DEFAULT_URL;
+      pendingTarget = target || '_blank';
+      parts.input.value = '';
+      parts.error.textContent = '';
+      parts.modal.classList.add('is-open');
+      parts.modal.setAttribute('aria-hidden', 'false');
+      window.setTimeout(function () { parts.input.focus(); }, 40);
+    }
+
+    function closeModal() {
+      var parts = modalParts();
+      parts.modal.classList.remove('is-open');
+      parts.modal.setAttribute('aria-hidden', 'true');
+      pendingUrl = '';
+    }
+
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest && event.target.closest('a[href], button[href]');
+      if (!isGaitAILink(link)) return;
+      event.preventDefault();
+      openModal(getGaitAIUrl(link), link.target || '_blank');
+    });
+
+    document.addEventListener('click', function (event) {
+      var modal = document.getElementById('gaitaiAccessModal');
+      if (!modal || !modal.classList.contains('is-open')) return;
+      if (event.target === modal || event.target.closest('[data-gaitai-close]')) closeModal();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      var modal = document.getElementById('gaitaiAccessModal');
+      if (event.key === 'Escape' && modal && modal.classList.contains('is-open')) closeModal();
+    });
+
+    document.addEventListener('submit', function (event) {
+      if (!event.target || event.target.id !== 'gaitaiAccessForm') return;
+      event.preventDefault();
+      var parts = modalParts();
+      if (parts.input.value === GAITAI_PASSWORD) {
+        var url = pendingUrl || GAITAI_DEFAULT_URL;
+        var target = pendingTarget || '_blank';
+        closeModal();
+        window.open(url, target, 'noopener');
+        return;
+      }
+      parts.error.textContent = 'Incorrect password. Please try again.';
+      parts.input.select();
+    });
+  }
+
   function initImageViewer() {
     var imagePattern = /\.(jpe?g|png|gif|webp|bmp|svg)(\?.*)?(#.*)?$/i;
     var documentPattern = /\.(pdf|docx?|pptx?|xlsx?|csv)(\?.*)?(#.*)?$/i;
@@ -501,9 +634,10 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() { init(); initImageViewer(); initParticles(); initAccessibilityPolish(); initDeepLinkNavigation(); });
+    document.addEventListener('DOMContentLoaded', function() { init(); initGaitAIGate(); initImageViewer(); initParticles(); initAccessibilityPolish(); initDeepLinkNavigation(); });
   } else {
     init();
+    initGaitAIGate();
     initImageViewer();
     initParticles();
     initAccessibilityPolish();
