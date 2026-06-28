@@ -413,79 +413,89 @@
     /* ══════════════════════════════════════════════════════
        RESPONSIVE
        ══════════════════════════════════════════════════════ */
-    .contact-section { padding:8px 0 0; background:#f5f7fa; }
-    .contact-panel {
-      display:grid; grid-template-columns:minmax(300px,1fr) minmax(280px,.86fr);
-      gap:20px; align-items:stretch; margin-bottom:20px;
+    html { scroll-behavior:smooth; }
+    .contact-section {
+      padding:82px 0 46px;
+      background:
+        radial-gradient(circle at 16% 18%, rgba(213,181,105,.12), transparent 28%),
+        radial-gradient(circle at 84% 52%, rgba(139,92,246,.16), transparent 30%),
+        linear-gradient(145deg,#05070d 0%,#08111f 48%,#020308 100%);
+      position:relative; overflow:hidden;
     }
-    .contact-info, .contact-form-card {
-      background:#fff; border:1px solid #e6edf5; border-radius:18px;
-      box-shadow:0 16px 44px rgba(15,23,42,.07);
+    .contact-section::before {
+      content:""; position:absolute; inset:0; pointer-events:none;
+      background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:64px 64px; mask-image:linear-gradient(to bottom,rgba(0,0,0,.75),rgba(0,0,0,.18));
     }
-    .contact-info { padding:24px; display:flex; flex-direction:column; }
-    .contact-info h3, .contact-form-card h3, .contact-interests h3 {
-      color:#0f172a !important; font-size:1.08rem !important; font-weight:900 !important; margin-bottom:12px !important;
+    .contact-section .container { position:relative; z-index:1; }
+    .work-with-me { margin-bottom:44px; }
+    .service-section-head { max-width:760px; margin:0 auto 30px; text-align:center; }
+    .service-section-head h2, .media-kit h2, .contact-form-card h3 {
+      color:#f8fafc !important; font-family:"Space Grotesk",sans-serif; font-weight:800 !important; margin-bottom:10px !important;
     }
-    .contact-card-title {
-      display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px;
+    .service-section-head h2 { font-size:clamp(2rem,4vw,3.15rem) !important; }
+    .service-section-head p, .media-kit-subtitle { color:rgba(248,250,252,.68); font-size:.98rem; line-height:1.75; margin:0; }
+    .work-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .work-card, .media-kit, .contact-form-card, .availability-card, .resource-card {
+      border:1px solid rgba(235,221,181,.16); background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035));
+      box-shadow:0 22px 60px rgba(0,0,0,.35); backdrop-filter:blur(10px);
     }
-    .contact-card-title h3 { margin-bottom:0 !important; }
-    .contact-card-meta {
-      display:inline-flex; align-items:center; gap:7px; color:#334155; font-size:.76rem; font-weight:800;
-      text-decoration:none; white-space:nowrap;
+    .work-card { border-radius:18px; padding:22px; min-height:254px; display:flex; flex-direction:column; transition:transform .22s,border-color .22s,box-shadow .22s; }
+    .work-card:hover { transform:translateY(-4px); border-color:rgba(232,203,136,.48); box-shadow:0 28px 70px rgba(0,0,0,.5),0 0 34px rgba(213,181,105,.10); }
+    .work-icon, .kit-icon {
+      width:44px; height:44px; border-radius:14px; display:inline-flex; align-items:center; justify-content:center;
+      color:#f5deb2; background:linear-gradient(135deg,rgba(232,203,136,.18),rgba(232,203,136,.06)); border:1px solid rgba(232,203,136,.28);
+      margin-bottom:17px; font-size:1.15rem;
     }
-    .contact-card-meta:hover { color:#2d4a6e; text-decoration:none; }
-    .contact-info p { color:#475569; line-height:1.68; font-size:.88rem; margin-bottom:14px; }
-    .contact-info .contact-prompt { color:#1e293b; font-weight:700; margin-bottom:16px; }
-    .contact-line {
-      display:flex; align-items:center; gap:10px; color:#334155; font-size:.82rem;
-      padding:9px 0; border-top:1px solid #edf2f7;
+    .work-card h3, .availability-card h3, .resource-card h3 { color:#fff !important; font-size:1rem !important; line-height:1.35 !important; font-weight:800 !important; margin-bottom:9px !important; }
+    .work-card p, .availability-card p, .resource-card p { color:rgba(248,250,252,.64); font-size:.82rem; line-height:1.72; margin:0 0 18px; }
+    .work-card .work-btn, .resource-btn, .kit-cta-btn {
+      display:inline-flex; align-items:center; justify-content:center; gap:8px; width:max-content; margin-top:auto;
+      min-height:34px; border-radius:999px; padding:0 15px; text-decoration:none !important; font-size:.73rem; font-weight:800;
+      color:#0b0d12; background:linear-gradient(135deg,#f3dfb0,#bd9550); box-shadow:0 12px 30px rgba(189,149,80,.18); transition:transform .2s,box-shadow .2s;
     }
-    .contact-line i {
-      width:30px; height:30px; border-radius:9px; display:inline-flex; align-items:center; justify-content:center;
-      background:#e8eef6; color:#2d4a6e; flex:0 0 30px;
+    .work-card .work-btn:hover, .resource-btn:hover, .kit-cta-btn:hover { color:#05070d; transform:translateY(-1px); box-shadow:0 16px 34px rgba(189,149,80,.28); }
+    .speaking-contact-grid { display:grid; grid-template-columns:minmax(0,68fr) minmax(282px,30fr); gap:24px; align-items:start; }
+    .media-kit, .contact-form-card { border-radius:20px; padding:26px; }
+    .media-kit { border-color:rgba(168,132,255,.24); box-shadow:0 24px 70px rgba(31,14,77,.32); }
+    .media-kit h2 { font-size:clamp(1.65rem,3vw,2.25rem) !important; }
+    .kit-label { display:block; margin:24px 0 13px; color:#cdbbff; font-size:.66rem; font-weight:900; letter-spacing:2px; text-transform:uppercase; }
+    .availability-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
+    .availability-card { display:block; min-height:138px; border-radius:16px; padding:16px; text-decoration:none !important; border-color:rgba(168,132,255,.22); transition:transform .2s,border-color .2s; }
+    .availability-card:hover { transform:translateY(-3px); border-color:rgba(168,132,255,.55); text-decoration:none !important; }
+    .kit-icon { width:34px; height:34px; border-radius:11px; color:#d9ccff; background:rgba(139,92,246,.14); border-color:rgba(168,132,255,.25); margin-bottom:12px; }
+    .resource-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .resource-card { border-radius:16px; padding:18px; border-color:rgba(168,132,255,.2); min-height:176px; display:flex; flex-direction:column; }
+    .resource-btn { background:linear-gradient(135deg,#d9ccff,#8b5cf6); color:#12091f; box-shadow:0 12px 30px rgba(139,92,246,.22); }
+    .resource-btn:hover { color:#12091f; box-shadow:0 16px 34px rgba(139,92,246,.32); }
+    .kit-cta-strip {
+      margin-top:20px; border-radius:16px; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:18px;
+      border:1px solid rgba(232,203,136,.2); background:linear-gradient(135deg,rgba(232,203,136,.11),rgba(139,92,246,.12));
     }
-    .contact-line a { color:#334155; text-decoration:none; overflow-wrap:anywhere; }
-    .contact-line a:hover { color:#2d4a6e; }
-    .contact-location { margin-left:auto; display:inline-flex; align-items:center; gap:10px; }
-    .contact-company-image {
-      display:block; position:relative; max-width:100%; margin-top:10px; border-radius:12px; overflow:hidden;
-      border:1px solid #e6edf5; background:#0f172a;
-    }
-    .contact-company-image img { width:100%; height:auto; display:block; }
-    .contact-company-label {
-      display:flex; align-items:center; justify-content:space-between; gap:10px;
-      padding:10px 14px; background:#fff; color:#2d4a6e; font-size:.86rem; font-weight:800;
-      border-top:1px solid #e6edf5;
-    }
-    .contact-form-card { padding:24px; }
+    .kit-cta-strip p { color:rgba(255,255,255,.78); margin:0; font-size:.9rem; line-height:1.6; }
+    .contact-form-card { position:sticky; top:90px; border-color:rgba(232,203,136,.18); }
+    .contact-card-title { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:16px; }
+    .contact-card-title h3 { font-size:1.24rem !important; margin-bottom:0 !important; }
+    .contact-card-meta { display:inline-flex; align-items:center; gap:7px; color:#d9ccff; font-size:.76rem; font-weight:800; text-decoration:none; white-space:nowrap; }
     .contact-form .form-group { margin-bottom:10px; }
-    .contact-form label {
-      display:block; color:#334155; font-size:.62rem; font-weight:800; letter-spacing:.8px;
-      text-transform:uppercase; margin-bottom:4px;
-    }
+    .contact-form label { display:block; color:rgba(248,250,252,.72); font-size:.62rem; font-weight:850; letter-spacing:.9px; text-transform:uppercase; margin-bottom:5px; }
     .contact-form .form-control {
-      height:34px; border:1px solid #d9e2ee; border-radius:8px; color:#0f172a;
-      font-size:.8rem; box-shadow:none; padding:6px 10px; background:#fbfdff;
+      height:38px; border:1px solid rgba(255,255,255,.12); border-radius:10px; color:#f8fafc; font-size:.8rem;
+      box-shadow:none; padding:7px 11px; background:rgba(3,7,18,.55);
     }
-    .contact-form textarea.form-control { min-height:78px; resize:vertical; }
-    .contact-form .form-control:focus { border-color:#2d4a6e; background:#fff; box-shadow:0 0 0 3px rgba(45,74,110,.10); }
+    .contact-form textarea.form-control { min-height:92px; resize:vertical; }
+    .contact-form .form-control:focus { border-color:rgba(168,132,255,.65); background:rgba(3,7,18,.72); box-shadow:0 0 0 3px rgba(139,92,246,.15); color:#fff; }
     .contact-submit {
-      display:inline-flex; align-items:center; justify-content:center; gap:8px;
-      min-height:34px; border:0; border-radius:18px; padding:0 18px;
-      background:linear-gradient(135deg,#2d4a6e,#3d6080); color:#fff;
-      font-size:.74rem; font-weight:800; letter-spacing:.2px; cursor:pointer;
-      box-shadow:0 8px 24px rgba(45,74,110,.22); transition:all .22s;
+      display:inline-flex; align-items:center; justify-content:center; gap:8px; width:100%; min-height:38px; border:0; border-radius:999px; padding:0 18px;
+      background:linear-gradient(135deg,#f0d99f,#8b5cf6); color:#080a12; font-size:.76rem; font-weight:900; letter-spacing:.2px; cursor:pointer;
+      box-shadow:0 14px 34px rgba(139,92,246,.22); transition:transform .22s,box-shadow .22s;
     }
-    .contact-submit:hover { transform:translateY(-1px); box-shadow:0 12px 30px rgba(45,74,110,.30); }
+    .contact-submit:hover { transform:translateY(-1px); box-shadow:0 18px 40px rgba(139,92,246,.32); }
     .contact-submit[disabled] { opacity:.62; cursor:not-allowed; transform:none; }
-    .contact-status {
-      display:none; margin-top:10px; border-radius:8px; padding:9px 10px;
-      font-size:.76rem; line-height:1.45;
-    }
+    .contact-status { display:none; margin-top:10px; border-radius:8px; padding:9px 10px; font-size:.76rem; line-height:1.45; }
     .contact-status.is-visible { display:block; }
-    .contact-status.success { background:#ecfdf3; color:#166534; border:1px solid #bbf7d0; }
-    .contact-status.error { background:#fff1f2; color:#9f1239; border:1px solid #fecdd3; }
+    .contact-status.success { background:rgba(236,253,243,.92); color:#166534; border:1px solid #bbf7d0; }
+    .contact-status.error { background:rgba(255,241,242,.92); color:#9f1239; border:1px solid #fecdd3; }
     @media (max-width:767px) {
       .hero-name { font-size:2.4rem !important; }
       .hero-impacts { gap:18px; }
@@ -494,8 +504,11 @@
       .about-photo-wrap { margin-bottom:40px; }
       .testi-card { flex:0 0 300px; }
       .impact-num { font-size:2.4rem; }
-      .contact-panel { grid-template-columns:1fr; }
-      .contact-info, .contact-form-card { padding:18px 16px; }
+      .work-grid, .speaking-contact-grid, .availability-grid, .resource-grid { grid-template-columns:1fr; }
+      .contact-section { padding:58px 0 34px; }
+      .media-kit, .contact-form-card, .work-card { padding:18px 16px; }
+      .contact-form-card { position:static; }
+      .kit-cta-strip { flex-direction:column; align-items:flex-start; }
     }
 </style>
 </head>
@@ -940,55 +953,117 @@
 <!-- ═══════════════════════════════════════════════════════
      RESEARCH AREAS
      ═══════════════════════════════════════════════════════ -->
-<section class="research-section">
+<section class="premium-research-section" aria-labelledby="premium-research-title">
   <div class="container">
-    <div class="text-center">
-      <span class="sec-eyebrow-dark">Expertise</span>
-      <h2 class="sec-h2-dark">Research Areas</h2>
+    <div class="premium-section-heading">
+      <span class="premium-eyebrow">Expertise</span>
+      <h2 id="premium-research-title">RESEARCH AREAS</h2>
     </div>
-    <div class="ra-grid">
-      <div class="ra-card">
-        <div class="ra-icon" style="background:rgba(45,74,110,.10);">
-          <i class="fa fa-eye" style="color:#7a97b5;"></i>
+    <div class="premium-research-grid">
+      <article class="premium-research-card">
+        <div class="premium-research-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img"><path d="M13.7 4.2a2.1 2.1 0 1 1-4.2 0 2.1 2.1 0 0 1 4.2 0Zm-1.2 4.1 2.1 3.1 2.8 1.2-.8 1.8-3.2-1.2-1.3-1.8-1.1 3 2.5 2.5v4.4h-2.1v-3.5l-2.7-2.5-1.5 5.2-2-.6 2.2-7.6 1.2-3.9-2 .8-1.4 2.7-1.8-.9 1.8-3.4 3.5-1.5c1.6-.7 2.7-.2 3.8 1.6Z"/></svg>
         </div>
-        <h5>Computer Vision</h5>
-        <p>Deep learning-based image analysis, object detection, segmentation, and visual intelligence systems for real-world applications.</p>
-      </div>
-      <div class="ra-card">
-        <div class="ra-icon" style="background:rgba(45,100,130,.08);">
-          <i class="fa fa-user-secret" style="color:#5a8fa5;"></i>
+        <h3>Gait Biometrics</h3>
+        <p>Human identification using unique gait patterns, silhouette analysis, and movement intelligence.</p>
+      </article>
+      <article class="premium-research-card">
+        <div class="premium-research-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img"><path d="M8.8 3.3a4 4 0 0 1 3.2 1.6 4 4 0 0 1 7 2.7 3.8 3.8 0 0 1 1.5 6.8 4.3 4.3 0 0 1-4.2 5.1c-1.7 0-3.1-1-3.8-2.4h-1c-.7 1.4-2.1 2.4-3.8 2.4a4.3 4.3 0 0 1-4.2-5.1A3.8 3.8 0 0 1 5 7.6a4 4 0 0 1 3.8-4.3Zm2.1 5.2H8.7v2.2H6.5v2.1h2.2V15h2.2v-2.2h2.2v-2.1h-2.2V8.5Zm5.9 1.2a1.1 1.1 0 1 0 0-2.2 1.1 1.1 0 0 0 0 2.2Zm0 5.9a1.1 1.1 0 1 0 0-2.2 1.1 1.1 0 0 0 0 2.2Z"/></svg>
         </div>
-        <h5>Gait Recognition &amp; Biometrics</h5>
-        <p>Person identification through gait patterns, multi-modal biometric fusion, and behavioural analytics.</p>
-      </div>
-      <div class="ra-card">
-        <div class="ra-icon" style="background:rgba(45,74,110,.10);">
-          <i class="fa fa-connectdevelop" style="color:#7a97b5;"></i>
+        <h3>Artificial Intelligence</h3>
+        <p>Deep learning, machine learning, computer vision, NLP, and intelligent system design.</p>
+      </article>
+      <article class="premium-research-card">
+        <div class="premium-research-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img"><path d="M12 2.4 4.4 5.6v5.9c0 4.8 3.2 8.9 7.6 10.1 4.4-1.2 7.6-5.3 7.6-10.1V5.6L12 2.4Zm0 2.3 5.5 2.3v4.5c0 3.5-2.2 6.7-5.5 7.9-3.3-1.2-5.5-4.4-5.5-7.9V7L12 4.7Zm0 4.2a2.2 2.2 0 0 0-1.1 4.1v3.2h2.2V13A2.2 2.2 0 0 0 12 8.9Z"/></svg>
         </div>
-        <h5>Deep Learning &amp; Neural Networks</h5>
-        <p>CNNs, RNNs, Transformers, and novel architectures for complex pattern recognition and classification tasks.</p>
-      </div>
-      <div class="ra-card">
-        <div class="ra-icon" style="background:rgba(16,185,129,.12);">
-          <i class="fa fa-wifi" style="color:#4a9e78;"></i>
+        <h3>Privacy-Preserving AI</h3>
+        <p>Privacy-aware biometrics, federated learning, and secure AI for real-world applications.</p>
+      </article>
+      <article class="premium-research-card">
+        <div class="premium-research-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img"><path d="M12 20.8 4.3 13.4a5.1 5.1 0 0 1-.2-7.1 4.8 4.8 0 0 1 6.9 0l1 1 1-1a4.8 4.8 0 0 1 6.9 0 5.1 5.1 0 0 1-.2 7.1L12 20.8Zm-4.2-9.5h2.4l1.1-2.6 2 5.7 1.1-3.1h2.8v-1.8h-4.1l-.8 2.1-1.9-5.3-1.5 3.2H7.8v1.8Z"/></svg>
         </div>
-        <h5>IoT &amp; Edge AI</h5>
-        <p>Intelligent systems on embedded hardware — Jetson Nano, Raspberry Pi, Arduino — for real-world AI deployments.</p>
-      </div>
-      <div class="ra-card">
-        <div class="ra-icon" style="background:rgba(251,191,36,.12);">
-          <i class="fa fa-android" style="color:#a08840;"></i>
+        <h3>Healthcare AI</h3>
+        <p>AI for healthcare, gait analysis for medical care, Parkinson disease studies, and mobility analytics.</p>
+      </article>
+      <article class="premium-research-card">
+        <div class="premium-research-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img"><path d="M4 19.5h16v2H2V3h2v16.5Zm3-2.3H5V11h2v6.2Zm4 0H9V7.2h2v10Zm4 0h-2v-4.6h2v4.6Zm4 0h-2V5h2v12.2Zm-1-11.6-4 4-2.4-2.3-4.8 4.8-1.4-1.4 6.2-6.2L14 6.8 18.6 2 20 3.4l-2 2.2Z"/></svg>
         </div>
-        <h5>Humanoid Robotics</h5>
-        <p>Bipedal locomotion, push recovery, and autonomous robot control using AI-driven motion planning algorithms.</p>
-      </div>
-      <div class="ra-card">
-        <div class="ra-icon" style="background:rgba(236,72,153,.12);">
-          <i class="fa fa-bar-chart" style="color:#8a7090;"></i>
+        <h3>Applied AI Systems</h3>
+        <p>Building real-world AI solutions, industrial analytics, dashboards, OCR, and intelligent automation.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="premium-journey-section" aria-labelledby="premium-journey-title">
+  <div class="container">
+    <div class="premium-section-heading">
+      <span class="premium-eyebrow">Timeline</span>
+      <h2 id="premium-journey-title">RESEARCH &amp; AI JOURNEY</h2>
+      <p>A timeline of medical gait research, academic work, applied AI, industry systems, and the GaitAI vision.</p>
+    </div>
+    <div class="premium-journey-timeline">
+      <article class="premium-journey-item">
+        <div class="premium-journey-number">1</div>
+        <div class="premium-journey-card">
+          <div class="premium-journey-icon" aria-hidden="true"><i class="fa fa-graduation-cap"></i></div>
+          <h3>M.Tech Research — Medical Gait Analysis</h3>
+          <p>Early research foundation in gait analysis for medical care, with work related to movement assessment and Parkinson disease-oriented gait understanding.</p>
         </div>
-        <h5>Data Science &amp; Analytics</h5>
-        <p>Extracting insights from complex datasets through machine learning, statistical modelling, and visualisation.</p>
-      </div>
+      </article>
+      <article class="premium-journey-item">
+        <div class="premium-journey-number">2</div>
+        <div class="premium-journey-card">
+          <div class="premium-journey-icon" aria-hidden="true"><i class="fa fa-connectdevelop"></i></div>
+          <h3>PhD Research in AI &amp; Gait Biometrics</h3>
+          <p>Built a strong research foundation in artificial intelligence, deep learning, computer vision, gait biometrics, silhouette analysis, and privacy-preserving human identification.</p>
+        </div>
+      </article>
+      <article class="premium-journey-item">
+        <div class="premium-journey-number">3</div>
+        <div class="premium-journey-card">
+          <div class="premium-journey-icon" aria-hidden="true"><i class="fa fa-globe"></i></div>
+          <h3>International Research Exposure</h3>
+          <p>Expanded academic and research exposure through verified international conferences, collaborations, and academic visits, including Croatia and Dubai.</p>
+        </div>
+      </article>
+      <article class="premium-journey-item">
+        <div class="premium-journey-number">4</div>
+        <div class="premium-journey-card">
+          <div class="premium-journey-icon" aria-hidden="true"><i class="fa fa-university"></i></div>
+          <h3>Senior Assistant Professor</h3>
+          <p>Taught and mentored students in AI, machine learning, deep learning, computer vision, NLP, IoT, biometrics, image processing, and research methodology.</p>
+        </div>
+      </article>
+      <article class="premium-journey-item">
+        <div class="premium-journey-number">5</div>
+        <div class="premium-journey-card premium-journey-card--gaitai">
+          <div class="premium-journey-icon" aria-hidden="true"><i class="fa fa-shield"></i></div>
+          <span class="premium-journey-badge">Gait Intelligence Vision</span>
+          <h3>GaitAI Initiative</h3>
+          <p>A focused initiative for gait intelligence, healthcare AI, surveillance, gait biometrics, mobility analytics, and AI-based human movement understanding.</p>
+        </div>
+      </article>
+      <article class="premium-journey-item">
+        <div class="premium-journey-number">6</div>
+        <div class="premium-journey-card">
+          <div class="premium-journey-icon" aria-hidden="true"><i class="fa fa-cloud"></i></div>
+          <h3>Research Scientist — AI &amp; Metaverse</h3>
+          <p>Worked on applied AI systems, LLM workflows, cloud-native AI architecture, OCR, virtual try-on, intelligent automation, and AI product development.</p>
+        </div>
+      </article>
+      <article class="premium-journey-item">
+        <div class="premium-journey-number">7</div>
+        <div class="premium-journey-card">
+          <div class="premium-journey-icon" aria-hidden="true"><i class="fa fa-bar-chart"></i></div>
+          <h3>Analytics &amp; AI Engineer</h3>
+          <p>Built real-world AI/ML systems for computer vision, predictive maintenance, OCR, optimization, industrial analytics, dashboards, and intelligent decision-support systems.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -997,8 +1072,8 @@
 <section id="global-footprints" class="global-footprints-section" aria-labelledby="global-footprints-title">
   <div class="container">
     <div class="global-footprints-header">
-      <p class="section-kicker">Journeys &amp; Connections</p>
-      <h2 id="global-footprints-title">GLOBAL FOOTPRINTS</h2>
+      <p class="section-kicker">GLOBAL FOOTPRINTS</p>
+      <h2 id="global-footprints-title">JOURNEYS &amp; CONNECTIONS</h2>
       <p>Places connected to conferences, workshops, research visits, academic events, talks, awards, collaborations, treks, sports, outreach activities, and personal memories.</p>
     </div>
 
@@ -1117,21 +1192,113 @@
 </div>
 <!--================ End Testimonial Area =================-->
 
-<section class="contact-section" id="contact">
+<section class="contact-section">
   <div class="container">
-    <div class="contact-panel">
-      <div class="contact-info">
-        <div class="contact-card-title">
-          <h3>Let's Connect</h3>
-          <a class="contact-card-meta" href="mailto:dranubhaparashar@gmail.com"><i class="fa fa-envelope"></i>dranubhaparashar@gmail.com</a>
-        </div>
-        <p>I am open to AI collaborations, research partnerships, consulting, invited talks, and industry projects in Computer Vision, Biometrics, LLMs, and Applied AI.</p>
-        <a class="contact-company-image" href="https://gaitai-analysis.github.io/GaitAI/" target="_blank" rel="noopener" aria-label="Open GaitAI Platform">
-          <img src="files/1.%20Home/GaitAI.png" alt="GaitAI">
-          <span class="contact-company-label">GaitAI Platform <i class="fa fa-external-link" aria-hidden="true"></i></span>
-        </a>
+    <div class="work-with-me">
+      <div class="service-section-head">
+        <h2>Work With Me</h2>
+        <p>Let&rsquo;s build intelligent solutions, advance research, and create real-world impact together.</p>
       </div>
-      <div class="contact-form-card">
+      <div class="work-grid">
+        <article class="work-card">
+          <span class="work-icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
+          <h3>AI/ML Consulting</h3>
+          <p>End-to-end AI/ML solutions from problem framing and data strategy to model development, deployment, and system scalability.</p>
+          <a class="work-btn" href="#contact">Explore Services <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="work-card">
+          <span class="work-icon"><i class="fa fa-eye" aria-hidden="true"></i></span>
+          <h3>Computer Vision Projects</h3>
+          <p>Custom computer vision systems including detection, tracking, OCR, medical imaging, and real-time intelligence solutions.</p>
+          <a class="work-btn" href="blog.html">View Projects <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="work-card">
+          <span class="work-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
+          <h3>Research Collaboration</h3>
+          <p>Open to impactful collaborations in AI, deep learning, gait biometrics, privacy-preserving AI, and human-centric systems.</p>
+          <a class="work-btn" href="#contact">Collaborate <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="work-card">
+          <span class="work-icon"><i class="fa fa-microphone" aria-hidden="true"></i></span>
+          <h3>Invited Talks</h3>
+          <p>Engaging talks on AI, ML, DL, CV, NLP, IoT, biometrics, and responsible AI for academic, industry, and global events.</p>
+          <a class="work-btn" href="academics.html#talks">Invite Me <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="work-card">
+          <span class="work-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+          <h3>PhD / Research Mentoring</h3>
+          <p>Guidance on research framing, experiments, publications, paper writing, projects, and academic growth.</p>
+          <a class="work-btn" href="#contact">Mentorship <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="work-card">
+          <span class="work-icon"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
+          <h3>GaitAI Partnerships</h3>
+          <p>Partnering for gait intelligence, healthcare AI, surveillance, mobility analytics, and biometric innovation with GaitAI.</p>
+          <a class="work-btn" href="https://gaitai.in/">Partner With GaitAI <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+      </div>
+    </div>
+
+    <div class="speaking-contact-grid">
+      <div class="media-kit">
+        <h2>Speaking &amp; Media Kit</h2>
+        <p class="media-kit-subtitle">Available for inspiring sessions, expert panels, and strategic conversations.</p>
+
+        <span class="kit-label">Available For</span>
+        <div class="availability-grid">
+          <a class="availability-card" href="academics.html#talks">
+            <span class="kit-icon"><i class="fa fa-microphone" aria-hidden="true"></i></span>
+            <h3>Invited Talks</h3>
+            <p>Keynotes, tech talks, academic sessions, and guest lectures.</p>
+          </a>
+          <a class="availability-card" href="academics.html#workshops">
+            <span class="kit-icon"><i class="fa fa-code" aria-hidden="true"></i></span>
+            <h3>AI Workshops</h3>
+            <p>Hands-on workshops on AI, ML, DL, CV, NLP, IoT, and more.</p>
+          </a>
+          <a class="availability-card" href="#contact">
+            <span class="kit-icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+            <h3>Panel Discussions</h3>
+            <p>Expert panels on AI ethics, innovation, research, and impact.</p>
+          </a>
+          <a class="availability-card" href="#contact">
+            <span class="kit-icon"><i class="fa fa-flask" aria-hidden="true"></i></span>
+            <h3>Research Collaborations</h3>
+            <p>Joint research, grants, papers, and innovation partnerships.</p>
+          </a>
+          <a class="availability-card" href="#contact">
+            <span class="kit-icon"><i class="fa fa-building-o" aria-hidden="true"></i></span>
+            <h3>Corporate AI Training</h3>
+            <p>Customized AI/ML training for teams and organizations.</p>
+          </a>
+        </div>
+
+        <span class="kit-label">Media Kit &amp; Resources</span>
+        <div class="resource-grid">
+          <article class="resource-card">
+            <h3>Download Speaker Bio</h3>
+            <p>Short profile, talk highlights, and expertise summary.</p>
+            <a class="resource-btn" href="files/1.%20Home/Anubha_Speaker_Bio.pdf">Download PDF <i class="fa fa-download" aria-hidden="true"></i></a>
+          </article>
+          <article class="resource-card">
+            <h3>Download CV</h3>
+            <p>Detailed academic and professional CV.</p>
+            <a class="resource-btn" href="files/1.%20Home/Anubha_resume.pdf">Download PDF <i class="fa fa-download" aria-hidden="true"></i></a>
+          </article>
+          <article class="resource-card">
+            <h3>Invite for Talk</h3>
+            <p>Have an event or session in mind? Let&rsquo;s connect.</p>
+            <a class="resource-btn" href="mailto:dranubhaparashar@gmail.com?subject=Invitation%20for%20Talk">Send Invitation <i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </article>
+        </div>
+
+        <div class="kit-cta-strip">
+          <p>Let&rsquo;s connect to create knowledge, build solutions, and make a meaningful difference.</p>
+          <a class="kit-cta-btn" href="#contact">Get In Touch <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-form-card" id="contact">
         <div class="contact-card-title">
           <h3>Contact Form</h3>
           <span class="contact-card-meta"><i class="fa fa-map-marker"></i>India</span>
