@@ -3315,3 +3315,205 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+
+/* Premium Midnight Gallery photo marquees */
+.premium-photo-marquee {
+  --premium-card-w: clamp(300px, 28vw, 400px);
+  --premium-card-h: clamp(340px, 31vw, 380px);
+  --premium-card-radius: 34px;
+  --premium-speed: 62s;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 18% 0%, rgba(214, 197, 153, .14), transparent 32%), linear-gradient(135deg, #050505 0%, #111216 52%, #050505 100%);
+  color: #fff;
+  padding: 72px 0 78px;
+  margin: 58px 0 0;
+}
+.premium-photo-marquee--homepage {
+  --premium-card-w: clamp(360px, 31vw, 460px);
+  --premium-card-h: clamp(410px, 34vw, 430px);
+  --premium-card-radius: 40px;
+  --premium-speed: 78s;
+  margin-top: 0;
+}
+.premium-marquee-inner {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+.premium-marquee-heading {
+  max-width: 780px;
+  margin: 0 auto 34px;
+  padding: 0 24px;
+  text-align: center;
+}
+.premium-marquee-line {
+  display: block;
+  width: 86px;
+  height: 1px;
+  margin: 0 auto 18px;
+  background: linear-gradient(90deg, transparent, #d8c99d, #f6edd2, #d8c99d, transparent);
+}
+.premium-marquee-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: .01em;
+}
+.premium-marquee-heading p {
+  max-width: 650px;
+  margin: 12px auto 0;
+  color: rgba(255,255,255,.64);
+  font-size: clamp(.94rem, 1.5vw, 1.08rem);
+  line-height: 1.7;
+}
+.premium-marquee-viewport {
+  position: relative;
+  overflow: hidden;
+  outline: none;
+}
+.premium-marquee-viewport::before,
+.premium-marquee-viewport::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  width: min(12vw, 170px);
+  pointer-events: none;
+}
+.premium-marquee-viewport::before {
+  left: 0;
+  background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,.86) 34%, transparent 100%);
+}
+.premium-marquee-viewport::after {
+  right: 0;
+  background: linear-gradient(270deg, #050505 0%, rgba(5,5,5,.86) 34%, transparent 100%);
+}
+.premium-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 24px;
+  padding: 8px 24px;
+  animation: premiumMarqueeScroll var(--premium-speed) linear infinite;
+  will-change: transform;
+}
+.premium-marquee-viewport:hover .premium-marquee-track,
+.premium-marquee-viewport:focus-within .premium-marquee-track {
+  animation-play-state: paused;
+}
+.premium-marquee-card {
+  position: relative;
+  display: block;
+  flex: 0 0 var(--premium-card-w);
+  width: var(--premium-card-w);
+  height: var(--premium-card-h);
+  overflow: hidden;
+  border-radius: var(--premium-card-radius);
+  background: #171717;
+  box-shadow: 0 24px 70px rgba(0,0,0,.42), inset 0 0 0 1px rgba(255,255,255,.08);
+  color: #fff !important;
+  text-decoration: none !important;
+  transform: translateZ(0);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.premium-marquee-card:hover,
+.premium-marquee-card:focus {
+  transform: scale(1.035);
+  box-shadow: 0 34px 90px rgba(0,0,0,.56), 0 0 0 1px rgba(216,201,157,.44);
+}
+.premium-marquee-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: saturate(.94) contrast(1.04) brightness(.88);
+  transition: transform .55s ease, filter .35s ease;
+}
+.premium-marquee-card:hover img,
+.premium-marquee-card:focus img {
+  transform: scale(1.045);
+  filter: saturate(1) contrast(1.06) brightness(.96);
+}
+.premium-marquee-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.06) 0%, rgba(0,0,0,.12) 42%, rgba(0,0,0,.82) 100%);
+  pointer-events: none;
+}
+.premium-marquee-shine {
+  position: absolute;
+  inset: 1px;
+  border-radius: calc(var(--premium-card-radius) - 1px);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.16), inset 0 1px 0 rgba(255,255,255,.18);
+  pointer-events: none;
+  z-index: 1;
+}
+.premium-marquee-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  max-width: calc(100% - 40px);
+  padding: 7px 12px;
+  border: 1px solid rgba(246,237,210,.46);
+  border-radius: 999px;
+  background: rgba(8,8,8,.46);
+  color: #f6edd2;
+  backdrop-filter: blur(12px);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.premium-marquee-title {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2;
+  color: #fff;
+  font-size: clamp(1.05rem, 1.7vw, 1.38rem);
+  font-weight: 800;
+  line-height: 1.22;
+  text-shadow: 0 2px 18px rgba(0,0,0,.6);
+}
+@keyframes premiumMarqueeScroll {
+  from { transform: translate3d(0,0,0); }
+  to { transform: translate3d(-50%,0,0); }
+}
+@media (max-width: 767px) {
+  .premium-photo-marquee {
+    --premium-card-w: clamp(220px, 74vw, 290px);
+    --premium-card-h: clamp(240px, 78vw, 280px);
+    --premium-card-radius: 26px;
+    padding: 52px 0 58px;
+    margin-top: 38px;
+  }
+  .premium-photo-marquee--homepage {
+    --premium-card-w: clamp(240px, 78vw, 290px);
+    --premium-card-h: clamp(260px, 82vw, 280px);
+    --premium-card-radius: 26px;
+    margin-top: 0;
+  }
+  .premium-marquee-heading { margin-bottom: 24px; }
+  .premium-marquee-track { gap: 16px; padding: 6px 18px; }
+  .premium-marquee-badge { top: 16px; left: 16px; max-width: calc(100% - 32px); }
+  .premium-marquee-title { left: 18px; right: 18px; bottom: 18px; }
+  .premium-marquee-viewport::before,
+  .premium-marquee-viewport::after { width: 54px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .premium-marquee-viewport {
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .premium-marquee-track {
+    animation: none;
+  }
+}
