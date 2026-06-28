@@ -112,6 +112,7 @@
     '    </div>' +
     '    <p class="footer-copy">&copy; Dr. Anubha Parashar &nbsp;&middot;&nbsp; Analytics &amp; AI Engineer</p>' +
     '    <p class="footer-views"><i class="fa fa-eye"></i> <span id="footer-view-count">—</span> page views</p>' +
+    '    <p class="footer-admin"><a href="admin-comments.html" class="admin-comments-link">Admin</a></p>' +
     '  </div>' +
     '</footer>';
 

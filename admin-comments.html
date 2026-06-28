@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Comment Moderation | Dr. Anubha Parashar</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/site-header-footer.css">
+  <link rel="stylesheet" href="assets/css/admin-comments.css">
+</head>
+<body class="admin-comments-page">
+  <div id="site-header"></div>
+
+  <main class="admin-comments-shell">
+    <section class="admin-comments-hero">
+      <p class="admin-comments-kicker">Website-Blog Realtime Database</p>
+      <h1>Comment Moderation</h1>
+      <p class="admin-comments-subtitle">Review pending visitor comments before they appear publicly.</p>
+    </section>
+
+    <section id="auth-panel" class="admin-comments-panel">
+      <div id="auth-state" class="admin-comments-auth-state">Checking sign-in status...</div>
+      <button id="login-button" class="admin-comments-login" type="button" hidden>
+        <i class="fa fa-google"></i> Login with Google
+      </button>
+    </section>
+
+    <section id="dashboard" class="admin-comments-dashboard" hidden>
+      <div class="admin-comments-toolbar">
+        <div>
+          <p class="admin-comments-label">Signed in as</p>
+          <strong id="admin-email"></strong>
+        </div>
+        <button id="logout-button" class="admin-comments-secondary" type="button">Logout</button>
+      </div>
+
+      <div class="admin-comments-metrics">
+        <div class="admin-comments-metric">
+          <span id="pending-count">0</span>
+          <p>Pending comments</p>
+        </div>
+        <div class="admin-comments-metric">
+          <span id="selected-count">0</span>
+          <p>Selected comments</p>
+        </div>
+      </div>
+
+      <div class="admin-comments-actions">
+        <button id="approve-selected" class="admin-comments-approve" type="button" disabled>Approve Selected</button>
+        <button id="reject-selected" class="admin-comments-reject" type="button" disabled>Reject Selected</button>
+      </div>
+
+      <p id="admin-status" class="admin-comments-status" role="status"></p>
+      <div id="pending-list" class="admin-comments-list"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/site-components.js"></script>
+  <script type="module" src="assets/js/admin-comments.js"></script>
+</body>
+</html>

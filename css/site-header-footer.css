@@ -327,3 +327,17 @@
   margin: 0;
 }
 .footer-views i { margin-right: 5px; opacity: .7; }
+
+.footer-admin {
+  margin: 6px 0 0;
+}
+.admin-comments-link {
+  opacity: 0.55;
+  font-size: 0.85rem;
+  text-decoration: none !important;
+  color: rgba(255,255,255,.42) !important;
+}
+.admin-comments-link:hover {
+  opacity: 1;
+  color: #7a97b5 !important;
+}

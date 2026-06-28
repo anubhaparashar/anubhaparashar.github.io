@@ -7,8 +7,7 @@ import {
   push,
   get,
   set,
-  remove,
-  serverTimestamp
+  remove
 } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-database.js";
 
 /*
@@ -45,6 +44,47 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+
+const COMMENT_APPROVAL_MESSAGE = "Thank you. Your comment has been submitted for approval and will appear after review.";
+
+async function submitPendingComment(postId, details) {
+  const name = String(details.name || "").trim();
+  const message = String(details.message || "").trim();
+  const parentId = details.parentId ? String(details.parentId).trim() : "";
+  const type = details.type || (parentId ? "reply" : "comment");
+  const pendingRef = push(ref(db, `pendingComments/${postId}`));
+  const commentId = pendingRef.key;
+  const now = Date.now();
+
+  await set(pendingRef, {
+    id: commentId,
+    postId,
+    parentId: parentId || null,
+    type,
+    name,
+    authorName: name,
+    message,
+    body: message,
+    text: message,
+    status: "pending",
+    approved: false,
+    source: "firebase",
+    createdAt: now,
+    updatedAt: now
+  });
+}
+
+function showCommentStatus(form, message, tone = "success") {
+  let status = form.querySelector("[data-comment-status]");
+  if (!status) {
+    status = document.createElement("p");
+    status.dataset.commentStatus = "true";
+    form.appendChild(status);
+  }
+
+  status.className = `firebase-comment-status ${tone}`;
+  status.textContent = message;
+}
 
 function slugify(value) {
   return String(value || "blog")
@@ -144,6 +184,8 @@ function addFirebaseBlogStyles() {
     .firebase-post-comment-form textarea { border: 1px solid #d7e0f4; border-radius: 8px; padding: 8px 10px; min-width: 0; }
     .firebase-post-comment-form textarea { min-height: 40px; resize: vertical; }
     .firebase-post-comment-form button { border: 0; border-radius: 8px; background: #0f3460; color: #fff; font-weight: 800; padding: 8px 12px; cursor: pointer; }
+    .firebase-comment-status { grid-column: 1 / -1; margin: 2px 0 0; color: #2e7d32; font-size: .78rem; font-weight: 700; }
+    .firebase-comment-status.error { color: #b3261e; }
     @media(max-width:640px){.firebase-post-comment-form,.firebase-comment-reply-form{grid-template-columns:1fr}.firebase-post-stats-bar > span,.firebase-post-like,.firebase-post-comments-toggle,.firebase-post-share{width:100%;justify-content:center;}}
   `;
   document.head.appendChild(style);
@@ -386,14 +428,15 @@ function setupCommentInteractions(container, postId) {
     if (submitBtn) submitBtn.disabled = true;
 
     try {
-      await push(ref(db, `comments/${postId}/${commentId}/replies`), {
+      await submitPendingComment(postId, {
         name,
         message,
-        createdAt: serverTimestamp()
+        parentId: commentId,
+        type: "reply"
       });
 
       form.reset();
-      form.classList.remove("open");
+      showCommentStatus(form, COMMENT_APPROVAL_MESSAGE);
     } catch (error) {
       console.error("Reply submit failed:", error);
       alert("Could not post reply. Please try again.");
@@ -774,13 +817,10 @@ function createPostStatsWidget(el, postId, fallbackDate) {
     submitBtn.disabled = true;
 
     try {
-      await push(ref(db, `comments/${postId}`), {
-        name,
-        message,
-        createdAt: serverTimestamp()
-      });
+      await submitPendingComment(postId, { name, message });
 
       commentForm.reset();
+      showCommentStatus(commentForm, COMMENT_APPROVAL_MESSAGE);
     } catch (error) {
       console.error("Comment submit failed:", error);
       alert("Could not post comment. Please try again.");
@@ -1155,13 +1195,10 @@ if (commentForm) {
     if (submitBtn) submitBtn.disabled = true;
 
     try {
-      await push(ref(db, `comments/${POST_ID}`), {
-        name,
-        message,
-        createdAt: serverTimestamp()
-      });
+      await submitPendingComment(POST_ID, { name, message });
 
       commentForm.reset();
+      showCommentStatus(commentForm, COMMENT_APPROVAL_MESSAGE);
     } catch (error) {
       console.error("Comment submit failed:", error);
       alert("Could not post comment. Please try again.");
@@ -1182,3 +1219,4 @@ if (HAS_GLOBAL_DETAIL_WIDGET) {
     }
   });
 }
+

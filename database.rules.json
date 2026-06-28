@@ -1,0 +1,57 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "posts": {
+      ".read": true,
+      "$postId": {
+        "views": {
+          ".write": true,
+          ".validate": "newData.isNumber()"
+        },
+        "likes": {
+          ".write": true,
+          ".validate": "newData.isNumber()"
+        },
+        "$other": {
+          ".write": false
+        }
+      }
+    },
+    "comments": {
+      "$postId": {
+        ".read": true,
+        "$commentId": {
+          ".write": "auth != null && auth.token.email === 'anubhaparashar1025@gmail.com'",
+          ".validate": "newData.hasChildren(['name', 'message']) || newData.hasChildren(['authorName', 'body']) || newData.hasChildren(['text'])",
+          "likes": {
+            ".write": true,
+            ".validate": "newData.isNumber()"
+          }
+        }
+      }
+    },
+    "pendingComments": {
+      ".read": "auth != null && auth.token.email === 'anubhaparashar1025@gmail.com'",
+      "$postId": {
+        ".read": "auth != null && auth.token.email === 'anubhaparashar1025@gmail.com'",
+        "$commentId": {
+          ".write": "(!data.exists() && newData.exists()) || (auth != null && auth.token.email === 'anubhaparashar1025@gmail.com')",
+          ".validate": "newData.hasChildren(['name', 'message']) || newData.hasChildren(['authorName', 'body']) || newData.hasChildren(['text']) || (auth != null && auth.token.email === 'anubhaparashar1025@gmail.com')"
+        }
+      }
+    },
+    "likes": {
+      ".read": true,
+      ".write": true
+    },
+    "commentLikes": {
+      ".read": true,
+      ".write": true
+    },
+    "views": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}
