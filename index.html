@@ -496,6 +496,158 @@
     .contact-status.is-visible { display:block; }
     .contact-status.success { background:rgba(236,253,243,.92); color:#166534; border:1px solid #bbf7d0; }
     .contact-status.error { background:rgba(255,241,242,.92); color:#9f1239; border:1px solid #fecdd3; }
+
+    /* Compact Work With Me / Speaking / Contact layout */
+    .contact-section .container {
+      max-width:1520px;
+      width:min(100% - 40px,1520px);
+    }
+    .work-with-me { margin-bottom:30px; }
+    .service-section-head { margin-bottom:24px; }
+    .work-grid {
+      grid-template-columns:repeat(6,minmax(0,1fr));
+      gap:22px;
+      align-items:stretch;
+    }
+    .work-card {
+      min-width:0;
+      min-height:340px;
+      padding:20px 16px;
+      align-items:center;
+      text-align:center;
+    }
+    .work-icon {
+      width:42px;
+      height:42px;
+      margin-bottom:14px;
+      font-size:1.08rem;
+    }
+    .work-card h3 {
+      min-height:2.7em;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:8px !important;
+    }
+    .work-card p {
+      font-size:.78rem;
+      line-height:1.58;
+      margin-bottom:14px;
+    }
+    .work-card .work-btn {
+      width:auto;
+      max-width:100%;
+      min-height:32px;
+      padding:0 12px;
+      font-size:.69rem;
+      white-space:normal;
+    }
+    .speaking-contact-grid {
+      grid-template-columns:minmax(0,1fr) 420px;
+      gap:24px;
+      align-items:start;
+    }
+    .media-kit,
+    .contact-form-card { padding:22px; }
+    .media-kit {
+      display:grid;
+      grid-template-columns:minmax(0,2fr) minmax(240px,1fr);
+      column-gap:20px;
+      row-gap:12px;
+    }
+    .media-kit h2,
+    .media-kit .media-kit-subtitle,
+    .media-kit .kit-cta-strip { grid-column:1 / -1; }
+    .media-kit h2 { margin-bottom:0 !important; }
+    .media-kit .kit-label { margin:10px 0 0; }
+    .media-kit .kit-label:nth-of-type(1) { grid-column:1; grid-row:3; }
+    .media-kit .availability-grid { grid-column:1; grid-row:4; }
+    .media-kit .kit-label:nth-of-type(2) { grid-column:2; grid-row:3; }
+    .media-kit .resource-grid { grid-column:2; grid-row:4; }
+    .availability-grid {
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:10px;
+    }
+    .availability-card {
+      min-height:132px;
+      padding:14px 10px;
+    }
+    .availability-card h3,
+    .resource-card h3 { font-size:.88rem !important; }
+    .availability-card p,
+    .resource-card p {
+      font-size:.74rem;
+      line-height:1.5;
+      margin-bottom:10px;
+    }
+    .kit-icon {
+      width:30px;
+      height:30px;
+      border-radius:10px;
+      margin-bottom:10px;
+      font-size:.95rem;
+    }
+    .resource-grid {
+      grid-template-columns:1fr;
+      gap:10px;
+    }
+    .resource-card {
+      min-height:0;
+      padding:14px;
+    }
+    .resource-btn,
+    .kit-cta-btn { min-height:32px; font-size:.69rem; padding:0 12px; }
+    .kit-cta-strip {
+      margin-top:6px;
+      padding:14px 16px;
+    }
+    .contact-form-card {
+      width:100%;
+      max-width:440px;
+      justify-self:end;
+      align-self:start;
+      position:sticky;
+      top:88px;
+    }
+    .contact-card-title { margin-bottom:12px; }
+    .contact-card-title h3 { font-size:1.12rem !important; }
+    .contact-form .form-group { margin-bottom:9px; }
+    .contact-form .form-control {
+      height:44px;
+      padding:9px 12px;
+      font-size:.82rem;
+    }
+    .contact-form textarea.form-control { min-height:118px; }
+    .contact-submit { min-height:42px; }
+
+    @media (min-width:1200px) {
+      .work-grid { grid-template-columns:repeat(6,minmax(0,1fr)); }
+    }
+    @media (min-width:768px) and (max-width:1199px) {
+      .contact-section .container { width:min(100% - 32px,1040px); }
+      .work-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+      .work-card { min-height:300px; }
+      .speaking-contact-grid { grid-template-columns:1fr; }
+      .contact-form-card { max-width:100%; justify-self:stretch; position:static; }
+      .media-kit { grid-template-columns:1fr; }
+      .media-kit .kit-label,
+      .media-kit .availability-grid,
+      .media-kit .resource-grid { grid-column:1; grid-row:auto; }
+      .availability-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .resource-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    }
+    @media (max-width:767px) {
+      .contact-section .container { width:min(100% - 28px,100%); }
+      .media-kit { grid-template-columns:1fr; }
+      .media-kit .kit-label,
+      .media-kit .availability-grid,
+      .media-kit .resource-grid { grid-column:1; grid-row:auto; }
+      .work-card { min-height:auto; }
+      .work-card h3 { min-height:0; }
+      .contact-form .form-control { height:44px; }
+      .contact-form textarea.form-control { min-height:118px; }
+    }
+
     @media (max-width:767px) {
       .hero-name { font-size:2.4rem !important; }
       .hero-impacts { gap:18px; }
@@ -1192,7 +1344,7 @@
 </div>
 <!--================ End Testimonial Area =================-->
 
-<section class="contact-section">
+<section class="contact-section" aria-label="Work With Me and Contact">
   <div class="container">
     <div class="work-with-me">
       <div class="service-section-head">
