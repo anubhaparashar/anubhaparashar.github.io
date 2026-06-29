@@ -302,7 +302,7 @@ data/
 ## Author
 
 **Dr. Anubha Parashar**  
-AI Researcher · Analytics & AI Engineer · Computer Vision Specialist · Deep Learning Researcher · Educator · Founder, GaitAI
+AI Researcher · Analytics & AI Engineer · Computer Vision Specialist · Deep Learning Researcher · Educator 
 
 Website:
 

@@ -43,7 +43,6 @@
     '                aria-haspopup="true" aria-expanded="false">Projects</a>' +
     '              <ul class="dropdown-menu">' +
     '                <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>' +
-    '                <li class="nav-item"><a class="nav-link" href="https://gaitai-analysis.github.io/GaitAI/" target="_blank" rel="noopener">GaitAI</a></li>' +
     '                <li class="nav-item"><a class="nav-link" href="grant.html">Grant</a></li>' +
     '                <li class="nav-item"><a class="nav-link" href="industry.html">Industry</a></li>' +
     '              </ul>' +
@@ -168,7 +167,7 @@
     window.__gaitAIGateLoaded = true;
 
     var GAITAI_PASSWORD = 'as';
-    var GAITAI_DEFAULT_URL = 'https://gaitai-analysis.github.io/GaitAI/';
+    var GAITAI_DEFAULT_URL = 'https://gaitai.in/';
     var pendingUrl = '';
     var pendingTarget = '_blank';
 
