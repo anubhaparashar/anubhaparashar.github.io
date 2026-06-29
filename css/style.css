@@ -3723,18 +3723,30 @@ h6 {
 .premium-journey-item {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 86px 1fr;
+  grid-template-columns: minmax(0, 1fr) 86px minmax(0, 1fr);
   align-items: center;
-  min-height: 180px;
+  min-height: 0;
+}
+.premium-journey-item::before {
+  content: "";
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: stretch;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(240,202,122,.34), transparent);
 }
 .premium-journey-item:nth-child(odd) .premium-journey-card {
   grid-column: 1;
+  grid-row: 1;
 }
 .premium-journey-item:nth-child(even) .premium-journey-card {
   grid-column: 3;
+  grid-row: 1;
 }
 .premium-journey-number {
   grid-column: 2;
+  grid-row: 1;
   justify-self: center;
   position: relative;
   z-index: 2;
@@ -3749,9 +3761,23 @@ h6 {
   font-weight: 900;
   box-shadow: 0 0 0 8px rgba(7,17,31,.95), 0 0 32px rgba(217,173,95,.2);
 }
+.premium-journey-item:nth-child(odd)::after,
+.premium-journey-item:nth-child(even)::after {
+  content: "";
+  grid-row: 1;
+  align-self: center;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(240,202,122,.46), transparent);
+  z-index: 1;
+}
+.premium-journey-item:nth-child(odd)::after { grid-column: 1 / 3; }
+.premium-journey-item:nth-child(even)::after { grid-column: 2 / 4; }
 .premium-journey-card {
+  grid-row: 1;
+  align-self: center;
   border-radius: 24px;
   padding: 26px 28px;
+  z-index: 2;
 }
 .premium-journey-card--gaitai {
   border-color: rgba(240,202,122,.58);
@@ -3791,11 +3817,14 @@ h6 {
   .premium-research-card { min-height: 230px; }
 }
 @media (max-width: 991px) {
-  .premium-journey-timeline::before { left: 24px; }
-  .premium-journey-item { grid-template-columns: 56px minmax(0, 1fr); align-items: start; min-height: 0; }
+  .premium-journey-timeline::before { left: 21px; }
+  .premium-journey-item { grid-template-columns: 56px minmax(0, 1fr); align-items: center; min-height: 0; }
+  .premium-journey-item::before { grid-column: 1; }
+  .premium-journey-item:nth-child(odd)::after,
+  .premium-journey-item:nth-child(even)::after { grid-column: 1 / 3; }
   .premium-journey-item:nth-child(odd) .premium-journey-card,
-  .premium-journey-item:nth-child(even) .premium-journey-card { grid-column: 2; }
-  .premium-journey-number { grid-column: 1; width: 42px; height: 42px; box-shadow: 0 0 0 7px rgba(7,17,31,.95), 0 0 28px rgba(217,173,95,.16); }
+  .premium-journey-item:nth-child(even) .premium-journey-card { grid-column: 2; grid-row: 1; }
+  .premium-journey-number { grid-column: 1; grid-row: 1; width: 42px; height: 42px; box-shadow: 0 0 0 7px rgba(7,17,31,.95), 0 0 28px rgba(217,173,95,.16); }
 }
 @media (max-width: 640px) {
   .premium-research-section,

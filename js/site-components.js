@@ -200,11 +200,11 @@
       wrapper.innerHTML =
         '<div class="gaitai-access-overlay" id="gaitaiAccessModal" aria-hidden="true">' +
         '  <div class="gaitai-access-modal" role="dialog" aria-modal="true" aria-labelledby="gaitaiAccessTitle">' +
-        '    <button type="button" class="gaitai-access-close" data-gaitai-close aria-label="Close GaitAI access dialog">&times;</button>' +
-        '    <h3 id="gaitaiAccessTitle">Access GaitAI</h3>' +
-        '    <p>Enter the access password to open the GaitAI research initiative.</p>' +
+        '    <button type="button" class="gaitai-access-close" data-gaitai-close aria-label="Close research initiative access dialog">&times;</button>' +
+        '    <h3 id="gaitaiAccessTitle">Access Research Initiative</h3>' +
+        '    <p>Enter the access password to open the protected research initiative.</p>' +
         '    <form id="gaitaiAccessForm" novalidate>' +
-        '      <input class="gaitai-access-field" id="gaitaiAccessPassword" type="password" autocomplete="current-password" placeholder="Enter password" aria-label="GaitAI password">' +
+        '      <input class="gaitai-access-field" id="gaitaiAccessPassword" type="password" autocomplete="current-password" placeholder="Enter password" aria-label="Research initiative password">' +
         '      <div class="gaitai-access-error" id="gaitaiAccessError" aria-live="polite"></div>' +
         '      <div class="gaitai-access-actions">' +
         '        <button type="button" class="gaitai-access-btn secondary" data-gaitai-close>Cancel</button>' +

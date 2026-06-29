@@ -21,10 +21,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260629-map-dark">
   <link rel="stylesheet" href="css/site-header-footer.css">
   <link rel="stylesheet" href="css/travel-map.css">
-  <link rel="stylesheet" href="assets/css/global-footprints-map.css">
+  <link rel="stylesheet" href="assets/css/global-footprints-map.css?v=20260629-map-dark">
   <style>
     /* ══════════════════════════════════════════════════════
        GLOBAL RESET
@@ -448,6 +448,7 @@
       margin-bottom:17px; font-size:1.15rem;
     }
     .work-card h3, .availability-card h3, .resource-card h3 { color:#fff !important; font-size:1rem !important; line-height:1.35 !important; font-weight:800 !important; margin-bottom:9px !important; }
+    .availability-card h3 { margin-bottom:16px !important; }
     .work-card p, .availability-card p, .resource-card p { color:rgba(248,250,252,.64); font-size:.82rem; line-height:1.72; margin:0 0 18px; }
     .work-card .work-btn, .resource-btn, .kit-cta-btn {
       display:inline-flex; align-items:center; justify-content:center; gap:8px; width:max-content; margin-top:auto;
@@ -461,9 +462,10 @@
     .media-kit h2 { font-size:clamp(1.65rem,3vw,2.25rem) !important; }
     .kit-label { display:block; margin:24px 0 13px; color:#cdbbff; font-size:.66rem; font-weight:900; letter-spacing:2px; text-transform:uppercase; }
     .availability-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
-    .availability-card { display:block; min-height:138px; border-radius:16px; padding:16px; text-decoration:none !important; border-color:rgba(168,132,255,.22); transition:transform .2s,border-color .2s; }
+    .availability-card { display:flex; flex-direction:column; justify-content:flex-start; min-height:160px; border-radius:16px; padding:26px 16px 24px; text-decoration:none !important; border-color:rgba(168,132,255,.22); transition:transform .2s,border-color .2s; }
     .availability-card:hover { transform:translateY(-3px); border-color:rgba(168,132,255,.55); text-decoration:none !important; }
     .kit-icon { width:34px; height:34px; border-radius:11px; color:#d9ccff; background:rgba(139,92,246,.14); border-color:rgba(168,132,255,.25); margin-bottom:12px; }
+    .availability-card .kit-icon { margin-bottom:20px; }
     .resource-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
     .resource-card { border-radius:16px; padding:18px; border-color:rgba(168,132,255,.2); min-height:176px; display:flex; flex-direction:column; }
     .resource-btn { background:linear-gradient(135deg,#d9ccff,#8b5cf6); color:#12091f; box-shadow:0 12px 30px rgba(139,92,246,.22); }
@@ -589,8 +591,8 @@
       gap:10px;
     }
     .availability-card {
-      min-height:132px;
-      padding:14px 10px;
+      min-height:162px;
+      padding:24px 12px 22px;
     }
     .availability-card h3,
     .resource-card h3 { font-size:.88rem !important; }
@@ -607,6 +609,9 @@
       margin-bottom:10px;
       font-size:.95rem;
     }
+    .availability-card .kit-icon { margin-bottom:18px; }
+    .availability-card h3 { margin-bottom:14px !important; }
+    .availability-card p { margin-bottom:0; }
     .resource-grid {
       grid-template-columns:1fr;
       gap:10px;
@@ -825,11 +830,11 @@
           <div class="founder-card-inner">
             <div class="founder-portrait">
               <img src="files/1. Home/Picture1.png" alt="Dr. Anubha Parashar" loading="lazy" decoding="async">
-              <div class="founder-badge"><i class="fa fa-magic"></i> GaitAI — AI gait analysis research initiative</div>
+              <!--<div class="founder-badge"><i class="fa fa-magic"></i> GaitAI — AI gait analysis research initiative</div>-->
             </div>
 
             <div class="founder-name">Dr. Anubha Parashar</div>
-            <div class="founder-role">AI Research Scientist &middot; GaitAI — AI gait analysis research initiative</div>
+            <div class="founder-role">AI Research Scientist &middot; <!--GaitAI — AI gait analysis research initiative--></div>
             <p class="founder-summary">
               AI Research Scientist, Analytics &amp; AI Engineer, educator and technology innovator with more than a decade of experience across AI, deep learning, computer vision, biometrics, generative AI, NLP and intelligent systems.
             </p>
@@ -1427,9 +1432,9 @@
         </article>
         <article class="work-card">
           <span class="work-badge">Partnerships</span>
-          <h3>GaitAI Partnerships</h3>
-          <p>Partnering for gait intelligence, healthcare AI, surveillance, mobility analytics, and biometric innovation with GaitAI.</p>
-          <a class="work-btn" href="https://gaitai.in/">Partner With GaitAI <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          <h3>Gait Intelligence Partnerships</h3>
+          <p>Partnering for gait intelligence, healthcare AI, surveillance, mobility analytics, and biometric innovation.</p>
+          <a class="work-btn" href="#contact">Explore Partnership <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </article>
       </div>
     </div>
@@ -1531,10 +1536,10 @@
 <script src="js/stellar.js"></script>
 <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
 <script src="js/theme.js"></script>
-<script src="js/site-components.js"></script>
+<script src="js/site-components.js?v=20260629-research-access"></script>
 <script src="data/site-data.js"></script>
 <script src="assets/js/premium-photo-marquee.js"></script>
-<script src="assets/js/global-footprints-map.js"></script>
+<script src="assets/js/global-footprints-map.js?v=20260629-map-dark"></script>
 
 <script>
 /* ── Star field (80 random stars) ── */

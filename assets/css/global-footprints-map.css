@@ -36,8 +36,8 @@
   background: linear-gradient(135deg, #071626, #0b2036);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 24px 60px rgba(0,0,0,.35), 0 0 36px rgba(230,184,94,.12);
 }
-.home-global-map .leaflet-container { width: 100%; height: 100%; font-family: Inter, Arial, sans-serif; background: #071626; }
-.home-global-map .leaflet-tile { filter: saturate(1.08) brightness(1.12) contrast(.96); }
+.home-global-map .leaflet-container { width: 100%; height: 100%; font-family: Inter, Arial, sans-serif; background: #07111f; }
+.home-global-map .leaflet-tile { filter: none; }
 .home-global-map-error { display: flex; align-items: center; justify-content: center; height: 100%; padding: 28px; text-align: center; color: #f5f1e8; font-size: .92rem; line-height: 1.6; }
 .global-footprint-marker { width: 30px; height: 30px; border-radius: 50% 50% 50% 8px; transform: rotate(-45deg); background: #f5c76b; border: 3px solid #fff4cf; box-shadow: 0 12px 26px rgba(0,0,0,.38), 0 0 24px rgba(245,199,107,.35); }
 .global-footprint-marker::after { content: ''; position: absolute; left: 8px; top: 8px; width: 8px; height: 8px; border-radius: 50%; background: #07111f; box-shadow: inset 0 0 0 1px rgba(255,244,207,.18); }
@@ -95,4 +95,84 @@
   .global-map-filter { flex: 0 0 auto; }
   #home-global-map, .home-global-map { min-height: 430px; height: 430px; border-radius: 20px; max-width: 100%; }
   .home-map-details { border-radius: 20px; padding: 18px; }
+}
+
+
+/* Homepage Leaflet premium dark map surface */
+.global-footprints-section .leaflet-container,
+.journeys-connections .leaflet-container,
+.travel-map-section .leaflet-container,
+#travel-map,
+#homeTravelMap,
+#home-global-map,
+.leaflet-map {
+  background: #07111f !important;
+  border: 1px solid rgba(218, 174, 88, 0.38) !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.38), 0 0 24px rgba(218, 174, 88, 0.10) !important;
+}
+.global-footprints-section .leaflet-control-zoom a,
+.journeys-connections .leaflet-control-zoom a,
+.travel-map-section .leaflet-control-zoom a {
+  background: #0b1b2f !important;
+  color: #d9ad5f !important;
+  border-color: rgba(218, 174, 88, 0.35) !important;
+}
+.global-footprints-section .leaflet-control-attribution,
+.journeys-connections .leaflet-control-attribution,
+.travel-map-section .leaflet-control-attribution {
+  background: rgba(7, 17, 31, 0.78) !important;
+  color: #b8c4d6 !important;
+}
+.global-footprints-section .leaflet-control-attribution a,
+.journeys-connections .leaflet-control-attribution a,
+.travel-map-section .leaflet-control-attribution a {
+  color: #d9ad5f !important;
+}
+.global-footprints-section .leaflet-popup-content-wrapper,
+.journeys-connections .leaflet-popup-content-wrapper,
+.travel-map-section .leaflet-popup-content-wrapper {
+  background: #0b1b2f !important;
+  color: #f5f1e8 !important;
+  border: 1px solid rgba(218, 174, 88, 0.38) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45) !important;
+}
+.global-footprints-section .leaflet-popup-tip,
+.journeys-connections .leaflet-popup-tip,
+.travel-map-section .leaflet-popup-tip {
+  background: #0b1b2f !important;
+}
+.global-footprints-section .leaflet-popup-content strong,
+.journeys-connections .leaflet-popup-content strong,
+.travel-map-section .leaflet-popup-content strong {
+  color: #d9ad5f !important;
+}
+.global-footprints-section .map-details-panel,
+.journeys-connections .map-details-panel,
+.travel-map-section .map-details-panel,
+.travel-map-panel,
+.global-footprints-section .home-map-details {
+  background: rgba(10, 25, 44, 0.94) !important;
+  border: 1px solid rgba(218, 174, 88, 0.32) !important;
+  color: #f5f1e8 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.32) !important;
+}
+.global-footprints-section .map-details-panel h3,
+.journeys-connections .map-details-panel h3,
+.travel-map-section .map-details-panel h3,
+.travel-map-panel h3,
+.global-footprints-section .home-map-details h3 {
+  color: #d9ad5f !important;
+}
+.global-footprints-section select,
+.journeys-connections select,
+.travel-map-section select,
+.travel-map-panel select {
+  background: #07111f !important;
+  color: #f5f1e8 !important;
+  border: 1px solid rgba(218, 174, 88, 0.45) !important;
+  border-radius: 10px !important;
 }
