@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="css/style.css?v=20260629-map-dark">
   <link rel="stylesheet" href="css/site-header-footer.css">
   <link rel="stylesheet" href="css/travel-map.css">
-  <link rel="stylesheet" href="assets/css/global-footprints-map.css?v=20260629-map-dark">
+  <link rel="stylesheet" href="assets/css/global-footprints-map.css?v=20260629-map-deep-navy">
   <style>
     /* ══════════════════════════════════════════════════════
        GLOBAL RESET
@@ -456,7 +456,7 @@
       color:#0b0d12; background:linear-gradient(135deg,#f3dfb0,#bd9550); box-shadow:0 12px 30px rgba(189,149,80,.18); transition:transform .2s,box-shadow .2s;
     }
     .work-card .work-btn:hover, .resource-btn:hover, .kit-cta-btn:hover { color:#05070d; transform:translateY(-1px); box-shadow:0 16px 34px rgba(189,149,80,.28); }
-    .speaking-contact-grid { display:grid; grid-template-columns:minmax(0,68fr) minmax(282px,30fr); gap:24px; align-items:start; }
+    .speaking-contact-grid { display:grid; grid-template-columns:minmax(0,68fr) minmax(282px,30fr); gap:24px; align-items:stretch; }
     .media-kit, .contact-form-card { border-radius:20px; padding:26px; }
     .media-kit { border-color:rgba(168,132,255,.24); box-shadow:0 24px 70px rgba(31,14,77,.32); }
     .media-kit h2 { font-size:clamp(1.65rem,3vw,2.25rem) !important; }
@@ -468,6 +468,26 @@
     .availability-card .kit-icon { margin-bottom:20px; }
     .resource-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
     .resource-card { border-radius:16px; padding:18px; border-color:rgba(168,132,255,.2); min-height:176px; display:flex; flex-direction:column; }
+    .media-resource-card {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      min-height:82px;
+      padding:18px 22px;
+      flex-direction:row;
+    }
+    .media-resource-card h3 {
+      margin:0 !important;
+      font-size:1rem !important;
+      line-height:1.25 !important;
+    }
+    .media-resource-card .resource-btn {
+      flex:0 0 auto;
+      white-space:nowrap;
+      padding:10px 16px;
+      border-radius:999px;
+    }
     .resource-btn { background:linear-gradient(135deg,#d9ccff,#8b5cf6); color:#12091f; box-shadow:0 12px 30px rgba(139,92,246,.22); }
     .resource-btn:hover { color:#12091f; box-shadow:0 16px 34px rgba(139,92,246,.32); }
     .kit-cta-strip {
@@ -567,21 +587,22 @@
     .speaking-contact-grid {
       grid-template-columns:minmax(0,1fr) 420px;
       gap:24px;
-      align-items:start;
+      align-items:stretch;
     }
-    .media-kit,
-    .contact-form-card { padding:22px; }
     .media-kit {
+      padding:18px 22px 16px;
+      align-self:stretch;
       display:grid;
       grid-template-columns:minmax(0,2fr) minmax(240px,1fr);
       column-gap:20px;
-      row-gap:12px;
+      row-gap:8px;
     }
+    .contact-form-card { padding:22px; }
     .media-kit h2,
     .media-kit .media-kit-subtitle,
     .media-kit .kit-cta-strip { grid-column:1 / -1; }
     .media-kit h2 { margin-bottom:0 !important; }
-    .media-kit .kit-label { margin:10px 0 0; }
+    .media-kit .kit-label { margin:6px 0 0; }
     .media-kit .kit-label:nth-of-type(1) { grid-column:1; grid-row:3; }
     .media-kit .availability-grid { grid-column:1; grid-row:4; }
     .media-kit .kit-label:nth-of-type(2) { grid-column:2; grid-row:3; }
@@ -614,28 +635,33 @@
     .availability-card p { margin-bottom:0; }
     .resource-grid {
       grid-template-columns:1fr;
-      gap:10px;
+      gap:8px;
     }
     .resource-card {
       min-height:0;
       padding:14px;
     }
-    .media-kit .resource-card {
+    .media-kit .media-resource-card {
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:12px;
-      min-height:0;
-      padding:12px 14px;
+      gap:14px;
+      min-height:82px;
+      padding:18px 22px;
+      flex-direction:row;
     }
-    .media-kit .resource-card h3 {
+    .media-kit .media-resource-card h3 {
       margin:0 !important;
+      font-size:1rem !important;
+      line-height:1.25 !important;
       min-width:0;
     }
-    .media-kit .resource-card .resource-btn {
+    .media-kit .media-resource-card .resource-btn {
       flex:0 0 auto;
       margin-top:0;
       white-space:nowrap;
+      padding:10px 16px;
+      border-radius:999px;
     }
 
     .resource-btn,
@@ -645,7 +671,7 @@
     .speaker-actions a,
     .cta-actions a,
     .download-actions a,
-    .media-kit .resource-card .resource-btn {
+    .media-kit .media-resource-card .resource-btn {
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -657,18 +683,18 @@
     .speaker-actions a span,
     .cta-actions a span,
     .download-actions a span,
-    .media-kit .resource-card .resource-btn span {
+    .media-kit .media-resource-card .resource-btn span {
       display:inline;
     }
     .kit-cta-strip {
-      margin-top:6px;
-      padding:14px 16px;
+      margin-top:4px;
+      padding:12px 16px;
     }
     .contact-form-card {
       width:100%;
       max-width:440px;
       justify-self:end;
-      align-self:start;
+      align-self:stretch;
       position:sticky;
       top:88px;
     }
@@ -709,11 +735,11 @@
       .work-card h3 { min-height:0; }
       .contact-form .form-control { height:44px; }
       .contact-form textarea.form-control { min-height:118px; }
-      .media-kit .resource-card {
-        align-items:flex-start;
-        flex-direction:column;
+      .media-kit .media-resource-card {
+        align-items:center;
+        flex-direction:row;
       }
-      .media-kit .resource-card .resource-btn { width:max-content; }
+      .media-kit .media-resource-card .resource-btn { width:max-content; }
     }
 
     @media (max-width:767px) {
@@ -818,13 +844,14 @@
         </div>
       </div>
 
+
       <!-- CTAs -->
       <div class="hero-cta-row">
-        <a class="hero-btn hero-btn-primary" href="files/1. Home/Anubha_cv.pdf" target="_blank">
+        <a class="hero-btn hero-btn-primary" href="files/1.%20Home/Anubha_cv.pdf" target="_blank">
           <i class="fa fa-download"></i> Academic CV
         </a>
-        <a class="hero-btn hero-btn-primary" href="files/1. Home/Anubha_resume.pdf" target="_blank">
-          <i class="fa fa-file-text-o"></i> Industry Resume
+        <a class="hero-btn hero-btn-primary" href="files/1.%20Home/Anubha_resume.pdf" target="_blank">
+          <i class="fa fa-download"></i> Industry Resume
         </a>
         <a class="hero-btn hero-btn-glass" href="publication.html">
           <i class="fa fa-book"></i> View Research
@@ -1495,14 +1522,17 @@
 
         <span class="kit-label">Media Kit &amp; Resources</span>
         <div class="resource-grid">
-          <article class="resource-card">
-            <a class="resource-btn" href="files/1.%20Home/Anubha_Speaker_Bio.pdf">Download Speaker Bio &middot; Download PDF <i class="fa fa-download" aria-hidden="true"></i></a>
+          <article class="resource-card media-resource-card">
+            <h3>Download Speaker Bio</h3>
+            <a class="resource-btn" href="files/1.%20Home/Anubha_Speaker_Bio.pdf">PDF <i class="fa fa-download" aria-hidden="true"></i></a>
           </article>
-          <article class="resource-card">
-            <a class="resource-btn" href="files/1.%20Home/Anubha_resume.pdf">Download CV &middot; Download PDF <i class="fa fa-download" aria-hidden="true"></i></a>
+          <article class="resource-card media-resource-card">
+            <h3>Download CV</h3>
+            <a class="resource-btn" href="files/1.%20Home/Anubha_resume.pdf">PDF <i class="fa fa-download" aria-hidden="true"></i></a>
           </article>
-          <article class="resource-card">
-            <a class="resource-btn" href="mailto:dranubhaparashar@gmail.com?subject=Invitation%20for%20Talk">Invite for Talk &middot; Send Invitation <i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <article class="resource-card media-resource-card">
+            <h3>Invite for Talk</h3>
+            <a class="resource-btn" href="mailto:dranubhaparashar@gmail.com?subject=Invitation%20for%20Talk">Send <i class="fa fa-envelope" aria-hidden="true"></i></a>
           </article>
         </div>
 
@@ -1556,7 +1586,7 @@
 <script src="js/site-components.js?v=20260629-research-access"></script>
 <script src="data/site-data.js"></script>
 <script src="assets/js/premium-photo-marquee.js"></script>
-<script src="assets/js/global-footprints-map.js?v=20260629-map-dark"></script>
+<script src="assets/js/global-footprints-map.js?v=20260629-map-deep-navy"></script>
 
 <script>
 /* ── Star field (80 random stars) ── */
