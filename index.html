@@ -595,6 +595,24 @@
       min-height:0;
       padding:14px;
     }
+    .media-kit .resource-card {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      min-height:0;
+      padding:12px 14px;
+    }
+    .media-kit .resource-card h3 {
+      margin:0 !important;
+      min-width:0;
+    }
+    .media-kit .resource-card .resource-btn {
+      flex:0 0 auto;
+      margin-top:0;
+      white-space:nowrap;
+    }
+
     .resource-btn,
     .kit-cta-btn { min-height:32px; font-size:.69rem; padding:0 12px; }
     .kit-cta-strip {
@@ -646,6 +664,11 @@
       .work-card h3 { min-height:0; }
       .contact-form .form-control { height:44px; }
       .contact-form textarea.form-control { min-height:118px; }
+      .media-kit .resource-card {
+        align-items:flex-start;
+        flex-direction:column;
+      }
+      .media-kit .resource-card .resource-btn { width:max-content; }
     }
 
     @media (max-width:767px) {
@@ -1429,17 +1452,14 @@
         <div class="resource-grid">
           <article class="resource-card">
             <h3>Download Speaker Bio</h3>
-            <p>Short profile, talk highlights, and expertise summary.</p>
             <a class="resource-btn" href="files/1.%20Home/Anubha_Speaker_Bio.pdf">Download PDF <i class="fa fa-download" aria-hidden="true"></i></a>
           </article>
           <article class="resource-card">
             <h3>Download CV</h3>
-            <p>Detailed academic and professional CV.</p>
             <a class="resource-btn" href="files/1.%20Home/Anubha_resume.pdf">Download PDF <i class="fa fa-download" aria-hidden="true"></i></a>
           </article>
           <article class="resource-card">
             <h3>Invite for Talk</h3>
-            <p>Have an event or session in mind? Let&rsquo;s connect.</p>
             <a class="resource-btn" href="mailto:dranubhaparashar@gmail.com?subject=Invitation%20for%20Talk">Send Invitation <i class="fa fa-envelope" aria-hidden="true"></i></a>
           </article>
         </div>
