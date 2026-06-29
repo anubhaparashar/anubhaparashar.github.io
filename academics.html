@@ -369,8 +369,11 @@
       opacity: .78;
     }
     .academic-enhanced .acad-section {
-      display: block;
+      display: none;
       margin-bottom: 30px;
+    }
+    .academic-enhanced .acad-section.active {
+      display: block;
     }
     .academic-card-grid {
       display: grid;
@@ -3256,6 +3259,11 @@
       section.appendChild(wrap);
     }
 
+
+    function activeSectionCategory() {
+      return state.filter === 'all' ? 'leadership' : state.filter;
+    }
+
     function updateActiveControls() {
       document.querySelectorAll('.academic-filter').forEach(function(btn) {
         btn.classList.toggle('active', btn.getAttribute('data-filter') === state.filter);
@@ -3264,11 +3272,12 @@
         var key = normalizeCategory(btn.getAttribute('data-academic-tab'));
         btn.classList.toggle('active', key === state.filter || (state.filter === 'all' && key === 'leadership'));
       });
+      var activeCategory = activeSectionCategory();
       categories.forEach(function(category) {
         var sidebar = document.getElementById('sidebar-' + category.replace('-', ''));
         if (!sidebar && category === 'faculty-visits') sidebar = document.getElementById('sidebar-facultyvisits');
         if (!sidebar && category === 'social-activities') sidebar = document.getElementById('sidebar-social');
-        if (sidebar) sidebar.style.display = (state.filter === category) ? '' : 'none';
+        if (sidebar) sidebar.style.display = (activeCategory === category) ? '' : 'none';
       });
     }
 
@@ -3278,17 +3287,22 @@
       var visibleCount = 0;
       var hasQuery = Boolean(state.query);
 
+      var activeCategory = activeSectionCategory();
       document.querySelectorAll('.acad-section').forEach(function(section) {
         var sectionCards = Array.from(section.querySelectorAll('[data-academic-item]'));
         if (!sectionCards.length) return;
         var category = sectionCards[0].getAttribute('data-academic-category');
+        var isActiveSection = category === activeCategory;
+        section.classList.toggle('active', isActiveSection);
+        sectionCards.forEach(function(card) { card.classList.add('is-hidden'); });
+        if (!isActiveSection) return;
+
         var matching = sectionCards.filter(function(card) {
           return categoryMatches(card) && textMatches(card);
         });
         var limit = state.filter === 'all' ? allLimit : categoryLimit;
         if (hasQuery || state.expanded[category]) limit = matching.length;
 
-        sectionCards.forEach(function(card) { card.classList.add('is-hidden'); });
         matching.forEach(function(card, index) {
           if (index < limit) {
             card.classList.remove('is-hidden');
@@ -3296,7 +3310,6 @@
           }
         });
 
-        section.style.display = matching.length ? '' : 'none';
         if (matching.length > limit) addShowMoreButton(section, category, matching.length - limit);
       });
 
