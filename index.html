@@ -511,16 +511,27 @@
     }
     .work-card {
       min-width:0;
-      min-height:340px;
-      padding:20px 16px;
+      min-height:286px;
+      padding:16px 14px 15px;
       align-items:center;
       text-align:center;
     }
-    .work-icon {
-      width:42px;
-      height:42px;
-      margin-bottom:14px;
-      font-size:1.08rem;
+    .work-badge {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:24px;
+      margin-bottom:12px;
+      border:1px solid rgba(232,203,136,.34);
+      border-radius:999px;
+      background:rgba(232,203,136,.07);
+      color:#f3dfb0;
+      padding:3px 10px;
+      font-size:.62rem;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
     }
     .work-card h3 {
       min-height:2.7em;
@@ -530,9 +541,18 @@
       margin-bottom:8px !important;
     }
     .work-card p {
+      flex:1 1 auto;
       font-size:.78rem;
-      line-height:1.58;
-      margin-bottom:14px;
+      line-height:1.55;
+      margin-bottom:13px;
+    }
+    .work-card p::after {
+      content:"";
+      display:block;
+      width:42px;
+      height:1px;
+      margin:13px auto 0;
+      background:linear-gradient(90deg,transparent,rgba(232,203,136,.75),transparent);
     }
     .work-card .work-btn {
       width:auto;
@@ -1376,37 +1396,37 @@
       </div>
       <div class="work-grid">
         <article class="work-card">
-          <span class="work-icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
+          <span class="work-badge">Consulting</span>
           <h3>AI/ML Consulting</h3>
           <p>End-to-end AI/ML solutions from problem framing and data strategy to model development, deployment, and system scalability.</p>
           <a class="work-btn" href="#contact">Explore Services <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </article>
         <article class="work-card">
-          <span class="work-icon"><i class="fa fa-eye" aria-hidden="true"></i></span>
+          <span class="work-badge">Vision AI</span>
           <h3>Computer Vision Projects</h3>
           <p>Custom computer vision systems including detection, tracking, OCR, medical imaging, and real-time intelligence solutions.</p>
           <a class="work-btn" href="blog.html">View Projects <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </article>
         <article class="work-card">
-          <span class="work-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
+          <span class="work-badge">Research</span>
           <h3>Research Collaboration</h3>
           <p>Open to impactful collaborations in AI, deep learning, gait biometrics, privacy-preserving AI, and human-centric systems.</p>
           <a class="work-btn" href="#contact">Collaborate <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </article>
         <article class="work-card">
-          <span class="work-icon"><i class="fa fa-microphone" aria-hidden="true"></i></span>
+          <span class="work-badge">Speaking</span>
           <h3>Invited Talks</h3>
           <p>Engaging talks on AI, ML, DL, CV, NLP, IoT, biometrics, and responsible AI for academic, industry, and global events.</p>
           <a class="work-btn" href="academics.html#talks">Invite Me <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </article>
         <article class="work-card">
-          <span class="work-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+          <span class="work-badge">Mentoring</span>
           <h3>PhD / Research Mentoring</h3>
           <p>Guidance on research framing, experiments, publications, paper writing, projects, and academic growth.</p>
           <a class="work-btn" href="#contact">Mentorship <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </article>
         <article class="work-card">
-          <span class="work-icon"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
+          <span class="work-badge">Partnerships</span>
           <h3>GaitAI Partnerships</h3>
           <p>Partnering for gait intelligence, healthcare AI, surveillance, mobility analytics, and biometric innovation with GaitAI.</p>
           <a class="work-btn" href="https://gaitai.in/">Partner With GaitAI <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
