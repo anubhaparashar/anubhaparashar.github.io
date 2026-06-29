@@ -640,6 +640,26 @@
 
     .resource-btn,
     .kit-cta-btn { min-height:32px; font-size:.69rem; padding:0 12px; }
+    .hero-actions a,
+    .profile-actions a,
+    .speaker-actions a,
+    .cta-actions a,
+    .download-actions a,
+    .media-kit .resource-card .resource-btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      white-space:nowrap;
+    }
+    .hero-actions a span,
+    .profile-actions a span,
+    .speaker-actions a span,
+    .cta-actions a span,
+    .download-actions a span,
+    .media-kit .resource-card .resource-btn span {
+      display:inline;
+    }
     .kit-cta-strip {
       margin-top:6px;
       padding:14px 16px;
@@ -1476,16 +1496,13 @@
         <span class="kit-label">Media Kit &amp; Resources</span>
         <div class="resource-grid">
           <article class="resource-card">
-            <h3>Download Speaker Bio</h3>
-            <a class="resource-btn" href="files/1.%20Home/Anubha_Speaker_Bio.pdf">Download PDF <i class="fa fa-download" aria-hidden="true"></i></a>
+            <a class="resource-btn" href="files/1.%20Home/Anubha_Speaker_Bio.pdf">Download Speaker Bio &middot; Download PDF <i class="fa fa-download" aria-hidden="true"></i></a>
           </article>
           <article class="resource-card">
-            <h3>Download CV</h3>
-            <a class="resource-btn" href="files/1.%20Home/Anubha_resume.pdf">Download PDF <i class="fa fa-download" aria-hidden="true"></i></a>
+            <a class="resource-btn" href="files/1.%20Home/Anubha_resume.pdf">Download CV &middot; Download PDF <i class="fa fa-download" aria-hidden="true"></i></a>
           </article>
           <article class="resource-card">
-            <h3>Invite for Talk</h3>
-            <a class="resource-btn" href="mailto:dranubhaparashar@gmail.com?subject=Invitation%20for%20Talk">Send Invitation <i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <a class="resource-btn" href="mailto:dranubhaparashar@gmail.com?subject=Invitation%20for%20Talk">Invite for Talk &middot; Send Invitation <i class="fa fa-envelope" aria-hidden="true"></i></a>
           </article>
         </div>
 
