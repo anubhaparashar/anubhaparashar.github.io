@@ -70,11 +70,16 @@
 .home-map-region-summary { display: none !important; }
 .global-footprints-full-link { display: inline-flex; align-items: center; gap: 8px; margin: 24px auto 0; border: 1px solid rgba(218,174,88,.38); border-radius: 999px; padding: 11px 18px; color: #f5f1e8 !important; background: rgba(10,25,44,.6); font-size: .76rem; font-weight: 900; text-decoration: none !important; transition: .18s; }
 .global-footprints-full-link:hover { background: #d9ad5f; color: #07111f !important; box-shadow: 0 0 24px rgba(217,173,95,.18); }
-.global-footprints-section .leaflet-control-zoom a { color: #172238; }
-.global-footprints-section .leaflet-popup-content-wrapper { border-radius: 18px; background: rgba(10,25,44,.96); border: 1px solid rgba(218,174,88,.35); color: #f5f1e8; box-shadow: 0 18px 45px rgba(0,0,0,.42), 0 0 24px rgba(217,173,95,.12); }
+.global-footprints-section .leaflet-control-zoom { border: 1px solid rgba(218,174,88,.35) !important; border-radius: 10px; overflow: hidden; box-shadow: 0 12px 28px rgba(0,0,0,.28); }
+.global-footprints-section .leaflet-control-zoom a { background: #0b1b2f !important; color: #d9ad5f !important; border-color: rgba(218,174,88,.35) !important; }
+.global-footprints-section .leaflet-control-zoom a:hover { background: rgba(218,174,88,.12) !important; color: #f0ca7a !important; }
+.global-footprints-section .leaflet-control-attribution { background: rgba(7,17,31,.78) !important; color: #b8c4d6 !important; border-radius: 8px 0 0 0; }
+.global-footprints-section .leaflet-control-attribution a { color: #d9ad5f !important; }
+.global-footprints-section .leaflet-popup-content-wrapper { border-radius: 14px; background: #0b1b2f !important; border: 1px solid rgba(218,174,88,.38); color: #f5f1e8 !important; box-shadow: 0 18px 45px rgba(0,0,0,.45), 0 0 24px rgba(217,173,95,.12); }
 .global-footprints-section .leaflet-popup-content { margin: 14px 16px; }
 .global-footprints-section .leaflet-popup-close-button { color: #f0ca7a !important; }
-.global-footprints-section .leaflet-popup-tip { background: rgba(10,25,44,.96); border: 1px solid rgba(218,174,88,.28); box-shadow: 0 8px 20px rgba(0,0,0,.28); }
+.global-footprints-section .leaflet-popup-tip { background: #0b1b2f !important; border: 1px solid rgba(218,174,88,.28); box-shadow: 0 8px 20px rgba(0,0,0,.28); }
+.global-footprints-section .leaflet-popup-content strong { color: #d9ad5f !important; }
 @media (max-width: 991px) {
   .global-footprints-layout { grid-template-columns: 1fr; }
   .home-map-details { height: auto; max-height: 470px; }
