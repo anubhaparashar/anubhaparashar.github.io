@@ -692,15 +692,16 @@
       .story-quote { font-size: 1.15rem; }
     }
   </style>
+  <link rel="stylesheet" href="css/experience-premium.css?v=20260716">
 </head>
 
-<body class="blog_version">
+<body class="blog_version experience-page">
 
 <!--================ Header (injected by site-components.js) =================-->
 <div id="site-header"></div>
 
 <!-- ══════════════════ HERO ══════════════════ -->
-<section class="exp-hero">
+<section class="exp-hero" id="experience-hero">
   <div class="exp-particles">
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
@@ -749,8 +750,16 @@
   </div>
 </section>
 
+<nav class="experience-section-nav" aria-label="Experience sections">
+  <div class="page-container">
+    <a class="nav-link active" href="#experience-hero">Overview</a>
+    <a class="nav-link" href="#work-experience">Work Experience</a>
+    <a class="nav-link" href="#story-section">Story</a>
+  </div>
+</nav>
+
 <!-- ══════════════════ TIMELINE ══════════════════ -->
-<section class="timeline-section">
+<section class="timeline-section" id="work-experience">
   <div class="container">
     <h2 class="tl-heading">Work Experience</h2>
     <div class="timeline">
@@ -1335,78 +1344,76 @@
 <script src="js/site-components.js?v=hf-icon-20260716"></script>
 
 <script>
-  /* ── Animated counters ── */
-  var counters = document.querySelectorAll('.exp-stat-num');
-  var fired = false;
-  function runCounters() {
-    counters.forEach(function(el) {
-      var target = parseInt(el.getAttribute('data-target'), 10);
-      var suffix = el.getAttribute('data-suffix') || '';
-      var step = Math.max(1, Math.ceil(target / 45));
-      var cur = 0;
-      var t = setInterval(function() {
-        cur = Math.min(cur + step, target);
-        el.textContent = cur + suffix;
-        if (cur >= target) clearInterval(t);
-      }, 28);
-    });
-  }
-  var heroObs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting && !fired) { fired = true; runCounters(); }
-    });
-  });
-  heroObs.observe(document.querySelector('.exp-stats'));
+(function () {
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ── Scroll-reveal cards ── */
-  var cards = document.querySelectorAll('.tl-card');
-  var cardObs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        cardObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  cards.forEach(function(c) { cardObs.observe(c); });
-
-  /* Reusable experience accordions */
-  function toggleExperiencePanel(btn) {
-    var panel = document.getElementById(btn.getAttribute('aria-controls'));
-    if (!panel) return;
-    var expanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!expanded));
-    if (!expanded) {
-      panel.hidden = false;
-      if (panel.animate) {
-        panel.animate([
-          { opacity: 0, transform: 'translateY(-6px)' },
-          { opacity: 1, transform: 'translateY(0)' }
-        ], { duration: 220, easing: 'ease-out' });
-      }
-    } else if (panel.animate) {
-      var closing = panel.animate([
-        { opacity: 1, transform: 'translateY(0)' },
-        { opacity: 0, transform: 'translateY(-6px)' }
-      ], { duration: 160, easing: 'ease-in' });
-      closing.onfinish = function() { panel.hidden = true; };
-    } else {
-      panel.hidden = true;
+  function observeOnce(target, callback, options) {
+    if (!target) return;
+    if (!('IntersectionObserver' in window)) {
+      callback(target);
+      return;
     }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          callback(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options || { threshold: 0.12 });
+
+    observer.observe(target);
   }
 
-  document.querySelectorAll('.exp-toggle').forEach(function(btn) {
-    btn.addEventListener('click', function() { toggleExperiencePanel(btn); });
-  });
+  function runCounters() {
+    var counters = document.querySelectorAll('.exp-stat-num');
 
-  /* ── Compact, reusable skill groups ── */
+    counters.forEach(function (el) {
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      if (!isFinite(target)) return;
+
+      var suffix = el.getAttribute('data-suffix') || '';
+
+      if (prefersReducedMotion || !window.requestAnimationFrame) {
+        el.textContent = target + suffix;
+        return;
+      }
+
+      var startedAt = null;
+      var duration = 900;
+
+      function tick(timestamp) {
+        if (!startedAt) startedAt = timestamp;
+        var progress = Math.min((timestamp - startedAt) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+
+        if (progress < 1) {
+          window.requestAnimationFrame(tick);
+        } else {
+          el.textContent = target + suffix;
+        }
+      }
+
+      window.requestAnimationFrame(tick);
+    });
+  }
+
+  var countersFired = false;
+  observeOnce(document.querySelector('.exp-stats'), function () {
+    if (countersFired) return;
+    countersFired = true;
+    runCounters();
+  }, { threshold: 0.35 });
+
   function initialiseSkillGroups() {
     var groups = document.querySelectorAll('.skill-tags');
 
-    groups.forEach(function(group, groupIndex) {
+    groups.forEach(function (group, groupIndex) {
       if (group.classList.contains('skill-tags-extra') || group.classList.contains('skill-tags-static') || group.classList.contains('skill-tags-source')) return;
 
-      var skills = Array.prototype.filter.call(group.children, function(child) {
+      var skills = Array.prototype.filter.call(group.children, function (child) {
         return child.classList.contains('skill-tag');
       });
       if (skills.length <= 5) return;
@@ -1418,7 +1425,7 @@
       extraSkills.id = extraId;
       extraSkills.hidden = true;
 
-      skills.slice(5).forEach(function(skill) {
+      skills.slice(5).forEach(function (skill) {
         extraSkills.appendChild(skill);
       });
 
@@ -1431,7 +1438,7 @@
         '<span>+ ' + hiddenCount + ' More Skills</span>' +
         '<i class="fa fa-chevron-down skill-toggle-chevron" aria-hidden="true"></i>';
 
-      toggle.addEventListener('click', function() {
+      toggle.addEventListener('click', function () {
         var expanded = toggle.getAttribute('aria-expanded') === 'true';
         toggle.setAttribute('aria-expanded', String(!expanded));
         extraSkills.hidden = expanded;
@@ -1444,25 +1451,174 @@
       toggle.insertAdjacentElement('afterend', extraSkills);
     });
   }
-  initialiseSkillGroups();
 
-  /* ── Story section fade-in ── */
-  var story = document.getElementById('story-section');
-  story.style.opacity = '0';
-  story.style.transform = 'translateY(30px)';
-  story.style.transition = 'opacity .7s ease, transform .7s ease';
-  var storyObs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        story.style.opacity = '1';
-        story.style.transform = 'translateY(0)';
-        storyObs.disconnect();
-      }
+  function revealOpenPanelContent(panel) {
+    panel.querySelectorAll('.reveal').forEach(function (item) {
+      item.classList.add('is-visible');
     });
-  }, { threshold: 0.1 });
-  storyObs.observe(story);
-</script>
+  }
 
+  function toggleExperiencePanel(btn) {
+    var panel = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!panel) return;
+
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+
+    if (!expanded) {
+      panel.hidden = false;
+      revealOpenPanelContent(panel);
+
+      if (!prefersReducedMotion && panel.animate) {
+        panel.animate([
+          { opacity: 0, transform: 'translateY(-6px)' },
+          { opacity: 1, transform: 'translateY(0)' }
+        ], { duration: 220, easing: 'ease-out' });
+      }
+      return;
+    }
+
+    if (!prefersReducedMotion && panel.animate) {
+      var closing = panel.animate([
+        { opacity: 1, transform: 'translateY(0)' },
+        { opacity: 0, transform: 'translateY(-6px)' }
+      ], { duration: 160, easing: 'ease-in' });
+      closing.onfinish = function () { panel.hidden = true; };
+    } else {
+      panel.hidden = true;
+    }
+  }
+
+  function initialiseAccordions() {
+    document.querySelectorAll('.exp-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () { toggleExperiencePanel(btn); });
+    });
+  }
+
+  function initialiseReveal() {
+    var revealTargets = document.querySelectorAll([
+      '.experience-section-nav',
+      '.timeline-section .tl-heading',
+      '.tl-card',
+      '.pearce-proj-item',
+      '.skill-group',
+      '.exp-story .container'
+    ].join(','));
+
+    revealTargets.forEach(function (target) {
+      target.classList.add('reveal');
+    });
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      revealTargets.forEach(function (target) {
+        target.classList.add('is-visible');
+      });
+      return;
+    }
+
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -70px 0px' });
+
+    revealTargets.forEach(function (target) {
+      revealObserver.observe(target);
+    });
+  }
+
+  function initialiseTimelineProgress() {
+    var timeline = document.querySelector('.timeline');
+    if (!timeline) return;
+
+    var ticking = false;
+
+    function update() {
+      var rect = timeline.getBoundingClientRect();
+      var viewportAnchor = window.innerHeight * 0.58;
+      var progress = (viewportAnchor - rect.top) / Math.max(rect.height, 1);
+      progress = Math.max(0, Math.min(progress, 1));
+      timeline.style.setProperty('--timeline-progress', (progress * 100).toFixed(2) + '%');
+      ticking = false;
+    }
+
+    function requestUpdate() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame ? window.requestAnimationFrame(update) : update();
+    }
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+    update();
+  }
+
+  function initialiseSectionNavigation() {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.experience-section-nav .nav-link'));
+    if (!links.length) return;
+
+    var sections = links.map(function (link) {
+      var id = link.getAttribute('href').replace('#', '');
+      return document.getElementById(id);
+    }).filter(Boolean);
+
+    function setActive(id) {
+      links.forEach(function (link) {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+
+    var scrollTicking = false;
+    function updateFromScroll() {
+      var activeId = sections[0] && sections[0].id;
+      var activationLine = Math.min(window.innerHeight * 0.42, 360);
+
+      sections.forEach(function (section) {
+        if (section.getBoundingClientRect().top <= activationLine) {
+          activeId = section.id;
+        }
+      });
+
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 8) {
+        activeId = sections[sections.length - 1] && sections[sections.length - 1].id;
+      }
+
+      if (activeId) setActive(activeId);
+      scrollTicking = false;
+    }
+
+    function requestScrollUpdate() {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      window.requestAnimationFrame ? window.requestAnimationFrame(updateFromScroll) : updateFromScroll();
+    }
+
+    window.addEventListener('scroll', requestScrollUpdate, { passive: true });
+    window.addEventListener('resize', requestScrollUpdate);
+
+    if ('IntersectionObserver' in window) {
+      var navObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) requestScrollUpdate();
+        });
+      }, { rootMargin: '-34% 0px -54% 0px', threshold: 0.01 });
+
+      sections.forEach(function (section) { navObserver.observe(section); });
+    }
+
+    updateFromScroll();
+  }
+
+  initialiseSkillGroups();
+  initialiseAccordions();
+  initialiseReveal();
+  initialiseTimelineProgress();
+  initialiseSectionNavigation();
+})();
+</script>
 <script src="assets/js/auto-folder-gallery.js"></script>
 </body>
 </html>
