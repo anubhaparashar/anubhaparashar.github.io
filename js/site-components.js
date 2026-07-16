@@ -133,7 +133,14 @@
 
     /* Inject footer */
     var footerRoot = document.getElementById('site-footer');
-    if (footerRoot) footerRoot.innerHTML = FOOTER_HTML;
+
+    if (!footerRoot) {
+      footerRoot = document.createElement('div');
+      footerRoot.id = 'site-footer';
+      document.body.appendChild(footerRoot);
+    }
+
+    footerRoot.innerHTML = FOOTER_HTML;
 
     /* Mark active nav item */
     if (activePage) {
