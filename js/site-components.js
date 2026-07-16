@@ -111,7 +111,7 @@
     '    </div>' +
     '    <p class="footer-copy">&copy; Dr. Anubha Parashar &nbsp;&middot;&nbsp; Analytics &amp; AI Engineer</p>' +
     '    <p class="footer-views"><i class="fa fa-eye"></i> <span id="footer-view-count">—</span> page views</p>' +
-    '    <p class="footer-admin"><a href="admin-comments.html" class="admin-comments-link">Admin</a></p>' +
+    '    <p class="footer-admin"><a href="admin-comments.html" class="admin-comments-link">Admin</a> &middot; <a href="https://anubhaparashar.github.io/personal-knowledge-vault/" class="admin-comments-link">Diary</a></p>' +
     '  </div>' +
     '</footer>';
 
