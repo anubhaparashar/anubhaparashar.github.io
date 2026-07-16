@@ -273,6 +273,7 @@
   color: #fff !important;
 }
 .ficon img { width: 20px; height: 20px; object-fit: contain; filter: brightness(0) invert(1); }
+.ficon img.hf-footer-logo { width: 24px; height: 24px; object-fit: contain; filter: none; }
 .ficon-pill {
   display: inline-flex;
   align-items: center;

@@ -96,7 +96,7 @@
     '        <a href="https://www.youtube.com/channel/UCmC85DV_GWSe3scjD-PcRhg" target="_blank" class="ficon" title="YouTube" style="background:#ff0000;border-color:#ff0000;"><i class="fa fa-youtube"></i></a>' +
     '        <a href="https://in.pinterest.com/anubhaparashar1025/" target="_blank" class="ficon" title="Pinterest" style="background:#e60023;border-color:#e60023;"><i class="fa fa-pinterest"></i></a>' +
     '        <a href="https://pearce-services.com/" target="_blank" class="ficon" title="Pearce Services"><i class="fa fa-building-o"></i></a>' +
-    '        <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="ficon" title="Hugging Face"><img src="img/icons/10.png" alt="Hugging Face"></a>' +
+    '        <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="ficon" title="Hugging Face"><img src="img/icons/hugging-face.svg" alt="Hugging Face" class="hf-footer-logo"></a>' +
     '        <a href="https://anubhaparashar.blogspot.com/" target="_blank" class="ficon" title="Anubha\'s Blog" style="background:#e07b39;border-color:#e07b39;font-size:.75rem;font-weight:800;">Blog</a>' +
     '        <a href="http://cooltechnoupdates.blogspot.com/" target="_blank" class="ficon" title="Cool Tech Updates" style="background:#c0622a;border-color:#c0622a;font-size:.75rem;font-weight:800;">Tech</a>' +
     '        <a href="https://cool-computer-tricks-n-tips.blogspot.com/" target="_blank" class="ficon" title="Computer Tricks Blog" style="background:#a0522d;border-color:#a0522d;font-size:.75rem;font-weight:800;">Tips</a>' +
