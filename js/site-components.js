@@ -13,7 +13,18 @@
     'event.html': 'event',
     'blog.html': 'blog', 'social-life.html': 'blog', 'academics.html': 'blog', 'sports.html': 'blog', 'avocations.html': 'blog'
   };
-  var currentFile = window.location.pathname.split('/').pop() || '';
+  function getCurrentHtmlFile() {
+    var fileName = window.location.pathname.split('/').pop() || 'index.html';
+    try {
+      fileName = decodeURIComponent(fileName);
+    } catch (error) {
+      console.warn('[Site] Could not decode current page filename:', fileName, error);
+    }
+    if (!/\.html$/i.test(fileName)) fileName = 'index.html';
+    return fileName.toLowerCase();
+  }
+
+  var currentFile = getCurrentHtmlFile();
   var activePage  = PAGE_MAP[currentFile] || '';
 
   /* ── Header HTML ── */
@@ -149,16 +160,91 @@
 
     /* Page view counter — per-page key */
     var pageKey = currentFile || 'index.html';
-    fetch('https://api.counterapi.dev/v1/anubhaparashar.github.io/' + pageKey + '/up')
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        var v = d.count || d.value;
-        if (!v) return;
+    var counterBaseUrl = 'https://api.counterapi.dev/v1/anubhaparashar.github.io/' + encodeURIComponent(pageKey);
+
+    function toCounterNumber(value) {
+      if (typeof value === 'number' && isFinite(value)) return value;
+      if (typeof value === 'string' && value.trim() !== '') {
+        var parsed = Number(value);
+        if (isFinite(parsed)) return parsed;
+      }
+      return null;
+    }
+
+    function extractCounterValue(payload) {
+      var nestedData = payload && payload.data && payload.data.data;
+      var candidates = [
+        nestedData && nestedData.up_count,
+        nestedData && nestedData.count,
+        nestedData && nestedData.value,
+        nestedData,
+        payload && payload.data && payload.data.up_count,
+        payload && payload.data && payload.data.count,
+        payload && payload.data && payload.data.value,
+        payload && payload.up_count,
+        payload && payload.count,
+        payload && payload.value,
+        payload && payload.data
+      ];
+
+      for (var i = 0; i < candidates.length; i++) {
+        var value = toCounterNumber(candidates[i]);
+        if (value !== null) return value;
+      }
+      return null;
+    }
+
+    function fetchCounterJson(url) {
+      return fetch(url)
+        .then(function (response) {
+          return response.text().then(function (text) {
+            var payload = null;
+            try {
+              payload = text ? JSON.parse(text) : null;
+            } catch (error) {
+              var parseError = new Error('CounterAPI returned invalid JSON from ' + url);
+              parseError.cause = error;
+              parseError.status = response.status;
+              parseError.responseText = text;
+              parseError.url = url;
+              throw parseError;
+            }
+
+            if (!response.ok) {
+              var detail = payload && (payload.message || payload.error || payload.code);
+              var requestError = new Error(
+                'CounterAPI request failed with HTTP ' + response.status +
+                (response.statusText ? ' ' + response.statusText : '') +
+                (detail ? ': ' + detail : '')
+              );
+              requestError.status = response.status;
+              requestError.payload = payload;
+              requestError.url = url;
+              throw requestError;
+            }
+            return payload;
+          });
+        });
+    }
+
+    fetchCounterJson(counterBaseUrl + '/up')
+      .catch(function (error) {
+        console.warn('[CounterAPI] Increment failed for "' + pageKey + '"; trying read endpoint.', error);
+        return fetchCounterJson(counterBaseUrl);
+      })
+      .then(function (payload) {
+        var v = extractCounterValue(payload);
+        if (v === null) {
+          console.error('[CounterAPI] No page-view value found for "' + pageKey + '". Response:', payload);
+          return;
+        }
         var fmt = v >= 1000 ? (v / 1000).toFixed(1) + 'K' : v;
         var el = document.getElementById('footer-view-count');
         if (el) el.textContent = fmt;
       })
-      .catch(function () {});
+      .catch(function (error) {
+        console.error('[CounterAPI] Failed to load page views for "' + pageKey + '".', error);
+      });
   }
 
 
