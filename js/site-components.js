@@ -168,6 +168,13 @@
     /* Page view counter — per-page key */
     var pageKey = currentFile || 'index.html';
     var counterBaseUrl = 'https://api.counterapi.dev/v1/anubhaparashar.github.io/' + encodeURIComponent(pageKey);
+    var LAST_KNOWN_COUNTS = {
+      'project.html': 104,
+      'blog.html': 123
+    };
+    var COUNTER_CACHE_PREFIX = 'site-page-view-count:';
+    var COUNTER_ATTEMPT_PREFIX = 'site-page-view-increment-at:';
+    var COUNTER_TTL_MS = 24 * 60 * 60 * 1000;
 
     function toCounterNumber(value) {
       if (typeof value === 'number' && isFinite(value)) return value;
@@ -199,6 +206,46 @@
         if (value !== null) return value;
       }
       return null;
+    }
+
+    function getStorageValue(key) {
+      try {
+        return window.localStorage ? window.localStorage.getItem(key) : null;
+      } catch (error) {
+        console.warn('[CounterAPI] localStorage read failed for "' + pageKey + '".', error);
+        return null;
+      }
+    }
+
+    function setStorageValue(key, value) {
+      try {
+        if (window.localStorage) window.localStorage.setItem(key, String(value));
+      } catch (error) {
+        console.warn('[CounterAPI] localStorage write failed for "' + pageKey + '".', error);
+      }
+    }
+
+    function formatCounterValue(value) {
+      return value >= 1000 ? (value / 1000).toFixed(1) + 'K' : String(value);
+    }
+
+    function displayCounterValue(value) {
+      var el = document.getElementById('footer-view-count');
+      if (!el) return;
+      el.textContent = formatCounterValue(value);
+    }
+
+    function cachedOrSeededCount() {
+      var cached = toCounterNumber(getStorageValue(COUNTER_CACHE_PREFIX + pageKey));
+      if (cached !== null) return cached;
+      var seeded = toCounterNumber(LAST_KNOWN_COUNTS[pageKey]);
+      if (seeded !== null) return seeded;
+      return 0;
+    }
+
+    function incrementAttemptIsFresh() {
+      var lastAttempt = toCounterNumber(getStorageValue(COUNTER_ATTEMPT_PREFIX + pageKey));
+      return lastAttempt !== null && Date.now() - lastAttempt < COUNTER_TTL_MS;
     }
 
     function fetchCounterJson(url) {
@@ -234,24 +281,26 @@
         });
     }
 
-    fetchCounterJson(counterBaseUrl + '/up')
-      .catch(function (error) {
-        console.warn('[CounterAPI] Increment failed for "' + pageKey + '"; trying read endpoint.', error);
-        return fetchCounterJson(counterBaseUrl);
-      })
-      .then(function (payload) {
-        var v = extractCounterValue(payload);
-        if (v === null) {
-          console.error('[CounterAPI] No page-view value found for "' + pageKey + '". Response:', payload);
-          return;
-        }
-        var fmt = v >= 1000 ? (v / 1000).toFixed(1) + 'K' : v;
-        var el = document.getElementById('footer-view-count');
-        if (el) el.textContent = fmt;
-      })
-      .catch(function (error) {
-        console.error('[CounterAPI] Failed to load page views for "' + pageKey + '".', error);
-      });
+    var visibleCount = cachedOrSeededCount();
+    displayCounterValue(visibleCount);
+
+    if (!incrementAttemptIsFresh()) {
+      setStorageValue(COUNTER_ATTEMPT_PREFIX + pageKey, Date.now());
+      fetchCounterJson(counterBaseUrl + '/up')
+        .then(function (payload) {
+          var v = extractCounterValue(payload);
+          if (v === null) {
+            console.error('[CounterAPI] No page-view value found for "' + pageKey + '". Response:', payload);
+            return;
+          }
+          setStorageValue(COUNTER_CACHE_PREFIX + pageKey, v);
+          displayCounterValue(v);
+        })
+        .catch(function (error) {
+          console.warn('[CounterAPI] Increment failed for "' + pageKey + '"; retaining cached/seeded count.', error);
+          displayCounterValue(cachedOrSeededCount());
+        });
+    }
   }
 
 
