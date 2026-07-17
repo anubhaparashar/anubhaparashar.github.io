@@ -3846,3 +3846,89 @@ h6 {
   .premium-research-card { min-height: 0; border-radius: 22px; }
   .premium-journey-card { border-radius: 20px; padding: 22px; }
 }
+
+/* Premium visual system layer - 20260717 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-secondary);
+  font-family: "Inter", "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.72;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body :where(h1, h2, h3, h4, h5, h6) {
+  font-family: "Space Grotesk", "Manrope", "Inter", system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+body :where(section) {
+  scroll-margin-top: 104px;
+}
+
+body :where(.container) {
+  max-width: 1200px;
+}
+
+body :where(p, li, .card-overview, .evt-desc, .service-section-head p, .media-kit-subtitle) {
+  line-height: 1.72;
+}
+
+body :where(.card, .evt-card, .tl-card, .post-card, .project-card, .compact-card, .award-card, .cert-card, .ra-card, .work-card, .media-kit, .contact-form-card, .availability-card, .resource-card, .premium-card, .premium-research-card, .premium-journey-card) {
+  border-radius: 18px !important;
+  border-color: var(--border);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+}
+
+body :where(.card, .evt-card, .tl-card, .post-card, .project-card, .compact-card, .award-card, .cert-card, .ra-card, .work-card, .media-kit, .availability-card, .resource-card, .premium-card, .premium-research-card, .premium-journey-card):hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(110, 168, 254, 0.35) !important;
+}
+
+body :where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+body :where(.primary_btn, .hero-btn, .hero-cta-exp, .story-link, .story-cta, .cert-btn, .gh-link, .about-btn, .resource-btn, .kit-cta-btn, .work-btn, .contact-submit, .evt-tab-btn, .exp-toggle, .pearce-toggle, .skill-toggle, .admin-comments-link) {
+  transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease, color 220ms ease, box-shadow 220ms ease;
+}
+
+body :where(.primary_btn, .hero-btn, .hero-cta-exp, .story-link, .story-cta, .cert-btn, .gh-link, .about-btn, .resource-btn, .kit-cta-btn, .work-btn, .contact-submit, .exp-toggle, .pearce-toggle, .skill-toggle):hover {
+  transform: translateY(-2px) !important;
+}
+
+body :where(input, textarea, select, .form-control) {
+  border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+  body :where(.about-section, .research-section, .impact-bar, .contact-section, .timeline-section, .evt-section, .exp-story, .premium-research-section, .premium-journey-section) {
+    padding-block: 110px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body :where(.about-section, .research-section, .impact-bar, .contact-section, .timeline-section, .evt-section, .exp-story, .premium-research-section, .premium-journey-section) {
+    padding-block: 68px !important;
+  }
+
+  body :where(.card, .evt-card, .tl-card, .post-card, .project-card, .compact-card, .award-card, .cert-card, .ra-card, .work-card, .media-kit, .contact-form-card, .availability-card, .resource-card, .premium-card, .premium-research-card, .premium-journey-card) {
+    padding: min(28px, 6vw) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
