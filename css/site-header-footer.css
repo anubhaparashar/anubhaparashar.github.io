@@ -212,7 +212,7 @@
   overflow: hidden;
   min-height: auto;
   height: auto;
-  padding: 40px 0 24px;
+  padding: 30px 0 20px;
   background: var(--background, #070A10);
   border-top: 1px solid var(--border, rgba(255, 255, 255, 0.08));
   color: var(--text-secondary, #9AA6B6);
@@ -293,12 +293,12 @@
 
 .site-footer__group:first-child,
 .footer-icon-group:first-child {
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 
 .site-footer__group:nth-child(2),
 .footer-icon-group:nth-child(2) {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .site-footer__group-label,
@@ -326,7 +326,7 @@
 
 .site-footer__emails,
 .footer-emails {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .site-footer .ficon {
@@ -422,7 +422,7 @@
   gap: 10px 18px;
   border-top: 1px solid var(--border, rgba(255, 255, 255, 0.08));
   margin-top: 0;
-  padding-top: 22px;
+  padding-top: 18px;
 }
 
 .site-footer__views,
@@ -466,7 +466,7 @@
 
 @media (max-width: 768px) {
   .site-footer {
-    padding: 40px 0 24px;
+    padding: 30px 0 20px;
   }
 
   .site-footer__inner {
