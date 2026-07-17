@@ -2810,6 +2810,79 @@ h6 {
   .testi_item:hover {
     box-shadow: 0px 10px 20px 0px rgba(118, 85, 225, 0.1); }
 
+.testimonial_area {
+  background: var(--background);
+  color: var(--text-primary); }
+  .testimonial_area .main_title {
+    margin-bottom: 58px; }
+  .testimonial_area .main_title h2 {
+    color: var(--text-primary);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 0; }
+  .testimonial_area .testi_item {
+    background: rgba(14, 19, 29, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 18px;
+    box-shadow: none;
+    color: var(--text-primary);
+    overflow: hidden;
+    position: relative; }
+    .testimonial_area .testi_item:before {
+      background: linear-gradient(to bottom, rgba(110, 168, 254, 0.55), rgba(255, 255, 255, 0.08));
+      content: "";
+      height: calc(100% - 56px);
+      left: 24px;
+      position: absolute;
+      top: 28px;
+      width: 2px; }
+    .testimonial_area .testi_item:hover {
+      border-color: rgba(110, 168, 254, 0.30);
+      box-shadow: none; }
+    .testimonial_area .testi_item img {
+      border-radius: 12px;
+      display: block;
+      height: auto;
+      max-width: min(190px, 100%); }
+    .testimonial_area .testi_item .testi_text h4 {
+      color: var(--text-primary);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: none; }
+    .testimonial_area .testi_item .testi_text h5 {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.45;
+      margin-bottom: 8px; }
+    .testimonial_area .testi_item .testi_text h6 {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      margin-bottom: 18px; }
+    .testimonial_area .testi_item .testi_text p {
+      color: #B5C0D0;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 0; }
+  @media (max-width: 991px) {
+    .testimonial_area .main_title {
+      margin-bottom: 42px; }
+    .testimonial_area .testi_item img {
+      max-width: 180px; } }
+  @media (max-width: 575px) {
+    .testimonial_area .testi_item {
+      padding-left: 28px;
+      padding-right: 20px; }
+      .testimonial_area .testi_item:before {
+        height: calc(100% - 44px);
+        left: 15px;
+        top: 22px; }
+    .testimonial_area .testi_item img {
+      max-width: 154px; }
+    .testimonial_area .testi_item .testi_text {
+      margin-top: 32px; } }
 /* End Testimonial Area css
 ============================================================================================ */
 /* Start Newsletter Area css

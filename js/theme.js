@@ -25,11 +25,16 @@
 	/*  MailChimp Slider
     /*----------------------------------------------------*/
 	function mailChimp() {
-		$('#mc_embed_signup').find('form').ajaxChimp();
+		var $form = $('#mc_embed_signup').find('form');
+		if ($form.length && $.fn.ajaxChimp) {
+			$form.ajaxChimp();
+		}
 	}
 	mailChimp();
 
-	$('select').niceSelect();
+	if ($.fn.niceSelect) {
+		$('select').niceSelect();
+	}
 	/* ---------------------------------------------
             Isotope js Starts
          --------------------------------------------- */
