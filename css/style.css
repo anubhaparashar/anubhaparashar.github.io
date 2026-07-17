@@ -2828,7 +2828,7 @@ h6 {
     border-radius: 18px;
     box-shadow: none;
     color: var(--text-primary);
-    overflow: hidden;
+    overflow: visible;
     position: relative; }
     .testimonial_area .testi_item:before {
       background: linear-gradient(to bottom, rgba(110, 168, 254, 0.55), rgba(255, 255, 255, 0.08));
@@ -2866,6 +2866,22 @@ h6 {
       font-size: 1rem;
       line-height: 1.7;
       margin-bottom: 0; }
+  .testimonial_area .testi_slider .owl-stage {
+    align-items: stretch;
+    display: flex; }
+  .testimonial_area .testi_slider .owl-item {
+    align-items: stretch;
+    display: flex;
+    height: auto; }
+  .testimonial_area .testi_slider .owl-item > .testi_item {
+    align-items: stretch;
+    display: flex;
+    height: 100%;
+    width: 100%; }
+  .testimonial_area .testi_slider .owl-item > .testi_item > .row {
+    align-items: center;
+    flex: 1 1 auto;
+    width: 100%; }
   @media (max-width: 991px) {
     .testimonial_area .main_title {
       margin-bottom: 42px; }
