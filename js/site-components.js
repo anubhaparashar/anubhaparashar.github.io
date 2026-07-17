@@ -84,8 +84,8 @@
     '  <div class="site-footer__inner">' +
     '    <a href="#" class="site-footer__back-top back-top" aria-label="Back to top"><i class="fa fa-chevron-up"></i></a>' +
     '    <div class="site-footer__content">' +
-    '      <div class="footer-icon-group site-footer__group">' +
-    '        <p class="footer-icon-group-label site-footer__group-label">Social</p>' +
+    '      <div class="footer-icon-group site-footer__group" role="group" aria-label="Social links">' +
+    '        <p class="footer-icon-group-label site-footer__group-label" aria-hidden="true">&nbsp;</p>' +
     '        <div class="footer-icons site-footer__icons">' +
     '          <a href="https://www.linkedin.com/in/anubhaparashar/" target="_blank" class="ficon" title="LinkedIn"><i class="fa fa-linkedin"></i></a>' +
     '          <a href="https://github.com/anubhaparashar" target="_blank" class="ficon" title="GitHub @anubhaparashar"><i class="fa fa-github"></i></a>' +
@@ -102,8 +102,8 @@
     '          <a href="https://cool-computer-tricks-n-tips.blogspot.com/" target="_blank" class="ficon ficon-text" title="Computer Tricks Blog">Tips</a>' +
     '        </div>' +
     '      </div>' +
-    '      <div class="footer-icon-group site-footer__group">' +
-    '        <p class="footer-icon-group-label site-footer__group-label">Academic Profiles</p>' +
+    '      <div class="footer-icon-group site-footer__group" role="group" aria-label="Academic profiles">' +
+    '        <p class="footer-icon-group-label site-footer__group-label" aria-hidden="true">&nbsp;</p>' +
     '        <div class="footer-icons site-footer__icons">' +
     '          <a href="https://scholar.google.com/citations?user=hrwpIAgAAAAJ&hl=en" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/scholar.svg" alt="Google Scholar"> Scholar</a>' +
     '          <a href="https://www.scopus.com/authid/detail.uri?authorId=57191284351" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/scopus.svg" alt="Scopus"> Scopus</a>' +
