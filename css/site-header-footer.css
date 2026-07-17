@@ -212,7 +212,7 @@
   overflow: hidden;
   min-height: auto;
   height: auto;
-  padding: 30px 0 20px;
+  padding: 20px 0 20px;
   background: var(--background, #070A10);
   border-top: 1px solid var(--border, rgba(255, 255, 255, 0.08));
   color: var(--text-secondary, #9AA6B6);
@@ -293,7 +293,7 @@
 
 .site-footer__group:first-child,
 .footer-icon-group:first-child {
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 .site-footer__group:nth-child(2),
@@ -466,7 +466,7 @@
 
 @media (max-width: 768px) {
   .site-footer {
-    padding: 30px 0 20px;
+    padding: 20px 0 20px;
   }
 
   .site-footer__inner {
