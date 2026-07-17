@@ -96,7 +96,7 @@
     '          <a href="https://www.youtube.com/channel/UCmC85DV_GWSe3scjD-PcRhg" target="_blank" class="ficon" title="YouTube"><i class="fa fa-youtube"></i></a>' +
     '          <a href="https://in.pinterest.com/anubhaparashar1025/" target="_blank" class="ficon" title="Pinterest"><i class="fa fa-pinterest"></i></a>' +
     '          <a href="https://pearce-services.com/" target="_blank" class="ficon" title="Pearce Services"><i class="fa fa-building-o"></i></a>' +
-    '          <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="ficon ficon-text" title="Hugging Face Hub"><img src="img/icons/hugging-face.svg" alt="" aria-hidden="true" width="18" height="18" style="width:18px;height:18px;object-fit:contain;flex:0 0 auto;margin-right:7px;vertical-align:middle;">Hugging Face Hub</a>' +
+    '          <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="ficon" title="Hugging Face Hub" aria-label="Hugging Face Hub"><img src="assets/icons/huggingface-white.svg" alt="" aria-hidden="true" width="18" height="18" class="hf-footer-icon"></a>' +
     '          <a href="https://anubhaparashar.blogspot.com/" target="_blank" class="ficon ficon-text" title="Anubha\'s Blog">Blog</a>' +
     '          <a href="http://cooltechnoupdates.blogspot.com/" target="_blank" class="ficon ficon-text" title="Cool Tech Updates">Tech</a>' +
     '          <a href="https://cool-computer-tricks-n-tips.blogspot.com/" target="_blank" class="ficon ficon-text" title="Computer Tricks Blog">Tips</a>' +

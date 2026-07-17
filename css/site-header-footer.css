@@ -261,11 +261,13 @@
 }
 
 .site-footer__content {
-  width: 100%;
+  width: min(100%, 1060px);
+  margin-inline: auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
   gap: 24px;
-  padding-right: 64px;
+  text-align: center;
 }
 
 .site-footer__group,
@@ -281,7 +283,12 @@
 
 .site-footer__group,
 .footer-icon-group {
+  width: 100%;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .site-footer__group-label,
@@ -292,7 +299,7 @@
   color: var(--text-secondary, #9AA6B6) !important;
   opacity: 1;
   margin: 0 0 12px;
-  text-align: left;
+  text-align: center;
 }
 
 .site-footer__icons,
@@ -302,8 +309,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   margin: 0;
 }
 
@@ -350,11 +357,18 @@
   transition: background .2s, border-color .2s, transform .2s;
 }
 
+.site-footer .ficon img,
 .site-footer .ficon-pill img {
   width: 18px;
   height: 18px;
+  display: block;
   object-fit: contain;
   filter: brightness(0) invert(1);
+}
+
+.site-footer .ficon img.hf-footer-icon {
+  filter: none !important;
+  opacity: 0.96;
 }
 
 .site-footer .footer-email-link {
@@ -458,20 +472,20 @@
 
   .site-footer__content,
   .site-footer__meta {
-    justify-content: flex-start;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
   }
 
   .site-footer__icons,
   .footer-icons,
   .site-footer__emails,
   .footer-emails {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .site-footer__meta {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     min-height: 42px;
     padding-right: 56px;
   }
@@ -501,6 +515,6 @@
   .site-footer .ficon-pill,
   .site-footer .footer-email-link {
     width: auto;
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
