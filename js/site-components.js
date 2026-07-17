@@ -170,6 +170,24 @@
     /* Page view counter - per-page key */
     var pageKey = currentFile || 'index.html';
     var counterBaseUrl = 'https://api.counterapi.dev/v1/anubhaparashar.github.io/' + encodeURIComponent(pageKey);
+    var VERIFIED_LAST_KNOWN_COUNTS = {
+      'index.html': 987,
+      'publication.html': 342,
+      'project.html': 104,
+      'blog.html': 123,
+      'event.html': 119,
+      'education.html': 393,
+      'experience.html': 333,
+      'award.html': 179,
+      'academics.html': 595,
+      'social-life.html': 77,
+      'sports.html': 190,
+      'avocations.html': 174,
+      'grant.html': 34,
+      'admin-comments.html': 9,
+      'leadership-activities.html': 165,
+      'connection.html': 307
+    };
     var COUNTER_CACHE_PREFIX = 'site-page-view-count:';
     var COUNTER_SUCCESS_PREFIX = 'site-page-view-increment-success-at:';
     var COUNTER_LEGACY_ATTEMPT_PREFIX = 'site-page-view-increment-at:';
@@ -255,8 +273,21 @@
       return toCounterNumber(getStorageValue(cacheKey));
     }
 
+    function verifiedLastKnownCount() {
+      return toCounterNumber(VERIFIED_LAST_KNOWN_COUNTS[pageKey]);
+    }
+
+    function availableCount() {
+      var cached = cachedCount();
+      return cached !== null ? cached : verifiedLastKnownCount();
+    }
+
     function displayCachedCount() {
       displayCounterValue(cachedCount());
+    }
+
+    function displayAvailableCount() {
+      displayCounterValue(availableCount());
     }
 
     function cacheCounterValue(value) {
@@ -388,11 +419,11 @@
         .catch(function (error) {
           rememberRequestFailure();
           console.warn('[CounterAPI] Increment failed for "' + pageKey + '"; retaining cached count.', error);
-          displayCachedCount();
+          displayAvailableCount();
         });
     }
 
-    displayCachedCount();
+    displayAvailableCount();
     removeStorageValue(legacyAttemptKey);
 
     if (!requestFailureIsFresh()) {
@@ -410,8 +441,8 @@
             return;
           }
           rememberRequestFailure();
-          console.warn('[CounterAPI] Read failed for "' + pageKey + '"; retaining cached count.', error);
-          displayCachedCount();
+          console.warn('[CounterAPI] Read failed for "' + pageKey + '"; retaining cached or verified last-known count.', error);
+          displayAvailableCount();
         });
     }
   }
