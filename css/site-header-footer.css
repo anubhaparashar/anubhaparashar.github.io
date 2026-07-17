@@ -229,7 +229,7 @@
   max-width: 1200px;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  grid-template-columns: 1fr;
   gap: 34px 52px;
   align-items: start;
 }
@@ -254,49 +254,6 @@
   background: var(--accent-soft, rgba(110, 168, 254, 0.12)) !important;
   border-color: rgba(110, 168, 254, 0.45) !important;
   transform: translateY(-2px);
-}
-.site-footer__identity {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  min-width: 0;
-}
-.site-footer__logo {
-  display: block;
-  width: 96px;
-  height: 96px;
-  object-fit: cover;
-  border-radius: 2px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: transparent;
-  flex: 0 0 auto;
-}
-.site-footer__identity-text {
-  min-width: 0;
-}
-.site-footer__eyebrow {
-  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
-  color: var(--text-secondary, #9AA6B6) !important;
-  font-size: .68rem !important;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  opacity: 1 !important;
-  margin: 0 0 12px;
-  font-weight: 600 !important;
-}
-.site-footer__name {
-  margin: 0 0 6px;
-  color: var(--text-primary, #F5F7FA) !important;
-  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
-  font-size: clamp(1.18rem, 1.8vw, 1.45rem);
-  line-height: 1.15;
-  font-weight: 700;
-}
-.site-footer__subtitle {
-  margin: 0;
-  color: var(--text-secondary, #9AA6B6) !important;
-  font-size: .82rem;
-  line-height: 1.5;
 }
 
 .site-footer__group,
@@ -358,18 +315,6 @@
   font-size: .75rem;
   font-weight: 800;
 }
-.site-footer .ficon img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-}
-.site-footer .ficon img.hf-footer-logo {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  filter: none;
-}
 .site-footer .ficon-pill {
   max-width: 100%;
   display: inline-flex;
@@ -426,10 +371,8 @@
   border-top: 1px solid var(--border, rgba(255, 255, 255, 0.08));
   padding-top: 20px;
 }
-.site-footer__copyright,
 .site-footer__views,
 .site-footer__links,
-.footer-copy,
 .footer-views,
 .footer-admin {
   margin: 0;
@@ -474,14 +417,10 @@
   .site-footer__inner {
     width: min(100% - 32px, 1200px);
   }
-  .site-footer__identity,
   .site-footer__content,
   .site-footer__meta {
     justify-content: center;
     text-align: center;
-  }
-  .site-footer__identity {
-    flex-direction: column;
   }
   .site-footer__icons,
   .footer-icons,
@@ -513,7 +452,8 @@
   .site-footer .footer-email-link {
     width: min(100%, calc(100vw - 48px));
     justify-content: center;
-  }  .site-footer .ficon {
+  }
+  .site-footer .ficon {
     width: 40px;
     height: 40px;
   }

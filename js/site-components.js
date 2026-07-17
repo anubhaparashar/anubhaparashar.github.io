@@ -83,14 +83,6 @@
     '<footer class="site-footer exp-footer">' +
     '  <div class="site-footer__inner">' +
     '    <a href="#" class="site-footer__back-top back-top" aria-label="Back to top"><i class="fa fa-chevron-up"></i></a>' +
-    '    <div class="site-footer__identity">' +
-    '      <img src="files/1.%20Home/pic.jpg" alt="Dr. Anubha Parashar" class="site-footer__logo" width="96" height="96" loading="lazy" decoding="async">' +
-    '      <div class="site-footer__identity-text">' +
-    '        <h5 class="site-footer__eyebrow">Connect with Anubha</h5>' +
-    '        <p class="site-footer__name">Dr. Anubha Parashar</p>' +
-    '        <p class="site-footer__subtitle">Analytics &amp; AI Engineer</p>' +
-    '      </div>' +
-    '    </div>' +
     '    <div class="site-footer__content">' +
     '      <div class="footer-icon-group site-footer__group">' +
     '        <p class="footer-icon-group-label site-footer__group-label">Social</p>' +
@@ -104,7 +96,7 @@
     '          <a href="https://www.youtube.com/channel/UCmC85DV_GWSe3scjD-PcRhg" target="_blank" class="ficon" title="YouTube"><i class="fa fa-youtube"></i></a>' +
     '          <a href="https://in.pinterest.com/anubhaparashar1025/" target="_blank" class="ficon" title="Pinterest"><i class="fa fa-pinterest"></i></a>' +
     '          <a href="https://pearce-services.com/" target="_blank" class="ficon" title="Pearce Services"><i class="fa fa-building-o"></i></a>' +
-    '          <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="ficon" title="Hugging Face"><img src="img/icons/hugging-face.svg" alt="Hugging Face" class="hf-footer-logo"></a>' +
+    '          <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="ficon ficon-text" title="Hugging Face Hub">Hugging Face Hub</a>' +
     '          <a href="https://anubhaparashar.blogspot.com/" target="_blank" class="ficon ficon-text" title="Anubha\'s Blog">Blog</a>' +
     '          <a href="http://cooltechnoupdates.blogspot.com/" target="_blank" class="ficon ficon-text" title="Cool Tech Updates">Tech</a>' +
     '          <a href="https://cool-computer-tricks-n-tips.blogspot.com/" target="_blank" class="ficon ficon-text" title="Computer Tricks Blog">Tips</a>' +
@@ -130,7 +122,6 @@
     '      </div>' +
     '    </div>' +
     '    <div class="site-footer__meta">' +
-    '      <p class="footer-copy site-footer__copyright">&copy; Dr. Anubha Parashar &nbsp;&middot;&nbsp; Analytics &amp; AI Engineer</p>' +
     '      <p class="footer-views site-footer__views"><i class="fa fa-eye"></i> <span id="footer-view-count">&mdash;</span> page views</p>' +
     '      <p class="footer-admin site-footer__links"><a href="admin-comments.html" class="admin-comments-link">Admin</a> &middot; <a href="https://anubhaparashar.github.io/personal-knowledge-vault/" class="admin-comments-link">Diary</a></p>' +
     '    </div>' +
