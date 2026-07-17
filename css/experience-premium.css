@@ -23,11 +23,9 @@ body.experience-page button:focus-visible {
   box-shadow: none !important;
 }
 
-body.experience-page .page-container,
 body.experience-page .exp-hero .container,
 body.experience-page .timeline-section > .container,
-body.experience-page .exp-story > .container,
-body.experience-page .exp-footer > .container {
+body.experience-page .exp-story > .container {
   width: min(1200px, calc(100% - 40px));
   max-width: 1200px;
   margin-inline: auto;
@@ -285,61 +283,6 @@ body.experience-page .header_area .icon-bar {
   transform: translateY(-2px) !important;
 }
 
-.experience-section-nav {
-  position: sticky;
-  top: var(--experience-header-height);
-  z-index: 100;
-  background: rgba(7, 10, 16, 0.9);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(14px);
-}
-
-.experience-section-nav .page-container {
-  display: flex;
-  justify-content: center;
-  gap: clamp(8px, 2vw, 22px);
-  padding-block: 12px;
-}
-
-.experience-section-nav .nav-link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  min-height: 38px;
-  padding: 0 8px !important;
-  color: var(--text-secondary);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: color 220ms ease;
-}
-
-.experience-section-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  right: 8px;
-  bottom: 2px;
-  left: 8px;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 999px;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 220ms ease;
-}
-
-.experience-section-nav .nav-link:hover,
-.experience-section-nav .nav-link.active {
-  color: var(--text-primary);
-}
-
-.experience-section-nav .nav-link:hover::after,
-.experience-section-nav .nav-link.active::after {
-  transform: scaleX(1);
-}
 
 .timeline-section {
   background: var(--background) !important;
@@ -693,40 +636,6 @@ body.experience-page .header_area .icon-bar {
   margin-bottom: 46px !important;
 }
 
-body.experience-page .exp-footer {
-  background: var(--background) !important;
-  border-top: 1px solid var(--border);
-  color: var(--text-secondary);
-}
-
-body.experience-page .exp-footer h5,
-body.experience-page .footer-copy,
-body.experience-page .footer-views,
-body.experience-page .footer-admin {
-  color: var(--text-secondary) !important;
-  opacity: 1 !important;
-}
-
-body.experience-page .exp-footer .back-top,
-body.experience-page .ficon,
-body.experience-page .ficon-pill,
-body.experience-page .footer-email-link,
-body.experience-page .admin-comments-link {
-  background: var(--surface) !important;
-  border: 1px solid var(--border) !important;
-  color: var(--text-primary) !important;
-  box-shadow: none !important;
-}
-
-body.experience-page .ficon:hover,
-body.experience-page .ficon-pill:hover,
-body.experience-page .footer-email-link:hover,
-body.experience-page .admin-comments-link:hover,
-body.experience-page .exp-footer .back-top:hover {
-  background: var(--accent-soft) !important;
-  border-color: rgba(110, 168, 254, 0.45) !important;
-  color: var(--text-primary) !important;
-}
 
 .reveal {
   opacity: 0 !important;
@@ -808,17 +717,6 @@ body.experience-page .exp-footer .back-top:hover {
     gap: 12px !important;
   }
 
-  .experience-section-nav {
-    top: var(--experience-header-height);
-    overflow-x: auto;
-  }
-
-  .experience-section-nav .page-container {
-    width: max-content;
-    min-width: calc(100% - 32px);
-    justify-content: flex-start;
-    padding-inline: 16px;
-  }
 
   .tl-heading {
     margin-bottom: 48px !important;
@@ -859,11 +757,9 @@ body.experience-page .exp-footer .back-top:hover {
 }
 
 @media (max-width: 480px) {
-  body.experience-page .page-container,
   body.experience-page .exp-hero .container,
   body.experience-page .timeline-section > .container,
-  body.experience-page .exp-story > .container,
-  body.experience-page .exp-footer > .container {
+  body.experience-page .exp-story > .container {
     width: min(100% - 32px, 1200px);
   }
 

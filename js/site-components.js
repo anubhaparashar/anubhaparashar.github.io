@@ -80,49 +80,60 @@
 
   /* ── Footer HTML ── */
   var FOOTER_HTML =
-    '<footer class="exp-footer">' +
-    '  <div class="container">' +
-    '    <a href="#" class="back-top"><i class="fa fa-chevron-up"></i></a>' +
-    '    <h5>Connect with Anubha</h5>' +
-    '    <div class="footer-icon-group">' +
-    '      <p class="footer-icon-group-label">Social</p>' +
-    '      <div class="footer-icons">' +
-    '        <a href="https://www.linkedin.com/in/anubhaparashar/" target="_blank" class="ficon" title="LinkedIn" style="background:#0077b5;border-color:#0077b5;"><i class="fa fa-linkedin"></i></a>' +
-    '        <a href="https://github.com/anubhaparashar" target="_blank" class="ficon" title="GitHub @anubhaparashar"><i class="fa fa-github"></i></a>' +
-    '        <a href="https://github.com/dranubhaparashar" target="_blank" class="ficon" title="GitHub @dranubhaparashar"><i class="fa fa-github"></i></a>' +
-    '        <a href="https://twitter.com/parashar_anubha" target="_blank" class="ficon" title="Twitter" style="background:#1da1f2;border-color:#1da1f2;"><i class="fa fa-twitter"></i></a>' +
-    '        <a href="https://www.facebook.com/anubha.parashar/" target="_blank" class="ficon" title="Facebook" style="background:#1877f2;border-color:#1877f2;"><i class="fa fa-facebook"></i></a>' +
-    '        <a href="https://www.instagram.com/anubha_parashar/" target="_blank" class="ficon" title="Instagram" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-color:#e6683c;"><i class="fa fa-instagram"></i></a>' +
-    '        <a href="https://www.youtube.com/channel/UCmC85DV_GWSe3scjD-PcRhg" target="_blank" class="ficon" title="YouTube" style="background:#ff0000;border-color:#ff0000;"><i class="fa fa-youtube"></i></a>' +
-    '        <a href="https://in.pinterest.com/anubhaparashar1025/" target="_blank" class="ficon" title="Pinterest" style="background:#e60023;border-color:#e60023;"><i class="fa fa-pinterest"></i></a>' +
-    '        <a href="https://pearce-services.com/" target="_blank" class="ficon" title="Pearce Services"><i class="fa fa-building-o"></i></a>' +
-    '        <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="ficon" title="Hugging Face"><img src="img/icons/hugging-face.svg" alt="Hugging Face" class="hf-footer-logo"></a>' +
-    '        <a href="https://anubhaparashar.blogspot.com/" target="_blank" class="ficon" title="Anubha\'s Blog" style="background:#e07b39;border-color:#e07b39;font-size:.75rem;font-weight:800;">Blog</a>' +
-    '        <a href="http://cooltechnoupdates.blogspot.com/" target="_blank" class="ficon" title="Cool Tech Updates" style="background:#c0622a;border-color:#c0622a;font-size:.75rem;font-weight:800;">Tech</a>' +
-    '        <a href="https://cool-computer-tricks-n-tips.blogspot.com/" target="_blank" class="ficon" title="Computer Tricks Blog" style="background:#a0522d;border-color:#a0522d;font-size:.75rem;font-weight:800;">Tips</a>' +
+    '<footer class="site-footer exp-footer">' +
+    '  <div class="site-footer__inner">' +
+    '    <a href="#" class="site-footer__back-top back-top" aria-label="Back to top"><i class="fa fa-chevron-up"></i></a>' +
+    '    <div class="site-footer__identity">' +
+    '      <img src="files/1.%20Home/pic.jpg" alt="Dr. Anubha Parashar" class="site-footer__logo" width="96" height="96" loading="lazy" decoding="async">' +
+    '      <div class="site-footer__identity-text">' +
+    '        <h5 class="site-footer__eyebrow">Connect with Anubha</h5>' +
+    '        <p class="site-footer__name">Dr. Anubha Parashar</p>' +
+    '        <p class="site-footer__subtitle">Analytics &amp; AI Engineer</p>' +
     '      </div>' +
     '    </div>' +
-    '    <div class="footer-icon-group">' +
-    '      <p class="footer-icon-group-label">Academic Profiles</p>' +
-    '      <div class="footer-icons">' +
-    '        <a href="https://scholar.google.com/citations?user=hrwpIAgAAAAJ&hl=en" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/scholar.svg" alt="Google Scholar"> Scholar</a>' +
-    '        <a href="https://www.scopus.com/authid/detail.uri?authorId=57191284351" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/scopus.svg" alt="Scopus"> Scopus</a>' +
-    '        <a href="https://orcid.org/my-orcid?orcid=0000-0002-8474-3623" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/orcid.svg" alt="ORCID"> ORCID</a>' +
-    '        <a href="https://www.webofscience.com/wos/author/record/L-7545-2017" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/wos.svg" alt="Web of Science"> WoS</a>' +
-    '        <a href="https://www.semanticscholar.org/author/Anubha-Parashar/2714843" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/semantic.svg" alt="Semantic Scholar"> Semantic</a>' +
-    '        <a href="https://www.researchgate.net/profile/Anubha-Parashar" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/researchgate.svg" alt="ResearchGate"> ResearchGate</a>' +
-    '        <a href="https://muj.academia.edu/AnubhaParashar" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/academia.svg" alt="Academia"> Academia</a>' +
-    '        <a href="https://medium.com/@anubhaparashar1025" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/medium.svg" alt="Medium"> Medium</a>' +
+    '    <div class="site-footer__content">' +
+    '      <div class="footer-icon-group site-footer__group">' +
+    '        <p class="footer-icon-group-label site-footer__group-label">Social</p>' +
+    '        <div class="footer-icons site-footer__icons">' +
+    '          <a href="https://www.linkedin.com/in/anubhaparashar/" target="_blank" class="ficon" title="LinkedIn"><i class="fa fa-linkedin"></i></a>' +
+    '          <a href="https://github.com/anubhaparashar" target="_blank" class="ficon" title="GitHub @anubhaparashar"><i class="fa fa-github"></i></a>' +
+    '          <a href="https://github.com/dranubhaparashar" target="_blank" class="ficon" title="GitHub @dranubhaparashar"><i class="fa fa-github"></i></a>' +
+    '          <a href="https://twitter.com/parashar_anubha" target="_blank" class="ficon" title="Twitter"><i class="fa fa-twitter"></i></a>' +
+    '          <a href="https://www.facebook.com/anubha.parashar/" target="_blank" class="ficon" title="Facebook"><i class="fa fa-facebook"></i></a>' +
+    '          <a href="https://www.instagram.com/anubha_parashar/" target="_blank" class="ficon" title="Instagram"><i class="fa fa-instagram"></i></a>' +
+    '          <a href="https://www.youtube.com/channel/UCmC85DV_GWSe3scjD-PcRhg" target="_blank" class="ficon" title="YouTube"><i class="fa fa-youtube"></i></a>' +
+    '          <a href="https://in.pinterest.com/anubhaparashar1025/" target="_blank" class="ficon" title="Pinterest"><i class="fa fa-pinterest"></i></a>' +
+    '          <a href="https://pearce-services.com/" target="_blank" class="ficon" title="Pearce Services"><i class="fa fa-building-o"></i></a>' +
+    '          <a href="https://huggingface.co/AnubhaParashar/spaces" target="_blank" class="ficon" title="Hugging Face"><img src="img/icons/hugging-face.svg" alt="Hugging Face" class="hf-footer-logo"></a>' +
+    '          <a href="https://anubhaparashar.blogspot.com/" target="_blank" class="ficon ficon-text" title="Anubha\'s Blog">Blog</a>' +
+    '          <a href="http://cooltechnoupdates.blogspot.com/" target="_blank" class="ficon ficon-text" title="Cool Tech Updates">Tech</a>' +
+    '          <a href="https://cool-computer-tricks-n-tips.blogspot.com/" target="_blank" class="ficon ficon-text" title="Computer Tricks Blog">Tips</a>' +
+    '        </div>' +
+    '      </div>' +
+    '      <div class="footer-icon-group site-footer__group">' +
+    '        <p class="footer-icon-group-label site-footer__group-label">Academic Profiles</p>' +
+    '        <div class="footer-icons site-footer__icons">' +
+    '          <a href="https://scholar.google.com/citations?user=hrwpIAgAAAAJ&hl=en" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/scholar.svg" alt="Google Scholar"> Scholar</a>' +
+    '          <a href="https://www.scopus.com/authid/detail.uri?authorId=57191284351" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/scopus.svg" alt="Scopus"> Scopus</a>' +
+    '          <a href="https://orcid.org/my-orcid?orcid=0000-0002-8474-3623" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/orcid.svg" alt="ORCID"> ORCID</a>' +
+    '          <a href="https://www.webofscience.com/wos/author/record/L-7545-2017" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/wos.svg" alt="Web of Science"> WoS</a>' +
+    '          <a href="https://www.semanticscholar.org/author/Anubha-Parashar/2714843" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/semantic.svg" alt="Semantic Scholar"> Semantic</a>' +
+    '          <a href="https://www.researchgate.net/profile/Anubha-Parashar" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/researchgate.svg" alt="ResearchGate"> ResearchGate</a>' +
+    '          <a href="https://muj.academia.edu/AnubhaParashar" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/academia.svg" alt="Academia"> Academia</a>' +
+    '          <a href="https://medium.com/@anubhaparashar1025" target="_blank" class="ficon-pill"><img src="files/1.%20Home/icons/medium.svg" alt="Medium"> Medium</a>' +
+    '        </div>' +
+    '      </div>' +
+    '      <div class="footer-emails site-footer__emails">' +
+    '        <a href="mailto:dranubhaparashar@gmail.com" class="footer-email-link"><i class="fa fa-envelope"></i> dranubhaparashar@gmail.com</a>' +
+    '        <a href="mailto:anubhaparashar1025@gmail.com" class="footer-email-link"><i class="fa fa-envelope-o"></i> anubhaparashar1025@gmail.com</a>' +
+    '        <a href="mailto:anubha.parashar@cbre.com" class="footer-email-link"><i class="fa fa-envelope-square"></i> anubha.parashar@cbre.com</a>' +
     '      </div>' +
     '    </div>' +
-    '    <div class="footer-emails">' +
-    '      <a href="mailto:dranubhaparashar@gmail.com" class="footer-email-link"><i class="fa fa-envelope"></i> dranubhaparashar@gmail.com</a>' +
-    '      <a href="mailto:anubhaparashar1025@gmail.com" class="footer-email-link"><i class="fa fa-envelope-o"></i> anubhaparashar1025@gmail.com</a>' +
-    '      <a href="mailto:anubha.parashar@cbre.com" class="footer-email-link"><i class="fa fa-envelope-square"></i> anubha.parashar@cbre.com</a>' +
+    '    <div class="site-footer__meta">' +
+    '      <p class="footer-copy site-footer__copyright">&copy; Dr. Anubha Parashar &nbsp;&middot;&nbsp; Analytics &amp; AI Engineer</p>' +
+    '      <p class="footer-views site-footer__views"><i class="fa fa-eye"></i> <span id="footer-view-count">&mdash;</span> page views</p>' +
+    '      <p class="footer-admin site-footer__links"><a href="admin-comments.html" class="admin-comments-link">Admin</a> &middot; <a href="https://anubhaparashar.github.io/personal-knowledge-vault/" class="admin-comments-link">Diary</a></p>' +
     '    </div>' +
-    '    <p class="footer-copy">&copy; Dr. Anubha Parashar &nbsp;&middot;&nbsp; Analytics &amp; AI Engineer</p>' +
-    '    <p class="footer-views"><i class="fa fa-eye"></i> <span id="footer-view-count">—</span> page views</p>' +
-    '    <p class="footer-admin"><a href="admin-comments.html" class="admin-comments-link">Admin</a> &middot; <a href="https://anubhaparashar.github.io/personal-knowledge-vault/" class="admin-comments-link">Diary</a></p>' +
     '  </div>' +
     '</footer>';
 
@@ -285,7 +296,7 @@
     function isRecordNotFound(error) {
       var payload = error && error.payload;
       var message = String(payload && (payload.message || payload.error || '') || '').toLowerCase();
-      return error && error.status === 400 && (message.indexOf('record not found') !== -1 || payload && payload.code === 400);
+      return Boolean(error && error.status === 400 && message.indexOf('record not found') !== -1);
     }
 
     function isRetryableCounterError(error) {
@@ -402,8 +413,10 @@
         })
         .catch(function (error) {
           if (isRecordNotFound(error)) {
-            clearRequestFailure();
-            return incrementCounterIfAllowed();
+            rememberRequestFailure();
+            console.warn('[CounterAPI] No existing counter record for "' + pageKey + '"; retaining cached count and not creating a new counter.', error);
+            displayCachedCount();
+            return;
           }
           rememberRequestFailure();
           console.warn('[CounterAPI] Read failed for "' + pageKey + '"; retaining cached count.', error);

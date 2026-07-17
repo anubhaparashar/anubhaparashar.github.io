@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/site-header-footer.css">
+  <link rel="stylesheet" href="css/site-header-footer.css?v=footer-premium-20260717">
   <style>
     /* ── HERO ── */
     .exp-hero {
@@ -692,7 +692,7 @@
       .story-quote { font-size: 1.15rem; }
     }
   </style>
-  <link rel="stylesheet" href="css/experience-premium.css?v=20260716">
+  <link rel="stylesheet" href="css/experience-premium.css?v=20260717">
 </head>
 
 <body class="blog_version experience-page">
@@ -750,13 +750,6 @@
   </div>
 </section>
 
-<nav class="experience-section-nav" aria-label="Experience sections">
-  <div class="page-container">
-    <a class="nav-link active" href="#experience-hero">Overview</a>
-    <a class="nav-link" href="#work-experience">Work Experience</a>
-    <a class="nav-link" href="#story-section">Story</a>
-  </div>
-</nav>
 
 <!-- ══════════════════ TIMELINE ══════════════════ -->
 <section class="timeline-section" id="work-experience">
@@ -1497,7 +1490,6 @@
 
   function initialiseReveal() {
     var revealTargets = document.querySelectorAll([
-      '.experience-section-nav',
       '.timeline-section .tl-heading',
       '.tl-card',
       '.pearce-proj-item',
@@ -1556,67 +1548,10 @@
     update();
   }
 
-  function initialiseSectionNavigation() {
-    var links = Array.prototype.slice.call(document.querySelectorAll('.experience-section-nav .nav-link'));
-    if (!links.length) return;
-
-    var sections = links.map(function (link) {
-      var id = link.getAttribute('href').replace('#', '');
-      return document.getElementById(id);
-    }).filter(Boolean);
-
-    function setActive(id) {
-      links.forEach(function (link) {
-        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-      });
-    }
-
-    var scrollTicking = false;
-    function updateFromScroll() {
-      var activeId = sections[0] && sections[0].id;
-      var activationLine = Math.min(window.innerHeight * 0.42, 360);
-
-      sections.forEach(function (section) {
-        if (section.getBoundingClientRect().top <= activationLine) {
-          activeId = section.id;
-        }
-      });
-
-      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 8) {
-        activeId = sections[sections.length - 1] && sections[sections.length - 1].id;
-      }
-
-      if (activeId) setActive(activeId);
-      scrollTicking = false;
-    }
-
-    function requestScrollUpdate() {
-      if (scrollTicking) return;
-      scrollTicking = true;
-      window.requestAnimationFrame ? window.requestAnimationFrame(updateFromScroll) : updateFromScroll();
-    }
-
-    window.addEventListener('scroll', requestScrollUpdate, { passive: true });
-    window.addEventListener('resize', requestScrollUpdate);
-
-    if ('IntersectionObserver' in window) {
-      var navObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) requestScrollUpdate();
-        });
-      }, { rootMargin: '-34% 0px -54% 0px', threshold: 0.01 });
-
-      sections.forEach(function (section) { navObserver.observe(section); });
-    }
-
-    updateFromScroll();
-  }
-
   initialiseSkillGroups();
   initialiseAccordions();
   initialiseReveal();
   initialiseTimelineProgress();
-  initialiseSectionNavigation();
 })();
 </script>
 <script src="assets/js/auto-folder-gallery.js"></script>
