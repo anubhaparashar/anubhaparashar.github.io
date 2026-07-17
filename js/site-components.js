@@ -165,16 +165,21 @@
       onScroll();
     }
 
-    /* Page view counter — per-page key */
+    /* Page view counter - per-page key */
     var pageKey = currentFile || 'index.html';
     var counterBaseUrl = 'https://api.counterapi.dev/v1/anubhaparashar.github.io/' + encodeURIComponent(pageKey);
-    var LAST_KNOWN_COUNTS = {
-      'project.html': 104,
-      'blog.html': 123
-    };
     var COUNTER_CACHE_PREFIX = 'site-page-view-count:';
-    var COUNTER_ATTEMPT_PREFIX = 'site-page-view-increment-at:';
+    var COUNTER_SUCCESS_PREFIX = 'site-page-view-increment-success-at:';
+    var COUNTER_LEGACY_ATTEMPT_PREFIX = 'site-page-view-increment-at:';
+    var COUNTER_FAILURE_PREFIX = 'site-page-view-request-failed-at:';
     var COUNTER_TTL_MS = 24 * 60 * 60 * 1000;
+    var COUNTER_RETRY_MS = 5 * 60 * 1000;
+    var COUNTER_TIMEOUT_MS = 8000;
+
+    var cacheKey = COUNTER_CACHE_PREFIX + pageKey;
+    var successKey = COUNTER_SUCCESS_PREFIX + pageKey;
+    var legacyAttemptKey = COUNTER_LEGACY_ATTEMPT_PREFIX + pageKey;
+    var failureKey = COUNTER_FAILURE_PREFIX + pageKey;
 
     function toCounterNumber(value) {
       if (typeof value === 'number' && isFinite(value)) return value;
@@ -225,6 +230,14 @@
       }
     }
 
+    function removeStorageValue(key) {
+      try {
+        if (window.localStorage) window.localStorage.removeItem(key);
+      } catch (error) {
+        console.warn('[CounterAPI] localStorage remove failed for "' + pageKey + '".', error);
+      }
+    }
+
     function formatCounterValue(value) {
       return value >= 1000 ? (value / 1000).toFixed(1) + 'K' : String(value);
     }
@@ -232,24 +245,71 @@
     function displayCounterValue(value) {
       var el = document.getElementById('footer-view-count');
       if (!el) return;
-      el.textContent = formatCounterValue(value);
+      var numeric = toCounterNumber(value);
+      el.textContent = numeric === null ? '—' : formatCounterValue(numeric);
     }
 
-    function cachedOrSeededCount() {
-      var cached = toCounterNumber(getStorageValue(COUNTER_CACHE_PREFIX + pageKey));
-      if (cached !== null) return cached;
-      var seeded = toCounterNumber(LAST_KNOWN_COUNTS[pageKey]);
-      if (seeded !== null) return seeded;
-      return 0;
+    function cachedCount() {
+      return toCounterNumber(getStorageValue(cacheKey));
     }
 
-    function incrementAttemptIsFresh() {
-      var lastAttempt = toCounterNumber(getStorageValue(COUNTER_ATTEMPT_PREFIX + pageKey));
-      return lastAttempt !== null && Date.now() - lastAttempt < COUNTER_TTL_MS;
+    function displayCachedCount() {
+      displayCounterValue(cachedCount());
+    }
+
+    function cacheCounterValue(value) {
+      var numeric = toCounterNumber(value);
+      if (numeric === null) return false;
+      setStorageValue(cacheKey, numeric);
+      return true;
+    }
+
+    function incrementIsFresh() {
+      var lastSuccess = toCounterNumber(getStorageValue(successKey));
+      return lastSuccess !== null && Date.now() - lastSuccess < COUNTER_TTL_MS;
+    }
+
+    function requestFailureIsFresh() {
+      var lastFailure = toCounterNumber(getStorageValue(failureKey));
+      return lastFailure !== null && Date.now() - lastFailure < COUNTER_RETRY_MS;
+    }
+
+    function rememberRequestFailure() {
+      setStorageValue(failureKey, Date.now());
+    }
+
+    function clearRequestFailure() {
+      removeStorageValue(failureKey);
+    }
+
+    function isRecordNotFound(error) {
+      var payload = error && error.payload;
+      var message = String(payload && (payload.message || payload.error || '') || '').toLowerCase();
+      return error && error.status === 400 && (message.indexOf('record not found') !== -1 || payload && payload.code === 400);
+    }
+
+    function isRetryableCounterError(error) {
+      if (!error || !error.status) return true;
+      return error.status === 408 || error.status === 429 || error.status >= 500;
+    }
+
+    function delay(ms) {
+      return new Promise(function (resolve) {
+        window.setTimeout(resolve, ms);
+      });
     }
 
     function fetchCounterJson(url) {
-      return fetch(url)
+      if (!window.fetch) return Promise.reject(new Error('Fetch API is unavailable.'));
+
+      var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      var timeoutId = window.setTimeout(function () {
+        if (controller) controller.abort();
+      }, COUNTER_TIMEOUT_MS);
+
+      var fetchOptions = controller ? { signal: controller.signal } : {};
+
+      return fetch(url, fetchOptions)
         .then(function (response) {
           return response.text().then(function (text) {
             var payload = null;
@@ -278,27 +338,76 @@
             }
             return payload;
           });
+        })
+        .catch(function (error) {
+          if (error && error.name === 'AbortError') {
+            var timeoutError = new Error('CounterAPI request timed out after ' + COUNTER_TIMEOUT_MS + 'ms.');
+            timeoutError.cause = error;
+            timeoutError.url = url;
+            throw timeoutError;
+          }
+          throw error;
+        })
+        .finally(function () {
+          window.clearTimeout(timeoutId);
         });
     }
 
-    var visibleCount = cachedOrSeededCount();
-    displayCounterValue(visibleCount);
+    function fetchCounterJsonWithRetry(url) {
+      return fetchCounterJson(url).catch(function (error) {
+        if (!isRetryableCounterError(error)) throw error;
+        return delay(600).then(function () {
+          return fetchCounterJson(url);
+        });
+      });
+    }
 
-    if (!incrementAttemptIsFresh()) {
-      setStorageValue(COUNTER_ATTEMPT_PREFIX + pageKey, Date.now());
-      fetchCounterJson(counterBaseUrl + '/up')
+    function handleCounterValue(payload) {
+      var value = extractCounterValue(payload);
+      if (value === null) return false;
+      cacheCounterValue(value);
+      displayCounterValue(value);
+      return true;
+    }
+
+    function incrementCounterIfAllowed() {
+      if (incrementIsFresh()) return Promise.resolve();
+
+      return fetchCounterJson(counterBaseUrl + '/up')
         .then(function (payload) {
-          var v = extractCounterValue(payload);
-          if (v === null) {
-            console.error('[CounterAPI] No page-view value found for "' + pageKey + '". Response:', payload);
+          if (!handleCounterValue(payload)) {
+            console.warn('[CounterAPI] Increment response did not include a numeric value for "' + pageKey + '".', payload);
+            rememberRequestFailure();
             return;
           }
-          setStorageValue(COUNTER_CACHE_PREFIX + pageKey, v);
-          displayCounterValue(v);
+          setStorageValue(successKey, Date.now());
+          clearRequestFailure();
         })
         .catch(function (error) {
-          console.warn('[CounterAPI] Increment failed for "' + pageKey + '"; retaining cached/seeded count.', error);
-          displayCounterValue(cachedOrSeededCount());
+          rememberRequestFailure();
+          console.warn('[CounterAPI] Increment failed for "' + pageKey + '"; retaining cached count.', error);
+          displayCachedCount();
+        });
+    }
+
+    displayCachedCount();
+    removeStorageValue(legacyAttemptKey);
+
+    if (!requestFailureIsFresh()) {
+      fetchCounterJsonWithRetry(counterBaseUrl)
+        .then(function (payload) {
+          handleCounterValue(payload);
+          clearRequestFailure();
+          return incrementCounterIfAllowed();
+        })
+        .catch(function (error) {
+          if (isRecordNotFound(error)) {
+            clearRequestFailure();
+            return incrementCounterIfAllowed();
+          }
+          rememberRequestFailure();
+          console.warn('[CounterAPI] Read failed for "' + pageKey + '"; retaining cached count.', error);
+          displayCachedCount();
         });
     }
   }
