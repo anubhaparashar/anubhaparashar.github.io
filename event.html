@@ -301,7 +301,7 @@
 
     <div class="evt-card talk" data-blog="academics.html#et-11"><div class="evt-num">04</div><div class="evt-body"><div class="evt-header"><div class="evt-title">Speaker — IoT and AI Workshop, MUJ ACM SIGAI Student Chapter</div><span class="evt-date-badge">Mar 2, 2023</span></div><div class="evt-venue"><i class="fa fa-map-marker"></i> Manipal University Jaipur, Jaipur, India</div><div class="evt-desc">Aimed to promote Embedded Systems, AI and IoT.</div><div class="evt-meta"></div></div></div>
 
-    <div class="evt-card talk" data-photo="files/8. Blog/1. academic/4. expert talk/5. iot speaker/IMG_20210214_105415.jpg" data-blog="academics.html#et-07"><div class="evt-num">05</div><div class="evt-body"><div class="evt-header"><div class="evt-title">Speaker for an IoT Session</div><span class="evt-date-badge">2021</span></div><div class="evt-venue"><i class="fa fa-wifi"></i> IoT speaker session</div><div class="evt-desc">Invited IoT speaker session sharing applied Internet of Things concepts and practical perspectives with students and participants.</div><div class="evt-meta"></div></div></div>
+    <div class="evt-card talk" data-photo="files/8. Blog/1. academic/4. expert talk/5. iot speaker/IMG_20210214_105415.jpg" data-photo-label="View photos" data-cert="files/8. Blog/1. academic/4. expert talk/5. iot speaker/certificates-speakers.pdf" data-cert-label="Certificate" data-blog="academics.html#et-07" data-blog-label="View blog"><div class="evt-num">05</div><div class="evt-body"><div class="evt-header"><div class="evt-title">Speaker for an IoT Session</div><span class="evt-date-badge">2021</span></div><div class="evt-venue"><i class="fa fa-wifi"></i> IoT speaker session</div><div class="evt-desc">Invited IoT speaker session sharing applied Internet of Things concepts and practical perspectives with students and participants.</div><div class="evt-meta"></div></div></div>
 
     <div class="evt-card talk" data-photo="files/8. Blog/1. academic/4. expert talk/6/1.png" data-blog="academics.html#et-05"><div class="evt-num">06</div><div class="evt-body"><div class="evt-header"><div class="evt-title">Speaker for an Expert Talk on Technology and Innovation</div><span class="evt-date-badge">May 18, 2020</span></div><div class="evt-venue"><i class="fa fa-lightbulb-o"></i> Academic expert talk</div><div class="evt-desc">Invited expert talk on technology and innovation for academic participants.</div><div class="evt-meta"></div></div></div>
 
@@ -1087,10 +1087,10 @@
       var certIcon = /\.(jpg|jpeg|png)$/i.test(cert || '') ? 'file-image-o'
                    : /\.html?$/i.test(cert || '') ? 'file-text-o' : 'file-pdf-o';
 
-      addMediaButton(card.getAttribute('data-photo'), 'View photos / blog', 'picture-o');
-      addMediaButton(cert, 'View certificate', certIcon);
+      addMediaButton(card.getAttribute('data-photo'), card.getAttribute('data-photo-label') || 'View photos / blog', 'picture-o');
+      addMediaButton(cert, card.getAttribute('data-cert-label') || 'View certificate', certIcon);
       addMediaButton(card.getAttribute('data-badge'), 'View member badge', 'id-badge');
-      addMediaButton(card.getAttribute('data-blog'), 'View photos / blog', 'book');
+      addMediaButton(card.getAttribute('data-blog'), card.getAttribute('data-blog-label') || 'View photos / blog', 'book');
     });
 
     /* Stagger initial animations */
