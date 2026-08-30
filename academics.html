@@ -3163,6 +3163,13 @@
       return Array.from(document.querySelectorAll('[data-academic-item]'));
     }
 
+    function renderTalkDisplayNumbers() {
+      Array.from(document.querySelectorAll('#acad-talks [data-academic-item]')).forEach(function(card, index) {
+        var number = card.querySelector('.conf-num');
+        if (number) number.textContent = String(index + 1).padStart(2, '0');
+      });
+    }
+
     function enhanceCards() {
       document.body.classList.add('academic-enhanced');
       cards().forEach(function(card) {
@@ -3411,6 +3418,7 @@
     }
 
     function initAcademicArchive() {
+      renderTalkDisplayNumbers();
       enhanceCards();
       renderSidebarIndexes();
       renderCounts();
