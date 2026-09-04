@@ -384,6 +384,11 @@
       event.preventDefault();
       closeAtlas();
     });
+    dialog.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape') return;
+      event.preventDefault();
+      closeAtlas();
+    });
     state.tree.addEventListener('click', onTreeClick);
     state.tree.addEventListener('mouseover', onTreeHover);
     state.tree.addEventListener('mouseout', clearTreeRelations);

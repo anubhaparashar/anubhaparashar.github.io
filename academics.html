@@ -3193,7 +3193,8 @@
           top.innerHTML =
             '<span class="academic-badge">' + (labels[category] || 'Academics') + '</span>' +
             '<span class="academic-year">' + year + '</span>';
-          header.insertBefore(top, title || header.firstChild);
+          var insertTarget = title && title.parentNode === header ? title : header.firstChild;
+          header.insertBefore(top, insertTarget);
         }
 
         if (body && !body.classList.contains('academic-details')) {
