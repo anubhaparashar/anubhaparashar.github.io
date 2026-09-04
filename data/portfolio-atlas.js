@@ -456,8 +456,7 @@
   ];
 
   var excludedRoutes = [
-    { url: 'admin-comments.html', reason: 'Administrative utility, not portfolio content.' },
-    { url: 'Satner%20Portfolio%20-doc/index.html', reason: 'Bundled third-party template documentation, not portfolio content.' }
+    { url: 'admin-comments.html', reason: 'Administrative utility, not portfolio content.' }
   ];
 
   var redirects = {
