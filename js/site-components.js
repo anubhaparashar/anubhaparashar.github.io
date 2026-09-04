@@ -1,18 +1,36 @@
-(function () {
+(function bootSiteComponents() {
+  var sourceScript = document.currentScript;
+  if (!window.__portfolioSiteBase && sourceScript && sourceScript.src) {
+    window.__portfolioSiteBase = new URL('../', sourceScript.src).href;
+  }
+  window.__portfolioSiteBase = window.__portfolioSiteBase || new URL('./', window.location.href).href;
+
+  function siteUrl(path) {
+    return new URL(String(path || '').replace(/^\/+/, ''), window.__portfolioSiteBase).href;
+  }
+
+  if (!window.PortfolioAtlasRegistry) {
+    if (window.__portfolioRegistryLoading) return;
+    window.__portfolioRegistryLoading = true;
+    var registryScript = document.createElement('script');
+    registryScript.src = siteUrl('data/portfolio-atlas.js?v=portfolio-atlas-20260904');
+    registryScript.onload = function () {
+      window.__portfolioRegistryLoading = false;
+      bootSiteComponents();
+    };
+    registryScript.onerror = function () {
+      window.__portfolioRegistryLoading = false;
+      console.error('[Portfolio Atlas] Could not load the route registry.');
+    };
+    document.head.appendChild(registryScript);
+    return;
+  }
+
   if (window.__siteComponentsLoaded) return;
   window.__siteComponentsLoaded = true;
 
   /* ── Detect current page for active nav ── */
-  var PAGE_MAP = {
-    'index.html': 'home', '': 'home',
-    'education.html': 'education',
-    'experience.html': 'experience',
-    'publication.html': 'publication', 'conferences.html': 'publication',
-    'project.html': 'project', 'grant.html': 'project', 'industry.html': 'project',
-    'award.html': 'award',
-    'event.html': 'event',
-    'blog.html': 'blog', 'social-life.html': 'blog', 'academics.html': 'blog', 'sports.html': 'blog', 'avocations.html': 'blog'
-  };
+  var routeRegistry = window.PortfolioAtlasRegistry;
   function getCurrentHtmlFile() {
     var fileName = window.location.pathname.split('/').pop() || 'index.html';
     try {
@@ -25,7 +43,41 @@
   }
 
   var currentFile = getCurrentHtmlFile();
-  var activePage  = PAGE_MAP[currentFile] || '';
+  var currentRouteNode = routeRegistry.resolve(currentFile + window.location.hash);
+  var currentTopNode = currentRouteNode ? routeRegistry.getTopLevel(currentRouteNode.id) : null;
+  var activePage = currentTopNode ? currentTopNode.id : '';
+
+  function escapeHtml(value) {
+    return String(value || '').replace(/[&<>"']/g, function (character) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character];
+    });
+  }
+
+  function navLink(node, className) {
+    var isCurrent = currentRouteNode && currentRouteNode.id === node.id;
+    return '<a class="' + className + '" href="' + escapeHtml(siteUrl(node.url)) + '"' +
+      (isCurrent ? ' aria-current="page"' : '') + '>' + escapeHtml(node.label) + '</a>';
+  }
+
+  function buildHeaderNavigation() {
+    return routeRegistry.getHeaderNodes().map(function (node) {
+      var children = routeRegistry.getChildren(node.id).filter(function (child) {
+        return child.type === 'page' || child.type === 'anchor';
+      });
+      if (!children.length && node.url) {
+        return '<li class="nav-item" data-nav="' + escapeHtml(node.id) + '">' +
+          navLink(node, 'nav-link') + '</li>';
+      }
+      return '<li class="nav-item submenu dropdown" data-nav="' + escapeHtml(node.id) + '">' +
+        '<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"' +
+          ' aria-haspopup="true" aria-expanded="false" aria-label="Explore ' + escapeHtml(node.label) + ' destinations">' +
+          escapeHtml(node.label) + '</a>' +
+        '<ul class="dropdown-menu">' + children.map(function (child) {
+          return '<li class="nav-item">' + navLink(child, 'nav-link') + '</li>';
+        }).join('') + '</ul>' +
+      '</li>';
+    }).join('');
+  }
 
   /* ── Header HTML ── */
   var HEADER_HTML =
@@ -34,8 +86,8 @@
     '  <div class="main_menu">' +
     '    <nav class="navbar navbar-expand-lg navbar-light">' +
     '      <div class="container">' +
-    '        <a class="navbar-brand logo_h" href="index.html#contact">' +
-    '          <img class="nav-logo-img" src="files/1.%20Home/logo-header-name-only.png" alt="Dr. Anubha Parashar">' +
+    '        <a class="navbar-brand logo_h" href="' + siteUrl('index.html') + '">' +
+    '          <img class="nav-logo-img" src="' + siteUrl('files/1.%20Home/logo-header-name-only.png') + '" alt="Dr. Anubha Parashar">' +
     '        </a>' +
     '        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"' +
     '          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">' +
@@ -44,34 +96,7 @@
     '          <span class="icon-bar"></span>' +
     '        </button>' +
     '        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">' +
-    '          <ul class="nav navbar-nav menu_nav justify-content-end">' +
-    '            <li class="nav-item" data-nav="home"><a class="nav-link" href="index.html">Home</a></li>' +
-    '            <li class="nav-item" data-nav="education"><a class="nav-link" href="education.html">Education</a></li>' +
-    '            <li class="nav-item" data-nav="experience"><a class="nav-link" href="experience.html">Experience</a></li>' +
-    '            <li class="nav-item" data-nav="publication"><a class="nav-link" href="publication.html">Publications</a></li>' +
-    '            <li class="nav-item submenu dropdown" data-nav="project">' +
-    '              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"' +
-    '                aria-haspopup="true" aria-expanded="false">Projects</a>' +
-    '              <ul class="dropdown-menu">' +
-    '                <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>' +
-    '                <li class="nav-item"><a class="nav-link" href="grant.html">Grant</a></li>' +
-    '                <li class="nav-item"><a class="nav-link" href="industry.html">Industry</a></li>' +
-    '              </ul>' +
-    '            </li>' +
-    '            <li class="nav-item" data-nav="award"><a class="nav-link" href="award.html">Awards</a></li>' +
-    '            <li class="nav-item" data-nav="event"><a class="nav-link" href="event.html">Leadership</a></li>' +
-    '            <li class="nav-item submenu dropdown" data-nav="blog">' +
-    '              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"' +
-    '                aria-haspopup="true" aria-expanded="false">Blog</a>' +
-    '              <ul class="dropdown-menu">' +
-    '                <li class="nav-item"><a class="nav-link" href="blog.html">Blog Overview</a></li>' +
-    '                <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>' +
-    '                <li class="nav-item"><a class="nav-link" href="social-life.html">Social Life</a></li>' +
-    '                <li class="nav-item"><a class="nav-link" href="sports.html">Sports</a></li>' +
-    '                <li class="nav-item"><a class="nav-link" href="avocations.html">Avocations</a></li>' +
-    '              </ul>' +
-    '            </li>' +
-    '          </ul>' +
+    '          <ul class="nav navbar-nav menu_nav justify-content-end">' + buildHeaderNavigation() + '</ul>' +
     '        </div>' +
     '      </div>' +
     '    </nav>' +
@@ -128,10 +153,29 @@
     '  </div>' +
     '</footer>';
 
+  function loadPortfolioAtlasAssets() {
+    if (!document.querySelector('link[data-portfolio-atlas]')) {
+      var stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = siteUrl('css/portfolio-atlas.css?v=portfolio-atlas-20260904');
+      stylesheet.setAttribute('data-portfolio-atlas', 'styles');
+      document.head.appendChild(stylesheet);
+    }
+    if (!window.__portfolioAtlasScriptRequested) {
+      window.__portfolioAtlasScriptRequested = true;
+      var atlasScript = document.createElement('script');
+      atlasScript.src = siteUrl('js/portfolio-atlas.js?v=portfolio-atlas-20260904');
+      atlasScript.defer = true;
+      document.head.appendChild(atlasScript);
+    }
+  }
+
   function init() {
     /* Inject header */
     var headerRoot = document.getElementById('site-header');
     if (headerRoot) headerRoot.innerHTML = HEADER_HTML;
+
+    if (headerRoot) loadPortfolioAtlasAssets();
 
     /* Inject footer */
     var footerRoot = document.getElementById('site-footer');
