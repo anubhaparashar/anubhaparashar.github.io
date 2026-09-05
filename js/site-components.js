@@ -122,7 +122,7 @@
     '      </div>' +
     '    </div>' +
     '    <div class="site-footer__meta">' +
-    '      <p class="footer-views site-footer__views"><a href="admin-comments.html" class="footer-meta-link footer-admin-link" aria-label="Admin"><i class="fa fa-eye" aria-hidden="true"></i></a> <span id="footer-view-count">&mdash;</span> page <a href="https://anubhaparashar.github.io/personal-knowledge-vault/" class="footer-meta-link footer-diary-link" aria-label="Diary">views</a></p>' +
+    '      <p class="footer-views site-footer__views"><button type="button" class="footer-secret-action footer-eye-action" aria-label="Admin"><i class="fa fa-eye" aria-hidden="true"></i></button> <span id="footer-view-count">&mdash;</span> page <button type="button" class="footer-secret-action footer-views-action" aria-label="Diary">views</button></p>' +
     '    </div>' +
     '  </div>' +
     '</footer>';
@@ -142,6 +142,22 @@
     }
 
     footerRoot.innerHTML = FOOTER_HTML;
+
+    /* Discreet footer navigation without browser link previews */
+    var adminButton = footerRoot.querySelector('.footer-eye-action');
+    var diaryButton = footerRoot.querySelector('.footer-views-action');
+
+    if (adminButton) {
+      adminButton.addEventListener('click', function () {
+        window.location.assign('admin-comments.html');
+      });
+    }
+
+    if (diaryButton) {
+      diaryButton.addEventListener('click', function () {
+        window.location.assign('https://anubhaparashar.github.io/personal-knowledge-vault/');
+      });
+    }
 
     /* Mark active nav item */
     if (activePage) {
