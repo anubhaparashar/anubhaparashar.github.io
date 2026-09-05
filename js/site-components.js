@@ -122,8 +122,7 @@
     '      </div>' +
     '    </div>' +
     '    <div class="site-footer__meta">' +
-    '      <p class="footer-views site-footer__views"><i class="fa fa-eye"></i> <span id="footer-view-count">&mdash;</span> page views</p>' +
-    '      <p class="footer-admin site-footer__links"><a href="admin-comments.html" class="admin-comments-link">Admin</a> &middot; <a href="https://anubhaparashar.github.io/personal-knowledge-vault/" class="admin-comments-link">Diary</a></p>' +
+    '      <p class="footer-views site-footer__views"><a href="admin-comments.html" class="footer-meta-link footer-admin-link" aria-label="Admin"><i class="fa fa-eye" aria-hidden="true"></i></a> <span id="footer-view-count">&mdash;</span> page <a href="https://anubhaparashar.github.io/personal-knowledge-vault/" class="footer-meta-link footer-diary-link" aria-label="Diary">views</a></p>' +
     '    </div>' +
     '  </div>' +
     '</footer>';
