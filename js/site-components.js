@@ -182,9 +182,14 @@
       onScroll();
     }
 
-    /* Page view counter - per-page key */
+    /* Page view counter - per-page key.
+       Stored in the site's existing Firebase Realtime Database (REST, public `views` node).
+       CounterAPI v1 was retired (HTTP 410) and v2 requires an account-bound workspace,
+       so the counter now uses the same database that already powers blog views/likes. */
     var pageKey = currentFile || 'index.html';
-    var counterBaseUrl = 'https://api.counterapi.dev/v1/anubhaparashar.github.io/' + encodeURIComponent(pageKey);
+    var COUNTER_DB_URL = 'https://website-blog-66d4e-default-rtdb.asia-southeast1.firebasedatabase.app';
+    var counterRecordKey = (pageKey.replace(/\.html?$/i, '') || 'index').replace(/[.#$\[\]\/]/g, '_');
+    var counterUrl = COUNTER_DB_URL + '/views/' + encodeURIComponent(counterRecordKey) + '.json';
     var VERIFIED_LAST_KNOWN_COUNTS = {
       'index.html': 987,
       'publication.html': 342,
@@ -226,21 +231,13 @@
     }
 
     function extractCounterValue(payload) {
-      var nestedData = payload && payload.data && payload.data.data;
+      /* The database stores a plain number at views/<page>; tolerate legacy object shapes. */
       var candidates = [
-        nestedData && nestedData.up_count,
-        nestedData && nestedData.count,
-        nestedData && nestedData.value,
-        nestedData,
-        payload && payload.data && payload.data.up_count,
-        payload && payload.data && payload.data.count,
-        payload && payload.data && payload.data.value,
-        payload && payload.up_count,
+        payload,
         payload && payload.count,
         payload && payload.value,
-        payload && payload.data
+        payload && payload.up_count
       ];
-
       for (var i = 0; i < candidates.length; i++) {
         var value = toCounterNumber(candidates[i]);
         if (value !== null) return value;
@@ -252,7 +249,7 @@
       try {
         return window.localStorage ? window.localStorage.getItem(key) : null;
       } catch (error) {
-        console.warn('[CounterAPI] localStorage read failed for "' + pageKey + '".', error);
+        console.warn('[PageViews] localStorage read failed for "' + pageKey + '".', error);
         return null;
       }
     }
@@ -261,7 +258,7 @@
       try {
         if (window.localStorage) window.localStorage.setItem(key, String(value));
       } catch (error) {
-        console.warn('[CounterAPI] localStorage write failed for "' + pageKey + '".', error);
+        console.warn('[PageViews] localStorage write failed for "' + pageKey + '".', error);
       }
     }
 
@@ -269,7 +266,7 @@
       try {
         if (window.localStorage) window.localStorage.removeItem(key);
       } catch (error) {
-        console.warn('[CounterAPI] localStorage remove failed for "' + pageKey + '".', error);
+        console.warn('[PageViews] localStorage remove failed for "' + pageKey + '".', error);
       }
     }
 
@@ -295,10 +292,6 @@
     function availableCount() {
       var cached = cachedCount();
       return cached !== null ? cached : verifiedLastKnownCount();
-    }
-
-    function displayCachedCount() {
-      displayCounterValue(cachedCount());
     }
 
     function displayAvailableCount() {
@@ -330,12 +323,6 @@
       removeStorageValue(failureKey);
     }
 
-    function isRecordNotFound(error) {
-      var payload = error && error.payload;
-      var message = String(payload && (payload.message || payload.error || '') || '').toLowerCase();
-      return Boolean(error && error.status === 400 && message.indexOf('record not found') !== -1);
-    }
-
     function isRetryableCounterError(error) {
       if (!error || !error.status) return true;
       return error.status === 408 || error.status === 429 || error.status >= 500;
@@ -347,15 +334,25 @@
       });
     }
 
-    function fetchCounterJson(url) {
+    /* Performs a JSON request against the Realtime Database REST API.
+       Resolves with { payload, etag, status }; rejects with an Error carrying .status/.payload. */
+    function fetchCounterJson(url, options) {
       if (!window.fetch) return Promise.reject(new Error('Fetch API is unavailable.'));
+      options = options || {};
 
       var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
       var timeoutId = window.setTimeout(function () {
         if (controller) controller.abort();
       }, COUNTER_TIMEOUT_MS);
 
-      var fetchOptions = controller ? { signal: controller.signal } : {};
+      var fetchOptions = {
+        method: options.method || 'GET',
+        headers: options.headers || {},
+        mode: 'cors',
+        cache: 'no-store'
+      };
+      if (options.body !== undefined) fetchOptions.body = JSON.stringify(options.body);
+      if (controller) fetchOptions.signal = controller.signal;
 
       return fetch(url, fetchOptions)
         .then(function (response) {
@@ -364,7 +361,7 @@
             try {
               payload = text ? JSON.parse(text) : null;
             } catch (error) {
-              var parseError = new Error('CounterAPI returned invalid JSON from ' + url);
+              var parseError = new Error('Page view store returned invalid JSON from ' + url);
               parseError.cause = error;
               parseError.status = response.status;
               parseError.responseText = text;
@@ -373,9 +370,9 @@
             }
 
             if (!response.ok) {
-              var detail = payload && (payload.message || payload.error || payload.code);
+              var detail = payload && (payload.error || payload.message || payload.code);
               var requestError = new Error(
-                'CounterAPI request failed with HTTP ' + response.status +
+                'Page view request failed with HTTP ' + response.status +
                 (response.statusText ? ' ' + response.statusText : '') +
                 (detail ? ': ' + detail : '')
               );
@@ -384,12 +381,12 @@
               requestError.url = url;
               throw requestError;
             }
-            return payload;
+            return { payload: payload, etag: response.headers.get('ETag'), status: response.status };
           });
         })
         .catch(function (error) {
           if (error && error.name === 'AbortError') {
-            var timeoutError = new Error('CounterAPI request timed out after ' + COUNTER_TIMEOUT_MS + 'ms.');
+            var timeoutError = new Error('Page view request timed out after ' + COUNTER_TIMEOUT_MS + 'ms.');
             timeoutError.cause = error;
             timeoutError.url = url;
             throw timeoutError;
@@ -401,11 +398,11 @@
         });
     }
 
-    function fetchCounterJsonWithRetry(url) {
-      return fetchCounterJson(url).catch(function (error) {
+    function fetchCounterJsonWithRetry(url, options) {
+      return fetchCounterJson(url, options).catch(function (error) {
         if (!isRetryableCounterError(error)) throw error;
         return delay(600).then(function () {
-          return fetchCounterJson(url);
+          return fetchCounterJson(url, options);
         });
       });
     }
@@ -418,13 +415,39 @@
       return true;
     }
 
-    function incrementCounterIfAllowed() {
+    /* Atomic server-side increment (Firebase ".sv" increment), so concurrent visitors never clobber each other. */
+    function incrementCounter() {
+      return fetchCounterJson(counterUrl, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: { '.sv': { increment: 1 } }
+      });
+    }
+
+    /* First write for a page that has no record yet: carry the last count recorded before the
+       provider change forward (+1 for this visit). Guarded by the ETag of the empty record so two
+       first visitors cannot both seed; a 412 means someone else seeded first, so we just increment. */
+    function seedCounter(etag) {
+      var baseline = verifiedLastKnownCount();
+      if (baseline === null || !etag) return incrementCounter();
+      return fetchCounterJson(counterUrl, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json', 'if-match': etag },
+        body: baseline + 1
+      }).catch(function (error) {
+        if (error && error.status === 412) return incrementCounter();
+        throw error;
+      });
+    }
+
+    function incrementCounterIfAllowed(currentValue, etag) {
       if (incrementIsFresh()) return Promise.resolve();
 
-      return fetchCounterJson(counterBaseUrl + '/up')
-        .then(function (payload) {
-          if (!handleCounterValue(payload)) {
-            console.warn('[CounterAPI] Increment response did not include a numeric value for "' + pageKey + '".', payload);
+      var write = currentValue === null ? seedCounter(etag) : incrementCounter();
+      return write
+        .then(function (result) {
+          if (!handleCounterValue(result && result.payload)) {
+            console.warn('[PageViews] Increment response did not include a numeric value for "' + pageKey + '".', result && result.payload);
             rememberRequestFailure();
             return;
           }
@@ -433,7 +456,7 @@
         })
         .catch(function (error) {
           rememberRequestFailure();
-          console.warn('[CounterAPI] Increment failed for "' + pageKey + '"; retaining cached count.', error);
+          console.warn('[PageViews] Increment failed for "' + pageKey + '"; retaining cached count.', error);
           displayAvailableCount();
         });
     }
@@ -442,24 +465,20 @@
     removeStorageValue(legacyAttemptKey);
 
     if (!requestFailureIsFresh()) {
-      fetchCounterJsonWithRetry(counterBaseUrl)
-        .then(function (payload) {
-          handleCounterValue(payload);
+      fetchCounterJsonWithRetry(counterUrl, { headers: { 'X-Firebase-ETag': 'true' } })
+        .then(function (result) {
+          var currentValue = extractCounterValue(result && result.payload);
+          if (currentValue !== null) handleCounterValue(currentValue);
           clearRequestFailure();
-          return incrementCounterIfAllowed();
+          return incrementCounterIfAllowed(currentValue, result && result.etag);
         })
         .catch(function (error) {
-          if (isRecordNotFound(error)) {
-            rememberRequestFailure();
-            console.warn('[CounterAPI] No existing counter record for "' + pageKey + '"; retaining cached count and not creating a new counter.', error);
-            displayCachedCount();
-            return;
-          }
           rememberRequestFailure();
-          console.warn('[CounterAPI] Read failed for "' + pageKey + '"; retaining cached or verified last-known count.', error);
+          console.warn('[PageViews] Read failed for "' + pageKey + '"; retaining cached or verified last-known count.', error);
           displayAvailableCount();
         });
     }
+
   }
 
 
