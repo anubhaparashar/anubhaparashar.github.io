@@ -429,8 +429,7 @@
       margin: 0 26px 18px;
     }
     .academic-toggle,
-    .academic-media-toggle,
-    .academic-show-more {
+    .academic-media-toggle {
       border: 1px solid #bfd4ec;
       background: #f7fbff;
       color: #0f3460;
@@ -442,8 +441,7 @@
       transition: all .18s;
     }
     .academic-toggle:hover,
-    .academic-media-toggle:hover,
-    .academic-show-more:hover {
+    .academic-media-toggle:hover {
       background: #0f3460;
       color: #fff;
       border-color: #0f3460;
@@ -459,9 +457,125 @@
       border: 1px solid #e3eaff;
       border-radius: 14px;
     }
-    .academic-show-more-wrap {
+    .acad-section > .premium-photo-marquee {
+      padding-bottom: 30px;
+    }
+    .category-show-all-wrap {
       text-align: center;
-      margin: 4px 0 28px;
+      margin: 14px 0 0;
+      padding: 0 24px;
+    }
+    .category-show-all {
+      --category-cta-surface: linear-gradient(135deg, rgba(248,252,255,.98), rgba(229,239,248,.96));
+      --category-cta-surface-hover: linear-gradient(135deg, #fff, rgba(225,240,250,.99));
+      --category-cta-text: #123653;
+      --category-cta-text-hover: #071f33;
+      --category-cta-border: rgba(43,143,196,.42);
+      --category-cta-border-hover: rgba(52,174,234,.68);
+      --category-cta-glow: rgba(65,180,255,.08);
+      --category-cta-glow-hover: rgba(65,180,255,.16);
+      --category-cta-beam: rgba(255,255,255,.82);
+      position: relative;
+      isolation: isolate;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      overflow: hidden;
+      border: 1px solid var(--category-cta-border);
+      border-radius: 999px;
+      background: var(--category-cta-surface);
+      color: var(--category-cta-text);
+      box-shadow: 0 0 0 1px rgba(80,190,255,.04), 0 0 24px var(--category-cta-glow);
+      padding: 12px 22px;
+      font-size: .82rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: .01em;
+      cursor: pointer;
+      transition: transform .22s ease, border-color .22s ease, background .22s ease, color .22s ease, box-shadow .22s ease;
+    }
+    .category-show-all::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: -50%;
+      left: -48%;
+      width: 34%;
+      height: 200%;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(-120%) rotate(18deg);
+      background: linear-gradient(90deg, transparent, var(--category-cta-beam), rgba(101,201,246,.38), transparent);
+      filter: blur(2px);
+      animation: categoryCtaLightSweep 4.6s ease-in-out infinite;
+    }
+    .category-show-all__label,
+    .category-show-all__arrow {
+      position: relative;
+      z-index: 1;
+    }
+    .category-show-all__arrow {
+      font-size: .92em;
+      transition: transform .22s ease;
+    }
+    .category-show-all:hover {
+      transform: translateY(-1px);
+      border-color: var(--category-cta-border-hover);
+      background: var(--category-cta-surface-hover);
+      color: var(--category-cta-text-hover);
+      box-shadow: 0 0 0 1px rgba(80,190,255,.08), 0 8px 28px var(--category-cta-glow-hover);
+    }
+    .category-show-all:hover .category-show-all__arrow {
+      transform: translateX(3px);
+    }
+    .category-show-all:focus-visible {
+      outline: 2px solid rgba(65,180,255,.72);
+      outline-offset: 3px;
+    }
+    @keyframes categoryCtaLightSweep {
+      0%, 68% {
+        opacity: 0;
+        transform: translateX(-120%) rotate(18deg);
+      }
+      72% { opacity: .16; }
+      84% { opacity: .72; }
+      96% {
+        opacity: 0;
+        transform: translateX(650%) rotate(18deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(650%) rotate(18deg);
+      }
+    }
+    [data-theme="dark"] .category-show-all,
+    .dark-mode .category-show-all,
+    .theme-dark .category-show-all {
+      --category-cta-surface: linear-gradient(135deg, rgba(10,31,50,.96), rgba(13,43,66,.94));
+      --category-cta-surface-hover: linear-gradient(135deg, rgba(14,42,66,.98), rgba(17,54,81,.98));
+      --category-cta-text: #f4f9fd;
+      --category-cta-text-hover: #fff;
+      --category-cta-border: rgba(80,190,255,.35);
+      --category-cta-border-hover: rgba(92,204,255,.62);
+      --category-cta-beam: rgba(255,255,255,.45);
+    }
+    @media (prefers-color-scheme: dark) {
+      .category-show-all {
+        --category-cta-surface: linear-gradient(135deg, rgba(10,31,50,.96), rgba(13,43,66,.94));
+        --category-cta-surface-hover: linear-gradient(135deg, rgba(14,42,66,.98), rgba(17,54,81,.98));
+        --category-cta-text: #f4f9fd;
+        --category-cta-text-hover: #fff;
+        --category-cta-border: rgba(80,190,255,.35);
+        --category-cta-border-hover: rgba(92,204,255,.62);
+        --category-cta-beam: rgba(255,255,255,.45);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .category-show-all::before { display: none; animation: none; }
+      .category-show-all,
+      .category-show-all__arrow { transition: none; }
+      .category-show-all:hover { transform: none; }
     }
     .academic-empty-state {
       display: none;
@@ -537,6 +651,9 @@
     @media (max-width: 480px) {
       .gal-featured { grid-template-columns: 1fr; }
       .gal-featured.has-highlighted { grid-template-columns: 1fr; }
+      .acad-section > .premium-photo-marquee { padding-bottom: 26px; }
+      .category-show-all-wrap { margin-top: 12px; padding: 0 18px; }
+      .category-show-all { padding: 11px 20px; }
     }
   </style>
 </head>
@@ -3123,6 +3240,16 @@
       hackathon: 'Hackathon',
       'social-activities': 'Social Activities'
     };
+    var ctaLabels = {
+      leadership: 'Leadership',
+      conferences: 'Conferences',
+      workshops: 'Workshops',
+      talks: 'Talks',
+      'faculty-visits': 'Faculty Visits',
+      events: 'Events',
+      hackathon: 'Hackathons',
+      'social-activities': 'Social Activities'
+    };
     var tabAliases = {
       all: 'all',
       academics: 'all',
@@ -3140,8 +3267,8 @@
       'social-activities': 'social-activities'
     };
     var state = { filter: 'all', query: '', expanded: {}, hasInteracted: false };
-    var allLimit = 4;
-    var categoryLimit = 8;
+    var allLimit = 2;
+    var categoryLimit = 2;
 
     function normalizeCategory(value) {
       value = String(value || '').toLowerCase();
@@ -3193,7 +3320,8 @@
           top.innerHTML =
             '<span class="academic-badge">' + (labels[category] || 'Academics') + '</span>' +
             '<span class="academic-year">' + year + '</span>';
-          header.insertBefore(top, title || header.firstChild);
+          var headerInsertTarget = title && title.parentNode === header ? title : header.firstChild;
+          header.insertBefore(top, headerInsertTarget);
         }
 
         if (body && !body.classList.contains('academic-details')) {
@@ -3249,25 +3377,26 @@
     }
 
     function clearShowMoreButtons() {
-      document.querySelectorAll('.academic-show-more-wrap').forEach(function(el) { el.remove(); });
+      document.querySelectorAll('.category-show-all-wrap').forEach(function(el) { el.remove(); });
     }
 
     function addShowMoreButton(section, category, hiddenCount) {
       if (!hiddenCount) return;
       var wrap = document.createElement('div');
-      wrap.className = 'academic-show-more-wrap';
+      wrap.className = 'category-show-all-wrap';
       var btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = 'academic-show-more';
-      btn.textContent = state.filter === 'all'
-        ? 'Show all ' + labels[category]
-        : 'Show all ' + labels[category];
+      btn.className = 'category-show-all';
+      btn.innerHTML =
+        '<span class="category-show-all__label">Show all ' + ctaLabels[category] + '</span> ' +
+        '<span class="category-show-all__arrow" aria-hidden="true">&rarr;</span>';
       btn.addEventListener('click', function() {
         state.expanded[category] = true;
         applyFilters();
       });
       wrap.appendChild(btn);
-      section.appendChild(wrap);
+      var marqueeInner = section.querySelector(':scope > .premium-photo-marquee .premium-marquee-inner');
+      (marqueeInner || section).appendChild(wrap);
     }
 
 
