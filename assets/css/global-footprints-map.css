@@ -475,17 +475,27 @@
 .global-footprints-section .leaflet-control-attribution,
 #home-global-map .leaflet-control-attribution,
 .home-global-map .leaflet-control-attribution {
-  background: rgba(7, 17, 31, 0.82) !important;
-  color: rgba(245, 241, 232, 0.72) !important;
-  border-radius: 8px 0 0 0 !important;
+  background: transparent !important;
+  color: #9da6af !important;
+  border: 0;
+  border-radius: 0 !important;
   font-size: 10px !important;
+  line-height: 1.35;
+  padding: 0 3px;
   box-shadow: none !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .7);
 }
 
 .global-footprints-section .leaflet-control-attribution a,
 #home-global-map .leaflet-control-attribution a,
 .home-global-map .leaflet-control-attribution a {
-  color: rgba(240, 202, 122, 0.85) !important;
+  color: inherit !important;
+}
+
+#home-global-map .leaflet-control-attribution a:hover,
+#home-global-map .leaflet-control-attribution a:focus-visible {
+  color: #c2cad2 !important;
+  text-decoration: underline;
 }
 
 .global-footprints-section .leaflet-popup-content-wrapper {
@@ -528,6 +538,10 @@
 }
 
 @media (max-width: 767px) {
+  #home-global-map .leaflet-control-attribution {
+    font-size: 9px !important;
+  }
+
   .global-footprints-section {
     padding: 64px 0 68px;
   }
@@ -586,14 +600,12 @@
   border-color: rgba(218, 174, 88, 0.35) !important;
 }
 
-.global-footprints-section .leaflet-control-attribution,
 .journeys-connections .leaflet-control-attribution,
 .travel-map-section .leaflet-control-attribution {
   background: rgba(7, 17, 31, 0.78) !important;
   color: #b8c4d6 !important;
 }
 
-.global-footprints-section .leaflet-control-attribution a,
 .journeys-connections .leaflet-control-attribution a,
 .travel-map-section .leaflet-control-attribution a {
   color: #d9ad5f !important;
