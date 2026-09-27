@@ -311,7 +311,8 @@
 
     if (cartoBasemapKey) {
       window.L.tileLayer('https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}{r}.png?key=' + encodeURIComponent(cartoBasemapKey), {
-        maxZoom: 19
+        maxZoom: 19,
+        opacity: 1
       }).addTo(map);
     } else if (window.console && typeof window.console.warn === 'function') {
       window.console.warn('Global Footprints: NEXT_PUBLIC_CARTO_BASEMAP_KEY is missing. Set it before building to enable the CARTO Dark Matter basemap. Markers remain available; tile requests are disabled.');

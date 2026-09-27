@@ -147,31 +147,13 @@
   background: #10253f;
 }
 
-/* Dark navy-gold map tile treatment — no pink/purple hue rotate */
+/* Dark Matter supplies its own dark palette; keep geography and labels legible. */
 .global-footprints-section .leaflet-tile,
 #home-global-map .leaflet-tile,
 .home-global-map .leaflet-tile {
-  filter:
-    brightness(0.45)
-    contrast(1.18)
-    saturate(0.65)
-    grayscale(0.28)
-    sepia(0.08) !important;
-  mix-blend-mode: multiply !important;
-  opacity: 0.92 !important;
-}
-
-/* Dark premium overlay like reference screenshot */
-#home-global-map.leaflet-container::after,
-.home-global-map.leaflet-container::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 450;
-  background:
-    radial-gradient(circle at 52% 45%, rgba(236, 190, 98, 0.08), transparent 34%),
-    linear-gradient(135deg, rgba(4, 16, 28, 0.54), rgba(7, 24, 39, 0.46)) !important;
-  pointer-events: none;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
 }
 
 .home-global-map-error {

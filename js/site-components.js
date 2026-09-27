@@ -748,6 +748,7 @@
     var ctx  = canvas.getContext('2d');
     var W, H, particles = [];
     var COUNT = 65;
+    var mapSurface = document.getElementById('home-global-map');
 
     function resize() {
       W = canvas.width  = window.innerWidth;
@@ -824,6 +825,19 @@
         ctx.arc(dx, dy, p.r, 0, Math.PI * 2);
         ctx.fillStyle = 'rgba(220,235,255,' + p.alpha + ')';
         ctx.fill();
+      }
+
+      // Keep ambient stars at 10% intensity over the map without dimming tiles
+      // or changing the decoration elsewhere, including the details panel.
+      if (mapSurface) {
+        var mapBounds = mapSurface.getBoundingClientRect();
+        if (mapBounds.bottom > 0 && mapBounds.top < H) {
+          ctx.save();
+          ctx.globalCompositeOperation = 'destination-out';
+          ctx.fillStyle = 'rgba(0,0,0,0.9)';
+          ctx.fillRect(mapBounds.left, mapBounds.top, mapBounds.width, mapBounds.height);
+          ctx.restore();
+        }
       }
 
       requestAnimationFrame(draw);
