@@ -303,13 +303,19 @@
     /* Removes only the automatic "Leaflet |" prefix from the attribution box */
     if (map.attributionControl) {
       map.attributionControl.setPrefix('');
+      map.attributionControl.addAttribution('&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>');
     }
 
-    window.L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-      attribution: '',
-      subdomains: 'abcd',
-      maxZoom: 19
-    }).addTo(map);
+    var cartoBasemapKey = window.SiteConfig && window.SiteConfig.NEXT_PUBLIC_CARTO_BASEMAP_KEY;
+    cartoBasemapKey = typeof cartoBasemapKey === 'string' ? cartoBasemapKey.trim() : '';
+
+    if (cartoBasemapKey) {
+      window.L.tileLayer('https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}{r}.png?key=' + encodeURIComponent(cartoBasemapKey), {
+        maxZoom: 19
+      }).addTo(map);
+    } else if (window.console && typeof window.console.warn === 'function') {
+      window.console.warn('Global Footprints: NEXT_PUBLIC_CARTO_BASEMAP_KEY is missing. Set it before building to enable the CARTO Dark Matter basemap. Markers remain available; tile requests are disabled.');
+    }
 
     markerLayer = window.L.markerClusterGroup ? window.L.markerClusterGroup({
       showCoverageOnHover: false,

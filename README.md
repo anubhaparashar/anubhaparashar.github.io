@@ -25,6 +25,26 @@ The portfolio highlights work in **Artificial Intelligence, Machine Learning, De
 
 ## Technologies Used Here
 
+### Production build and map configuration
+
+Run `npm run build` with Node.js 20 or newer to produce the static site in `_site/`.
+No package installation is required. The build copies versioned site files, so
+new site files must be added to Git before building.
+
+The GitHub Pages workflow (`.github/workflows/deploy-pages.yml`) reads the
+repository variable `NEXT_PUBLIC_CARTO_BASEMAP_KEY` during the build and writes
+it to the generated `assets/js/site-config.js`. The browser reads
+`window.SiteConfig.NEXT_PUBLIC_CARTO_BASEMAP_KEY`; this plain JavaScript site
+does not use Next.js or browser-side `process.env`. Never put the key in source.
+As a public basemap key, it is included in the deployed browser configuration.
+
+For local previews, supply the environment variable before building and serve
+`_site/` (for example, `python -m http.server 8000 --directory _site`). If the key
+is absent, the build and browser log a warning and the map keeps its markers,
+controls and attribution without making unauthenticated CARTO tile requests.
+
+GitHub Pages must use **GitHub Actions** as its publishing source for this build.
+
 This website is built using the following front-end technologies, libraries, plugins, and hosting services:
 
 | Technology | Purpose in Website |

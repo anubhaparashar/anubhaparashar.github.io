@@ -22,3 +22,7 @@ assets/vendor/boxicons/fonts/boxicons.woff
 assets/vendor/swiper/swiper-bundle.min.js.map
 fonts/fontawesome-webfont.svg
 vendors/jquery-ui/jquery-ui.js
+
+# Generated Pages output and local verification artifacts
+_site/
+.verification/
