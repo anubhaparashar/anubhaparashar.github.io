@@ -16,24 +16,11 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-      - name: Build production site
-        run: npm run build
-        env:
-          NEXT_PUBLIC_CARTO_BASEMAP_KEY: ${{ vars.NEXT_PUBLIC_CARTO_BASEMAP_KEY }}
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
+    # Passing the variable as a reusable-workflow secret masks it before the
+    # runner prints any step environment. No extra repository secret is needed.
+    uses: ./.github/workflows/build-pages.yml
+    secrets:
+      CARTO_BASEMAP_LOG_MASK: ${{ vars.NEXT_PUBLIC_CARTO_BASEMAP_KEY }}
 
   deploy:
     environment:

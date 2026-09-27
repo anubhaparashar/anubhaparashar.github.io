@@ -32,11 +32,14 @@ No package installation is required. The build copies versioned site files, so
 new site files must be added to Git before building.
 
 The GitHub Pages workflow (`.github/workflows/deploy-pages.yml`) reads the
-repository variable `NEXT_PUBLIC_CARTO_BASEMAP_KEY` during the build and writes
+repository variable `NEXT_PUBLIC_CARTO_BASEMAP_KEY` in its reusable build
+(`.github/workflows/build-pages.yml`) and writes
 it to the generated `assets/js/site-config.js`. The browser reads
 `window.SiteConfig.NEXT_PUBLIC_CARTO_BASEMAP_KEY`; this plain JavaScript site
 does not use Next.js or browser-side `process.env`. Never put the key in source.
 As a public basemap key, it is included in the deployed browser configuration.
+The caller also passes the variable as a workflow secret so GitHub masks it
+before logging step environments. No additional repository secret is needed.
 
 For local previews, supply the environment variable before building and serve
 `_site/` (for example, `python -m http.server 8000 --directory _site`). If the key
