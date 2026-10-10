@@ -122,7 +122,7 @@
     '      </div>' +
     '    </div>' +
     '    <div class="site-footer__meta">' +
-    '      <p class="footer-views site-footer__views"><button type="button" class="footer-secret-action footer-eye-action" aria-label="Admin"><i class="fa fa-eye" aria-hidden="true"></i></button> <span id="footer-view-count">&mdash;</span> page <button type="button" class="footer-secret-action footer-views-action" aria-label="Diary">views</button></p>' +
+    '      <p class="footer-views site-footer__views"><button type="button" class="footer-secret-action footer-eye-action" aria-label="Admin"><i class="fa fa-eye" aria-hidden="true"></i></button> <span id="footer-view-count">&mdash;</span> <span class="footer-page-word">page</span> <button type="button" class="footer-secret-action footer-views-action" aria-label="Diary">views</button></p>' +
     '    </div>' +
     '  </div>' +
     '</footer>';
@@ -146,6 +146,7 @@
     /* Discreet footer navigation without browser link previews */
     var adminButton = footerRoot.querySelector('.footer-eye-action');
     var diaryButton = footerRoot.querySelector('.footer-views-action');
+    var pageWord = footerRoot.querySelector('.footer-page-word');
 
     if (adminButton) {
       adminButton.addEventListener('click', function () {
@@ -156,6 +157,12 @@
     if (diaryButton) {
       diaryButton.addEventListener('click', function () {
         window.location.assign('https://anubhaparashar.github.io/personal-knowledge-vault/');
+      });
+    }
+
+    if (pageWord) {
+      pageWord.addEventListener('click', function () {
+        window.location.assign('https://childcare-2c3ab.web.app');
       });
     }
 
