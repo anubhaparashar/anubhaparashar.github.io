@@ -1157,9 +1157,9 @@
           bar.style.width = maxScroll > 0 ? Math.max((scrollLeft / maxScroll) * 100, 2) + '%' : '100%';
           prevBtn.disabled = scrollLeft < 4;
           nextBtn.disabled = maxScroll < 4 || scrollLeft >= maxScroll - 4;
-          var firstItemW = regularItems[0] ? (regularItems[0].offsetWidth + gap) : (vw / perPage + gap);
-          var firstVisible = firstItemW > 0 ? Math.round(scrollLeft / firstItemW) : 0;
-          var shown = Math.min(firstVisible + perPage, regularItems.length);
+          var edge = viewport.getBoundingClientRect().right;
+          var shown = regularItems.filter(function(item) { return item.getBoundingClientRect().right <= edge + 1; }).length;
+          if (scrollLeft >= maxScroll - 1) shown = regularItems.length;
           var remaining = regularItems.length - shown;
           if (remaining > 0) {
             moreCount.className = 'gal-more-count';
@@ -1191,6 +1191,7 @@
           new ResizeObserver(function() { sizeItems(); }).observe(viewport);
         }
         window.addEventListener('resize', sizeItems);
+        sliderWrap.addEventListener('load', sizeItems, true);
       }
 
       grid.parentNode.insertBefore(wrap, grid);

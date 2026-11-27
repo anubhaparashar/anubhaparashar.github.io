@@ -3174,9 +3174,9 @@
           nextBtn.disabled = maxScroll < 4 || scrollLeft >= maxScroll - 4;
 
           // "More photos" text
-          var firstItemW = sliderItems[0] ? (sliderItems[0].offsetWidth + gap) : (vw / perPage + gap);
-          var firstVisible = firstItemW > 0 ? Math.round(scrollLeft / firstItemW) : 0;
-          var shown = Math.min(firstVisible + perPage, sliderItems.length);
+          var edge = viewport.getBoundingClientRect().right;
+          var shown = sliderItems.filter(function(item) { return item.getBoundingClientRect().right <= edge + 1; }).length;
+          if (scrollLeft >= maxScroll - 1) shown = sliderItems.length;
           var remaining = sliderItems.length - shown;
           if (remaining > 0) {
             moreCount.className = 'gal-more-count';
@@ -3214,6 +3214,7 @@
           new ResizeObserver(function() { sizeItems(); }).observe(viewport);
         }
         window.addEventListener('resize', sizeItems);
+        sliderWrap.addEventListener('load', sizeItems, true);
       }
 
       // ? Insert into DOM FIRST, then size (clientWidth requires DOM presence)

@@ -319,10 +319,12 @@
     var prev = document.createElement('button');
     prev.type = 'button';
     prev.className = 'gal-nav-btn';
+    prev.setAttribute('aria-label', 'Previous gallery photos');
     prev.innerHTML = '<i class="fa fa-chevron-left"></i>';
     var next = document.createElement('button');
     next.type = 'button';
     next.className = 'gal-nav-btn';
+    next.setAttribute('aria-label', 'Next gallery photos');
     next.innerHTML = '<i class="fa fa-chevron-right"></i>';
     nav.appendChild(prev);
     nav.appendChild(next);
@@ -351,12 +353,13 @@
 
     var extraTotal = items.length - limit;
     var updateSlider = function() {
+      if (!viewport.clientWidth) return;
       var maxScroll = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
-      var item = track.querySelector('a.gal-item');
-      var itemStep = item ? item.getBoundingClientRect().width + 10 : 160;
-      var firstVisible = itemStep ? Math.round(viewport.scrollLeft / itemStep) : 0;
-      var visibleCount = Math.max(1, Math.floor(viewport.clientWidth / itemStep));
-      var shown = Math.min(extraTotal, firstVisible + visibleCount);
+      var edge = viewport.getBoundingClientRect().right;
+      var shown = Array.from(track.querySelectorAll('a.gal-item')).filter(function(item) {
+        return item.getBoundingClientRect().right <= edge + 1;
+      }).length;
+      if (viewport.scrollLeft >= maxScroll - 1) shown = extraTotal;
       var remaining = Math.max(0, extraTotal - shown);
       bar.style.width = maxScroll > 0 ? Math.max((viewport.scrollLeft / maxScroll) * 100, 2) + '%' : '100%';
       if (remaining > 0) {
@@ -372,14 +375,22 @@
 
     prev.addEventListener('click', function() {
       viewport.scrollBy({ left: -Math.max(160, viewport.clientWidth - 40), behavior: 'smooth' });
+      window.requestAnimationFrame(updateSlider);
     });
     next.addEventListener('click', function() {
       viewport.scrollBy({ left: Math.max(160, viewport.clientWidth - 40), behavior: 'smooth' });
+      window.requestAnimationFrame(updateSlider);
     });
     viewport.addEventListener('scroll', function() {
       window.requestAnimationFrame(updateSlider);
     });
     window.addEventListener('resize', updateSlider);
+    slider.addEventListener('load', updateSlider, true);
+    if (typeof ResizeObserver !== 'undefined') {
+      var observer = new ResizeObserver(updateSlider);
+      observer.observe(viewport);
+      observer.observe(track);
+    }
 
     slider.classList.add('is-open');
     gallery.parentNode.insertBefore(slider, gallery.nextSibling);
